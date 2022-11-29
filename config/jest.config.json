@@ -1,0 +1,41 @@
+{
+  // "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
+  "collectCoverage": false,
+  "coverageDirectory": "../coverage",
+  "verbose": true,
+  "transform": {
+    "^.+\\.(ts|tsx)?$": [
+      "ts-jest",
+      {
+        "diagnostics": true
+      }
+    ],
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  "testEnvironment": "node",
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx",
+    "ts",
+    "tsx",
+    "node"
+  ],
+  "rootDir": "../src",
+  "testMatch": [
+    // "./tests/**/*.*.[jt]s?(x)"
+    // "./tests/**/*.*"
+    "**/?(*.)+(spec|test).[jt]s?(x)"
+  ],
+  "testPathIgnorePatterns": [
+    "./out"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 50,
+      "functions": 50,
+      "lines": 50,
+      "statements": 50
+    }
+  }
+}

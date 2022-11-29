@@ -1,0 +1,12 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["../src/index.ts"],
+  "out": "../dist/docs",
+  "customDescription": "The library full of usefull mapping tools ― by Luxcium✨",
+  "customTitle": "Mapping Tools ― by  Luxcium✨",
+  "footerTypedocVersion": true,
+  "footerLastModified": true,
+  "favicon": "../../static/favicon.png"
+}
+
+
