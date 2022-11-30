@@ -3,9 +3,12 @@ import { assertions } from '../helpers';
 import { isSettledRight } from '../helpers/assertions';
 import {
   ErrLookupFn,
+  LookupFn,
   MapperOptions,
   SettledLeft,
   SettledRight,
+  TransformFn,
+  ValidateFn,
 } from '../types';
 const {
   isPromiseFulfilledResult,
@@ -24,38 +27,17 @@ export async function fn_a1f9a<T, R>({
   errLookup = (value, index, currentRejection) =>
     void [value, index, currentRejection],
 }: MapperOptions<T, R>) {
-  let recipeSteps = -1;
+  // let recipeSteps = -1;
   try {
     if (!isPromiseSettledResult(item) || isPromiseFulfilledResult(item)) {
-      let itemValue: T;
-      if (isPromiseFulfilledResult<T>(item)) {
-        if (isSettledRight<T>(item)) {
-          const itemRecipeSteps = item.recipeSteps;
-          recipeSteps = itemRecipeSteps + 1;
-        }
-        itemValue = item.value;
-      } else {
-        itemValue = item;
-      }
-      const value = await transform(itemValue, index, array);
-      lookup(value, index, array);
-      await validate(value, index, array);
-      const result: SettledRight<R> = {
-        status: FULFILLED,
-        value,
-        fulfilled: value,
-        rejected: null,
-        currentRejection: null,
-        recipeSteps,
+      return fulfillementBlock<T, R>(
+        item,
         index,
-      };
-
-      Object.defineProperty(result, 'fulfilled', {
-        value,
-        enumerable: false,
-      });
-
-      return result;
+        array,
+        transform,
+        lookup,
+        validate
+      );
     }
     if (isPromiseRejectedResult(item)) {
       const { reason } = item;
@@ -94,6 +76,77 @@ function rejectionBlock(
 
   return result;
 }
+
+export async function fulfillementBlock<T, R>(
+  item: T | PromiseFulfilledResult<T>,
+  index: number,
+  array: (T | PromiseSettledResult<T>)[],
+  transform: TransformFn<T, R>,
+  lookup: LookupFn<T, R>,
+  validate: ValidateFn<T, R>
+) {
+  let recipeSteps = -1;
+  let itemValue: T;
+  if (isPromiseFulfilledResult<T>(item)) {
+    if (isSettledRight<T>(item)) {
+      const itemRecipeSteps = item.recipeSteps;
+      recipeSteps = itemRecipeSteps + 1;
+    }
+    itemValue = item.value;
+  } else {
+    itemValue = item;
+    recipeSteps = 0;
+  }
+  const value = await transform(itemValue, index, array);
+  lookup(value, index, array);
+  await validate(value, index, array);
+  const result: SettledRight<R> = {
+    status: FULFILLED,
+    value,
+    fulfilled: value,
+    rejected: null,
+    currentRejection: null,
+    recipeSteps,
+    index,
+  };
+
+  Object.defineProperty(result, 'fulfilled', {
+    value,
+    enumerable: false,
+  });
+
+  return result;
+}
+
+// let itemValue: T;
+// if (isPromiseFulfilledResult<T>(item)) {
+//   if (isSettledRight<T>(item)) {
+//     const itemRecipeSteps = item.recipeSteps;
+//     recipeSteps = itemRecipeSteps + 1;
+//   }
+//   itemValue = item.value;
+// } else {
+//   itemValue = item;
+// }
+// const value = await transform(itemValue, index, array);
+// lookup(value, index, array);
+// await validate(value, index, array);
+// const result: SettledRight<R> = {
+//   status: FULFILLED,
+//   value,
+//   fulfilled: value,
+//   rejected: null,
+//   currentRejection: null,
+//   recipeSteps,
+//   index,
+// };
+
+// Object.defineProperty(result, 'fulfilled', {
+//   value,
+//   enumerable: false,
+// });
+
+// return result;
 
 // errLookup(reason, index, false);
 

@@ -1,4 +1,4 @@
-import { OnlySideEffect, Settled, SettledResult } from '.';
+import { OnlySideEffect, SettledResult } from '.';
 
 /** @public */
 
@@ -9,18 +9,26 @@ Mapper<T = any, U = unknown, A = T> = ;
 
  */
 export interface TransformFn<T, U> {
-  (value: T, index: number, array: readonly (T | Settled<T>)[]): Promise<U>;
+  (
+    value: T,
+    index: number,
+    array: readonly (T | PromiseSettledResult<T>)[]
+  ): Promise<U>;
 }
 /** @public */
 export interface LookupFn<S, U> {
-  (value: U, index: number, array: readonly (S | Settled<S>)[]): OnlySideEffect;
+  (
+    value: U,
+    index: number,
+    array: readonly (S | PromiseSettledResult<S>)[]
+  ): OnlySideEffect;
 }
 /** @public */
 export interface ValidateFn<S, U> {
   (
     value: U,
     index: number,
-    array: readonly (S | Settled<S>)[]
+    array: readonly (S | PromiseSettledResult<S>)[]
   ): Promise<OnlySideEffect>;
 }
 /** @public  */
@@ -43,7 +51,7 @@ export interface ErrLookupFn {
 export interface MapperOptions<T, U> {
   item: T | SettledResult<T>; //  | PromiseLike<T | SettledResult<T>>;
   index: number;
-  array: (T | Settled<T>)[];
+  array: (T | PromiseSettledResult<T>)[];
   transform: TransformFn<T, U>;
   lookup?: LookupFn<T, U>;
   validate?: ValidateFn<T, U>;
