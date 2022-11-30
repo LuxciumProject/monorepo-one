@@ -41,7 +41,6 @@ export async function fn_a1f9a<T, R>({
     }
     if (isPromiseRejectedResult(item)) {
       const { reason } = item;
-
       return rejectionBlock(reason, index, errLookup, false);
     }
     throw new TypeError(
