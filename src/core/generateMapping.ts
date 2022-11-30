@@ -11,8 +11,8 @@ import { fn_a1f9a } from './fn_a1f9a';
 export function* generateMapping<T, R>(
   collection: Iterable<T | Settled<T>>,
   transform: TransformFn<T, R>,
-  lookup: LookupFn<R> = v => void v,
-  validate: ValidateFn<R> = async v => void v,
+  lookup: LookupFn<T, R> = v => void v,
+  validate: ValidateFn<T, R> = async v => void v,
   errLookup: ErrLookupFn = v => void v
 ) /* : Generator<PromiseSettledResult<Promise<R>>, void, unknown> */ {
   let index = 0;

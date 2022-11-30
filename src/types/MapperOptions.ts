@@ -9,15 +9,19 @@ Mapper<T = any, U = unknown, A = T> = ;
 
  */
 export interface TransformFn<T, U> {
-  (value: T, index?: number, array?: readonly (T | Settled<T>)[]): Promise<U>;
+  (value: T, index: number, array: readonly (T | Settled<T>)[]): Promise<U>;
 }
 /** @public */
-export interface LookupFn<U> {
-  (value: U, index: number): OnlySideEffect;
+export interface LookupFn<S, U> {
+  (value: U, index: number, array: readonly (S | Settled<S>)[]): OnlySideEffect;
 }
 /** @public */
-export interface ValidateFn<U> {
-  (value: U, index: number): Promise<OnlySideEffect>;
+export interface ValidateFn<S, U> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | Settled<S>)[]
+  ): Promise<OnlySideEffect>;
 }
 /** @public  */
 export interface ErrLookupFn {
@@ -39,9 +43,9 @@ export interface ErrLookupFn {
 export interface MapperOptions<T, U> {
   item: T | SettledResult<T>; //  | PromiseLike<T | SettledResult<T>>;
   index: number;
-  array?: (T | Settled<T>)[];
+  array: (T | Settled<T>)[];
   transform: TransformFn<T, U>;
-  lookup?: LookupFn<U>;
-  validate?: ValidateFn<U>;
+  lookup?: LookupFn<T, U>;
+  validate?: ValidateFn<T, U>;
   errLookup?: ErrLookupFn;
 }

@@ -13,8 +13,8 @@ import { fn_a1f9a } from './fn_a1f9a';
 export async function serialMapping<T, R>(
   collection: Iterable<T | Settled<T>>,
   transform: TransformFn<T, R>,
-  lookup: LookupFn<R> = v => void v,
-  validate: ValidateFn<R> = async v => void v,
+  lookup: LookupFn<T, R> = v => void v,
+  validate: ValidateFn<T, R> = async v => void v,
   errLookup: ErrLookupFn = v => void v
 ) {
   let index = 0;
@@ -24,6 +24,7 @@ export async function serialMapping<T, R>(
       await fn_a1f9a({
         item,
         index: index++,
+        array: [...collection],
         transform,
         lookup,
         validate,
@@ -38,7 +39,7 @@ type WrappedResult<U> = <W>(wraper: W) => Settled<U>;
 export type MappingFn = <T, R>(
   collection: Iterable<T | Settled<T>>,
   transform: TransformFn<T, R>,
-  lookup: LookupFn<R>,
-  validate: ValidateFn<R>,
+  lookup: LookupFn<T, R>,
+  validate: ValidateFn<T, R>,
   errLookup: ErrLookupFn
 ) => WrappedResult<Settled<R>>;
