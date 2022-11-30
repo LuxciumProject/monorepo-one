@@ -3,14 +3,14 @@ import {
   LookupFn,
   Settled,
   TransformFn,
-  ValidateFn
+  ValidateFn,
 } from '../types';
-import { fn_a1f9a } from './fn_a1f9a';
+import { fn_a1f9a } from './function/fn_a1f9a';
 
 /** @public */
 export function paralellMapping<T, R>(
   collection: Iterable<T | Settled<T>>,
-  transform: TransformFn<T, R>,
+  transform: TransformFn<T, R> = async value => value as any as R,
   lookup: LookupFn<T, R> = v => void v,
   validate: ValidateFn<T, R> = async v => void v,
   errLookup: ErrLookupFn = v => void v
@@ -27,3 +27,10 @@ export function paralellMapping<T, R>(
     })
   );
 }
+
+export async function paralellMapping_TEST_() {
+  console.log(`at: MAIN from ${__filename}`);
+  console.log(await Promise.all(paralellMapping([{ item: 10 }])));
+  return void 0;
+}
+// paralellMapping_TEST_();

@@ -52,7 +52,7 @@ export interface MapperOptions<T, U> {
   item: T | SettledResult<T>; //  | PromiseLike<T | SettledResult<T>>;
   index: number;
   array: (T | PromiseSettledResult<T>)[];
-  transform: TransformFn<T, U>;
+  transform?: TransformFn<T, U>;
   lookup?: LookupFn<T, U>;
   validate?: ValidateFn<T, U>;
   errLookup?: ErrLookupFn;

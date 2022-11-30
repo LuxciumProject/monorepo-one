@@ -28,3 +28,80 @@ Mystery. Ever wonder why we’re unable to put down a good book or stop binge-wa
 Acknowledgement. Dr. Thomas de Zengotita, a media anthropologist and author of Mediated, believes that acknowledgement – our need for validation and empathy from others – is one of our most vital needs. “All mammals want attention,” he told me. “Only human beings need acknowledgment.” Key to this is a sense of belonging to a community that cares about us. Create that feeling for anyone whose attention you’d like to capture, and they’ll repay you.
 
 The most effective employees, managers, and executives are the ones who use these seven triggers to shine a spotlight on their ideas, projects, and teams. Understanding the science of attention is a prerequisite to success in the information age.
+
+
+
+// let itemValue: T;
+// if (isPromiseFulfilledResult<T>(item)) {
+//   if (isSettledRight<T>(item)) {
+//     const itemRecipeSteps = item.recipeSteps;
+//     recipeSteps = itemRecipeSteps + 1;
+//   }
+//   itemValue = item.value;
+// } else {
+//   itemValue = item;
+// }
+// const value = await transform(itemValue, index, array);
+// lookup(value, index, array);
+// await validate(value, index, array);
+// const result: SettledRight<R> = {
+//   status: FULFILLED,
+//   value,
+//   fulfilled: value,
+//   rejected: null,
+//   currentRejection: null,
+//   recipeSteps,
+//   index,
+// };
+
+// Object.defineProperty(result, 'fulfilled', {
+//   value,
+//   enumerable: false,
+// });
+
+// return result;
+
+// errLookup(reason, index, false);
+
+// const result: SettledLeft = {
+//   status: REJECTED,
+//   reason,
+//   rejected: reason,
+//   fulfilled: null,
+//   currentRejection: false,
+//   recipeSteps: 0,
+//   index,
+// };
+
+// Object.defineProperty(result, 'rejected', {
+//   value: reason,
+//   enumerable: false,
+// });
+
+// Object.defineProperty(result, 'currentRejection', {
+//   value: false,
+//   enumerable: true,
+// });
+// return result;
+
+// errLookup(reason, index, true);
+// const result: SettledLeft = {
+//   status: REJECTED,
+//   reason,
+//   rejected: reason,
+//   fulfilled: null,
+//   currentRejection: true,
+//   recipeSteps: 0,
+//   index,
+// };
+
+// Object.defineProperty(result, 'rejected', {
+//   value: reason,
+//   enumerable: false,
+// });
+
+// Object.defineProperty(result, 'currentRejection', {
+//   value: true,
+//   enumerable: true,
+// });
+// return result;
