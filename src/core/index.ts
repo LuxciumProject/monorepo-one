@@ -1,5 +1,10 @@
-export { awaitedMapping_α } from './awaitedMapping_α';
-export { generateMappingAsync_α } from './generateMappingAsync_α';
-export { generateMapping_ς } from './generateMapping_ς';
-export { paralellMapping_ς } from './paralellMapping_ς';
-export { serialMapping_α } from './serialMapping_';
+/**
+ * Represents a book in the catalog.
+ * @public
+ */
+export { awaitedMapping } from './awaitedMapping';
+export { generateMapping } from './generateMapping';
+export { generateMappingAsync } from './generateMappingAsync';
+export { paralellMapping } from './paralellMapping';
+export { serialMapping } from './serialMapping';
+

@@ -7,5 +7,12 @@ export type {
   ValidateFn,
 } from './MapperOptions';
 export type { OnlySideEffect } from './OnlySideEffect';
-export type { Settled, SettledLeft, SettledRight } from './Settled';
+export type {
+  FulfilledResult,
+  RejectedResult,
+  Settled,
+  SettledLeft,
+  SettledResult,
+  SettledRight,
+} from './Settled';
 export type { SettledIso } from './SettledIso';

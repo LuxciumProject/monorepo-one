@@ -1,5 +1,5 @@
-import { FULFILLED, REJECTED } from './constants';
-import { Mapper } from './types';
+import { FULFILLED, REJECTED } from '../constants';
+import { Mapper } from '../types';
 
 export async function* generateMappingAsync_α<R, T>(
   collection: Iterable<T>,

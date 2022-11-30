@@ -24,20 +24,29 @@ export type FulfilledResult<T> = PromiseFulfilledResult<T>;
 export type RejectedResult = PromiseRejectedResult;
 
 /**
+ * Based on the JavaScript {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled | Promise.allSettled()} API The {@link Settled} only objective is to keep the possible failures of a task separated from the expected and extending PromiseSettledResult
+ *
+
+
+ * @remarks
  * The interface Settled<T> is the equivalent of
  * PromiseSettledResult<T> with aditional properties to make it
  * isometric and properties adding Cardinal and Ordinal indexes.
+ *
+ * @typeParam T - value of a fulfilled ({@link SettledRight}) {@link TransformFn} mapping operation.
+ *
+ *
  * @public
  */
 export type Settled<T> = SettledLeft | SettledRight<T>;
 
 /**
- * The interface SettledRight<T> extends PromiseFulfilledResult<T> adding
+ * The type SettledRight<T> extends PromiseFulfilledResult<T> adding
  * isometric parameters with PromiseRejectedResult and adding
  * Cardinal and Ordinal indexes.
  * @public
  */
-export interface SettledRight<T> extends PromiseFulfilledResult<T> {
+export type SettledRight<T> = PromiseFulfilledResult<T> & {
   status: 'fulfilled';
   value: T;
   reason?: undefined;
@@ -46,15 +55,15 @@ export interface SettledRight<T> extends PromiseFulfilledResult<T> {
   recipeSteps: number;
   currentRejection: null;
   index: number;
-}
+};
 
 /**
- * The interface SettledLeft extends PromiseRejectedResult adding
+ * The type SettledLeft extends PromiseRejectedResult adding
  * isometric parameters with PromiseRejectedResult and adding
  * Cardinal and Ordinal indexes.
  * @public
  */
-export interface SettledLeft extends PromiseRejectedResult {
+export type SettledLeft = PromiseRejectedResult & {
   status: 'rejected';
   reason: any;
   value?: undefined;
@@ -63,4 +72,6 @@ export interface SettledLeft extends PromiseRejectedResult {
   recipeSteps: number;
   currentRejection: true | false | undefined;
   index: number;
-}
+};
+
+// A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.

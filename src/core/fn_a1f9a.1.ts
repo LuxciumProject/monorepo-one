@@ -1,0 +1,190 @@
+import { FULFILLED, REJECTED } from '../constants';
+import { assertions } from '../helpers';
+import {
+  isPromiseLike,
+  isSettledLeft,
+  isSettledRight,
+} from '../helpers/assertions';
+import { ErrLookupFn, MapperOptions, SettledLeft } from '../types';
+const {
+  isPromiseFulfilledResult,
+  isPromiseRejectedResult,
+  isPromiseSettledResult,
+} = assertions;
+
+/** @internal */
+export async function fn_a1f9a<T, R>({
+  item,
+  index,
+  array,
+  transform = async value => value as T as any as R,
+  lookup = (value, index) => void [value, index],
+  validate = async (value, index) => void [value, index],
+  errLookup = (value, index, currentRejection) =>
+    void [value, index, currentRejection],
+}: MapperOptions<T, R>) {
+  let recipeSteps = -1;
+  FULFILLED;
+  isPromiseLike;
+  isSettledLeft;
+  isSettledRight;
+  isPromiseFulfilledResult;
+  isPromiseSettledResult;
+  item;
+  array;
+  transform;
+  lookup;
+  validate;
+  recipeSteps;
+  // Remove  the promise part
+  // try {
+  // // ++ Unwrap from Promise or PromiseLike -------------------------
+  // let item_1: T | FulfilledResult<T> | RejectedResult;
+  // if (isPromiseLike(item)) {
+  //   item_1 = await item;
+  // } else {
+  //   item_1 = item;
+  // }
+
+  // let someValue: T | SettledResult<T> = item_1;
+  // let someRejection: any = null;
+  // if (isPromiseSettledResult<T>(item_1)) {
+  //   if (isPromiseFulfilledResult<T>(item_1) && !isSettledRight<T>(item_1)) {
+  //     someValue = {
+  //       status: FULFILLED,
+  //       value: item_1.value,
+  //       fulfilled: item_1.value,
+  //       rejected: null,
+  //       currentRejection: null,
+  //       recipeSteps,
+  //       index,
+  //     };
+  //   } else if (isSettledRight<T>(item_1)) {
+  //     someValue = item_1;
+  //   }
+  // }
+
+  // if (isPromiseRejectedResult(item_1) && !isSettledLeft(item_1)) {
+  //   someRejection = {
+  //     status: REJECTED,
+  //     reason: item_1.reason,
+  //     rejected: item_1.reason,
+  //     fulfilled: null,
+  //     currentRejection: false,
+  //     recipeSteps: NaN,
+  //     index,
+  //   };
+  // } else if (isSettledLeft(item_1)) {
+  //   someRejection = item_1;
+  // }
+
+  // someRejection;
+
+  // let itemValue: T;
+  // if (isSettledRight<T>(someValue)) {
+  //   itemValue = someValue.value;
+  //   const itemRecipeSteps = someValue?.recipeSteps || 0;
+  //   recipeSteps = itemRecipeSteps + 1;
+  // } else {
+  //   itemValue = someValue;
+  // }
+
+  // // ++ Unwrap from Promise or PromiseLike -------------------------
+
+  // if (
+  //   !isPromiseSettledResult(someValue) ||
+  //   isPromiseFulfilledResult(someValue)
+  // )
+  //   if (
+  //     !isPromiseSettledResult(someValue) ||
+  //     isPromiseFulfilledResult(someValue)
+  //   ) {
+  //     const value = await transform(itemValue, index, array);
+  //     lookup(value, index);
+  //     await validate(value, index);
+  //     const result: SettledRight<R> = {
+  //       status: FULFILLED,
+  //       value,
+  //       fulfilled: value,
+  //       rejected: null,
+  //       currentRejection: null,
+  //       recipeSteps,
+  //       index,
+  //     };
+
+  //     Object.defineProperty(result, 'fulfilled', {
+  //       value: value,
+  //       enumerable: false,
+  //     });
+
+  //     Object.defineProperty(result, 'currentRejection', {
+  //       value: null,
+  //       enumerable: true,
+  //     });
+
+  //     return result;
+  //   }
+  try {
+    if (isPromiseRejectedResult(item_1)) {
+      const { reason } = item_1;
+      return rejectionBlock(reason, index, errLookup, false);
+    }
+    throw new TypeError(
+      `NEVER: item (${item_1}) is not assignable to type 'never'`
+    );
+  } catch (reason) {
+    return rejectionBlock(reason, index, errLookup, true);
+  }
+}
+
+function rejectionBlock(
+  reason: unknown,
+  index: number,
+  errLookup: ErrLookupFn,
+  currentRejection: boolean
+) {
+  errLookup(reason, index, currentRejection);
+  const result: SettledLeft = {
+    status: REJECTED,
+    reason,
+    rejected: reason,
+    fulfilled: null,
+    currentRejection: currentRejection,
+    recipeSteps: 0,
+    index,
+  };
+
+  Object.defineProperty(result, 'rejected', {
+    value: reason,
+    enumerable: false,
+  });
+
+  Object.defineProperty(result, 'currentRejection', {
+    value: currentRejection,
+    enumerable: true,
+  });
+  return result;
+}
+
+/*
+ const result: SettledLeft = {
+        status: REJECTED,
+        reason,
+        rejected: reason,
+        fulfilled: null,
+        currentRejection: false,
+        recipeSteps: 0,
+        index,
+      };
+
+      Object.defineProperty(result, 'rejected', {
+        value: reason,
+        enumerable: false,
+      });
+
+      Object.defineProperty(result, 'currentRejection', {
+        value: false,
+        enumerable: true,
+      });
+      return result;
+ */

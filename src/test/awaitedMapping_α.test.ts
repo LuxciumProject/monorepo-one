@@ -1,4 +1,4 @@
-import { awaitedMapping_α } from '../awaitedMapping_α';
+import { awaitedMapping_α } from '../backup/awaitedMapping_α';
 import { Mapper } from '../types';
 
 describe('awaitedMapping_α test', () => {

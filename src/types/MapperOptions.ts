@@ -1,4 +1,4 @@
-import { OnlySideEffect, Settled } from '.';
+import { OnlySideEffect, Settled, SettledResult } from '.';
 
 /** @public */
 
@@ -35,9 +35,9 @@ export interface ErrLookupFn {
   (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
 }
 
-/** @public */
+/** @internal */
 export interface MapperOptions<T, U> {
-  item: T | Settled<T>;
+  item: T | SettledResult<T>; //  | PromiseLike<T | SettledResult<T>>;
   index: number;
   array?: (T | Settled<T>)[];
   transform: TransformFn<T, U>;

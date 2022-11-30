@@ -1,7 +1,23 @@
 import { FULFILLED, REJECTED } from '../constants';
 import { assertions } from '../helpers';
 import { MapperOptions, SettledLeft, SettledRight } from '../types';
-const { isFulfilledResult, isRejectedResult, isSettledResult } = assertions;
+const {
+  isPromiseFulfilledResult,
+  isPromiseRejectedResult,
+  isPromiseSettledResult,
+} = assertions;
+
+/*
+export { isPromise } from './isPromise';
+export { isPromiseLike } from './isPromiseLike';
+export {
+  isPromiseFulfilledResult,
+  isPromiseRejectedResult,
+  isPromiseSettledResult,
+} from './isPromiseSettledResult';
+export { isSettled, isSettledLeft, isSettledRight } from './isSettled';
+
+ */
 
 /** @internal */
 export async function fn_a1f9a<T, R>({
@@ -16,12 +32,14 @@ export async function fn_a1f9a<T, R>({
 }: MapperOptions<T, R>) {
   let recipeSteps = -1;
   try {
-    if (!isSettledResult(item) || isFulfilledResult(item)) {
+    if (!isPromiseSettledResult(item) || isPromiseFulfilledResult(item)) {
       let itemValue: T;
-      if (isFulfilledResult<T>(item)) {
+      if (isPromiseFulfilledResult<T>(item)) {
         itemValue = item.value;
-        const itemRecipeSteps = item?.recipeSteps || 0;
-        recipeSteps = itemRecipeSteps + 1;
+        // BUG: Must review ------------------------------------------
+        // const itemRecipeSteps = item?.recipeSteps || 0;
+        // HACK: workaround to fix bug -------------------------------
+        recipeSteps = 1; // itemRecipeSteps + 1;
       } else {
         itemValue = item;
       }
@@ -50,7 +68,7 @@ export async function fn_a1f9a<T, R>({
 
       return result;
     }
-    if (isRejectedResult(item)) {
+    if (isPromiseRejectedResult(item)) {
       const { reason } = item;
       errLookup(reason, index, false);
 

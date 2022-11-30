@@ -1,5 +1,5 @@
-import { FULFILLED, REJECTED } from './constants';
-import { Mapper } from './types';
+import { FULFILLED, REJECTED } from '../constants';
+import { Mapper } from '../types';
 
 export function* generateMapping_ς<R, T>(
   collection: Iterable<T>,
