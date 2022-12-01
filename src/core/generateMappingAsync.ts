@@ -2,6 +2,8 @@ import {
   ErrLookupFn,
   LookupFn,
   Settled,
+  SettledLeft,
+  SettledRight,
   TransformFn,
   ValidateFn,
 } from '../types';
@@ -14,7 +16,7 @@ export async function* generateMappingAsync<R, T>(
   lookup: LookupFn<T, R> = v => void v,
   validate: ValidateFn<T, R> = async v => void v,
   errLookup: ErrLookupFn = v => void v
-): AsyncGenerator<PromiseSettledResult<R>, void, unknown> {
+): AsyncGenerator<SettledLeft | SettledRight<R>, void, unknown> {
   let index = 0;
   for await (const item of collection) {
     yield fn_a1f9a({

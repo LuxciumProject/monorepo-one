@@ -1,8 +1,21 @@
-import { awaitedMapping_α } from '../backup/awaitedMapping_α';
+import {
+  awaitedMapping,
+  generateMapping,
+  generateMappingAsync,
+  paralellMapping,
+  serialMapping,
+} from '../core';
 import { listFulfilledResults } from '../helpers/tools';
-import { Mapper } from '../types';
 
-describe('awaitedMapping_α test', () => {
+export interface TransformFn<T, U> {
+  (
+    value: T,
+    index: number,
+    array: readonly (T | PromiseSettledResult<T>)[]
+  ): Promise<U>;
+}
+
+describe('Sanity check Level 2', () => {
   const collection = [
     'Madelynn Hermiston',
     'Jana Yundt Sr.',
@@ -11,13 +24,39 @@ describe('awaitedMapping_α test', () => {
     'Mathilde Bahringer',
   ];
 
-  const transforMapper: Mapper<string, Promise<string>> = async (
-    item: string
-  ) => item;
+  const transforMapper: TransformFn<string, string> = async (item: string) =>
+    item;
 
-  it('Should map on a colletion', async () => {
-    expect(
-      listFulfilledResults(await awaitedMapping_α(collection, transforMapper))
-    ).toEqual(collection);
+  it('Should awaitedMapping on a colletion', async () => {
+    const mappingResult = awaitedMapping(collection, transforMapper);
+    expect(listFulfilledResults(await mappingResult)).toEqual(collection);
+  });
+
+  it('Should generateMapping on a colletion', async () => {
+    const mappingResult = generateMapping(collection, transforMapper);
+    let index = 0;
+    for (const item of mappingResult) {
+      expect((await item).value).toBe(collection[index++]);
+    }
+  });
+
+  it('Should paralellMapping on a colletion', async () => {
+    const mappingResults = paralellMapping(collection, transforMapper);
+    mappingResults.map(async (item, index) =>
+      expect((await item).value).toEqual(collection[index])
+    );
+  });
+
+  it('Should serialMapping on a colletion', async () => {
+    const mappingResult = serialMapping(collection, transforMapper);
+    expect(listFulfilledResults(await mappingResult)).toEqual(collection);
+  });
+
+  it('Should generateMappingAsync on a colletion', async () => {
+    const mappingResult = generateMappingAsync(collection, transforMapper);
+    let index = 0;
+    for await (const item of mappingResult) {
+      expect(item.value).toBe(collection[index++]);
+    }
   });
 });
