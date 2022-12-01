@@ -1,4 +1,5 @@
 import { awaitedMapping_α } from '../backup/awaitedMapping_α';
+import { listFulfilledResults } from '../helpers/tools';
 import { Mapper } from '../types';
 
 describe('awaitedMapping_α test', () => {
@@ -15,8 +16,8 @@ describe('awaitedMapping_α test', () => {
   ) => item;
 
   it('Should map on a colletion', async () => {
-    expect(await awaitedMapping_α(collection, transforMapper)).toEqual(
-      collection
-    );
+    expect(
+      listFulfilledResults(await awaitedMapping_α(collection, transforMapper))
+    ).toEqual(collection);
   });
 });

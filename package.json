@@ -9,7 +9,8 @@
     "build": "bash scripts/build.sh",
     "rebuild": "rm -fr ./lib; bash scripts/build.sh",
     "build:docs": "typedoc --options config/typedoc.json",
-    "test": "jest --config='config/jest.config.json'"
+    "test:sanity": "ts-node src/smoke-tests.ts",
+    "test": "yarn test:sanity && jest --config='config/jest.config.json'"
   },
   "keywords": [],
   "author": "",
