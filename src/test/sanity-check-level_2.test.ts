@@ -6,14 +6,7 @@ import {
   serialMapping,
 } from '../core';
 import { listFulfilledResults } from '../helpers/tools';
-
-export interface TransformFn<T, U> {
-  (
-    value: T,
-    index: number,
-    array: readonly (T | PromiseSettledResult<T>)[]
-  ): Promise<U>;
-}
+import { TransformFn } from '../types';
 
 describe('Sanity check Level 2', () => {
   const collection = [
@@ -27,12 +20,24 @@ describe('Sanity check Level 2', () => {
   const transforMapper: TransformFn<string, string> = async (item: string) =>
     item;
 
-  it('Should awaitedMapping on a colletion', async () => {
+  it('Should awaitedMapping on a collection', async () => {
     const mappingResult = awaitedMapping(collection, transforMapper);
     expect(listFulfilledResults(await mappingResult)).toEqual(collection);
   });
 
-  it('Should generateMapping on a colletion', async () => {
+  it('Should serialMapping on a collection', async () => {
+    const mappingResult = serialMapping(collection, transforMapper);
+    expect(listFulfilledResults(await mappingResult)).toEqual(collection);
+  });
+
+  it('Should paralellMapping on a collection', async () => {
+    const mappingResults = paralellMapping(collection, transforMapper);
+    mappingResults.map(async (item, index) =>
+      expect((await item).value).toEqual(collection[index])
+    );
+  });
+
+  it('Should generateMapping on a collection', async () => {
     const mappingResult = generateMapping(collection, transforMapper);
     let index = 0;
     for (const item of mappingResult) {
@@ -40,19 +45,7 @@ describe('Sanity check Level 2', () => {
     }
   });
 
-  it('Should paralellMapping on a colletion', async () => {
-    const mappingResults = paralellMapping(collection, transforMapper);
-    mappingResults.map(async (item, index) =>
-      expect((await item).value).toEqual(collection[index])
-    );
-  });
-
-  it('Should serialMapping on a colletion', async () => {
-    const mappingResult = serialMapping(collection, transforMapper);
-    expect(listFulfilledResults(await mappingResult)).toEqual(collection);
-  });
-
-  it('Should generateMappingAsync on a colletion', async () => {
+  it('Should generateMappingAsync on a collection', async () => {
     const mappingResult = generateMappingAsync(collection, transforMapper);
     let index = 0;
     for await (const item of mappingResult) {
