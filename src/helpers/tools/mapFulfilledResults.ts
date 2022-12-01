@@ -1,0 +1,2 @@
+/** @beta */
+export function mapFulfilledResults() {}

@@ -45,7 +45,7 @@ export async function fn_a1f9a<T, R>({
 }
 
 export async function fn_a1f9a_TEST_() {
-  console.log(`at: MAIN from ${__filename}`);
+  console.log(`at: fn_a1f9a_TEST_ from ${__filename}`);
   console.log(await fn_a1f9a({ item: 10, index: 0, array: [10] }));
   return void 0;
 }

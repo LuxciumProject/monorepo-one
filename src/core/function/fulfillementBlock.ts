@@ -44,7 +44,7 @@ export async function fulfillementBlock<T, R>(
 }
 
 export async function fulfillementBlock_TEST_() {
-  console.log(`at: MAIN from ${__filename}`);
+  console.log(`at: fulfillementBlock_TEST_ from ${__filename}`);
   console.log(await fulfillementBlock(10, 0, [10]));
   return void 0;
 }

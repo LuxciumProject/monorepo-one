@@ -31,7 +31,7 @@ export async function awaitedMapping<R, T>(
 }
 
 export async function awaitedMapping_TEST_() {
-  console.log(`at: MAIN from ${__filename}`);
+  console.log(`at: awaitedMapping_TEST_ from ${__filename}`);
   console.log(await awaitedMapping([{ item: 10 }]));
   return void 0;
 }

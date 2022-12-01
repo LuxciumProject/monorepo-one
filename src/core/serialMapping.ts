@@ -45,7 +45,7 @@ export type MappingFn = <T, R>(
 ) => WrappedResult<Settled<R>>;
 
 export async function serialMapping_TEST_() {
-  console.log(`at: MAIN from ${__filename}`);
+  console.log(`at: serialMapping_TEST_ from ${__filename}`);
   console.log(await serialMapping([{ item: 10 }]));
   return void 0;
 }

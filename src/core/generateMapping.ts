@@ -30,7 +30,7 @@ export function* generateMapping<T, R>(
 }
 
 export async function generateMapping_TEST_() {
-  console.log(`at: MAIN from ${__filename}`);
+  console.log(`at: generateMapping_TEST_ from ${__filename}`);
   const generator = generateMapping([{ item: 10 }]);
   for (const generation of generator) {
     console.log(await generation);

@@ -32,7 +32,7 @@ export function makeRejection({
 }
 
 export function makeRejection_TEST_() {
-  console.log(`at: MAIN from ${__filename}`);
+  console.log(`at: makeRejection_TEST_ from ${__filename}`);
   console.log(
     makeRejection({ reason: 'any', index: 0, currentRejection: true })
   );

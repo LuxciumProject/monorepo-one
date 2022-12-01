@@ -21,7 +21,8 @@ export function isSettledRight<T>(
     contender.currentRejection === null &&
     'recipeSteps' in contender &&
     typeof contender.recipeSteps === 'number' &&
-    'index' in contender
+    'index' in contender &&
+    typeof contender.index === 'number'
   );
 }
 
@@ -39,6 +40,84 @@ export function isSettledLeft(contender: any): contender is SettledLeft {
       contender.rejected === undefined) &&
     'recipeSteps' in contender &&
     typeof contender.recipeSteps === 'number' &&
-    'index' in contender
+    'index' in contender &&
+    typeof contender.index === 'number'
   );
 }
+
+/** @internal */
+export async function isSettled_TEST_() {
+  console.log(`at: TEST from ${__filename}`);
+  console.log(
+    isSettledRight({
+      status: FULFILLED,
+      value: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: null,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+  console.log(
+    isSettledLeft({
+      status: REJECTED,
+      reason: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: true,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+
+  console.log(
+    isSettled({
+      status: FULFILLED,
+      value: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: null,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+  console.log(
+    isSettled({
+      status: REJECTED,
+      reason: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: true,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+  return void 0;
+}
+// isSettled_TEST_();
+
+/*
+{
+status: REJECTED,
+reason: null,
+[FULFILLED]: null,
+[REJECTED]: null,
+currentRejection:true,
+recipeSteps:0,
+index:0,
+}
+
+    contender?.status === REJECTED &&
+    'reason' in contender &&
+    FULFILLED in contender &&
+    REJECTED in contender &&
+    contender.fulfilled === null &&
+    'currentRejection' in contender &&
+    (contender.currentRejection === true ||
+      contender.rejected === false ||
+      contender.rejected === undefined) &&
+    'recipeSteps' in contender &&
+    typeof contender.recipeSteps === 'number' &&
+    'index' in contender
+ */

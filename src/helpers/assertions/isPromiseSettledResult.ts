@@ -22,3 +22,15 @@ export function isPromiseRejectedResult(
 ): contender is PromiseRejectedResult {
   return contender?.status === REJECTED && 'reason' in contender;
 }
+
+/** @internal */
+export async function isPromiseSettledResult_TEST_() {
+  console.log(`at: TEST from ${__filename}`);
+  console.log(isPromiseFulfilledResult({ status: FULFILLED, value: null }));
+  console.log(isPromiseRejectedResult({ status: REJECTED, reason: null }));
+
+  console.log(isPromiseSettledResult({ status: FULFILLED, value: null }));
+  console.log(isPromiseSettledResult({ status: REJECTED, reason: null }));
+  return void 0;
+}
+// isPromiseSettledResult_TEST_();
