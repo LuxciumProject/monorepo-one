@@ -1,6 +1,7 @@
 import { FULFILLED, REJECTED } from '../constants';
 import { Mapper } from '../types';
 
+/** @deprecated */
 export async function* generateMappingAsync_α<R, T>(
   collection: Iterable<T>,
   transform: Mapper<T, Promise<R>> // (item: T) => Promise<R>
@@ -16,6 +17,7 @@ export async function* generateMappingAsync_α<R, T>(
   }
 }
 
+/** @deprecated */
 export const map: <U>(
   callbackfn: (value: never, index: number, array: never[]) => U,
   thisArg?: any

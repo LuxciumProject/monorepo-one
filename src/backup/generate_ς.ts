@@ -1,6 +1,7 @@
 import { FULFILLED, REJECTED } from '../constants';
 import { Mapper } from '../types';
 
+/** @deprecated */
 export function* generateMapping_ς<R, T>(
   collection: Iterable<T>,
   transform: Mapper<T, Promise<R>>

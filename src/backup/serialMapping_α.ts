@@ -1,6 +1,7 @@
 import { FULFILLED, REJECTED } from '../constants';
 import { Mapper, OnlySideEffect } from '../types';
 
+/** @deprecated */
 export async function serialMapping_α<R, T>(
   collection: Iterable<T>,
   transform: Mapper<T, Promise<R>>, // (item: T) => Promise<R>

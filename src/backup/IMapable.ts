@@ -1,2 +1,3 @@
 // export type { IMappable } from '../types/Mapper';
-export   {   }
+/** @deprecated */
+export {};

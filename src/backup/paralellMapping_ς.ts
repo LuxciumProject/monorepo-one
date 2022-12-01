@@ -1,6 +1,7 @@
 import { FULFILLED, REJECTED } from '../constants';
 import { Mapper, OnlySideEffect } from '../types';
 
+/** @deprecated */
 export function paralellMapping_ς<R, T>(
   collection: Iterable<T>,
   transform: Mapper<T, Promise<R>>, //  (item: T) => Promise<R>,

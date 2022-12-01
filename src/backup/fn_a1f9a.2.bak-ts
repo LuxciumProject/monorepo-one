@@ -12,7 +12,8 @@ const {
   isPromiseSettledResult,
 } = assertions;
 
-/** @internal */
+/** @deprecated */
+
 export async function fn_a1f9a<T, R>({
   item,
   index,
