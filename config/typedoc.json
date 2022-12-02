@@ -1,7 +1,7 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "entryPoints": ["../src/index.ts"],
-  "out": "../docs",
+  "out": "../dist/docs",
   "customDescription": "The library full of usefull mapping tools ― by Luxcium✨",
   "customTitle": "Mapping Tools ― by  Luxcium✨",
   "footerTypedocVersion": true,

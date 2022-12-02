@@ -1,13 +1,36 @@
-import { OnlySideEffect, SettledResult } from '.';
+import { OnlySideEffect } from '../../types';
 
-/** @public */
+export class MappingTools<T, R> {
+  private transformFn_: TransformFn<T, R> = async (value: T) =>
+    value as any as R;
+  private lookupFn_: LookupFn<T, R> = (value, index, array) =>
+    void [value, index, array];
+  private validateFn_: ValidateFn<T, R> = async (value, index, array) =>
+    void [value, index, array];
+  private errLookupFn_: ErrLookupFn = (value, index, currentRejection) =>
+    void [value, index, currentRejection];
 
-/*
+  // transformFn(fn: TransformFn<T>) {
+  //   this.transformFn_ = fn;
+  // }
+  // set lookupFn(fn: LookupFn<T>) {
+  //   this.lookupFn_ = fn;
+  // }
+  // set validateFn(fn: ValidateFn<T>) {
+  //   this.validateFn_ = fn;
+  // }
+  // set errLookupFn(fn: ErrLookupFn) {
+  //   this.errLookupFn_ = fn;
+  // }
 
-Mapper<T = any, U = unknown, A = T> = ;
-= Mapper<T, Promise<U>, T | Settled<T>>;
+  void() {
+    this.transformFn_;
+    this.lookupFn_;
+    this.validateFn_;
+    this.errLookupFn_;
+  }
+}
 
- */
 export interface TransformFn<T, U = unknown> {
   (
     value: T,
@@ -45,15 +68,4 @@ export interface ErrLookupFn {
    * @returns Do not return any value is trigered syncrounously.
    */
   (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
-}
-
-/** @internal */
-export interface MapperOptions<T, U = unknown> {
-  item: T | SettledResult<T>; //  | PromiseLike<T | SettledResult<T>>;
-  index: number;
-  array: (T | PromiseSettledResult<T>)[];
-  transform?: TransformFn<T, U>;
-  lookup?: LookupFn<T, U>;
-  validate?: ValidateFn<T, U>;
-  errLookup?: ErrLookupFn;
 }

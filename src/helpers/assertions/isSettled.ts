@@ -15,6 +15,7 @@ export function isSettledRight<T>(
     contender?.status === FULFILLED &&
     'value' in contender &&
     FULFILLED in contender &&
+    contender.value === contender[FULFILLED] &&
     REJECTED in contender &&
     contender.rejected === null &&
     'currentRejection' in contender &&
@@ -33,6 +34,7 @@ export function isSettledLeft(contender: any): contender is SettledLeft {
     'reason' in contender &&
     FULFILLED in contender &&
     REJECTED in contender &&
+    contender.reason === contender[REJECTED] &&
     contender.fulfilled === null &&
     'currentRejection' in contender &&
     (contender.currentRejection === true ||
@@ -59,6 +61,19 @@ export async function isSettled_TEST_() {
       index: 0,
     })
   );
+  isSettledRight({
+    status: 'fulfilled',
+    value: 10,
+    // reason: undefined,
+    fulfilled: 10,
+    rejected: null,
+    currentRejection: null,
+    recipeSteps: -1,
+  }) &&
+    // HACK: -------------------------------------------------------
+    process.exit(51);
+  // BUG: --------------------------------------------------------
+
   console.log(
     isSettledLeft({
       status: REJECTED,

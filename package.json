@@ -7,8 +7,13 @@
   "scripts": {
     "install": "#bash scripts/build.sh",
     "build": "bash scripts/build.sh",
+    "build:all": "yarn rush:update;yarn test:sanity && yarn test && yarn build && yarn api-extractor;yarn build:docs",
+    "build:quick": "bash scripts/build.sh",
     "rebuild": "rm -fr ./lib; bash scripts/build.sh",
     "build:docs": "typedoc --options config/typedoc.json",
+    "build:api": "typedoc --options config/typedoc.json",
+    "api-extractor": "api-extractor run --local",
+    "rush:update": "rush update",
     "test:sanity": "ts-node src/smoke-tests.ts",
     "test": "yarn test:sanity && jest --config='config/jest.config.json'"
   },

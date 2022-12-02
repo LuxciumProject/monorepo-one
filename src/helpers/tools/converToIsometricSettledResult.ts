@@ -2,18 +2,16 @@ import { FULFILLED, REJECTED } from '../../constants';
 import { Settled, SettledLeft, SettledRight } from '../../types';
 import { isometricSettledResult } from './isometricSettledResult';
 
-/** @beta */
-
-export function converToIsometricSettledResult(
+function converToIsometricSettledResult_(
   collection: Array<SettledLeft | PromiseRejectedResult>
 ): SettledLeft[];
-export function converToIsometricSettledResult<T>(
+function converToIsometricSettledResult_<T>(
   collection: Array<SettledRight<T> | PromiseSettledResult<T>>
 ): SettledRight<T>[];
-export function converToIsometricSettledResult<T>(
+function converToIsometricSettledResult_<T>(
   collection: Array<Settled<T> | PromiseSettledResult<T>>
 ): (SettledRight<T> | SettledLeft)[];
-export function converToIsometricSettledResult<T>(
+function converToIsometricSettledResult_<T>(
   collection: Array<Settled<T> | PromiseSettledResult<T>>
 ): (SettledRight<T> | SettledLeft)[] {
   return collection.map(isometricSettledResult);
@@ -23,7 +21,7 @@ export function converToIsometricSettledResult<T>(
 export async function converToIsometricSettledResult_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(
-    converToIsometricSettledResult([
+    converToIsometricSettledResult_([
       {
         status: FULFILLED,
         value: null,
@@ -36,7 +34,7 @@ export async function converToIsometricSettledResult_TEST_() {
     ])
   );
   console.log(
-    converToIsometricSettledResult([
+    converToIsometricSettledResult_([
       {
         status: REJECTED,
         reason: null,
@@ -50,7 +48,7 @@ export async function converToIsometricSettledResult_TEST_() {
   );
 
   console.log(
-    converToIsometricSettledResult([
+    converToIsometricSettledResult_([
       {
         status: REJECTED,
         reason: null,
@@ -82,3 +80,6 @@ export async function converToIsometricSettledResult_TEST_() {
   return void 0;
 }
 // converToIsometricSettledResult_TEST_();
+
+/** @beta */
+export const converToIsometricSettledResult = converToIsometricSettledResult_;

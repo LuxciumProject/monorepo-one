@@ -1,0 +1,33 @@
+cd src/test
+  cdir core
+    echo 'export { }' > awaitedMapping.test.ts
+    echo 'export { }' > generateMapping.test.ts
+    echo 'export { }' > generateMappingAsync.test.ts
+    echo 'export { }' > index.test.ts
+    echo 'export { }' > paralellMapping.test.ts
+    echo 'export { }' > serialMapping.test.ts
+  cd ..
+  cdir core/function
+    echo 'export { }' > fn_a1f9a.test.ts
+    echo 'export { }' > fulfillementBlock.test.ts
+    echo 'export { }' > makeFulfillement.test.ts
+    echo 'export { }' > makeRejection.test.ts
+  cd ../..
+  cdir helpers/assertions
+    echo 'export { }' > index.test.ts
+    echo 'export { }' > isPromise.test.ts
+    echo 'export { }' > isPromiseLike.test.ts
+    echo 'export { }' > isPromiseSettledResult.test.ts
+    echo 'export { }' > isSettled.test.ts
+  cd ../..
+  cdir helpers/tools
+    echo 'export { }' > converToIsometricSettledResult.test.ts
+    echo 'export { }' > getFulfilledResults.test.ts
+    echo 'export { }' > getRejectedResults.test.ts
+    echo 'export { }' > index.test.ts
+    echo 'export { }' > isometricSettledResult.test.ts
+    echo 'export { }' > listFulfilledResults.test.ts
+    echo 'export { }' > mapFulfilledResults.test.ts
+    echo 'export { }' > settledLengts.test.ts
+  cd ../..
+cd ../..

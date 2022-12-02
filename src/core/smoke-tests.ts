@@ -1,8 +1,4 @@
 import { awaitedMapping_TEST_ } from './awaitedMapping';
-import { fn_a1f9a_TEST_ } from './function/fn_a1f9a';
-import { fulfillementBlock_TEST_ } from './function/fulfillementBlock';
-import { makeFulfillement_TEST_ } from './function/makeFulfillement';
-import { makeRejection_TEST_ } from './function/makeRejection';
 import { generateMapping_TEST_ } from './generateMapping';
 import { generateMappingAsync_TEST_ } from './generateMappingAsync';
 import { paralellMapping_TEST_ } from './paralellMapping';
@@ -16,9 +12,9 @@ void (async function MAIN() {
   await generateMapping_TEST_();
   await awaitedMapping_TEST_();
 
-  await fn_a1f9a_TEST_();
-  await fulfillementBlock_TEST_();
-  makeFulfillement_TEST_();
-  makeRejection_TEST_();
+  // await fn_a1f9a_TEST_();
+  // await fulfillementBlock_TEST_();
+  // makeFulfillement_TEST_();
+  // makeRejection_TEST_();
   return void 0;
 })();

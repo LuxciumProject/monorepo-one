@@ -2,7 +2,7 @@ import {
   isPromiseFulfilledResult,
   isSettledRight,
 } from '../../helpers/assertions';
-import { LookupFn, TransformFn, ValidateFn } from '../../types';
+import { LookupFn, SettledRight, TransformFn, ValidateFn } from '../../types';
 import { makeFulfillement } from './makeFulfillement';
 
 /**
@@ -13,7 +13,7 @@ import { makeFulfillement } from './makeFulfillement';
 
  * @internal */
 export async function fulfillementBlock<T, R>(
-  item: T | PromiseFulfilledResult<T>,
+  item: T | (SettledRight<T> | PromiseFulfilledResult<T>),
   index: number,
   array: (T | PromiseSettledResult<T>)[],
   transform: TransformFn<T, R> = async value => value as any as R,
@@ -23,12 +23,18 @@ export async function fulfillementBlock<T, R>(
 ) {
   let recipeSteps = -1;
   let itemValue: T;
-  if (isPromiseFulfilledResult<T>(item)) {
+  if (isSettledRight<T>(item) || isPromiseFulfilledResult<T>(item)) {
     if (isSettledRight<T>(item)) {
       const itemRecipeSteps = item.recipeSteps;
       recipeSteps = itemRecipeSteps + 1;
+      // HACK: -------------------------------------------------------
+      // process.exit(15);
+      // BUG: --------------------------------------------------------
     }
     itemValue = item.value;
+    // HACK: ---------------------------------------------------------
+    // process.exit(14);
+    // BUG: ----------------------------------------------------------
   } else {
     itemValue = item;
     recipeSteps = 0;
@@ -46,6 +52,31 @@ export async function fulfillementBlock<T, R>(
 export async function fulfillementBlock_TEST_() {
   console.log(`at: fulfillementBlock_TEST_ from ${__filename}`);
   console.log(await fulfillementBlock(10, 0, [10]));
+  console.log(
+    await fulfillementBlock(
+      {
+        status: 'fulfilled',
+        value: 10,
+        reason: undefined,
+        fulfilled: 10,
+        rejected: null,
+        currentRejection: null,
+        recipeSteps: -1,
+      },
+      0,
+      [10]
+    )
+  );
+  console.log(
+    await fulfillementBlock(
+      {
+        status: 'fulfilled',
+        value: 10,
+      },
+      0,
+      [10]
+    )
+  );
   return void 0;
 }
 // fulfillementBlock_TEST_()
