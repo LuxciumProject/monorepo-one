@@ -7,11 +7,13 @@ export function isSettled<T>(contender: any): contender is Settled<T> {
   return isSettledRight<T>(contender) || isSettledLeft(contender);
 }
 
-/** @public */
-export function isSettledRight<T>(
-  contender: any
+export function isSettledRight_<T>(
+  contender: unknown
 ): contender is SettledRight<T> {
   return (
+    typeof contender === 'object' &&
+    contender !== null &&
+    'status' in contender &&
     contender?.status === FULFILLED &&
     'value' in contender &&
     FULFILLED in contender &&
@@ -28,8 +30,34 @@ export function isSettledRight<T>(
 }
 
 /** @public */
-export function isSettledLeft(contender: any): contender is SettledLeft {
+export function isSettledRight<T>(
+  contender: unknown
+): contender is SettledRight<T> {
   return (
+    typeof contender === 'object' &&
+    contender !== null &&
+    'status' in contender &&
+    contender?.status === FULFILLED &&
+    'value' in contender &&
+    FULFILLED in contender &&
+    contender.value === contender[FULFILLED] &&
+    REJECTED in contender &&
+    contender.rejected === null &&
+    'currentRejection' in contender &&
+    contender.currentRejection === null &&
+    'recipeSteps' in contender &&
+    typeof contender.recipeSteps === 'number' &&
+    'index' in contender &&
+    typeof contender.index === 'number'
+  );
+}
+
+/** @public */
+export function isSettledLeft(contender: unknown): contender is SettledLeft {
+  return (
+    typeof contender === 'object' &&
+    contender !== null &&
+    'status' in contender &&
     contender?.status === REJECTED &&
     'reason' in contender &&
     FULFILLED in contender &&
