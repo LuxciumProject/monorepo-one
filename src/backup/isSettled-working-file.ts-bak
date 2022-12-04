@@ -1,0 +1,325 @@
+import { FULFILLED, REJECTED } from '../constants';
+import { Settled, SettledLeft, SettledRight } from '../types';
+
+/** @public */
+
+export function isSettled<T>(contender: any): contender is Settled<T> {
+  return isSettledRight<T>(contender) || isSettledLeft(contender);
+}
+
+export function isSettledRight_<T>(
+  contender: unknown
+): contender is SettledRight<T> {
+  return (
+    typeof contender === 'object' &&
+    contender !== null &&
+    'status' in contender &&
+    contender?.status === FULFILLED &&
+    'value' in contender &&
+    FULFILLED in contender &&
+    contender.value === contender[FULFILLED] &&
+    REJECTED in contender &&
+    contender.rejected === null &&
+    'currentRejection' in contender &&
+    contender.currentRejection === null &&
+    'recipeSteps' in contender &&
+    typeof contender.recipeSteps === 'number' &&
+    'index' in contender &&
+    typeof contender.index === 'number'
+  );
+}
+
+/** @public */
+export function isSettledRight<T>(
+  contender: unknown
+): contender is SettledRight<T> {
+  return (
+    typeof contender === 'object' &&
+    contender !== null &&
+    'status' in contender &&
+    contender?.status === FULFILLED &&
+    'value' in contender &&
+    FULFILLED in contender &&
+    contender.value === contender[FULFILLED] &&
+    REJECTED in contender &&
+    contender.rejected === null &&
+    'currentRejection' in contender &&
+    contender.currentRejection === null &&
+    'recipeSteps' in contender &&
+    typeof contender.recipeSteps === 'number' &&
+    'index' in contender &&
+    typeof contender.index === 'number'
+  );
+}
+
+export function isObjectNotNull(contender: unknown) {
+  if (typeof contender === 'object') {
+    contender as object | null;
+    if (contender !== null) {
+      contender as object;
+      if ('status' in contender) {
+        contender as object & Record<'status', unknown>;
+        if (contender.status === REJECTED) {
+          contender as object & Record<'status', 'rejected'>;
+          if ('reason' in contender) {
+            contender as object &
+              Record<'status', 'rejected'> &
+              Record<'reason', unknown>;
+            if (FULFILLED in contender) {
+              contender as object &
+                Record<'status', 'rejected'> &
+                Record<'reason', any> &
+                Record<'fulfilled', null> &
+                Record<'currentRejection', true | false | undefined> &
+                Record<'recipeSteps', number> &
+                Record<'index', number>;
+
+              if (contender.fulfilled === null) {
+                contender;
+                if (REJECTED in contender) {
+                  contender;
+                  if ('reason' in contender) {
+                    contender;
+                    if ('currentRejection' in contender) {
+                      contender;
+                      if ('recipeSteps' in contender) {
+                        contender;
+                        if ('index' in contender) {
+                          contender;
+                          contender;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/** @public */
+export function isSettledLeft(contender: unknown): contender is SettledLeft {
+  return (
+    typeof contender === 'object' &&
+    contender !== null &&
+    'status' in contender &&
+    contender?.status === REJECTED &&
+    'reason' in contender &&
+    FULFILLED in contender &&
+    REJECTED in contender &&
+    contender.reason === contender[REJECTED] &&
+    contender.fulfilled === null &&
+    'currentRejection' in contender &&
+    (contender.currentRejection === true ||
+      contender.rejected === false ||
+      contender.rejected === undefined) &&
+    'recipeSteps' in contender &&
+    typeof contender.recipeSteps === 'number' &&
+    'index' in contender &&
+    typeof contender.index === 'number'
+  );
+}
+
+// UNSAFE: ---- Works in progress section will be removed ------------
+export function isSettledLeft__(contender: unknown): contender is SettledLeft {
+  const hasDesiredShape =
+    typeof contender === 'object' &&
+    contender !== null &&
+    REJECTED in contender &&
+    FULFILLED in contender &&
+    'status' in contender &&
+    'reason' in contender &&
+    'currentRejection' in contender &&
+    'recipeSteps' in contender &&
+    'index' in contender;
+
+  if (hasDesiredShape) {
+    const hasDesiredValueType =
+      contender.fulfilled === null &&
+      contender.status === REJECTED &&
+      contender.reason === contender[REJECTED] &&
+      typeof contender.recipeSteps === 'number' &&
+      typeof contender.index === 'number' &&
+      (contender.currentRejection === true ||
+        contender.rejected === false ||
+        contender.rejected === undefined);
+
+    return hasDesiredValueType;
+  }
+  return false;
+}
+// UNSAFE: ---- Works in progress section will be removed ------------
+// XXX: --------------------------------------------------------------
+
+export type SettledLeft_ = PromiseRejectedResult & {
+  status: 'rejected';
+  reason: any;
+  value?: undefined;
+  rejected: any;
+  fulfilled: null;
+  recipeSteps: number;
+  currentRejection: true | false | undefined;
+  index: number;
+};
+
+export type StatusRejected = { status: 'rejected' };
+export type ReasonAny = { reason: any };
+export type ValueUndefined = { value?: undefined };
+export type RejectedAny = { rejected: any };
+export type FulfilledNull = { fulfilled: null };
+export type RecipeStepsNumber = { recipeSteps: number };
+export type CurrentRejectionBollean = {
+  currentRejection: true | false | undefined;
+};
+export type IndexNumber = { index: number };
+
+export type SettledLeft__ = StatusRejected &
+  ReasonAny &
+  ValueUndefined &
+  RejectedAny &
+  FulfilledNull &
+  RecipeStepsNumber &
+  CurrentRejectionBollean &
+  IndexNumber;
+
+const anyValue: any = null;
+const xSettledLeft__: SettledLeft__ = anyValue;
+const xSettledLeft_: SettledLeft_ = xSettledLeft__;
+const ySettledLeft__: SettledLeft__ = xSettledLeft_;
+void ySettledLeft__;
+/*
+
+  // return (
+  //   typeof contender === 'object' &&
+  //   contender !== null &&
+  //   'status' in contender &&
+  //   'reason' in contender &&
+  //   'currentRejection' in contender &&
+  //   'recipeSteps' in contender &&
+  //   'index' in contender &&
+  //   REJECTED in contender &&
+  //   FULFILLED in contender &&
+  //   contender.status === REJECTED &&
+  //   contender.reason === contender[REJECTED] &&
+  //   typeof contender.recipeSteps === 'number' &&
+  //   typeof contender.index === 'number' &&
+  //   contender.fulfilled === null &&
+  //   (contender.currentRejection === true ||
+  //     contender.rejected === false ||
+  //     contender.rejected === undefined)
+  // );
+
+ typeof contender === 'object' &&
+    contender !== null &&
+    'status' in contender &&
+    contender?.status === REJECTED &&
+    'reason' in contender &&
+    FULFILLED in contender &&
+    REJECTED in contender &&
+    contender.reason === contender[REJECTED] &&
+    contender.fulfilled === null &&
+    'currentRejection' in contender &&
+    (contender.currentRejection === true ||
+      contender.rejected === false ||
+      contender.rejected === undefined) &&
+    'recipeSteps' in contender &&
+    typeof contender.recipeSteps === 'number' &&
+    'index' in contender &&
+    typeof contender.index === 'number'
+ */
+
+// XXX: --------------------------------------------------------------
+
+/** @internal */
+export async function isSettled_TEST_() {
+  console.log(`at: TEST from ${__filename}`);
+  console.log(
+    isSettledRight({
+      status: FULFILLED,
+      value: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: null,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+  isSettledRight({
+    status: 'fulfilled',
+    value: 10,
+    // reason: undefined,
+    fulfilled: 10,
+    rejected: null,
+    currentRejection: null,
+    recipeSteps: -1,
+  }) &&
+    // HACK: -------------------------------------------------------
+    process.exit(51);
+  // BUG: --------------------------------------------------------
+
+  console.log(
+    isSettledLeft({
+      status: REJECTED,
+      reason: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: true,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+
+  console.log(
+    isSettled({
+      status: FULFILLED,
+      value: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: null,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+  console.log(
+    isSettled({
+      status: REJECTED,
+      reason: null,
+      [FULFILLED]: null,
+      [REJECTED]: null,
+      currentRejection: true,
+      recipeSteps: 0,
+      index: 0,
+    })
+  );
+  return void 0;
+}
+// isSettled_TEST_();
+
+/*
+{
+status: REJECTED,
+reason: null,
+[FULFILLED]: null,
+[REJECTED]: null,
+currentRejection:true,
+recipeSteps:0,
+index:0,
+}
+
+    contender?.status === REJECTED &&
+    'reason' in contender &&
+    FULFILLED in contender &&
+    REJECTED in contender &&
+    contender.fulfilled === null &&
+    'currentRejection' in contender &&
+    (contender.currentRejection === true ||
+      contender.rejected === false ||
+      contender.rejected === undefined) &&
+    'recipeSteps' in contender &&
+    typeof contender.recipeSteps === 'number' &&
+    'index' in contender
+ */
