@@ -27,12 +27,21 @@ describe('Sanity check Level 1', () => {
   });
 });
 
-// export async function generateMapping_TEST_() {
-//   console.log(`at: generateMapping_TEST_ from ${__filename}`);
-//   const generator = generateMapping([{ item: 10 }]);
-//   for (const generation of generator) {
-//     console.log(await generation);
-//   }
-//   return void 0;
-// }
-// // generateMapping_TEST_();
+describe('generateMapping', () => {
+  it('Should survive when throwing', async () => {
+    const generator = generateMapping([{ size: 10 }], async obj => {
+      if (obj.size === 10) throw ['test'];
+    });
+
+    for (const generation of generator) {
+      expect(await generation).toStrictEqual({
+        currentRejection: true,
+        fulfilled: null,
+        index: 0,
+        reason: ['test'],
+        status: 'rejected',
+        transformStep: 0,
+      });
+    }
+  });
+});

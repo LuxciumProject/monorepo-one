@@ -18,6 +18,7 @@ function converToIsometricSettledResult_<T>(
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function converToIsometricSettledResult_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(

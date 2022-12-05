@@ -7,6 +7,7 @@ export function isSettled<T>(contender: any): contender is Settled<T> {
 }
 
 /** @public */
+/* istanbul ignore next */
 export function isSettledRight<T>(
   contender: unknown
 ): contender is SettledRight<T> {

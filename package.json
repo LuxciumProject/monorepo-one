@@ -1,6 +1,6 @@
 {
   "name": "mapping-tools",
-  "version": "0.0.0-PRE-ALPHA-UNRELEASED-UNTESTED-UNDOCUMENTED-UNSAFE-v2.2.0x",
+  "version": "0.0.0-PRE-ALPHA-UNRELEASED-UNDOCUMENTED-UNSAFE-v3.0.0x",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/typings/index.d.ts",
@@ -8,7 +8,7 @@
     "build": "yarn base:build",
     "install": "yarn base:install",
     "rebuild": "yarn base:rm:lib; yarn base:build",
-    "test": "yarn base:test:sanity && yarn base:test",
+    "test": "yarn base:test",
     "build:full": "yarn test && yarn rebuild && yarn build:api",
     "dist:full": "rm -r dist; yarn build:full && yarn cp:dist:dirs; yarn clean:dist; yarn cp:dist",
     "cp:dist:dirs": "yarn base:cp:dist:lib; yarn base:cp:dist:src",

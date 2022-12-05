@@ -14,3 +14,20 @@ describe('Sanity check Level 1', () => {
     ]);
   });
 });
+describe('awaitedMapping', () => {
+  it('Should survive when throwing', async () => {
+    const result = awaitedMapping([{ size: 10 }], async obj => {
+      if (obj.size === 10) throw ['test'];
+    });
+    const expected = {
+      currentRejection: true,
+      fulfilled: null,
+      index: 0,
+      reason: ['test'],
+      status: 'rejected',
+      transformStep: 0,
+    };
+
+    expect(await result).toStrictEqual([expected]);
+  });
+});

@@ -14,3 +14,19 @@ describe('Sanity check Level 1', () => {
     ]);
   });
 });
+describe('paralellMapping', () => {
+  it('Should survive when throwing', async () => {
+    const result = paralellMapping([{ size: 10 }], async obj => {
+      if (obj.size === 10) throw ['test'];
+    });
+    const expected = {
+      currentRejection: true,
+      fulfilled: null,
+      index: 0,
+      reason: ['test'],
+      status: 'rejected',
+      transformStep: 0,
+    };
+    result.map(async item => expect(await item).toStrictEqual(expected));
+  });
+});

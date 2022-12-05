@@ -1,3 +1,4 @@
+import { FULFILLED, REJECTED } from '../../constants';
 import {
   isPromiseFulfilledResult,
   isSettledRight,
@@ -5,17 +6,11 @@ import {
 import { LookupFn, SettledRight, TransformFn, ValidateFn } from '../../types';
 import { makeFulfillement } from './makeFulfillement';
 
-/**
- *
- *
-
-
-
- * @internal */
+/** @internal */
 export async function fulfillementBlock<T, R>(
   item: T | (SettledRight<T> | PromiseFulfilledResult<T>),
   index: number,
-  array: (T | PromiseSettledResult<T>)[],
+  array: any, // T | (SettledRight<T> | PromiseFulfilledResult<T>)[],
   transform: TransformFn<T, R> = async value => value as any as R,
   lookup: LookupFn<T, R> = (value, index, array) => void [value, index, array],
   validate: ValidateFn<T, R> = async (value, index, array) =>
@@ -76,6 +71,32 @@ export async function fulfillementBlock_TEST_() {
       [10]
     )
   );
+
+  console.log(
+    await fulfillementBlock(
+      {
+        status: FULFILLED,
+        value: 10,
+        [FULFILLED]: 10,
+        [REJECTED]: null,
+        currentRejection: null,
+        transformStep: 0,
+        index: 0,
+      },
+      -1,
+      [
+        {
+          status: FULFILLED,
+          value: 10,
+          [FULFILLED]: 10,
+          [REJECTED]: null,
+          currentRejection: null,
+          transformStep: 0,
+          index: 0,
+        },
+      ]
+    )
+  );
   return void 0;
 }
-// fulfillementBlock_TEST_()
+// fulfillementBlock_TEST_();

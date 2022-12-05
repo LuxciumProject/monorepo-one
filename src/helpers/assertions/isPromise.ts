@@ -7,6 +7,8 @@ export function isPromise<T>(element: unknown): element is Promise<T> {
 }
 
 /** @internal */
+/* istanbul ignore next */
+
 export async function isPromise_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(isPromise((async () => 'promise')()));

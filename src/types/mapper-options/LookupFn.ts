@@ -1,10 +1,10 @@
-import { OnlySideEffect } from '..';
+import { OnlySideEffect, Settled } from '..';
 
 /** @public */
 export interface LookupFn<S, U = unknown> {
   (
     value: U,
     index: number,
-    array: readonly (S | PromiseSettledResult<S>)[]
+    array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
   ): OnlySideEffect;
 }

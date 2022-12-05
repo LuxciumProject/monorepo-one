@@ -34,6 +34,7 @@ export function isometricSettledResult<T>(
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function isometricSettledResult_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(

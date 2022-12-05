@@ -18,6 +18,7 @@ export function settledLengts<T>(
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function settledLengts_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(

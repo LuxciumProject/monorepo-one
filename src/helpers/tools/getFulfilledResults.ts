@@ -15,6 +15,7 @@ export function getFulfilledResults<T>(
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function getFulfilledResults_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(

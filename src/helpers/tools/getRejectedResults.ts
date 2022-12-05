@@ -15,6 +15,7 @@ export function getRejectedResults<T>(
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function getRejectedResults_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(

@@ -24,6 +24,7 @@ export function isPromiseRejectedResult(
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function isPromiseSettledResult_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(isPromiseFulfilledResult({ status: FULFILLED, value: null }));

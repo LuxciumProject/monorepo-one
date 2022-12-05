@@ -11,6 +11,7 @@ export function isPromiseLike<T>(element: any): element is PromiseLike<T> {
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function isPromiseLike_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(isPromiseLike((async () => 'promise')()));

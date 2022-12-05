@@ -1,3 +1,4 @@
+import { FULFILLED, REJECTED } from '../../../constants';
 import { fn_a1f9a } from '../../../core/function/fn_a1f9a';
 
 describe('Sanity check Level 1', () => {
@@ -37,8 +38,42 @@ describe('Sanity check Level 1', () => {
       value: 100,
     });
   });
-});
+  it('Should accept a transformFn', async () => {
+    expect(
+      await fn_a1f9a({
+        item: { status: FULFILLED, value: 10 },
+        index: 0,
+        array: [10],
+        transform: async value => value * 10,
+      })
+    ).toStrictEqual({
+      currentRejection: null,
+      index: 0,
+      transformStep: -1,
+      rejected: null,
+      status: 'fulfilled',
+      value: 100,
+    });
+  });
 
+  it('Should accept a transformFn', async () => {
+    expect(
+      await fn_a1f9a({
+        item: { status: REJECTED, reason: null },
+        index: 0,
+        array: [10],
+        transform: async value => value * 10,
+      })
+    ).toStrictEqual({
+      currentRejection: false,
+      fulfilled: null,
+      index: 0,
+      transformStep: 0,
+      reason: null,
+      status: 'rejected',
+    });
+  });
+});
 describe('Sanity check Level 1', () => {
   it('Should accept a lookupFn', async () => {
     expect(
@@ -47,7 +82,7 @@ describe('Sanity check Level 1', () => {
         index: 0,
         array: [10],
         transform: async item => item * 10,
-        lookup: item => console.log(item),
+        lookup: item => item,
       })
     ).toStrictEqual({
       currentRejection: null,
@@ -59,7 +94,6 @@ describe('Sanity check Level 1', () => {
     });
   });
 });
-
 describe('Sanity check Level 1', () => {
   it('Should accept a validateFn which do not throw', async () => {
     expect(
@@ -68,7 +102,7 @@ describe('Sanity check Level 1', () => {
         index: 0,
         array: [10],
         transform: async item => item * 10,
-        lookup: item => console.log(item),
+        lookup: item => item,
         validate: async value => {
           if (value === 10) throw value;
         },
@@ -83,7 +117,6 @@ describe('Sanity check Level 1', () => {
     });
   });
 });
-
 describe('Sanity check Level 1', () => {
   it('Should accept a validateFn which throws', async () => {
     expect(
@@ -92,7 +125,7 @@ describe('Sanity check Level 1', () => {
         index: 0,
         array: [10],
         transform: async item => item,
-        lookup: item => console.log(item),
+        lookup: item => item,
         validate: async value => {
           if (value === 10) throw value;
         },

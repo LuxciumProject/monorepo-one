@@ -10,6 +10,7 @@ export function listFulfilledResults<T>(
 }
 
 /** @internal */
+/* istanbul ignore next */
 export async function listFulfilledResults_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(

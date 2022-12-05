@@ -43,6 +43,7 @@ import { isSettled, isSettledLeft, isSettledRight } from './isSettled';
  */
 // XXX: --------------------------------------------------------------
 /** @internal */
+/* istanbul ignore next */
 export async function isSettled_TEST_() {
   console.log(`at: TEST from ${__filename}`);
   console.log(
