@@ -21,17 +21,17 @@ export async function fulfillementBlock<T, R>(
   validate: ValidateFn<T, R> = async (value, index, array) =>
     void [value, index, array]
 ) {
-  let recipeSteps = -1;
+  let transformStep = -1;
   let itemValue: T;
   if (isSettledRight<T>(item) || isPromiseFulfilledResult<T>(item)) {
     if (isSettledRight<T>(item)) {
-      const itemRecipeSteps = item.recipeSteps;
-      recipeSteps = itemRecipeSteps + 1;
+      const itemTransformStep = item.transformStep;
+      transformStep = itemTransformStep + 1;
     }
     itemValue = item.value;
   } else {
     itemValue = item;
-    recipeSteps = 1;
+    transformStep = 1;
   }
   try {
     const value = await transform(itemValue, index, array);
@@ -40,7 +40,7 @@ export async function fulfillementBlock<T, R>(
     return makeFulfillement<R>({
       value,
       index,
-      recipeSteps,
+      transformStep,
     });
   } catch (error) {
     throw error;
@@ -60,7 +60,7 @@ export async function fulfillementBlock_TEST_() {
         fulfilled: 10,
         rejected: null,
         currentRejection: null,
-        recipeSteps: -1,
+        transformStep: -1,
       },
       0,
       [10]

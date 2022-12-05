@@ -22,8 +22,8 @@ export function isSettledRight_<T>(
     contender.rejected === null &&
     'currentRejection' in contender &&
     contender.currentRejection === null &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number'
   );
@@ -45,8 +45,8 @@ export function isSettledRight<T>(
     contender.rejected === null &&
     'currentRejection' in contender &&
     contender.currentRejection === null &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number'
   );
@@ -71,7 +71,7 @@ export function isObjectNotNull(contender: unknown) {
                 Record<'reason', any> &
                 Record<'fulfilled', null> &
                 Record<'currentRejection', true | false | undefined> &
-                Record<'recipeSteps', number> &
+                Record<'transformStep', number> &
                 Record<'index', number>;
 
               if (contender.fulfilled === null) {
@@ -82,7 +82,7 @@ export function isObjectNotNull(contender: unknown) {
                     contender;
                     if ('currentRejection' in contender) {
                       contender;
-                      if ('recipeSteps' in contender) {
+                      if ('transformStep' in contender) {
                         contender;
                         if ('index' in contender) {
                           contender;
@@ -117,8 +117,8 @@ export function isSettledLeft(contender: unknown): contender is SettledLeft {
     (contender.currentRejection === true ||
       contender.rejected === false ||
       contender.rejected === undefined) &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number'
   );
@@ -134,7 +134,7 @@ export function isSettledLeft__(contender: unknown): contender is SettledLeft {
     'status' in contender &&
     'reason' in contender &&
     'currentRejection' in contender &&
-    'recipeSteps' in contender &&
+    'transformStep' in contender &&
     'index' in contender;
 
   if (hasDesiredShape) {
@@ -142,7 +142,7 @@ export function isSettledLeft__(contender: unknown): contender is SettledLeft {
       contender.fulfilled === null &&
       contender.status === REJECTED &&
       contender.reason === contender[REJECTED] &&
-      typeof contender.recipeSteps === 'number' &&
+      typeof contender.transformStep === 'number' &&
       typeof contender.index === 'number' &&
       (contender.currentRejection === true ||
         contender.rejected === false ||
@@ -161,7 +161,7 @@ export type SettledLeft_ = PromiseRejectedResult & {
   value?: undefined;
   rejected: any;
   fulfilled: null;
-  recipeSteps: number;
+  transformStep: number;
   currentRejection: true | false | undefined;
   index: number;
 };
@@ -171,7 +171,7 @@ export type ReasonAny = { reason: any };
 export type ValueUndefined = { value?: undefined };
 export type RejectedAny = { rejected: any };
 export type FulfilledNull = { fulfilled: null };
-export type RecipeStepsNumber = { recipeSteps: number };
+export type TransformStepNumber = { transformStep: number };
 export type CurrentRejectionBollean = {
   currentRejection: true | false | undefined;
 };
@@ -182,7 +182,7 @@ export type SettledLeft__ = StatusRejected &
   ValueUndefined &
   RejectedAny &
   FulfilledNull &
-  RecipeStepsNumber &
+  TransformStepNumber &
   CurrentRejectionBollean &
   IndexNumber;
 
@@ -199,13 +199,13 @@ void ySettledLeft__;
   //   'status' in contender &&
   //   'reason' in contender &&
   //   'currentRejection' in contender &&
-  //   'recipeSteps' in contender &&
+  //   'transformStep' in contender &&
   //   'index' in contender &&
   //   REJECTED in contender &&
   //   FULFILLED in contender &&
   //   contender.status === REJECTED &&
   //   contender.reason === contender[REJECTED] &&
-  //   typeof contender.recipeSteps === 'number' &&
+  //   typeof contender.transformStep === 'number' &&
   //   typeof contender.index === 'number' &&
   //   contender.fulfilled === null &&
   //   (contender.currentRejection === true ||
@@ -226,8 +226,8 @@ void ySettledLeft__;
     (contender.currentRejection === true ||
       contender.rejected === false ||
       contender.rejected === undefined) &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number'
  */
@@ -244,7 +244,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: null,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );
@@ -255,7 +255,7 @@ export async function isSettled_TEST_() {
     fulfilled: 10,
     rejected: null,
     currentRejection: null,
-    recipeSteps: -1,
+    transformStep: -1,
   }) &&
     // HACK: -------------------------------------------------------
     process.exit(51);
@@ -268,7 +268,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: true,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );
@@ -280,7 +280,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: null,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );
@@ -291,7 +291,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: true,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );
@@ -306,7 +306,7 @@ reason: null,
 [FULFILLED]: null,
 [REJECTED]: null,
 currentRejection:true,
-recipeSteps:0,
+transformStep:0,
 index:0,
 }
 
@@ -319,7 +319,7 @@ index:0,
     (contender.currentRejection === true ||
       contender.rejected === false ||
       contender.rejected === undefined) &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender
  */

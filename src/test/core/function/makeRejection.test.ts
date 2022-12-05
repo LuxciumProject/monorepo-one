@@ -9,7 +9,7 @@ describe('Sanity check Level 1', () => {
       fulfilled: null,
       index: 0,
       reason: 'any',
-      recipeSteps: 0,
+      transformStep: 0,
       status: 'rejected',
     });
   });

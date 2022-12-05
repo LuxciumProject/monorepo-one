@@ -34,8 +34,8 @@ The most effective employees, managers, and executives are the ones who use thes
 // let itemValue: T;
 // if (isPromiseFulfilledResult<T>(item)) {
 //   if (isSettledRight<T>(item)) {
-//     const itemRecipeSteps = item.recipeSteps;
-//     recipeSteps = itemRecipeSteps + 1;
+//     const itemTransformStep = item.transformStep;
+//     transformStep = itemTransformStep + 1;
 //   }
 //   itemValue = item.value;
 // } else {
@@ -50,7 +50,7 @@ The most effective employees, managers, and executives are the ones who use thes
 //   fulfilled: value,
 //   rejected: null,
 //   currentRejection: null,
-//   recipeSteps,
+//   transformStep,
 //   index,
 // };
 
@@ -69,7 +69,7 @@ The most effective employees, managers, and executives are the ones who use thes
 //   rejected: reason,
 //   fulfilled: null,
 //   currentRejection: false,
-//   recipeSteps: 0,
+//   transformStep: 0,
 //   index,
 // };
 
@@ -91,7 +91,7 @@ The most effective employees, managers, and executives are the ones who use thes
 //   rejected: reason,
 //   fulfilled: null,
 //   currentRejection: true,
-//   recipeSteps: 0,
+//   transformStep: 0,
 //   index,
 // };
 

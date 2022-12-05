@@ -15,7 +15,7 @@ export function isometricSettledResult<T>(
       fulfilled: item.value,
       rejected: null,
       currentRejection: null,
-      recipeSteps: -1,
+      transformStep: -1,
       index,
     };
     return settled;
@@ -27,7 +27,7 @@ export function isometricSettledResult<T>(
     rejected: item.reason,
     fulfilled: null,
     currentRejection: undefined,
-    recipeSteps: -1,
+    transformStep: -1,
     index,
   };
   return settled;
@@ -44,7 +44,7 @@ export async function isometricSettledResult_TEST_() {
         [FULFILLED]: null,
         [REJECTED]: null,
         currentRejection: null,
-        recipeSteps: 0,
+        transformStep: 0,
         index: 0,
       },
     ].map(isometricSettledResult)
@@ -57,7 +57,7 @@ export async function isometricSettledResult_TEST_() {
         [FULFILLED]: null,
         [REJECTED]: null,
         currentRejection: true,
-        recipeSteps: 0,
+        transformStep: 0,
         index: 0,
       },
     ].map(isometricSettledResult)
@@ -75,7 +75,7 @@ export async function isometricSettledResult_TEST_() {
         [FULFILLED]: null,
         [REJECTED]: null,
         currentRejection: null,
-        recipeSteps: 0,
+        transformStep: 0,
         index: 0,
       },
       {
@@ -88,7 +88,7 @@ export async function isometricSettledResult_TEST_() {
         [FULFILLED]: null,
         [REJECTED]: null,
         currentRejection: true,
-        recipeSteps: 0,
+        transformStep: 0,
         index: 0,
       },
     ].map(isometricSettledResult)

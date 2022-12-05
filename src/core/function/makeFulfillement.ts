@@ -5,7 +5,7 @@ import { SettledRight } from '../../types';
 type MakeFulfillementArgs<U> = {
   value: U;
   index: number;
-  recipeSteps: number;
+  transformStep: number;
 };
 
 /** @internal */
@@ -13,7 +13,7 @@ type MakeFulfillementArgs<U> = {
 export function makeFulfillement<U>({
   value,
   index,
-  recipeSteps,
+  transformStep,
 }: MakeFulfillementArgs<U>): SettledRight<U> {
   const result: SettledRight<U> = {
     status: FULFILLED,
@@ -21,7 +21,7 @@ export function makeFulfillement<U>({
     fulfilled: value,
     rejected: null,
     currentRejection: null,
-    recipeSteps,
+    transformStep,
     index,
   };
 
@@ -35,7 +35,7 @@ export function makeFulfillement<U>({
 /* istanbul ignore next */
 export function makeFulfillement_TEST_() {
   console.log(`at: makeFulfillement_TEST_ from ${__filename}`);
-  console.log(makeFulfillement({ value: 10, index: 0, recipeSteps: 0 }));
+  console.log(makeFulfillement({ value: 10, index: 0, transformStep: 0 }));
   return void 0;
 }
 

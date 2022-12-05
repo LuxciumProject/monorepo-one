@@ -13,7 +13,7 @@ import { SettledRight } from '../../types';
   reason?: undefined;
   fulfilled: T;
   rejected: null;
-  recipeSteps: number;
+  transformStep: number;
   currentRejection: null;
   index: number;
 */
@@ -25,7 +25,7 @@ import { SettledRight } from '../../types';
     reason?: undefined,
     fulfilled: 'T',
     rejected: null,
-    recipeSteps: NaN,
+    transformStep: NaN,
     currentRejection: null,
     index: -1
   }
@@ -46,7 +46,7 @@ import { SettledRight } from '../../types';
     rejected: null,
     }
     {
-    recipeSteps: NaN,
+    transformStep: NaN,
     }
     {
     currentRejection: null,
@@ -68,8 +68,8 @@ export function isSettledRight_<T>(
     contender.rejected === null &&
     'currentRejection' in contender &&
     contender.currentRejection === null &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number'
   );
@@ -104,9 +104,9 @@ describe('SettledRight<T_type> syntetic testing', () => {
     const contender: any = { rejected: null };
     expect(REJECTED in contender && contender.rejected === null).toBeTruthy();
   });
-  it('recipeSteps: NaN, because recipeSteps: number;', () => {
-    const contender: any = { recipeSteps: NaN };
-    expect(typeof contender.recipeSteps === 'number').toBeTruthy();
+  it('transformStep: NaN, because transformStep: number;', () => {
+    const contender: any = { transformStep: NaN };
+    expect(typeof contender.transformStep === 'number').toBeTruthy();
   });
   it('currentRejection: null, because currentRejection: null;', () => {
     const contender: any = { currentRejection: null };
@@ -129,7 +129,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: null,
-      recipeSteps: 0,
+      transformStep: 1,
       index: 0,
     })
   );
@@ -140,7 +140,7 @@ export async function isSettled_TEST_() {
     fulfilled: 10,
     rejected: null,
     currentRejection: null,
-    recipeSteps: -1,
+    transformStep: -1,
   }) &&
     // HACK: -------------------------------------------------------
     process.exit(51);
@@ -153,7 +153,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: true,
-      recipeSteps: 0,
+      transformStep: 1,
       index: 0,
     })
   );
@@ -165,7 +165,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: null,
-      recipeSteps: 0,
+      transformStep: 1,
       index: 0,
     })
   );
@@ -176,7 +176,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: true,
-      recipeSteps: 0,
+      transformStep: 1,
       index: 0,
     })
   );

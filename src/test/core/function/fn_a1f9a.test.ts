@@ -11,7 +11,7 @@ describe('Sanity check Level 1', () => {
     ).toStrictEqual({
       currentRejection: null,
       index: 0,
-      recipeSteps: 0,
+      transformStep: 1,
       rejected: null,
       status: 'fulfilled',
       value: 10,
@@ -31,7 +31,7 @@ describe('Sanity check Level 1', () => {
     ).toStrictEqual({
       currentRejection: null,
       index: 0,
-      recipeSteps: 0,
+      transformStep: 1,
       rejected: null,
       status: 'fulfilled',
       value: 100,
@@ -52,7 +52,7 @@ describe('Sanity check Level 1', () => {
     ).toStrictEqual({
       currentRejection: null,
       index: 0,
-      recipeSteps: 0,
+      transformStep: 1,
       rejected: null,
       status: 'fulfilled',
       value: 100,
@@ -76,7 +76,7 @@ describe('Sanity check Level 1', () => {
     ).toStrictEqual({
       currentRejection: null,
       index: 0,
-      recipeSteps: 0,
+      transformStep: 1,
       rejected: null,
       status: 'fulfilled',
       value: 100,
@@ -103,7 +103,7 @@ describe('Sanity check Level 1', () => {
       fulfilled: null,
       index: 0,
       reason: 10,
-      recipeSteps: 0,
+      transformStep: 0,
       status: 'rejected',
     });
   });

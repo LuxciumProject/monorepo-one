@@ -20,7 +20,7 @@ export function makeRejection({
     rejected: reason,
     fulfilled: null,
     currentRejection: currentRejection,
-    recipeSteps: 0,
+    transformStep: 0,
     index,
   };
 

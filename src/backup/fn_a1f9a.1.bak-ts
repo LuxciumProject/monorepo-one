@@ -24,7 +24,7 @@ export async function fn_a1f9a<T, R>({
   errLookup = (value, index, currentRejection) =>
     void [value, index, currentRejection],
 }: MapperOptions<T, R>) {
-  let recipeSteps = -1;
+  let transformStep = -1;
   FULFILLED;
   isPromiseLike;
   isSettledLeft;
@@ -36,7 +36,7 @@ export async function fn_a1f9a<T, R>({
   transform;
   lookup;
   validate;
-  recipeSteps;
+  transformStep;
   // Remove  the promise part
   // try {
   // // ++ Unwrap from Promise or PromiseLike -------------------------
@@ -57,7 +57,7 @@ export async function fn_a1f9a<T, R>({
   //       fulfilled: item_1.value,
   //       rejected: null,
   //       currentRejection: null,
-  //       recipeSteps,
+  //       transformStep,
   //       index,
   //     };
   //   } else if (isSettledRight<T>(item_1)) {
@@ -72,7 +72,7 @@ export async function fn_a1f9a<T, R>({
   //     rejected: item_1.reason,
   //     fulfilled: null,
   //     currentRejection: false,
-  //     recipeSteps: NaN,
+  //     transformStep: NaN,
   //     index,
   //   };
   // } else if (isSettledLeft(item_1)) {
@@ -84,8 +84,8 @@ export async function fn_a1f9a<T, R>({
   // let itemValue: T;
   // if (isSettledRight<T>(someValue)) {
   //   itemValue = someValue.value;
-  //   const itemRecipeSteps = someValue?.recipeSteps || 0;
-  //   recipeSteps = itemRecipeSteps + 1;
+  //   const itemTransformStep = someValue?.transformStep || 0;
+  //   transformStep = itemTransformStep + 1;
   // } else {
   //   itemValue = someValue;
   // }
@@ -109,7 +109,7 @@ export async function fn_a1f9a<T, R>({
   //       fulfilled: value,
   //       rejected: null,
   //       currentRejection: null,
-  //       recipeSteps,
+  //       transformStep,
   //       index,
   //     };
 
@@ -151,7 +151,7 @@ function rejectionBlock(
     rejected: reason,
     fulfilled: null,
     currentRejection: currentRejection,
-    recipeSteps: 0,
+    transformStep: 0,
     index,
   };
 
@@ -174,7 +174,7 @@ function rejectionBlock(
         rejected: reason,
         fulfilled: null,
         currentRejection: false,
-        recipeSteps: 0,
+        transformStep: 0,
         index,
       };
 

@@ -1,5 +1,5 @@
 import { FULFILLED, REJECTED } from '../../constants';
-import { isSettledRight, isSettledLeft, isSettled } from './isSettled';
+import { isSettled, isSettledLeft, isSettledRight } from './isSettled';
 
 /*
 
@@ -9,13 +9,13 @@ import { isSettledRight, isSettledLeft, isSettled } from './isSettled';
   //   'status' in contender &&
   //   'reason' in contender &&
   //   'currentRejection' in contender &&
-  //   'recipeSteps' in contender &&
+  //   'transformStep' in contender &&
   //   'index' in contender &&
   //   REJECTED in contender &&
   //   FULFILLED in contender &&
   //   contender.status === REJECTED &&
   //   contender.reason === contender[REJECTED] &&
-  //   typeof contender.recipeSteps === 'number' &&
+  //   typeof contender.transformStep === 'number' &&
   //   typeof contender.index === 'number' &&
   //   contender.fulfilled === null &&
   //   (contender.currentRejection === true ||
@@ -36,8 +36,8 @@ import { isSettledRight, isSettledLeft, isSettled } from './isSettled';
     (contender.currentRejection === true ||
       contender.rejected === false ||
       contender.rejected === undefined) &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number'
  */
@@ -52,7 +52,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: null,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );
@@ -63,7 +63,7 @@ export async function isSettled_TEST_() {
     fulfilled: 10,
     rejected: null,
     currentRejection: null,
-    recipeSteps: -1,
+    transformStep: -1,
   }) &&
     // HACK: -------------------------------------------------------
     process.exit(51);
@@ -75,7 +75,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: true,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );
@@ -87,7 +87,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: null,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );
@@ -98,7 +98,7 @@ export async function isSettled_TEST_() {
       [FULFILLED]: null,
       [REJECTED]: null,
       currentRejection: true,
-      recipeSteps: 0,
+      transformStep: 0,
       index: 0,
     })
   );

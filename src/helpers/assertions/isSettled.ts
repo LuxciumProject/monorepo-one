@@ -16,8 +16,8 @@ export function isSettledRight<T>(
     'status' in contender &&
     'value' in contender &&
     'currentRejection' in contender &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number' &&
     //
@@ -41,8 +41,8 @@ export function isSettledLeft(contender: unknown): contender is SettledLeft {
     'status' in contender &&
     'reason' in contender &&
     'currentRejection' in contender &&
-    'recipeSteps' in contender &&
-    typeof contender.recipeSteps === 'number' &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number' &&
     //

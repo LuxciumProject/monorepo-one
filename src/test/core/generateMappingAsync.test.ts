@@ -8,7 +8,7 @@ describe('Sanity check Level 1', () => {
       expect(generation).toStrictEqual({
         currentRejection: null,
         index: 0,
-        recipeSteps: 0,
+        transformStep: 1,
         rejected: null,
         status: 'fulfilled',
         value: { item: 10 },

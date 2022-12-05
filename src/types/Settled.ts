@@ -52,7 +52,7 @@ export type SettledRight<T> = PromiseFulfilledResult<T> & {
   reason?: undefined;
   fulfilled: T;
   rejected: null;
-  recipeSteps: number;
+  transformStep: number;
   currentRejection: null;
   index: number;
 };
@@ -69,7 +69,7 @@ export type SettledLeft = PromiseRejectedResult & {
   value?: undefined;
   rejected: any;
   fulfilled: null;
-  recipeSteps: number;
+  transformStep: number;
   currentRejection: true | false | undefined;
   index: number;
 };
