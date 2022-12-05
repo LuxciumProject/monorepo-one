@@ -31,6 +31,7 @@ export async function* generateMappingAsync<R, T>(
   }
 }
 
+/* istanbul ignore next */
 export async function generateMappingAsync_TEST_() {
   console.log(`at: generateMappingAsync_TEST_ from ${__filename}`);
   const generator = generateMappingAsync([{ item: 10 }]);

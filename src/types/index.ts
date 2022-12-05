@@ -5,7 +5,7 @@ export type {
   MapperOptions,
   TransformFn,
   ValidateFn,
-} from './MapperOptions';
+} from './mapper-options';
 export type { OnlySideEffect } from './OnlySideEffect';
 export type {
   FulfilledResult,

@@ -1,7 +1,16 @@
-import { makeRejection_TEST_ } from '../../../core/function/makeRejection';
+import { makeRejection } from '../../../core/function/makeRejection';
 
 describe('Sanity check Level 1', () => {
   it('Should pass the smoke test makeRejection_TEST_', () => {
-    expect(() => makeRejection_TEST_()).not.toThrow();
+    expect(
+      makeRejection({ reason: 'any', index: 0, currentRejection: true })
+    ).toStrictEqual({
+      currentRejection: true,
+      fulfilled: null,
+      index: 0,
+      reason: 'any',
+      recipeSteps: 0,
+      status: 'rejected',
+    });
   });
 });

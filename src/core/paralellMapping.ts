@@ -28,6 +28,7 @@ export function paralellMapping<T, R>(
   );
 }
 
+/* istanbul ignore next */
 export async function paralellMapping_TEST_() {
   console.log(`at: paralellMapping_TEST_ from ${__filename}`);
   console.log(await Promise.all(paralellMapping([{ item: 10 }])));

@@ -27,28 +27,27 @@ export async function fulfillementBlock<T, R>(
     if (isSettledRight<T>(item)) {
       const itemRecipeSteps = item.recipeSteps;
       recipeSteps = itemRecipeSteps + 1;
-      // HACK: -------------------------------------------------------
-      // process.exit(15);
-      // BUG: --------------------------------------------------------
     }
     itemValue = item.value;
-    // HACK: ---------------------------------------------------------
-    // process.exit(14);
-    // BUG: ----------------------------------------------------------
   } else {
     itemValue = item;
-    recipeSteps = 0;
+    recipeSteps = 1;
   }
-  const value = await transform(itemValue, index, array);
-  lookup(value, index, array);
-  await validate(value, index, array);
-  return makeFulfillement<R>({
-    value,
-    index,
-    recipeSteps,
-  });
+  try {
+    const value = await transform(itemValue, index, array);
+    lookup(value, index, array);
+    await validate(value, index, array);
+    return makeFulfillement<R>({
+      value,
+      index,
+      recipeSteps,
+    });
+  } catch (error) {
+    throw error;
+  }
 }
 
+/* istanbul ignore next */
 export async function fulfillementBlock_TEST_() {
   console.log(`at: fulfillementBlock_TEST_ from ${__filename}`);
   console.log(await fulfillementBlock(10, 0, [10]));

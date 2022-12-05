@@ -1,4 +1,15 @@
 import { OnlySideEffect } from '../../types';
+import { awaitedMapping } from '../awaitedMapping';
+import { generateMapping } from '../generateMapping';
+import { generateMappingAsync } from '../generateMappingAsync';
+import { paralellMapping } from '../paralellMapping';
+import { serialMapping } from '../serialMapping';
+
+awaitedMapping;
+generateMapping;
+generateMappingAsync;
+paralellMapping;
+serialMapping;
 
 export class MappingTools<T, R> {
   private transformFn_: TransformFn<T, R> = async (value: T) =>
@@ -10,6 +21,69 @@ export class MappingTools<T, R> {
   private errLookupFn_: ErrLookupFn = (value, index, currentRejection) =>
     void [value, index, currentRejection];
 
+  public collection: Iterable<T>;
+
+  static factory<TVal, RVal>(
+    collection: Iterable<TVal>,
+    [transformFn_, lookupFn_, validateFn_, errLookupFn_]: [
+      TransformFn<TVal, RVal>,
+      LookupFn<TVal, RVal> | null,
+      ValidateFn<TVal, RVal> | null,
+      ErrLookupFn | null
+    ]
+  ) {
+    [transformFn_, lookupFn_, validateFn_, errLookupFn_];
+    return new MappingTools(collection);
+  }
+  protected constructor(collection: Iterable<T>) {
+    this.collection = collection;
+  }
+
+  awaitedMapping() {
+    awaitedMapping(
+      this.collection,
+      this.transformFn_,
+      this.lookupFn_,
+      this.validateFn_,
+      this.errLookupFn_
+    );
+  }
+  generateMapping() {
+    generateMapping(
+      this.collection,
+      this.transformFn_,
+      this.lookupFn_,
+      this.validateFn_,
+      this.errLookupFn_
+    );
+  }
+  generateMappingAsync() {
+    generateMappingAsync(
+      this.collection,
+      this.transformFn_,
+      this.lookupFn_,
+      this.validateFn_,
+      this.errLookupFn_
+    );
+  }
+  paralellMapping() {
+    paralellMapping(
+      this.collection,
+      this.transformFn_,
+      this.lookupFn_,
+      this.validateFn_,
+      this.errLookupFn_
+    );
+  }
+  serialMapping() {
+    serialMapping(
+      this.collection,
+      this.transformFn_,
+      this.lookupFn_,
+      this.validateFn_,
+      this.errLookupFn_
+    );
+  }
   // transformFn(fn: TransformFn<T>) {
   //   this.transformFn_ = fn;
   // }

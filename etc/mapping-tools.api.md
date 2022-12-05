@@ -44,7 +44,7 @@ declare namespace core {
 }
 export { core }
 
-// @public (undocumented)
+// @public
 export interface ErrLookupFn {
     // Warning: (ae-forgotten-export) The symbol "OnlySideEffect" needs to be exported by the entry point index.d.ts
     //

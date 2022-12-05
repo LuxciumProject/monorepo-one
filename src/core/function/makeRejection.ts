@@ -31,6 +31,7 @@ export function makeRejection({
   return result;
 }
 
+/* istanbul ignore next */
 export function makeRejection_TEST_() {
   console.log(`at: makeRejection_TEST_ from ${__filename}`);
   console.log(

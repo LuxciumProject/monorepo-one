@@ -3,15 +3,28 @@
  *
  *
  * The `@luxcium/mapping-tools` library defines 5 core functions used to map on iterables with diferent outcomes in mind
- * {@link awaitedMapping}, {@link generateMappingAsync}, {@link generateMapping},
- * {@link paralellMapping} and {@link serialMapping}
+ * - {@link awaitedMapping}
+ * - {@link generateMappingAsync}
+ * - {@link generateMapping}
+ * - {@link paralellMapping}
+ * - {@link serialMapping}
  *
  * @remarks
- *
- *
+ * Each function takes a collection as its first argument which can
+ * be any iterable and can take on of 4 optional life cycle hooks:
+ * - {@link TransformFn}
+ * - {@link LookupFn}
+ * - {@link ValidateFn}
+ * - {@link ErrLookupFn}
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol | The Iterable Protocol}
  * @packageDocumentation
  */
-
+/**
+ * This is the doc comment for file1.ts
+ *
+ * Specify this is a module comment and rename it to my-module:
+ * @module my-module
+ */
 import * as core from './core';
 
 import * as constants from './constants';
@@ -52,44 +65,3 @@ export type {
   RejectedResult,
 };
 export { constants, helpers, core };
-
-// export { awaitedMapping_α as awaitedMapping };
-
-// export { converToIsometricSettledResult };
-// export { isometricSettledResult };
-// export { getFulfilledResults };
-// export { listFulfilledResults };
-// export { getRejectedResults };
-// export { settledLengts };
-
-// /** @internal */
-
-// export const helpersTools = {
-//   converToIsometricSettledResult,
-//   isometricSettledResult,
-//   getFulfilledResults,
-//   listFulfilledResults,
-//   getRejectedResults,
-//   settledLengts,
-// };
-// /** @internal */
-
-// export const constants = {
-//   FULFILLED,
-//   REJECTED,
-// };
-
-// /** @internal */
-
-// export const mappingTools = {
-//   helpersTools,
-//   constants,
-//   awaitedMapping_α,
-//   generateMapping_ς,
-//   generateMappingAsync_α,
-//   paralellMapping_ς,
-//   serialMapping_α,
-// };
-
-// /** @internal */
-// export default mappingTools;

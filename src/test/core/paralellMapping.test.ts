@@ -1,7 +1,16 @@
-import { paralellMapping_TEST_ } from '../../core/paralellMapping';
+import { paralellMapping } from '../../core/paralellMapping';
 
 describe('Sanity check Level 1', () => {
-  it('Should pass the smoke test paralellMapping_TEST_', () => {
-    expect(async () => await paralellMapping_TEST_()).not.toThrow();
+  it('Should pass the smoke test paralellMapping_TEST_', async () => {
+    expect(await Promise.all(paralellMapping([{ item: 10 }]))).toStrictEqual([
+      {
+        currentRejection: null,
+        index: 0,
+        recipeSteps: 0,
+        rejected: null,
+        status: 'fulfilled',
+        value: { item: 10 },
+      },
+    ]);
   });
 });

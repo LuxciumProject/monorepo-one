@@ -36,7 +36,7 @@ export async function serialMapping<T, R>(
 }
 
 type WrappedResult<U> = <W>(wraper: W) => Settled<U>;
-export type MappingFn = <T, R>(
+export type MappingFn_ = <T, R>(
   collection: Iterable<T | Settled<T>>,
   transform: TransformFn<T, R>,
   lookup: LookupFn<T, R>,
@@ -44,6 +44,7 @@ export type MappingFn = <T, R>(
   errLookup: ErrLookupFn
 ) => WrappedResult<Settled<R>>;
 
+/* istanbul ignore next */
 export async function serialMapping_TEST_() {
   console.log(`at: serialMapping_TEST_ from ${__filename}`);
   console.log(await serialMapping([{ item: 10 }]));
