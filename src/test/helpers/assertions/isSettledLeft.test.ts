@@ -6,11 +6,6 @@ import {
 } from '../../../helpers/assertions';
 
 describe('Sanity check Level 1', () => {
-  // it('Should pass the smoke test getFulfilledResults_TEST_', () => {
-  //   expect(async () => await isSettled_TEST_()).not.toThrow();
-  // });
-  isSettled;
-
   it('Should pass isSettled with a settledRight', () => {
     expect(
       isSettled({
@@ -81,6 +76,20 @@ describe('Sanity check Level 1', () => {
     ).toBe(true);
   });
 
+  it('Should fail isSettledLeft with currentRejection: null', () => {
+    expect(
+      isSettledLeft({
+        status: REJECTED,
+        reason: null,
+        [FULFILLED]: null,
+        [REJECTED]: null,
+        currentRejection: null,
+        transformStep: 0,
+        index: 0,
+      })
+    ).toBe(false);
+  });
+
   it('Should pass isSettledLeft with currentRejection: undefined', () => {
     expect(
       isSettledLeft({
@@ -94,12 +103,12 @@ describe('Sanity check Level 1', () => {
       })
     ).toBe(true);
   });
+
   it('Should pass isSettledRight', () => {
     expect(
       isSettledRight({
         status: 'fulfilled',
         value: 10,
-        // reason: undefined,
         fulfilled: 10,
         rejected: null,
         currentRejection: null,
@@ -108,80 +117,46 @@ describe('Sanity check Level 1', () => {
       })
     ).toBe(true);
   });
-  it('Should fail isSettledLeft with a settledRight', () => {
-    expect(
-      isSettledLeft({
-        status: 'fulfilled',
-        value: 10,
-        // reason: undefined,
-        fulfilled: 10,
-        rejected: null,
-        currentRejection: null,
-        transformStep: -1,
-        index: -1,
-      })
-    ).toBe(false);
-  });
-});
-describe('Decompose isSettledRight', () => {
-  const mainContender = {
-    status: 'fulfilled',
-    value: 10,
-    fulfilled: 10,
-    rejected: null,
-    currentRejection: null,
-    transformStep: -1,
-    index: -1,
-  };
-
-  it('Should have typeof contender === "object"', () => {
-    expect(typeof mainContender === 'object').toBe(true);
-  });
-
-  it('Should have typeof contender === "object"', () => {
-    expect(mainContender !== null).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect('status' in mainContender).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect('value' in mainContender).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect('currentRejection' in mainContender).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect('transformStep' in mainContender).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(typeof mainContender.transformStep === 'number').toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect('index' in mainContender).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(typeof mainContender.index === 'number').toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(FULFILLED in mainContender).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(REJECTED in mainContender).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(mainContender.rejected === null).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(mainContender.status === FULFILLED).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(mainContender.value === mainContender[FULFILLED]).toBe(true);
-  });
-  it('Should have typeof contender === "object"', () => {
-    expect(mainContender.currentRejection === null).toBe(true);
-  });
 });
 
+export type SettledLeft_ = PromiseRejectedResult & {
+  status: 'rejected';
+  reason: any;
+  value?: undefined;
+  rejected: any;
+  fulfilled: null;
+  transformStep: number;
+  currentRejection: true | false | undefined;
+  index: number;
+};
+
+/*
+  (
+    typeof contender === 'object' &&
+    contender !== null &&
+    //
+    'status' in contender &&
+    'reason' in contender &&
+    'currentRejection' in contender &&
+    'transformStep' in contender &&
+    typeof contender.transformStep === 'number' &&
+    'index' in contender &&
+    typeof contender.index === 'number' &&
+    (('value' in contender && contender.value === undefined) ||
+      !('value' in contender)) &&
+    //
+    REJECTED in contender &&
+    FULFILLED in contender &&
+    contender.fulfilled === null &&
+    //
+    contender.status === REJECTED &&
+    contender.reason === contender[REJECTED] &&
+    //
+    (contender.currentRejection === true ||
+      contender.currentRejection === false ||
+      contender.currentRejection === undefined)
+  )
+ */
 describe('Decompose isSettledLeft', () => {
   const mainContender = {
     status: 'rejected',

@@ -46,6 +46,8 @@ export function isSettledLeft(contender: unknown): contender is SettledLeft {
     typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number' &&
+    (('value' in contender && contender.value === undefined) ||
+      !('value' in contender)) &&
     //
     REJECTED in contender &&
     FULFILLED in contender &&
