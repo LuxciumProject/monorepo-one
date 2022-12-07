@@ -1,80 +1,21 @@
-import { FULFILLED, REJECTED } from '../../constants';
-import { Settled, SettledRight } from '../../types';
+import { FULFILLED } from '../../constants';
+import { reduceValueToSettled } from '../../core/function/reduceValueToSettled';
+import { Collection, SettledRight } from '../../types';
 import { converToIsometricSettledResult } from './converToIsometricSettledResult';
 
 /** @beta */
 export function getFulfilledResults<T>(
-  collection: Array<Settled<T> | PromiseSettledResult<T>>
+  collection: Collection<T> //  Array<Settled<T> | PromiseSettledResult<T>>
 ): SettledRight<T>[] {
-  const result = collection.filter(
-    (item): item is PromiseFulfilledResult<T> =>
-      item.status === FULFILLED && typeof item.value !== 'undefined'
-  );
+  // TODO: ===========================================================
+  reduceValueToSettled;
+  // BUG: Should also take care or rejected values
+  const result = [...collection]
+    .map(reduceValueToSettled)
+    .filter(
+      (item) /* : item is PromiseFulfilledResult<T> */ =>
+        item.status === FULFILLED && typeof item.value !== 'undefined'
+    );
 
   return converToIsometricSettledResult(result);
 }
-
-/** @internal */
-/* istanbul ignore next */
-export async function getFulfilledResults_TEST_() {
-  console.log(`at: TEST from ${__filename}`);
-  console.log(
-    getFulfilledResults([
-      {
-        status: FULFILLED,
-        value: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: null,
-        transformStep: 0,
-        index: 0,
-      },
-    ])
-  );
-  console.log(
-    getFulfilledResults([
-      {
-        status: REJECTED,
-        reason: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: true,
-        transformStep: 0,
-        index: 0,
-      },
-    ])
-  );
-
-  console.log(
-    getFulfilledResults([
-      {
-        status: REJECTED,
-        reason: null,
-      },
-      {
-        status: FULFILLED,
-        value: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: null,
-        transformStep: 0,
-        index: 0,
-      },
-      {
-        status: FULFILLED,
-        value: null,
-      },
-      {
-        status: REJECTED,
-        reason: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: true,
-        transformStep: 0,
-        index: 0,
-      },
-    ])
-  );
-  return void 0;
-}
-// getFulfilledResults_TEST_();

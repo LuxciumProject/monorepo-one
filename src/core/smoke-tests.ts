@@ -1,7 +1,7 @@
-import { awaitedMapping_TEST_ } from './awaitedMapping';
-import { generateMapping_TEST_ } from './generateMapping';
+import { awaitedMapping_TEST_ } from './awaitedMapping_TEST_';
 import { generateMappingAsync_TEST_ } from './generateMappingAsync';
-import { paralellMapping_TEST_ } from './paralellMapping';
+import { generateMapping_TEST_ } from './generateMapping_TEST_';
+import { paralellMapping_TEST_ } from './paralellMapping_TEST_';
 import { serialMapping_TEST_ } from './serialMapping';
 
 void (async function MAIN() {

@@ -109,6 +109,7 @@ describe('Sanity check Level 1', () => {
       isSettledRight({
         status: 'fulfilled',
         value: 10,
+        reason: undefined,
         fulfilled: 10,
         rejected: null,
         currentRejection: null,

@@ -1,75 +1,17 @@
-import { FULFILLED, REJECTED } from '../../constants';
+import { reduceValueToSettled } from '../../core/function/reduceValueToSettled';
 import { Settled } from '../../types';
+import { isPromiseLike } from '../assertions';
 import { getFulfilledResults } from './getFulfilledResults';
 
+type Collection<T> = Array<Settled<T> | PromiseSettledResult<T>>;
+
 /** @beta */
-export function listFulfilledResults<T>(
-  collection: Array<Settled<T> | PromiseSettledResult<T>>
+export async function listFulfilledResults<T>(
+  collection: Collection<T> | PromiseLike<Collection<T>> //  Array<Settled<T> | PromiseSettledResult<T>>
 ) {
-  return getFulfilledResults(collection).flatMap(item => item.value);
-}
+  // TODO: ===========================================================
+  reduceValueToSettled;
 
-/** @internal */
-/* istanbul ignore next */
-export async function listFulfilledResults_TEST_() {
-  console.log(`at: TEST from ${__filename}`);
-  console.log(
-    listFulfilledResults([
-      {
-        status: FULFILLED,
-        value: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: null,
-        transformStep: 0,
-        index: 0,
-      },
-    ])
-  );
-  console.log(
-    listFulfilledResults([
-      {
-        status: REJECTED,
-        reason: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: true,
-        transformStep: 0,
-        index: 0,
-      },
-    ])
-  );
-
-  console.log(
-    listFulfilledResults([
-      {
-        status: REJECTED,
-        reason: null,
-      },
-      {
-        status: FULFILLED,
-        value: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: null,
-        transformStep: 0,
-        index: 0,
-      },
-      {
-        status: FULFILLED,
-        value: null,
-      },
-      {
-        status: REJECTED,
-        reason: null,
-        [FULFILLED]: null,
-        [REJECTED]: null,
-        currentRejection: true,
-        transformStep: 0,
-        index: 0,
-      },
-    ])
-  );
-  return void 0;
+  const values = isPromiseLike(collection) ? await collection : collection;
+  return getFulfilledResults(values).flatMap(item => item.value);
 }
-// listFulfilledResults_TEST_();

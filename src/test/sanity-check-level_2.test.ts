@@ -22,12 +22,12 @@ describe('Sanity check Level 2', () => {
 
   it('Should awaitedMapping on a collection', async () => {
     const mappingResult = awaitedMapping(collection, transforMapper);
-    expect(listFulfilledResults(await mappingResult)).toEqual(collection);
+    expect(await listFulfilledResults(await mappingResult)).toEqual(collection);
   });
 
   it('Should serialMapping on a collection', async () => {
     const mappingResult = serialMapping(collection, transforMapper);
-    expect(listFulfilledResults(await mappingResult)).toEqual(collection);
+    expect(await listFulfilledResults(await mappingResult)).toEqual(collection);
   });
 
   it('Should paralellMapping on a collection', async () => {

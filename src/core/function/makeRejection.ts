@@ -5,14 +5,14 @@ import { SettledLeft } from '../../types';
 type MakeRejectionArgs = {
   reason: any;
   index: number;
-  currentRejection: boolean;
+  currentRejection?: true | false | undefined;
 };
 /** @internal */
 
 export function makeRejection({
   reason,
   index,
-  currentRejection,
+  currentRejection = undefined,
 }: MakeRejectionArgs): SettledLeft {
   const result: SettledLeft = {
     status: REJECTED,

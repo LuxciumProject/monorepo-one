@@ -5,4 +5,9 @@ export {
   isPromiseRejectedResult,
   isPromiseSettledResult,
 } from './isPromiseSettledResult';
-export { isSettled, isSettledLeft, isSettledRight } from './isSettled';
+export {
+  hasTransformStep,
+  isSettled,
+  isSettledLeft,
+  isSettledRight,
+} from './isSettled';

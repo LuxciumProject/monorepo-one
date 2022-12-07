@@ -1,7 +1,42 @@
 import { FULFILLED, REJECTED } from '../../../constants';
 import { fulfillementBlock } from '../../../core/function/fulfillementBlock';
 
-describe('Sanity check Level 1', () => {
+describe('Sanity check Level 1 fulfillementBlock', () => {
+  it.skip('Should make fulfillementBlock from a promise', async () => {
+    expect(
+      await fulfillementBlock(
+        (async () => ({
+          status: FULFILLED,
+          value: null,
+          [FULFILLED]: null,
+          [REJECTED]: null,
+          currentRejection: null,
+          transformStep: 0,
+          index: 0,
+        }))(),
+        -1,
+        [
+          {
+            status: FULFILLED,
+            value: 10,
+            [FULFILLED]: 10,
+            [REJECTED]: null,
+            currentRejection: null,
+            transformStep: 0,
+            index: 0,
+          },
+        ]
+      )
+    ).toStrictEqual({
+      currentRejection: null,
+      index: -1,
+      rejected: null,
+      status: 'fulfilled',
+      transformStep: 1,
+      value: null,
+    });
+  });
+
   it('Should pass isSettled with a settledRight', async () => {
     expect(
       await fulfillementBlock(
@@ -39,7 +74,7 @@ describe('Sanity check Level 1', () => {
 
   it.each([
     [
-      fulfillementBlock(10, 0, [10]),
+      fulfillementBlock(10, 0, [10], 0),
       {
         currentRejection: null,
         index: 0,

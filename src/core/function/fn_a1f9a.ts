@@ -1,4 +1,5 @@
 import { assertions } from '../../helpers';
+import { getTransformStep } from '../../helpers/tools';
 import { MapperOptions } from '../../types';
 import { fulfillementBlock } from './fulfillementBlock';
 import { makeRejection } from './makeRejection';
@@ -19,12 +20,15 @@ export async function fn_a1f9a<T, R>({
   errLookup = (value, index, currentRejection) =>
     void [value, index, currentRejection],
 }: MapperOptions<T, R>) {
+  const transformStep = getTransformStep(item);
+
   try {
     if (!isPromiseSettledResult(item) || isPromiseFulfilledResult(item)) {
       return await fulfillementBlock<T, R>(
         item,
         index,
         array,
+        transformStep,
         transform,
         lookup,
         validate

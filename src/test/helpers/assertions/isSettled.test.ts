@@ -29,6 +29,7 @@ describe('Sanity check Level 1', () => {
     expect(
       isSettled({
         status: REJECTED,
+        value: undefined,
         reason: null,
         [FULFILLED]: null,
         [REJECTED]: null,
@@ -119,6 +120,19 @@ describe('Sanity check Level 1', () => {
         currentRejection: null,
         transformStep: -1,
         index: -1,
+      })
+    ).toBe(false);
+  });
+  it('Should fail isSettledRight with a settledLeft', () => {
+    expect(
+      isSettledRight({
+        status: REJECTED,
+        reason: null,
+        [FULFILLED]: null,
+        [REJECTED]: null,
+        currentRejection: false,
+        transformStep: 0,
+        index: 0,
       })
     ).toBe(false);
   });

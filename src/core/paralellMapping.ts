@@ -27,11 +27,26 @@ export function paralellMapping<T, R>(
     })
   );
 }
+/*
+export async function paralellMapping_<T, R>(
+  collection: Collection<T> | PromiseLike<Collection<T>>,
+  transform: TransformFn<T, R> = async value => value as any as R,
+  lookup: LookupFn<T, R> = v => void v,
+  validate: ValidateFn<T, R> = async v => void v,
+  errLookup: ErrLookupFn = v => void v
+) {
+  const values = isPromiseLike(collection) ? await collection : collection;
 
-/* istanbul ignore next */
-export async function paralellMapping_TEST_() {
-  console.log(`at: paralellMapping_TEST_ from ${__filename}`);
-  console.log(await Promise.all(paralellMapping([{ item: 10 }])));
-  return void 0;
+  return [...values].map((item, index, array) =>
+    fn_a1f9a({
+      item,
+      index,
+      transform,
+      array,
+      lookup,
+      validate,
+      errLookup,
+    })
+  );
 }
-// paralellMapping_TEST_();
+ */

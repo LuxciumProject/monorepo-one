@@ -1,6 +1,6 @@
 import { isPromise_TEST_ } from './isPromise';
 import { isPromiseLike_TEST_ } from './isPromiseLike';
-import { isPromiseSettledResult_TEST_ } from './isPromiseSettledResult';
+import { isPromiseSettledResult_TEST_ } from './isPromiseSettledResult_TEST_';
 import { isSettled_TEST_ } from './isSettled_TEST_';
 
 /* istanbul ignore next */

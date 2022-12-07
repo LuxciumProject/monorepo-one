@@ -6,6 +6,19 @@ export function isSettled<T>(contender: any): contender is Settled<T> {
   return isSettledRight<T>(contender) || isSettledLeft(contender);
 }
 
+type TransformStep = {
+  transformStep: number;
+};
+export function hasTransformStep(
+  countender: unknown
+): countender is TransformStep {
+  return (
+    countender != null &&
+    typeof countender === 'object' &&
+    'transformStep' in countender &&
+    typeof countender.transformStep === 'number'
+  );
+}
 /** @public */
 /* istanbul ignore next */
 export function isSettledRight<T>(
@@ -21,6 +34,8 @@ export function isSettledRight<T>(
     typeof contender.transformStep === 'number' &&
     'index' in contender &&
     typeof contender.index === 'number' &&
+    (('reason' in contender && contender.reason === undefined) ||
+      !('reason' in contender)) &&
     //
     FULFILLED in contender &&
     REJECTED in contender &&

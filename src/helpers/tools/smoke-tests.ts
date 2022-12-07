@@ -1,9 +1,9 @@
 import { converToIsometricSettledResult_TEST_ } from './converToIsometricSettledResult';
-import { getFulfilledResults_TEST_ } from './getFulfilledResults';
+import { getFulfilledResults_TEST_ } from './getFulfilledResults_TEST_';
 import { getRejectedResults_TEST_ } from './getRejectedResults';
-import { isometricSettledResult_TEST_ } from './isometricSettledResult';
-import { listFulfilledResults_TEST_ } from './listFulfilledResults';
-import { settledLengts_TEST_ } from './settledLengts';
+import { isometricSettledResult_TEST_ } from './isometricSettledResult_TEST_';
+import { listFulfilledResults_TEST_ } from './listFulfilledResults_TEST_';
+import { settledLengts_TEST_ } from './settledLengts_TEST_';
 
 void (async function MAIN() {
   console.log(`at: MAIN from ${__filename}`);

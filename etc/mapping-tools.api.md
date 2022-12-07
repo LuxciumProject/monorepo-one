@@ -82,7 +82,7 @@ export { helpers }
 function isometricSettledResult<T>(item: PromiseSettledResult<T>, index?: number): Settled<T>;
 
 // @internal (undocumented)
-function isPromise<T>(element: any): element is Promise<T>;
+function isPromise<T>(element: unknown): element is Promise<T>;
 
 // @public (undocumented)
 function isPromiseFulfilledResult<T>(contender: any): contender is PromiseFulfilledResult<T>;
@@ -100,10 +100,10 @@ function isPromiseSettledResult<T>(contender: any): contender is PromiseSettledR
 function isSettled<T>(contender: any): contender is Settled<T>;
 
 // @public (undocumented)
-function isSettledLeft(contender: any): contender is SettledLeft;
+function isSettledLeft(contender: unknown): contender is SettledLeft;
 
 // @public (undocumented)
-function isSettledRight<T>(contender: any): contender is SettledRight<T>;
+function isSettledRight<T>(contender: unknown): contender is SettledRight<T>;
 
 // @beta (undocumented)
 function listFulfilledResults<T>(collection: Array<Settled<T> | PromiseSettledResult<T>>): T[];
@@ -111,7 +111,7 @@ function listFulfilledResults<T>(collection: Array<Settled<T> | PromiseSettledRe
 // @public (undocumented)
 export interface LookupFn<S, U = unknown> {
     // (undocumented)
-    (value: U, index: number, array: readonly (S | PromiseSettledResult<S>)[]): OnlySideEffect;
+    (value: U, index: number, array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]): OnlySideEffect;
 }
 
 // @alpha
@@ -159,7 +159,7 @@ export type SettledLeft = PromiseRejectedResult & {
     value?: undefined;
     rejected: any;
     fulfilled: null;
-    recipeSteps: number;
+    transformStep: number;
     currentRejection: true | false | undefined;
     index: number;
 };
@@ -181,7 +181,7 @@ export type SettledRight<T> = PromiseFulfilledResult<T> & {
     reason?: undefined;
     fulfilled: T;
     rejected: null;
-    recipeSteps: number;
+    transformStep: number;
     currentRejection: null;
     index: number;
 };

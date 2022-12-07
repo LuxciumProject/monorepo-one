@@ -1,3 +1,4 @@
+export type { Collection } from './Collection';
 export type { IMappable, Mapper } from './Mapper';
 export type {
   ErrLookupFn,

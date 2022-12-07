@@ -1,6 +1,6 @@
 import { fn_a1f9a_TEST_ } from './fn_a1f9a';
-import { fulfillementBlock_TEST_ } from './fulfillementBlock';
-import { makeFulfillement_TEST_ } from './makeFulfillement';
+import { fulfillementBlock_TEST_ } from './fulfillementBlock_TEST_';
+import { makeFulfillement_TEST_ } from './makeFulfillement_TEST_';
 import { makeRejection_TEST_ } from './makeRejection';
 
 void (async function MAIN() {
