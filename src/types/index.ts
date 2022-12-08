@@ -9,11 +9,11 @@ export type {
 } from './mapper-options';
 export type { OnlySideEffect } from './OnlySideEffect';
 export type {
-  FulfilledResult,
-  RejectedResult,
+  Fulfilled,
+  PromiseResult,
+  Rejected,
   Settled,
   SettledLeft,
-  SettledResult,
   SettledRight,
 } from './Settled';
 export type { SettledIso } from './SettledIso';
