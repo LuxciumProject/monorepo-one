@@ -1,13 +1,12 @@
-import { FULFILLED, REJECTED } from '../../constants';
-import { settledLengts } from './settledLengts';
+import { FULFILLED, REJECTED } from '../../../constants';
+import { getFulfilledResults } from '../getFulfilledResults';
 
 /** @internal */
 /* istanbul ignore next */
-
-export async function settledLengts_TEST_() {
+export async function getFulfilledResults_TEST_(counter: { a: number }) {
   console.log(`at: TEST from ${__filename}`);
   console.log(
-    settledLengts([
+    getFulfilledResults([
       {
         status: FULFILLED,
         value: null,
@@ -20,7 +19,7 @@ export async function settledLengts_TEST_() {
     ])
   );
   console.log(
-    settledLengts([
+    getFulfilledResults([
       {
         status: REJECTED,
         reason: null,
@@ -34,7 +33,7 @@ export async function settledLengts_TEST_() {
   );
 
   console.log(
-    settledLengts([
+    getFulfilledResults([
       {
         status: REJECTED,
         reason: null,
@@ -63,5 +62,5 @@ export async function settledLengts_TEST_() {
       },
     ])
   );
-  return void 0;
+  return void counter.a++;
 }

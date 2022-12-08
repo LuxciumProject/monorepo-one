@@ -1,13 +1,14 @@
-import { FULFILLED, REJECTED } from '../../constants';
-import { listFulfilledResults } from './listFulfilledResults';
+import { FULFILLED, REJECTED } from '../../../constants';
+import { converToIsometricSettledResult_ } from '../converToIsometricSettledResult';
 
 /** @internal */
 /* istanbul ignore next */
-
-export async function listFulfilledResults_TEST_() {
+export async function converToIsometricSettledResult_TEST_(counter: {
+  a: number;
+}) {
   console.log(`at: TEST from ${__filename}`);
   console.log(
-    listFulfilledResults([
+    converToIsometricSettledResult_([
       {
         status: FULFILLED,
         value: null,
@@ -20,7 +21,7 @@ export async function listFulfilledResults_TEST_() {
     ])
   );
   console.log(
-    listFulfilledResults([
+    converToIsometricSettledResult_([
       {
         status: REJECTED,
         reason: null,
@@ -34,7 +35,7 @@ export async function listFulfilledResults_TEST_() {
   );
 
   console.log(
-    listFulfilledResults([
+    converToIsometricSettledResult_([
       {
         status: REJECTED,
         reason: null,
@@ -63,5 +64,5 @@ export async function listFulfilledResults_TEST_() {
       },
     ])
   );
-  return void 0;
+  return void counter.a++;
 }

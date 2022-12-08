@@ -1,10 +1,9 @@
-import { FULFILLED, REJECTED } from '../../constants';
-import { isometricSettledResult } from './isometricSettledResult';
+import { FULFILLED, REJECTED } from '../../../constants';
+import { isometricSettledResult } from '../isometricSettledResult';
 
 /** @internal */
 /* istanbul ignore next */
-
-export async function isometricSettledResult_TEST_() {
+export async function isometricSettledResult_TEST_(counter: { a: number }) {
   console.log(`at: TEST from ${__filename}`);
   console.log(
     [
@@ -63,5 +62,5 @@ export async function isometricSettledResult_TEST_() {
       },
     ].map(isometricSettledResult)
   );
-  return void 0;
+  return void counter.a++;
 }
