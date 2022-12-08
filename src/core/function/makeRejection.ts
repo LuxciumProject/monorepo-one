@@ -5,6 +5,7 @@ import { SettledLeft } from '../../types';
 type MakeRejectionArgs = {
   reason: any;
   index: number;
+  transformStep: number;
   currentRejection?: true | false | undefined;
 };
 /** @internal */
@@ -12,6 +13,7 @@ type MakeRejectionArgs = {
 export function makeRejection({
   reason,
   index,
+  transformStep,
   currentRejection = undefined,
 }: MakeRejectionArgs): SettledLeft {
   const result: SettledLeft = {
@@ -20,24 +22,34 @@ export function makeRejection({
     rejected: reason,
     fulfilled: null,
     currentRejection: currentRejection,
-    transformStep: 0,
+    transformStep,
     index,
   };
+
+  Object.defineProperty(result, 'reason', {
+    value: Object.freeze(reason),
+    enumerable: true,
+    writable: false,
+  });
+
+  Object.defineProperty(result, 'value', {
+    value: undefined,
+    enumerable: false,
+    writable: false,
+  });
 
   Object.defineProperty(result, 'rejected', {
     value: reason,
     enumerable: false,
+    writable: false,
   });
-  return result;
-}
 
-/* istanbul ignore next */
-export function makeRejection_TEST_() {
-  console.log(`at: makeRejection_TEST_ from ${__filename}`);
-  console.log(
-    makeRejection({ reason: 'any', index: 0, currentRejection: true })
-  );
-  return void 0;
-}
+  Object.defineProperty(result, 'fulfilled', {
+    value: null,
+    enumerable: false,
+    writable: false,
+  });
 
-// makeRejection_TEST_()
+  // Object.seal()
+  return Object.freeze(result);
+}

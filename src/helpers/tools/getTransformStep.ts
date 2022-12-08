@@ -1,5 +1,6 @@
 import { hasTransformStep } from '../assertions';
 
+/** @public*/
 export function getTransformStep(
   item: unknown,
   initialTransformStep: number = -1

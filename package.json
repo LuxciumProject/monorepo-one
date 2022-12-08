@@ -3,7 +3,7 @@
   "version": "0.0.0-PRE-ALPHA-UNRELEASED-UNDOCUMENTED-UNSAFE-v3.0.0x",
   "description": "",
   "main": "lib/index.js",
-  "types": "lib/typings/index.d.ts",
+  "types": "typings/index.d.ts",
   "scripts": {
     "build": "yarn base:build",
     "install": "yarn base:install",
@@ -92,6 +92,8 @@
     "typedoc": "^0.23.21",
     "typescript": "4.9.3",
     "webpack": "5.75.0",
-    "@jest/globals": "~29.3.1"
+    "@jest/globals": "~29.3.1",
+    "@microsoft/tsdoc": "~0.14.2",
+    "@microsoft/api-extractor": "~7.33.6"
   }
 }

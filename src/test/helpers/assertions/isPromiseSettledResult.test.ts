@@ -8,8 +8,16 @@ import {
 describe('Sanity check Level 1', () => {
   it('Should pass the smoke test getFulfilledResults_TEST_', () => {
     expect(
-      isPromiseFulfilledResult({ status: FULFILLED, value: null })
-    ).toBeTruthy();
+      isPromiseFulfilledResult({
+        status: FULFILLED,
+        value: null,
+        [FULFILLED]: null,
+        [REJECTED]: null,
+        currentRejection: null,
+        transformStep: 0,
+        index: 0,
+      })
+    ).toBe(true);
   });
   it('Should pass the smoke test getFulfilledResults_TEST_', () => {
     expect(

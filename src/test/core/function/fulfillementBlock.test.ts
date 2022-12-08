@@ -28,9 +28,9 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
         ]
       )
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: -1,
-      rejected: null,
+      // rejected: null,
       status: 'fulfilled',
       transformStep: 1,
       value: null,
@@ -63,9 +63,9 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
         ]
       )
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: -1,
-      rejected: null,
+      // rejected: null,
       status: 'fulfilled',
       transformStep: 1,
       value: null,
@@ -76,10 +76,10 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
     [
       fulfillementBlock(10, 0, [10], 0),
       {
-        currentRejection: null,
+        // currentRejection: null,
         index: 0,
         transformStep: 1,
-        rejected: null,
+        // rejected: null,
         status: 'fulfilled',
         value: 10,
       },
@@ -91,18 +91,18 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
           value: 10,
           reason: undefined,
           fulfilled: 10,
-          rejected: null,
-          currentRejection: null,
+          // rejected: null,
+          // currentRejection: null,
           transformStep: -1,
         },
         0,
         [10]
       ),
       {
-        currentRejection: null,
+        // currentRejection: null,
         index: 0,
         transformStep: -1,
-        rejected: null,
+        // rejected: null,
         status: 'fulfilled',
         value: 10,
       },
@@ -117,10 +117,10 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
         [10]
       ),
       {
-        currentRejection: null,
+        // currentRejection: null,
         index: 0,
         transformStep: -1,
-        rejected: null,
+        // rejected: null,
         status: 'fulfilled',
         value: 10,
       },

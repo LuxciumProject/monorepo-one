@@ -6,10 +6,10 @@ describe('Sanity check Level 1', () => {
 
     for (const generation of generator) {
       expect(await generation).toStrictEqual({
-        currentRejection: null,
+        // currentRejection: null,
         index: 0,
         transformStep: 1,
-        rejected: null,
+        // rejected: null,
         status: 'fulfilled',
         value: { item: 10 },
       });
@@ -36,7 +36,7 @@ describe('generateMapping', () => {
     for (const generation of generator) {
       expect(await generation).toStrictEqual({
         currentRejection: true,
-        fulfilled: null,
+        // fulfilled: null,
         index: 0,
         reason: ['test'],
         status: 'rejected',

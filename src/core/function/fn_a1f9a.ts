@@ -20,7 +20,7 @@ export async function fn_a1f9a<T, R>({
   errLookup = (value, index, currentRejection) =>
     void [value, index, currentRejection],
 }: MapperOptions<T, R>) {
-  const transformStep = getTransformStep(item);
+  const transformStep = getTransformStep(item, 0);
 
   try {
     if (!isPromiseSettledResult(item) || isPromiseFulfilledResult(item)) {
@@ -36,8 +36,15 @@ export async function fn_a1f9a<T, R>({
     }
     if (isPromiseRejectedResult(item)) {
       const { reason } = item;
+      const transformStep = getTransformStep(item, 0);
+
       errLookup(reason, index, false);
-      return makeRejection({ reason, index, currentRejection: false });
+      return makeRejection({
+        reason,
+        index,
+        transformStep,
+        currentRejection: false,
+      });
     }
     /* istanbul ignore next */
     throw new TypeError(
@@ -45,38 +52,11 @@ export async function fn_a1f9a<T, R>({
     );
   } catch (reason) {
     errLookup(reason, index, true);
-    return makeRejection({ reason, index, currentRejection: true });
+    return makeRejection({
+      reason,
+      index,
+      transformStep,
+      currentRejection: true,
+    });
   }
 }
-
-/* istanbul ignore next */
-export async function fn_a1f9a_TEST_() {
-  console.log(`at: fn_a1f9a_TEST_ from ${__filename}`);
-
-  console.log(
-    await fn_a1f9a({
-      item: 10,
-      index: 0,
-      array: [10],
-      transform: async item => item,
-      lookup: item => console.log(item),
-      validate: async value => {
-        if (value === 10) throw value;
-      },
-      errLookup: async reason => void reason,
-    })
-  );
-
-  console.log(
-    await fn_a1f9a({
-      item: 10,
-      index: 0,
-      array: [10],
-      transform: async item => item * 10,
-    })
-  );
-
-  return void 0;
-}
-
-// fn_a1f9a_TEST_();

@@ -25,10 +25,34 @@ export function makeFulfillement<U>({
     index,
   };
 
-  Object.defineProperty(result, 'fulfilled', {
-    value,
+  Object.defineProperty(result, 'reason', {
+    value: undefined,
     enumerable: false,
+    writable: false,
   });
 
-  return result;
+  Object.defineProperty(result, 'value', {
+    value: Object.freeze(value),
+    enumerable: true,
+    writable: false,
+  });
+
+  Object.defineProperty(result, 'fulfilled', {
+    value: Object.freeze(value),
+    enumerable: false,
+    writable: false,
+  });
+
+  Object.defineProperty(result, 'rejected', {
+    value: null,
+    enumerable: false,
+    writable: false,
+  });
+
+  Object.defineProperty(result, 'currentRejection', {
+    value: null,
+    enumerable: false,
+    writable: false,
+  });
+  return Object.freeze(result);
 }

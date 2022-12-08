@@ -5,7 +5,7 @@ import {
   SettledLeft,
   SettledRight,
   TransformFn,
-  ValidateFn,
+  ValidateFn
 } from '../types';
 import { fn_a1f9a } from './function/fn_a1f9a';
 
@@ -30,14 +30,3 @@ export async function* generateMappingAsync<R, T>(
     });
   }
 }
-
-/* istanbul ignore next */
-export async function generateMappingAsync_TEST_() {
-  console.log(`at: generateMappingAsync_TEST_ from ${__filename}`);
-  const generator = generateMappingAsync([{ item: 10 }]);
-  for await (const generation of generator) {
-    console.log(generation);
-  }
-  return void 0;
-}
-// generateMappingAsync_TEST_();

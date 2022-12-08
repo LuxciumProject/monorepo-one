@@ -5,10 +5,10 @@ describe('Sanity check Level 1', () => {
     expect(
       makeFulfillement({ value: 10, index: 0, transformStep: 1 })
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: 0,
       transformStep: 1,
-      rejected: null,
+      // rejected: null,
       status: 'fulfilled',
       value: 10,
     });

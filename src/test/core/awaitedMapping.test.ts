@@ -4,10 +4,10 @@ describe('Sanity check Level 1', () => {
   it('Should pass basic smoke test', async () => {
     expect(await awaitedMapping([{ item: 10 }])).toStrictEqual([
       {
-        currentRejection: null,
+        // currentRejection: null,
         index: 0,
         transformStep: 1,
-        rejected: null,
+        // rejected: null,
         status: 'fulfilled',
         value: { item: 10 },
       },
@@ -21,7 +21,7 @@ describe('awaitedMapping', () => {
     });
     const expected = {
       currentRejection: true,
-      fulfilled: null,
+      // fulfilled: null,
       index: 0,
       reason: ['test'],
       status: 'rejected',
@@ -36,7 +36,7 @@ describe('awaitedMapping', () => {
     });
     const expected = {
       currentRejection: true,
-      fulfilled: null,
+      // fulfilled: null,
       index: 0,
       reason: ['test'],
       status: 'rejected',

@@ -1,14 +1,13 @@
 import { FULFILLED, REJECTED } from '../../constants';
 import { Settled, SettledLeft, SettledRight } from '../../types';
+import { TransformStep } from '../../types/TransformStep';
 
 /** @public */
 export function isSettled<T>(contender: any): contender is Settled<T> {
   return isSettledRight<T>(contender) || isSettledLeft(contender);
 }
 
-type TransformStep = {
-  transformStep: number;
-};
+/** @public*/
 export function hasTransformStep(
   countender: unknown
 ): countender is TransformStep {
@@ -20,7 +19,6 @@ export function hasTransformStep(
   );
 }
 /** @public */
-/* istanbul ignore next */
 export function isSettledRight<T>(
   contender: unknown
 ): contender is SettledRight<T> {

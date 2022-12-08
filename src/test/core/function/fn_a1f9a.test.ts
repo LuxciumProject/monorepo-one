@@ -10,10 +10,10 @@ describe('Sanity check Level 1', () => {
         array: [10],
       })
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: 0,
       transformStep: 1,
-      rejected: null,
+      // rejected: null,
       status: 'fulfilled',
       value: 10,
     });
@@ -30,10 +30,10 @@ describe('Sanity check Level 1', () => {
         transform: async item => item * 10,
       })
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: 0,
       transformStep: 1,
-      rejected: null,
+      // rejected: null,
       status: 'fulfilled',
       value: 100,
     });
@@ -47,10 +47,10 @@ describe('Sanity check Level 1', () => {
         transform: async value => value * 10,
       })
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: 0,
-      transformStep: -1,
-      rejected: null,
+      transformStep: 0,
+      // rejected: null,
       status: 'fulfilled',
       value: 100,
     });
@@ -66,7 +66,7 @@ describe('Sanity check Level 1', () => {
       })
     ).toStrictEqual({
       currentRejection: false,
-      fulfilled: null,
+      // fulfilled: null,
       index: 0,
       transformStep: 0,
       reason: null,
@@ -85,10 +85,10 @@ describe('Sanity check Level 1', () => {
         lookup: item => item,
       })
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: 0,
       transformStep: 1,
-      rejected: null,
+      // rejected: null,
       status: 'fulfilled',
       value: 100,
     });
@@ -108,10 +108,10 @@ describe('Sanity check Level 1', () => {
         },
       })
     ).toStrictEqual({
-      currentRejection: null,
+      // currentRejection: null,
       index: 0,
       transformStep: 1,
-      rejected: null,
+      // rejected: null,
       status: 'fulfilled',
       value: 100,
     });
@@ -133,7 +133,7 @@ describe('Sanity check Level 1', () => {
       })
     ).toStrictEqual({
       currentRejection: true,
-      fulfilled: null,
+      // fulfilled: null,
       index: 0,
       reason: 10,
       transformStep: 0,

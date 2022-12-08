@@ -31,17 +31,19 @@ import * as constants from './constants';
 import * as helpers from './helpers';
 
 import type {
+  Collection,
   ErrLookupFn,
-  FulfilledResult,
+  Fulfilled,
   LookupFn,
   Mapper,
-  RejectedResult,
+  PromiseResult,
+  Rejected,
   Settled,
   SettledIso,
   SettledLeft,
-  SettledResult,
   SettledRight,
   TransformFn,
+  TransformStep,
   ValidateFn,
 } from './types';
 
@@ -60,8 +62,10 @@ export type {
   SettledRight,
   TransformFn,
   ValidateFn,
-  SettledResult,
-  FulfilledResult,
-  RejectedResult,
+  PromiseResult,
+  Fulfilled,
+  Rejected,
+  Collection,
+  TransformStep,
 };
 export { constants, helpers, core };

@@ -1,7 +1,8 @@
 import {
   isPromiseRejectedResult,
-  isSettledLeft,
+  isSettledLeft
 } from '../../helpers/assertions';
+import { getTransformStep } from '../../helpers/tools';
 import { Settled, SettledLeft, SettledRight } from '../../types';
 import { makeFulfillement } from './makeFulfillement';
 import { makeRejection } from './makeRejection';
@@ -29,8 +30,9 @@ export function reduceValueToSettled<T>(
     if (isSettledLeft(item)) {
       return item;
     }
+    const transformStep = getTransformStep(item,0);
     const { reason } = item;
-    return makeRejection({ reason, index });
+    return makeRejection({ reason, transformStep, index });
   }
   const [value, transformStep] = preTransform<T>(item);
   return makeFulfillement<T>({ value, index, transformStep });

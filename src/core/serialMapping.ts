@@ -43,11 +43,3 @@ export type MappingFn_ = <T, R>(
   validate: ValidateFn<T, R>,
   errLookup: ErrLookupFn
 ) => WrappedResult<Settled<R>>;
-
-/* istanbul ignore next */
-export async function serialMapping_TEST_() {
-  console.log(`at: serialMapping_TEST_ from ${__filename}`);
-  console.log(await serialMapping([{ item: 10 }]));
-  return void 0;
-}
-// serialMapping_TEST_();

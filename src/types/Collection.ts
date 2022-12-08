@@ -5,6 +5,7 @@ import { Settled, SettledLeft, SettledRight } from '.';
 
 // collection: Collection<T> | PromiseLike<Collection<T>>,
 
+/** @public */
 export type Collection<U> = Iterable<U | Settled<U> | PromiseSettledResult<U>>;
 
 /*

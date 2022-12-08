@@ -1,9 +1,9 @@
 import { reduceValueToSettled } from '../../core/function/reduceValueToSettled';
-import { Settled } from '../../types';
+import { Collection } from '../../types';
 import { isPromiseLike } from '../assertions';
 import { getFulfilledResults } from './getFulfilledResults';
 
-type Collection<T> = Array<Settled<T> | PromiseSettledResult<T>>;
+// type Collection<T> = Array<Settled<T> | PromiseSettledResult<T>>;
 
 /** @beta */
 export async function listFulfilledResults<T>(
