@@ -1,8 +1,9 @@
 import {
+  isPromise,
   isPromiseFulfilledResult,
   isPromiseLike,
   isPromiseSettledResult,
-  isSettledRight
+  isSettledRight,
 } from '../../helpers/assertions';
 import { getTransformStep } from '../../helpers/tools';
 import { Settled, SettledLeft, SettledRight } from '../../types';
@@ -10,15 +11,37 @@ import { makeFulfillement } from './makeFulfillement';
 import { makeRejection } from './makeRejection';
 
 export function makeSettler<T>(
-  item: PromiseLike<T> | PromiseLike<Settled<T>> | PromiseLike<PromiseFulfilledResult<T>>,
+  item: Promise<T> | Promise<Settled<T>> | Promise<PromiseFulfilledResult<T>>,
   index?: number
 ): Promise<Settled<T>>;
-export function makeSettler<T>(item: PromiseLike<Settled<T>>, index?: number): Promise<Settled<T>>;
-export function makeSettler<T>(item: PromiseLike<PromiseFulfilledResult<T>>, index?: number): Promise<Settled<T>>;
-export function makeSettler<T>(item: PromiseLike<T>, index?: number): Promise<Settled<T>>;
-export function makeSettler<T>(item: T | Settled<T> | PromiseSettledResult<T>, index?: number): Settled<T>;
+export function makeSettler<T>(
+  item:
+    | PromiseLike<T>
+    | PromiseLike<Settled<T>>
+    | PromiseLike<PromiseFulfilledResult<T>>,
+  index?: number
+): Promise<Settled<T>>;
+export function makeSettler<T>(
+  item: PromiseLike<Settled<T>>,
+  index?: number
+): Promise<Settled<T>>;
+export function makeSettler<T>(
+  item: PromiseLike<PromiseFulfilledResult<T>>,
+  index?: number
+): Promise<Settled<T>>;
+export function makeSettler<T>(
+  item: PromiseLike<T>,
+  index?: number
+): Promise<Settled<T>>;
+export function makeSettler<T>(
+  item: T | Settled<T> | PromiseSettledResult<T>,
+  index?: number
+): Settled<T>;
 export function makeSettler<T>(item: Settled<T>, index?: number): Settled<T>;
-export function makeSettler<T>(item: PromiseSettledResult<T>, index?: number): Settled<T>;
+export function makeSettler<T>(
+  item: PromiseSettledResult<T>,
+  index?: number
+): Settled<T>;
 export function makeSettler<T>(item: T, index?: number): Settled<T>;
 
 export function makeSettler<T>(
@@ -31,7 +54,9 @@ export function makeSettler<T>(
     | PromiseLike<PromiseSettledResult<T>>,
   index: number = -1
 ): Promise<Settled<T>> | Settled<T> {
-  return isPromiseLike(item) ? (async () => makeSettler_(await item, index))() : makeSettler_(item, index);
+  return isPromise(item) || isPromiseLike(item)
+    ? (async () => makeSettler_(await item, index))()
+    : makeSettler_(item, index);
 }
 
 function makeSettler_<T>(

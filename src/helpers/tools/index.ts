@@ -3,4 +3,3 @@ export { getRejectedResults } from './getRejectedResults';
 export { getTransformStep } from './getTransformStep';
 export { isometricSettledResult } from './isometricSettledResult';
 export { settledLengts } from './settledLengts';
-export { mapFulfilledResults } from './_mapFulfilledResults';
