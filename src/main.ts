@@ -1,6 +1,6 @@
 import { awaitedMapping } from './functions/awaitedMapping';
 import { paralellMapping } from './functions/paralellMapping';
-import { listFulfilledResults } from './helpers/tools';
+// import { listFulfilledResults } from './helpers/tools';
 
 const transformFn = async (x: number) => {
   return x ** 2;
@@ -37,7 +37,7 @@ void (async function MAIN() {
   );
   const step3 = awaitedMapping(step2, addFn, undefined, validateFn);
   console.log(await step3);
-  console.log(await listFulfilledResults(step3));
+  // console.log(await listFulfilledResults(step3));
   const value = await Promise.all(paralellMapping([{ item: 10 }]));
   console.log('value =', value);
   const result3 = paralellMapping([{ size: 10 }], async obj => {

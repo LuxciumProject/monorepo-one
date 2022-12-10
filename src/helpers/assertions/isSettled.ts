@@ -18,6 +18,7 @@ export function hasTransformStep(
     typeof countender.transformStep === 'number'
   );
 }
+
 /** @public */
 export function isSettledRight<T>(
   contender: unknown
