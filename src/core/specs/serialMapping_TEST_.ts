@@ -1,4 +1,4 @@
-import { serialMapping } from '../serialMapping';
+import { serialMapping } from '../../functions/serialMapping';
 
 /* istanbul ignore next */
 

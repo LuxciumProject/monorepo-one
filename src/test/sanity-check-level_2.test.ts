@@ -4,7 +4,7 @@ import {
   generateMappingAsync,
   paralellMapping,
   serialMapping,
-} from '../core';
+} from '../functions';
 import { listFulfilledResults } from '../helpers/tools';
 import { TransformFn } from '../types';
 

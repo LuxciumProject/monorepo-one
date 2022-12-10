@@ -1,4 +1,4 @@
-import { serialMapping } from '../../core';
+import { serialMapping } from '../../functions';
 
 describe('Sanity check Level 1', () => {
   it('Should pass the smoke test serialMapping', async () => {

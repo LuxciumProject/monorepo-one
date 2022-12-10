@@ -1,4 +1,4 @@
-import { awaitedMapping } from '../../core/awaitedMapping';
+import { awaitedMapping } from '../../functions/awaitedMapping';
 
 describe('Sanity check Level 1', () => {
   it('Should pass basic smoke test', async () => {

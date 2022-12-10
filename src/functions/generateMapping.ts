@@ -1,5 +1,5 @@
+import { fn_a1f9a } from '../core/function/fn_a1f9a';
 import { Base, ErrLookupFn, LookupFn, TransformFn, ValidateFn } from '../types';
-import { fn_a1f9a } from './function/fn_a1f9a';
 
 /** @public */
 export function* generateMapping<T, R>(

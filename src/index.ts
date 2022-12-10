@@ -25,7 +25,7 @@
  * Specify this is a module comment and rename it to my-module:
  * @module my-module
  */
-import * as core from './core';
+import * as core from './functions';
 
 import * as constants from './constants';
 import * as helpers from './helpers';
@@ -53,7 +53,7 @@ export {
   generateMappingAsync,
   paralellMapping,
   serialMapping,
-} from './core';
+} from './functions';
 export type { ErrLookupFn, LookupFn, Mapper };
 export type {
   Settled,

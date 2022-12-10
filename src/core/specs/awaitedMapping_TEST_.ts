@@ -1,4 +1,4 @@
-import { awaitedMapping } from '../awaitedMapping';
+import { awaitedMapping } from '../../functions/awaitedMapping';
 
 /* istanbul ignore next */
 

@@ -1,4 +1,4 @@
-import { generateMapping } from '../generateMapping';
+import { generateMapping } from '../../functions/generateMapping';
 
 /* istanbul ignore next */
 export async function generateMapping_TEST_(counter: { a: number }) {

@@ -1,12 +1,12 @@
+import { fn_a1f9a } from '../core/function/fn_a1f9a';
 import {
   Base,
   ErrLookupFn,
   LookupFn,
   Settled,
   TransformFn,
-  ValidateFn
+  ValidateFn,
 } from '../types';
-import { fn_a1f9a } from './function/fn_a1f9a';
 
 /** @public */
 export async function serialMapping<T, R>(

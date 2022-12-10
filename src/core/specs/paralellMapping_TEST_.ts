@@ -1,4 +1,4 @@
-import { paralellMapping } from '../paralellMapping';
+import { paralellMapping } from '../../functions/paralellMapping';
 
 /* istanbul ignore next */
 

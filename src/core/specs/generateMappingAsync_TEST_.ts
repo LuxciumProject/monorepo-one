@@ -1,4 +1,4 @@
-import { generateMappingAsync } from '../generateMappingAsync';
+import { generateMappingAsync } from '../../functions/generateMappingAsync';
 
 /* istanbul ignore next */
 

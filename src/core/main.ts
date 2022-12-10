@@ -1,6 +1,6 @@
+import { awaitedMapping } from '../functions/awaitedMapping';
+import { paralellMapping } from '../functions/paralellMapping';
 import { listFulfilledResults } from '../helpers/tools';
-import { awaitedMapping } from './awaitedMapping';
-import { paralellMapping } from './paralellMapping';
 
 const transformFn = async (x: number) => {
   return x ** 2;

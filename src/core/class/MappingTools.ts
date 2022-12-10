@@ -1,9 +1,9 @@
+import { awaitedMapping } from '../../functions/awaitedMapping';
+import { generateMapping } from '../../functions/generateMapping';
+import { generateMappingAsync } from '../../functions/generateMappingAsync';
+import { paralellMapping } from '../../functions/paralellMapping';
+import { serialMapping } from '../../functions/serialMapping';
 import { OnlySideEffect } from '../../types';
-import { awaitedMapping } from '../awaitedMapping';
-import { generateMapping } from '../generateMapping';
-import { generateMappingAsync } from '../generateMappingAsync';
-import { paralellMapping } from '../paralellMapping';
-import { serialMapping } from '../serialMapping';
 
 awaitedMapping;
 generateMapping;

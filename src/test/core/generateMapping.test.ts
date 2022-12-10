@@ -1,4 +1,4 @@
-import { generateMapping } from '../../core';
+import { generateMapping } from '../../functions';
 
 describe('Sanity check Level 1', () => {
   it('Should pass the smoke test generateMapping_TEST_', async () => {
