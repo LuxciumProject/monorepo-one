@@ -1,4 +1,3 @@
-import { fn_a1f9a } from '../core/function/fn_a1f9a';
 import { isPromiseLike } from '../helpers/assertions';
 import {
   Base,
@@ -9,6 +8,7 @@ import {
   TransformFn,
   ValidateFn,
 } from '../types';
+import { fn_a1f9a } from './core';
 
 /** @public */
 export async function awaitedMapping<T, R>(

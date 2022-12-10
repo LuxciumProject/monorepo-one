@@ -1,4 +1,4 @@
-import { fn_a1f9a } from '../fn_a1f9a';
+import { fn_a1f9a } from '../../../functions/core/fn_a1f9a';
 
 /* istanbul ignore next */
 export async function fn_a1f9a_TEST_(counter: { a: number }) {

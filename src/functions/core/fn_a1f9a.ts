@@ -1,10 +1,10 @@
+import { fulfillementBlock, fulfillementBlock_v1 } from '../../core/function/fulfillementBlock';
+import { makeRejection } from '../../core/function/makeRejection';
+import { makeSettler } from '../../core/function/makeSettler';
 import { assertions } from '../../helpers';
 import { getTransformStep } from '../../helpers/tools';
 import { MapperOptions, Settled } from '../../types';
 import { MapperOptions_v1 } from '../../types/mapper-options/MapperOptions';
-import { fulfillementBlock, fulfillementBlock_v1 } from './fulfillementBlock';
-import { makeRejection } from './makeRejection';
-import { makeSettler } from './makeSettler';
 const {
   isPromiseFulfilledResult,
   isPromiseRejectedResult,
