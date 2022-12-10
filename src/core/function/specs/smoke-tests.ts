@@ -16,5 +16,7 @@ export async function coreFunction_MAIN_TESTS_(counter: {
   counter.coreFunction++;
   await fulfillementBlock_TEST_(counter);
   counter.coreFunction++;
+  makeFulfillement_TEST_(counter);
+  counter.coreFunction++;
   return counter;
 }

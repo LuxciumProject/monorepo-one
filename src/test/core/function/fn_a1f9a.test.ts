@@ -49,7 +49,7 @@ describe('Sanity check Level 1', () => {
     ).toStrictEqual({
       // currentRejection: null,
       index: 0,
-      transformStep: 0,
+      transformStep: 1,
       // rejected: null,
       status: 'fulfilled',
       value: 100,

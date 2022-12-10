@@ -1,10 +1,13 @@
 import { FULFILLED, REJECTED } from '../../../constants';
-import { fulfillementBlock } from '../../../core/function/fulfillementBlock';
+import {
+  fulfillementBlock,
+  fulfillementBlock_v1,
+} from '../../../core/function/fulfillementBlock';
 
 describe('Sanity check Level 1 fulfillementBlock', () => {
   it.skip('Should make fulfillementBlock from a promise', async () => {
     expect(
-      await fulfillementBlock(
+      await fulfillementBlock_v1(
         (async () => ({
           status: FULFILLED,
           value: null,
@@ -74,7 +77,7 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
 
   it.each([
     [
-      fulfillementBlock(10, 0, [10], 0),
+      fulfillementBlock_v1(10, 0, [10], 0),
       {
         // currentRejection: null,
         index: 0,
@@ -85,7 +88,7 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
       },
     ],
     [
-      fulfillementBlock(
+      fulfillementBlock_v1(
         {
           status: 'fulfilled',
           value: 10,
@@ -108,7 +111,7 @@ describe('Sanity check Level 1 fulfillementBlock', () => {
       },
     ],
     [
-      fulfillementBlock(
+      fulfillementBlock_v1(
         {
           status: 'fulfilled',
           value: 10,

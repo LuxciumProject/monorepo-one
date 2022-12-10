@@ -1,13 +1,13 @@
 import { FULFILLED, REJECTED } from '../../../constants';
-import { fulfillementBlock } from '../fulfillementBlock';
+import { fulfillementBlock, fulfillementBlock_v1 } from '../fulfillementBlock';
 
 /* istanbul ignore next */
 
 export async function fulfillementBlock_TEST_(counter: { a: number }) {
   console.log(`at: fulfillementBlock_TEST_ from ${__filename}`);
-  console.log(await fulfillementBlock(10, 0, [10], 0));
+  console.log(await fulfillementBlock_v1(10, 0, [10], 0));
   console.log(
-    await fulfillementBlock(
+    await fulfillementBlock_v1(
       {
         status: 'fulfilled',
         value: 10,
@@ -23,7 +23,7 @@ export async function fulfillementBlock_TEST_(counter: { a: number }) {
     )
   );
   console.log(
-    await fulfillementBlock(
+    await fulfillementBlock_v1(
       {
         status: 'fulfilled',
         value: 10,
@@ -56,8 +56,7 @@ export async function fulfillementBlock_TEST_(counter: { a: number }) {
           transformStep: 0,
           index: 0,
         },
-      ],
-      0
+      ]
     )
   );
   counter.a++;

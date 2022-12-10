@@ -1,3 +1,4 @@
+export type { Base } from './Base';
 export type { Collection } from './Collection';
 export type { IMappable, Mapper } from './Mapper';
 export type {
@@ -5,7 +6,7 @@ export type {
   LookupFn,
   MapperOptions,
   TransformFn,
-  ValidateFn
+  ValidateFn,
 } from './mapper-options';
 export type { OnlySideEffect } from './OnlySideEffect';
 export type {
@@ -14,7 +15,7 @@ export type {
   Rejected,
   Settled,
   SettledLeft,
-  SettledRight
+  SettledRight,
 } from './Settled';
 export type { SettledIso } from './SettledIso';
 export type { TransformStep } from './TransformStep';

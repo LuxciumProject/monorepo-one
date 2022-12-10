@@ -1,24 +1,23 @@
 import {
+  Base,
   ErrLookupFn,
   LookupFn,
   Settled,
-  SettledLeft,
-  SettledRight,
   TransformFn,
-  ValidateFn,
+  ValidateFn
 } from '../types';
 import { fn_a1f9a } from './function/fn_a1f9a';
 
 /** @public */
 export async function serialMapping<T, R>(
-  collection: Iterable<T | Settled<T>>,
+  collection: Iterable<Base<T>>,
   transform: TransformFn<T, R> = async value => value as any as R,
   lookup: LookupFn<T, R> = v => void v,
   validate: ValidateFn<T, R> = async v => void v,
   errLookup: ErrLookupFn = v => void v
 ) {
   let index = 0;
-  const results: (SettledLeft | SettledRight<R>)[] = [];
+  const results: Settled<R>[] = [];
   for (const item of collection) {
     results.push(
       await fn_a1f9a({
@@ -37,7 +36,7 @@ export async function serialMapping<T, R>(
 
 type WrappedResult<U> = <W>(wraper: W) => Settled<U>;
 export type MappingFn_ = <T, R>(
-  collection: Iterable<T | Settled<T>>,
+  collection: Iterable<Base<T>>,
   transform: TransformFn<T, R>,
   lookup: LookupFn<T, R>,
   validate: ValidateFn<T, R>,
