@@ -2,7 +2,7 @@ import {
   isPromiseFulfilledResult,
   isPromiseLike,
   isPromiseSettledResult,
-  isSettledRight,
+  isSettledRight
 } from '../../helpers/assertions';
 import { getTransformStep } from '../../helpers/tools';
 import { Settled, SettledLeft, SettledRight } from '../../types';
@@ -50,9 +50,6 @@ function makeSettler_<T>(
   if (!isPromiseSettledResult(item) || isPromiseFulfilledResult(item)) {
     let itemValue: T;
     if (isSettledRight<T>(item) || isPromiseFulfilledResult<T>(item)) {
-      // if (isSettledRight<T>(item)) {
-      //   // const itemTransformStep = item.transformStep;
-      // }
       transformStep = itemTransformStep;
       itemValue = item.value;
     } else {

@@ -5,7 +5,6 @@ import {
 import { SettledRight } from '../../types';
 
 /** @internal */
-
 export function preTransform<T>(
   item: T | (SettledRight<T> | PromiseFulfilledResult<T>),
   transformStep: number = -1

@@ -2,20 +2,17 @@ import { REJECTED } from '../../constants';
 import { SettledLeft } from '../../types';
 
 /** @internal */
-type MakeRejectionArgs = {
-  reason: any;
-  index: number;
-  transformStep: number;
-  currentRejection?: true | false | undefined;
-};
-/** @internal */
-
 export function makeRejection({
   reason,
   index,
   transformStep,
   currentRejection = undefined,
-}: MakeRejectionArgs): SettledLeft {
+}: {
+  reason: any;
+  index: number;
+  transformStep: number;
+  currentRejection?: true | false | undefined;
+}): SettledLeft {
   const result: SettledLeft = {
     status: REJECTED,
     reason,
