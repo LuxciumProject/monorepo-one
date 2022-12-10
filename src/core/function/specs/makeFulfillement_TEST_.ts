@@ -1,4 +1,4 @@
-import { makeFulfillement } from '../makeFulfillement';
+import { makeFulfillement } from '../../../functions/core/makeFulfillement';
 
 /* istanbul ignore next */
 export function makeFulfillement_TEST_(counter: { a: number }) {

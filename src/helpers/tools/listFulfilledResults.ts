@@ -1,4 +1,4 @@
-import { reduceValueToSettled } from '../../core/function/reduceValueToSettled';
+import { reduceValueToSettled } from '../../functions/core/reduceValueToSettled';
 import { Collection } from '../../types';
 import { isPromiseLike } from '../assertions';
 import { getFulfilledResults } from './getFulfilledResults';

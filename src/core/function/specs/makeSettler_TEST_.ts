@@ -1,4 +1,4 @@
-import { makeSettler } from '../makeSettler';
+import { makeSettler } from '../../../functions/core/makeSettler';
 
 /* istanbul ignore next */
 export function makeFulfillement_TEST_(counter: { a: number }) {

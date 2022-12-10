@@ -1,4 +1,4 @@
-import { makeRejection } from '../makeRejection';
+import { makeRejection } from '../../../functions/core/makeRejection';
 
 /* istanbul ignore next */
 

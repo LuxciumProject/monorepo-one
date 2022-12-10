@@ -1,6 +1,6 @@
 import {
   isPromiseRejectedResult,
-  isSettledLeft,
+  isSettledLeft
 } from '../../helpers/assertions';
 import { getTransformStep } from '../../helpers/tools';
 import { Settled, SettledLeft, SettledRight } from '../../types';

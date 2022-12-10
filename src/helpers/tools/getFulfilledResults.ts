@@ -1,5 +1,5 @@
 import { FULFILLED } from '../../constants';
-import { reduceValueToSettled } from '../../core/function/reduceValueToSettled';
+import { reduceValueToSettled } from '../../functions/core/reduceValueToSettled';
 import { Collection, SettledRight } from '../../types';
 import { converToIsometricSettledResult } from './converToIsometricSettledResult';
 

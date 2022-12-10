@@ -1,4 +1,4 @@
-import { makeSettler } from '../../../core/function/makeSettler';
+import { makeSettler } from '../../../functions/core/makeSettler';
 
 describe('Function makeSettler', () => {
   it('Should build from a T value', () => {
@@ -17,9 +17,11 @@ describe('Function makeSettler', () => {
   });
   it('Should build from a Promise<T> value', async () => {
     expect(
-     await makeSettler( (async ()=>({
-        tom: 'boy',
-      }))())
+      await makeSettler(
+        (async () => ({
+          tom: 'boy',
+        }))()
+      )
     ).toStrictEqual({
       index: -1,
       value: {
@@ -29,11 +31,14 @@ describe('Function makeSettler', () => {
       status: 'fulfilled',
     });
   });
-   it('Should', () => {
+  it('Should', () => {
     expect(
-      makeSettler({
-        tom: 'boy',
-      },10)
+      makeSettler(
+        {
+          tom: 'boy',
+        },
+        10
+      )
     ).toStrictEqual({
       index: 10,
       value: {

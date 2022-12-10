@@ -1,5 +1,8 @@
 import { FULFILLED, REJECTED } from '../../../constants';
-import { fulfillementBlock, fulfillementBlock_v1 } from '../fulfillementBlock';
+import {
+  fulfillementBlock,
+  fulfillementBlock_v1,
+} from '../../../functions/core/fulfillementBlock';
 
 /* istanbul ignore next */
 export async function fulfillementBlock_TEST_(counter: { a: number }) {

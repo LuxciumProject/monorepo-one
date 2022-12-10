@@ -1,4 +1,4 @@
-import { makeRejection } from '../../../core/function/makeRejection';
+import { makeRejection } from '../../../functions/core/makeRejection';
 
 describe('Sanity check Level 1', () => {
   it('Should pass the smoke test makeRejection_TEST_', () => {

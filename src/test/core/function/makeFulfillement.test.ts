@@ -1,4 +1,4 @@
-import { makeFulfillement } from '../../../core/function/makeFulfillement';
+import { makeFulfillement } from '../../../functions/core/makeFulfillement';
 
 describe('Sanity check Level 1', () => {
   it('Should pass the smoke test makeFulfillement', () => {

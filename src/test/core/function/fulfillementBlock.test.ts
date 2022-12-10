@@ -2,7 +2,7 @@ import { FULFILLED, REJECTED } from '../../../constants';
 import {
   fulfillementBlock,
   fulfillementBlock_v1,
-} from '../../../core/function/fulfillementBlock';
+} from '../../../functions/core/fulfillementBlock';
 
 describe('Sanity check Level 1 fulfillementBlock', () => {
   it.skip('Should make fulfillementBlock from a promise', async () => {
