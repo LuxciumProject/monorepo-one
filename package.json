@@ -16,7 +16,6 @@
     "build:api": "yarn base:build:api; yarn base:build:docs",
     "clean:dist": "yarn base:rm:dist:lib; yarn base:rm:dist:src; yarn base:clean:dist",
     "base:test": "jest --config='config/jest.config.json'",
-    "base:test:sanity": "ts-node src/smoke-tests.ts",
     "base:build": "bash scripts/build.sh",
     "base:build:api": "api-extractor run --local",
     "base:build:docs": "typedoc --options config/typedoc.json",
