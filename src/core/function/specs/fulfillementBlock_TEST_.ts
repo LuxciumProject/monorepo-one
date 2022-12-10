@@ -2,7 +2,6 @@ import { FULFILLED, REJECTED } from '../../../constants';
 import { fulfillementBlock, fulfillementBlock_v1 } from '../fulfillementBlock';
 
 /* istanbul ignore next */
-
 export async function fulfillementBlock_TEST_(counter: { a: number }) {
   console.log(`at: fulfillementBlock_TEST_ from ${__filename}`);
   console.log(await fulfillementBlock_v1(10, 0, [10], 0));

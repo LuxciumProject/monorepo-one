@@ -1,8 +1,7 @@
 import { fn_a1f9a } from '../fn_a1f9a';
 
 /* istanbul ignore next */
-
-export async function fn_a1f9a_TEST_(counter:{a:number}) {
+export async function fn_a1f9a_TEST_(counter: { a: number }) {
   console.log(`at: fn_a1f9a_TEST_ from ${__filename}`);
 
   console.log(
@@ -27,6 +26,6 @@ export async function fn_a1f9a_TEST_(counter:{a:number}) {
       transform: async item => item * 10,
     })
   );
-counter.a ++
-  return counter
+  counter.a++;
+  return counter;
 }
