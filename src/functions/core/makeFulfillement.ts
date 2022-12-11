@@ -1,22 +1,34 @@
 import { FULFILLED } from '../../constants';
 import { SettledRight } from '../../types';
 
+// FUNC DEF:(makeFulfillement<U>) ------------------------------------
 /** @internal */
 export function makeFulfillement<U>({
   value,
-  index,
-  transformStep,
+  transformStep = -1,
+  index = -1,
+  base = {},
 }: {
   value: U;
-  index: number;
-  transformStep: number;
+  index?: number;
+  transformStep?: number;
+  base?: { value: U; status: 'fulfilled' } | {};
 }): SettledRight<U> {
-  const result: SettledRight<U> = {
+  const currentValue = Object.freeze(value);
+  const currentSettlement: PromiseSettledResult<U> = {
     status: FULFILLED,
-    value,
-    fulfilled: value,
-    rejected: null,
+    value: currentValue,
+  };
+
+  // INFO: To get base properties last but also overide its values ...
+  const result: SettledRight<U> = {
+    ...currentSettlement,
+    ...base,
+    ...currentSettlement,
+    fulfilled: currentValue,
     currentRejection: null,
+    rejected: null,
+    reason: undefined,
     transformStep,
     index,
   };
@@ -28,13 +40,13 @@ export function makeFulfillement<U>({
   });
 
   Object.defineProperty(result, 'value', {
-    value: Object.freeze(value),
+    value: currentValue,
     enumerable: true,
     writable: false,
   });
 
   Object.defineProperty(result, 'fulfilled', {
-    value: Object.freeze(value),
+    value: currentValue,
     enumerable: false,
     writable: false,
   });
@@ -50,5 +62,22 @@ export function makeFulfillement<U>({
     enumerable: false,
     writable: false,
   });
+
+  if (transformStep === -1) {
+    Object.defineProperty(result, 'transformStep', {
+      value: transformStep,
+      enumerable: false,
+      writable: false,
+    });
+  }
+
+  if (index === -1) {
+    Object.defineProperty(result, 'index', {
+      value: index,
+      enumerable: false,
+      writable: false,
+    });
+  }
+
   return Object.freeze(result);
 }

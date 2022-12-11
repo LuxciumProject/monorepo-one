@@ -10,6 +10,7 @@ const {
   isPromiseSettledResult,
 } = assertions;
 
+// FUNC DEF:(fn_a1f9a<T, R>) -----------------------------------------
 /** @internal */
 export async function fn_a1f9a<T, R>({
   item,
@@ -23,6 +24,7 @@ export async function fn_a1f9a<T, R>({
 }: MapperOptions<T, R>) {
   const transformStep = getTransformStep(item, 0);
   const myItem: Settled<T> = makeSettler(await item, index);
+
   try {
     if (!isPromiseSettledResult(myItem) || isPromiseFulfilledResult(myItem)) {
       return await fulfillementBlock<T, R>(
@@ -35,15 +37,15 @@ export async function fn_a1f9a<T, R>({
       );
     }
     if (isPromiseRejectedResult(myItem)) {
+      const currentRejection = false;
       const { reason } = myItem;
-      const transformStep = getTransformStep(myItem, 0);
-
-      errLookup(reason, index, false);
+      void errLookup(reason, index, currentRejection);
       return makeRejection({
         reason,
         index,
-        transformStep,
-        currentRejection: false,
+        transformStep: getTransformStep(myItem, 0),
+        currentRejection,
+        base: myItem,
       });
     }
     /* istanbul ignore next */
@@ -51,12 +53,14 @@ export async function fn_a1f9a<T, R>({
       `NEVER: item (${myItem}) is not assignable to type 'never'`
     );
   } catch (reason) {
-    errLookup(reason, index, true);
+    const currentRejection = true;
+    void errLookup(reason, index, currentRejection);
     return makeRejection({
       reason,
       index,
       transformStep,
-      currentRejection: true,
+      currentRejection,
+      base: myItem,
     });
   }
 }

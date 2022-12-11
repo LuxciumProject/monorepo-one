@@ -1,30 +1,42 @@
 import { REJECTED } from '../../constants';
 import { SettledLeft } from '../../types';
 
+// FUNC DEF:(makeRejection) ------------------------------------------
 /** @internal */
 export function makeRejection({
   reason,
-  index,
-  transformStep,
   currentRejection = undefined,
+  transformStep = -1,
+  index = -1,
+  base = {},
 }: {
   reason: any;
-  index: number;
-  transformStep: number;
   currentRejection?: true | false | undefined;
+  transformStep?: number;
+  index?: number;
+  base?: { reason: any; status: 'rejected' } | {};
 }): SettledLeft {
-  const result: SettledLeft = {
+  const currentReason = Object.freeze(reason);
+  const currentSettlement: PromiseRejectedResult = {
     status: REJECTED,
-    reason,
-    rejected: reason,
+    reason: currentReason,
+  };
+
+  // INFO: To get base properties last but also overide its values ...
+  const result: SettledLeft = {
+    ...currentSettlement,
+    currentRejection,
+    ...base,
+    ...currentSettlement,
+    rejected: currentReason,
     fulfilled: null,
-    currentRejection: currentRejection,
+    value: undefined,
     transformStep,
     index,
   };
 
   Object.defineProperty(result, 'reason', {
-    value: Object.freeze(reason),
+    value: currentReason,
     enumerable: true,
     writable: false,
   });
@@ -36,7 +48,7 @@ export function makeRejection({
   });
 
   Object.defineProperty(result, 'rejected', {
-    value: reason,
+    value: currentReason,
     enumerable: false,
     writable: false,
   });
@@ -47,6 +59,21 @@ export function makeRejection({
     writable: false,
   });
 
-  // Object.seal()
+  if (transformStep === -1) {
+    Object.defineProperty(result, 'transformStep', {
+      value: transformStep,
+      enumerable: false,
+      writable: false,
+    });
+  }
+
+  if (index === -1) {
+    Object.defineProperty(result, 'index', {
+      value: index,
+      enumerable: false,
+      writable: false,
+    });
+  }
+
   return Object.freeze(result);
 }

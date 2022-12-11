@@ -1,5 +1,7 @@
 import { LookupFn, SettledRight, TransformFn, ValidateFn } from '../../types';
 import { makeFulfillement } from './makeFulfillement';
+// FUNC DEF:(fulfillementBlock<T, R>) ----------------------------------------
+/** @internal */
 export async function fulfillementBlock<T, R>(
   item: SettledRight<T>,
   index: number,
