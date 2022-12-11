@@ -6,7 +6,7 @@ import {
 } from '../../helpers/assertions';
 import { getTransformStep } from '../../helpers/tools';
 import { Base, Settled } from '../../types';
-import { AwaitBase } from '../../types/Base';
+import { Await } from '../../types/MainTypes';
 import { makeFulfillement } from './makeFulfillement';
 import { makeRejection } from './makeRejection';
 
@@ -46,7 +46,7 @@ export function makeSettler<T>(
 export function makeSettler<T>(item: T, index?: number): Settled<T>;
 // FUNC DEF:(makeSettler<T>) --------------------------------------------
 export function makeSettler<T>(
-  item: Base<T> | AwaitBase<T>,
+  item: Base<T> | Await<T>,
   index: number = -1
 ): Promise<Settled<T>> | Settled<T> {
   return isPromiseLike(item)
