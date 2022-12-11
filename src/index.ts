@@ -31,11 +31,18 @@ import * as constants from './constants';
 import * as helpers from './helpers';
 
 import type {
+  Await,
+  AwaitAndBase,
+  Base,
   Collection,
+  CollectionOfAwait,
   ErrLookupFn,
   Fulfilled,
+  IMappable,
   LookupFn,
   Mapper,
+  MapperOptions,
+  OnlySideEffect,
   PromiseResult,
   Rejected,
   Settled,
@@ -67,5 +74,12 @@ export type {
   Rejected,
   Collection,
   TransformStep,
+  IMappable,
+  MapperOptions,
+  OnlySideEffect,
+  Base,
+  Await,
+  AwaitAndBase,
+  CollectionOfAwait,
 };
 export { constants, helpers, core };

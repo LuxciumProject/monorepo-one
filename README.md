@@ -4,8 +4,12 @@
 
 ## Delegates functions
 
-You can provide 4 main types of _delegates functions_ as arguments to
-the main functions of the package.
+**You can provide 4 main types of _delegates functions_ as arguments to
+the main functions of the package.**
+
+In this context delegating just means the act of giving another
+_function_ the responsibility of carrying out the performance agreed
+upon in by the folowing _interface_ contracts.
 
 - `TransformFn<T,U>`
 
@@ -86,6 +90,19 @@ the main functions of the package.
     (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
   }
   ```
+
+Internally the delegate is linked via parameter that you
+can acess from the outside by providing a function (the delegate) of
+a certain type (specified via an interface) as an argument.
+
+The tranformations, validation and lookup of the resulting operation
+is mandated to 4 diferet function that let you alter the workflow in
+5 diferent areas inside the specific mapping operation over each
+elements.
+
+Since everything is based only on functions this definition may be
+different than the usual concept in JavaScript which is related often
+Srelated to [Object composition and inheritance](https://en.wikipedia.org/wiki/JavaScript#Delegative).
 
 ## Main types
 
@@ -177,6 +194,9 @@ the main functions of the package.
   type SettledRight<T> = PromiseFulfilledResult<T> & {
     status: 'fulfilled';
     value: T;
+
+    /* The null value of the transformStep and the index is -1 */
+    /* When value is -1 the folowing properties a not enumerated */
     transformStep: number;
     index: number;
 
@@ -190,7 +210,15 @@ the main functions of the package.
   type SettledLeft = PromiseRejectedResult & {
     status: 'rejected';
     reason: any;
+
+    /*
+      the currentRejection can be undefined but the property itself
+      can not be undefined
+     */
     currentRejection: true | false | undefined;
+
+    /* The null value of the transformStep and the index is -1 */
+    /* When value is -1 the folowing properties a not enumerated */
     transformStep: number;
     index: number;
 
@@ -256,7 +284,7 @@ A) USE IT FOR YOURSELF;
 B) DISTRIBUTE IT TO YOUR FRIENDS;
 C) DISTRIBUTE IT TO YOUR STUDENTS;
 D) DISTRIBUTE IT TO YOUR COWORKER;
-(FOR PERSONAL USE; AT HOME, AT SCHOOL OR AT WORK)
+(FOR PERSONAL USE: AT HOME, AT SCHOOL OR AT WORK)
 ```
 
 IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.

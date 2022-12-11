@@ -1,5 +1,10 @@
 export type { Base } from './Base';
-export type { Collection } from './Collection';
+export type {
+  Await,
+  AwaitAndBase,
+  Collection,
+  CollectionOfAwait,
+} from './MainTypes';
 export type { IMappable, Mapper } from './Mapper';
 export type {
   ErrLookupFn,

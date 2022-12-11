@@ -2,8 +2,8 @@ import { makeSettler } from '../../../../functions/core/makeSettler';
 
 describe('The makeSettler function', () => {
   it('Should produce a valid output from a T value', async () => {
-    expect(makeSettler('expected')).toStrictEqual({
-      index: -1,
+    expect(makeSettler('expected', 0)).toStrictEqual({
+      index: 0,
       status: 'fulfilled',
       transformStep: 0,
       value: 'expected',
@@ -81,8 +81,8 @@ describe('The makeSettler function', () => {
   });
 
   it('Should produce a valid output from a Promise<T> value', async () => {
-    expect(await makeSettler((async () => 'expected')())).toStrictEqual({
-      index: -1,
+    expect(await makeSettler((async () => 'expected')(), 0)).toStrictEqual({
+      index: 0,
       status: 'fulfilled',
       transformStep: 0,
       value: 'expected',
@@ -92,7 +92,7 @@ describe('The makeSettler function', () => {
     expect(
       await makeSettler(
         (async () => ({
-          index: -1,
+          index: 0,
           status: 'fulfilled',
           transformStep: 0,
           value: 'expected',
