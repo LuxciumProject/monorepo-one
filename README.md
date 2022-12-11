@@ -268,7 +268,3 @@ Copyright © 2022 LUXCIUM
 † Scientia es lux principium✨ ™
 
 ```
-
-```
-
-```
