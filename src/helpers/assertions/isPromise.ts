@@ -1,7 +1,7 @@
 import { isPromiseLike } from './isPromiseLike';
 
 /** @internal */
-export function isPromise<T>(element: unknown): element is Promise<T> {
-  if (isPromiseLike<T>(element) && element instanceof Promise<T>) return true;
+export function isPromise<U>(element: U | Promise<U>): element is Promise<U> {
+  if (isPromiseLike<U>(element) && element instanceof Promise<U>) return true;
   return false;
 }

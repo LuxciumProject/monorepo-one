@@ -1,5 +1,7 @@
 /** @internal */
-export function isPromiseLike<T>(element: any): element is PromiseLike<T> {
+export function isPromiseLike<U>(
+  element: U | PromiseLike<U>
+): element is PromiseLike<U> {
   if (
     element != null &&
     typeof element === 'object' &&
