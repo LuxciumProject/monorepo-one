@@ -2,27 +2,159 @@
 
 0.0.0-PRE_ALPHA-UNRELEASED-UNDOCUMENTED-UNSAFE-v3.0.0x
 
+## Delegates functions
+
+You can provide 4 main types of _delegates functions_ as arguments to
+the main functions of the package.
+
+- `TransformFn<T,U>`
+
+  The `TransformFn<T,U>` delegate is where the actual mapping takes
+  place it is similar to the call back you would provide to an
+  `Array.prototype.map($)` it expect that you will morph from input
+  type `T` to returned type `U`, Proper type anotation would be
+  required if you would return unchanged value as `U` and `T` must
+  be different to be infered.
+
+  ```typescript
+  export interface TransformFn<T, U = unknown> {
+    (
+      value: T,
+      index: number,
+      array: readonly (T | PromiseSettledResult<T>)[]
+    ): Promise<U>;
+  }
+  ```
+
+- `LookupFn<S,U>`
+
+  The `LookupFn<S,U>` delegate is where you can aknowledge the
+  morphed value`U` in an asycronous manner as the return value of
+  this delegate **must be** `void` and canot have side effects which
+  overflows in the function where this delegate is executed, like
+  throwing an exception or such, you can however have external side
+  effect like a `console.log($)` or anything that will arise
+  independendly from the internal flow of the function where thish
+  delgate is executed. In this context `OnlySideEffect` is an alias
+  for `void`.
+
+  ```typescript
+  export interface LookupFn<S, U = unknown> {
+    (
+      value: U,
+      index: number,
+      array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
+    ): OnlySideEffect;
+  }
+  ```
+
+- `ValidateFn<S,U>`
+
+  The `ValidateFn<S,U>` delegate is similar to the `LookupFn<S,U>`
+  delegate both are optional and should be used only if you have a
+  specific usecase. The main difference is that the execution of this
+  delagate is awaited in the function where it will be executed the
+  return value of the delegate must be a `Promise<void>` and the only
+  mechanism to comunicate with the function would be to throw a value
+  or an exception that will be catched in the function and returned
+  as a SettledLeft (described below). In this context
+  `Promise<OnlySideEffect>` is an alias for `Promise<void>`.
+
+  ```typescript
+  export interface ValidateFn<S, U = unknown> {
+    (
+      value: U,
+      index: number,
+      array: readonly (S | PromiseSettledResult<S>)[]
+    ): Promise<OnlySideEffect>;
+  }
+  ```
+
+- `ErrLookupFn`
+
+  The `ErrLookupFn` delegate takes provide a `currentRejection` flag
+  as its third argument and is used to tell if the error hapenned
+  from the curent iteration or a previous iteration you should act
+  only on `true` `currentRejection`s as they are not the result of a
+  previous `transformStep` similar to the `LookupFn<S,U>` but for
+  rejections. In case you need to tap in previous rejection it is
+  available also if the actual step is dealing with a previous
+  rejection from a previous tranformation step.
+
+  ```typescript
+  export interface ErrLookupFn {
+    (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
+  }
+  ```
+
 ## Main types
+
+- `Base<TBase>`
+
+  The `Base<TVal>` type is the center piece of the type system for
+  the mapping-tools package and is described in the section folowing
+  this one... You can see here an summary.
+
+  ```typescript
+  type Base<TVal> =
+    | TVal
+    | Settled<TVal>
+    | PromiseSettledResult<TVal>
+    | SettledRight<TVal>
+    | PromiseFulfilledResult<TVal>
+    | SettledLeft
+    | PromiseRejectedResult;
+  ```
 
 - `Collection<Base>`
 
+  The principal functions of the package takes a `Collection<B>` as
+  their fist arguments in some cases it can even be a
+  `PromiseLike<Collection<B>>`.
+
   ```typescript
-  type Collection<B> = Iterable<Base<B>>;
+  export type Collection<B> = Iterable<Base<B>>;
   ```
 
 - `Await<Base>`
 
+  To make it shorter to write we created the alias `Await<B>`
+  for the `PromiseLike<Base<B>>` type.
+
   ```typescript
-  type Await<B> = PromiseLike<Base<B>>;
+  export type Await<B> = PromiseLike<Base<B>>;
   ```
 
 - `CollectionOfAwait<Base>`
 
+  To make it shorter to write we created the alias
+  `CollectionOfAwait<Base>` for the `Collection<Await<B>>` type. It could be converted to a `PromiseLike<Collection<B>>` using `Promise.all($)`
+
   ```typescript
-  type CollectionOfAwait<B> = Collection<Await<B>>;
+  export type CollectionOfAwait<B> = Collection<Await<B>>;
   ```
 
-## Base types
+- `PromiseLike<$>`
+
+  The three types above also have their `PromiseLike<$>` equivalent:
+
+  ```typescript
+  PromiseLike<Collection<Base>>;
+  PromiseLike<Await<Base>>;
+  PromiseLike<CollectionOfAwait<Base>>;
+  ```
+
+- `AwaitAndBase<Base>`
+
+  In some cases the base type can be combined to be either `Base<B>`
+  or `Await<B>` and would be the type of a parameter to a function
+  that can take the compounded object type.
+
+  ```typescript
+  export type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
+  ```
+
+  ## Base types
 
 - `Base<TBase>`
 
