@@ -1,7 +1,6 @@
 export {};
 describe.skip('Sanity check Level 1 fulfillementBlock', () => {
-  it.skip('Should make fulfillementBlock from a promise', async () => {
-  });
+  it.skip('Should make fulfillementBlock from a promise', async () => {});
 
   // it.skip('Should make fulfillementBlock from a promise', async () => {
   //   expect(

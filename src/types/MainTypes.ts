@@ -2,15 +2,19 @@
 
 import { Base } from './Base';
 
+/** @public */
 export type Collection<B> = Iterable<Base<B>>;
 // Await<Base>
 
+/** @public */
 export type Await<B> = PromiseLike<Base<B>>;
 // CollectionOfAwait<Base>
 
+/** @public */
 export type CollectionOfAwait<B> = Collection<Await<B>>;
 
 // AwaitAndBase<Base>
+/** @public */
 export type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
 
 // type Await__<PType> = PromiseLike<PType> | Promise<PType>;

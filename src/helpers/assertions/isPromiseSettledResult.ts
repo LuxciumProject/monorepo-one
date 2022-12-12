@@ -17,7 +17,7 @@ export function isPromiseFulfilledResult<T>(
     contender != null &&
     typeof contender === 'object' &&
     'status' in contender &&
-    contender?.status === FULFILLED &&
+    contender.status === FULFILLED &&
     'value' in contender
   );
 }
@@ -30,7 +30,7 @@ export function isPromiseRejectedResult(
     contender != null &&
     typeof contender === 'object' &&
     'status' in contender &&
-    contender?.status === REJECTED &&
+    contender.status === REJECTED &&
     'reason' in contender
   );
 }

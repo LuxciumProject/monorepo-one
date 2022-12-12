@@ -1,12 +1,11 @@
 import { makeRejection } from '../../../functions/core/makeRejection';
 
-describe('Sanity check Level 1', () => {
+describe('Internal core function makeRejection', () => {
   it('Should pass the smoke test makeRejection_TEST_', () => {
     expect(
       makeRejection({
         reason: 'any',
         index: 0,
-        transformStep: 0,
         currentRejection: true,
       })
     ).toStrictEqual({
@@ -14,7 +13,17 @@ describe('Sanity check Level 1', () => {
       // fulfilled: null,
       index: 0,
       reason: 'any',
-      transformStep: 0,
+      status: 'rejected',
+    });
+  });
+  it('Should take only a reason to produce the output', () => {
+    expect(
+      makeRejection({
+        reason: 'any',
+      })
+    ).toStrictEqual({
+      currentRejection: undefined,
+      reason: 'any',
       status: 'rejected',
     });
   });

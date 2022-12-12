@@ -1,9 +1,17 @@
 #!/usr/bin/bash
 
 mkdir -p dist
-cp package.json dist/package.json
+# cp package.json dist/package.json
 
-ts-node src/smoke-tests.ts
+yarn cp:package &
+yarn cp:readme &
+yarn cp:license &
+yarn cp:editorconf &
+yarn cp:prettierrc &
+yarn cp:tsconfig &
+# ts-node src/smoke-tests.ts
+
+prettier -wc ./src
 
 rm -fr lib
 yarn build
@@ -29,42 +37,42 @@ cp -r src dist
 # echo dist/lib/**/test
 
 rm -fr "$(pwd)/dist/lib/backup"
-rm -fr "$(pwd)/dist/lib/core/function/specs"
-rm -fr "$(pwd)/dist/lib/core/specs"
-rm -fr "$(pwd)/dist/lib/helpers/assertions/specs"
-rm -fr "$(pwd)/dist/lib/helpers/specs"
-rm -fr "$(pwd)/dist/lib/helpers/tools/specs"
-rm -fr "$(pwd)/dist/lib/performance"
-rm -fr "$(pwd)/dist/lib/performance"
-rm -fr "$(pwd)/dist/lib/smoke-tests.js.map"
-rm -fr "$(pwd)/dist/lib/smoke-tests.js"
-rm -fr "$(pwd)/dist/lib/ts-out-info.lib"
-rm -fr "$(pwd)/dist/lib/typings/backup"
-rm -fr "$(pwd)/dist/lib/typings/core/function/specs"
-rm -fr "$(pwd)/dist/lib/typings/core/specs"
-rm -fr "$(pwd)/dist/lib/typings/helpers/assertions/specs"
-rm -fr "$(pwd)/dist/lib/typings/helpers/specs"
-rm -fr "$(pwd)/dist/lib/typings/helpers/tools/specs"
-rm -fr "$(pwd)/dist/lib/typings/smoke-tests.d.ts.map"
-rm -fr "$(pwd)/dist/lib/typings/smoke-tests.d.ts"
 rm -fr "$(pwd)/dist/lib/typings/test"
 rm -fr "$(pwd)/dist/src/backup"
-
 rm -fr "$(pwd)/dist/lib/test"
 rm -fr "$(pwd)/dist/src/test"
+rm -fr "$(pwd)/dist/lib/performance"
+rm -fr "$(pwd)/dist/lib/performance"
+rm -fr "$(pwd)/dist/lib/ts-out-info.lib"
+rm -fr "$(pwd)/dist/lib/typings/backup"
 
-rm -fr "$(pwd)/dist/src/core/function/specs"
-rm -fr "$(pwd)/dist/src/core/specs"
-rm -fr "$(pwd)/dist/src/helpers/assertions/specs"
-rm -fr "$(pwd)/dist/src/helpers/specs"
-rm -fr "$(pwd)/dist/src/helpers/tools/specs"
-rm -fr "$(pwd)/dist/src/typings/core/function/specs"
-rm -fr "$(pwd)/dist/src/typings/core/specs"
-rm -fr "$(pwd)/dist/src/typings/helpers/assertions/specs"
-rm -fr "$(pwd)/dist/src/typings/helpers/specs"
-rm -fr "$(pwd)/dist/src/typings/helpers/tools/specs"
-rm -fr "$(pwd)/dist/src/smoke-tests.ts"
+# rm -fr "$(pwd)/dist/lib/core/function/specs"
+# rm -fr "$(pwd)/dist/lib/core/specs"
+# rm -fr "$(pwd)/dist/lib/helpers/assertions/specs"
+# rm -fr "$(pwd)/dist/lib/helpers/specs"
+# rm -fr "$(pwd)/dist/lib/helpers/tools/specs"
+# rm -fr "$(pwd)/dist/lib/smoke-tests.js.map"
+# rm -fr "$(pwd)/dist/lib/smoke-tests.js"
+# rm -fr "$(pwd)/dist/lib/typings/core/function/specs"
+# rm -fr "$(pwd)/dist/lib/typings/core/specs"
+# rm -fr "$(pwd)/dist/lib/typings/helpers/assertions/specs"
+# rm -fr "$(pwd)/dist/lib/typings/helpers/specs"
+# rm -fr "$(pwd)/dist/lib/typings/helpers/tools/specs"
+# rm -fr "$(pwd)/dist/lib/typings/smoke-tests.d.ts.map"
+# rm -fr "$(pwd)/dist/lib/typings/smoke-tests.d.ts"
+# rm -fr "$(pwd)/dist/src/core/function/specs"
+# rm -fr "$(pwd)/dist/src/core/specs"
+# rm -fr "$(pwd)/dist/src/helpers/assertions/specs"
+# rm -fr "$(pwd)/dist/src/helpers/specs"
+# rm -fr "$(pwd)/dist/src/helpers/tools/specs"
+# rm -fr "$(pwd)/dist/src/typings/core/function/specs"
+# rm -fr "$(pwd)/dist/src/typings/core/specs"
+# rm -fr "$(pwd)/dist/src/typings/helpers/assertions/specs"
+# rm -fr "$(pwd)/dist/src/typings/helpers/specs"
+# rm -fr "$(pwd)/dist/src/typings/helpers/tools/specs"
+# rm -fr "$(pwd)/dist/src/smoke-tests.ts"
 
 mv dist/lib/typings dist/typings
 cp typings/tsdoc-metadata.json dist/typings/tsdoc-metadata.json
+
 pwd

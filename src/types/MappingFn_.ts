@@ -4,7 +4,7 @@ import {
   LookupFn,
   Settled,
   TransformFn,
-  ValidateFn
+  ValidateFn,
 } from '.';
 import { WrappedResult } from './WrappedResult';
 

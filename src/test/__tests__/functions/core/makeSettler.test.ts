@@ -158,4 +158,21 @@ describe('The makeSettler function', () => {
       reason: 'expected',
     });
   });
+
+  it('Should produce a valid output from a Promise<PromiseRejectedResult> without an index value', async () => {
+    expect(
+      await makeSettler(
+        (async () => ({
+          status: 'rejected',
+          reason: 'expected',
+        }))()
+      )
+    ).toStrictEqual({
+      // index: 2,
+      currentRejection: false,
+      status: 'rejected',
+      transformStep: 0,
+      reason: 'expected',
+    });
+  });
 });

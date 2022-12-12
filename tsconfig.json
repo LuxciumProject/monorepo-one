@@ -3,13 +3,14 @@
   "extends": "../typescript/tsconfig.json",
   "compilerOptions": {
     /* Emit Options */
-    "target": "ESNext",
+    "target": "ES3",
     "module": "CommonJS",
     "moduleResolution": "node",
     "rootDir": "src",
     "baseUrl": "src",
     "composite": true,
     "declarationDir": "lib/typings",
+    "useDefineForClassFields": false,
     "outDir": "lib",
     "tsBuildInfoFile": "lib/ts-out-info.lib",
     "emitDecoratorMetadata": false,

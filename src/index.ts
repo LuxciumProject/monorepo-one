@@ -25,11 +25,9 @@
  * Specify this is a module comment and rename it to my-module:
  * @module my-module
  */
-import * as core from './functions';
-
 import * as constants from './constants';
+import * as functions from './functions';
 import * as helpers from './helpers';
-
 import type {
   Await,
   AwaitAndBase,
@@ -37,16 +35,8 @@ import type {
   Collection,
   CollectionOfAwait,
   ErrLookupFn,
-  Fulfilled,
-  IMappable,
   LookupFn,
-  Mapper,
-  MapperOptions,
-  OnlySideEffect,
-  PromiseResult,
-  Rejected,
   Settled,
-  SettledIso,
   SettledLeft,
   SettledRight,
   TransformFn,
@@ -54,32 +44,12 @@ import type {
   ValidateFn,
 } from './types';
 
-export {
-  awaitedMapping,
-  generateMapping,
-  generateMappingAsync,
-  paralellMapping,
-  serialMapping,
-} from './functions';
-export type { ErrLookupFn, LookupFn, Mapper };
-export type {
-  Settled,
-  SettledIso,
-  SettledLeft,
-  SettledRight,
-  TransformFn,
-  ValidateFn,
-  PromiseResult,
-  Fulfilled,
-  Rejected,
-  Collection,
-  TransformStep,
-  IMappable,
-  MapperOptions,
-  OnlySideEffect,
-  Base,
-  Await,
-  AwaitAndBase,
-  CollectionOfAwait,
-};
-export { constants, helpers, core };
+export { awaitedMapping } from './functions/awaitedMapping';
+export { generateMapping } from './functions/generateMapping';
+export { generateMappingAsync } from './functions/generateMappingAsync';
+export { paralellMapping } from './functions/paralellMapping';
+export { serialMapping } from './functions/serialMapping';
+export { constants, helpers, functions };
+export type { Collection, Await, CollectionOfAwait, AwaitAndBase };
+export type { Base, Settled, SettledLeft, SettledRight, TransformStep };
+export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn };

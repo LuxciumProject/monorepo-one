@@ -1,6 +1,6 @@
 # mapping-tools
 
-0.0.0-PRE_ALPHA-UNRELEASED-UNDOCUMENTED-UNSAFE-v3.0.0x
+![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
 ## Delegates functions
 

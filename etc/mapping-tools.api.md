@@ -19,10 +19,22 @@ declare namespace assertions {
 }
 
 // @public (undocumented)
-export function awaitedMapping<R, T>(collection: Collection<T> | PromiseLike<Collection<T>> | Iterable<PromiseLike<Settled<T>>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<(SettledLeft | SettledRight<R>)[]>;
+export type Await<B> = PromiseLike<Base<B>>;
 
 // @public (undocumented)
-export type Collection<U> = Iterable<U | Settled<U> | PromiseSettledResult<U>>;
+export type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
+
+// @public (undocumented)
+export function awaitedMapping<T, R>(collection: Iterable<Base<T>> | PromiseLike<Iterable<Base<T>>> | Iterable<PromiseLike<Base<T>>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<(SettledLeft | SettledRight<R>)[]>;
+
+// @public (undocumented)
+export type Base<TBase> = TBase | Settled<TBase> | PromiseSettledResult<TBase> | SettledRight<TBase> | PromiseFulfilledResult<TBase> | SettledLeft | PromiseRejectedResult;
+
+// @public (undocumented)
+export type Collection<B> = Iterable<Base<B>>;
+
+// @public (undocumented)
+export type CollectionOfAwait<B> = Collection<Await<B>>;
 
 declare namespace constants {
     export {
@@ -37,17 +49,6 @@ export { constants }
 // @beta (undocumented)
 const converToIsometricSettledResult: typeof converToIsometricSettledResult_;
 
-declare namespace core {
-    export {
-        awaitedMapping,
-        generateMapping,
-        generateMappingAsync,
-        paralellMapping,
-        serialMapping
-    }
-}
-export { core }
-
 // @public
 export interface ErrLookupFn {
     // Warning: (ae-forgotten-export) The symbol "OnlySideEffect" needs to be exported by the entry point index.d.ts
@@ -59,17 +60,22 @@ export interface ErrLookupFn {
 // @public
 const FULFILLED: 'fulfilled';
 
-// @public
-export type Fulfilled<T> = PromiseFulfilledResult<T>;
+declare namespace functions {
+    export {
+        awaitedMapping,
+        generateMapping,
+        generateMappingAsync,
+        paralellMapping,
+        serialMapping
+    }
+}
+export { functions }
 
 // @public (undocumented)
-export function generateMapping<T, R>(collection: Collection<T>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Generator<Promise<SettledLeft | SettledRight<R>>, void, unknown>;
+export function generateMapping<T, R>(collection: Iterable<Base<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Generator<Promise<SettledLeft | SettledRight<R>>, void, unknown>;
 
 // @public (undocumented)
-export function generateMappingAsync<R, T>(collection: Iterable<T | Settled<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): AsyncGenerator<SettledLeft | SettledRight<R>, void, unknown>;
-
-// @beta (undocumented)
-function getFulfilledResults<T>(collection: Collection<T>): SettledRight<T>[];
+export function generateMappingAsync<R, T>(collection: Iterable<Base<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>;
 
 // @beta (undocumented)
 function getRejectedResults<T>(collection: Array<Settled<T> | PromiseSettledResult<T>>): SettledLeft[];
@@ -92,13 +98,13 @@ export { helpers }
 function isometricSettledResult<T>(item: PromiseSettledResult<T>, index?: number): Settled<T>;
 
 // @internal (undocumented)
-function isPromise<T>(element: unknown): element is Promise<T>;
+function isPromise<U>(element: U | Promise<U>): element is Promise<U>;
 
 // @public (undocumented)
 function isPromiseFulfilledResult<T>(contender: unknown): contender is PromiseFulfilledResult<T>;
 
 // @internal (undocumented)
-function isPromiseLike<T>(element: any): element is PromiseLike<T>;
+function isPromiseLike<U>(element: U | PromiseLike<U>): element is PromiseLike<U>;
 
 // @public (undocumented)
 function isPromiseRejectedResult(contender: unknown): contender is PromiseRejectedResult;
@@ -115,55 +121,23 @@ function isSettledLeft(contender: unknown): contender is SettledLeft;
 // @public (undocumented)
 function isSettledRight<T>(contender: unknown): contender is SettledRight<T>;
 
-// @beta (undocumented)
-function listFulfilledResults<T>(collection: Collection<T> | PromiseLike<Collection<T>>): Promise<T[]>;
-
 // @public (undocumented)
 export interface LookupFn<S, U = unknown> {
     // (undocumented)
     (value: U, index: number, array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]): OnlySideEffect;
 }
 
-// @alpha
-function mapFulfilledResults(): void;
-
-// Warning: (ae-internal-missing-underscore) The name "Mapper" should be prefixed with an underscore because the declaration is marked as @internal
-//
-// @internal (undocumented)
-export type Mapper<T = any, U = unknown, A = T> = (value: T, index?: number, array?: readonly A[]) => U;
-
 // @public (undocumented)
-export function paralellMapping<T, R>(collection: Iterable<T | Settled<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<SettledLeft | SettledRight<R>>[];
-
-// @public
-export type PromiseResult<T> = PromiseSettledResult<T>;
+export function paralellMapping<T, R>(collection: Iterable<Base<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<SettledLeft | SettledRight<R>>[];
 
 // @public
 const REJECTED: 'rejected';
 
-// @public
-export type Rejected = PromiseRejectedResult;
-
 // @public (undocumented)
-export function serialMapping<T, R>(collection: Iterable<T | Settled<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<(SettledLeft | SettledRight<R>)[]>;
+export function serialMapping<T, R>(collection: Iterable<Base<T>> | PromiseLike<Iterable<Base<T>>> | Iterable<PromiseLike<Base<T>>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<Settled<R>[]>;
 
 // @public
-export type Settled<T> = SettledLeft | SettledRight<T>;
-
-// @beta (undocumented)
-export type SettledIso<T = any> = {
-    fulfilled: null | T;
-    rejected: any;
-    value?: undefined | T;
-    reason?: any;
-    index: number;
-} & ({
-    status: 'fulfilled';
-    value: T;
-} | {
-    status: 'rejected';
-    reason: any;
-});
+export type Settled<TBase> = SettledLeft | SettledRight<TBase>;
 
 // @public
 export type SettledLeft = PromiseRejectedResult & {
@@ -199,12 +173,9 @@ export type SettledRight<T> = PromiseFulfilledResult<T> & {
 declare namespace tools {
     export {
         converToIsometricSettledResult,
-        getFulfilledResults,
         getRejectedResults,
         getTransformStep,
         isometricSettledResult,
-        listFulfilledResults,
-        mapFulfilledResults,
         settledLengts
     }
 }

@@ -1,28 +1,28 @@
 import { FULFILLED, REJECTED } from '../../../../constants';
 
-describe('The assertion function isSettled', () => {
-  it.skip('Should doSometing', async () => {
-    /* generateMappingAsync.test.ts*/
-  });
-});
+// describe('The assertion function isSettled', () => {
+//   it.skip('Should doSometing', async () => {
+//     /* generateMappingAsync.test.ts*/
+//   });
+// });
 
-describe('The assertion function hasTransformStep', () => {
-  it.skip('Should doSometing', async () => {
-    /* generateMappingAsync.test.ts*/
-  });
-});
+// describe('The assertion function hasTransformStep', () => {
+//   it.skip('Should doSometing', async () => {
+//     /* generateMappingAsync.test.ts*/
+//   });
+// });
 
-describe('The assertion function isSettledRight', () => {
-  it.skip('Should doSometing', async () => {
-    /* generateMappingAsync.test.ts*/
-  });
-});
+// describe('The assertion function isSettledRight', () => {
+//   it.skip('Should doSometing', async () => {
+//     /* generateMappingAsync.test.ts*/
+//   });
+// });
 
-describe('The assertion function isSettledLeft', () => {
-  it.skip('Should doSometing', async () => {
-    /* generateMappingAsync.test.ts*/
-  });
-});
+// describe('The assertion function isSettledLeft', () => {
+//   it.skip('Should doSometing', async () => {
+//     /* generateMappingAsync.test.ts*/
+//   });
+// });
 
 describe('Decompose isSettledLeft', () => {
   const settledLeft = {
