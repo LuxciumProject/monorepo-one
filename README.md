@@ -1,22 +1,76 @@
 # mapping-tools
 
-![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/v/mapping-tools)
+Provides 5 unique ways to map on an iterable, asynchronously and with advanced error handling capabilities: Using a similar interface it allows you to seemingly map `Generator` and `AsyncGenerator` protocols, the `Array.prototype.map($)` alone or in conjunction with `Promise.all($)`, finally it can use the `for...of` loop...
+
+![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
 ## Main (core) functions
 
 The project currently have 5 main flavours for its core functions
 
+the last 4 arguments are called delegates they are explained later (below) they all can be null or undefined and would be repleced by a default value:
+
+```typescript
+const transform: TransformFn<T, R> =
+  transformFn == null ? async value => value as any as R : transformFn;
+
+const lookup: LookupFn<T, R> = lookupFn == null ? v => void v : lookupFn;
+
+const validate: ValidateFn<T, R> =
+  validateFn == null ? async v => void v : validateFn;
+
+const errLookup: ErrLookupFn = errLookupFn == null ? v => void v : errLookupFn;
+```
+
 They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
 
 ```typescript
 /** Type alias either Promise or not */
+// Base<B> type is described below...
 type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
+
+type Collection<B> = Iterable<Base<B>>;
 ```
 
-- serialMapping
+- **awaitedMapping**
 
-  - Based on a `forOf` _loop_
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
+  - Based on `Promise.all($)`
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
+  - Returns: `Promise<Array<Settled<R>>>`
+  - [![AwaitedMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/AwaitedMappingFn.png?token=AKFSFLRH235BZ5AOCFF4R2DDTR73E)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/AwaitedMappingFn.png?token=AKFSFLRH235BZ5AOCFF4R2DDTR73E)
+
+- **paralellMapping**
+
+  - Based on an `Array.prototype.map($)`
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+  - Returns: `Array<Promise<Settled<R>>>`
+  - [![ParalellMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/ParalellMappingFn.png?token=AKFSFLU27ET2N3MLHGCCNQTDTR7JQ)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/ParalellMappingFn.png?token=AKFSFLU27ET2N3MLHGCCNQTDTR7JQ)
+
+- **serialMapping**
+
+  - Based on `forOf` _loop_
+  - Takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
+  - Returns: `Promise<Array<Settled<R>>>`
+  - [![SerialMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/SerialMappingFn.png?token=AKFSFLXKOHHU4UOOXGCQT33DTR7WI)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/SerialMappingFn.png?token=AKFSFLXKOHHU4UOOXGCQT33DTR7WI)
+
+- **generateMappingAsync**
+
+  - Based on the `AsyncGenerator` _Protocol_
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+  - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
+  - [![GenerateMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingFn.png?token=AKFSFLW5JAX5HYVP77DRJWTDTR7Y2)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingFn.png?token=AKFSFLW5JAX5HYVP77DRJWTDTR7Y2)
+
+- **generateMapping**
+
+  - Based on the `Generator` _Protocol_
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+  - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
+  - [![GenerateMappingAsyncFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingAsyncFn.png?token=AKFSFLU7AX6XYSJ46P4OPH3DTR72A)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingAsyncFn.png?token=AKFSFLU7AX6XYSJ46P4OPH3DTR72A)
+
+- **serialMapping**
+
+  - Based on `forOf` _loop_
+  - Takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
   - Returns: `Promise<Array<Settled<R>>>`
 
   ```typescript
@@ -24,18 +78,18 @@ type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
     collection:
       | Iterable<AwaitAndBase<T>>
       | PromiseLike<Iterable<AwaitAndBase<T>>>,
-    transform: TransformFn<T, R> = async value => value as any as R,
-    lookup: LookupFn<T, R> = v => void v,
-    validate: ValidateFn<T, R> = async v => void v,
-    errLookup: ErrLookupFn = v => void v
+    transformFn: TransformFn<T, R> = async value => value as any as R,
+    lookupFn: LookupFn<T, R> = v => void v,
+    validateFn: ValidateFn<T, R> = async v => void v,
+    errLookupFn: ErrLookupFn = v => void v
   ): Promise<Array<Settled<R>>>;
   ```
 
-- awaitedMapping
+- **awaitedMapping**
 
-  - Based on a `Promise.all($)`
+  - Based on `Promise.all($)`
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
-  - Returns: `Promise<Settled<R>>`
+  - Returns: `Promise<Array<Settled<R>>>`
 
 - ```typescript
   export async function awaitedMapping<T, R>(
@@ -49,7 +103,7 @@ type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
   ): Promise<Settled<R>[]>;
   ```
 
-- paralellMapping
+- **paralellMapping**
 
   - Based on an `Array.prototype.map($)`
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
@@ -65,7 +119,7 @@ type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
   ): Array<Promise<Settled<R>>>;
   ```
 
-- generateMappingAsync
+- **generateMappingAsync**
 
   - Based on the `AsyncGenerator` _Protocol_
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
@@ -81,10 +135,9 @@ type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
   ): AsyncGenerator<Settled<R>, void, unknown>;
   ```
 
-- generateMapping
+- **generateMapping**
 
   - Based on the `Generator` _Protocol_
-
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
 
