@@ -2,6 +2,102 @@
 
 ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
+## Main (core) functions
+
+The project currently have 5 main flavours for its core functions
+
+They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
+
+```typescript
+/** Type alias either Promise or not */
+type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
+```
+
+- serialMapping
+
+  - Based on a `forOf` _loop_
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
+  - Returns: `Promise<Array<Settled<R>>>`
+
+  ```typescript
+  export async function serialMapping<T, R>(
+    collection:
+      | Iterable<AwaitAndBase<T>>
+      | PromiseLike<Iterable<AwaitAndBase<T>>>,
+    transform: TransformFn<T, R> = async value => value as any as R,
+    lookup: LookupFn<T, R> = v => void v,
+    validate: ValidateFn<T, R> = async v => void v,
+    errLookup: ErrLookupFn = v => void v
+  ): Promise<Array<Settled<R>>>;
+  ```
+
+- awaitedMapping
+
+  - Based on a `Promise.all($)`
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
+  - Returns: `Promise<Settled<R>>`
+
+- ```typescript
+  export async function awaitedMapping<T, R>(
+    collection:
+      | Iterable<AwaitAndBase<T>>
+      | PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>,
+    transform: TransformFn<T, R> = async value => value as any as R,
+    lookup: LookupFn<T, R> = v => void v,
+    validate: ValidateFn<T, R> = async v => void v,
+    errLookup: ErrLookupFn = v => void v
+  ): Promise<Settled<R>[]>;
+  ```
+
+- paralellMapping
+
+  - Based on an `Array.prototype.map($)`
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+  - Returns: `Array<Promise<Settled<R>>>`
+
+  ```typescript
+  export function paralellMapping<T, R>(
+    collection: Iterable<AwaitAndBase<T>>,
+    transform: TransformFn<T, R> = async value => value as any as R,
+    lookup: LookupFn<T, R> = v => void v,
+    validate: ValidateFn<T, R> = async v => void v,
+    errLookup: ErrLookupFn = v => void v
+  ): Array<Promise<Settled<R>>>;
+  ```
+
+- generateMappingAsync
+
+  - Based on the `AsyncGenerator` _Protocol_
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+  - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
+
+  ```typescript
+  export async function* generateMappingAsync<R, T>(
+    collection: Iterable<AwaitAndBase<T>>,
+    transform: TransformFn<T, R> = async value => value as any as R,
+    lookup: LookupFn<T, R> = v => void v,
+    validate: ValidateFn<T, R> = async v => void v,
+    errLookup: ErrLookupFn = v => void v
+  ): AsyncGenerator<Settled<R>, void, unknown>;
+  ```
+
+- generateMapping
+
+  - Based on the `Generator` _Protocol_
+
+  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+  - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
+
+  ```typescript
+  export function* generateMapping<T, R>(
+    collection: Iterable<AwaitAndBase<T>>,
+    transform: TransformFn<T, R> = async value => value as any as R,
+    lookup: LookupFn<T, R> = v => void v,
+    validate: ValidateFn<T, R> = async v => void v,
+    errLookup: ErrLookupFn = v => void v
+  ): Generator<Promise<Settled<R>>, void, unknown>;
+  ```
+
 ## Delegates functions
 
 **You can provide 4 main types of _delegates functions_ as arguments to
