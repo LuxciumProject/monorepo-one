@@ -1,10 +1,42 @@
 # mapping-tools
 
+
+"mapping-tools" is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. With our package, you can easily apply transformations to each element in a list, all while enjoying advanced error handling and support for asynchronous code.
+
+Our package offers five main tools for mapping, each based on a different technique:
+
+awaitedMapping is based on Promise.all($), allowing you to easily map over asynchronous iterables.
+paralellMapping is based on Array.prototype.map($), allowing you to map over iterables in parallel.
+serialMapping is based on a forOf loop, allowing you to map over iterables serially.
+generateMappingAsync is based on the AsyncGenerator protocol, allowing you to map over iterables asynchronously using generator functions.
+generateMapping is based on the Generator protocol, allowing you to map over iterables using generator functions.
+With these tools at your disposal, you'll have everything you need to easily and effectively transform your data. We hope "mapping-tools" proves useful in your projects!
+
+
+"mapping-tools" is a JavaScript package that provides a set of tools for mapping over a list, with a focus on asynchronous code and advanced error handling capabilities.
+
+With "mapping-tools", you can choose from five different methods for mapping over an iterable or array:
+
+Welcome to [Package Name]! This package provides a set of tools for mapping over a list in JavaScript, with a focus on asynchronous code and advanced error handling capabilities.
+
+1. awaitedMapping, which is based on Promise.all($)
+1. parallelMapping, which is based on Array.prototype.map($)
+1. serialMapping, which is based on a forOf loop
+1. generateMappingAsync, which is based on the AsyncGenerator protocol
+1. generateMapping, which is based on the Generator protocol
+
+"mapping-tools" is a powerful and versatile tool that can help you solve a wide variety of problems related to asynchronous code. Whether you're working with complex data structures or need advanced error handling capabilities, "mapping-tools" has you covered.
 Provides 5 unique ways to map on an iterable, asynchronously and with advanced error handling capabilities: Using a similar interface it allows you to seemingly map `Generator` and `AsyncGenerator` protocols, the `Array.prototype.map($)` alone or in conjunction with `Promise.all($)`, finally it can use the `for...of` loop...
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
 ## Main (core) functions
+
+ <p align="center">
+      <a href="../../images/v0.0.0/main-types.png">
+        <img src="../../images/v0.0.0/main-types.png" width="70%" title="Click to enlarge the image!" alt="main-types function type signature">
+      </a>
+    </p>
 
 The project currently have 5 main flavours for its core functions
 
@@ -37,35 +69,60 @@ type Collection<B> = Iterable<Base<B>>;
   - Based on `Promise.all($)`
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
   - Returns: `Promise<Array<Settled<R>>>`
-  - [![AwaitedMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/AwaitedMappingFn.png?token=AKFSFLRH235BZ5AOCFF4R2DDTR73E)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/AwaitedMappingFn.png?token=AKFSFLRH235BZ5AOCFF4R2DDTR73E)
+
+    <p align="center">
+      <a href="../../images/v0.0.0/AwaitedMappingFn.png">
+        <img src="../../images/v0.0.0/AwaitedMappingFn.png" width="70%" title="Click to enlarge the image!" alt="AwaitedMappingFn function type signature">
+      </a>
+    </p>
 
 - **paralellMapping**
 
   - Based on an `Array.prototype.map($)`
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - Returns: `Array<Promise<Settled<R>>>`
-  - [![ParalellMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/ParalellMappingFn.png?token=AKFSFLU27ET2N3MLHGCCNQTDTR7JQ)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/ParalellMappingFn.png?token=AKFSFLU27ET2N3MLHGCCNQTDTR7JQ)
+
+      <p align="center">
+        <a href="../../images/v0.0.0/ParalellMappingFn.png">
+          <img src="../../images/v0.0.0/ParalellMappingFn.png" width="70%" title="Click to enlarge the image!" alt="ParalellMappingFn function type signature">
+        </a>
+      </p>
 
 - **serialMapping**
 
   - Based on `forOf` _loop_
   - Takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
   - Returns: `Promise<Array<Settled<R>>>`
-  - [![SerialMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/SerialMappingFn.png?token=AKFSFLXKOHHU4UOOXGCQT33DTR7WI)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/SerialMappingFn.png?token=AKFSFLXKOHHU4UOOXGCQT33DTR7WI)
+
+      <p align="center">
+        <a href="../../images/v0.0.0/SerialMappingFn.png">
+          <img src="../../images/v0.0.0/SerialMappingFn.png" width="70%" title="Click to enlarge the image!" alt="SerialMappingFn function type signature">
+        </a>
+      </p>
 
 - **generateMappingAsync**
 
   - Based on the `AsyncGenerator` _Protocol_
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
-  - [![GenerateMappingFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingFn.png?token=AKFSFLW5JAX5HYVP77DRJWTDTR7Y2)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingFn.png?token=AKFSFLW5JAX5HYVP77DRJWTDTR7Y2)
+
+      <p align="center">
+        <a href="../../images/v0.0.0/GenerateMappingFn.png">
+          <img src="../../images/v0.0.0/GenerateMappingFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingFn function type signature">
+        </a>
+      </p>
 
 - **generateMapping**
 
   - Based on the `Generator` _Protocol_
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
-  - [![GenerateMappingAsyncFn](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingAsyncFn.png?token=AKFSFLU7AX6XYSJ46P4OPH3DTR72A)](https://media.githubusercontent.com/media/Luxcium/monorepo-one/principal/library/mapping-tools/images/v0.0.0/GenerateMappingAsyncFn.png?token=AKFSFLU7AX6XYSJ46P4OPH3DTR72A)
+
+      <p align="center">
+        <a href="../../images/v0.0.0/GenerateMappingAsyncFn.png">
+          <img src="../../images/v0.0.0/GenerateMappingAsyncFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingAsyncFn function type signature">
+        </a>
+      </p>
 
 - **serialMapping**
 
@@ -260,17 +317,30 @@ Srelated to [Object composition and inheritance](https://en.wikipedia.org/wiki/J
   The `Base<TVal>` type is the center piece of the type system for
   the mapping-tools package and is described in the section folowing
   this one... You can see here an summary.
+  <p align="center">
+        <a href="../../images/v0.0.0/base-type.png">
+          <img src="../../images/v0.0.0/base-type.png" width="70%" title="Click to enlarge the image!" alt="type Base<TVal> =
+      | TVal
+      | Settled<TVal>
+      | PromiseSettledResult<TVal>
+      | SettledRight<TVal>
+      | PromiseFulfilledResult<TVal>
+      | SettledLeft
+      | PromiseRejectedResult;
+    ">
+        </a>
+      </p>
 
-  ```typescript
-  type Base<TVal> =
-    | TVal
-    | Settled<TVal>
-    | PromiseSettledResult<TVal>
-    | SettledRight<TVal>
-    | PromiseFulfilledResult<TVal>
-    | SettledLeft
-    | PromiseRejectedResult;
-  ```
+    <!-- ```typescript
+    type Base<TVal> =
+      | TVal
+      | Settled<TVal>
+      | PromiseSettledResult<TVal>
+      | SettledRight<TVal>
+      | PromiseFulfilledResult<TVal>
+      | SettledLeft
+      | PromiseRejectedResult;
+    ``` -->
 
 - `Collection<Base>`
 

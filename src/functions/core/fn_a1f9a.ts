@@ -1,4 +1,5 @@
 import { assertions } from '../../helpers';
+import { isPromiseLike } from '../../helpers/assertions';
 import { getTransformStep } from '../../helpers/tools';
 import { MapperOptions, Settled } from '../../types';
 import { fulfillementBlock } from './fulfillementBlock';
@@ -23,8 +24,17 @@ export async function fn_a1f9a<T, R>({
     void [value, index, currentRejection],
 }: MapperOptions<T, R>) {
   const transformStep = getTransformStep(item, 0);
-  const myItem: Settled<T> = makeSettler(await item, index);
 
+  // let myItem: Settled<T>;
+  // if (isPromiseLike(item)) {
+  //   var myItem = makeSettler(await item, index);
+  // } else {
+  //   var myItem = makeSettler(item, index);
+  // }
+  const myItem: Settled<T> = makeSettler(
+    isPromiseLike(item) ? await item : item,
+    index
+  );
   try {
     if (!isPromiseSettledResult(myItem) || isPromiseFulfilledResult(myItem)) {
       return await fulfillementBlock<T, R>(

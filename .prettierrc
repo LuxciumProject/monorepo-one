@@ -23,6 +23,13 @@
         "printWidth": 120,
         "proseWrap": "preserve"
       }
+    },
+    {
+      "files": "src/README.md",
+      "options": {
+        "printWidth": 120,
+        "proseWrap": "preserve"
+      }
     }
   ]
 }

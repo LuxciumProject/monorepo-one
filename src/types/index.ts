@@ -1,18 +1,12 @@
-export type { Base } from './Base';
 export type {
-  Await,
-  AwaitAndBase,
-  Collection,
-  CollectionOfAwait,
-} from './MainTypes';
+  AwaitedMappingFn,
+  GenerateMappingAsyncFn,
+  GenerateMappingFn,
+  ParalellMappingFn,
+  SerialMappingFn,
+} from './MainFunctionsTypes';
+export type { Await, AwaitCollection, Base, Collection } from './MainTypes';
 export type { IMappable, Mapper } from './Mapper';
-export type {
-  ErrLookupFn,
-  LookupFn,
-  MapperOptions,
-  TransformFn,
-  ValidateFn,
-} from './mapper-options';
 export type { OnlySideEffect } from './OnlySideEffect';
 export type {
   Fulfilled,
@@ -24,3 +18,17 @@ export type {
 } from './Settled';
 export type { SettledIso } from './SettledIso';
 export type { TransformStep } from './TransformStep';
+export type {
+  ErrLookupFn,
+  LookupFn,
+  MapperOptions,
+  TransformFn,
+  ValidateFn,
+} from './mapper-options';
+/*
+Base
+Await
+Collection
+Collection
+AwaitCollection
+ */

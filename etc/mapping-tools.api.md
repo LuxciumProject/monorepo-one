@@ -22,19 +22,19 @@ declare namespace assertions {
 export type Await<B> = PromiseLike<Base<B>>;
 
 // @public (undocumented)
-export type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
+export type AwaitCollection<B> = Collection<B> | PromiseLike<Collection<B>>;
 
-// @public (undocumented)
-export function awaitedMapping<T, R>(collection: Iterable<Base<T>> | PromiseLike<Iterable<Base<T>>> | Iterable<PromiseLike<Base<T>>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<(SettledLeft | SettledRight<R>)[]>;
+// @alpha
+export function awaitedMapping<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
+
+// @alpha (undocumented)
+export type AwaitedMappingFn = Function & (<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>[]>);
 
 // @public (undocumented)
 export type Base<TBase> = TBase | Settled<TBase> | PromiseSettledResult<TBase> | SettledRight<TBase> | PromiseFulfilledResult<TBase> | SettledLeft | PromiseRejectedResult;
 
 // @public (undocumented)
-export type Collection<B> = Iterable<Base<B>>;
-
-// @public (undocumented)
-export type CollectionOfAwait<B> = Collection<Await<B>>;
+export type Collection<B> = Iterable<Base<B>> | Iterable<Await<B>>;
 
 declare namespace constants {
     export {
@@ -71,11 +71,17 @@ declare namespace functions {
 }
 export { functions }
 
-// @public (undocumented)
-export function generateMapping<T, R>(collection: Iterable<Base<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Generator<Promise<SettledLeft | SettledRight<R>>, void, unknown>;
+// @alpha
+export function generateMapping<T, R>(collection: Collection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>;
 
-// @public (undocumented)
-export function generateMappingAsync<R, T>(collection: Iterable<Base<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>;
+// @alpha
+export function generateMappingAsync<R, T>(collection: Collection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>;
+
+// @alpha (undocumented)
+export type GenerateMappingAsyncFn = Function & (<R, T>(collection: Collection<T>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => AsyncGenerator<Settled<R>, void, unknown>);
+
+// @alpha (undocumented)
+export type GenerateMappingFn = Function & (<T, R>(collection: Collection<T>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Generator<Promise<Settled<R>>, void, unknown>);
 
 // @beta (undocumented)
 function getRejectedResults<T>(collection: Array<Settled<T> | PromiseSettledResult<T>>): SettledLeft[];
@@ -127,14 +133,20 @@ export interface LookupFn<S, U = unknown> {
     (value: U, index: number, array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]): OnlySideEffect;
 }
 
-// @public (undocumented)
-export function paralellMapping<T, R>(collection: Iterable<Base<T>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<SettledLeft | SettledRight<R>>[];
+// @alpha
+export function paralellMapping<T, R>(collection: Collection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>>[];
+
+// @alpha (undocumented)
+export type ParalellMappingFn = Function & (<T, R>(collection: Collection<T>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>>[]);
 
 // @public
 const REJECTED: 'rejected';
 
-// @public (undocumented)
-export function serialMapping<T, R>(collection: Iterable<Base<T>> | PromiseLike<Iterable<Base<T>>> | Iterable<PromiseLike<Base<T>>>, transform?: TransformFn<T, R>, lookup?: LookupFn<T, R>, validate?: ValidateFn<T, R>, errLookup?: ErrLookupFn): Promise<Settled<R>[]>;
+// @alpha
+export function serialMapping<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
+
+// @alpha (undocumented)
+export type SerialMappingFn = Function & (<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>[]>);
 
 // @public
 export type Settled<TBase> = SettledLeft | SettledRight<TBase>;

@@ -30,12 +30,16 @@ import * as functions from './functions';
 import * as helpers from './helpers';
 import type {
   Await,
-  AwaitAndBase,
+  AwaitCollection,
+  AwaitedMappingFn,
   Base,
   Collection,
-  CollectionOfAwait,
   ErrLookupFn,
+  GenerateMappingAsyncFn,
+  GenerateMappingFn,
   LookupFn,
+  ParalellMappingFn,
+  SerialMappingFn,
   Settled,
   SettledLeft,
   SettledRight,
@@ -50,6 +54,13 @@ export { generateMappingAsync } from './functions/generateMappingAsync';
 export { paralellMapping } from './functions/paralellMapping';
 export { serialMapping } from './functions/serialMapping';
 export { constants, helpers, functions };
-export type { Collection, Await, CollectionOfAwait, AwaitAndBase };
+export type { Collection, Await, AwaitCollection };
 export type { Base, Settled, SettledLeft, SettledRight, TransformStep };
 export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn };
+export type {
+  AwaitedMappingFn,
+  GenerateMappingAsyncFn,
+  GenerateMappingFn,
+  ParalellMappingFn,
+  SerialMappingFn,
+};

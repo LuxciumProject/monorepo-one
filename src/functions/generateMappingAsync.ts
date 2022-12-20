@@ -1,5 +1,5 @@
 import {
-  Base,
+  Collection,
   ErrLookupFn,
   LookupFn,
   Settled,
@@ -8,13 +8,19 @@ import {
 } from '../types';
 import { fn_a1f9a } from './core';
 
-/** @public */
+/**
+ * **UNSAFE**: Function type signature may still change at any moment please
+ * remember this package is in the early devloppment phase and is
+ * **UNSAFE** to use as its API is still evolving.
+ * @alpha
+ */
+
 export async function* generateMappingAsync<R, T>(
-  collection: Iterable<Base<T>>,
-  transform: TransformFn<T, R> = async value => value as any as R,
-  lookup: LookupFn<T, R> = v => void v,
-  validate: ValidateFn<T, R> = async v => void v,
-  errLookup: ErrLookupFn = v => void v
+  collection: Collection<T>,
+  transformFn: null | TransformFn<T, R> = async value => value as any as R,
+  lookupFn: null | LookupFn<T, R> = v => void v,
+  validateFn: null | ValidateFn<T, R> = async v => void v,
+  errLookupFn: null | ErrLookupFn = v => void v
 ): AsyncGenerator<Settled<R>, void, unknown> {
   let index = 0;
   for await (const item of collection) {
@@ -22,10 +28,11 @@ export async function* generateMappingAsync<R, T>(
       item,
       index: index++,
       array: [...collection],
-      transform,
-      validate,
-      errLookup,
-      lookup,
+      transform:
+        transformFn == null ? async value => value as any as R : transformFn,
+      lookup: lookupFn == null ? v => void v : lookupFn,
+      validate: validateFn == null ? async v => void v : validateFn,
+      errLookup: errLookupFn == null ? v => void v : errLookupFn,
     });
   }
 }
