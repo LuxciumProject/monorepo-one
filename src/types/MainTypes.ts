@@ -2,7 +2,7 @@ import { Settled, SettledLeft, SettledRight } from './Settled';
 
 /** @public */
 
-type Base<TBase> =
+export type Base<TBase> =
   | TBase
   | Settled<TBase>
   | PromiseSettledResult<TBase>

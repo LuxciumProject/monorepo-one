@@ -12,13 +12,26 @@ export function makeFulfillement<U>({
   value: U;
   index?: number;
   transformStep?: number;
-  base?: { value: U; status: 'fulfilled' } | {};
+  base?: { value: U; status: 'fulfilled'; index?: number } | {};
 }): SettledRight<U> {
   const currentValue = Object.freeze(value);
   const currentSettlement: PromiseSettledResult<U> = {
     status: FULFILLED,
     value: currentValue,
   };
+
+  const currentIndex =
+    base != null &&
+    typeof base === 'object' &&
+    'index' in base &&
+    base.index != null &&
+    typeof base.index === 'number' &&
+    base.index > -1 &&
+    !isNaN(base.index)
+      ? base.index
+      : typeof index === 'number' && !isNaN(index)
+      ? index
+      : -1;
 
   // INFO: To get base properties last but also overide its values ...
   const result: SettledRight<U> = {
@@ -29,8 +42,8 @@ export function makeFulfillement<U>({
     currentRejection: null,
     rejected: null,
     reason: undefined,
-    transformStep,
-    index,
+    index: currentIndex,
+    transformStep: transformStep,
   };
 
   Object.defineProperty(result, 'reason', {
@@ -69,15 +82,28 @@ export function makeFulfillement<U>({
       enumerable: false,
       writable: false,
     });
+  } else {
+    Object.defineProperty(result, 'transformStep', {
+      value: transformStep,
+      enumerable: true,
+      writable: false,
+    });
   }
 
-  if (index === -1) {
+  if (currentIndex === -1) {
     Object.defineProperty(result, 'index', {
-      value: index,
+      value: currentIndex,
       enumerable: false,
       writable: false,
     });
   }
+  // else {
+  //   Object.defineProperty(result, 'index', {
+  //     value: currentIndex,
+  //     enumerable: true,
+  //     writable: false,
+  //   });
+  // }
 
   return Object.freeze(result);
 }

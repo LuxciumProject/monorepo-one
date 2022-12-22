@@ -24,13 +24,6 @@ export async function fn_a1f9a<T, R>({
     void [value, index, currentRejection],
 }: MapperOptions<T, R>) {
   const transformStep = getTransformStep(item, 0);
-
-  // let myItem: Settled<T>;
-  // if (isPromiseLike(item)) {
-  //   var myItem = makeSettler(await item, index);
-  // } else {
-  //   var myItem = makeSettler(item, index);
-  // }
   const myItem: Settled<T> = makeSettler(
     isPromiseLike(item) ? await item : item,
     index

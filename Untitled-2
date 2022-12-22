@@ -1,0 +1,40 @@
+chatGPT :
+
+Mapping Tools
+Mapping Tools is a JavaScript package that provides five main functions for mapping over an iterable or array:
+
+awaitedMapping, which is based on Promise.all($)
+parallelMapping, which is based on Array.prototype.map($)
+serialMapping, which is based on a forOf loop
+generateMappingAsync, which is based on the AsyncGenerator protocol
+generateMapping, which is based on the Generator protocol
+Each of these functions can accept the following arguments:
+
+A Collection, which is the iterable or array that you want to map over
+Four delegate functions:
+A mapping function, which is applied to each element of the Collection
+An error handling function, which is called if an error occurs during the mapping process
+A completion function, which is called when the mapping process is complete
+A cancellation function, which is called if the mapping process is cancelled
+Here's an example of how you could use the awaitedMapping function:
+
+Copy code
+import { awaitedMapping } from 'mapping-tools';
+
+const collection = [1, 2, 3, 4, 5];
+
+await awaitedMapping(collection, async (item) => {
+  // Perform some async operation on each item in the collection
+  const result = await someAsyncOperation(item);
+  console.log(result);
+}, (error) => {
+  // Handle any errors that occur during the mapping process
+  console.error(error);
+}, () => {
+  // Do something when the mapping process is complete
+  console.log('Mapping complete!');
+}, () => {
+  // Do something if the mapping process is cancelled
+  console.log('Mapping cancelled!');
+});
+I hope this provides a clear and concise overview of the five main functions and the arguments they can accept. If you have any further questions, don't hesitate to ask!

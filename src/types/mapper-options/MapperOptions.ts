@@ -1,4 +1,4 @@
-import { Base } from '../';
+import { Base } from '../MainTypes';
 import type { ErrLookupFn } from './ErrLookupFn';
 import type { LookupFn } from './LookupFn';
 import type { TransformFn } from './TransformFn';

@@ -27,6 +27,44 @@ describe('The makeSettler function', () => {
       value: 'expected',
     });
   });
+
+  it('Should use the index from inside the SettledRight<T>', async () => {
+    expect(
+      makeSettler(
+        {
+          index: 3,
+          status: 'fulfilled',
+          transformStep: 0,
+          value: 'expected',
+        },
+        2
+      )
+    ).toStrictEqual({
+      index: 3,
+      status: 'fulfilled',
+      transformStep: 0,
+      value: 'expected',
+    });
+  });
+
+  it('Should use the index from inside the SettledRight<T> unless if it is -1', async () => {
+    expect(
+      makeSettler(
+        {
+          index: -1,
+          status: 'fulfilled',
+          transformStep: 0,
+          value: 'expected',
+        },
+        2
+      )
+    ).toStrictEqual({
+      index: 2,
+      status: 'fulfilled',
+      transformStep: 0,
+      value: 'expected',
+    });
+  });
   it('Should produce a valid output from a SettledLeft', async () => {
     expect(
       makeSettler(
@@ -92,7 +130,7 @@ describe('The makeSettler function', () => {
     expect(
       await makeSettler(
         (async () => ({
-          index: 0,
+          index: 3,
           status: 'fulfilled',
           transformStep: 0,
           value: 'expected',
@@ -100,7 +138,7 @@ describe('The makeSettler function', () => {
         2
       )
     ).toStrictEqual({
-      index: 2,
+      index: 3,
       status: 'fulfilled',
       transformStep: 0,
       value: 'expected',

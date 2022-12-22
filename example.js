@@ -1,5 +1,5 @@
 const settledRight = {
-  status: 'rejected',
+  status: 'fulfilled',
   value: 'value of a specific type',
   transformStep: -1,
   index: -1,
