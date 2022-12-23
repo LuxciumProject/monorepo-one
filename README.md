@@ -31,8 +31,8 @@ Provides 5 unique ways to map on an iterable, asynchronously and with advanced e
 ## Main (core) functions
 
  <p align="center">
-      <a href="../../images/v0.0.0/main-types.png">
-        <img src="../../images/v0.0.0/main-types.png" width="70%" title="Click to enlarge the image!" alt="main-types function type signature">
+      <a href="images/v0.0.0/main-types.png">
+        <img src="images/v0.0.0/main-types.png" width="70%" title="Click to enlarge the image!" alt="main-types function type signature">
       </a>
     </p>
 
@@ -69,8 +69,8 @@ type Collection<B> = Iterable<Base<B>>;
   - Returns: `Promise<Array<Settled<R>>>`
 
     <p align="center">
-      <a href="../../images/v0.0.0/AwaitedMappingFn.png">
-        <img src="../../images/v0.0.0/AwaitedMappingFn.png" width="70%" title="Click to enlarge the image!" alt="AwaitedMappingFn function type signature">
+      <a href="images/v0.0.0/AwaitedMappingFn.png">
+        <img src="images/v0.0.0/AwaitedMappingFn.png" width="70%" title="Click to enlarge the image!" alt="AwaitedMappingFn function type signature">
       </a>
     </p>
 
@@ -81,8 +81,8 @@ type Collection<B> = Iterable<Base<B>>;
   - Returns: `Array<Promise<Settled<R>>>`
 
       <p align="center">
-        <a href="../../images/v0.0.0/ParalellMappingFn.png">
-          <img src="../../images/v0.0.0/ParalellMappingFn.png" width="70%" title="Click to enlarge the image!" alt="ParalellMappingFn function type signature">
+        <a href="images/v0.0.0/ParalellMappingFn.png">
+          <img src="images/v0.0.0/ParalellMappingFn.png" width="70%" title="Click to enlarge the image!" alt="ParalellMappingFn function type signature">
         </a>
       </p>
 
@@ -93,8 +93,8 @@ type Collection<B> = Iterable<Base<B>>;
   - Returns: `Promise<Array<Settled<R>>>`
 
       <p align="center">
-        <a href="../../images/v0.0.0/SerialMappingFn.png">
-          <img src="../../images/v0.0.0/SerialMappingFn.png" width="70%" title="Click to enlarge the image!" alt="SerialMappingFn function type signature">
+        <a href="images/v0.0.0/SerialMappingFn.png">
+          <img src="images/v0.0.0/SerialMappingFn.png" width="70%" title="Click to enlarge the image!" alt="SerialMappingFn function type signature">
         </a>
       </p>
 
@@ -105,8 +105,8 @@ type Collection<B> = Iterable<Base<B>>;
   - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
 
       <p align="center">
-        <a href="../../images/v0.0.0/GenerateMappingFn.png">
-          <img src="../../images/v0.0.0/GenerateMappingFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingFn function type signature">
+        <a href="images/v0.0.0/GenerateMappingFn.png">
+          <img src="images/v0.0.0/GenerateMappingFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingFn function type signature">
         </a>
       </p>
 
@@ -117,8 +117,8 @@ type Collection<B> = Iterable<Base<B>>;
   - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
 
       <p align="center">
-        <a href="../../images/v0.0.0/GenerateMappingAsyncFn.png">
-          <img src="../../images/v0.0.0/GenerateMappingAsyncFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingAsyncFn function type signature">
+        <a href="images/v0.0.0/GenerateMappingAsyncFn.png">
+          <img src="images/v0.0.0/GenerateMappingAsyncFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingAsyncFn function type signature">
         </a>
       </p>
 
