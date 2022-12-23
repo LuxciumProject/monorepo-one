@@ -3,7 +3,7 @@
   "extends": "../typescript/tsconfig.json",
   "compilerOptions": {
     /* Emit Options */
-    "target": "ES3",
+    "target": "ES5",
     "module": "CommonJS",
     "moduleResolution": "node",
     "rootDir": "src",
