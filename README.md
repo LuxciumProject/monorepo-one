@@ -2,7 +2,13 @@
 
 "mapping-tools" is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. With our package, you can easily apply transformations to each element in a list, all while enjoying advanced error handling and support for asynchronous code.
 
-Our package offers five main tools for mapping, each based on a different technique:
+This package offers five main tools for mapping, each based on a different technique:
+
+1. **awaitedMapping**, is based on Promise.all($)
+1. **parallelMapping**, is based on Array.prototype.map($)
+1. **serialMapping**, is based on a forOf loop
+1. **generateMappingAsync**, is based on the AsyncGenerator protocol
+1. **generateMapping**, is based on the Generator protocol
 
 awaitedMapping is based on Promise.all($), allowing you to easily map over asynchronous iterables.
 paralellMapping is based on Array.prototype.map($), allowing you to map over iterables in parallel.
@@ -16,12 +22,6 @@ With these tools at your disposal, you'll have everything you need to easily and
 With "mapping-tools", you can choose from five different methods for mapping over an iterable or array:
 
 Welcome to [Package Name]! This package provides a set of tools for mapping over a list in JavaScript, with a focus on asynchronous code and advanced error handling capabilities.
-
-1. awaitedMapping, which is based on Promise.all($)
-1. parallelMapping, which is based on Array.prototype.map($)
-1. serialMapping, which is based on a forOf loop
-1. generateMappingAsync, which is based on the AsyncGenerator protocol
-1. generateMapping, which is based on the Generator protocol
 
 "mapping-tools" is a powerful and versatile tool that can help you solve a wide variety of problems related to asynchronous code. Whether you're working with complex data structures or need advanced error handling capabilities, "mapping-tools" has you covered.
 Provides 5 unique ways to map on an iterable, asynchronously and with advanced error handling capabilities: Using a similar interface it allows you to seemingly map `Generator` and `AsyncGenerator` protocols, the `Array.prototype.map($)` alone or in conjunction with `Promise.all($)`, finally it can use the `for...of` loop...
