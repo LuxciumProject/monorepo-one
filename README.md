@@ -7,10 +7,10 @@
 This package offers five main tools for mapping, each based on a different technique:
 
 1. **awaitedMapping**, is based on Promise.all($)
-1. **parallelMapping**, is based on Array.prototype.map($)
-1. **serialMapping**, is based on a forOf loop
-1. **generateMappingAsync**, is based on the AsyncGenerator protocol
-1. **generateMapping**, is based on the Generator protocol
+2. **parallelMapping**, is based on Array.prototype.map($)
+3. **serialMapping**, is based on a forOf loop
+4. **generateMappingAsync**, is based on the AsyncGenerator protocol
+5. **generateMapping**, is based on the Generator protocol
 
 To install mapping-tools using npm, you can use the following command:
 
@@ -30,6 +30,29 @@ You can then include the package in your project by using require or import, dep
 const mappingTools = require('mapping-tools');
 // or
 import * as mappingTools from 'mapping-tools';
+```
+
+```typescript
+import { awaitedMapping } from 'mapping-tools';
+
+async function main() {
+  const array = [1, 2, 3];
+  const mappedArray = await awaitedMapping(array, async element => {
+    // Sync or Async operation on each element
+    return element * 2;
+  });
+  console.log(mappedArray);
+
+  /*
+    [
+      { status: 'fulfilled', value: 2, index: 0, transformStep: 1 },
+      { status: 'fulfilled', value: 4, index: 1, transformStep: 1 },
+      { status: 'fulfilled', value: 6, index: 2, transformStep: 1 }
+    ]
+  */
+}
+
+main();
 ```
 
 ## Main (core) functions
