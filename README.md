@@ -26,11 +26,11 @@ To install mapping-tools using pnpm, you can use the following command:
 
 You can then include the package in your project by using require or import, depending on your project's setup:
 
-    const mappingTools = require('mapping-tools');
-
-    // or
-
-    import \* as mappingTools from 'mapping-tools';
+```typescript
+const mappingTools = require('mapping-tools');
+// or
+import * as mappingTools from 'mapping-tools';
+```
 
 ## Main (core) functions
 
