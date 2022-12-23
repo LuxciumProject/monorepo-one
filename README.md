@@ -1,4 +1,6 @@
-# mapping-tools
+# Mapping Tools
+
+![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
 "mapping-tools" is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. With our package, you can easily apply transformations to each element in a list, all while enjoying advanced error handling and support for asynchronous code.
 
@@ -10,23 +12,25 @@ This package offers five main tools for mapping, each based on a different techn
 1. **generateMappingAsync**, is based on the AsyncGenerator protocol
 1. **generateMapping**, is based on the Generator protocol
 
-awaitedMapping is based on Promise.all($), allowing you to easily map over asynchronous iterables.
-paralellMapping is based on Array.prototype.map($), allowing you to map over iterables in parallel.
-serialMapping is based on a forOf loop, allowing you to map over iterables serially.
-generateMappingAsync is based on the AsyncGenerator protocol, allowing you to map over iterables asynchronously using generator functions.
-generateMapping is based on the Generator protocol, allowing you to map over iterables using generator functions.
-With these tools at your disposal, you'll have everything you need to easily and effectively transform your data. We hope "mapping-tools" proves useful in your projects!
+To install mapping-tools using npm, you can use the following command:
 
-"mapping-tools" is a JavaScript package that provides a set of tools for mapping over a list, with a focus on asynchronous code and advanced error handling capabilities.
+    npm install mapping-tools
 
-With "mapping-tools", you can choose from five different methods for mapping over an iterable or array:
+To install mapping-tools using yarn, you can use the following command:
 
-Welcome to [Package Name]! This package provides a set of tools for mapping over a list in JavaScript, with a focus on asynchronous code and advanced error handling capabilities.
+    yarn add mapping-tools
 
-"mapping-tools" is a powerful and versatile tool that can help you solve a wide variety of problems related to asynchronous code. Whether you're working with complex data structures or need advanced error handling capabilities, "mapping-tools" has you covered.
-Provides 5 unique ways to map on an iterable, asynchronously and with advanced error handling capabilities: Using a similar interface it allows you to seemingly map `Generator` and `AsyncGenerator` protocols, the `Array.prototype.map($)` alone or in conjunction with `Promise.all($)`, finally it can use the `for...of` loop...
+To install mapping-tools using pnpm, you can use the following command:
 
-![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
+    pnpm install mapping-tools
+
+You can then include the package in your project by using require or import, depending on your project's setup:
+
+    const mappingTools = require('mapping-tools');
+
+    // or
+
+    import \* as mappingTools from 'mapping-tools';
 
 ## Main (core) functions
 
