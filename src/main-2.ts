@@ -15,6 +15,9 @@ async function main() {
       { status: 'fulfilled', value: 6, index: 2, transformStep: 1 }
     ]
   */
+
+  const fulfilledValues = listFulfilledResults(mappedArray);
+  console.log('fulfilled :>> ', fulfilledValues);
 }
 
 main();

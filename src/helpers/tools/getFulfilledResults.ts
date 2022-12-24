@@ -7,9 +7,6 @@ export {};
 export function getFulfilledResults<T>(
   collection: Iterable<Base<T>> //  Array<Settled<T> | PromiseSettledResult<T>>
 ) {
-  // TODO: ===========================================================
-  // BUG: Should also take care or rejected values
-
   const list: Base<T>[] = [...collection];
   const settledList = list.map((element, index) => makeSettler(element, index));
   const result = settledList.filter(
