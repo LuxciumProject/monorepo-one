@@ -1,6 +1,5 @@
 {
   // "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
-  "collectCoverage": true,
   "coverageDirectory": "../dist/coverage",
   "verbose": true,
   "transform": {
@@ -21,6 +20,7 @@
     "**/?(*.)+(spec|test).[jt]s?(x)"
   ],
   "testPathIgnorePatterns": ["./out"],
+  "collectCoverage": false,
   "coverageThreshold": {
     "global": {
       "statements": 90,

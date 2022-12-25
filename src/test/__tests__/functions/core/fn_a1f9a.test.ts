@@ -1,4 +1,3 @@
-import { assert } from 'node:assert';
 import { fn_a1f9a } from '../../../../functions/core';
 import { isSettledRight } from '../../../../helpers/assertions';
 
@@ -35,7 +34,7 @@ describe('CORE FUNCTION fn_a1f9a', () => {
       reason: undefined,
     };
     isSettledRight(contender);
-    assert.(isSettledRight(contender) === true);
+    expect(isSettledRight(contender)).toBe(true);
     expect(
       await fn_a1f9a({
         item: { status: 'fulfilled', transformStep: 1, value: 'item' },
@@ -127,4 +126,5 @@ export interface MapperOptions<T, U = unknown> {
 1) fulfillementBlock resolves
 2) fulfillementBlock ErrorOut
    makeRejection (currentRejection = true)
+
 */
