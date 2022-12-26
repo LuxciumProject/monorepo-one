@@ -29,11 +29,11 @@ import * as constants from './constants';
 import * as functions from './functions';
 import * as helpers from './helpers';
 import type {
-  Await,
-  AwaitCollection,
   AwaitedMappingFn,
   Base,
   Collection,
+  Deferred,
+  DeferredCollection,
   ErrLookupFn,
   GenerateMappingAsyncFn,
   GenerateMappingFn,
@@ -54,7 +54,7 @@ export { generateMappingAsync } from './functions/generateMappingAsync';
 export { paralellMapping } from './functions/paralellMapping';
 export { serialMapping } from './functions/serialMapping';
 export { constants, helpers, functions };
-export type { Collection, Await, AwaitCollection };
+export type { Collection, Deferred, DeferredCollection };
 export type { Base, Settled, SettledLeft, SettledRight, TransformStep };
 export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn };
 export type {

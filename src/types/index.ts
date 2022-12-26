@@ -5,7 +5,12 @@ export type {
   ParalellMappingFn,
   SerialMappingFn,
 } from './MainFunctionsTypes';
-export type { Await, AwaitCollection, Base, Collection } from './MainTypes';
+export type {
+  Base,
+  Collection,
+  Deferred,
+  DeferredCollection,
+} from './MainTypes';
 export type { IMappable, Mapper } from './Mapper';
 export type { OnlySideEffect } from './OnlySideEffect';
 export type {

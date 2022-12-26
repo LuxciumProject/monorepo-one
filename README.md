@@ -4,6 +4,16 @@
 
 "mapping-tools" is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. With our package, you can easily apply transformations to each element in a list, all while enjoying advanced error handling and support for asynchronous code.
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Getting Started](#getting-started)
+4. [Features](#features)
+5. [Documentation](#documentation)
+
+## Introduction
+
 This package offers five main tools for mapping, each based on a different technique:
 
 1. **awaitedMapping**, is based on Promise.all($)
@@ -65,6 +75,13 @@ main();
 
 ## Main (core) functions
 
+Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable: serialMapping, awaitedMapping
+Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable: parallelMapping, generateMappingAsync, generateMapping
+
+Functions that return promises that resolve to arrays: awaitedMapping, serialMapping
+Functions that return arrays: parallelMapping
+Functions that return generators: generateMappingAsync, generateMapping
+
  <p align="center">
       <a href="images/v0.0.0/main-types.png">
         <img src="images/v0.0.0/main-types.png" width="70%" title="Click to enlarge the image!" alt="main-types function type signature">
@@ -96,6 +113,46 @@ type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
 
 type Collection<B> = Iterable<Base<B>>;
 ```
+
+### Arguments
+
+- `collection: Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>> | PromiseLike<Iterable<Base<T>>>`: The collection of items to be iterated or mapped over. The collection can be either an iterable or a combination of an iterable and a promise of an iterable.
+  The `Base<T>` type represents a resolved or rejected promise, or a value. It can be one of the following:
+
+  - `TBase`: The resolved value of a promise.
+  - `Settled<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
+  - `PromiseSettledResult<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
+  - `SettledRight<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
+  - `PromiseFulfilledResult<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
+  - `SettledLeft`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
+  - `PromiseRejectedResult`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
+
+- `TransformFn<T, R> = async value => value as any as R`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+
+## Return Types
+
+### `awaitedMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
+
+Applies the provided callback functions to each item in the collection, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
+
+### `parallelMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Array<Promise<Settled<R>>>`
+
+Applies the provided callback functions to each item in the collection in parallel, and returns an array of promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
+
+### `serialMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
+
+Applies the provided callback functions to each item in the collection in series, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
+
+### `generateMappingAsync(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>`
+
+Applies the provided callback functions to each item in the collection, and returns an async generator that yields the transformed and validated items, represented as `Settled<R>` objects.
+
+### `generateMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>`
+
+Applies the provided callback functions to each item in the collection, and returns a generator that yields promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
 
 - **awaitedMapping**
 
@@ -151,11 +208,15 @@ type Collection<B> = Iterable<Base<B>>;
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
 
-      <p align="center">
-        <a href="images/v0.0.0/GenerateMappingAsyncFn.png">
-          <img src="images/v0.0.0/GenerateMappingAsyncFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingAsyncFn function type signature">
-        </a>
-      </p>
+          <p align="center">
+            <a href="images/v0.0.0/GenerateMappingAsyncFn.png">
+              <img src="images/v0.0.0/GenerateMappingAsyncFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingAsyncFn function type signature">
+            </a>
+          </p>
+
+    <hr>
+    <!-- ---------------------------------------------------------------------- -->
+    <br>
 
 - **serialMapping**
 
@@ -516,7 +577,11 @@ related to [Object composition and inheritance](https://en.wikipedia.org/wiki/Ja
     | PromiseRejectedResult;
   ```
 
-  ## Contributing
+The `Deferred<B>` type is an alias for `PromiseLike<Base<B>>`, which represents a promise-like object that wraps a value of type `Base<B>`. It is used to simplify the documentation and does not need to be used directly by the consumer of the package.
+
+`BaseOrDeferred<B>` is an alias type that represents either a resolved or rejected promise, or a value, as represented by the `Base<B>` type, or a promise-like object that can be used for async operations, as represented by the `Deferred<B>` type
+
+## Contributing
 
 We welcome contributions to Mapping Tools! If you have an idea for a new feature or have found a bug, please open an issue on GitHub. If you'd like to contribute code, please follow these guidelines:
 
@@ -573,3 +638,9 @@ IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 † Scientia est lux principium✨ ™
 
 <sup>Text generated by an [AI language model](https://openai.com/) has been used in this work.</sup>
+
+Base<TBase>: This type represents a resolved or rejected promise, or a value. It is made up of several subtypes, such as Settled<TBase>, PromiseSettledResult<TBase>, SettledRight<TBase>, PromiseFulfilledResult<TBase>, SettledLeft, and PromiseRejectedResult.
+Deferred<B>: This is an alias type that represents a promise-like object that can be used for async operations. It is defined as PromiseLike<Base<B>>.
+BaseOrDeferred<B>: This type represents either a resolved or rejected promise, or a value, as represented by the Base<B> type, or a promise-like object that can be used for async operations, as represented by the Deferred<B> type.
+Collection<B>: This type represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.
+DeferredCollection<B>: This type represents either an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type, or a promise-like object that represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.
