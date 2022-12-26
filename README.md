@@ -12,25 +12,33 @@ This package offers five main tools for mapping, each based on a different techn
 4. **generateMappingAsync**, is based on the AsyncGenerator protocol
 5. **generateMapping**, is based on the Generator protocol
 
-To install mapping-tools using npm, you can use the following command:
+## Installation
 
-    npm install mapping-tools
+To install Mapping Tools, you can use npm, yarn, or pnpm:
 
-To install mapping-tools using yarn, you can use the following command:
+```bash
+# npm
+npm install mapping-tools
+# yarn
+yarn add mapping-tools
+# pnpm
+pnpm add mapping-tools
+```
 
-    yarn add mapping-tools
+## Getting Started
 
-To install mapping-tools using pnpm, you can use the following command:
-
-    pnpm install mapping-tools
-
-You can then include the package in your project by using require or import, depending on your project's setup:
+To get started with Mapping Tools, you'll first need to import the
+library in your code:
 
 ```typescript
 const mappingTools = require('mapping-tools');
 // or
 import * as mappingTools from 'mapping-tools';
 ```
+
+Then, you can use the various functions provided by the library to
+generate, transform, and iterate over maps, as well as to perform
+asynchronous map generation.
 
 ```typescript
 import { awaitedMapping } from 'mapping-tools';
@@ -251,15 +259,27 @@ upon in by the folowing _interface_ contracts.
   required if you would return unchanged value as `U` and `T` must
   be different to be infered.
 
-  ```typescript
-  export interface TransformFn<T, U = unknown> {
-    (
-      value: T,
-      index: number,
-      array: readonly (T | PromiseSettledResult<T>)[]
-    ): Promise<U>;
-  }
-  ```
+  The `TransformFn<T,U>` delegate function is responsible for carrying out the actual mapping process. It works similarly to the callback function provided to an `Array.prototype.map($)`, and expects that you will transform from input type `T` to returned type `U`. Proper type annotations are required if you return an unchanged value, as `U` and `T` must be different in order to be inferred. The `TransformFn<T,U>` delegate function has the following interface:
+
+The `TransformFn<T,U>` delegate function is responsible for carrying
+out the actual mapping process.
+
+It works similarly to the callback function provided to an
+`Array.prototype.map($)`, and expects that you will transform from
+input type `T` to returned type `U`.
+
+Proper type annotations are required if you return an unchanged
+value, as `U` and `T` must be different in order to be inferred.
+
+```typescript
+export interface TransformFn<T, U = unknown> {
+  (
+    value: T,
+    index: number,
+    array: readonly (T | PromiseSettledResult<T>)[]
+  ): Promise<U>;
+}
+```
 
 - `LookupFn<S,U>`
 
@@ -272,6 +292,8 @@ upon in by the folowing _interface_ contracts.
   independendly from the internal flow of the function where thish
   delgate is executed. In this context `OnlySideEffect` is an alias
   for `void`.
+
+  The `LookupFn<S,U>` delegate function is used to acknowledge the transformed value `U` in an asynchronous manner. The return value of this delegate must be `void` and must not have any internal side effects within the function where it is executed. However, external side effects, such as a `console.log($)`, are allowed. In this context, `OnlySideEffect` is an alias for `void`.
 
   ```typescript
   export interface LookupFn<S, U = unknown> {
@@ -295,15 +317,17 @@ upon in by the folowing _interface_ contracts.
   as a SettledLeft (described below). In this context
   `Promise<OnlySideEffect>` is an alias for `Promise<void>`.
 
-  ```typescript
-  export interface ValidateFn<S, U = unknown> {
-    (
-      value: U,
-      index: number,
-      array: readonly (S | PromiseSettledResult<S>)[]
-    ): Promise<OnlySideEffect>;
-  }
-  ```
+The `ValidateFn<S,U>` delegate function is similar to the `LookupFn<S,U>` delegate, both of which are optional and should be used only if necessary. The main difference is that the execution of the `ValidateFn<S,U>` delegate is awaited within the function where it is used, and the return value must be a `Promise<void>`. The only way to communicate with the function is to throw a value or exception, which will be caught in the function and returned as a SettledLeft (described elsewhere). In this context, `Promise<OnlySideEffect>` is an alias for `Promise<void>`.
+
+```typescript
+export interface ValidateFn<S, U = unknown> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | PromiseSettledResult<S>)[]
+  ): Promise<OnlySideEffect>;
+}
+```
 
 - `ErrLookupFn`
 
@@ -316,11 +340,13 @@ upon in by the folowing _interface_ contracts.
   available also if the actual step is dealing with a previous
   rejection from a previous tranformation step.
 
-  ```typescript
-  export interface ErrLookupFn {
-    (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
-  }
-  ```
+The `ErrLookupFn` delegate function is used to handle errors, and is similar to the `LookupFn<S,U>` delegate, but for rejections. It takes a `currentRejection` flag as its third argument, which indicates whether the error occurred during the current iteration or a previous iteration. You should only act on `currentRejection`s that are `true`, as they are not the result of a previous `transformStep`. If you need to access previous rejections, they are also available if the current step is dealing with a previous rejection from a previous transformation step.
+
+```typescript
+export interface ErrLookupFn {
+  (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
+}
+```
 
 Internally the delegate is linked via parameter that you
 can acess from the outside by providing a function (the delegate) of
@@ -333,7 +359,7 @@ elements.
 
 Since everything is based only on functions this definition may be
 different than the usual concept in JavaScript which is related often
-Srelated to [Object composition and inheritance](https://en.wikipedia.org/wiki/JavaScript#Delegative).
+related to [Object composition and inheritance](https://en.wikipedia.org/wiki/JavaScript#Delegative).
 
 ## Main types
 
@@ -489,6 +515,13 @@ Srelated to [Object composition and inheritance](https://en.wikipedia.org/wiki/J
     | PromiseFulfilledResult<T>
     | PromiseRejectedResult;
   ```
+
+  ## Contributing
+
+We welcome contributions to Mapping Tools! If you have an idea for a new feature or have found a bug, please open an issue on GitHub. If you'd like to contribute code, please follow these guidelines:
+
+- All code should be tested using the provided test suite.
+- Please include documentation for any new functions or types you add.
 
 **† Scientia est lux principium✨ ™**
 
