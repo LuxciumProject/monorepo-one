@@ -7,27 +7,50 @@ Make the documentation user-friendly with navigation and Table of Contents
 The package is based on 5 core function (main functions)
 The name of the 5 core functions of my pakage are as follow:
 
-awaitedMapping
-paralellMapping
-serialMapping
-generateMappingAsync
-generateMapping
+awaitedMapping, paralellMapping, serialMapping, generateMappingAsync, and generateMapping
 
 The list of thier main input type is as follow:
-
   - serialMapping takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
   - awaitedMapping takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
   - paralellMapping takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - generateMappingAsync takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - generateMapping takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
 
-The list of thier return type is as follow:
 
+the 5 core functions each take a main input type called a collection and
+4 more arguments called delgates functions:
+
+collection, transformFn, lookupFn, validateFn, and errLookupFn
+
+the 4 delegates functions are described as follow:
+  - `transformFn: TransformFn<T, R> = async value => value as any as R`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+  - `lookupFn: LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+  - `validateFn: ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+  - `errLookupFn: ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+
+The list of the 5 core function return type is as follow:
   - serialMapping returns: `Promise<Array<Settled<R>>>`
   - awaitedMapping returns: `Promise<Array<Settled<R>>>`
   - paralellMapping returns: `Array<Promise<Settled<R>>>`
   - generateMappingAsync returns: `AsyncGenerator<Settled<R>, void, unknown>`
   - generateMapping returns: `Generator<Promise<Settled<R>>, void, unknown>`
+
+
+The package defines one main Base Type
+
+type Base<TBase> =
+  | TBase
+  | Settled<TBase>
+  | PromiseSettledResult<TBase>
+  | SettledRight<TBase>
+  | PromiseFulfilledResult<TBase>
+  | SettledLeft
+  | PromiseRejectedResult;
+
+The package may use genric type T to denotate a specific inpput type
+The package may use genric type R to denotate a specific output type
+The package may use genric type B to denotate a specific T_Like type
+that would result in an underlaying Base<T_Like> / Base<B> type
 
 the documentation defines aliases to make it easier to the reader:
 
@@ -36,15 +59,55 @@ type BaseOrDeferred<B> = Base<B> | Deferred<B>;
 type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
 type DeferredCollection<B> = Collection<B> | Deferred<Collection<B>>;
 
-the 5 core functions take a main input type called a collection and
-4 more arguments called delgates functions
+The package define the type Settled<T> = SettledLeft | SettledRight<T>
+the type Settled<T> is analogus to the TypeScript type PromiseSettledResult<T>
+Based on the functional programing concept of either Settled<T> has two sides
+it has a wrong and bad type SettledLeft = PromiseRejectedResult & {
+  status: 'rejected';
+  reason: any;
+  value?: undefined;
+  rejected: any;
+  fulfilled: null;
+  transformStep: number;
+  currentRejection: true | false | undefined;
+  index: number;
+};
 
 
+and it has a nice and good type SettledRight<T> = PromiseFulfilledResult<T> & {
+  status: 'fulfilled';
+  value: T;
+  reason?: undefined;
+  fulfilled: T;
+  rejected: null;
+  transformStep: number;
+  currentRejection: null;
+  index: number;
+};
 
-- `TransformFn<T, R> = async value => value as any as R`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+for reference TypeScript provides:
+
+
+interface PromiseFulfilledResult<T> {
+    status: "fulfilled";
+    value: T;
+}
+
+interface PromiseRejectedResult {
+    status: "rejected";
+    reason: any;
+}
+
+type PromiseSettledResult<T> = PromiseFulfilledResult<T> | PromiseRejectedResult;
+
+The Settled type is a way to handle possible errors and represent
+the result or failure of some operation in this context.
+The SettledLeft type represents a rejected curent or passed
+transformation  with additional properties.
+The SettledRight type represents a fulfilled transformation
+with additional properties.
+Both types provide additional information about the status and
+outcome of the operation (transformation) they represent.
 
 
 Describe the package and its features in the introduction
@@ -105,22 +168,9 @@ limit?: number: An optional
 - `callback: (item: T) => U`: A callback function that is applied to each item in the collection.
 
 
-  - **serialMapping**
-  - **awaitedMapping**
-  - **paralellMapping**
-  - **generateMappingAsync**
-  - **generateMapping**
 
-
-  - serialMapping is based on `forOf` _loop_
-  - awaitedMapping is based on `Promise.all($)`
-  - paralellMapping is based on an `Array.prototype.map($)`
-  - generateMappingAsync is based on the `AsyncGenerator` _Protocol_
-  - generateMapping is based on the `Generator` _Protocol_
-
-
-awaitedMapping Returns: `Promise<Array<Settled<R>>>`
-paralellMapping Returns: `Array<Promise<Settled<R>>>`
-serialMapping Returns: `Promise<Array<Settled<R>>>`
-generateMappingAsync Returns: `AsyncGenerator<Settled<R>, void, unknown>`
-generateMapping Returns: `Generator<Promise<Settled<R>>, void, unknown>`
+Base<TBase>: This type represents a resolved or rejected promise, or a value. It is made up of several subtypes, such as Settled<TBase>, PromiseSettledResult<TBase>, SettledRight<TBase>, PromiseFulfilledResult<TBase>, SettledLeft, and PromiseRejectedResult.
+Deferred<B>: This is an alias type that represents a promise-like object that can be used for async operations. It is defined as PromiseLike<Base<B>>.
+BaseOrDeferred<B>: This type represents either a resolved or rejected promise, or a value, as represented by the Base<B> type, or a promise-like object that can be used for async operations, as represented by the Deferred<B> type.
+Collection<B>: This type represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.
+DeferredCollection<B>: This type represents either an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type, or a promise-like object that represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.

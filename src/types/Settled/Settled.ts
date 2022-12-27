@@ -80,6 +80,6 @@ import { SettledRight } from './SettledRight';
  *
  * @public
  */
-export type Settled<TBase> = SettledLeft | SettledRight<TBase>;
+export type Settled<T> = SettledLeft | SettledRight<T>;
 
 //  * @typeParam T - value of a fulfilled ({@link SettledRight}) {@link TransformFn} mapping operation.

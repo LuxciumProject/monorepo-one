@@ -2,25 +2,17 @@
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
-"mapping-tools" is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. With our package, you can easily apply transformations to each element in a list, all while enjoying advanced error handling and support for asynchronous code.
+Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. It provides a set of utility functions for working with collections of data. These functions allow you to apply a transformation or validation function to each item in a collection, either in serial or parallel, and generate new collections or iterators and async iterators based on the results. All while enjoying advanced error handling and advanced support for asynchronous code.
+
+The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Getting Started](#getting-started)
+1. [Installation](#installation)
+2. [Getting Started](#getting-started)
+3. [Usage](#Usage)
 4. [Features](#features)
 5. [Documentation](#documentation)
-
-## Introduction
-
-This package offers five main tools for mapping, each based on a different technique:
-
-1. **awaitedMapping**, is based on Promise.all($)
-2. **parallelMapping**, is based on Array.prototype.map($)
-3. **serialMapping**, is based on a forOf loop
-4. **generateMappingAsync**, is based on the AsyncGenerator protocol
-5. **generateMapping**, is based on the Generator protocol
 
 ## Installation
 
@@ -73,14 +65,89 @@ async function main() {
 main();
 ```
 
+## Usage Overview
+
+The package includes 5 main functions:
+
+1. **[awaitedMapping](#awaitedMappingFn)**, is based on Promise.all($)
+2. **[paralellMapping](#paralellMappingFn)**, is based on Array.prototype.map($)
+3. **[serialMapping](#serialMappingFn)**, is based on a forOf loop
+4. **[generateMappingAsync](#generateMappingAsyncFn)**, is based on the AsyncGenerator protocol
+5. **[generateMapping](#generateMappingFn)**, is based on the Generator protocol
+
+These functions all take a collection of items as their main input, along with 4 delegate functions: [transformFn](), [lookupFn](), [validateFn](), and [errLookupFn]().
+
+The transformFn is applied to each item in the collection and is used to transform the item into a new value. The lookupFn and validateFn are applied to each item in the collection and can be used to perform additional lookup or validation operations on the transformed items. The errLookupFn is used to handle any errors that may occur during the processing of the collection or during previous steps of processing. Each are optionals but not providing any would result in no transformation of the values
+
+<hr>
+    <!-- ---------------------------------------------------------------------- -->
+<br>
+
 ## Main (core) functions
+
+### Arguments
+
+- `collection: Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>> | PromiseLike<Iterable<Base<T>>>`: The collection of items to be iterated or mapped over. The collection can be either an iterable or a combination of an iterable and a promise of an iterable.
+  The `Base<T>` type represents a resolved or rejected promise, or a value. It can be one of the following:
+
+  - `TBase`: The resolved value of a promise.
+  - `Settled<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
+  - `PromiseSettledResult<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
+  - `SettledRight<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
+  - `PromiseFulfilledResult<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
+  - `SettledLeft`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
+  - `PromiseRejectedResult`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
+
+- `TransformFn<T, R> = async value => value as any as R`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+
+## Return Types
+
+The list of the 5 core function return types is as follows:
+
+- **Functions that return arrays**
+  - [parallelMapping returns](#parallelmapping-signature): `Array<Promise<Settled<R>>>`
+- **Functions that return promises that resolve to arrays**
+  - [serialMapping returns](#serialmapping-signature): `Promise<Array<Settled<R>>>`
+  - [awaitedMapping returns](#awaitedmapping-signature): `Promise<Array<Settled<R>>>`
+- **Functions that return generators**
+  - [generateMapping returns](#generatemapping-signature): `Generator<Promise<Settled<R>>, void, unknown>`
+  - [generateMappingAsync returns](#generatemappingasync-signature): `AsyncGenerator<Settled<R>, void, unknown>`
+
+### parallelMapping signature
+
+`parallelMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Array<Promise<Settled<R>>>`
+
+Applies the provided callback functions to each item in the collection in parallel, and returns an array of promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
+
+### serialMapping signature
+
+`serialMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
+
+Applies the provided callback functions to each item in the collection in series, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
+
+### awaitedMapping signature
+
+`awaitedMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
+
+Applies the provided callback functions to each item in the collection, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
+
+### generateMapping signature
+
+`generateMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>`
+
+Applies the provided callback functions to each item in the collection, and returns a generator that yields promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
+
+### generateMappingAsync signature
+
+`generateMappingAsync(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>`
+
+Applies the provided callback functions to each item in the collection, and returns an async generator that yields the transformed and validated items, represented as `Settled<R>` objects.
 
 Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable: serialMapping, awaitedMapping
 Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable: parallelMapping, generateMappingAsync, generateMapping
-
-Functions that return promises that resolve to arrays: awaitedMapping, serialMapping
-Functions that return arrays: parallelMapping
-Functions that return generators: generateMappingAsync, generateMapping
 
  <p align="center">
       <a href="images/v0.0.0/main-types.png">
@@ -114,46 +181,6 @@ type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
 type Collection<B> = Iterable<Base<B>>;
 ```
 
-### Arguments
-
-- `collection: Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>> | PromiseLike<Iterable<Base<T>>>`: The collection of items to be iterated or mapped over. The collection can be either an iterable or a combination of an iterable and a promise of an iterable.
-  The `Base<T>` type represents a resolved or rejected promise, or a value. It can be one of the following:
-
-  - `TBase`: The resolved value of a promise.
-  - `Settled<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
-  - `PromiseSettledResult<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
-  - `SettledRight<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
-  - `PromiseFulfilledResult<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
-  - `SettledLeft`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
-  - `PromiseRejectedResult`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
-
-- `TransformFn<T, R> = async value => value as any as R`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-
-## Return Types
-
-### `awaitedMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
-
-Applies the provided callback functions to each item in the collection, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
-
-### `parallelMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Array<Promise<Settled<R>>>`
-
-Applies the provided callback functions to each item in the collection in parallel, and returns an array of promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
-
-### `serialMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
-
-Applies the provided callback functions to each item in the collection in series, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
-
-### `generateMappingAsync(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>`
-
-Applies the provided callback functions to each item in the collection, and returns an async generator that yields the transformed and validated items, represented as `Settled<R>` objects.
-
-### `generateMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>`
-
-Applies the provided callback functions to each item in the collection, and returns a generator that yields promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
-
 - **awaitedMapping**
 
   - Based on `Promise.all($)`
@@ -165,6 +192,13 @@ Applies the provided callback functions to each item in the collection, and retu
         <img src="images/v0.0.0/AwaitedMappingFn.png" width="70%" title="Click to enlarge the image!" alt="AwaitedMappingFn function type signature">
       </a>
     </p>
+
+<a id="awaitedMappingFn"></a>
+<a id="serialMappingFn"></a>
+<a id="generateMappingAsyncFn"></a>
+<a id="generateMappingFn"></a>
+
+<a id="paralellMappingFn"></a>
 
 - **paralellMapping**
 
@@ -639,8 +673,8 @@ IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 
 <sup>Text generated by an [AI language model](https://openai.com/) has been used in this work.</sup>
 
-Base<TBase>: This type represents a resolved or rejected promise, or a value. It is made up of several subtypes, such as Settled<TBase>, PromiseSettledResult<TBase>, SettledRight<TBase>, PromiseFulfilledResult<TBase>, SettledLeft, and PromiseRejectedResult.
-Deferred<B>: This is an alias type that represents a promise-like object that can be used for async operations. It is defined as PromiseLike<Base<B>>.
-BaseOrDeferred<B>: This type represents either a resolved or rejected promise, or a value, as represented by the Base<B> type, or a promise-like object that can be used for async operations, as represented by the Deferred<B> type.
-Collection<B>: This type represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.
-DeferredCollection<B>: This type represents either an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type, or a promise-like object that represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.
+<hr>
+    <!-- ---------------------------------------------------------------------- -->
+<br>
+
+This package offers five main tools for mapping, each based on a different technique:
