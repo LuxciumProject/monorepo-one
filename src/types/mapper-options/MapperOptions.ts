@@ -23,3 +23,5 @@ export interface MapperOptions<T, U = unknown> {
   validate?: ValidateFn<T, U>;
   errLookup?: ErrLookupFn;
 }
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

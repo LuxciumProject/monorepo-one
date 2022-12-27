@@ -15,3 +15,5 @@ export type SettledLeft = PromiseRejectedResult & {
   currentRejection: true | false | undefined;
   index: number;
 };
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

@@ -8,3 +8,5 @@ export interface ValidateFn<S, U = unknown> {
     array: readonly (S | PromiseSettledResult<S>)[]
   ): Promise<OnlySideEffect>;
 }
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

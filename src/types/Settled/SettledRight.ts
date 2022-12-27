@@ -15,3 +15,5 @@ export type SettledRight<T> = PromiseFulfilledResult<T> & {
   currentRejection: null;
   index: number;
 };
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

@@ -18,3 +18,5 @@ export type SettledIso<T = any> = {
       reason: any;
     }
 );
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

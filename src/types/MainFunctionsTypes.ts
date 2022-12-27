@@ -88,3 +88,5 @@ export type GenerateMappingFn = Function &
     validateFn?: ValidateFn<T, R> | null,
     errLookupFn?: ErrLookupFn | null
   ) => Generator<Promise<Settled<R>>, void, unknown>);
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

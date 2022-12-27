@@ -56,3 +56,5 @@ export type AwaitableTypes_<T> = PromiseLike<
 // | Iterable<PromiseLike<PromiseFulfilledResult<T>>>
 // | Iterable<PromiseLike<SettledLeft>>
 // | Iterable<PromiseLike<PromiseRejectedResult>>;
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

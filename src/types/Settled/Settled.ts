@@ -83,3 +83,5 @@ import { SettledRight } from './SettledRight';
 export type Settled<T> = SettledLeft | SettledRight<T>;
 
 //  * @typeParam T - value of a fulfilled ({@link SettledRight}) {@link TransformFn} mapping operation.
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

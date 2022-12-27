@@ -75,3 +75,5 @@ export function isSettledLeft(contender: unknown): contender is SettledLeft {
       contender.currentRejection === undefined)
   );
 }
+
+// TASK LIST: [TODO] (Review Documentation) --------------------------

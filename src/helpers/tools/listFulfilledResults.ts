@@ -14,3 +14,5 @@ export async function listFulfilledResults<T>(
   const values = isPromiseLike(collection) ? await collection : collection;
   return getFulfilledResults(values).flatMap(item => item.value);
 }
+
+// TASK LIST: [TODO] (Review Documentation) --------------------------

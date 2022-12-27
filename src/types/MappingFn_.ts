@@ -15,3 +15,5 @@ export type MappingFn_ = <T, R>(
   validate: ValidateFn<T, R>,
   errLookup: ErrLookupFn
 ) => WrappedResult<Settled<R>>;
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

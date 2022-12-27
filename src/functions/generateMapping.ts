@@ -36,3 +36,5 @@ export function* generateMapping<T, R>(
     });
   }
 }
+
+// TASK LIST: [TODO] (Review Documentation) --------------------------

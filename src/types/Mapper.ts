@@ -9,3 +9,5 @@ export type Mapper<T = any, U = unknown, A = T> = (
   index?: number,
   array?: readonly A[]
 ) => U;
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

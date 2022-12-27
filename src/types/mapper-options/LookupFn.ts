@@ -8,3 +8,5 @@ export interface LookupFn<S, U = unknown> {
     array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
   ): OnlySideEffect;
 }
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

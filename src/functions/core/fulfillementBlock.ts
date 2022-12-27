@@ -20,3 +20,5 @@ export async function fulfillementBlock<T, R>(
   transformStep++;
   return makeFulfillement<R>({ value, index, transformStep });
 }
+
+// TASK LIST: [TODO] (Review Documentation) --------------------------

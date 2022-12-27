@@ -24,3 +24,5 @@ export type Fulfilled<T> = PromiseFulfilledResult<T>;
  * @public
  */
 export type Rejected = PromiseRejectedResult;
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------

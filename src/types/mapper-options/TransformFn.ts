@@ -16,3 +16,5 @@ export interface TransformFn<T, U = unknown> {
     array: readonly (T | PromiseSettledResult<T>)[]
   ): Promise<U>;
 }
+
+// TASK LIST: [TODO: Types] (Review Documentation) -------------------
