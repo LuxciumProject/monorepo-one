@@ -1,7 +1,5 @@
 # Mapping Tools
 
-![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-PRE-ALPHA-UNRELEASED-UNDOCUMENTED-UNSAFE-v3.0.0x&color=blue)
-
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
 Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. It provides a set of utility functions for working with collections of data. These functions allow you to apply a transformation or validation function to each item in a collection, either in serial or parallel, and generate new collections or iterators and async iterators based on the results. All while enjoying advanced error handling and advanced support for asynchronous code.
@@ -56,27 +54,12 @@ async function main() {
   console.log(mappedArray);
 
   /*
-  [
-    {
-      status: 'fulfilled',
-      value: 2,
-      index: 0,
-      transformStep: 1
-    },
-    {
-      status: 'fulfilled',
-      value: 4,
-      index: 1,
-      transformStep: 1
-    },
-    {
-      status: 'fulfilled',
-      value: 6,
-      index: 2,
-      transformStep: 1
-    }
-  ]
-*/
+    [
+      { status: 'fulfilled', value: 2, index: 0, transformStep: 1 },
+      { status: 'fulfilled', value: 4, index: 1, transformStep: 1 },
+      { status: 'fulfilled', value: 6, index: 2, transformStep: 1 }
+    ]
+  */
 }
 
 main();

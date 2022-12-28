@@ -174,3 +174,92 @@ Deferred<B>: This is an alias type that represents a promise-like object that ca
 BaseOrDeferred<B>: This type represents either a resolved or rejected promise, or a value, as represented by the Base<B> type, or a promise-like object that can be used for async operations, as represented by the Deferred<B> type.
 Collection<B>: This type represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.
 DeferredCollection<B>: This type represents either an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type, or a promise-like object that represents an iterable of either resolved or rejected promises, or values, as represented by the Base<B> type, or promise-like objects that can be used for async operations, as represented by the Deferred<B> type.
+
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Table of Contents
+## Installation
+## Getting Started
+## Base types
+## Usage Overview
+## Main (core) functions
+### Overview
+### Arguments
+### parallelMapping
+### serialMapping
+### awaitedMapping
+### generateMapping
+### generateMappingAsync
+### Return Types
+
+The list of the 5 core function return types is as follows:
+
+- **Functions that return arrays**
+  - [parallelMapping returns](#parallelmapping-signature): `Array<Promise<Settled<R>>>`
+- **Functions that return promises that resolve to arrays**
+  - [serialMapping returns](#serialmapping-signature): `Promise<Array<Settled<R>>>`
+  - [awaitedMapping returns](#awaitedmapping-signature): `Promise<Array<Settled<R>>>`
+- **Functions that return generators**
+  - [generateMapping returns](#generatemapping-signature): `Generator<Promise<Settled<R>>, void, unknown>`
+  - [generateMappingAsync returns](#generatemappingasync-signature): `AsyncGenerator<Settled<R>, void, unknown>`
+
+## Summary
+### Delegates functions
+### Types
+
+
+
+
+
+## Introduction to "Mapping Tools"
+The "Mapping Tools" npm package provides a set of utility functions for working with collections of items, where each item can be a value or a promise. The package defines a main type, Base<TBase>, which represents either a resolved or rejected promise, or a value.
+
+## Core Functions and Delegate Functions
+The package includes 5 core functions: serialMapping, awaitedMapping, parallelMapping, generateMappingAsync, and generateMapping. These functions each take a collection of items as their main input, along with 4 delegate functions: transformFn, lookupFn, validateFn, and errLookupFn. The transformFn function is applied to each item in the collection, and takes an item of type T as input and returns a value of type R. The lookupFn, validateFn, and errLookupFn functions are applied to each item in the collection and take an item of type T as input.
+
+## Aliases for Simplified Documentation
+The package defines several aliases to simplify the documentation and make it easier for readers to understand the types and functions. These include Deferred<B>, which represents a promise-like object that can be used for async operations; BaseOrDeferred<B>, which represents either a resolved or rejected promise, or a value, or a promise-like object; Collection<B>, which represents an iterable of either resolved or rejected promises or values; and DeferredCollection<B>, which represents a collection or a promise-like object that resolves to a collection.
+
+## The Settled<T> Type
+The package also defines a type called Settled<T>, which is analogous to the TypeScript type PromiseSettledResult<T>. Settled<T> has two sides: a "bad" type called SettledLeft, which represents a rejected promise, and a "good" type called SettledRight<T>, which represents a fulfilled promise.
+
+## Summary
+In summary, the "Mapping Tools" npm package provides a set of utility functions for working with collections of items, where each item can be a value or a promise, and includes several types and aliases to simplify the documentation and make it easier for readers to
+
+
+
+## Main Type: Base<TBase>
+
+The "Mapping Tools" npm package provides a set of utility functions for working with collections of items, where each item can be a value or a promise. The package defines a main type, Base<TBase>, which represents either a resolved or rejected promise, or a value.
+
+## Core Functions: serialMapping, awaitedMapping, parallelMapping, generateMappingAsync, and generateMapping
+
+The package includes 5 core functions: serialMapping, awaitedMapping, parallelMapping, generateMappingAsync, and generateMapping. These functions each take a collection of items as their main input, along with 4 delegate functions: transformFn, lookupFn, validateFn, and errLookupFn. The transformFn function is applied to each item in the collection, and takes an item of type T as input and returns a value of type R. The lookupFn, validateFn, and errLookupFn functions are applied to each item in the collection and take an item of type T as input.
+
+## Aliases: Deferred<B>, BaseOrDeferred<B>, Collection<B>, and DeferredCollection<B>
+
+The package defines several aliases to simplify the documentation and make it easier for readers to understand the types and functions. These include Deferred<B>, which represents a promise-like object that can be used for async operations; BaseOrDeferred<B>, which represents either a resolved or rejected promise, or a value, or a promise-like object; Collection<B>, which represents an iterable of either resolved or rejected promises or values; and DeferredCollection<B>, which represents a collection or a promise-like object that resolves to a collection.
+
+## Type: Settled<T>
+
+The package also defines a type called Settled<T>, which is analogous to the TypeScript type PromiseSettledResult<T>. Settled<T> has two sides: a "bad" type called SettledLeft, which represents a rejected
+
+Section 1: Introduction
+
+The "Mapping Tools" npm package provides a set of utility functions for working with collections of items, where each item can be a value or a promise. The package defines a main type, Base<TBase>, which represents either a resolved or rejected promise, or a value.
+
+Section 2: Core Functions
+
+The package includes 5 core functions: serialMapping, awaitedMapping, parallelMapping, generateMappingAsync, and generateMapping. These functions each take a collection of items as their main input, along with 4 delegate functions: transformFn, lookupFn, validateFn, and errLookupFn. The transformFn function is applied to each item in the collection, and takes an item of type T as input and returns a value of type R. The lookupFn, validateFn, and errLookupFn functions are applied to each item in the collection and take an item of type T as input.
+
+Section 3: Aliases
+
+The package defines several aliases to simplify the documentation and make it easier for readers to understand the types and functions. These include Deferred<B>, which represents a promise-like object that can be used for async operations; BaseOrDeferred<B>, which represents either a resolved or rejected promise, or a value, or a promise-like object; Collection<B>, which represents an iterable of either resolved or rejected promises or values; and DeferredCollection<B>, which represents a collection or a promise-like object that resolves to a collection.
+
+Section 4: Settled<T> Type
+
+The package also defines a type called Settled<T>, which is analogous to the TypeScript type PromiseSettledResult<T>. Settled<T> has two sides: a "bad" type called SettledLeft, which represents a rejected promise, and a "good" type called SettledRight<T>, which represents a fulfilled promise.
+
+Section 5: Summary
+
+In summary, the "Mapping Tools" npm package provides a set of utility functions for working with collections of items, where each item can be a value or a promise. The package defines a main type, Base<TBase>, which represents either a resolved or rejected promise, or a value. The package includes 5 core functions: serialMapping, awaitedMapping, parallelMapping, generateMappingAsync, and generateMapping. These functions each take a collection of items as their main input, along with 4 delegate functions: transformFn, lookupFn, validateFn, and errLookupFn. The package defines several aliases to simplify the documentation and make it easier for readers to understand the types and functions. The package also defines a type called Settled<T>, which is analogous to the TypeScript type PromiseSettledResult<T>. Settled<T> has two sides: a "bad" type called SettledLeft, which represents a rejected promise, and a "good" type called SettledRight<T>, which represents a fulfilled promise.

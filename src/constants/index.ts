@@ -13,3 +13,9 @@ export const FULFILLED: 'fulfilled' = 'fulfilled' as const;
  * @public
  */
 export const REJECTED: 'rejected' = 'rejected' as const;
+
+/**
+ * Constant `NULL_SYMBOL` is a unique symbol that represents `null` or a union type that includes `null`.
+ * @public
+ */
+export const NULL_SYMBOL: unique symbol = Symbol('null');

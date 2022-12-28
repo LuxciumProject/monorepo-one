@@ -1,0 +1,28 @@
+https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+
+https://img.shields.io/badge/dynamic/xml?url=<URL>&label=<LABEL>&query=<//data/subdata>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+
+https://img.shields.io/badge/dynamic/yaml?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+
+const fs = require('fs');
+const request = require('request');
+
+// Read the package.json file
+fs.readFile('package.json', 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // Parse the JSON data
+  const packageData = JSON.parse(data);
+
+  // Extract the version information
+  const version = packageData.version;
+
+  // Create the dynamic badge URL
+  const badgeUrl = `https://img.shields.io/badge/Version-${version}-blue`;
+
+  // Download the badge image
+  request(badgeUrl).pipe(fs.createWriteStream('version-badge.svg'));
+});

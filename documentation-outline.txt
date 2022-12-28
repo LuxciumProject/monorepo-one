@@ -1,0 +1,27 @@
+# Mapping Tools
+
+## Table of Contents
+## Installation
+## Getting Started
+## Usage Overview
+## Overview of the package and its core functions
+## Description of the main input type (collection) and the delegate functions (transformFn, lookupFn, validateFn, and errLookupFn)
+## Overview of the return types for each of the 5 core functions
+## Main (core) functions
+### parallelMapping
+#### Signature and description
+### serialMapping
+#### Signature and description
+### awaitedMapping
+#### Signature and description
+### generateMapping
+#### Signature and description
+### generateMappingAsync
+#### Signature and description
+## Base types
+## Description of the Base<TBase> type and its subtypes (Settled<TBase>, PromiseSettledResult<TBase>, SettledRight<TBase>, PromiseFulfilledResult<TBase>, SettledLeft, and PromiseRejectedResult)
+## Description of the aliases (Deferred<B>, BaseOrDeferred<B>, Collection<B>, and DeferredCollection<B>)
+## Summary
+## Overview of the package and its main features
+## Description of the delegate functions (transformFn, lookupFn, validateFn, and errLookupFn)
+## Overview of the types (Base<TBase>, Settled<TBase>, and the aliases)
