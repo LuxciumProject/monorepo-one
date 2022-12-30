@@ -23,28 +23,29 @@ export function hasTransformStep(
 export function isSettledRight<T>(
   contender: unknown
 ): contender is SettledRight<T> {
-  return (
-    typeof contender === 'object' &&
-    contender !== null &&
-    'status' in contender &&
-    'value' in contender &&
-    'currentRejection' in contender &&
-    'transformStep' in contender &&
-    typeof contender.transformStep === 'number' &&
-    'index' in contender &&
-    typeof contender.index === 'number' &&
-    (('reason' in contender && contender.reason === undefined) ||
-      !('reason' in contender)) &&
-    //
-    FULFILLED in contender &&
-    REJECTED in contender &&
-    contender.rejected === null &&
-    //
-    contender.status === FULFILLED &&
-    contender.value === contender[FULFILLED] &&
-    //
-    contender.currentRejection === null
-  );
+  if (typeof contender === 'object' && contender !== null) {
+    return (
+      'status' in contender &&
+      'value' in contender &&
+      'currentRejection' in contender &&
+      'transformStep' in contender &&
+      typeof contender.transformStep === 'number' &&
+      'index' in contender &&
+      typeof contender.index === 'number' &&
+      (('reason' in contender && contender.reason === undefined) ||
+        !('reason' in contender)) &&
+      //
+      FULFILLED in contender &&
+      REJECTED in contender &&
+      contender.rejected === null &&
+      //
+      contender.status === FULFILLED &&
+      contender.value === contender[FULFILLED] &&
+      //
+      contender.currentRejection === null
+    );
+  }
+  return false;
 }
 
 /** @public */

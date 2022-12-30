@@ -7,11 +7,23 @@ export type {
 } from './MainFunctionsTypes';
 export type {
   Base,
+  BaseOrDeferred,
   Collection,
   Deferred,
   DeferredCollection,
+  NullSymbol,
+  SettledArray,
+  SettledValue,
+  SettledValues,
 } from './MainTypes';
-export type { IMappable, Mapper } from './Mapper';
+// export type { IMappable, Mapper } from './Mapper';
+export type {
+  ErrLookupFn,
+  LookupFn,
+  MapperOptions,
+  TransformFn,
+  ValidateFn,
+} from './mapper-options';
 export type { OnlySideEffect } from './OnlySideEffect';
 export type {
   Fulfilled,
@@ -23,19 +35,5 @@ export type {
 } from './Settled';
 export type { SettledIso } from './SettledIso';
 export type { TransformStep } from './TransformStep';
-export type {
-  ErrLookupFn,
-  LookupFn,
-  MapperOptions,
-  TransformFn,
-  ValidateFn,
-} from './mapper-options';
-/*
-Base
-Await
-Collection
-Collection
-AwaitCollection
- */
 
 // TASK LIST: [TODO: Types] (Review Documentation) -------------------

@@ -45,40 +45,55 @@ generate, transform, and iterate over maps, as well as to perform
 asynchronous map generation.
 
 ```typescript
-import { awaitedMapping } from 'mapping-tools';
+import { awaitedMapping, helpers } from 'mapping-tools';
+
+const { extractFulfilledValues, extractSettledValues } = helpers;
 
 async function main() {
-  const array = [1, 2, 3];
+  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   const mappedArray = await awaitedMapping(array, async element => {
-    // Sync or Async operation on each element
+    // Async operation on each element
+    if (element % 4 === 2) {
+      throw new Error('Error');
+    }
     return element * 2;
   });
-  console.log(mappedArray);
+```
 
-  /*
-  [
-    {
-      status: 'fulfilled',
-      value: 2,
-      index: 0,
-      transformStep: 1
-    },
-    {
-      status: 'fulfilled',
-      value: 4,
-      index: 1,
-      transformStep: 1
-    },
-    {
-      status: 'fulfilled',
-      value: 6,
-      index: 2,
-      transformStep: 1
-    }
-  ]
-*/
+Using extractFulfilledValues will return only fulfilledValues
+changing the length of the array and the position of the
+elements if necessary
+
+```typescript
+const fulfilledValues = extractFulfilledValues(mappedArray);
+console.log('fulfilledValues :>> ', fulfilledValues);
+console.log('fulfilledValues.length :>> ', fulfilledValues.length);
+// fulfilledValues :>>  [
+//   2,  6,  8, 10, 14,
+//   16, 18, 22, 24
+// ]
+// fulfilledValues.length :>>  9
+```
+
+Using extractFulfilledValues will return only settledValues
+(for which the SettledLeft has no value and will be returning
+NULL_SYMBOL instead) keeping the length of the array and the
+position of its elements.
+
+```typescript
+  const settledValues = extractSettledValues(mappedArray);
+  console.log('settledValues :>> ', settledValues);
+  console.log('settledValues.length :>> ', settledValues.length);
+  // settledValues :>>  [
+  //   2,  Symbol(null),
+  //   6,  8,
+  //   10, Symbol(null),
+  //   14, 16,
+  //   18, Symbol(null),
+  //   22, 24
+  // ]
+  // settledValues.length :>>  12
 }
-
 main();
 ```
 
@@ -176,9 +191,11 @@ The transformFn is applied to each item in the collection and is used to transfo
         <img src="images/v0.0.0/main-types.png" width="70%" title="Click to enlarge the image!" alt="main-types function type signature">
       </a>
     </p> -->
-<hr>
-    <!-- ---------------------------------------------------------------------- -->
-<br>
+<!-- <hr> -->
+
+<!-- ---------------------------------------------------------------------- -->
+
+<!-- <br> -->
 
 ## Main (core) functions
 
@@ -627,7 +644,7 @@ related to [Object composition and inheritance](https://en.wikipedia.org/wiki/Ja
   export type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
   ```
 
-  ## Base types
+## Base types
 
 - `Base<TBase>`
 
@@ -723,14 +740,14 @@ RUN THESE FILES UNLESS YOU HAVE REVIEWED THE FULL CONTENT AND TAKE FULL
 RESPONSIBILITY OF ANY PROBLEME IT MAY CAUSE TO YOU (or anyone) OR YOUR
 MACHINE (or any machine).
 
-### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE:
+### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
 
 1. NOT TO PUBLISH;
 2. NOT TO DISTRIBUTE;
 3. NOT TO SUBLICENSE;
 4. NOT TO SELL COPIES OF;
 
-#### NOTICE:
+#### NOTICE
 
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ALL OR ANY KIND,
 > EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
@@ -742,9 +759,9 @@ MACHINE (or any machine).
 
 Copyright © 2022 LUXCIUM
 
-### EXCEPTIONS:
+### EXCEPTIONS
 
-#### YOU HAVE THE RIGHT TO:
+#### YOU HAVE THE RIGHT TO
 
 ```
 A) USE IT FOR YOURSELF;

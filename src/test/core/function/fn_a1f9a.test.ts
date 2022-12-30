@@ -82,7 +82,7 @@ describe('Sanity check Level 1', () => {
         index: 0,
         array: [10],
         transform: async item => item * 10,
-        lookup: item => item,
+        lookup: item => void item,
       })
     ).toStrictEqual({
       // currentRejection: null,
@@ -102,7 +102,7 @@ describe('Sanity check Level 1', () => {
         index: 0,
         array: [10],
         transform: async item => item * 10,
-        lookup: item => item,
+        lookup: item => void item,
         validate: async value => {
           if (value === 10) throw value;
         },
@@ -125,11 +125,11 @@ describe('Sanity check Level 1', () => {
         index: 0,
         array: [10],
         transform: async item => item,
-        lookup: item => item,
+        lookup: item => void item,
         validate: async value => {
           if (value === 10) throw value;
         },
-        errLookup: async reason => void reason,
+        errLookup:   reason => void reason,
       })
     ).toStrictEqual({
       currentRejection: true,
