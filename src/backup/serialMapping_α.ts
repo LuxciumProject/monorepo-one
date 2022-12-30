@@ -1,5 +1,6 @@
 import { FULFILLED, REJECTED } from '../constants';
-import { Mapper, OnlySideEffect } from '../types';
+import { OnlySideEffect } from '../types';
+import { Mapper } from './Mapper';
 
 /** @deprecated */
 export async function serialMapping_α<R, T>(

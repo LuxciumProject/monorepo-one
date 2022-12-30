@@ -64,3 +64,9 @@ export type {
   ParalellMappingFn,
   SerialMappingFn,
 };
+
+import * as helpers2 from './helpers';
+
+export default {
+  ...helpers2,
+};

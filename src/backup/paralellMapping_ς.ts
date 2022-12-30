@@ -1,5 +1,6 @@
 import { FULFILLED, REJECTED } from '../constants';
-import { Mapper, OnlySideEffect } from '../types';
+import { OnlySideEffect } from '../types';
+import { Mapper } from './Mapper';
 
 /** @deprecated */
 export function paralellMapping_ς<R, T>(

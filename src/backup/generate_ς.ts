@@ -1,5 +1,5 @@
 import { FULFILLED, REJECTED } from '../constants';
-import { Mapper } from '../types';
+import { Mapper } from './Mapper';
 
 /** @deprecated */
 export function* generateMapping_ς<R, T>(
