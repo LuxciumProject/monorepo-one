@@ -119,15 +119,11 @@ main();
 
 ## Main Functions
 
-The project currently have 5 main flavours for its core functions
-
-They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
-
-<!-- `Iterable<Base<T>>` or `Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>` -->
+The project currently have 5 main flavours for its core functions, they can be grouped in diferrent manner and have complex signature taht are [easy to understand](#arguments) when we break them down in ther main coponents.
 
 1. Functions that can accept either `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>` and which return promises that resolve to arrays: [serialMapping](#serialmapping), [awaitedMapping](#awaitedmapping)
 
-2. Functions that can accept only `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` and return arrays or generators: [parallelMapping returns](#parallelmapping), [generateMapping returns](#generatemapping), [generateMappingAsync returns](#generatemappingasync)
+2. Functions that can accept only `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` and return arrays of promises or generators: [parallelMapping returns](#parallelmapping), [generateMapping returns](#generatemapping), [generateMappingAsync returns](#generatemappingasync)
 
 ### parallelMapping
 
