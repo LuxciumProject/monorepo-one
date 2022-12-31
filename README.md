@@ -24,7 +24,6 @@ The package includes 5 main functions:
 1. [Quick Start](#quick-start)
 1. [Base types](#base-types)
 1. [Main Functions](#main-functions)
-
    - [Arguments](#arguments)
    - [Return Types](#return-types)
    - [Functions Signatures](#return-types)
@@ -33,9 +32,7 @@ The package includes 5 main functions:
      - [awaitedMapping Signature](#awaitedmapping)
      - [generateMapping Signature](#generatemapping)
      - [generateMappingAsync Signature](#generatemappingasync)
-
 1. [Delegates functions](#delegates-functions)
-
    - [transformFn](#transformfn)
    - [lookupFn](#lookupfn)
    - [validateFn](#validatefn)
