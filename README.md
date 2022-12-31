@@ -74,6 +74,11 @@ elements if necessary
 const fulfilledValues = extractFulfilledValues(mappedArray);
 console.log('fulfilledValues :>> ', fulfilledValues);
 console.log('fulfilledValues.length :>> ', fulfilledValues.length);
+```
+
+> output:
+
+```typescript
 /*
   fulfilledValues :>>  [
     2,  6,  8, 10, 14,
@@ -92,6 +97,13 @@ position of its elements.
   const settledValues = extractSettledValues(mappedArray);
   console.log('settledValues :>> ', settledValues);
   console.log('settledValues.length :>> ', settledValues.length);
+  }
+main();
+```
+
+> output:
+
+```typescript
 /*
   settledValues :>>  [
     2,  Symbol(null),
@@ -103,8 +115,6 @@ position of its elements.
   ]
   settledValues.length :>>  12
 */
-}
-main();
 ```
 
 ## Main Functions
