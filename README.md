@@ -8,13 +8,74 @@ Mapping Tools is a powerful package for mapping over lists and iterables in Java
 
 The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.
 
+The package includes 5 main functions:
+
+1. **[awaitedMapping](#awaitedmapping)**, is based on Promise.all($)
+2. **[paralellMapping](#parallelmapping)**, is based on Array.prototype.map($)
+3. **[serialMapping](#serialmapping)**, is based on a forOf loop
+4. **[generateMappingAsync](#generatemappingasync)**, is based on the AsyncGenerator protocol
+5. **[generateMapping](#generatemapping)**, is based on the Generator protocol
+
 ## Table of Contents
 
+1. [Table of Contents](#table-of-contents)
 1. [Installation](#installation)
-2. [Getting Started](#getting-started)
-3. [Usage](#Usage)
-4. [Features](#features)
-5. [Documentation](#documentation)
+1. [Usage Overview](#usage-overview)
+1. [Quick Start](#quick-start)
+1. [Base types](#base-types)
+1. [Main Functions](#main-functions)
+
+   - [Arguments](#arguments)
+   - [Return Types](#return-types)
+   - [Functions Signatures](#return-types)
+     - [parallelMapping Signature](#parallelmapping)
+     - [serialMapping Signature](#serialmapping)
+     - [awaitedMapping Signature](#awaitedmapping)
+     - [generateMapping Signature](#generatemapping)
+     - [generateMappingAsync Signature](#generatemappingasync)
+
+1. [Delegates functions](#delegates-functions)
+
+   - [transformFn](#transformfn)
+   - [lookupFn](#lookupfn)
+   - [validateFn](#validatefn)
+   - [errLookupFn](#errlookupfn)
+
+<!--
+1. [Usage](#usage)
+1. [Features](#features)
+1. [Documentation](#documentation)
+
+##
+##
+##
+##
+##
+### Arguments
+## Return Types
+### parallelMapping signature
+### serialMapping signature
+### awaitedMapping signature
+### generateMapping signature
+### generateMappingAsync signature
+## Delegates functions
+###
+###
+###
+###
+
+## Main types
+## Base types
+## Contributing
+## Luxcium License: NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
+#### NOTICE
+### EXCEPTIONS
+#### YOU HAVE THE RIGHT TO
+### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
+###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
+
+ -->
 
 ## Installation
 
@@ -29,7 +90,21 @@ yarn add mapping-tools
 pnpm add mapping-tools
 ```
 
-## Getting Started
+## Usage Overview
+
+The package includes 5 main functions:
+
+1. **[awaitedMapping](#awaitedmapping)**, is based on Promise.all($)
+2. **[paralellMapping](#parallelmapping)**, is based on Array.prototype.map($)
+3. **[serialMapping](#serialmapping)**, is based on a forOf loop
+4. **[generateMappingAsync](#generatemappingasync)**, is based on the AsyncGenerator protocol
+5. **[generateMapping](#generatemapping)**, is based on the Generator protocol
+
+These functions all take a collection of items as their main input, along with 4 delegate functions: [transformFn](#transformfn), [lookupFn](#lookupfn), [validateFn](#validatefn) and [errLookupFn](#errlookupfn).
+
+The transformFn is applied to each item in the collection and is used to transform the item into a new value. The lookupFn and validateFn are applied to each item in the collection and can be used to perform additional lookup or validation operations on the transformed items. The errLookupFn is used to handle any errors that may occur during the processing of the collection or during previous steps of processing. Each are optionals but not providing any would result in no transformation of the values.
+
+## Quick Start
 
 To get started with Mapping Tools, you'll first need to import the
 library in your code:
@@ -77,7 +152,7 @@ console.log('fulfilledValues.length :>> ', fulfilledValues.length);
 
 Using extractFulfilledValues will return only settledValues
 (for which the SettledLeft has no value and will be returning
-NULL_SYMBOL instead) keeping the length of the array and the
+`NULL_SYMBOL` instead) keeping the length of the array and the
 position of its elements.
 
 ```typescript
@@ -172,32 +247,7 @@ main();
     | PromiseRejectedResult;
   ```
 
-## Usage Overview
-
-The package includes 5 main functions:
-
-1. **[awaitedMapping](#awaitedMappingFn)**, is based on Promise.all($)
-2. **[paralellMapping](#paralellMappingFn)**, is based on Array.prototype.map($)
-3. **[serialMapping](#serialMappingFn)**, is based on a forOf loop
-4. **[generateMappingAsync](#generateMappingAsyncFn)**, is based on the AsyncGenerator protocol
-5. **[generateMapping](#generateMappingFn)**, is based on the Generator protocol
-
-These functions all take a collection of items as their main input, along with 4 delegate functions: [transformFn](), [lookupFn](), [validateFn](), and [errLookupFn]().
-
-The transformFn is applied to each item in the collection and is used to transform the item into a new value. The lookupFn and validateFn are applied to each item in the collection and can be used to perform additional lookup or validation operations on the transformed items. The errLookupFn is used to handle any errors that may occur during the processing of the collection or during previous steps of processing. Each are optionals but not providing any would result in no transformation of the values
-
- <!-- <p align="center">
-      <a href="images/v0.0.0/main-types.png">
-        <img src="images/v0.0.0/main-types.png" width="70%" title="Click to enlarge the image!" alt="main-types function type signature">
-      </a>
-    </p> -->
-<!-- <hr> -->
-
-<!-- ---------------------------------------------------------------------- -->
-
-<!-- <br> -->
-
-## Main (core) functions
+## Main Functions
 
 ### Arguments
 
@@ -217,154 +267,50 @@ The transformFn is applied to each item in the collection and is used to transfo
 - `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
 - `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
 
-## Return Types
+### Return Types
 
 The list of the 5 core function return types is as follows:
 
 - **Functions that return arrays**
-  - [parallelMapping returns](#parallelmapping-signature): `Array<Promise<Settled<R>>>`
+  - [parallelMapping returns](#parallelmapping): `Array<Promise<Settled<R>>>`
 - **Functions that return promises that resolve to arrays**
-  - [serialMapping returns](#serialmapping-signature): `Promise<Array<Settled<R>>>`
-  - [awaitedMapping returns](#awaitedmapping-signature): `Promise<Array<Settled<R>>>`
+  - [serialMapping returns](#serialmapping): `Promise<Array<Settled<R>>>`
+  - [awaitedMapping returns](#awaitedmapping): `Promise<Array<Settled<R>>>`
 - **Functions that return generators**
-  - [generateMapping returns](#generatemapping-signature): `Generator<Promise<Settled<R>>, void, unknown>`
-  - [generateMappingAsync returns](#generatemappingasync-signature): `AsyncGenerator<Settled<R>, void, unknown>`
+  - [generateMapping returns](#generatemapping): `Generator<Promise<Settled<R>>, void, unknown>`
+  - [generateMappingAsync returns](#generatemappingasync): `AsyncGenerator<Settled<R>, void, unknown>`
 
-### parallelMapping signature
+### Functions Signatures
+
+#### parallelMapping
 
 `parallelMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Array<Promise<Settled<R>>>`
 
 Applies the provided callback functions to each item in the collection in parallel, and returns an array of promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
 
-### serialMapping signature
+- Based on an `Array.prototype.map($)`
+- Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+- Returns: `Array<Promise<Settled<R>>>`
+
+  ```typescript
+  export function paralellMapping<T, R>(
+    collection: Iterable<AwaitAndBase<T>>,
+    transform: TransformFn<T, R> = async value => value as any as R,
+    lookup: LookupFn<T, R> = v => void v,
+    validate: ValidateFn<T, R> = async v => void v,
+    errLookup: ErrLookupFn = v => void v
+  ): Array<Promise<Settled<R>>>;
+  ```
+
+#### serialMapping
 
 `serialMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
 
 Applies the provided callback functions to each item in the collection in series, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
 
-### awaitedMapping signature
-
-`awaitedMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
-
-Applies the provided callback functions to each item in the collection, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
-
-### generateMapping signature
-
-`generateMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>`
-
-Applies the provided callback functions to each item in the collection, and returns a generator that yields promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
-
-### generateMappingAsync signature
-
-`generateMappingAsync(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>`
-
-Applies the provided callback functions to each item in the collection, and returns an async generator that yields the transformed and validated items, represented as `Settled<R>` objects.
-
-Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable: serialMapping, awaitedMapping
-Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable: parallelMapping, generateMappingAsync, generateMapping
-
-The project currently have 5 main flavours for its core functions
-
-the last 4 arguments are called delegates they are explained later (below) they all can be null or undefined and would be repleced by a default value:
-
-```typescript
-const transform: TransformFn<T, R> =
-  transformFn == null ? async value => value as any as R : transformFn;
-
-const lookup: LookupFn<T, R> = lookupFn == null ? v => void v : lookupFn;
-
-const validate: ValidateFn<T, R> =
-  validateFn == null ? async v => void v : validateFn;
-
-const errLookup: ErrLookupFn = errLookupFn == null ? v => void v : errLookupFn;
-```
-
-They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
-
-```typescript
-/** Type alias either Promise or not */
-// Base<B> type is described below...
-type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
-
-type Collection<B> = Iterable<Base<B>>;
-```
-
-- **awaitedMapping**
-
-  - Based on `Promise.all($)`
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
-  - Returns: `Promise<Array<Settled<R>>>`
-
-    <p align="center">
-      <a href="images/v0.0.0/AwaitedMappingFn.png">
-        <img src="images/v0.0.0/AwaitedMappingFn.png" width="70%" title="Click to enlarge the image!" alt="AwaitedMappingFn function type signature">
-      </a>
-    </p>
-
-<a id="awaitedMappingFn"></a>
-<a id="serialMappingFn"></a>
-<a id="generateMappingAsyncFn"></a>
-<a id="generateMappingFn"></a>
-
-<a id="paralellMappingFn"></a>
-
-- **paralellMapping**
-
-  - Based on an `Array.prototype.map($)`
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
-  - Returns: `Array<Promise<Settled<R>>>`
-
-      <p align="center">
-        <a href="images/v0.0.0/ParalellMappingFn.png">
-          <img src="images/v0.0.0/ParalellMappingFn.png" width="70%" title="Click to enlarge the image!" alt="ParalellMappingFn function type signature">
-        </a>
-      </p>
-
-- **serialMapping**
-
-  - Based on `forOf` _loop_
-  - Takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
-  - Returns: `Promise<Array<Settled<R>>>`
-
-      <p align="center">
-        <a href="images/v0.0.0/SerialMappingFn.png">
-          <img src="images/v0.0.0/SerialMappingFn.png" width="70%" title="Click to enlarge the image!" alt="SerialMappingFn function type signature">
-        </a>
-      </p>
-
-- **generateMappingAsync**
-
-  - Based on the `AsyncGenerator` _Protocol_
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
-  - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
-
-      <p align="center">
-        <a href="images/v0.0.0/GenerateMappingFn.png">
-          <img src="images/v0.0.0/GenerateMappingFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingFn function type signature">
-        </a>
-      </p>
-
-- **generateMapping**
-
-  - Based on the `Generator` _Protocol_
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
-  - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
-
-          <p align="center">
-            <a href="images/v0.0.0/GenerateMappingAsyncFn.png">
-              <img src="images/v0.0.0/GenerateMappingAsyncFn.png" width="70%" title="Click to enlarge the image!" alt="GenerateMappingAsyncFn function type signature">
-            </a>
-          </p>
-
-    <hr>
-    <!-- ---------------------------------------------------------------------- -->
-    <br>
-
-- **serialMapping**
-
-  - Based on `forOf` _loop_
-  - Takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
-  - Returns: `Promise<Array<Settled<R>>>`
+- Based on `forOf` _loop_
+- Takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
+- Returns: `Promise<Array<Settled<R>>>`
 
   ```typescript
   export async function serialMapping<T, R>(
@@ -378,13 +324,17 @@ type Collection<B> = Iterable<Base<B>>;
   ): Promise<Array<Settled<R>>>;
   ```
 
-- **awaitedMapping**
+#### awaitedMapping
 
-  - Based on `Promise.all($)`
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
-  - Returns: `Promise<Array<Settled<R>>>`
+`awaitedMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
 
-- ```typescript
+Applies the provided callback functions to each item in the collection, and returns a promise that resolves to an array of the transformed and validated items, represented as `Settled<R>` objects.
+
+- Based on `Promise.all($)`
+- Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
+- Returns: `Promise<Array<Settled<R>>>`
+
+  ```typescript
   export async function awaitedMapping<T, R>(
     collection:
       | Iterable<AwaitAndBase<T>>
@@ -396,43 +346,15 @@ type Collection<B> = Iterable<Base<B>>;
   ): Promise<Settled<R>[]>;
   ```
 
-- **paralellMapping**
+#### generateMapping
 
-  - Based on an `Array.prototype.map($)`
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
-  - Returns: `Array<Promise<Settled<R>>>`
+`generateMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>`
 
-  ```typescript
-  export function paralellMapping<T, R>(
-    collection: Iterable<AwaitAndBase<T>>,
-    transform: TransformFn<T, R> = async value => value as any as R,
-    lookup: LookupFn<T, R> = v => void v,
-    validate: ValidateFn<T, R> = async v => void v,
-    errLookup: ErrLookupFn = v => void v
-  ): Array<Promise<Settled<R>>>;
-  ```
+Applies the provided callback functions to each item in the collection, and returns a generator that yields promises that resolve to the transformed and validated items, represented as `Settled<R>` objects.
 
-- **generateMappingAsync**
-
-  - Based on the `AsyncGenerator` _Protocol_
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
-  - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
-
-  ```typescript
-  export async function* generateMappingAsync<R, T>(
-    collection: Iterable<AwaitAndBase<T>>,
-    transform: TransformFn<T, R> = async value => value as any as R,
-    lookup: LookupFn<T, R> = v => void v,
-    validate: ValidateFn<T, R> = async v => void v,
-    errLookup: ErrLookupFn = v => void v
-  ): AsyncGenerator<Settled<R>, void, unknown>;
-  ```
-
-- **generateMapping**
-
-  - Based on the `Generator` _Protocol_
-  - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
-  - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
+- Based on the `Generator` _Protocol_
+- Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+- Returns: `Generator<Promise<Settled<R>>, void, unknown>`
 
   ```typescript
   export function* generateMapping<T, R>(
@@ -444,6 +366,41 @@ type Collection<B> = Iterable<Base<B>>;
   ): Generator<Promise<Settled<R>>, void, unknown>;
   ```
 
+#### generateMappingAsync
+
+`generateMappingAsync(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>`
+
+Applies the provided callback functions to each item in the collection, and returns an async generator that yields the transformed and validated items, represented as `Settled<R>` objects.
+
+- Based on the `AsyncGenerator` _Protocol_
+- Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+- Returns: `AsyncGenerator<Settled<R>, void, unknown>`
+
+  ```typescript
+  export async function* generateMappingAsync<R, T>(
+    collection: Iterable<AwaitAndBase<T>>,
+    transform: TransformFn<T, R> = async value => value as any as R,
+    lookup: LookupFn<T, R> = v => void v,
+    validate: ValidateFn<T, R> = async v => void v,
+    errLookup: ErrLookupFn = v => void v
+  ): AsyncGenerator<Settled<R>, void, unknown>;
+  ```
+
+Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable: serialMapping, awaitedMapping
+Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable: parallelMapping, generateMappingAsync, generateMapping
+
+The project currently have 5 main flavours for its core functions
+
+They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
+
+```typescript
+/** Type alias either Promise or not */
+// Base<B> type is described below...
+type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
+
+type Collection<B> = Iterable<Base<B>>;
+```
+
 ## Delegates functions
 
 **You can provide 4 main types of _delegates functions_ as arguments to
@@ -453,16 +410,23 @@ In this context delegating just means the act of giving another
 _function_ the responsibility of carrying out the performance agreed
 upon in by the folowing _interface_ contracts.
 
-- `TransformFn<T,U>`
+Each delegates can take null or undefined and would be repleced by a default value:
 
-  The `TransformFn<T,U>` delegate is where the actual mapping takes
-  place it is similar to the call back you would provide to an
-  `Array.prototype.map($)` it expect that you will morph from input
-  type `T` to returned type `U`, Proper type anotation would be
-  required if you would return unchanged value as `U` and `T` must
-  be different to be infered.
+```typescript
+const transform: TransformFn<T, R> =
+  transformFn == null ? async value => value as any as R : transformFn;
 
-  The `TransformFn<T,U>` delegate function is responsible for carrying out the actual mapping process. It works similarly to the callback function provided to an `Array.prototype.map($)`, and expects that you will transform from input type `T` to returned type `U`. Proper type annotations are required if you return an unchanged value, as `U` and `T` must be different in order to be inferred. The `TransformFn<T,U>` delegate function has the following interface:
+const lookup: LookupFn<T, R> = lookupFn == null ? v => void v : lookupFn;
+
+const validate: ValidateFn<T, R> =
+  validateFn == null ? async v => void v : validateFn;
+
+const errLookup: ErrLookupFn = errLookupFn == null ? v => void v : errLookupFn;
+```
+
+### transformFn
+
+**`TransformFn<T,U>`**
 
 The `TransformFn<T,U>` delegate function is responsible for carrying
 out the actual mapping process.
@@ -484,43 +448,27 @@ export interface TransformFn<T, U = unknown> {
 }
 ```
 
-- `LookupFn<S,U>`
+### lookupFn
 
-  The `LookupFn<S,U>` delegate is where you can aknowledge the
-  morphed value`U` in an asycronous manner as the return value of
-  this delegate **must be** `void` and canot have side effects which
-  overflows in the function where this delegate is executed, like
-  throwing an exception or such, you can however have external side
-  effect like a `console.log($)` or anything that will arise
-  independendly from the internal flow of the function where thish
-  delgate is executed. In this context `OnlySideEffect` is an alias
-  for `void`.
+**`LookupFn<S,U>`**
 
-  The `LookupFn<S,U>` delegate function is used to acknowledge the transformed value `U` in an asynchronous manner. The return value of this delegate must be `void` and must not have any internal side effects within the function where it is executed. However, external side effects, such as a `console.log($)`, are allowed. In this context, `OnlySideEffect` is an alias for `void`.
+The `LookupFn<S,U>` delegate function is used to acknowledge the transformed value `U` in an asynchronous manner. The return value of this delegate must be `void` and must not have any internal side effects within the function where it is executed. However, external side effects, such as a `console.log($)`, are allowed. In this context, `OnlySideEffect` is an alias for `void`.
 
-  ```typescript
-  export interface LookupFn<S, U = unknown> {
-    (
-      value: U,
-      index: number,
-      array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
-    ): OnlySideEffect;
-  }
-  ```
+```typescript
+export interface LookupFn<S, U = unknown> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
+  ): OnlySideEffect;
+}
+```
 
-- `ValidateFn<S,U>`
+### validateFn
 
-  The `ValidateFn<S,U>` delegate is similar to the `LookupFn<S,U>`
-  delegate both are optional and should be used only if you have a
-  specific usecase. The main difference is that the execution of this
-  delagate is awaited in the function where it will be executed the
-  return value of the delegate must be a `Promise<void>` and the only
-  mechanism to comunicate with the function would be to throw a value
-  or an exception that will be catched in the function and returned
-  as a SettledLeft (described below). In this context
-  `Promise<OnlySideEffect>` is an alias for `Promise<void>`.
+**`ValidateFn<S,U>`**
 
-The `ValidateFn<S,U>` delegate function is similar to the `LookupFn<S,U>` delegate, both of which are optional and should be used only if necessary. The main difference is that the execution of the `ValidateFn<S,U>` delegate is awaited within the function where it is used, and the return value must be a `Promise<void>`. The only way to communicate with the function is to throw a value or exception, which will be caught in the function and returned as a SettledLeft (described elsewhere). In this context, `Promise<OnlySideEffect>` is an alias for `Promise<void>`.
+The `ValidateFn<S,U>` delegate function is similar to the `LookupFn<S,U>` delegate, both of which are optional and should be used only if necessary. The main difference is that the execution of the `ValidateFn<S,U>` delegate is awaited within the function where it is executed. The return value must be a `Promise<void>`. The only way to communicate with the main function is to throw a value or exception, which will be caught in the function and returned as a SettledLeft. In this context, `Promise<OnlySideEffect>` is an alias for `Promise<void>`. If your fuinction is not returning a promise you can use the async keword as a shortcut to convert to a promise.
 
 ```typescript
 export interface ValidateFn<S, U = unknown> {
@@ -532,18 +480,11 @@ export interface ValidateFn<S, U = unknown> {
 }
 ```
 
-- `ErrLookupFn`
+### errLookupFn
 
-  The `ErrLookupFn` delegate takes provide a `currentRejection` flag
-  as its third argument and is used to tell if the error hapenned
-  from the curent iteration or a previous iteration you should act
-  only on `true` `currentRejection`s as they are not the result of a
-  previous `transformStep` similar to the `LookupFn<S,U>` but for
-  rejections. In case you need to tap in previous rejection it is
-  available also if the actual step is dealing with a previous
-  rejection from a previous tranformation step.
+**`ErrLookupFn`**
 
-The `ErrLookupFn` delegate function is used to handle errors, and is similar to the `LookupFn<S,U>` delegate, but for rejections. It takes a `currentRejection` flag as its third argument, which indicates whether the error occurred during the current iteration or a previous iteration. You should only act on `currentRejection`s that are `true`, as they are not the result of a previous `transformStep`. If you need to access previous rejections, they are also available if the current step is dealing with a previous rejection from a previous transformation step.
+The `ErrLookupFn` delegate function is used to handle errors, and is similar to the `LookupFn<S,U>` delegate, but for rejections. It takes a `currentRejection` flag as its third argument, which indicates whether the error occurred during the current iteration or a previous iteration. You should only act on `currentRejection`s that are `true`, as they are not the result of a previous `transformStep` or `ValidationStep`. If you need to access previous rejections, they are also available when the current step is dealing with a previous rejection it will skip the `transformFn`, `lookupFn` and `validationFn` but would be available to the `ErrLookupFn` even if from a previous transformation step with a `currentRejection` value of false.
 
 ```typescript
 export interface ErrLookupFn {
@@ -565,36 +506,6 @@ different than the usual concept in JavaScript which is related often
 related to [Object composition and inheritance](https://en.wikipedia.org/wiki/JavaScript#Delegative).
 
 ## Main types
-
-- `Base<TBase>`
-
-  The `Base<TVal>` type is the center piece of the type system for
-  the mapping-tools package and is described in the section folowing
-  this one... You can see here an summary.
-  <p align="center">
-        <a href="../../images/v0.0.0/base-type.png">
-          <img src="../../images/v0.0.0/base-type.png" width="70%" title="Click to enlarge the image!" alt="type Base<TVal> =
-      | TVal
-      | Settled<TVal>
-      | PromiseSettledResult<TVal>
-      | SettledRight<TVal>
-      | PromiseFulfilledResult<TVal>
-      | SettledLeft
-      | PromiseRejectedResult;
-    ">
-        </a>
-      </p>
-
-    <!-- ```typescript
-    type Base<TVal> =
-      | TVal
-      | Settled<TVal>
-      | PromiseSettledResult<TVal>
-      | SettledRight<TVal>
-      | PromiseFulfilledResult<TVal>
-      | SettledLeft
-      | PromiseRejectedResult;
-    ``` -->
 
 - `Collection<Base>`
 
@@ -644,81 +555,6 @@ related to [Object composition and inheritance](https://en.wikipedia.org/wiki/Ja
   export type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
   ```
 
-## Base types
-
-- `Base<TBase>`
-
-  ```typescript
-  type Base<TVal> =
-    | TVal
-    | Settled<TVal>
-    | PromiseSettledResult<TVal>
-    | SettledRight<TVal>
-    | PromiseFulfilledResult<TVal>
-    | SettledLeft
-    | PromiseRejectedResult;
-  ```
-
-- `Settled<TVal>`
-
-  ```typescript
-  type Settled<T> = SettledLeft | SettledRight<T>;
-
-  type SettledRight<T> = PromiseFulfilledResult<T> & {
-    status: 'fulfilled';
-    value: T;
-
-    /* The null value of the transformStep and the index is -1 */
-    /* When value is -1 the folowing properties a not enumerated */
-    transformStep: number;
-    index: number;
-
-    /* Folowing properties a not enumerated (enumerable: false) */
-    currentRejection: null;
-    fulfilled: T;
-    rejected: null;
-    reason?: undefined;
-  };
-
-  type SettledLeft = PromiseRejectedResult & {
-    status: 'rejected';
-    reason: any;
-
-    /*
-      the currentRejection can be undefined but the property itself
-      can not be undefined
-     */
-    currentRejection: true | false | undefined;
-
-    /* The null value of the transformStep and the index is -1 */
-    /* When value is -1 the folowing properties a not enumerated */
-    transformStep: number;
-    index: number;
-
-    /* Folowing properties a not enumerated (enumerable: false) */
-    rejected: any;
-    fulfilled: null;
-    value?: undefined;
-  };
-
-  /** From typescript lib */
-  interface PromiseFulfilledResult<T> {
-    status: 'fulfilled';
-    value: T;
-  }
-
-  /** From typescript lib */
-  interface PromiseRejectedResult {
-    status: 'rejected';
-    reason: any;
-  }
-
-  /** From typescript lib */
-  type PromiseSettledResult<T> =
-    | PromiseFulfilledResult<T>
-    | PromiseRejectedResult;
-  ```
-
 The `Deferred<B>` type is an alias for `PromiseLike<Base<B>>`, which represents a promise-like object that wraps a value of type `Base<B>`. It is used to simplify the documentation and does not need to be used directly by the consumer of the package.
 
 `BaseOrDeferred<B>` is an alias type that represents either a resolved or rejected promise, or a value, as represented by the `Base<B>` type, or a promise-like object that can be used for async operations, as represented by the `Deferred<B>` type
@@ -730,9 +566,9 @@ We welcome contributions to Mapping Tools! If you have an idea for a new feature
 - All code should be tested using the provided test suite.
 - Please include documentation for any new functions or types you add.
 
-**† Scientia est lux principium✨ ™**
-
 ## Luxcium License: NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+
+† **Scientia est lux principium✨** ™
 
 THESE FILES ARE _NOT_ FIT FOR ANY PARTICULAR PURPOSE IN IT'S CURRENT FORM
 THESE FILES HAVE NOT BEEN TESTED OR RUN YET IN ALL ENVIRONMENTS! _DO NOT_
@@ -763,7 +599,7 @@ Copyright © 2022 LUXCIUM
 
 #### YOU HAVE THE RIGHT TO
 
-```
+```text
 A) USE IT FOR YOURSELF;
 B) DISTRIBUTE IT TO YOUR FRIENDS;
 C) DISTRIBUTE IT TO YOUR STUDENTS;
@@ -775,14 +611,6 @@ IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 
 ### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
 
-###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
+###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu<!-- markdownlint-disable-line -->
 
-† Scientia est lux principium✨ ™
-
-<sup>Text generated by an [AI language model](https://openai.com/) has been used in this work.</sup>
-
-<hr>
-    <!-- ---------------------------------------------------------------------- -->
-<br>
-
-This package offers five main tools for mapping, each based on a different technique:
+<sup>Text generated by an [AI language model](https://openai.com/) has been used in this work.</sup><!-- markdownlint-disable-line -->
