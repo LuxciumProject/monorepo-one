@@ -8,72 +8,6 @@ Mapping Tools is a powerful package for mapping over lists and iterables in Java
 
 The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.
 
-The package includes 5 main functions:
-
-1. **[awaitedMapping](#awaitedmapping)**, is based on Promise.all($)
-2. **[paralellMapping](#parallelmapping)**, is based on Array.prototype.map($)
-3. **[serialMapping](#serialmapping)**, is based on a forOf loop
-4. **[generateMappingAsync](#generatemappingasync)**, is based on the AsyncGenerator protocol
-5. **[generateMapping](#generatemapping)**, is based on the Generator protocol
-
-## Table of Contents
-
-1. [Table of Contents](#table-of-contents)
-1. [Installation](#installation)
-1. [Usage Overview](#usage-overview)
-1. [Quick Start](#quick-start)
-1. [Base types](#base-types)
-1. [Main Functions](#main-functions)
-   - [Arguments](#arguments)
-   - [Return Types](#return-types)
-   - [Functions Signatures](#return-types)
-     - [parallelMapping Signature](#parallelmapping)
-     - [serialMapping Signature](#serialmapping)
-     - [awaitedMapping Signature](#awaitedmapping)
-     - [generateMapping Signature](#generatemapping)
-     - [generateMappingAsync Signature](#generatemappingasync)
-1. [Delegates functions](#delegates-functions)
-   - [transformFn](#transformfn)
-   - [lookupFn](#lookupfn)
-   - [validateFn](#validatefn)
-   - [errLookupFn](#errlookupfn)
-
-<!--
-1. [Usage](#usage)
-1. [Features](#features)
-1. [Documentation](#documentation)
-
-##
-##
-##
-##
-##
-### Arguments
-## Return Types
-### parallelMapping signature
-### serialMapping signature
-### awaitedMapping signature
-### generateMapping signature
-### generateMappingAsync signature
-## Delegates functions
-###
-###
-###
-###
-
-## Main types
-## Base types
-## Contributing
-## Luxcium License: NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
-### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
-#### NOTICE
-### EXCEPTIONS
-#### YOU HAVE THE RIGHT TO
-### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
-###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
-
- -->
-
 ## Installation
 
 To install Mapping Tools, you can use npm, yarn, or pnpm:
@@ -607,6 +541,64 @@ D) DISTRIBUTE IT TO YOUR COWORKER;
 IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 
 ### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
+
+## Table of Contents
+
+1. [Table of Contents](#table-of-contents)
+1. [Installation](#installation)
+1. [Usage Overview](#usage-overview)
+1. [Quick Start](#quick-start)
+1. [Base types](#base-types)
+1. [Main Functions](#main-functions)
+   - [Arguments](#arguments)
+   - [Return Types](#return-types)
+   - [Functions Signatures](#return-types)
+     - [parallelMapping Signature](#parallelmapping)
+     - [serialMapping Signature](#serialmapping)
+     - [awaitedMapping Signature](#awaitedmapping)
+     - [generateMapping Signature](#generatemapping)
+     - [generateMappingAsync Signature](#generatemappingasync)
+1. [Delegates functions](#delegates-functions)
+   - [transformFn](#transformfn)
+   - [lookupFn](#lookupfn)
+   - [validateFn](#validatefn)
+   - [errLookupFn](#errlookupfn)
+
+<!--
+1. [Usage](#usage)
+1. [Features](#features)
+1. [Documentation](#documentation)
+
+##
+##
+##
+##
+##
+### Arguments
+## Return Types
+### parallelMapping signature
+### serialMapping signature
+### awaitedMapping signature
+### generateMapping signature
+### generateMappingAsync signature
+## Delegates functions
+###
+###
+###
+###
+
+## Main types
+## Base types
+## Contributing
+## Luxcium License: NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
+#### NOTICE
+### EXCEPTIONS
+#### YOU HAVE THE RIGHT TO
+### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
+###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
+
+ -->
 
 ###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu<!-- markdownlint-disable-line -->
 
