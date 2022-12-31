@@ -119,37 +119,6 @@ main();
 
 ## Main Functions
 
-### Arguments
-
-- `collection: Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>> | PromiseLike<Iterable<Base<T>>>`: The collection of items to be iterated or mapped over. The collection can be either an iterable or a combination of an iterable and a promise of an iterable.
-  The `Base<T>` type represents a resolved or rejected promise, or a value. It can be one of the following:
-
-  - `TBase`: The resolved value of a promise.
-  - `Settled<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
-  - `PromiseSettledResult<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
-  - `SettledRight<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
-  - `PromiseFulfilledResult<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
-  - `SettledLeft`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
-  - `PromiseRejectedResult`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
-
-- `TransformFn<T, R> = async value => value as any as R`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-- `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-
-### Return Types
-
-The list of the 5 core function return types is as follows:
-
-- **Functions that return arrays**
-  - [parallelMapping returns](#parallelmapping): `Array<Promise<Settled<R>>>`
-- **Functions that return promises that resolve to arrays**
-  - [serialMapping returns](#serialmapping): `Promise<Array<Settled<R>>>`
-  - [awaitedMapping returns](#awaitedmapping): `Promise<Array<Settled<R>>>`
-- **Functions that return generators**
-  - [generateMapping returns](#generatemapping): `Generator<Promise<Settled<R>>, void, unknown>`
-  - [generateMappingAsync returns](#generatemappingasync): `AsyncGenerator<Settled<R>, void, unknown>`
-
 ### Functions Signatures
 
 #### parallelMapping
@@ -255,6 +224,37 @@ Applies the provided callback functions to each item in the collection, and retu
     errLookup: ErrLookupFn = v => void v
   ): AsyncGenerator<Settled<R>, void, unknown>;
   ```
+
+### Arguments
+
+- `collection: Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>> | PromiseLike<Iterable<Base<T>>>`: The collection of items to be iterated or mapped over. The collection can be either an iterable or a combination of an iterable and a promise of an iterable.
+  The `Base<T>` type represents a resolved or rejected promise, or a value. It can be one of the following:
+
+  - `TBase`: The resolved value of a promise.
+  - `Settled<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
+  - `PromiseSettledResult<TBase>`: An object representing a resolved or rejected promise, with a `status` field indicating the status of the promise and a `value` or `reason` field containing the resolved value or rejection reason, respectively.
+  - `SettledRight<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
+  - `PromiseFulfilledResult<TBase>`: An object representing a resolved promise, with a `status` field equal to `'fulfilled'` and a `value` field containing the resolved value.
+  - `SettledLeft`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
+  - `PromiseRejectedResult`: An object representing a rejected promise, with a `status` field equal to `'rejected'` and a `reason` field containing the rejection reason.
+
+- `TransformFn<T, R> = async value => value as any as R`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+- `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
+
+### Return Types
+
+The list of the 5 core function return types is as follows:
+
+- **Functions that return arrays**
+  - [parallelMapping returns](#parallelmapping): `Array<Promise<Settled<R>>>`
+- **Functions that return promises that resolve to arrays**
+  - [serialMapping returns](#serialmapping): `Promise<Array<Settled<R>>>`
+  - [awaitedMapping returns](#awaitedmapping): `Promise<Array<Settled<R>>>`
+- **Functions that return generators**
+  - [generateMapping returns](#generatemapping): `Generator<Promise<Settled<R>>, void, unknown>`
+  - [generateMappingAsync returns](#generatemappingasync): `AsyncGenerator<Settled<R>, void, unknown>`
 
 Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable: serialMapping, awaitedMapping
 Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable: parallelMapping, generateMappingAsync, generateMapping
