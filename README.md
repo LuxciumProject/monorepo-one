@@ -123,9 +123,11 @@ The project currently have 5 main flavours for its core functions
 
 They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
 
-1. Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable and which return promises that resolve to arrays: [serialMapping](#serialmapping), [awaitedMapping](#awaitedmapping)
+<!-- `Iterable<Base<T>>` or `Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>` -->
 
-2. Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable and return arrays or generators: [parallelMapping returns](#parallelmapping), [generateMapping returns](#generatemapping), [generateMappingAsync returns](#generatemappingasync)
+1. Functions that can accept either `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>` and which return promises that resolve to arrays: [serialMapping](#serialmapping), [awaitedMapping](#awaitedmapping)
+
+2. Functions that can accept only `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` and return arrays or generators: [parallelMapping returns](#parallelmapping), [generateMapping returns](#generatemapping), [generateMappingAsync returns](#generatemappingasync)
 
 ### parallelMapping
 
