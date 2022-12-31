@@ -119,9 +119,15 @@ main();
 
 ## Main Functions
 
-### Functions Signatures
+The project currently have 5 main flavours for its core functions
 
-#### parallelMapping
+They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
+
+1. Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable and which return promises that resolve to arrays: [serialMapping](#serialmapping), [awaitedMapping](#awaitedmapping)
+
+2. Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable and return arrays or generators: [parallelMapping returns](#parallelmapping), [generateMapping returns](#generatemapping), [generateMappingAsync returns](#generatemappingasync)
+
+### parallelMapping
 
 `parallelMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Array<Promise<Settled<R>>>`
 
@@ -141,7 +147,7 @@ Applies the provided callback functions to each item in the collection in parall
   ): Array<Promise<Settled<R>>>;
   ```
 
-#### serialMapping
+### serialMapping
 
 `serialMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
 
@@ -163,7 +169,7 @@ Applies the provided callback functions to each item in the collection in series
   ): Promise<Array<Settled<R>>>;
   ```
 
-#### awaitedMapping
+### awaitedMapping
 
 `awaitedMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Promise<Array<Settled<R>>>`
 
@@ -185,7 +191,7 @@ Applies the provided callback functions to each item in the collection, and retu
   ): Promise<Settled<R>[]>;
   ```
 
-#### generateMapping
+### generateMapping
 
 `generateMapping(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>`
 
@@ -205,7 +211,7 @@ Applies the provided callback functions to each item in the collection, and retu
   ): Generator<Promise<Settled<R>>, void, unknown>;
   ```
 
-#### generateMappingAsync
+### generateMappingAsync
 
 `generateMappingAsync(collection, TransformFn, LookupFn, ValidateFn, ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>`
 
@@ -225,7 +231,22 @@ Applies the provided callback functions to each item in the collection, and retu
   ): AsyncGenerator<Settled<R>, void, unknown>;
   ```
 
+### Return Types
+
+The list of the 5 core function return types is as follows:
+
+- **Functions that return arrays**
+  - [parallelMapping returns](#parallelmapping): `Array<Promise<Settled<R>>>`
+- **Functions that return promises that resolve to arrays**
+  - [serialMapping returns](#serialmapping): `Promise<Array<Settled<R>>>`
+  - [awaitedMapping returns](#awaitedmapping): `Promise<Array<Settled<R>>>`
+- **Functions that return generators**
+  - [generateMapping returns](#generatemapping): `Generator<Promise<Settled<R>>, void, unknown>`
+  - [generateMappingAsync returns](#generatemappingasync): `AsyncGenerator<Settled<R>, void, unknown>`
+
 ### Arguments
+
+Our functions have complex signature which are easier to understand when we break them down in ther main coponents:
 
 - `collection: Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>> | PromiseLike<Iterable<Base<T>>>`: The collection of items to be iterated or mapped over. The collection can be either an iterable or a combination of an iterable and a promise of an iterable.
   The `Base<T>` type represents a resolved or rejected promise, or a value. It can be one of the following:
@@ -242,26 +263,6 @@ Applies the provided callback functions to each item in the collection, and retu
 - `LookupFn<T, R> = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
 - `ValidateFn<T, R> = async v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
 - `ErrLookupFn = v => void v`: A callback function that is applied to each item in the collection. It takes an item of type `T` as input and returns a value of type `R`.
-
-### Return Types
-
-The list of the 5 core function return types is as follows:
-
-- **Functions that return arrays**
-  - [parallelMapping returns](#parallelmapping): `Array<Promise<Settled<R>>>`
-- **Functions that return promises that resolve to arrays**
-  - [serialMapping returns](#serialmapping): `Promise<Array<Settled<R>>>`
-  - [awaitedMapping returns](#awaitedmapping): `Promise<Array<Settled<R>>>`
-- **Functions that return generators**
-  - [generateMapping returns](#generatemapping): `Generator<Promise<Settled<R>>, void, unknown>`
-  - [generateMappingAsync returns](#generatemappingasync): `AsyncGenerator<Settled<R>, void, unknown>`
-
-Functions that can accept either an iterable or a combination of an iterable and a promise of an iterable: serialMapping, awaitedMapping
-Functions that can only accept an iterable or a combination of an iterable and a promise of an iterable: parallelMapping, generateMappingAsync, generateMapping
-
-The project currently have 5 main flavours for its core functions
-
-They can be grouped in diferrent manner and have complex signature taht are easy to understand when we break them down in ther main coponents.
 
 ```typescript
 /** Type alias either Promise or not */
@@ -280,7 +281,7 @@ In this context delegating just means the act of giving another
 _function_ the responsibility of carrying out the performance agreed
 upon in by the folowing _interface_ contracts.
 
-Each delegates can take null or undefined and would be repleced by a default value:
+Each delegates can take null or undefined that are repleced by a default value:
 
 ```typescript
 const transform: TransformFn<T, R> =
