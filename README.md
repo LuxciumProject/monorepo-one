@@ -119,7 +119,7 @@ main();
 
 ## Main Functions
 
-The project currently have 5 main flavours for its core functions, they can be grouped in diferrent manner and have complex signature taht are [easy to understand](#arguments) when we break them down in ther main coponents.
+The project currently have 5 main flavours for its core functions they have complex signatures taht are [easy to understand](#arguments), and they can be grouped in diferrent manner:
 
 1. Functions that can accept either `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>` and which return promises that resolve to arrays: [serialMapping](#serialmapping), [awaitedMapping](#awaitedmapping)
 
@@ -451,6 +451,8 @@ related to [Object composition and inheritance](https://en.wikipedia.org/wiki/Ja
 
 ## Main types
 
+**This section is not up to date and will be completed quickly** !!!
+
 - `Collection<Base>`
 
   The principal functions of the package takes a `Collection<B>` as
@@ -510,7 +512,7 @@ We welcome contributions to Mapping Tools! If you have an idea for a new feature
 - All code should be tested using the provided test suite.
 - Please include documentation for any new functions or types you add.
 
-## Luxcium License: NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+## NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
 
 † **Scientia est lux principium✨** ™
 
@@ -556,6 +558,8 @@ IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 ### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
 
 ## Table of Contents
+
+**This section is not up to date and will be updated quickly** !!!
 
 1. [Table of Contents](#table-of-contents)
 1. [Installation](#installation)
