@@ -76,7 +76,7 @@ console.log('fulfilledValues :>> ', fulfilledValues);
 console.log('fulfilledValues.length :>> ', fulfilledValues.length);
 ```
 
-> output:
+- output:
 
 ```typescript
 /*
@@ -101,7 +101,7 @@ position of its elements.
 main();
 ```
 
-> output:
+- output:
 
 ```typescript
 /*
