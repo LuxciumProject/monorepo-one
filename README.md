@@ -4,9 +4,9 @@
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
 
-Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. It provides a set of utility functions for working with collections of data. These functions allow you to apply a transformation or validation function to each item in a collection, either in serial or parallel, and generate new collections or iterators and async iterators based on the results. All while enjoying advanced error handling and advanced support for asynchronous code.
-
 The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.
+
+Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. It provides a set of utility functions for working with collections of data. These functions allow you to apply a transformations or validations to each item in a collection, either in serial or parallel, and generate new collections or iterators and async iterators based on the results. All while enjoying advanced error handling and advanced support for asynchronous code.
 
 ## Installation
 
@@ -74,11 +74,13 @@ elements if necessary
 const fulfilledValues = extractFulfilledValues(mappedArray);
 console.log('fulfilledValues :>> ', fulfilledValues);
 console.log('fulfilledValues.length :>> ', fulfilledValues.length);
-// fulfilledValues :>>  [
-//   2,  6,  8, 10, 14,
-//   16, 18, 22, 24
-// ]
-// fulfilledValues.length :>>  9
+/*
+  fulfilledValues :>>  [
+    2,  6,  8, 10, 14,
+    16, 18, 22, 24
+  ]
+  fulfilledValues.length :>>  9
+*/
 ```
 
 Using extractFulfilledValues will return only settledValues
@@ -90,93 +92,20 @@ position of its elements.
   const settledValues = extractSettledValues(mappedArray);
   console.log('settledValues :>> ', settledValues);
   console.log('settledValues.length :>> ', settledValues.length);
-  // settledValues :>>  [
-  //   2,  Symbol(null),
-  //   6,  8,
-  //   10, Symbol(null),
-  //   14, 16,
-  //   18, Symbol(null),
-  //   22, 24
-  // ]
-  // settledValues.length :>>  12
+/*
+  settledValues :>>  [
+    2,  Symbol(null),
+    6,  8,
+    10, Symbol(null),
+    14, 16,
+    18, Symbol(null),
+    22, 24
+  ]
+  settledValues.length :>>  12
+*/
 }
 main();
 ```
-
-## Base types
-
-- `Base<TBase>`
-
-  ```typescript
-  type Base<TVal> =
-    | TVal
-    | Settled<TVal>
-    | PromiseSettledResult<TVal>
-    | SettledRight<TVal>
-    | PromiseFulfilledResult<TVal>
-    | SettledLeft
-    | PromiseRejectedResult;
-  ```
-
-- `Settled<TVal>`
-
-  ```typescript
-  type Settled<T> = SettledLeft | SettledRight<T>;
-
-  type SettledRight<T> = PromiseFulfilledResult<T> & {
-    status: 'fulfilled';
-    value: T;
-
-    /* The null value of the transformStep and the index is -1 */
-    /* When value is -1 the folowing properties a not enumerated */
-    transformStep: number;
-    index: number;
-
-    /* Folowing properties a not enumerated (enumerable: false) */
-    currentRejection: null;
-    fulfilled: T;
-    rejected: null;
-    reason?: undefined;
-  };
-
-  type SettledLeft = PromiseRejectedResult & {
-    status: 'rejected';
-    reason: any;
-
-    /*
-      the currentRejection can be undefined but the property itself
-      can not be undefined
-     */
-    currentRejection: true | false | undefined;
-
-    /* The null value of the transformStep and the index is -1 */
-    /* When value is -1 the folowing properties a not enumerated */
-    transformStep: number;
-    index: number;
-
-    /* Folowing properties a not enumerated (enumerable: false) */
-    rejected: any;
-    fulfilled: null;
-    value?: undefined;
-  };
-
-  /** From typescript lib */
-  interface PromiseFulfilledResult<T> {
-    status: 'fulfilled';
-    value: T;
-  }
-
-  /** From typescript lib */
-  interface PromiseRejectedResult {
-    status: 'rejected';
-    reason: any;
-  }
-
-  /** From typescript lib */
-  type PromiseSettledResult<T> =
-    | PromiseFulfilledResult<T>
-    | PromiseRejectedResult;
-  ```
 
 ## Main Functions
 
@@ -435,6 +364,81 @@ elements.
 Since everything is based only on functions this definition may be
 different than the usual concept in JavaScript which is related often
 related to [Object composition and inheritance](https://en.wikipedia.org/wiki/JavaScript#Delegative).
+
+## Base types
+
+- `Base<TBase>`
+
+  ```typescript
+  type Base<TVal> =
+    | TVal
+    | Settled<TVal>
+    | PromiseSettledResult<TVal>
+    | SettledRight<TVal>
+    | PromiseFulfilledResult<TVal>
+    | SettledLeft
+    | PromiseRejectedResult;
+  ```
+
+- `Settled<TVal>`
+
+  ```typescript
+  type Settled<T> = SettledLeft | SettledRight<T>;
+
+  type SettledRight<T> = PromiseFulfilledResult<T> & {
+    status: 'fulfilled';
+    value: T;
+
+    /* The null value of the transformStep and the index is -1 */
+    /* When value is -1 the folowing properties a not enumerated */
+    transformStep: number;
+    index: number;
+
+    /* Folowing properties a not enumerated (enumerable: false) */
+    currentRejection: null;
+    fulfilled: T;
+    rejected: null;
+    reason?: undefined;
+  };
+
+  type SettledLeft = PromiseRejectedResult & {
+    status: 'rejected';
+    reason: any;
+
+    /*
+      the currentRejection can be undefined but the property itself
+      can not be undefined
+     */
+    currentRejection: true | false | undefined;
+
+    /* The null value of the transformStep and the index is -1 */
+    /* When value is -1 the folowing properties a not enumerated */
+    transformStep: number;
+    index: number;
+
+    /* Folowing properties a not enumerated (enumerable: false) */
+    rejected: any;
+    fulfilled: null;
+    value?: undefined;
+  };
+
+  /** From typescript lib */
+  interface PromiseFulfilledResult<T> {
+    status: 'fulfilled';
+    value: T;
+  }
+
+  /** From typescript lib */
+  interface PromiseRejectedResult {
+    status: 'rejected';
+    reason: any;
+  }
+
+  /** From typescript lib */
+  type PromiseSettledResult<T> =
+    | PromiseFulfilledResult<T>
+    | PromiseRejectedResult;
+  ```
 
 ## Main types
 
