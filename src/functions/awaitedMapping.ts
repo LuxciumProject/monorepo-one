@@ -10,10 +10,7 @@ import {
 import { fn_a1f9a } from './core';
 
 /**
- * **UNSAFE**: Function type signature may still change at any moment please
- * remember this package is in the early devloppment phase and is
- * **UNSAFE** to use as its API is still evolving.
- * @alpha
+ * @beta
  */
 
 export async function awaitedMapping<T, R>(
