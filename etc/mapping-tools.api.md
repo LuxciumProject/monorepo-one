@@ -19,7 +19,7 @@ declare namespace assertions {
 }
 
 // @alpha
-export function awaitedMapping<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
+export function awaitedMapping<T, R>(collection: DeferredCollection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
 
 // @alpha (undocumented)
 export type AwaitedMappingFn = Function & (<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>[]>);
@@ -181,7 +181,7 @@ export const REJECTED: typeof constants.REJECTED;
 const REJECTED_2: 'rejected';
 
 // @alpha
-export function serialMapping<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
+export function serialMapping<T, R>(collection: DeferredCollection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
 
 // @alpha (undocumented)
 export type SerialMappingFn = Function & (<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>[]>);

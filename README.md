@@ -8,6 +8,46 @@ The Mapping Tools package is designed to be user-friendly and easy to use, with 
 
 Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript. It provides a set of utility functions for working with collections of data. These functions allow you to apply a transformations or validations to each item in a collection, either in serial or parallel, and generate new collections or iterators and async iterators based on the results. All while enjoying advanced error handling and advanced support for asynchronous code.
 
+## Table of Contents
+
+1. [Table of Contents](#table-of-contents)
+1. [Installation](#installation)
+1. [Usage Overview](#usage-overview)
+1. [Quick Start](#quick-start)
+1. [Base types](#base-types)
+1. [Main Functions](#main-functions)
+   - [Arguments](#arguments)
+   - [Return Types](#return-types)
+   - [Functions Signatures](#return-types)
+     - [parallelMapping Signature](#parallelmapping)
+     - [serialMapping Signature](#serialmapping)
+     - [awaitedMapping Signature](#awaitedmapping)
+     - [generateMapping Signature](#generatemapping)
+     - [generateMappingAsync Signature](#generatemappingasync)
+1. [Delegates Functions](#delegates-functions)
+   - [transformFn](#transformfn)
+   - [lookupFn](#lookupfn)
+   - [validateFn](#validatefn)
+   - [errLookupFn](#errlookupfn)
+1. [Base Types](#base-types)
+   - [`Base<TVal>`](#basetval)
+   - [`Settled<TVal>`](#settledtval)
+   - [`SettledRight<TVal>`](#settledrighttval)
+   - [`SettledLeft`](#settledleft)
+   - [`PromiseFulfilledResult<TVal>`](#promisefulfilledresulttval)
+   - [`PromiseSettledResult<TVal>`](#promisesettledresulttval)
+   - [`PromiseRejectedResult`](#promiserejectedresult)
+1. [Aliases Types](#aliases-types)
+   - [`Deferred<Base>`](#deferredbase)
+   - [`BaseOrDeferred<Base>`](#baseordeferredbase)
+   - [`Collection<Base>`](#collectionbase)
+   - [`DeferredCollection<Base>`](#deferredcollectionbase)
+   - [`SettledArray<Result>`](#settledarrayresult)
+   - [`NullSymbol`](#nullsymbol)
+   - [`SettledValue<Result>`](#settledvalueresult)
+   - [`SettledValues<Result>`](#settledvaluesresult)
+   - [`OnlySideEffect`](#onlysideeffect)
+
 ## Installation
 
 To install Mapping Tools, you can use npm, yarn, or pnpm:
@@ -374,84 +414,7 @@ Since everything is based only on functions this definition may be
 different than the usual concept in JavaScript which is related often
 related to [Object composition and inheritance](https://en.wikipedia.org/wiki/JavaScript#Delegative).
 
-## Base types
-
-- `Base<TBase>`
-
-  ```typescript
-  type Base<TVal> =
-    | TVal
-    | Settled<TVal>
-    | PromiseSettledResult<TVal>
-    | SettledRight<TVal>
-    | PromiseFulfilledResult<TVal>
-    | SettledLeft
-    | PromiseRejectedResult;
-  ```
-
-- `Settled<TVal>`
-
-  ```typescript
-  type Settled<T> = SettledLeft | SettledRight<T>;
-
-  type SettledRight<T> = PromiseFulfilledResult<T> & {
-    status: 'fulfilled';
-    value: T;
-
-    /* The null value of the transformStep and the index is -1 */
-    /* When value is -1 the folowing properties a not enumerated */
-    transformStep: number;
-    index: number;
-
-    /* Folowing properties a not enumerated (enumerable: false) */
-    currentRejection: null;
-    fulfilled: T;
-    rejected: null;
-    reason?: undefined;
-  };
-
-  type SettledLeft = PromiseRejectedResult & {
-    status: 'rejected';
-    reason: any;
-
-    /*
-      the currentRejection can be undefined but the property itself
-      can not be undefined
-     */
-    currentRejection: true | false | undefined;
-
-    /* The null value of the transformStep and the index is -1 */
-    /* When value is -1 the folowing properties a not enumerated */
-    transformStep: number;
-    index: number;
-
-    /* Folowing properties a not enumerated (enumerable: false) */
-    rejected: any;
-    fulfilled: null;
-    value?: undefined;
-  };
-
-  /** From typescript lib */
-  interface PromiseFulfilledResult<T> {
-    status: 'fulfilled';
-    value: T;
-  }
-
-  /** From typescript lib */
-  interface PromiseRejectedResult {
-    status: 'rejected';
-    reason: any;
-  }
-
-  /** From typescript lib */
-  type PromiseSettledResult<T> =
-    | PromiseFulfilledResult<T>
-    | PromiseRejectedResult;
-  ```
-
-## Main types
-
-**This section is not up to date and will be completed quickly** !!!
+## Base Types
 
 ### `Base<TVal>`
 
@@ -468,10 +431,91 @@ type Base<TBase> =
   | PromiseRejectedResult;
 ```
 
+### `Settled<TVal>`
+
+```typescript
+type Settled<T> = SettledLeft | SettledRight<T>;
+```
+
+### `SettledRight<TVal>`
+
+```typescript
+type SettledRight<T> = PromiseFulfilledResult<T> & {
+  status: 'fulfilled';
+  value: T;
+
+  /* The null value of the transformStep and the index is -1 */
+  /* When value is -1 the folowing properties a not enumerated */
+  transformStep: number;
+  index: number;
+
+  /* Folowing properties a not enumerated (enumerable: false) */
+  currentRejection: null;
+  fulfilled: T;
+  rejected: null;
+  reason?: undefined;
+};
+```
+
+### `SettledLeft`
+
+```typescript
+type SettledLeft = PromiseRejectedResult & {
+  status: 'rejected';
+  reason: any;
+
+  /*
+    the currentRejection can be undefined but the property itself
+    can not be undefined
+   */
+  currentRejection: true | false | undefined;
+
+  /* The null value of the transformStep and the index is -1 */
+  /* When value is -1 the folowing properties a not enumerated */
+  transformStep: number;
+  index: number;
+
+  /* Folowing properties a not enumerated (enumerable: false) */
+  rejected: any;
+  fulfilled: null;
+  value?: undefined;
+};
+```
+
+### `PromiseFulfilledResult<TVal>`
+
+```typescript
+/** From typescript lib */
+interface PromiseFulfilledResult<T> {
+  status: 'fulfilled';
+  value: T;
+}
+```
+
+### `PromiseSettledResult<TVal>`
+
+```typescript
+/** From typescript lib */
+type PromiseSettledResult<T> =
+  | PromiseFulfilledResult<T>
+  | PromiseRejectedResult;
+```
+
+### `PromiseRejectedResult`
+
+```typescript
+/** From typescript lib */
+interface PromiseRejectedResult {
+  status: 'rejected';
+  reason: any;
+}
+```
+
+## Aliases Types
+
 ### `Deferred<Base>`
 
-To have a more userfriendly documentation the alias `Deferred<B>`
-was created, it is sort for `PromiseLike<Base<B>>`.
+The `Deferred<B>` type is an alias for `PromiseLike<Base<B>>`, which represents a promise-like object that wraps a value of type `Base<B>`. It is used to simplify the documentation and does not need to be used directly by the end user of the package.
 
 ```typescript
 type Deferred<B> = PromiseLike<Base<B>>;
@@ -479,7 +523,12 @@ type Deferred<B> = PromiseLike<Base<B>>;
 
 ### `BaseOrDeferred<Base>`
 
-`BaseOrDeferred<B>` is an alias type that represents either a promise-like `Deferred<B>` type or a `Base<B>` type.
+`BaseOrDeferred<B>` is an alias type that represents either a
+promise-like `Deferred<B>` type or a `Base<B>` type.
+
+In some cases the base type can be combined to be either `Base<B>`
+or `Deferred<B>` and would be the type of a parameter to a function
+that can take such compounded object type.
 
 ```typescript
 type BaseOrDeferred<B> = Base<B> | Deferred<B>;
@@ -495,8 +544,10 @@ type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
 
 ### `DeferredCollection<Base>`
 
+Extended version of basic Iterable input type, may be eiter `Collection<B>` or a PromiseLike of the same kind `PromiseLike<Collection<B>>`
+
 ```typescript
-type DeferredCollection<B> = Collection<B> | Deferred<Collection<B>>;
+type DeferredCollection<B> = Collection<B> | PromiseLike<Collection<B>>;
 ```
 
 ### `SettledArray<Result>`
@@ -528,87 +579,6 @@ type SettledValues<R> = SettledValue<R>[];
 ```typescript
 type OnlySideEffect = void | undefined;
 ```
-
-- `Collection<Result>`
-
-  The principal functions of the package takes a `Collection<B>` as
-  their fist arguments in some cases it can even be a
-  `PromiseLike<Collection<B>>`.
-
-  ```typescript
-  export type Collection<B> = Iterable<Base<B>>;
-  ```
-
-  ```typescript
-  export type Await<B> = PromiseLike<Base<B>>;
-  ```
-
-- `CollectionOfDeferred<Base>`
-
-  To make it shorter to write we created the alias
-  `CollectionOfDeferred<Base>` for the `Iterable<Deferred<B>>` type. It could be converted to a `Deferred<Iterable<B>>` using `Promise.all($)`
-
-  ```typescript
-  export type CollectionOfAwait<B> = Collection<Await<B>>;
-  ```
-
-- `PromiseLike<$>`
-
-  The three types above also have their `PromiseLike<$>` equivalent:
-
-  ```typescript
-  PromiseLike<Collection<Base>>;
-  PromiseLike<Await<Base>>;
-  PromiseLike<CollectionOfAwait<Base>>;
-  ```
-
-- `AwaitAndBase<Base>`
-
-  In some cases the base type can be combined to be either `Base<B>`
-  or `Await<B>` and would be the type of a parameter to a function
-  that can take the compounded object type.
-
-  ```typescript
-  export type AwaitAndBase<B> = Base<B> | PromiseLike<Base<B>>;
-  ```
-
-The `Deferred<B>` type is an alias for `PromiseLike<Base<B>>`, which represents a promise-like object that wraps a value of type `Base<B>`. It is used to simplify the documentation and does not need to be used directly by the consumer of the package.
-
-<!--
-
-/**
- * Alias PromiseLike<Base<B>>
- * @public
- */
- type Deferred<B> = PromiseLike<Base<B>>;
-
-/**
- * Alias for Iterable<PromiseLike<Base<B>>>
- * @public
- */
- type CollectionOfDeferred<B> = Iterable<Deferred<B>>;
-
-/**
- * Alias for Base<B> or PromiseLike<Base<B>>
- * @public
- */
- type BaseOrDeferred<B> = Base<B> | Deferred<B>;
-
-/**
- * Alias for Iterable<Base<B>> or Iterable<PromiseLike<Base<B>>>
- * @public
- */
- type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
-
-/**
- * Alias for Iterable<Base<B>> | Iterable<PromiseLike<Base<B>>>
- * or PromiseLike<Iterable<Base<B>> | Iterable<PromiseLike<Base<B>>>>
- *
- * @public
- */
- type DeferredCollection<B> = Collection<B> | PromiseLike<Collection<B>>;
-
- -->
 
 ## Contributing
 
@@ -662,30 +632,6 @@ IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 
 ### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
 
-## Table of Contents
-
-**This section is not up to date and will be updated quickly** !!!
-
-1. [Table of Contents](#table-of-contents)
-1. [Installation](#installation)
-1. [Usage Overview](#usage-overview)
-1. [Quick Start](#quick-start)
-1. [Base types](#base-types)
-1. [Main Functions](#main-functions)
-   - [Arguments](#arguments)
-   - [Return Types](#return-types)
-   - [Functions Signatures](#return-types)
-     - [parallelMapping Signature](#parallelmapping)
-     - [serialMapping Signature](#serialmapping)
-     - [awaitedMapping Signature](#awaitedmapping)
-     - [generateMapping Signature](#generatemapping)
-     - [generateMappingAsync Signature](#generatemappingasync)
-1. [Delegates functions](#delegates-functions)
-   - [transformFn](#transformfn)
-   - [lookupFn](#lookupfn)
-   - [validateFn](#validatefn)
-   - [errLookupFn](#errlookupfn)
-
 <!--
 1. [Usage](#usage)
 1. [Features](#features)
@@ -725,26 +671,3 @@ IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 ###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu<!-- markdownlint-disable-line -->
 
 <sup>Text generated by an [AI language model](https://openai.com/) has been used in this work.</sup><!-- markdownlint-disable-line -->
-
-Base
-BaseOrDeferred
-Collection
-Deferred
-DeferredCollection
-NullSymbol
-OnlySideEffect
-Settled
-SettledArray
-SettledLeft
-SettledRight
-SettledValue
-SettledValues
-///////
-TransformStep
-Indexed
-///////
-AwaitedMappingFn
-GenerateMappingAsyncFn
-GenerateMappingFn
-ParalellMappingFn
-SerialMappingFn
