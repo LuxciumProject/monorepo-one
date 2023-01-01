@@ -9,14 +9,15 @@ export type {
   Base,
   BaseOrDeferred,
   Collection,
+  CollectionOfDeferred,
   Deferred,
   DeferredCollection,
   NullSymbol,
+  OnlySideEffect,
   SettledArray,
   SettledValue,
   SettledValues,
 } from './MainTypes';
-// export type { IMappable, Mapper } from './Mapper';
 export type {
   ErrLookupFn,
   LookupFn,
@@ -24,7 +25,6 @@ export type {
   TransformFn,
   ValidateFn,
 } from './mapper-options';
-export type { OnlySideEffect } from './OnlySideEffect';
 export type {
   Fulfilled,
   PromiseResult,

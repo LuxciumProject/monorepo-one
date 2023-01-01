@@ -31,19 +31,25 @@ import * as helpers from './helpers';
 import type {
   AwaitedMappingFn,
   Base,
+  BaseOrDeferred,
   Collection,
+  CollectionOfDeferred,
   Deferred,
   DeferredCollection,
   ErrLookupFn,
   GenerateMappingAsyncFn,
   GenerateMappingFn,
   LookupFn,
+  NullSymbol,
   OnlySideEffect,
   ParalellMappingFn,
   SerialMappingFn,
   Settled,
+  SettledArray,
   SettledLeft,
   SettledRight,
+  SettledValue,
+  SettledValues,
   TransformFn,
   TransformStep,
   ValidateFn,
@@ -55,8 +61,24 @@ export { generateMappingAsync } from './functions/generateMappingAsync';
 export { paralellMapping } from './functions/paralellMapping';
 export { serialMapping } from './functions/serialMapping';
 export { constants, helpers, functions };
-export type { Collection, Deferred, DeferredCollection };
-export type { Base, Settled, SettledLeft, SettledRight, TransformStep };
+export type {
+  Collection,
+  Deferred,
+  DeferredCollection,
+  BaseOrDeferred,
+  NullSymbol,
+  SettledArray,
+  SettledValue,
+  SettledValues,
+};
+export type {
+  Base,
+  Settled,
+  SettledLeft,
+  SettledRight,
+  TransformStep,
+  CollectionOfDeferred,
+};
 export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn, OnlySideEffect };
 export type {
   AwaitedMappingFn,
@@ -67,17 +89,17 @@ export type {
 };
 
 // import * as helpers2 from './helpers';
-const { assertions, tools } = helpers;
-export default {
-  helpers,
-  ...assertions,
-  ...tools,
-  constants,
-  functions,
-  ...helpers,
-  ...constants,
-  ...functions,
-};
+// const { assertions, tools } = helpers;
+// export default {
+//   helpers,
+//   ...assertions,
+//   ...tools,
+//   constants,
+//   functions,
+//   ...helpers,
+//   ...constants,
+//   ...functions,
+// };
 /** @public */
 export const FULFILLED: typeof constants.FULFILLED = constants.FULFILLED;
 /** @public */

@@ -11,6 +11,7 @@ src/
 .editorconfig
 tsconfig.json
 mapping-tools.d.ts
+mapping-tools.api.md
 
 .env
 .npmignore
@@ -26,12 +27,6 @@ typedoc.json
 docs/
 doc/
 
-!lib
-!lib/**/*.*
-lib/performance
-lib/test
-
-!lib/
 !LICENSE
 !typings/
 !package.json
@@ -45,3 +40,5 @@ lib/test
 !lib/index.js
 !lib/constants.js.map
 !lib/index.js.map
+lib/performance
+lib/test

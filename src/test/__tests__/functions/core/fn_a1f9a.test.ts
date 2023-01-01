@@ -84,23 +84,23 @@ describe('CORE FUNCTION fn_a1f9a', () => {
     });
   });
 
-  it.skip('Should transform an item of type PromiseFulfilledResult<TBase>', async () => {
-    expect(
-      await fn_a1f9a({ item: 'item', index: -1, array: ['item'] })
-    ).toStrictEqual({ status: 'fulfilled', transformStep: 1, value: 'item' });
-  });
+  // it.skip('Should transform an item of type PromiseFulfilledResult<TBase>', async () => {
+  //   expect(
+  //     await fn_a1f9a({ item: 'item', index: -1, array: ['item'] })
+  //   ).toStrictEqual({ status: 'fulfilled', transformStep: 1, value: 'item' });
+  // });
 
-  it.skip('Should transform an item of type SettledLeft', async () => {
-    expect(
-      await fn_a1f9a({ item: 'item', index: -1, array: ['item'] })
-    ).toStrictEqual({ status: 'fulfilled', transformStep: 1, value: 'item' });
-  });
+  // it.skip('Should transform an item of type SettledLeft', async () => {
+  //   expect(
+  //     await fn_a1f9a({ item: 'item', index: -1, array: ['item'] })
+  //   ).toStrictEqual({ status: 'fulfilled', transformStep: 1, value: 'item' });
+  // });
 
-  it.skip('Should transform an item of type PromiseRejectedResult', async () => {
-    expect(
-      await fn_a1f9a({ item: 'item', index: -1, array: ['item'] })
-    ).toStrictEqual({ status: 'fulfilled', transformStep: 1, value: 'item' });
-  });
+  // it.skip('Should transform an item of type PromiseRejectedResult', async () => {
+  //   expect(
+  //     await fn_a1f9a({ item: 'item', index: -1, array: ['item'] })
+  //   ).toStrictEqual({ status: 'fulfilled', transformStep: 1, value: 'item' });
+  // });
 });
 
 /*

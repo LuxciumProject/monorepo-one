@@ -25,10 +25,16 @@ export function awaitedMapping<T, R>(collection: Collection<T> | PromiseLike<Col
 export type AwaitedMappingFn = Function & (<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>[]>);
 
 // @public (undocumented)
-export type Base<TBase> = TBase | Settled<TBase> | PromiseSettledResult<TBase> | SettledRight<TBase> | PromiseFulfilledResult<TBase> | SettledLeft | PromiseRejectedResult;
+export type Base<TVal> = TVal | Settled<TVal> | PromiseSettledResult<TVal> | SettledRight<TVal> | PromiseFulfilledResult<TVal> | SettledLeft | PromiseRejectedResult;
 
-// @public (undocumented)
+// @public
+export type BaseOrDeferred<B> = Base<B> | Deferred<B>;
+
+// @public
 export type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
+
+// @public
+export type CollectionOfDeferred<B> = Iterable<Deferred<B>>;
 
 declare namespace constants {
     export {
@@ -44,47 +50,11 @@ export { constants }
 // @beta (undocumented)
 const converToIsometricSettledResult: typeof converToIsometricSettledResult_;
 
-// @public (undocumented)
-const _default: {
-    awaitedMapping: typeof functions.awaitedMapping;
-    generateMapping: typeof functions.generateMapping;
-    generateMappingAsync: typeof functions.generateMappingAsync;
-    paralellMapping: typeof functions.paralellMapping;
-    serialMapping: typeof functions.serialMapping;
-    FULFILLED: "fulfilled";
-    REJECTED: "rejected";
-    NULL_SYMBOL: typeof constants.NULL_SYMBOL;
-    assertions: typeof helpers.assertions;
-    tools: typeof helpers.tools;
-    constants: typeof constants;
-    functions: typeof functions;
-    converToIsometricSettledResult: converToIsometricSettledResult_;
-    extractFulfilledValues: typeof helpers.tools.extractFulfilledValues;
-    extractSettledValues: typeof helpers.tools.extractSettledValues;
-    filterLeft: typeof helpers.tools.filterLeft;
-    filterRight: typeof helpers.tools.filterRight;
-    getRejectedResults: typeof helpers.tools.getRejectedResults;
-    getTransformStep: typeof helpers.tools.getTransformStep;
-    isometricSettledResult: typeof helpers.tools.isometricSettledResult;
-    settledLengts: typeof helpers.tools.settledLengts;
-    isPromise: typeof helpers.assertions.isPromise;
-    isPromiseLike: typeof helpers.assertions.isPromiseLike;
-    isPromiseFulfilledResult: typeof helpers.assertions.isPromiseFulfilledResult;
-    isPromiseRejectedResult: typeof helpers.assertions.isPromiseRejectedResult;
-    isPromiseSettledResult: typeof helpers.assertions.isPromiseSettledResult;
-    hasTransformStep: typeof helpers.assertions.hasTransformStep;
-    isSettled: typeof helpers.assertions.isSettled;
-    isSettledLeft: typeof helpers.assertions.isSettledLeft;
-    isSettledRight: typeof helpers.assertions.isSettledRight;
-    helpers: typeof helpers;
-};
-export default _default;
-
-// @public (undocumented)
+// @public
 export type Deferred<B> = PromiseLike<Base<B>>;
 
-// @public (undocumented)
-export type DeferredCollection<B> = Collection<B> | Deferred<Collection<B>>;
+// @public
+export type DeferredCollection<B> = Collection<B> | PromiseLike<Collection<B>>;
 
 // @public
 export interface ErrLookupFn {
@@ -139,6 +109,9 @@ function getRejectedResults<T>(collection: Array<Settled<T> | PromiseSettledResu
 // @public (undocumented)
 function getTransformStep(item: unknown, initialTransformStep?: number): number;
 
+// Warning: (ae-incompatible-release-tags) The symbol "hasTransformStep" is marked as @public, but its signature references "TransformStep" which is marked as @beta
+// Warning: (ae-incompatible-release-tags) The symbol "hasTransformStep" is marked as @public, but its signature references "TransformStep" which is marked as @beta
+//
 // @public (undocumented)
 function hasTransformStep(countender: unknown): countender is TransformStep;
 
@@ -190,6 +163,9 @@ export const NULL_SYMBOL: typeof constants.NULL_SYMBOL;
 const NULL_SYMBOL_2: unique symbol;
 
 // @public (undocumented)
+export type NullSymbol = typeof NULL_SYMBOL_2;
+
+// @public (undocumented)
 export type OnlySideEffect = void | undefined;
 
 // @alpha
@@ -212,6 +188,9 @@ export type SerialMappingFn = Function & (<T, R>(collection: Collection<T> | Pro
 
 // @public
 export type Settled<T> = SettledLeft | SettledRight<T>;
+
+// @public (undocumented)
+export type SettledArray<R> = Settled<R>[];
 
 // @public
 export type SettledLeft = PromiseRejectedResult & {
@@ -244,6 +223,12 @@ export type SettledRight<T> = PromiseFulfilledResult<T> & {
     index: number;
 };
 
+// @public (undocumented)
+export type SettledValue<R> = R | NullSymbol;
+
+// @public (undocumented)
+export type SettledValues<R> = SettledValue<R>[];
+
 declare namespace tools {
     export {
         converToIsometricSettledResult,
@@ -264,7 +249,7 @@ export interface TransformFn<T, U = unknown> {
     (value: T, index: number, array: readonly (T | PromiseSettledResult<T>)[]): Promise<U>;
 }
 
-// @public (undocumented)
+// @beta (undocumented)
 export type TransformStep = {
     transformStep: number;
 };

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export { isPromise } from './isPromise';
 export { isPromiseLike } from './isPromiseLike';
 export {
@@ -11,5 +12,3 @@ export {
   isSettledLeft,
   isSettledRight,
 } from './isSettled';
-
-// TASK LIST: [TODO] (Review Documentation) --------------------------

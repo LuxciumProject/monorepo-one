@@ -1,8 +1,8 @@
 # Mapping Tools
 
-![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-PRE-ALPHA-UNRELEASED-UNSAFE-v4.0.0x&color=blue)
+![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by)[![Latest Version](https://img.shields.io/npm/v/mapping-tools)](https://www.npmjs.com/package/mapping-tools?activeTab=readme) ![npm](https://img.shields.io/npm/dt/mapping-tools)
 
-![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
+![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-PRE-ALPHA-UNRELEASED-UNSAFE-v4.1.0x&color=blue)
 
 The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.
 
@@ -453,7 +453,83 @@ related to [Object composition and inheritance](https://en.wikipedia.org/wiki/Ja
 
 **This section is not up to date and will be completed quickly** !!!
 
-- `Collection<Base>`
+### `Base<TVal>`
+
+Basic input type, represents the agregation of a naked value of type `TBase` (i.e `T` or `TVal` ), a resolved value wraped in either `SettledRight<TBase> | PromiseFulfilledResult<TBase>` or a rejection reason wraped in eiter `SettledLeft | PromiseRejectedResult` or the equivalent unions types `Settled<TBase> | PromiseSettledResult<TBase>`.
+
+```typescript
+type Base<TBase> =
+  | TBase
+  | Settled<TBase>
+  | PromiseSettledResult<TBase>
+  | SettledRight<TBase>
+  | PromiseFulfilledResult<TBase>
+  | SettledLeft
+  | PromiseRejectedResult;
+```
+
+### `Deferred<Base>`
+
+To have a more userfriendly documentation the alias `Deferred<B>`
+was created, it is sort for `PromiseLike<Base<B>>`.
+
+```typescript
+type Deferred<B> = PromiseLike<Base<B>>;
+```
+
+### `BaseOrDeferred<Base>`
+
+`BaseOrDeferred<B>` is an alias type that represents either a promise-like `Deferred<B>` type or a `Base<B>` type.
+
+```typescript
+type BaseOrDeferred<B> = Base<B> | Deferred<B>;
+```
+
+### `Collection<Base>`
+
+Basic Iterable input type, and Iterable version of `BaseOrDeferred<Base>` the union type of eiter an `Iterable<Base<B>>` with all its values being of type `Base<B>` or an `Iterable<Deferred<B>>` with all its values being of type `Deferred<B>` pleae not that it is not the same as `Iterable<Base<B> | Deferred<B>>` as the Iterable canot contain mixed types similar to `BaseOrDeferred<Base>`;
+
+```typescript
+type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
+```
+
+### `DeferredCollection<Base>`
+
+```typescript
+type DeferredCollection<B> = Collection<B> | Deferred<Collection<B>>;
+```
+
+### `SettledArray<Result>`
+
+```typescript
+type SettledArray<R> = Settled<R>[];
+```
+
+### `NullSymbol`
+
+```typescript
+type NullSymbol = typeof NULL_SYMBOL;
+```
+
+### `SettledValue<Result>`
+
+```typescript
+type SettledValue<R> = R | NullSymbol;
+```
+
+### `SettledValues<Result>`
+
+```typescript
+type SettledValues<R> = SettledValue<R>[];
+```
+
+### `OnlySideEffect`
+
+```typescript
+type OnlySideEffect = void | undefined;
+```
+
+- `Collection<Result>`
 
   The principal functions of the package takes a `Collection<B>` as
   their fist arguments in some cases it can even be a
@@ -463,19 +539,14 @@ related to [Object composition and inheritance](https://en.wikipedia.org/wiki/Ja
   export type Collection<B> = Iterable<Base<B>>;
   ```
 
-- `Await<Base>`
-
-  To make it shorter to write we created the alias `Await<B>`
-  for the `PromiseLike<Base<B>>` type.
-
   ```typescript
   export type Await<B> = PromiseLike<Base<B>>;
   ```
 
-- `CollectionOfAwait<Base>`
+- `CollectionOfDeferred<Base>`
 
   To make it shorter to write we created the alias
-  `CollectionOfAwait<Base>` for the `Collection<Await<B>>` type. It could be converted to a `PromiseLike<Collection<B>>` using `Promise.all($)`
+  `CollectionOfDeferred<Base>` for the `Iterable<Deferred<B>>` type. It could be converted to a `Deferred<Iterable<B>>` using `Promise.all($)`
 
   ```typescript
   export type CollectionOfAwait<B> = Collection<Await<B>>;
@@ -503,7 +574,41 @@ related to [Object composition and inheritance](https://en.wikipedia.org/wiki/Ja
 
 The `Deferred<B>` type is an alias for `PromiseLike<Base<B>>`, which represents a promise-like object that wraps a value of type `Base<B>`. It is used to simplify the documentation and does not need to be used directly by the consumer of the package.
 
-`BaseOrDeferred<B>` is an alias type that represents either a resolved or rejected promise, or a value, as represented by the `Base<B>` type, or a promise-like object that can be used for async operations, as represented by the `Deferred<B>` type
+<!--
+
+/**
+ * Alias PromiseLike<Base<B>>
+ * @public
+ */
+ type Deferred<B> = PromiseLike<Base<B>>;
+
+/**
+ * Alias for Iterable<PromiseLike<Base<B>>>
+ * @public
+ */
+ type CollectionOfDeferred<B> = Iterable<Deferred<B>>;
+
+/**
+ * Alias for Base<B> or PromiseLike<Base<B>>
+ * @public
+ */
+ type BaseOrDeferred<B> = Base<B> | Deferred<B>;
+
+/**
+ * Alias for Iterable<Base<B>> or Iterable<PromiseLike<Base<B>>>
+ * @public
+ */
+ type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
+
+/**
+ * Alias for Iterable<Base<B>> | Iterable<PromiseLike<Base<B>>>
+ * or PromiseLike<Iterable<Base<B>> | Iterable<PromiseLike<Base<B>>>>
+ *
+ * @public
+ */
+ type DeferredCollection<B> = Collection<B> | PromiseLike<Collection<B>>;
+
+ -->
 
 ## Contributing
 
@@ -620,3 +725,26 @@ IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 ###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu<!-- markdownlint-disable-line -->
 
 <sup>Text generated by an [AI language model](https://openai.com/) has been used in this work.</sup><!-- markdownlint-disable-line -->
+
+Base
+BaseOrDeferred
+Collection
+Deferred
+DeferredCollection
+NullSymbol
+OnlySideEffect
+Settled
+SettledArray
+SettledLeft
+SettledRight
+SettledValue
+SettledValues
+///////
+TransformStep
+Indexed
+///////
+AwaitedMappingFn
+GenerateMappingAsyncFn
+GenerateMappingFn
+ParalellMappingFn
+SerialMappingFn

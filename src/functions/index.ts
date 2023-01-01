@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export { awaitedMapping } from './awaitedMapping';
 export { generateMapping } from './generateMapping';
 export { generateMappingAsync } from './generateMappingAsync';

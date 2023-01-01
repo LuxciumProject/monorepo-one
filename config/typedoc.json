@@ -1,9 +1,45 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": ["../src/index.ts"],
+  "entryPoints": [
+    "../src/index.ts"
+  ],
   "out": "../dist/docs",
   "customDescription": "The library full of usefull mapping tools ― by Luxcium✨",
   "customTitle": "Mapping Tools ― by  Luxcium✨",
+  "sort": [
+    "kind",
+    "source-order",
+    "alphabetical"
+  ],
+  "visibilityFilters": {
+    "@alpha": false,
+  },
+  "kindSortOrder": [
+    "Namespace",
+    "Function",
+    "Interface",
+    "TypeAlias",
+    "Reference",
+    "Project",
+    "Module",
+    "Enum",
+    "EnumMember",
+    "Class",
+    "Constructor",
+    "Property",
+    "Variable",
+    "Accessor",
+    "Method",
+    "ObjectLiteral",
+    "Parameter",
+    "TypeParameter",
+    "TypeLiteral",
+    "CallSignature",
+    "ConstructorSignature",
+    "IndexSignature",
+    "GetSignature",
+    "SetSignature",
+  ],
   "footerTypedocVersion": true,
   "footerLastModified": true,
   "favicon": "../../static/favicon.png"

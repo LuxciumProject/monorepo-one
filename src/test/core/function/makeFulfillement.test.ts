@@ -13,4 +13,15 @@ describe('Sanity check Level 1', () => {
       value: 10,
     });
   });
+  it('Should be resilient to an NaN index', () => {
+    expect(
+      makeFulfillement({ value: 10, index: NaN, transformStep: 1 })
+    ).toStrictEqual({
+      // currentRejection: null,
+      transformStep: 1,
+      // rejected: null,
+      status: 'fulfilled',
+      value: 10,
+    });
+  });
 });
