@@ -55,7 +55,23 @@ describe('Sanity check Level 1', () => {
       value: 100,
     });
   });
-
+  it('Should accept a isPromiseLike(item)', async () => {
+    expect(
+      await fn_a1f9a({
+        item: (async () => ({ status: FULFILLED, value: 10 }))(),
+        index: 0,
+        array: [10],
+        transform: async value => value * 10,
+      })
+    ).toStrictEqual({
+      // currentRejection: null,
+      index: 0,
+      transformStep: 1,
+      // rejected: null,
+      status: 'fulfilled',
+      value: 100,
+    });
+  });
   it('Should accept a transformFn', async () => {
     expect(
       await fn_a1f9a({
@@ -129,7 +145,7 @@ describe('Sanity check Level 1', () => {
         validate: async value => {
           if (value === 10) throw value;
         },
-        errLookup:   reason => void reason,
+        errLookup: reason => void reason,
       })
     ).toStrictEqual({
       currentRejection: true,

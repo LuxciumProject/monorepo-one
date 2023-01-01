@@ -38,6 +38,7 @@ import type {
   GenerateMappingAsyncFn,
   GenerateMappingFn,
   LookupFn,
+  OnlySideEffect,
   ParalellMappingFn,
   SerialMappingFn,
   Settled,
@@ -56,7 +57,7 @@ export { serialMapping } from './functions/serialMapping';
 export { constants, helpers, functions };
 export type { Collection, Deferred, DeferredCollection };
 export type { Base, Settled, SettledLeft, SettledRight, TransformStep };
-export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn };
+export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn, OnlySideEffect };
 export type {
   AwaitedMappingFn,
   GenerateMappingAsyncFn,
@@ -65,8 +66,23 @@ export type {
   SerialMappingFn,
 };
 
-import * as helpers2 from './helpers';
-
+// import * as helpers2 from './helpers';
+const { assertions, tools } = helpers;
 export default {
-  ...helpers2,
+  helpers,
+  ...assertions,
+  ...tools,
+  constants,
+  functions,
+  ...helpers,
+  ...constants,
+  ...functions,
 };
+/** @public */
+export const FULFILLED: typeof constants.FULFILLED = constants.FULFILLED;
+/** @public */
+export const REJECTED: typeof constants.REJECTED = constants.REJECTED;
+/** @public */
+export const NULL_SYMBOL: typeof constants.NULL_SYMBOL = constants.NULL_SYMBOL;
+
+// @alpha, @beta, /** @public */, or @internal

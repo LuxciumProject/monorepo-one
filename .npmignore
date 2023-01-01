@@ -4,8 +4,17 @@
 /**/*.*
 /**/.*.*
 
+coverage/
+images/
+src/
+.prettierrc.cjs
+.editorconfig
+tsconfig.json
+mapping-tools.d.ts
+
 .env
 .npmignore
+.npmrc
 .rush/
 config/
 node_modules/
@@ -14,12 +23,25 @@ src/
 ts-out-info.lib
 tsconfig.json
 typedoc.json
+docs/
+doc/
 
 !lib
 !lib/**/*.*
 lib/performance
 lib/test
 
+!lib/
 !LICENSE
+!typings/
 !package.json
 !README.md
+
+!lib/functions/
+!lib/helpers/
+!lib/tools/
+!lib/types/
+!lib/constants.js
+!lib/index.js
+!lib/constants.js.map
+!lib/index.js.map

@@ -20,12 +20,22 @@
     "checkJs": false,
     "resolveJsonModule": true,
     /* Bundled library declaration files that describe the target runtime environment. */
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     /* Package names to be included without being referenced in a source file. */
-    "types": ["node", "heft-jest"]
+    "types": [
+      "node",
+      "heft-jest"
+    ]
   },
-  "include": ["src/**/*"],
-  "exclude": ["lib"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "lib",
+    "dist"
+  ]
 }
-
 // ts, .tsx, and .d.ts by default, with .js and .jsx

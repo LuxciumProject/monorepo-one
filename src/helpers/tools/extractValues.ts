@@ -1,6 +1,5 @@
 import { NULL_SYMBOL } from '../../constants';
 import { Settled, SettledLeft, SettledRight } from '../../types';
-import { SettledValues } from '../../types/MainTypes';
 import { isSettledRight } from '../assertions';
 import { isSettledLeft } from '../assertions/isSettled';
 
@@ -45,16 +44,41 @@ export function extractFulfilledValues<R>(settledArray: Settled<R>[]): R[] {
  * `NULL_SYMBOL` in place of `SettledLeft` wich lack of a value.
  * @public
  */
+
 export function extractSettledValues<R>(
   settledArray: Settled<R>[]
-): SettledValues<R> {
-  return settledArray.map(settled => {
-    if (settled.status === 'fulfilled' && settled.value !== null) {
+): (R | typeof NULL_SYMBOL)[] {
+  const result = settledArray.map(settled => {
+    if (settled.status === 'fulfilled' && 'value' in settled) {
       return settled.value;
-    } else {
-      return NULL_SYMBOL;
     }
+    return NULL_SYMBOL;
   });
+  return result;
 }
 
-// TASK LIST: (Review Documentation) [TODO: Types]  -------------------
+// export function extractSettledValues2<R>(
+//   settledArray: Settled<R>[]
+// ): SettledValues<R> {
+//   const result = settledArray.map(settled => {
+//     if (settled.status === 'fulfilled' && 'value' in settled) {
+//       return settled.value;
+//     } else {
+//       return NULL_SYMBOL;
+//     }
+//   });
+//   return result;
+// }
+
+// export function extractSettledValues3<R>(
+//   settledArray: Settled<R>[]
+// ): SettledValues<R> {
+//   return settledArray.map(settled => {
+//     if (settled.status === 'fulfilled' && settled.value !== null) {
+//       return settled.value;
+//     } else {
+//       return NULL_SYMBOL;
+//     }
+//   });
+// }
+// TASK LIST: (Review Documentation) [TODO: Types]  ------------------

@@ -37,4 +37,3 @@ await awaitedMapping(collection, async (item) => {
   // Do something if the mapping process is cancelled
   console.log('Mapping cancelled!');
 });
-I hope this provides a clear and concise overview of the five main functions and the arguments they can accept. If you have any further questions, don't hesitate to ask!

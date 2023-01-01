@@ -1,6 +1,6 @@
 # Mapping Tools
 
-![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-PRE-ALPHA-UNRELEASED-UNDOCUMENTED-UNSAFE-v3.0.0x&color=blue)
+![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-PRE-ALPHA-UNRELEASED-UNSAFE-v4.0.0x&color=blue)
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by) ![npm](https://img.shields.io/npm/dt/mapping-tools) ![npm](https://img.shields.io/npm/v/mapping-tools)
 

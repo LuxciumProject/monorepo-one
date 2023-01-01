@@ -1,4 +1,4 @@
-import { serialMapping } from '../../functions';
+import { serialMapping } from '../..';
 
 describe('Sanity check Level 1', () => {
   it('Should pass the smoke test serialMapping', async () => {
@@ -91,5 +91,37 @@ describe('serialMapping', () => {
     };
 
     expect(await result).toStrictEqual([expected]);
+  });
+  it('Should survive when throwing with null in each delegates functions', async () => {
+    const result = serialMapping(
+      [{ size: 10 }],
+      async obj => {
+        if (obj.size === 10) throw ['test'];
+      },
+      null,
+      null,
+      null
+    );
+    const expected = {
+      currentRejection: true,
+      // fulfilled: null,
+      index: 0,
+      reason: ['test'],
+      status: 'rejected',
+      transformStep: 0,
+    };
+
+    expect(await result).toStrictEqual([expected]);
+  });
+
+  it('Should be able to recive null in each delegates functions', async () => {
+    const result = serialMapping([1, 2, 3], null, null, null, null);
+    const expected = [
+      { index: 0, status: 'fulfilled', transformStep: 1, value: 1 },
+      { index: 1, status: 'fulfilled', transformStep: 1, value: 2 },
+      { index: 2, status: 'fulfilled', transformStep: 1, value: 3 },
+    ];
+
+    expect(await result).toStrictEqual(expected);
   });
 });

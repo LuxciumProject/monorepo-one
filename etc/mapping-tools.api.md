@@ -18,12 +18,6 @@ declare namespace assertions {
     }
 }
 
-// @public (undocumented)
-export type Await<B> = PromiseLike<Base<B>>;
-
-// @public (undocumented)
-export type AwaitCollection<B> = Collection<B> | PromiseLike<Collection<B>>;
-
 // @alpha
 export function awaitedMapping<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
 
@@ -34,12 +28,13 @@ export type AwaitedMappingFn = Function & (<T, R>(collection: Collection<T> | Pr
 export type Base<TBase> = TBase | Settled<TBase> | PromiseSettledResult<TBase> | SettledRight<TBase> | PromiseFulfilledResult<TBase> | SettledLeft | PromiseRejectedResult;
 
 // @public (undocumented)
-export type Collection<B> = Iterable<Base<B>> | Iterable<Await<B>>;
+export type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
 
 declare namespace constants {
     export {
-        FULFILLED,
-        REJECTED
+        FULFILLED_2 as FULFILLED,
+        REJECTED_2 as REJECTED,
+        NULL_SYMBOL_2 as NULL_SYMBOL
     }
 }
 export { constants }
@@ -49,16 +44,71 @@ export { constants }
 // @beta (undocumented)
 const converToIsometricSettledResult: typeof converToIsometricSettledResult_;
 
+// @public (undocumented)
+const _default: {
+    awaitedMapping: typeof functions.awaitedMapping;
+    generateMapping: typeof functions.generateMapping;
+    generateMappingAsync: typeof functions.generateMappingAsync;
+    paralellMapping: typeof functions.paralellMapping;
+    serialMapping: typeof functions.serialMapping;
+    FULFILLED: "fulfilled";
+    REJECTED: "rejected";
+    NULL_SYMBOL: typeof constants.NULL_SYMBOL;
+    assertions: typeof helpers.assertions;
+    tools: typeof helpers.tools;
+    constants: typeof constants;
+    functions: typeof functions;
+    converToIsometricSettledResult: converToIsometricSettledResult_;
+    extractFulfilledValues: typeof helpers.tools.extractFulfilledValues;
+    extractSettledValues: typeof helpers.tools.extractSettledValues;
+    filterLeft: typeof helpers.tools.filterLeft;
+    filterRight: typeof helpers.tools.filterRight;
+    getRejectedResults: typeof helpers.tools.getRejectedResults;
+    getTransformStep: typeof helpers.tools.getTransformStep;
+    isometricSettledResult: typeof helpers.tools.isometricSettledResult;
+    settledLengts: typeof helpers.tools.settledLengts;
+    isPromise: typeof helpers.assertions.isPromise;
+    isPromiseLike: typeof helpers.assertions.isPromiseLike;
+    isPromiseFulfilledResult: typeof helpers.assertions.isPromiseFulfilledResult;
+    isPromiseRejectedResult: typeof helpers.assertions.isPromiseRejectedResult;
+    isPromiseSettledResult: typeof helpers.assertions.isPromiseSettledResult;
+    hasTransformStep: typeof helpers.assertions.hasTransformStep;
+    isSettled: typeof helpers.assertions.isSettled;
+    isSettledLeft: typeof helpers.assertions.isSettledLeft;
+    isSettledRight: typeof helpers.assertions.isSettledRight;
+    helpers: typeof helpers;
+};
+export default _default;
+
+// @public (undocumented)
+export type Deferred<B> = PromiseLike<Base<B>>;
+
+// @public (undocumented)
+export type DeferredCollection<B> = Collection<B> | Deferred<Collection<B>>;
+
 // @public
 export interface ErrLookupFn {
-    // Warning: (ae-forgotten-export) The symbol "OnlySideEffect" needs to be exported by the entry point index.d.ts
-    //
     // (undocumented)
     (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
 }
 
 // @public
-const FULFILLED: 'fulfilled';
+function extractFulfilledValues<R>(settledArray: Settled<R>[]): R[];
+
+// @public
+function extractSettledValues<R>(settledArray: Settled<R>[]): (R | typeof NULL_SYMBOL_2)[];
+
+// @public
+function filterLeft<R>(settledArray: Settled<R>[]): SettledLeft[];
+
+// @public
+function filterRight<R>(settledArray: Settled<R>[]): SettledRight<R>[];
+
+// @public (undocumented)
+export const FULFILLED: typeof constants.FULFILLED;
+
+// @public
+const FULFILLED_2: 'fulfilled';
 
 declare namespace functions {
     export {
@@ -133,14 +183,26 @@ export interface LookupFn<S, U = unknown> {
     (value: U, index: number, array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]): OnlySideEffect;
 }
 
+// @public (undocumented)
+export const NULL_SYMBOL: typeof constants.NULL_SYMBOL;
+
+// @public
+const NULL_SYMBOL_2: unique symbol;
+
+// @public (undocumented)
+export type OnlySideEffect = void | undefined;
+
 // @alpha
 export function paralellMapping<T, R>(collection: Collection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>>[];
 
 // @alpha (undocumented)
 export type ParalellMappingFn = Function & (<T, R>(collection: Collection<T>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>>[]);
 
+// @public (undocumented)
+export const REJECTED: typeof constants.REJECTED;
+
 // @public
-const REJECTED: 'rejected';
+const REJECTED_2: 'rejected';
 
 // @alpha
 export function serialMapping<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
@@ -149,7 +211,7 @@ export function serialMapping<T, R>(collection: Collection<T> | PromiseLike<Coll
 export type SerialMappingFn = Function & (<T, R>(collection: Collection<T> | PromiseLike<Collection<T>>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Promise<Settled<R>[]>);
 
 // @public
-export type Settled<TBase> = SettledLeft | SettledRight<TBase>;
+export type Settled<T> = SettledLeft | SettledRight<T>;
 
 // @public
 export type SettledLeft = PromiseRejectedResult & {
@@ -185,6 +247,10 @@ export type SettledRight<T> = PromiseFulfilledResult<T> & {
 declare namespace tools {
     export {
         converToIsometricSettledResult,
+        extractFulfilledValues,
+        extractSettledValues,
+        filterLeft,
+        filterRight,
         getRejectedResults,
         getTransformStep,
         isometricSettledResult,
