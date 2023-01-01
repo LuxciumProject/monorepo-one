@@ -3,6 +3,7 @@
 # scripts/build-dist.sh
 # This script builds the dist directory for the mapping-tools library.
 
+cd /projects/monorepo-one/library/mapping-tools || exit 14
 source "${HOME}/tok/npm_mapping-tools"
 
 # Create the dist directory
