@@ -6,9 +6,9 @@
 
 Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript.
 
-The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.
+It is designed to be user-friendly and easy to use, with clear documentation and examples, and is suitable for use in a wide range of applications, including data processing and validation.
 
-Provides a set of utility functions for working with collections of data. These functions allow you to apply a transformations or validations to each item in a collection, either in serial or parallel, and generate new collections or iterators and async iterators based on the results. All while enjoying advanced error handling and advanced support for asynchronous code.
+The package provides a set of utility functions for working with collections of data, allowing you to apply transformations or validations to each item in a collection, either in serial or in parallel. These functions can generate new collections or iterators, as well as async iterators, based on the results. Mapping Tools also offers advanced error handling and support for asynchronous code.
 
 ## Table of Contents
 
