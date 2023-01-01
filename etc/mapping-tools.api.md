@@ -18,7 +18,7 @@ declare namespace assertions {
     }
 }
 
-// @alpha
+// @beta (undocumented)
 export function awaitedMapping<T, R>(collection: DeferredCollection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
 
 // @alpha (undocumented)
@@ -91,10 +91,10 @@ declare namespace functions {
 }
 export { functions }
 
-// @alpha
+// @beta (undocumented)
 export function generateMapping<T, R>(collection: Collection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Generator<Promise<Settled<R>>, void, unknown>;
 
-// @alpha
+// @beta (undocumented)
 export function generateMappingAsync<R, T>(collection: Collection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): AsyncGenerator<Settled<R>, void, unknown>;
 
 // @alpha (undocumented)
@@ -168,7 +168,7 @@ export type NullSymbol = typeof NULL_SYMBOL_2;
 // @public (undocumented)
 export type OnlySideEffect = void | undefined;
 
-// @alpha
+// @beta (undocumented)
 export function paralellMapping<T, R>(collection: Collection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>>[];
 
 // @alpha (undocumented)
@@ -180,7 +180,7 @@ export const REJECTED: typeof constants.REJECTED;
 // @public
 const REJECTED_2: 'rejected';
 
-// @alpha
+// @beta (undocumented)
 export function serialMapping<T, R>(collection: DeferredCollection<T>, transformFn?: null | TransformFn<T, R>, lookupFn?: null | LookupFn<T, R>, validateFn?: null | ValidateFn<T, R>, errLookupFn?: null | ErrLookupFn): Promise<Settled<R>[]>;
 
 // @alpha (undocumented)

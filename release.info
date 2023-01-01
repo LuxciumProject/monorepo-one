@@ -1,0 +1,12 @@
+npm notice === Tarball Details ===
+npm notice name:          mapping-tools
+npm notice version:       0.0.0-ALPHA-RELEASE-UNSAFE-v4.1.0x
+npm notice filename:      mapping-tools-0.0.0-ALPHA-RELEASE-UNSAFE-v4.1.0x.tgz
+npm notice package size:  11.1 kB
+npm notice unpacked size: 39.6 kB
+npm notice shasum:        2732df8ffdec1452b6dce684c8e2465492f7e6ab
+npm notice integrity:     sha512-YV1FE7k12wDJw[...]CWXyoLIN+2aTg==
+npm notice total files:   7
+npm notice
+npm notice Publishing to https://registry.npmjs.org/ with tag latest and default access
++ mapping-tools@0.0.0-ALPHA-RELEASE-UNSAFE-v4.1.0x
