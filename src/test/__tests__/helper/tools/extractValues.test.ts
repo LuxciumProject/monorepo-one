@@ -8,7 +8,7 @@ import {
 import { Settled } from '../../../../types';
 filterLeft;
 describe('filterLeft and filterRight', () => {
-  it('should filterRight', () => {
+  it('should filterRight', done => {
     const settledArray: Settled<number>[] = [
       {
         status: 'fulfilled',
@@ -95,9 +95,10 @@ describe('filterLeft and filterRight', () => {
     ];
     const actual = filterRight(settledArray);
     expect(actual).toStrictEqual(expected);
+    done();
   });
 
-  it('should filterLeft', () => {
+  it('should filterLeft', done => {
     const settledArray: Settled<number>[] = [
       {
         status: 'fulfilled',
@@ -174,11 +175,12 @@ describe('filterLeft and filterRight', () => {
     ];
     const actual = filterLeft(settledArray);
     expect(actual).toStrictEqual(expected);
+    done();
   });
 });
 
 describe('extractSettledValues', () => {
-  it('should extract fulfilled values and maintain original position', () => {
+  it('should extract fulfilled values and maintain original position', done => {
     const settledArray: Settled<number>[] = [
       {
         status: 'fulfilled',
@@ -235,11 +237,12 @@ describe('extractSettledValues', () => {
     const actual = extractSettledValues(settledArray);
     expect(actual).toEqual(expected);
     //     // expect(actual).(expected);
+    done();
   });
 });
 
 describe('extractFulfilledValues', () => {
-  it('should extract fulfilled values', () => {
+  it('should extract fulfilled values', done => {
     const settledArray: Settled<number>[] = [
       {
         status: 'fulfilled',
@@ -296,10 +299,11 @@ describe('extractFulfilledValues', () => {
     const actual = extractFulfilledValues(settledArray);
     expect(actual).toEqual(expected);
     //     // expect(actual).(expected);
+    done();
   });
 });
 // describe('extractFulfilledValues', () => {
-//   it('should extract fulfilled values', () => {
+//   it('should extract fulfilled values', (done) => {
 //     const settledArray = [
 //       {
 //         status: FULFILLED,

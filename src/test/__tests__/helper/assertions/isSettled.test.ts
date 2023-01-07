@@ -36,60 +36,76 @@ describe('Decompose isSettledLeft', () => {
     value: undefined,
   };
 
-  it('Should have typeof contender === "object"', () => {
+  it('Should have typeof contender === "object"', done => {
     expect(typeof settledLeft === 'object').toBe(true);
+    done();
   });
 
-  it('Should be contender !== null', () => {
+  it('Should be contender !== null', done => {
     expect(settledLeft !== null).toBe(true);
+    done();
   });
-  it('Should have "status" in contender', () => {
+  it('Should have "status" in contender', done => {
     expect('status' in settledLeft).toBe(true);
+    done();
   });
-  it('Should have "reason" in contender', () => {
+  it('Should have "reason" in contender', done => {
     expect('reason' in settledLeft).toBe(true);
+    done();
   });
-  it('Should have "currentRejection" in contender', () => {
+  it('Should have "currentRejection" in contender', done => {
     expect('currentRejection' in settledLeft).toBe(true);
+    done();
   });
-  it('Should have "transformStep" in contender', () => {
+  it('Should have "transformStep" in contender', done => {
     expect('transformStep' in settledLeft).toBe(true);
+    done();
   });
-  it('Should have typeof ontender.transformStep === "number"', () => {
+  it('Should have typeof ontender.transformStep === "number"', done => {
     expect(typeof settledLeft.transformStep === 'number').toBe(true);
+    done();
   });
-  it('Should have "index" in contender', () => {
+  it('Should have "index" in contender', done => {
     expect('index' in settledLeft).toBe(true);
+    done();
   });
-  it('Should have typeof contender.index === "number"', () => {
+  it('Should have typeof contender.index === "number"', done => {
     expect(typeof settledLeft.index === 'number').toBe(true);
+    done();
   });
-  it('Should have FULFILLED in contender', () => {
+  it('Should have FULFILLED in contender', done => {
     expect(FULFILLED in settledLeft).toBe(true);
+    done();
   });
-  it('Should have REJECTED in contender', () => {
+  it('Should have REJECTED in contender', done => {
     expect(REJECTED in settledLeft).toBe(true);
+    done();
   });
-  it('Should be contender.fulfilled === null', () => {
+  it('Should be contender.fulfilled === null', done => {
     expect(settledLeft.fulfilled === null).toBe(true);
+    done();
   });
-  it('Should be contender.status === REJECTED', () => {
+  it('Should be contender.status === REJECTED', done => {
     expect(settledLeft.status === REJECTED).toBe(true);
+    done();
   });
-  it('Should not have "value" in contender or value must be set to undefined', () => {
+  it('Should not have "value" in contender or value must be set to undefined', done => {
     expect(
       ('value' in settledLeft && settledLeft.value === undefined) ||
         !('value' in settledLeft)
     ).toBe(true);
+    done();
   });
-  it('Should have identical values: contender.reason === contender[REJECTED]', () => {
+  it('Should have identical values: contender.reason === contender[REJECTED]', done => {
     expect(settledLeft.reason === settledLeft[REJECTED]).toBe(true);
+    done();
   });
-  it('Should have contender.currentRejection === true false or undefined', () => {
+  it('Should have contender.currentRejection === true false or undefined', done => {
     expect(
       settledLeft.currentRejection === true ||
         settledLeft.currentRejection === false ||
         settledLeft.currentRejection === undefined
     ).toBe(true);
+    done();
   });
 });

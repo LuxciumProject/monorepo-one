@@ -1,7 +1,7 @@
 import { makeRejection } from '../../../../functions/core/makeRejection';
 
 describe('Internal core function makeRejection', () => {
-  it('Should pass the smoke test makeRejection_TEST_', () => {
+  it('Should pass the smoke test makeRejection_TEST_', done => {
     expect(
       makeRejection({
         reason: 'any',
@@ -15,8 +15,9 @@ describe('Internal core function makeRejection', () => {
       reason: 'any',
       status: 'rejected',
     });
+    done();
   });
-  it('Should take only a reason to produce the output', () => {
+  it('Should take only a reason to produce the output', done => {
     expect(
       makeRejection({
         reason: 'any',
@@ -26,5 +27,6 @@ describe('Internal core function makeRejection', () => {
       reason: 'any',
       status: 'rejected',
     });
+    done();
   });
 });

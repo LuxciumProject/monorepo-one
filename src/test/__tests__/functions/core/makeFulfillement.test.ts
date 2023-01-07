@@ -1,7 +1,7 @@
 import { makeFulfillement } from '../../../../functions/core/makeFulfillement';
 
 describe('Internal core function makeFulfillement', () => {
-  it('Should take only a valu to produce the output', () => {
+  it('Should take only a valu to produce the output', done => {
     expect(
       makeFulfillement({
         value: 'any',
@@ -10,5 +10,6 @@ describe('Internal core function makeFulfillement', () => {
       value: 'any',
       status: 'fulfilled',
     });
+    done();
   });
 });

@@ -1,4 +1,6 @@
-export {};
 describe('Name of the group', () => {
-  it('', () => {});
+  it('', done => {
+    done();
+  });
 });
+export {};
