@@ -67,6 +67,14 @@ pnpm add mapping-tools
 
 The package includes 5 main functions:
 
+The mapping-tools package is incredibly flexible, able to handle both promises and non-promises as input. This means you can use it in any context, no matter what type of data you're working with.
+
+Error handling is a top priority in the mapping-tools package. No matter what goes wrong, you can trust that the code will always provide meaningful output. This makes it a resilient choice for performing transformations on your data.
+
+The output of the mapping-tools package is based on the `Settled<TVal>` type, wwhich allows users to differentiate between successful and unsuccessful results. This makes it easy to understand and work with the results of your transformations.
+
+Overall, the mapping-tools package is a reliable choice for performing transformations on collections of data.
+
 1. **[awaitedMapping](#awaitedmapping)**, is based on Promise.all($)
 2. **[paralellMapping](#parallelmapping)**, is based on Array.prototype.map($)
 3. **[serialMapping](#serialmapping)**, is based on a forOf loop
@@ -76,6 +84,12 @@ The package includes 5 main functions:
 These functions all take a collection of items as their main input, along with 4 delegate functions: [transformFn](#transformfn), [lookupFn](#lookupfn), [validateFn](#validatefn) and [errLookupFn](#errlookupfn).
 
 The transformFn is applied to each item in the collection and is used to transform the item into a new value. The lookupFn and validateFn are applied to each item in the collection and can be used to perform additional lookup or validation operations on the transformed items. The errLookupFn is used to handle any errors that may occur during the processing of the collection or during previous steps of processing. Each are optionals but not providing any would result in no transformation of the values.
+
+The mapping-tools package has been designed with flexibility in mind. It is able to handle both promises and non-promises as input, allowing it to easily integrate into a variety of contexts.
+
+Additionally, the package has been built with resilience in mind. It includes robust error handling, ensuring that any errors encountered will not prevent the code from providing meaningful output. The output of the package is based on the `Settled<TVal>` type, which allows users to differentiate between successful and unsuccessful results.
+
+Overall, the mapping-tools package is a reliable and flexible choice for performing transformations on collections of data.
 
 ## Quick Start
 
@@ -436,11 +450,15 @@ type Base<TBase> =
 
 ### `Settled<TVal>`
 
+The `Settled<TVal>` type is an extension of the `PromiseSettledResult<TVal>` type, and includes additional properties such as the `transformStep` and `currentRejection` status. This allows users to more easily track the progress of the transformation process, and quickly identify any errors that may have occurred. Overall, the mapping-tools package is a reliable and robust choice for performing transformations on collections of data.
+
 ```typescript
 type Settled<T> = SettledLeft | SettledRight<T>;
 ```
 
 ### `SettledRight<TVal>`
+
+The `SettledRight<TVal>` type represents successful transformation results, and includes the fulfilled value as well as additional metadata such as the index of the item in the original collection and the transformation step at which it was resolved. This allows users to easily track and analyze the transformation process, even in cases where errors may have been encountered.
 
 ```typescript
 type SettledRight<T> = PromiseFulfilledResult<T> & {
@@ -461,6 +479,8 @@ type SettledRight<T> = PromiseFulfilledResult<T> & {
 ```
 
 ### `SettledLeft`
+
+On the other hand, the `SettledLeft` type represents unsuccessful transformation results, and includes the rejected value as well as metadata such as the `index` and last `transformStep`. This allows users to easily identify and troubleshoot any issues that may have occurred during the transformation process.
 
 ```typescript
 type SettledLeft = PromiseRejectedResult & {
@@ -582,6 +602,14 @@ type SettledValues<R> = SettledValue<R>[];
 ```typescript
 type OnlySideEffect = void | undefined;
 ```
+
+The package has been developed to provide a simple and easy-to-use interface for performing transformations on collections of data. It offers a variety of different functions, including awaitedMapping, paralellMapping, and serialMapping, each with their own specific use cases and features.
+
+One of the key features of the mapping-tools package is its adaptive ability to handle both promises and non-promises as input. This omnivorous feature allows it to be easily integrated into a wide range of contexts and projects, whether dealing with pending values or already resolved values. It simply requires a thenable in a PromiseLike object.
+
+In addition to its flexibility, the package has also been designed with resilience in mind. It includes robust error handling, ensuring that any errors encountered during the transformation process will not prevent the code from providing meaningful output. The output of the package is based on the `Settled<TVal>` type, which allows users to easily distinguish between successful and unsuccessful results.
+
+The mapping-tools package is a reliable and flexible choice to perform transformations on collections of data.
 
 ## Contributing
 

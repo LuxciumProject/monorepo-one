@@ -25,7 +25,14 @@ import {
 export class Chain<B> {
   collection: Collection<B> | PromiseLike<Collection<B>>;
   _list: Promise<BaseOrDeferred<B>[]>;
-  constructor(collection: Collection<B> | PromiseLike<Collection<B>>) {
+
+  static of<BType>(
+    collection: Collection<BType> | PromiseLike<Collection<BType>>
+  ): Chain<BType> {
+    return new Chain<BType>(collection);
+  }
+
+  private constructor(collection: Collection<B> | PromiseLike<Collection<B>>) {
     this.collection = collection;
     this._list = (async function () {
       return [...(await collection)];
@@ -93,7 +100,7 @@ export class Chain<B> {
     lookupFn: null | LookupFn<B, R> = v => void v,
     validateFn: null | ValidateFn<B, R> = async v => void v,
     errLookupFn: null | ErrLookupFn = v => void v
-  ) {
+  ): Chain<R> {
     const result = awaitedMapping(
       this.collection,
       transformFn,
@@ -101,16 +108,15 @@ export class Chain<B> {
       validateFn,
       errLookupFn
     );
-
-    return new Chain(result);
+    return new Chain<R>(result);
   }
   public paralellMapping<R>(
     transformFn: null | TransformFn<B, R> = async value => value as any as R,
     lookupFn: null | LookupFn<B, R> = v => void v,
     validateFn: null | ValidateFn<B, R> = async v => void v,
     errLookupFn: null | ErrLookupFn = v => void v
-  ) {
-    const result = (async () =>
+  ): Chain<Promise<Settled<R>>> {
+    const result = (async (): Promise<Promise<Settled<R>>[]> =>
       paralellMapping(
         await this.collection,
         transformFn,
@@ -119,7 +125,7 @@ export class Chain<B> {
         errLookupFn
       ))();
 
-    return new Chain(result);
+    return new Chain<Promise<Settled<R>>>(result);
   }
 
   public async filterRight() {

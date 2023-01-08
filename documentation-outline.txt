@@ -25,3 +25,7 @@
 ## Overview of the package and its main features
 ## Description of the delegate functions (transformFn, lookupFn, validateFn, and errLookupFn)
 ## Overview of the types (Base<TBase>, Settled<TBase>, and the aliases)
+
+The SettledRight<TVal> type extends the PromiseFulfilledResult<TVal> type by adding additional properties that allow for isometric comparisons with the PromiseRejectedResult type. It also includes cardinal and ordinal indexes, which can be used to track the position of the item within the collection being transformed. This type represents a successful result of the transformation process.
+
+On the other hand, the SettledLeft type extends the PromiseRejectedResult type with similar isometric properties and indexes. It represents an unsuccessful result of the transformation process. Both the SettledRight<TVal> and SettledLeft types are key to the resilience of the mapping-tools package, as they allow users to easily distinguish between successful and unsuccessful results and handle them accordingly.
