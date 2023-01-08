@@ -176,15 +176,16 @@ Applies the provided callback functions to each item in the collection in parall
 - Based on an `Array.prototype.map($)`
 - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
 - Returns: `Array<Promise<Settled<R>>>`
+- Function signature:
 
   ```typescript
   export function paralellMapping<T, R>(
-    collection: Iterable<AwaitAndBase<T>>,
-    transform: TransformFn<T, R> = async value => value as any as R,
-    lookup: LookupFn<T, R> = v => void v,
-    validate: ValidateFn<T, R> = async v => void v,
-    errLookup: ErrLookupFn = v => void v
-  ): Array<Promise<Settled<R>>>;
+    collection: Collection<T>,
+    transformFn: TransformFn<T, R> | null = async value => value as any as R,
+    lookupFn: LookupFn<T, R> | null = v => void v,
+    validateFn: ValidateFn<T, R> | null = async v => void v,
+    errLookupFn: ErrLookupFn | null = v => void v
+  ): Promise<Settled<R>>[];
   ```
 
 ### serialMapping
@@ -196,17 +197,16 @@ Applies the provided callback functions to each item in the collection in series
 - Based on `forOf` _loop_
 - Takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
 - Returns: `Promise<Array<Settled<R>>>`
+- Function signature:
 
   ```typescript
   export async function serialMapping<T, R>(
-    collection:
-      | Iterable<AwaitAndBase<T>>
-      | PromiseLike<Iterable<AwaitAndBase<T>>>,
-    transformFn: TransformFn<T, R> = async value => value as any as R,
-    lookupFn: LookupFn<T, R> = v => void v,
-    validateFn: ValidateFn<T, R> = async v => void v,
-    errLookupFn: ErrLookupFn = v => void v
-  ): Promise<Array<Settled<R>>>;
+    collection: DeferredCollection<T>,
+    transformFn: TransformFn<T, R> | null = async value => value as any as R,
+    lookupFn: LookupFn<T, R> | null = v => void v,
+    validateFn: ValidateFn<T, R> | null = async v => void v,
+    errLookupFn: ErrLookupFn | null = v => void v
+  ): Promise<Settled<R>[]> {}
   ```
 
 ### awaitedMapping
@@ -218,16 +218,15 @@ Applies the provided callback functions to each item in the collection, and retu
 - Based on `Promise.all($)`
 - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
 - Returns: `Promise<Array<Settled<R>>>`
+- Function signature:
 
   ```typescript
   export async function awaitedMapping<T, R>(
-    collection:
-      | Iterable<AwaitAndBase<T>>
-      | PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>,
-    transform: TransformFn<T, R> = async value => value as any as R,
-    lookup: LookupFn<T, R> = v => void v,
-    validate: ValidateFn<T, R> = async v => void v,
-    errLookup: ErrLookupFn = v => void v
+    collection: DeferredCollection<T>,
+    transformFn: TransformFn<T, R> | null = async value => value as any as R,
+    lookupFn: LookupFn<T, R> | null = v => void v,
+    validateFn: ValidateFn<T, R> | null = async v => void v,
+    errLookupFn: ErrLookupFn | null = v => void v
   ): Promise<Settled<R>[]>;
   ```
 
@@ -240,14 +239,15 @@ Applies the provided callback functions to each item in the collection, and retu
 - Based on the `Generator` _Protocol_
 - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
 - Returns: `Generator<Promise<Settled<R>>, void, unknown>`
+- Function signature:
 
   ```typescript
   export function* generateMapping<T, R>(
-    collection: Iterable<AwaitAndBase<T>>,
-    transform: TransformFn<T, R> = async value => value as any as R,
-    lookup: LookupFn<T, R> = v => void v,
-    validate: ValidateFn<T, R> = async v => void v,
-    errLookup: ErrLookupFn = v => void v
+    collection: Collection<T>,
+    transformFn: TransformFn<T, R> | null = async value => value as any as R,
+    lookupFn: LookupFn<T, R> | null = v => void v,
+    validateFn: ValidateFn<T, R> | null = async v => void v,
+    errLookupFn: ErrLookupFn | null = v => void v
   ): Generator<Promise<Settled<R>>, void, unknown>;
   ```
 
@@ -260,14 +260,15 @@ Applies the provided callback functions to each item in the collection, and retu
 - Based on the `AsyncGenerator` _Protocol_
 - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
 - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
+- Function signature:
 
   ```typescript
   export async function* generateMappingAsync<R, T>(
-    collection: Iterable<AwaitAndBase<T>>,
-    transform: TransformFn<T, R> = async value => value as any as R,
-    lookup: LookupFn<T, R> = v => void v,
-    validate: ValidateFn<T, R> = async v => void v,
-    errLookup: ErrLookupFn = v => void v
+    collection: Collection<T>,
+    transformFn: TransformFn<T, R> | null = async value => value as any as R,
+    lookupFn: LookupFn<T, R> | null = v => void v,
+    validateFn: ValidateFn<T, R> | null = async v => void v,
+    errLookupFn: ErrLookupFn | null = v => void v
   ): AsyncGenerator<Settled<R>, void, unknown>;
   ```
 

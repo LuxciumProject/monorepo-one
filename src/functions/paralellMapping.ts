@@ -14,10 +14,10 @@ import { fn_a1f9a } from './core';
 
 export function paralellMapping<T, R>(
   collection: Collection<T>,
-  transformFn: null | TransformFn<T, R> = async value => value as any as R,
-  lookupFn: null | LookupFn<T, R> = v => void v,
-  validateFn: null | ValidateFn<T, R> = async v => void v,
-  errLookupFn: null | ErrLookupFn = v => void v
+  transformFn: TransformFn<T, R> | null = async value => value as any as R,
+  lookupFn: LookupFn<T, R> | null = v => void v,
+  validateFn: ValidateFn<T, R> | null = async v => void v,
+  errLookupFn: ErrLookupFn | null = v => void v
 ): Promise<Settled<R>>[] {
   return [...collection].map((item, index, array) =>
     fn_a1f9a({

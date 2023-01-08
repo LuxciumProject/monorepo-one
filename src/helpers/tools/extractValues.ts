@@ -57,28 +57,4 @@ export function extractSettledValues<R>(
   return result;
 }
 
-// export function extractSettledValues2<R>(
-//   settledArray: Settled<R>[]
-// ): SettledValues<R> {
-//   const result = settledArray.map(settled => {
-//     if (settled.status === 'fulfilled' && 'value' in settled) {
-//       return settled.value;
-//     } else {
-//       return NULL_SYMBOL;
-//     }
-//   });
-//   return result;
-// }
-
-// export function extractSettledValues3<R>(
-//   settledArray: Settled<R>[]
-// ): SettledValues<R> {
-//   return settledArray.map(settled => {
-//     if (settled.status === 'fulfilled' && settled.value !== null) {
-//       return settled.value;
-//     } else {
-//       return NULL_SYMBOL;
-//     }
-//   });
-// }
 // TASK LIST: (Review Documentation) [TODO: Types]  ------------------

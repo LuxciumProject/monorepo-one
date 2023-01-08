@@ -44,19 +44,6 @@ export type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
  */
 export type DeferredCollection<B> = Collection<B> | PromiseLike<Collection<B>>;
 
-/*
-
-- **Functions that return arrays**
-  - [parallelMapping returns](#parallelmapping): `Array<Promise<Settled<R>>>`
-- **Functions that return promises that resolve to arrays**
-  - [serialMapping returns](#serialmapping): `Promise<Array<Settled<R>>>`
-  - [awaitedMapping returns](#awaitedmapping): `Promise<Array<Settled<R>>>`
-- **Functions that return generators**
-  - [generateMapping returns](#generatemapping): `Generator<Promise<Settled<R>>, void, unknown>`
-  - [generateMappingAsync returns](#generatemappingasync): `AsyncGenerator<Settled<R>, void, unknown>`
-
-*/
-
 /** @public */
 // export type Deferred<B> = PromiseLike<Base<B>>;
 
