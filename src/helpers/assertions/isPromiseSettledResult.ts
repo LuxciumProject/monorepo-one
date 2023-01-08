@@ -13,26 +13,46 @@ export function isPromiseSettledResult<T>(
 export function isPromiseFulfilledResult<T>(
   contender: unknown
 ): contender is PromiseFulfilledResult<T> {
-  return (
-    contender != null &&
-    typeof contender === 'object' &&
-    'status' in contender &&
-    contender.status === FULFILLED &&
-    'value' in contender
-  );
+  let result = false;
+  try {
+    result =
+      contender != null &&
+      typeof contender === 'object' &&
+      'status' in contender &&
+      contender.status === FULFILLED &&
+      'value' in contender;
+  } catch {
+    // Do nothing
+    /*
+        The addition of the try/catch block
+        ensure that the function does not throw any exceptions
+        if an unexpected error occurs.
+      */
+  }
+  return result;
 }
 
 /** @public */
 export function isPromiseRejectedResult(
   contender: unknown
 ): contender is PromiseRejectedResult {
-  return (
-    contender != null &&
-    typeof contender === 'object' &&
-    'status' in contender &&
-    contender.status === REJECTED &&
-    'reason' in contender
-  );
+  let result = false;
+  try {
+    result =
+      contender != null &&
+      typeof contender === 'object' &&
+      'status' in contender &&
+      contender.status === REJECTED &&
+      'reason' in contender;
+  } catch {
+    // Do nothing
+    /*
+        The addition of the try/catch block
+        ensure that the function does not throw any exceptions
+        if an unexpected error occurs.
+      */
+  }
+  return result;
 }
 
 // TASK LIST: [TODO] (Review Documentation) --------------------------
