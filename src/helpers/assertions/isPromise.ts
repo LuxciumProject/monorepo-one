@@ -7,12 +7,12 @@ import { isPromiseLike } from './isPromiseLike';
  * by validating that it is an object that contains a thenable
  * function and is an instance of Promise.
  * @example
- *
+ * ```typescript
  * isPromise(1) // false
  * isPromise(Promise.resolve(1)) // true
  * isPromise({ then: () => {} }) // false
  * isPromise({ then: 1 }) // false
- *
+ * ```
  *
  * @param element - element of type U or Promise\<U\> to
  * validate as a Promise

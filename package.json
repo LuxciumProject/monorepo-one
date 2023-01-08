@@ -48,7 +48,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "https://github.com/LuxciumProject/monorepo-one/blob/ae1c0bde93f91dee6c0ef57b6b920448a4d51be3/library/mapping-tools/LICENSE",
+  "license": "AGPL.A",
   "devDependencies": {
     "tslib": "2.4.1",
     "cheerio": "~1.0.0-rc.12",

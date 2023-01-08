@@ -17,7 +17,7 @@ readonly BIN_DIR="${PROJECT_ROOT}/node_modules/.bin"
 # /projects/monorepo-one/library/mapping-tools/node_modules/.bin
 readonly tsconfig="${MONOREPO_ROOT}/library/typescript/tsconfig.json"
 
-../typescript/tsconfig.json
+# ../typescript/tsconfig.json
 
 echo CURRENT_DIR: "$PWD"
 echo SCRIPT_DIR: "$SCRIPT_DIR"

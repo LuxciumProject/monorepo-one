@@ -4,10 +4,12 @@
  * Function used to check if an element is a PromiseLike\<U\> object
  * by validating that it is an object that contains a thenable function.
  * @example
+ * ```typescript
  * isPromiseLike(1) // false
  * isPromiseLike(Promise.resolve(1)) // true
  * isPromiseLike({ then: () => {} }) // true
  * isPromiseLike({ then: 1 }) // false
+ *```
  *
  * @param element - element of type U or PromiseLike\<U\> to
  * validate as a PromiseLike
