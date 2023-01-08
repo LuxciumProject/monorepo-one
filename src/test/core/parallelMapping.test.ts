@@ -1,8 +1,8 @@
-import { paralellMapping } from '../..';
+import { parallelMapping } from '../..';
 
 describe('Sanity check Level 1', () => {
-  it('Should pass the smoke test paralellMapping_TEST_', async () => {
-    expect(await Promise.all(paralellMapping([{ item: 10 }]))).toStrictEqual([
+  it('Should pass the smoke test parallelMapping_TEST_', async () => {
+    expect(await Promise.all(parallelMapping([{ item: 10 }]))).toStrictEqual([
       {
         status: 'fulfilled',
         value: { item: 10 },
@@ -12,9 +12,9 @@ describe('Sanity check Level 1', () => {
     ]);
   });
 });
-describe('paralellMapping', () => {
+describe('parallelMapping', () => {
   it('Should survive when throwing', async () => {
-    const result = paralellMapping([{ size: 10 }], async obj => {
+    const result = parallelMapping([{ size: 10 }], async obj => {
       if (obj.size === 10) throw ['test'];
     });
     const expected = {
@@ -28,7 +28,7 @@ describe('paralellMapping', () => {
     expect(await Promise.all(result)).toStrictEqual([expected]);
   });
   it('Should survive when throwing with null in each delegates functions', async () => {
-    const result = paralellMapping(
+    const result = parallelMapping(
       [{ size: 10 }],
       async obj => {
         if (obj.size === 10) throw ['test'];
@@ -48,7 +48,7 @@ describe('paralellMapping', () => {
     expect(await Promise.all(result)).toStrictEqual([expected]);
   });
   it('Should be able to recive null in each delegates functions', async () => {
-    const result = paralellMapping([1, 2, 3], null, null, null, null);
+    const result = parallelMapping([1, 2, 3], null, null, null, null);
     const expected = [
       { index: 0, status: 'fulfilled', transformStep: 1, value: 1 },
       { index: 1, status: 'fulfilled', transformStep: 1, value: 2 },

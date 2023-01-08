@@ -1,14 +1,14 @@
 import { awaitedMapping } from '../../functions/awaitedMapping';
 import { generateMapping } from '../../functions/generateMapping';
 import { generateMappingAsync } from '../../functions/generateMappingAsync';
-import { paralellMapping } from '../../functions/paralellMapping';
+import { parallelMapping } from '../../functions/parallelMapping';
 import { serialMapping } from '../../functions/serialMapping';
 import { OnlySideEffect } from '../../types';
 
 awaitedMapping;
 generateMapping;
 generateMappingAsync;
-paralellMapping;
+parallelMapping;
 serialMapping;
 
 export class MappingTools<T, R> {
@@ -66,8 +66,8 @@ export class MappingTools<T, R> {
       this.errLookupFn_
     );
   }
-  paralellMapping() {
-    paralellMapping(
+  parallelMapping() {
+    parallelMapping(
       this.collection,
       this.transformFn_,
       this.lookupFn_,

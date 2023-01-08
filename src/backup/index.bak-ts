@@ -4,7 +4,7 @@
  * @remarks
  * The `@luxcium/mapping-tools` library defines 5 core functions used to map on iterables with diferent outcomes in mind
  * {@link awaitedMapping}, {@link generateMappingAsync}, {@link generateMapping},
- * {@link paralellMapping} and {@link serialMapping}
+ * {@link parallelMapping} and {@link serialMapping}
  *
  * @packageDocumentation
  */
@@ -14,7 +14,7 @@ import {
   awaitedMapping_α,
   generateMappingAsync_α,
   generateMapping_ς,
-  paralellMapping_ς,
+  parallelMapping_ς,
   serialMapping_α,
 } from './core';
 import {
@@ -43,7 +43,7 @@ export type {
 export { awaitedMapping_α as awaitedMapping };
 export { generateMapping_ς as generateMapping };
 export { generateMappingAsync_α as generateMappingAsync };
-export { paralellMapping_ς as paralellMapping };
+export { parallelMapping_ς as parallelMapping };
 export { serialMapping_α as serialMapping };
 export { converToIsometricSettledResult };
 export { isometricSettledResult };
@@ -77,7 +77,7 @@ export const mappingTools = {
   awaitedMapping_α,
   generateMapping_ς,
   generateMappingAsync_α,
-  paralellMapping_ς,
+  parallelMapping_ς,
   serialMapping_α,
 };
 

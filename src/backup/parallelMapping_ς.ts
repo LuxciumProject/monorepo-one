@@ -3,7 +3,7 @@ import { OnlySideEffect } from '../types';
 import { Mapper } from './Mapper';
 
 /** @deprecated */
-export function paralellMapping_ς<R, T>(
+export function parallelMapping_ς<R, T>(
   collection: Iterable<T>,
   transform: Mapper<T, Promise<R>>, //  (item: T) => Promise<R>,
   // transform: (item: T) => Promise<R>,

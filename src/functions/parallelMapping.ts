@@ -12,7 +12,7 @@ import { fn_a1f9a } from './core';
  * @beta
  */
 
-export function paralellMapping<T, R>(
+export function parallelMapping<T, R>(
   collection: Collection<T>,
   transformFn: TransformFn<T, R> | null = async value => value as any as R,
   lookupFn: LookupFn<T, R> | null = v => void v,

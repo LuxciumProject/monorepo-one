@@ -7,12 +7,12 @@ Make the documentation user-friendly with navigation and Table of Contents
 The package is based on 5 core function (main functions)
 The name of the 5 core functions of my pakage are as follow:
 
-awaitedMapping, paralellMapping, serialMapping, generateMappingAsync, and generateMapping
+awaitedMapping, parallelMapping, serialMapping, generateMappingAsync, and generateMapping
 
 The list of thier main input type is as follow:
   - serialMapping takes as its main input: `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>`
   - awaitedMapping takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
-  - paralellMapping takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+  - parallelMapping takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - generateMappingAsync takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - generateMapping takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
 
@@ -31,7 +31,7 @@ the 4 delegates functions are described as follow:
 The list of the 5 core function return type is as follow:
   - serialMapping returns: `Promise<Array<Settled<R>>>`
   - awaitedMapping returns: `Promise<Array<Settled<R>>>`
-  - paralellMapping returns: `Array<Promise<Settled<R>>>`
+  - parallelMapping returns: `Array<Promise<Settled<R>>>`
   - generateMappingAsync returns: `AsyncGenerator<Settled<R>, void, unknown>`
   - generateMapping returns: `Generator<Promise<Settled<R>>, void, unknown>`
 

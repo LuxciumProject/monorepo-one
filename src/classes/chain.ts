@@ -2,7 +2,7 @@ import {
   awaitedMapping,
   generateMapping,
   generateMappingAsync,
-  paralellMapping,
+  parallelMapping,
   serialMapping,
 } from '../functions';
 import { isSettled } from '../helpers/assertions';
@@ -110,14 +110,14 @@ export class Chain<B> {
     );
     return new Chain<R>(result);
   }
-  public paralellMapping<R>(
+  public parallelMapping<R>(
     transformFn: null | TransformFn<B, R> = async value => value as any as R,
     lookupFn: null | LookupFn<B, R> = v => void v,
     validateFn: null | ValidateFn<B, R> = async v => void v,
     errLookupFn: null | ErrLookupFn = v => void v
   ): Chain<Promise<Settled<R>>> {
     const result = (async (): Promise<Promise<Settled<R>>[]> =>
-      paralellMapping(
+      parallelMapping(
         await this.collection,
         transformFn,
         lookupFn,

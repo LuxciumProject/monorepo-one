@@ -4,7 +4,7 @@ cd src/test
     echo 'export { }' > generateMapping.test.ts
     echo 'export { }' > generateMappingAsync.test.ts
     echo 'export { }' > index.test.ts
-    echo 'export { }' > paralellMapping.test.ts
+    echo 'export { }' > parallelMapping.test.ts
     echo 'export { }' > serialMapping.test.ts
   cd ..
   cdir core/function

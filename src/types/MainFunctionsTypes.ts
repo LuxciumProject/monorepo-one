@@ -59,7 +59,7 @@ export type GenerateMappingAsyncFn = Function &
 
 /*
 ChatGPT
-Each of the five main functions in "mapping-tools" - awaitedMapping, paralellMapping, serialMapping, generateMappingAsync, and generateMapping - can take as arguments one iterable (which we'll refer to as a "collection") and four delegate functions (for a total of five arguments). These delegate functions are the same for each main function and are used to transform, lookup, validate, and handle errors in the mapping process.
+Each of the five main functions in "mapping-tools" - awaitedMapping, parallelMapping, serialMapping, generateMappingAsync, and generateMapping - can take as arguments one iterable (which we'll refer to as a "collection") and four delegate functions (for a total of five arguments). These delegate functions are the same for each main function and are used to transform, lookup, validate, and handle errors in the mapping process.
 
 The five parameters for these functions are defined as follows:
 
@@ -72,7 +72,7 @@ errLookupFn: This is an optional delegate function that is used to handle errors
 
 Sure, here is how you can describe the parameters for the main functions in your package:
 
-Each of the main functions in mapping-tools (awaitedMapping, paralellMapping, serialMapping, generateMappingAsync, and generateMapping) takes five parameters:
+Each of the main functions in mapping-tools (awaitedMapping, parallelMapping, serialMapping, generateMappingAsync, and generateMapping) takes five parameters:
 
 collection: This is the iterable (or Collection) that you want to transform. It can be of type Collection<T> or PromiseLike<Collection<T>>, where T is the input type.
 

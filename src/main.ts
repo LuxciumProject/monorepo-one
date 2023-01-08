@@ -1,5 +1,5 @@
 import { awaitedMapping } from './functions/awaitedMapping';
-import { paralellMapping } from './functions/paralellMapping';
+import { parallelMapping } from './functions/parallelMapping';
 // import { listFulfilledResults } from './helpers/tools';
 
 const transformFn = async (x: number) => {
@@ -29,7 +29,7 @@ void (async function MAIN() {
   console.log(`at: MAIN from ${__filename}`);
 
   // INFO: //// awaitedMapping ///////////////////////////////////////
-  const step2 = paralellMapping(
+  const step2 = parallelMapping(
     await step1,
     transformFn,
     undefined,
@@ -38,9 +38,9 @@ void (async function MAIN() {
   const step3 = awaitedMapping(step2, addFn, undefined, validateFn);
   console.log(await step3);
   // console.log(await listFulfilledResults(step3));
-  const value = await Promise.all(paralellMapping([{ item: 10 }]));
+  const value = await Promise.all(parallelMapping([{ item: 10 }]));
   console.log('value =', value);
-  const result3 = paralellMapping([{ size: 10 }], async obj => {
+  const result3 = parallelMapping([{ size: 10 }], async obj => {
     if (obj.size === 10) throw ['test'];
   });
   result3.map(async item => console.log('result3 =', await item));
@@ -50,8 +50,8 @@ void (async function MAIN() {
 /*
 
 describe.skip('Sanity check Level 1', () => {
-  it('Should pass the smoke test paralellMapping_TEST_', async () => {
-    expect(await Promise.all(paralellMapping([{ item: 10 }]))).toStrictEqual([
+  it('Should pass the smoke test parallelMapping_TEST_', async () => {
+    expect(await Promise.all(parallelMapping([{ item: 10 }]))).toStrictEqual([
       {
         status: 'fulfilled',
         value: { item: 10 },
@@ -61,9 +61,9 @@ describe.skip('Sanity check Level 1', () => {
     ]);
   });
 });
-describe.skip('paralellMapping', () => {
+describe.skip('parallelMapping', () => {
   it('Should survive when throwing', async () => {
-    const result3 = paralellMapping([{ size: 10 }], async obj => {
+    const result3 = parallelMapping([{ size: 10 }], async obj => {
       if (obj.size === 10) throw ['test'];
     });
     const expected = {

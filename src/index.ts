@@ -6,7 +6,7 @@
  * - {@link awaitedMapping}
  * - {@link generateMappingAsync}
  * - {@link generateMapping}
- * - {@link paralellMapping}
+ * - {@link parallelMapping}
  * - {@link serialMapping}
  *
  * @remarks
@@ -58,7 +58,7 @@ import type {
 export { awaitedMapping } from './functions/awaitedMapping';
 export { generateMapping } from './functions/generateMapping';
 export { generateMappingAsync } from './functions/generateMappingAsync';
-export { paralellMapping } from './functions/paralellMapping';
+export { parallelMapping } from './functions/parallelMapping';
 export { serialMapping } from './functions/serialMapping';
 export { constants, helpers, functions };
 export type {

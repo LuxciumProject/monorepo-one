@@ -76,7 +76,7 @@ The output of the mapping-tools package is based on the `Settled<TVal>` type, ww
 Overall, the mapping-tools package is a reliable choice for performing transformations on collections of data.
 
 1. **[awaitedMapping](#awaitedmapping)**, is based on Promise.all($)
-2. **[paralellMapping](#parallelmapping)**, is based on Array.prototype.map($)
+2. **[parallelMapping](#parallelmapping)**, is based on Array.prototype.map($)
 3. **[serialMapping](#serialmapping)**, is based on a forOf loop
 4. **[generateMappingAsync](#generatemappingasync)**, is based on the AsyncGenerator protocol
 5. **[generateMapping](#generatemapping)**, is based on the Generator protocol
@@ -193,7 +193,7 @@ Applies the provided callback functions to each item in the collection in parall
 - Function signature:
 
   ```typescript
-  export function paralellMapping<T, R>(
+  export function parallelMapping<T, R>(
     collection: Collection<T>,
     transformFn: TransformFn<T, R> | null = async value => value as any as R,
     lookupFn: LookupFn<T, R> | null = v => void v,
@@ -603,7 +603,7 @@ type SettledValues<R> = SettledValue<R>[];
 type OnlySideEffect = void | undefined;
 ```
 
-The package has been developed to provide a simple and easy-to-use interface for performing transformations on collections of data. It offers a variety of different functions, including awaitedMapping, paralellMapping, and serialMapping, each with their own specific use cases and features.
+The package has been developed to provide a simple and easy-to-use interface for performing transformations on collections of data. It offers a variety of different functions, including awaitedMapping, parallelMapping, and serialMapping, each with their own specific use cases and features.
 
 One of the key features of the mapping-tools package is its adaptive ability to handle both promises and non-promises as input. This omnivorous feature allows it to be easily integrated into a wide range of contexts and projects, whether dealing with pending values or already resolved values. It simply requires a thenable in a PromiseLike object.
 

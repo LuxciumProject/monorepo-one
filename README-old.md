@@ -145,7 +145,7 @@ main();
 The package includes 5 main functions:
 
 1. **[awaitedMapping](#awaitedMappingFn)**, is based on Promise.all($)
-2. **[paralellMapping](#paralellMappingFn)**, is based on Array.prototype.map($)
+2. **[parallelMapping](#parallelMappingFn)**, is based on Array.prototype.map($)
 3. **[serialMapping](#serialMappingFn)**, is based on a forOf loop
 4. **[generateMappingAsync](#generateMappingAsyncFn)**, is based on the AsyncGenerator protocol
 5. **[generateMapping](#generateMappingFn)**, is based on the Generator protocol
@@ -272,9 +272,9 @@ type Collection<B> = Iterable<Base<B>>;
 <a id="generateMappingAsyncFn"></a>
 <a id="generateMappingFn"></a>
 
-<a id="paralellMappingFn"></a>
+<a id="parallelMappingFn"></a>
 
-- **paralellMapping**
+- **parallelMapping**
 
   - Based on an `Array.prototype.map($)`
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
@@ -362,14 +362,14 @@ type Collection<B> = Iterable<Base<B>>;
   ): Promise<Settled<R>[]>;
   ```
 
-- **paralellMapping**
+- **parallelMapping**
 
   - Based on an `Array.prototype.map($)`
   - Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
   - Returns: `Array<Promise<Settled<R>>>`
 
   ```typescript
-  export function paralellMapping<T, R>(
+  export function parallelMapping<T, R>(
     collection: Iterable<AwaitAndBase<T>>,
     transform: TransformFn<T, R> = async value => value as any as R,
     lookup: LookupFn<T, R> = v => void v,
