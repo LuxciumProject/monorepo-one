@@ -1,6 +1,6 @@
 {
   "name": "mapping-tools",
-  "version": "0.0.0-ALPHA-RELEASE-UNSAFE-v4.1.0x",
+  "version": "0.0.0-ALPHA-UNSAFE-v4.2.0x",
   "description": "The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.",
   "main": "lib/index.js",
   "types": "typings/index.d.ts",
@@ -48,7 +48,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "https://github.com/LuxciumProject/monorepo-one/blob/ae1c0bde93f91dee6c0ef57b6b920448a4d51be3/library/mapping-tools/LICENSE",
   "devDependencies": {
     "tslib": "2.4.1",
     "cheerio": "~1.0.0-rc.12",
