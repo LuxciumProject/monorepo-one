@@ -281,8 +281,8 @@ type Collection<B> = Iterable<Base<B>>;
   - Returns: `Array<Promise<Settled<R>>>`
 
       <p align="center">
-        <a href="images/v0.0.0/ParalellMappingFn.png">
-          <img src="images/v0.0.0/ParalellMappingFn.png" width="70%" title="Click to enlarge the image!" alt="ParalellMappingFn function type signature">
+        <a href="images/v0.0.0/ParallelMappingFn.png">
+          <img src="images/v0.0.0/ParallelMappingFn.png" width="70%" title="Click to enlarge the image!" alt="ParallelMappingFn function type signature">
         </a>
       </p>
 

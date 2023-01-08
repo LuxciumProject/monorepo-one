@@ -2,7 +2,7 @@ export type {
   AwaitedMappingFn,
   GenerateMappingAsyncFn,
   GenerateMappingFn,
-  ParalellMappingFn,
+  ParallelMappingFn,
   SerialMappingFn,
 } from './MainFunctionsTypes';
 export type {

@@ -239,7 +239,7 @@ export function parallelMapping<T, R>(
 ): Promise<Settled<R>>[];
 
 // @alpha (undocumented)
-export type ParalellMappingFn = Function &
+export type ParallelMappingFn = Function &
   (<T, R>(
     collection: Collection<T>,
     transformFn?: TransformFn<T, R> | null,

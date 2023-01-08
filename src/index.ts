@@ -42,7 +42,7 @@ import type {
   LookupFn,
   NullSymbol,
   OnlySideEffect,
-  ParalellMappingFn,
+  ParallelMappingFn,
   SerialMappingFn,
   Settled,
   SettledArray,
@@ -84,7 +84,7 @@ export type {
   AwaitedMappingFn,
   GenerateMappingAsyncFn,
   GenerateMappingFn,
-  ParalellMappingFn,
+  ParallelMappingFn,
   SerialMappingFn,
 };
 

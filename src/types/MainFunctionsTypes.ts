@@ -8,7 +8,7 @@ import type {
 import type { Settled } from './Settled';
 
 /** @alpha */
-export type ParalellMappingFn = Function &
+export type ParallelMappingFn = Function &
   (<T, R>(
     collection: Collection<T>,
     transformFn?: TransformFn<T, R> | null,
