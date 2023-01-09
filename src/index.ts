@@ -25,9 +25,18 @@
  * Specify this is a module comment and rename it to my-module:
  * @module my-module
  */
+
 import * as constants from './constants';
 import * as functions from './functions';
 import * as helpers from './helpers';
+
+/** @public */
+export const assertions: typeof helpers.assertions = helpers.assertions;
+/** @public */
+export const tools: typeof helpers.tools = helpers.tools;
+
+// export const { assertions, tools } = helpers;
+
 import type {
   AwaitedMappingFn,
   Base,
@@ -87,19 +96,17 @@ export type {
   ParallelMappingFn,
   SerialMappingFn,
 };
-
 // import * as helpers2 from './helpers';
-// const { assertions, tools } = helpers;
-// export default {
-//   helpers,
-//   ...assertions,
-//   ...tools,
-//   constants,
-//   functions,
-//   ...helpers,
-//   ...constants,
-//   ...functions,
-// };
+export default {
+  helpers,
+  constants,
+  functions,
+  ...helpers,
+  ...assertions,
+  ...tools,
+  ...constants,
+  ...functions,
+};
 /** @public */
 export const FULFILLED: typeof constants.FULFILLED = constants.FULFILLED;
 /** @public */

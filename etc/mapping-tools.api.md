@@ -4,7 +4,10 @@
 
 ```ts
 
-declare namespace assertions {
+// @public (undocumented)
+export const assertions: typeof helpers.assertions;
+
+declare namespace assertions_2 {
     export {
         isPromise,
         isPromiseLike,
@@ -44,6 +47,38 @@ declare namespace constants {
     }
 }
 export { constants }
+
+// @public (undocumented)
+const _default: {
+    awaitedMapping: typeof functions.awaitedMapping;
+    generateMapping: typeof functions.generateMapping;
+    generateMappingAsync: typeof functions.generateMappingAsync;
+    parallelMapping: typeof functions.parallelMapping;
+    serialMapping: typeof functions.serialMapping;
+    FULFILLED: "fulfilled";
+    REJECTED: "rejected";
+    NULL_SYMBOL: typeof constants.NULL_SYMBOL;
+    extractFulfilledValues: typeof helpers.tools.extractFulfilledValues;
+    extractSettledValues: typeof helpers.tools.extractSettledValues;
+    filterLeft: typeof helpers.tools.filterLeft;
+    filterRight: typeof helpers.tools.filterRight;
+    getTransformStep: typeof helpers.tools.getTransformStep;
+    isPromise: typeof helpers.assertions.isPromise;
+    isPromiseLike: typeof helpers.assertions.isPromiseLike;
+    isPromiseFulfilledResult: typeof helpers.assertions.isPromiseFulfilledResult;
+    isPromiseRejectedResult: typeof helpers.assertions.isPromiseRejectedResult;
+    isPromiseSettledResult: typeof helpers.assertions.isPromiseSettledResult;
+    hasTransformStep: typeof helpers.assertions.hasTransformStep;
+    isSettled: typeof helpers.assertions.isSettled;
+    isSettledLeft: typeof helpers.assertions.isSettledLeft;
+    isSettledRight: typeof helpers.assertions.isSettledRight;
+    assertions: typeof helpers.assertions;
+    tools: typeof helpers.tools;
+    helpers: typeof helpers;
+    constants: typeof constants;
+    functions: typeof functions;
+};
+export default _default;
 
 // @public
 export type Deferred<B> = PromiseLike<Base<B>>;
@@ -109,8 +144,8 @@ function hasTransformStep(countender: unknown): countender is TransformStep;
 
 declare namespace helpers {
     export {
-        assertions,
-        tools
+        assertions_2 as assertions,
+        tools_2 as tools
     }
 }
 export { helpers }
@@ -211,7 +246,10 @@ export type SettledValue<R> = R | NullSymbol;
 // @public (undocumented)
 export type SettledValues<R> = SettledValue<R>[];
 
-declare namespace tools {
+// @public (undocumented)
+export const tools: typeof helpers.tools;
+
+declare namespace tools_2 {
     export {
         extractFulfilledValues,
         extractSettledValues,
