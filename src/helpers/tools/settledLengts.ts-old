@@ -1,7 +1,8 @@
 import { Settled } from '../../types';
-import { getRejectedResults } from './getRejectedResults';
+import { getRejectedResults } from './getRejectedResults.ts-old';
 
-/** @beta */
+/** @deprecated */
+
 export function settledLengts<T>(
   collection: Array<Settled<T> | PromiseSettledResult<T>>
 ) {

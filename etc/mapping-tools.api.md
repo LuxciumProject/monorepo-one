@@ -45,11 +45,6 @@ declare namespace constants {
 }
 export { constants }
 
-// Warning: (ae-forgotten-export) The symbol "converToIsometricSettledResult_" needs to be exported by the entry point index.d.ts
-//
-// @beta (undocumented)
-const converToIsometricSettledResult: typeof converToIsometricSettledResult_;
-
 // @public
 export type Deferred<B> = PromiseLike<Base<B>>;
 
@@ -103,9 +98,6 @@ export type GenerateMappingAsyncFn = Function & (<R, T>(collection: Collection<T
 // @alpha (undocumented)
 export type GenerateMappingFn = Function & (<T, R>(collection: Collection<T>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Generator<Promise<Settled<R>>, void, unknown>);
 
-// @beta (undocumented)
-function getRejectedResults<T>(collection: Array<Settled<T> | PromiseSettledResult<T>>): SettledLeft[];
-
 // @public (undocumented)
 function getTransformStep(item: unknown, initialTransformStep?: number): number;
 
@@ -122,9 +114,6 @@ declare namespace helpers {
     }
 }
 export { helpers }
-
-// @beta (undocumented)
-function isometricSettledResult<T>(item: PromiseSettledResult<T>, index?: number): Settled<T>;
 
 // @public
 function isPromise<U>(element?: U | Promise<U>): element is Promise<U>;
@@ -204,13 +193,6 @@ export type SettledLeft = PromiseRejectedResult & {
     index: number;
 };
 
-// @beta (undocumented)
-function settledLengts<T>(collection: Array<Settled<T> | PromiseSettledResult<T>>): {
-    fulfilled: number;
-    rejected: number;
-    settled: number;
-};
-
 // @public
 export type SettledRight<T> = PromiseFulfilledResult<T> & {
     status: 'fulfilled';
@@ -231,15 +213,11 @@ export type SettledValues<R> = SettledValue<R>[];
 
 declare namespace tools {
     export {
-        converToIsometricSettledResult,
         extractFulfilledValues,
         extractSettledValues,
         filterLeft,
         filterRight,
-        getRejectedResults,
-        getTransformStep,
-        isometricSettledResult,
-        settledLengts
+        getTransformStep
     }
 }
 

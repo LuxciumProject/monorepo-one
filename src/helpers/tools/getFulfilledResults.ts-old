@@ -2,8 +2,8 @@ import { FULFILLED } from '../../constants';
 import { makeSettler } from '../../functions/core/makeSettler';
 import { Base } from '../../types';
 
-export {};
-/** @beta */
+/** @deprecated */
+
 export function getFulfilledResults<T>(
   collection: Iterable<Base<T>> //  Array<Settled<T> | PromiseSettledResult<T>>
 ) {

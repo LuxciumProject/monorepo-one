@@ -1,8 +1,8 @@
 import { REJECTED } from '../../constants';
 import { Settled, SettledLeft } from '../../types';
-import { converToIsometricSettledResult } from './converToIsometricSettledResult';
+import { converToIsometricSettledResult } from './converToIsometricSettledResult.ts-old';
 
-/** @beta */
+/** @deprecated */
 
 export function getRejectedResults<T>(
   collection: Array<Settled<T> | PromiseSettledResult<T>>

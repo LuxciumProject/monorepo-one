@@ -1,12 +1,20 @@
 /* istanbul ignore file */
-export { converToIsometricSettledResult } from './converToIsometricSettledResult';
+
+/** @public*/
 export {
   extractFulfilledValues,
   extractSettledValues,
   filterLeft,
   filterRight,
 } from './extractValues';
-export { getRejectedResults } from './getRejectedResults';
+/** @public*/
 export { getTransformStep } from './getTransformStep';
-export { isometricSettledResult } from './isometricSettledResult';
-export { settledLengts } from './settledLengts';
+
+// /** @deprecated */
+// export { converToIsometricSettledResult } from './converToIsometricSettledResult';
+// /** @deprecated */
+// export { getRejectedResults } from './getRejectedResults';
+// /** @deprecated */
+// export { isometricSettledResult } from './isometricSettledResult';
+// /** @deprecated */
+// export { settledLengts } from './settledLengts';

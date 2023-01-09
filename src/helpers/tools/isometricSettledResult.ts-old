@@ -1,7 +1,7 @@
 import { FULFILLED } from '../../constants';
 import { Settled, SettledLeft, SettledRight } from '../../types';
 
-/** @beta */
+/** @deprecated */
 
 export function isometricSettledResult<T>(
   item: PromiseSettledResult<T>,
