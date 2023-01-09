@@ -28,7 +28,6 @@ docs/
 doc/
 
 !LICENSE
-!typings/
 !package.json
 !README.md
 
@@ -40,5 +39,8 @@ doc/
 !lib/index.js
 !lib/constants.js.map
 !lib/index.js.map
+
+!typings/**/*.*
+
 lib/performance
 lib/test
