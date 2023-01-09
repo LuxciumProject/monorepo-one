@@ -2,7 +2,7 @@
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by)[![Latest Version](https://img.shields.io/npm/v/mapping-tools)](https://www.npmjs.com/package/mapping-tools?activeTab=readme) ![npm](https://img.shields.io/npm/dt/mapping-tools)
 
-![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v5.1.1x&color=blue)
+![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v5.1.2x&color=blue)
 
 Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript.
 
@@ -83,11 +83,11 @@ Overall, the mapping-tools package is a reliable choice for performing transform
 
 These functions all take a collection of items as their main input, along with 4 delegate functions: [transformFn](#transformfn), [lookupFn](#lookupfn), [validateFn](#validatefn) and [errLookupFn](#errlookupfn).
 
-The transformFn is a delegate function that is applied to each item in the collection. It is used to transform the item into a new value.
+The [transformFn](#transformfn) is a delegate function that is applied to each item in the collection. It is used to transform the item into a new value.
 
-The lookupFn and validateFn are also delegate functions that are applied to each item in the collection. They can be used to perform additional lookup or validation operations on the transformed items.
+The [lookupFn](#lookupfn) and [validateFn](#validatefn) are also delegate functions that are applied to each item in the collection. They can be used to perform additional lookup or validation operations on the transformed items.
 
-The errLookupFn is a delegate function that is used to handle any errors that may occur during the processing of the collection or during previous steps of processing.
+The [errLookupFn](#errlookupfn) is a delegate function that is used to handle any errors that may occur during the processing of the collection or during previous steps of processing.
 
 It is important to note that all four of these delegate functions are optional. If they are not provided, there will be no transformation or validation of the values.
 

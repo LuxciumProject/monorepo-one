@@ -1,6 +1,6 @@
 {
   "name": "mapping-tools",
-  "version": "0.0.0-ALPHA-UNSAFE-v5.1.1x",
+  "version": "0.0.0-ALPHA-UNSAFE-v5.1.2x",
   "description": "The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.",
   "main": "lib/index.js",
   "types": "typings/index.d.ts",
