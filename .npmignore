@@ -32,10 +32,10 @@ doc/
 !package.json
 !README.md
 
-!lib/functions/
-!lib/helpers/
-!lib/tools/
-!lib/types/
+!lib/functions/**/*.*
+!lib/helpers/**/*.*
+!lib/tools/**/*.*
+!lib/types/**/*.*
 !lib/constants.js
 !lib/index.js
 !lib/constants.js.map

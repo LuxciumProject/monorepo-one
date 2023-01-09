@@ -1,11 +1,23 @@
 {
   "name": "mapping-tools",
-  "version": "0.0.0-ALPHA-UNSAFE-v5.0.0x",
+  "version": "0.0.0-ALPHA-UNSAFE-v5.1.1x",
   "description": "The Mapping Tools package is designed to be user-friendly and easy to use, with clear documentation and examples. It is suitable for use in a wide range of applications, including data processing, data validation, and more.",
   "main": "lib/index.js",
   "types": "typings/index.d.ts",
+  "keywords": [
+    "itereation",
+    "mapping",
+    "generator",
+    "asyncgenerator",
+    "tools",
+    "utils",
+    "helpers"
+  ],
+  "author": "",
+  "license": "MIT",
   "scripts": {
     "build": "yarn base:build",
+    "build:dist": "scripts/build-dist.sh",
     "install": "echo unimplemented && exit 0",
     "install:": "yarn base:install",
     "rebuild": "yarn base:rm:lib; yarn base:build",
@@ -46,9 +58,6 @@
   "jest": {
     "config": "config/jest.config.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "AGPL.A",
   "devDependencies": {
     "tslib": "2.4.1",
     "cheerio": "~1.0.0-rc.12",

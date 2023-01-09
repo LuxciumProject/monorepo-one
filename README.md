@@ -2,7 +2,7 @@
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by)[![Latest Version](https://img.shields.io/npm/v/mapping-tools)](https://www.npmjs.com/package/mapping-tools?activeTab=readme) ![npm](https://img.shields.io/npm/dt/mapping-tools)
 
-![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v5.0.0x&color=blue)
+![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v5.1.1x&color=blue)
 
 Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript.
 
@@ -83,13 +83,13 @@ Overall, the mapping-tools package is a reliable choice for performing transform
 
 These functions all take a collection of items as their main input, along with 4 delegate functions: [transformFn](#transformfn), [lookupFn](#lookupfn), [validateFn](#validatefn) and [errLookupFn](#errlookupfn).
 
-The transformFn is applied to each item in the collection and is used to transform the item into a new value. The lookupFn and validateFn are applied to each item in the collection and can be used to perform additional lookup or validation operations on the transformed items. The errLookupFn is used to handle any errors that may occur during the processing of the collection or during previous steps of processing. Each are optionals but not providing any would result in no transformation of the values.
+The transformFn is a delegate function that is applied to each item in the collection. It is used to transform the item into a new value.
 
-The mapping-tools package has been designed with flexibility in mind. It is able to handle both promises and non-promises as input, allowing it to easily integrate into a variety of contexts.
+The lookupFn and validateFn are also delegate functions that are applied to each item in the collection. They can be used to perform additional lookup or validation operations on the transformed items.
 
-Additionally, the package has been built with resilience in mind. It includes robust error handling, ensuring that any errors encountered will not prevent the code from providing meaningful output. The output of the package is based on the `Settled<TVal>` type, which allows users to differentiate between successful and unsuccessful results.
+The errLookupFn is a delegate function that is used to handle any errors that may occur during the processing of the collection or during previous steps of processing.
 
-Overall, the mapping-tools package is a reliable and flexible choice for performing transformations on collections of data.
+It is important to note that all four of these delegate functions are optional. If they are not provided, there will be no transformation or validation of the values.
 
 ## Quick Start
 
