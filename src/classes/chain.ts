@@ -22,10 +22,17 @@ import {
   ValidateFn,
 } from '../types';
 
+/**
+ * UNSAFE: Name of the class will change in future release
+ * @alpha
+ */
 export class Chain<B> {
-  collection: Collection<B> | PromiseLike<Collection<B>>;
-  _list: Promise<BaseOrDeferred<B>[]>;
+  private collection: Collection<B> | PromiseLike<Collection<B>>;
+  private _list: Promise<BaseOrDeferred<B>[]>;
 
+  get list(): Promise<BaseOrDeferred<B>[]> {
+    return this._list;
+  }
   static of<BType>(
     collection: Collection<BType> | PromiseLike<Collection<BType>>
   ): Chain<BType> {
@@ -34,16 +41,25 @@ export class Chain<B> {
 
   private constructor(collection: Collection<B> | PromiseLike<Collection<B>>) {
     this.collection = collection;
-    this._list = (async function () {
+    const _list = (async function () {
       return [...(await collection)];
     })();
+    this._list = _list;
+
+    Object.defineProperty(this, '_list', {
+      value: _list,
+      enumerable: false,
+      writable: false,
+    });
+
+    return this;
   }
   public generateMapping<R>(
     transformFn: null | TransformFn<B, R> = async value => value as any as R,
     lookupFn: null | LookupFn<B, R> = v => void v,
     validateFn: null | ValidateFn<B, R> = async v => void v,
     errLookupFn: null | ErrLookupFn = v => void v
-  ) {
+  ): Chain<Promise<Settled<R>>> {
     const result = (async () =>
       generateMapping(
         await this.collection,
@@ -61,7 +77,7 @@ export class Chain<B> {
     lookupFn: null | LookupFn<B, R> = v => void v,
     validateFn: null | ValidateFn<B, R> = async v => void v,
     errLookupFn: null | ErrLookupFn = v => void v
-  ) {
+  ): Chain<R> {
     const result = (async () => {
       const asyncGenerator = generateMappingAsync(
         await this.collection,
@@ -85,7 +101,7 @@ export class Chain<B> {
     lookupFn: null | LookupFn<B, R> = v => void v,
     validateFn: null | ValidateFn<B, R> = async v => void v,
     errLookupFn: null | ErrLookupFn = v => void v
-  ) {
+  ): Chain<R> {
     const result = serialMapping(
       this.collection,
       transformFn,
@@ -144,10 +160,10 @@ export class Chain<B> {
       return filterLeft(await awaitedMapping(list));
     }
   }
-  public async extractFulfilledValues() {
-    extractFulfilledValues(await awaitedMapping(this._list));
+  public async extractFulfilledValues(): Promise<B[]> {
+    return extractFulfilledValues<B>(await awaitedMapping(this._list));
   }
   public async extractSettledValues() {
-    extractSettledValues(await awaitedMapping(this._list));
+    return extractSettledValues<B>(await awaitedMapping(this._list));
   }
 }
