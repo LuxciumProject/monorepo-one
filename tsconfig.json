@@ -8,13 +8,23 @@
     "moduleResolution": "node",
     "rootDir": "src",
     "baseUrl": "src",
-    "composite": true,
-    "declarationDir": "lib/typings",
-    "useDefineForClassFields": false,
     "outDir": "lib",
+    "declarationDir": "lib/typings",
+    "composite": true,
+    "useDefineForClassFields": false,
     "tsBuildInfoFile": "lib/ts-out-info.lib",
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
+    "typeRoots": [
+      "./src/functions",
+      "./src/helpers",
+      "./src/helpers/tools",
+      "./src/helpers/assertions",
+      "./src/constants",
+      "./src/types",
+      "./src/classes/chain",
+      "./src"
+    ],
     /* JavaScript Support */
     "allowJs": true,
     "checkJs": false,
@@ -28,7 +38,65 @@
     "types": [
       "node",
       "heft-jest"
-    ]
+    ],
+    /*
+      "exports": {
+    ".": "./lib/index.js",
+    "./functions": "./lib/functions/index.js",
+    "./helpers": "./lib/helpers/index.js",
+    "./tools": "./lib/helpers/tools/index.js",
+    "./assertions": "./lib/helpers/assertions/index.js",
+    "./helpers/tools": "./lib/helpers/tools/index.js",
+    "./helpers/assertions": "./lib/helpers/assertions/index.js",
+    "./constants": "./lib/constants.js",
+    "./types": "./lib/types/index.js",
+    "./chain": "./lib/classes/chain.js",
+    "./package.json": "./package.json"
+      "jquery": ["node_modules/jquery/dist/jquery"] // this mapping is relative to "baseUrl"
+
+              "app/*": ["app/*"],
+        "config/*": ["app/_config/*"],
+        "environment/*": ["environments/*"],
+        "shared/*": ["app/_shared/*"],
+        "helpers/*": ["helpers/*"],
+        "tests/*": ["tests/*"]
+  },
+    */
+    "paths": {
+      "./functions": [
+        "./src/functions/index"
+      ],
+      "./helpers": [
+        "./src/helpers/index"
+      ],
+      "./tools": [
+        "./src/helpers/tools/index"
+      ],
+      "./assertions": [
+        "./src/helpers/assertions/index"
+      ],
+      "./helpers/tools": [
+        "./src/helpers/tools/index"
+      ],
+      "./helpers/assertions": [
+        "./src/helpers/assertions/index"
+      ],
+      "./constants": [
+        "./src/constants"
+      ],
+      "./types": [
+        "./src/types/index"
+      ],
+      "./chain": [
+        "./src/classes/chain"
+      ],
+      "./package.json": [
+        "./package.json"
+      ],
+      "*": [
+        "./src/index"
+      ]
+    }
   },
   "include": [
     "src/**/*"

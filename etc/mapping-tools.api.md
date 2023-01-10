@@ -4,10 +4,7 @@
 
 ```ts
 
-// @public (undocumented)
-export const assertions: typeof helpers.assertions;
-
-declare namespace assertions_2 {
+declare namespace assertionTools {
     export {
         isPromise,
         isPromiseLike,
@@ -20,6 +17,7 @@ declare namespace assertions_2 {
         isSettledRight
     }
 }
+export { assertionTools }
 
 // @beta (undocumented)
 export function awaitedMapping<T, R>(collection: DeferredCollection<T>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null): Promise<Settled<R>[]>;
@@ -48,38 +46,6 @@ declare namespace constants {
 }
 export { constants }
 
-// @public (undocumented)
-const _default: {
-    awaitedMapping: typeof functions.awaitedMapping;
-    generateMapping: typeof functions.generateMapping;
-    generateMappingAsync: typeof functions.generateMappingAsync;
-    parallelMapping: typeof functions.parallelMapping;
-    serialMapping: typeof functions.serialMapping;
-    FULFILLED: "fulfilled";
-    REJECTED: "rejected";
-    NULL_SYMBOL: typeof constants.NULL_SYMBOL;
-    extractFulfilledValues: typeof helpers.tools.extractFulfilledValues;
-    extractSettledValues: typeof helpers.tools.extractSettledValues;
-    filterLeft: typeof helpers.tools.filterLeft;
-    filterRight: typeof helpers.tools.filterRight;
-    getTransformStep: typeof helpers.tools.getTransformStep;
-    isPromise: typeof helpers.assertions.isPromise;
-    isPromiseLike: typeof helpers.assertions.isPromiseLike;
-    isPromiseFulfilledResult: typeof helpers.assertions.isPromiseFulfilledResult;
-    isPromiseRejectedResult: typeof helpers.assertions.isPromiseRejectedResult;
-    isPromiseSettledResult: typeof helpers.assertions.isPromiseSettledResult;
-    hasTransformStep: typeof helpers.assertions.hasTransformStep;
-    isSettled: typeof helpers.assertions.isSettled;
-    isSettledLeft: typeof helpers.assertions.isSettledLeft;
-    isSettledRight: typeof helpers.assertions.isSettledRight;
-    assertions: typeof helpers.assertions;
-    tools: typeof helpers.tools;
-    helpers: typeof helpers;
-    constants: typeof constants;
-    functions: typeof functions;
-};
-export default _default;
-
 // @public
 export type Deferred<B> = PromiseLike<Base<B>>;
 
@@ -91,18 +57,6 @@ export interface ErrLookupFn {
     // (undocumented)
     (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
 }
-
-// @public
-function extractFulfilledValues<R>(settledArray: Settled<R>[]): R[];
-
-// @public
-function extractSettledValues<R>(settledArray: Settled<R>[]): (R | typeof NULL_SYMBOL_2)[];
-
-// @public
-function filterLeft<R>(settledArray: Settled<R>[]): SettledLeft[];
-
-// @public
-function filterRight<R>(settledArray: Settled<R>[]): SettledRight<R>[];
 
 // @public (undocumented)
 export const FULFILLED: typeof constants.FULFILLED;
@@ -133,22 +87,11 @@ export type GenerateMappingAsyncFn = Function & (<R, T>(collection: Collection<T
 // @alpha (undocumented)
 export type GenerateMappingFn = Function & (<T, R>(collection: Collection<T>, transformFn?: TransformFn<T, R> | null, lookupFn?: LookupFn<T, R> | null, validateFn?: ValidateFn<T, R> | null, errLookupFn?: ErrLookupFn | null) => Generator<Promise<Settled<R>>, void, unknown>);
 
-// @public (undocumented)
-function getTransformStep(item: unknown, initialTransformStep?: number): number;
-
 // Warning: (ae-incompatible-release-tags) The symbol "hasTransformStep" is marked as @public, but its signature references "TransformStep" which is marked as @beta
 // Warning: (ae-incompatible-release-tags) The symbol "hasTransformStep" is marked as @public, but its signature references "TransformStep" which is marked as @beta
 //
 // @public (undocumented)
 function hasTransformStep(countender: unknown): countender is TransformStep;
-
-declare namespace helpers {
-    export {
-        assertions_2 as assertions,
-        tools_2 as tools
-    }
-}
-export { helpers }
 
 // @public
 function isPromise<U>(element?: U | Promise<U>): element is Promise<U>;
@@ -247,17 +190,13 @@ export type SettledValue<R> = R | NullSymbol;
 export type SettledValues<R> = SettledValue<R>[];
 
 // @public (undocumented)
-export const tools: typeof helpers.tools;
-
-declare namespace tools_2 {
-    export {
-        extractFulfilledValues,
-        extractSettledValues,
-        filterLeft,
-        filterRight,
-        getTransformStep
-    }
-}
+export const tools: {
+    extractFulfilledValues: typeof extractFulfilledValues;
+    extractSettledValues: typeof extractSettledValues;
+    filterLeft: typeof filterLeft;
+    filterRight: typeof filterRight;
+    getTransformStep: typeof getTransformStep;
+};
 
 // @public (undocumented)
 export interface TransformFn<T, U = unknown> {
@@ -275,5 +214,13 @@ export interface ValidateFn<S, U = unknown> {
     // (undocumented)
     (value: U, index: number, array: readonly (S | PromiseSettledResult<S>)[]): Promise<OnlySideEffect>;
 }
+
+// Warnings were encountered during analysis:
+//
+// src/index.ts:127:19 - (ae-forgotten-export) The symbol "extractFulfilledValues" needs to be exported by the entry point index.d.ts
+// src/index.ts:127:19 - (ae-forgotten-export) The symbol "extractSettledValues" needs to be exported by the entry point index.d.ts
+// src/index.ts:127:19 - (ae-forgotten-export) The symbol "filterLeft" needs to be exported by the entry point index.d.ts
+// src/index.ts:127:19 - (ae-forgotten-export) The symbol "filterRight" needs to be exported by the entry point index.d.ts
+// src/index.ts:127:19 - (ae-forgotten-export) The symbol "getTransformStep" needs to be exported by the entry point index.d.ts
 
 ```

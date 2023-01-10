@@ -2,7 +2,7 @@
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by)[![Latest Version](https://img.shields.io/npm/v/mapping-tools)](https://www.npmjs.com/package/mapping-tools?activeTab=readme) ![npm](https://img.shields.io/npm/dt/mapping-tools)
 
-![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v5.3.1x&color=blue)
+![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v5.5.1x&color=blue)
 
 Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript.
 
