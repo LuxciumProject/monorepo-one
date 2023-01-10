@@ -28,14 +28,59 @@
 
 import * as constants from './constants';
 import * as functions from './functions';
-import * as helpers from './helpers';
+// import * as helpers from './helpers';
+import * as assertionTools from './helpers/assertions';
+// import * as tools from './helpers/tools';
 
+export { Chain } from './classes/chain';
+export { awaitedMapping } from './functions/awaitedMapping';
+export { generateMapping } from './functions/generateMapping';
+export { generateMappingAsync } from './functions/generateMappingAsync';
+export { parallelMapping } from './functions/parallelMapping';
+export { serialMapping } from './functions/serialMapping';
 /** @public */
-export const assertions: typeof helpers.assertions = helpers.assertions;
+// export {
+//   extractFulfilledValues,
+//   extractSettledValues,
+//   filterLeft,
+//   filterRight,
+//   getTransformStep,
+// };
+export { constants, functions, assertionTools };
+export type {
+  Collection,
+  Deferred,
+  DeferredCollection,
+  BaseOrDeferred,
+  NullSymbol,
+  SettledArray,
+  SettledValue,
+  SettledValues,
+};
+export type {
+  Base,
+  Settled,
+  SettledLeft,
+  SettledRight,
+  TransformStep,
+  CollectionOfDeferred,
+};
+export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn, OnlySideEffect };
+export type {
+  AwaitedMappingFn,
+  GenerateMappingAsyncFn,
+  GenerateMappingFn,
+  ParallelMappingFn,
+  SerialMappingFn,
+};
 /** @public */
-export const tools: typeof helpers.tools = helpers.tools;
-
-// export const { assertions, tools } = helpers;
+import {
+  extractFulfilledValues,
+  extractSettledValues,
+  filterLeft,
+  filterRight,
+  getTransformStep,
+} from './helpers/tools';
 
 import type {
   AwaitedMappingFn,
@@ -64,49 +109,6 @@ import type {
   ValidateFn,
 } from './types';
 
-export { awaitedMapping } from './functions/awaitedMapping';
-export { generateMapping } from './functions/generateMapping';
-export { generateMappingAsync } from './functions/generateMappingAsync';
-export { parallelMapping } from './functions/parallelMapping';
-export { serialMapping } from './functions/serialMapping';
-export { constants, helpers, functions };
-export type {
-  Collection,
-  Deferred,
-  DeferredCollection,
-  BaseOrDeferred,
-  NullSymbol,
-  SettledArray,
-  SettledValue,
-  SettledValues,
-};
-export type {
-  Base,
-  Settled,
-  SettledLeft,
-  SettledRight,
-  TransformStep,
-  CollectionOfDeferred,
-};
-export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn, OnlySideEffect };
-export type {
-  AwaitedMappingFn,
-  GenerateMappingAsyncFn,
-  GenerateMappingFn,
-  ParallelMappingFn,
-  SerialMappingFn,
-};
-// import * as helpers2 from './helpers';
-export default {
-  helpers,
-  constants,
-  functions,
-  ...helpers,
-  ...assertions,
-  ...tools,
-  ...constants,
-  ...functions,
-};
 /** @public */
 export const FULFILLED: typeof constants.FULFILLED = constants.FULFILLED;
 /** @public */
@@ -115,3 +117,41 @@ export const REJECTED: typeof constants.REJECTED = constants.REJECTED;
 export const NULL_SYMBOL: typeof constants.NULL_SYMBOL = constants.NULL_SYMBOL;
 
 // @alpha, @beta, /** @public */, or @internal
+
+// export const assertions: typeof helpers.assertions = helpers.assertions;
+// /** @public */
+// export const tools: typeof helpers.tools = helpers.tools;
+
+// export const { assertions, tools } = helpers;
+
+// /** @public */
+export const tools = {
+  extractFulfilledValues,
+  extractSettledValues,
+  filterLeft,
+  filterRight,
+  getTransformStep,
+};
+// /** @public */
+// export const assertions = {
+//   isPromise,
+//   isPromiseLike,
+//   isPromiseFulfilledResult,
+//   isPromiseRejectedResult,
+//   isPromiseSettledResult,
+//   hasTransformStep,
+//   isSettled,
+//   isSettledLeft,
+//   isSettledRight,
+// };
+// import * as helpers2 from './helpers';
+// export default {
+//   helpers,
+//   constants,
+//   functions,
+//   ...helpers,
+//   ...assertions,
+//   ...tools,
+//   ...constants,
+//   ...functions,
+// };

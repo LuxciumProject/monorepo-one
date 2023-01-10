@@ -9,4 +9,11 @@ export interface LookupFn<S, U = unknown> {
   ): OnlySideEffect;
 }
 
+export interface LookupFnSync<S, U = unknown> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
+  ): OnlySideEffect;
+}
 // TASK LIST: [TODO: Types] (Review Documentation) -------------------

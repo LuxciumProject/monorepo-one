@@ -33,4 +33,20 @@ export function parallelMapping<T, R>(
   );
 }
 
+export function settleArray<T, R>(
+  collection: Collection<T>
+): Promise<Settled<R>>[] {
+  return [...collection].map((item, index, array) =>
+    fn_a1f9a({
+      item,
+      index,
+      array,
+      transform: async value => value as any as R,
+      lookup: v => void v,
+      validate: async v => void v,
+      errLookup: v => void v,
+    })
+  );
+}
+
 // TASK LIST: [TODO] (Review Documentation) --------------------------
