@@ -24,7 +24,4 @@ export interface ErrLookupFn {
   (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
 }
 
-export interface ErrLookupFnSync {
-  (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
-}
 // TASK LIST: [TODO: Types] (Review Documentation) -------------------
