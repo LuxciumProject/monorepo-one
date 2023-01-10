@@ -4,6 +4,7 @@ import {
   extractSettledValues,
   filterLeft,
   filterRight,
+  toFulfilment,
 } from '../../../../helpers/tools';
 import { Settled } from '../../../../types';
 filterLeft;
@@ -301,73 +302,19 @@ describe('extractFulfilledValues', () => {
     //     // expect(actual).(expected);
     done();
   });
-  it('should extract fulfilled values', done => {
-    const settledArray: Settled<number>[] = [
-      {
-        status: 'fulfilled',
-        value: 1,
-        transformStep: -1,
-        index: -1,
-        currentRejection: null,
-        fulfilled: 1,
-        rejected: null,
-        reason: undefined,
-      },
-      {
-        status: 'rejected',
-        reason: 'value of any type',
-        currentRejection: false,
-        transformStep: -1,
-        index: -1,
-        rejected: 'value of any type',
-        fulfilled: null,
-        value: undefined,
-      },
-      {
-        status: 'fulfilled',
-        value: 2,
-        transformStep: -1,
-        index: -1,
-        currentRejection: null,
-        fulfilled: 2,
-        rejected: null,
-        reason: undefined,
-      },
-      {
-        status: 'rejected',
-        reason: 'value of any type',
-        currentRejection: false,
-        transformStep: -1,
-        index: -1,
-        rejected: 'value of any type',
-        fulfilled: null,
-        value: undefined,
-      },
-      {
-        status: 'fulfilled',
-        value: 3,
-        transformStep: -1,
-        index: -1,
-        currentRejection: null,
-        fulfilled: 3,
-        rejected: null,
-        reason: undefined,
-      },
-    ];
-    const expected = [1, 2, 3];
-    const actual = extractFulfilledValues(settledArray);
+  it('Should extract fulfilled values', done => {
+    const fulfilledArray = toFulfilment([
+      { item: 10 },
+      { item: 20 },
+      { item: 30 },
+      { item: 40 },
+    ]);
+    const expected = [{ item: 10 }, { item: 20 }, { item: 30 }, { item: 40 }];
+    const actual = extractFulfilledValues(fulfilledArray);
     expect(actual).toEqual(expected);
     //     // expect(actual).(expected);
     done();
   });
-  /**
-   * [
-    { item: 10 },
-    { item: 20 },
-    { item: 30 },
-    { item: 40 }
-  ]
-   */
 });
 // describe('extractFulfilledValues', () => {
 //   it('should extract fulfilled values', (done) => {

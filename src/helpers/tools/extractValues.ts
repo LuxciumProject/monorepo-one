@@ -1,4 +1,5 @@
 import { NULL_SYMBOL } from '../../constants';
+import { makeFulfillement } from '../../functions/core/makeFulfillement';
 import { Settled, SettledLeft, SettledRight } from '../../types';
 import { isSettledRight } from '../assertions';
 import { isSettledLeft } from '../assertions/isSettled';
@@ -55,6 +56,20 @@ export function extractSettledValues<R>(
     return NULL_SYMBOL;
   });
   return result;
+}
+
+/**
+ * Function `toFulfilment` takes an array or iterable of any values `T`
+ * and returns a `SettledRight<T>[]`.
+ *
+ * @param list - an array or iterable of any values T
+ * @returns an array of `SettledRight<T>`.
+ * @public
+ */
+export function toFulfilment<T>(list: Iterable<T>): SettledRight<T>[] {
+  return [...list].map((value, index) =>
+    makeFulfillement<T>({ value, index, transformStep: 0 })
+  );
 }
 
 // TASK LIST: (Review Documentation) [TODO: Types]  ------------------

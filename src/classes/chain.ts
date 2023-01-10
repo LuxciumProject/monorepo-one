@@ -18,6 +18,8 @@ import {
   ErrLookupFn,
   LookupFn,
   Settled,
+  SettledLeft,
+  SettledRight,
   TransformFn,
   ValidateFn,
 } from '../types';
@@ -55,10 +57,10 @@ export class Chain<B> {
     return this;
   }
   public generateMapping<R>(
-    transformFn: null | TransformFn<B, R> = async value => value as any as R,
-    lookupFn: null | LookupFn<B, R> = v => void v,
-    validateFn: null | ValidateFn<B, R> = async v => void v,
-    errLookupFn: null | ErrLookupFn = v => void v
+    transformFn?: TransformFn<B, R> | null,
+    lookupFn?: LookupFn<B, R> | null,
+    validateFn?: ValidateFn<B, R> | null,
+    errLookupFn?: ErrLookupFn | null
   ): Chain<Promise<Settled<R>>> {
     const result = (async () =>
       generateMapping(
@@ -73,10 +75,10 @@ export class Chain<B> {
   }
 
   generateMappingAsync<R>(
-    transformFn: null | TransformFn<B, R> = async value => value as any as R,
-    lookupFn: null | LookupFn<B, R> = v => void v,
-    validateFn: null | ValidateFn<B, R> = async v => void v,
-    errLookupFn: null | ErrLookupFn = v => void v
+    transformFn?: TransformFn<B, R> | null,
+    lookupFn?: LookupFn<B, R> | null,
+    validateFn?: ValidateFn<B, R> | null,
+    errLookupFn?: ErrLookupFn | null
   ): Chain<R> {
     const result = (async () => {
       const asyncGenerator = generateMappingAsync(
@@ -97,10 +99,10 @@ export class Chain<B> {
   }
 
   public serialMapping<R>(
-    transformFn: null | TransformFn<B, R> = async value => value as any as R,
-    lookupFn: null | LookupFn<B, R> = v => void v,
-    validateFn: null | ValidateFn<B, R> = async v => void v,
-    errLookupFn: null | ErrLookupFn = v => void v
+    transformFn?: TransformFn<B, R> | null,
+    lookupFn?: LookupFn<B, R> | null,
+    validateFn?: ValidateFn<B, R> | null,
+    errLookupFn?: ErrLookupFn | null
   ): Chain<R> {
     const result = serialMapping(
       this.collection,
@@ -112,10 +114,10 @@ export class Chain<B> {
     return new Chain(result);
   }
   public awaitedMapping<R>(
-    transformFn: null | TransformFn<B, R> = async value => value as any as R,
-    lookupFn: null | LookupFn<B, R> = v => void v,
-    validateFn: null | ValidateFn<B, R> = async v => void v,
-    errLookupFn: null | ErrLookupFn = v => void v
+    transformFn?: TransformFn<B, R> | null,
+    lookupFn?: LookupFn<B, R> | null,
+    validateFn?: ValidateFn<B, R> | null,
+    errLookupFn?: ErrLookupFn | null
   ): Chain<R> {
     const result = awaitedMapping(
       this.collection,
@@ -127,10 +129,10 @@ export class Chain<B> {
     return new Chain<R>(result);
   }
   public parallelMapping<R>(
-    transformFn: null | TransformFn<B, R> = async value => value as any as R,
-    lookupFn: null | LookupFn<B, R> = v => void v,
-    validateFn: null | ValidateFn<B, R> = async v => void v,
-    errLookupFn: null | ErrLookupFn = v => void v
+    transformFn?: TransformFn<B, R> | null,
+    lookupFn?: LookupFn<B, R> | null,
+    validateFn?: ValidateFn<B, R> | null,
+    errLookupFn?: ErrLookupFn | null
   ): Chain<Promise<Settled<R>>> {
     const result = (async (): Promise<Promise<Settled<R>>[]> =>
       parallelMapping(
@@ -144,15 +146,15 @@ export class Chain<B> {
     return new Chain<Promise<Settled<R>>>(result);
   }
 
-  public async filterRight() {
+  public async filterRight(): Promise<SettledRight<B>[]> {
     const list = [...(await this.collection)];
     if (list.every((item): item is Settled<B> => isSettled(item))) {
-      return filterRight(list);
+      return filterRight<B>(list);
     } else {
-      return filterRight(await awaitedMapping(list));
+      return filterRight<B>(await awaitedMapping(list));
     }
   }
-  public async filterLeft() {
+  public async filterLeft(): Promise<SettledLeft[]> {
     const list = [...(await this.collection)];
     if (list.every((item): item is Settled<B> => isSettled(item))) {
       return filterLeft(list);
