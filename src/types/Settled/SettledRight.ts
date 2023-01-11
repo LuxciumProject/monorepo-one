@@ -2,6 +2,7 @@
  * The type SettledRight<T> extends PromiseFulfilledResult<T> adding
  * isometric parameters with PromiseRejectedResult and adding
  * Cardinal and Ordinal indexes.
+ * @group Base Types
  * @public
  */
 

@@ -1,7 +1,9 @@
 import { FULFILLED, REJECTED } from '../../constants';
 
-/** @public */
-export function isPromiseSettledResult<T>(
+/**
+ * @category Assertion Tools
+ * @public
+ */ export function isPromiseSettledResult<T>(
   contender: any
 ): contender is PromiseSettledResult<T> {
   return (
@@ -9,7 +11,10 @@ export function isPromiseSettledResult<T>(
   );
 }
 
-/** @public */
+/**
+ * @category Assertion Tools
+ * @public
+ */
 export function isPromiseFulfilledResult<T>(
   contender: unknown
 ): contender is PromiseFulfilledResult<T> {
@@ -32,8 +37,10 @@ export function isPromiseFulfilledResult<T>(
   return result;
 }
 
-/** @public */
-export function isPromiseRejectedResult(
+/**
+ * @category Assertion Tools
+ * @public
+ */ export function isPromiseRejectedResult(
   contender: unknown
 ): contender is PromiseRejectedResult {
   let result = false;

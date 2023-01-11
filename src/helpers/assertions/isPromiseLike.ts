@@ -15,6 +15,8 @@
  * validate as a PromiseLike
  * @returns true if element is a PromiseLike\<U\> object
  *
+ * @category Assertion Tools
+ *
  * @public
  *
  */

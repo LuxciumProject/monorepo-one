@@ -1,4 +1,4 @@
-import { awaitedMapping } from '../../../functions';
+import { awaitedMapping, serialMapping } from '../../../functions';
 import { Chain } from '../../../index';
 
 describe('Class Chain', () => {
@@ -214,29 +214,45 @@ describe('Class Chain', () => {
       },
     ]);
   });
-  it('Should have a method `filterLeft`', async () => {
+  it('Should `filterLeft` to an empty array from a Settled<any> with no rejections', async () => {
     const chain = Chain.of([1, 2, 3, 4]);
 
-    const filteredLeftChain = await chain
-      // .serialMapping(
-      //   // v => v,
-      //   // null
-      //   // async value => {
-      //   //   if (value.item % 20 === 0) {
-      //   //     throw new Error();
-      //   //   }
-      //   // }
-      // )
-      .filterLeft();
+    const filteredLeftChain = await chain.filterLeft();
+
+    expect(filteredLeftChain).toEqual([]);
+  });
+
+  it('Should `filterLeft` to an array from a Settled<any> with the rejections', async () => {
+    const collection = [1, 2, 3, 4];
+    const series = serialMapping(
+      collection,
+      async v => v,
+      null,
+      async value => {
+        if (value % 2 === 0) {
+          throw new Error();
+        }
+      }
+    );
+    const chain = Chain.of(series);
+
+    const filteredLeftChain = await chain.filterLeft();
 
     expect(filteredLeftChain).toEqual([
-      // {
-      //   currentRejection: true,
-      //   index: 1,
-      //   reason: new Error(),
-      //   status: 'rejected',
-      //   transformStep: 0,
-      // },
+      {
+        currentRejection: true,
+        index: 1,
+        reason: new Error(),
+        status: 'rejected',
+        transformStep: 0,
+      },
+      {
+        currentRejection: true,
+        index: 3,
+        reason: new Error(),
+        status: 'rejected',
+        transformStep: 0,
+      },
     ]);
   });
 });

@@ -2,6 +2,7 @@
  * The type SettledLeft extends PromiseRejectedResult adding
  * isometric parameters with PromiseRejectedResult and adding
  * Cardinal and Ordinal indexes.
+ * @group Base Types
  * @public
  */
 

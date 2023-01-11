@@ -1,0 +1,406 @@
+v0.23.24 (2023-01-07)
+Bug Fixes
+Fixed an issue where signature comments were preferred over property comments for indirectly created function-properties, #2135.
+Fixed symlink handling when expanding entry points, #2130.
+Thanks!
+@boneskull
+v0.23.23 (2022-12-18)
+Features
+Added ts.Signature to emitted EVENT_CREATE_SIGNATURE event, #2002.
+Bug Fixes
+Links to members hidden by filter settings now temporarily override the filter, #2092.
+If src/ and src/x are specified as entry points, src/ will no longer be ignored, #2121.
+v0.23.22 (2022-12-11)
+Features
+Add support for defining the kind sort order, #2109.
+Bug Fixes
+Normalize all file paths on Windows, #2113.
+Fix @link tags within lists, #2103.
+v0.23.21 (2022-11-14)
+Features
+Added support for a catch-all wildcard in externalSymbolLinkMappings, #2102.
+Added support for TypeScript 4.9.
+Thanks!
+@mistic100
+v0.23.20 (2022-11-03)
+Bug Fixes
+Fixed comment discovery for @inheritDoc if inheriting from a function type alias, #2087.
+v0.23.19 (2022-10-28)
+Bug Fixes
+Fixed title link if titleLink option was not specified, #2085.
+Thanks!
+@krisztianb
+v0.23.18 (2022-10-23)
+Features
+Improved error reporting when failing to find entry points, #2080, #2082.
+Bug Fixes
+Constructor parameter-properties will now use the @param comment for the parameter if available, #1261.
+Fixed display of object types containing methods, #1788.
+Fixed conversion of intrinsic string mapping types when converting without a type node, #2079.
+v0.23.17 (2022-10-18)
+Features
+Added titleLink, navigationLinks and sidebarLinks options to add additional links to the rendered output, #1830.
+Added sourceLinkTemplate option to allow more flexible specification of remote urls. Deprecated now redundant gitRevision detection starting with https?:// introduced in v0.23.16, #2068.
+Thanks!
+@futurGH
+v0.23.16 (2022-10-10)
+Features
+Object types will now be pretty printed, #1793.
+Added support for specifying the tsconfig.json file in packages mode with { "typedoc": { "tsconfig": "tsconfig.lib.json" }} in package.json, #2061.
+In packages mode, readme files will now be automatically included if present, #2065.
+Added support for specifying the base file url for links to source code, #2068.
+Bug Fixes
+Private parameter properties will no longer be ignored, #2064.
+Thanks!
+@captainTorch
+v0.23.15 (2022-09-18)
+Features
+TypeDoc will now treat @typedef {import("foo").Bar<Z>} Baz type declarations which forward type parameters to the imported symbol as re-exports of that symbol, #2044.
+Bug Fixes
+TypeDoc will now prefer comments on variable declarations over signature comments, #2042.
+Fixed double rendering of "Type Parameters" header, #2054.
+Fixed double rendering of "Hierarchy" header, #2053.
+Removed unused widgets.png and widgets@2x.png files from generated assets folder.
+v0.23.14 (2022-09-03)
+Features
+Added support for defining one-off external link mappings with externalSymbolLinkMappings see the documentation for usage examples and caveats, #2030.
+External link resolvers defined with addUnknownSymbolResolver will now be checked when resolving @link tags, #2030. Note: To support this, resolution will now happen during conversion, and as such, Renderer.addUnknownSymbolResolver has been soft deprecated in favor of Converter.addUnknownSymbolResolver. Plugins should update to use the method on Converter. DefaultThemeRenderContext.attemptExternalResolution has also been deprecated since it will repeat work done during conversion, use ReferenceType.externalUrl instead.
+Added Converter.addUnknownSymbolResolver for use by plugins supporting external links.
+Bug Fixes
+Fixed conversion of object literal types containing construct signatures, #2036.
+Fixed centering of title bar on wide displays, actually this time, #2046.
+v0.23.13 (2022-09-01)
+Bug Fixes
+Fixed packages mode bug introduced in 0.23.12, #2043.
+v0.23.12 (2022-08-31)
+Features
+Added a new ParameterType.Object for declaring object options which will be shallowly merged when read from user configuration.
+Added a new Application.EVENT_BOOTSTRAP_END event emitted when Application.bootstrap is called.
+Bug Fixes
+TypeDoc will now work properly in packages mode when converting packages outside the current working directory, #2043.
+Fixed deprecation warning for isIdentifierOrPrivateIdentifier.
+Fixed centering of title bar on wide displays, #2046.
+Thanks!
+@citkane
+v0.23.11 (2022-08-26)
+Features
+Added support for TypeScript 4.8.
+Introduced a skipErrorChecking option which instructs TypeDoc to not ask TypeScript for compiler errors before attempting to generate documentation. Turning this on may improve generation speed, but could also cause a crash if your code contains compiler errors.
+Added support for JS entry points when using packages mode, #2037.
+Bug Fixes
+Fixed crash when converting abstract mixin class, #2011.
+Readme files within monorepos now have @link tags resolved, #2029.
+Correctly resolve unqualified links to class members within parameters, #2031.
+TypeDoc will now consider other reflections with the same name as parents when resolving links, #2033.
+The "Hierarchy" and "Type Parameters" helpers on DefaultThemeRenderContext now contain all the HTML for their sections of the page, #2038.
+Thanks!
+@citkane
+@kaphula
+v0.23.10 (2022-07-31)
+Features
+Added support for detecting comments directly before parameters as the parameter comment, #2019.
+Added support for using the comment directly before a constructor parameter that declares a property as the property comment, #2019.
+Improved schema generation to give better autocomplete for the sort option.
+Optional properties are now visually distinguished in the index/sidebar by rendering prop as prop?, #2023.
+DefaultThemeRenderContext.markdown now also accepts a CommentDisplayPart[] for rendering, #2004.
+Expose Converter.resolveLinks method for use with Converter.parseRawComment, #2004.
+Bug Fixes
+Fixed schema URL for TSDoc preventing the use of typedoc/tsdoc.json in TSDoc extends, #2015.
+Improved detection of package names in repositories using pnpm, #2017.
+Fixed missing JSDoc style @typedef comments for properties, #2020.
+Thanks!
+@bodil
+@nazarhussain
+v0.23.9 (2022-07-24)
+Bug Fixes
+TypeDoc will no longer skip entry points which have no exports, #2007. If using "entryPointStrategy": "expand", this change may result in new pages being added to your documentation. If this is not desired, you can use the exclude option to filter them out.
+Fixed missing comments on callable variable-functions constructed indirectly, #2008.
+Packages mode will now respect the --includeVersion flag, #2010.
+Fixed multiple reflections mapping to the same file name on case insensitive file systems, #2012.
+v0.23.8 (2022-07-17)
+Features
+Added defined in links for classes, enums, #180.
+Added support for _.ghe.com and _.github.us GitHub enterprise domains for source links, #2001.
+Expose Converter.parseRawComment for plugins to parse additional markdown files, #2004.
+Bug Fixes
+TypeDoc will no longer emit a warning for {@link} containing a URL, #1980.
+excludeNotDocumented will no longer remove functions/methods/accessors which are documented, #1994.
+Fixed missing sources property on signature reflections #1996.
+Thanks!
+@cary-hu
+@chadhietala
+v0.23.7 (2022-07-09)
+Bug Fixes
+Tags must now contain whitespace after the tag name to be parsed as a tag, @jest/globals in a comment will no longer be parsed as a tag #1990.
+The private member visibility option will now be respected in generated sites, #1992.
+Overload rendering will no longer be broken if JavaScript is disabled, #453.
+All overloads are now shown at once rather than requiring clicks to see the documentation for each signature, #1100.
+v0.23.6 (2022-07-08)
+Features
+Improved support for --entryPointStrategy Packages. TypeDoc will now load package-specific configurations from package.json typedoc field. This configuration allows configuring a custom display name (typedoc.displayName) field, entry point (typedoc.entryPoint - this is equivalent and will override typedocMain), and path to a readme file to be rendered at the top of the package page (typedoc.readmeFile), #1658.
+The --includeVersion option will now be respected by --entryPointStrategy Packages. Also, for this combination, missing version field in the root package.json will not issue a warning.
+The navigation partial will now call the new settings, primaryNavigation, and secondaryNavigation partials, #1987.
+Bug Fixes
+All warnings will be reported instead of only the first warning of a given type, #1981.
+Include references will no longer be incorrectly parsed as links, #1986.
+The generated schema.json on the website will now use enum values rather than enum names if possible.
+Thanks!
+@akphi
+@zamiell
+v0.23.5 (2022-07-02)
+Features
+The DEBUG_SEARCH_WEIGHTS global variable can now be set on window to add search scoring information in the search results.
+TypeDoc's icons are now available on DefaultThemeRenderContext.icons for use/modification by themes.
+v0.23.4 (2022-07-02)
+Bug Fixes
+TypeDoc no longer ignores project references if --entryPointStrategy Packages is set, #1976.
+Boost computations are now done when creating the search index, resulting in a smaller search.js generated file.
+Features
+The --exclude option will now be respected by --entryPointStrategy Packages and can be used to exclude package directories, #1959.
+TypeDoc now emits an IndexEvent on the Renderer when preparing the search index, #1953.
+Added new --searchInComments option to include comment text in the search index, #1553. Turning this option on will increase the size of your search index, potentially by an order of magnitude.
+v0.23.3 (2022-07-01)
+Bug Fixes
+Function properties in type space will no longer be interpreted as methods, #1637.
+TypeDoc will no longer crash if a comment contains an empty @example tag, #1967.
+TypeDoc will now detect attempted inheritance from accessors and inherit from the getter or setter, #1968.
+intentionallyNotExported will now properly respect qualified names, #1972.
+Fixed missing namespace comments on export \* as NS declarations, #1973.
+Fixed missing comments on export const x = () => 123 function variables, #1973.
+Exported variable functions with properties will now be converted as a function+namespace instead of a variable+namespace, #1651.
+Validation warnings caused by missing documentation will now be formatted like other warnings which reference a declaration.
+TypeDoc will no longer warn if both the get and set signatures of an accessor have a comment.
+Features
+Added --htmlLang option to set the lang attribute in the generated HTML. Defaults to en, #1951.
+Added --basePath option to override TypeDoc's detected root directory, #1924.
+Added support for TypeDoc specific :getter and :setter meaning keywords in declaration references.
+Warnings caused by comment contents will now do a better job of including the location of the text that caused the warning.
+v0.23.2 (2022-06-28)
+Bug Fixes
+Module comments will no longer be inappropriately attached to signatures, #1962.
+Projects with a single entry point will now parse @module comments in the entry point, #1963.
+Removed duplicate "in comment" warning when parsing comments, #1964.
+Reflections with a boost of <= 0 due to searchCategoryBoosts or searchGroupBoosts will be excluded from search.
+v0.23.1 (2022-06-26)
+Bug Fixes
+If a declaration has multiple comments associated with it, the last one should be used, #1961.
+v0.23.0 (2022-06-26)
+Breaking Changes
+Node 12 is no longer officially supported as it has gone end of life as of 2022-04-30. It might still work, but may stop working at any time.
+Dropped support for TypeScript before 4.6.
+{@link} tags in comments will now be resolved as declaration references similar to TSDoc's declaration references. For most cases, this will just work. See the documentation for details on how link resolution works.
+TypeDoc will now produce warnings for bracketed links ([[target]]). Use {@link target} instead. The {@link} syntax will be recognized by TypeScript 4.3 and later and used to provide better intellisense. TypeDoc version 0.24.0 will remove support for [[target]] style links. Support for [[`links`]] with brackets + code ticks have been dropped.
+extends in typedoc.json is now resolved using NodeJS module resolution, so a local path must begin with ./.
+In the JSON output for DeclarationReflections, getSignature is no longer a one-tuple.
+In the JSON output for DeclarationReflections, setSignature is no longer a one-tuple.
+In the JSON output for DeclarationReflections, typeParameter has been renamed to typeParameters
+The searchGroupBoosts option must now be given the rendered group name rather than reflection kind names, and can be given custom group names.
+@inheritDoc now follows the behavior specified by TSDoc when copying comments with a reference.
+The gaSite option has been removed since Google Analytics now infers the site automatically, updated Google Analytics script to latest version, #1846.
+The hideLegend option has been removed as the default theme no longer contains a legend.
+Comments on export declarations will only overrides comments for references and namespaces, #1901.
+The deprecated listInvalidSymbolLinks option has been removed. Use validation.invalidLink instead.
+The deprecated true and false values have been removed from --emit, to migrate replace true with "both" and false with "docs" (the default).
+Links are no longer be resolved against a global list of all symbols. See the documentation for details on link resolution.
+The validation.invalidLink option is now on by default.
+reflection.decorates, reflection.decorators, and their corresponding interfaces have been removed as no code in TypeDoc used them.
+The shape of the Comment class has changed significantly to support multiple tag kinds.
+Listeners to Converter.EVENT_CREATE_TYPE_PARAMETER and Converter.EVENT_CREATE_DECLARATION will now never be passed a ts.Node as their third argument.
+Constant variables which are interpreted as functions will no longer have the ReflectionFlag.Const flag set.
+reflection.defaultValue is no longer set for enum members. The same information is available on reflection.type with more precision.
+Removed deprecated removeReaderByName, addDeclarations and removeDeclarationByName methods on Options.
+Removed ProjectReflection.directory, it was unused by TypeDoc and not properly tested.
+Removed ProjectReflection.files, this was an internal cache that should not have been exposed, and shouldn't have existed in the first place, since removing it made TypeDoc faster.
+Removed ReflectionGroup.kind since groups can now be created with the @group tag.
+Removed ReflectionKind.Event, the @event tag is now an alias for @group Events. Note: This changes the value of ReflectionKind.Reference from 16777216 to 8388608.
+Themes are now set on the document element rather than on body, #1706.
+Features
+TypeDoc now supports the @group tag to group reflections in a page. If no @group tag is specified, reflections will be grouped according to their kind, #1652.
+
+TypeDoc will now search for typedoc.js(on) in the .config folder in the current working directory.
+
+Entry point strategies Resolve and Expand may now specify globs, #1926.
+
+typedoc.json now supports comments like tsconfig.json.
+
+TypeDoc will now read the blockTags, inlineTags, and modifierTags out of tsdoc.json in the same directory as tsconfig.json if it exists. It is recommended to add "extends": ["typedoc/tsdoc.json"], which defines TypeDoc specific tags to your tsdoc.json if you create one.
+
+If an exported symbol has multiple declarations, TypeDoc will now check all appropriate declarations for comments, and warn if more than one declaration contains a comment, #1855.
+
+Improved support for JSDoc style @example tags. If the tag content does not include a code block, TypeDoc now follows VSCode's behavior of treating the entire block as a code block, #135.
+
+TypeDoc will now render members marked with @deprecated with a line through their name, #1381.
+
+Added new commentStyle option which can be used to control what comments TypeDoc will parse.
+
+Value Behavior
+JSDoc Use block comments starting with /\*\*
+Block Use all block comments
+Line Use // comments
+All Use both block and line comments
+TypeDoc will now warn if part of a comment will be overwritten due to use of @inheritDoc instead of silently dropping part of the comment.
+
+Added support for inline @inheritDoc tags, #1480.
+
+It is now possible to link directly to a specific overload, #1326.
+
+The JSON output will now include URLs to the file on the remote repository if possible.
+
+Added a new visibilityFilters option which controls the available filters on a page.
+
+TypeDoc will now try to place block elements on a new line in HTML output, resulting in less overwhelming diffs when rebuilding docs, #1923.
+
+Added blockTags, inlineTags, modifierTags to control which tags TypeDoc will allow when parsing comments. If a tag not in in one of these options is encountered, TypeDoc will produce a warning and use context clues to determine how to parse the tag.
+
+Bug Fixes
+Fixed off by one error in warnings for types referenced but not included in the documentation.
+TypeDoc will no longer render a Type Parameters heading if there are no type parameters in some cases.
+Improved source location detection for constructors.
+Improved comment discovery on destructured exported functions, #1770.
+Links which refer to members within a reference reflection will now correctly resolve to the referenced reflection's member, #1770.
+Correctly detect optional parameters in JavaScript projects using JSDoc, #1804.
+Fixed identical anchor links for reflections with the same name, #1845.
+TypeDoc will now automatically inherit documentation from classes implements by other interfaces/classes.
+Fixed @inheritDoc on accessors, #1927.
+JS exports defined as exports.foo = ... will now be converted as variables rather than properties.
+searchCategoryBoosts are now correctly computed for all categories, #1960.
+The excludeNotDocumented option will no longer hide a module if it has a documentation comment, #1948.
+Prevent --excludeNotDocumented from hiding properties of type literals (a in function fn(p: { a: string })), #1752.
+Allow cts and mts extensions in packages resolution mode, #1952.
+Corrected schema generation for https://typedoc.org/schema.json
+Thanks!
+@aqumus
+@fb55
+@futurGH
+@Shane4368
+@shmax
+v0.22.18 (2022-06-25)
+Features
+Relaxed restrictions on @enum style enums to also permit non-literal strings and numbers, #1956.
+Bug Fixes
+searchGroupBoosts was only computing the boost for the first reflection in a group, #1958.
+Thanks!
+@shmax
+@Zamiell
+v0.22.17 (2022-06-01)
+Features
+Added support for documenting a module's global declarations as its exports if it contains no real exports.
+Bug Fixes
+Restore support for TS 4.0 through 4.5, #1945.
+v0.22.16 (2022-05-30)
+Features
+Added support for TypeScript 4.7, #1935.
+Support enum-like objects with numeric literal values tagged with @enum, #1918.
+Enum member reflections will now have their type set to either a LiteralType with a string or numeric value or an IntrinsicType with type number, #1942. Using defaultValue on EnumMember reflections is now deprecated, and will be broken in 0.23.
+Bug Fixes
+Fixed invalid type output in some uncommon edge cases, TypeDoc also now renders fewer superfluous parenthesis when creating types.
+TypeDoc is now more consistent about ordering with enum-value-ascending or enum-value-descending sort strategies in mixed string/number enums.
+Thanks!
+@ejuda
+@Zamiell
+v0.22.15 (2022-04-10)
+Features
+Classes which are abstract and enums which are const will now be indicated in their rendered documentation, #1874.
+Added a new option compilerOptions, which can be used to override compiler options read from tsconfig.json, #1891.
+Added new render hooks: content.begin, content.end, navigation.begin, navigation.end
+Bug Fixes
+TypeDoc will now warn if a project name/version cannot be inferred from a package.json file rather than using undefined, #1907.
+Thanks!
+@ejuda
+@matteobruni
+@schlusslicht
+v0.22.14 (2022-04-07)
+Bug Fixes
+Fixed missing comments on @enum style enum members defined in declaration files, #1880.
+Fixed --validation.notDocumented warnings for functions/methods/type aliases, #1895, #1898.
+Search results will no longer include random items when the search bar is empty, #1881.
+Comments on overloaded constructors will now be detected in the same way that overloaded functions/methods are.
+Fixed removeReflection not completely removing reflections from the project, #1898.
+Fixed @hidden / @ignore / @exclude comments on default exports with no associated variable, #1903.
+makeRecursiveVisitor will now correctly call the intersection callback, #1910.
+Thanks!
+@nlepage
+@ychan167
+v0.22.13 (2022-03-06)
+Features
+Add support for TypeScript 4.6, #1877.
+Support copying @param comments for nested members that target union and intersection types, #1876.
+Bug Fixes
+Fixed validation for --requiredToBeDocumented option, #1872.
+Fixed missing this parameters in documentation for some functions, #1875.
+v0.22.12 (2022-02-20)
+Features
+Added --validation.notDocumented option to warn on items that are not documented, #1817.
+Bug Fixes
+Fixed const variables not properly marked as const, #1866.
+Thanks!
+@albyrock87
+@Nokel81
+v0.22.11 (2022-01-18)
+Features
+Added new cname option for GitHub Pages custom domain support, #1803.
+ReferenceTypes which reference an external symbol will now include qualifiedName and package in their serialized JSON.
+Added clickable anchor link for member titles, #1842.
+Bug Fixes
+Fixed line height of h1 and h2 elements being too low, #1796.
+Code blocks in the light theme will no longer have the same background as the rest of the page, #1836.
+Symbol names passed to addUnknownSymbolResolver will now be correctly given the qualified name to the symbol being referenced, #1832.
+The search index will now be written as JSON, reducing load times for large projects, #1825.
+Thanks!
+@adeniszczyc
+@dragomirtitian
+@matteobruni
+@srmagura
+@stefanobaghino-da
+v0.22.10 (2021-11-25)
+Features
+Added support for TypeScript 4.5, #1798.
+Bug Fixes
+If file exports a symbol both under it's real name and as default, the default export will now always be the renamed symbol, #1795.
+TypeDoc will no longer crash if a symbol is defined both as a normal class (and optional interface) and as a property, as is used for global Node types in older @types/node versions, #5.
+v0.22.9 (2021-11-14)
+Features
+TypeDoc will now detect and warn if multiple instances of the package are loaded. This usually means that a plugin has its own version of TypeDoc installed, which will lead to things breaking in unexpected ways. It will only work if both loaded TypeDocs are v0.22.9 or later.
+TypeDoc will now automatically load packages with typedoc-theme in their keywords. Plugins which define a custom theme should include this keyword so that they can be automatically collected and displayed at https://typedoc.org/guides/themes/.
+Bug Fixes
+Corrected HTML generation for projects using Google Analytics, #1786.
+Ensured that the <meta charset="utf-8" /> appears within the first 1024 bytes of generated pages, #1783.
+Thanks!
+@RunDevelopment
+v0.22.8 (2021-11-07)
+Features
+Added hooks which can be used to inject HTML without completely replacing a template, #1773. See the documentation in custom-themes.md for details.
+Bug Fixes
+Actually fixed @category tag incorrectly appearing on function types if used on a type alias, #1745.
+Fix error in console when a page contains no documentation items.
+Thanks!
+@RunDevelopment
+@srmagura
+v0.22.7 (2021-10-25)
+Features
+Added support for GitHub enterprise projects with a githubprivate.com domain, #1743.
+Added support for GitLab repositories, #1728.
+Bug Fixes
+Replaced O(n^2) with O(1) implementation for determining unique IDs in a rendered page, #1755.
+Fixed crash with when running in very large repositories, #1744.
+Fixed visible gap after footer in dark mode if hideGenerator is set, #1749.
+Fixed @category tag incorrectly appearing on function types if used on a type alias, #1745.
+Fixed incorrect JS to apply themes on page load, #1709 (again).
+Accessors and index signatures are now properly marked as inherited on declaration creation, #1742.
+Thanks!
+@nlfurniss
+@RunDevelopment
+@srmagura
+v0.22.6 (2021-10-17)
+Features
+Added support for displaying identifiers & property access expressions in initializers, #1730.
+Expanded support for variables tagged with @enum to all variables whose property types are string literals, #1740.
+Bug Fixes
+Fixed flash when navigating to a second page when OS theme does not match selected theme, #1709.
+Fixed improper quoting of as const style enums, #1727.
+Fixed handling of @typeParam on type aliases, #1733.
+Fixed handling of comment tags on function type aliases, #1734.
+Paths in warnings about non-exported symbols are now consistently displayed across platforms, #1738.
+Thanks!
+@capraynor
+@srmagura

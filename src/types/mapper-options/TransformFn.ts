@@ -1,4 +1,7 @@
-/** @public */
+/**
+ * @group Delegates
+ * @public
+ */
 /*
 
 The TransformFn interface defines a function that can be used to transform a value in a collection. This function takes three arguments:
@@ -10,11 +13,10 @@ The function returns a promise that resolves to the transformed value. This func
 
  */
 export interface TransformFn<T, U = unknown> {
-  (
-    value: T,
-    index: number,
-    array: readonly (T | PromiseSettledResult<T>)[]
-  ): Promise<U>;
+  (value: T, index: number, array: readonly (T | PromiseSettledResult<T>)[]):
+    | U
+    | Promise<ReturnType<() => U>>;
+  // | Promise<T>;
 }
 
 // TASK LIST: [TODO: Types] (Review Documentation) -------------------

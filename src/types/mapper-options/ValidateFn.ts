@@ -1,6 +1,9 @@
 import { OnlySideEffect } from '..';
 
-/** @public */
+/**
+ * @group Delegates
+ *   @public
+ */
 export interface ValidateFn<S, U = unknown> {
   (
     value: U,

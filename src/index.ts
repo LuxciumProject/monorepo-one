@@ -3,11 +3,11 @@
  *
  *
  * The `@luxcium/mapping-tools` library defines 5 core functions used to map on iterables with diferent outcomes in mind
- * - {@link awaitedMapping}
+ * - {@link functions.awaitedMapping}
  * - {@link generateMappingAsync}
  * - {@link generateMapping}
- * - {@link parallelMapping}
- * - {@link serialMapping}
+ * - {@link functions.parallelMapping}
+ * - {@link functions.serialMapping}
  *
  * @remarks
  * Each function takes a collection as its first argument which can
@@ -25,64 +25,27 @@
  * Specify this is a module comment and rename it to my-module:
  * @module my-module
  */
+/* istanbul ignore file */
 
 import * as constants from './constants';
 import * as functions from './functions';
-// import * as helpers from './helpers';
+import * as helpers from './helpers';
 import * as assertionTools from './helpers/assertions';
-// import * as tools from './helpers/tools';
+import * as tools from './helpers/tools';
 
-export { Chain } from './classes/chain';
-export { awaitedMapping } from './functions/awaitedMapping';
-export { generateMapping } from './functions/generateMapping';
-export { generateMappingAsync } from './functions/generateMappingAsync';
-export { parallelMapping } from './functions/parallelMapping';
-export { serialMapping } from './functions/serialMapping';
-/** @public */
-// export {
-//   extractFulfilledValues,
-//   extractSettledValues,
-//   filterLeft,
-//   filterRight,
-//   getTransformStep,
-// };
-export { constants, functions, assertionTools };
-export type {
-  Collection,
-  Deferred,
-  DeferredCollection,
-  BaseOrDeferred,
-  NullSymbol,
-  SettledArray,
-  SettledValue,
-  SettledValues,
-};
-export type {
-  Base,
-  Settled,
-  SettledLeft,
-  SettledRight,
-  TransformStep,
-  CollectionOfDeferred,
-};
-export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn, OnlySideEffect };
-export type {
-  AwaitedMappingFn,
-  GenerateMappingAsyncFn,
-  GenerateMappingFn,
-  ParallelMappingFn,
-  SerialMappingFn,
-};
-/** @public */
 import {
-  extractFulfilledValues,
-  extractSettledValues,
-  filterLeft,
-  filterRight,
-  getTransformStep,
-} from './helpers/tools';
+  hasTransformStep,
+  isPromise,
+  isPromiseFulfilledResult,
+  isPromiseLike,
+  isPromiseRejectedResult,
+  isPromiseSettledResult,
+  isSettled,
+  isSettledLeft,
+  isSettledRight,
+} from './helpers/assertions';
 
-import type {
+import {
   AwaitedMappingFn,
   Base,
   BaseOrDeferred,
@@ -93,6 +56,7 @@ import type {
   ErrLookupFn,
   GenerateMappingAsyncFn,
   GenerateMappingFn,
+  IChain,
   LookupFn,
   NullSymbol,
   OnlySideEffect,
@@ -108,6 +72,89 @@ import type {
   TransformStep,
   ValidateFn,
 } from './types';
+/**
+ * @experimental
+ *
+ * @group experimental
+ *
+ */
+export { Chain } from './classes/chain';
+export { awaitedMapping } from './functions/awaitedMapping';
+export { generateMapping } from './functions/generateMapping';
+export { generateMappingAsync } from './functions/generateMappingAsync';
+export { parallelMapping } from './functions/parallelMapping';
+export { serialMapping } from './functions/serialMapping';
+/**
+ * @group Helper Tools
+ */
+export {
+  extractFulfilledValues,
+  extractSettledValues,
+  filterLeft,
+  filterRight,
+  getTransformStep,
+  toFulfilment,
+} from './helpers/tools';
+/**
+ * @experimental
+ *
+ * @group experimental
+ *
+ */
+export type { IChain };
+export { constants, functions, assertionTools, tools, helpers };
+/** @group Assertion Tools */
+export {
+  hasTransformStep,
+  isPromise,
+  isPromiseFulfilledResult,
+  isPromiseLike,
+  isPromiseRejectedResult,
+  isPromiseSettledResult,
+  isSettled,
+  isSettledLeft,
+  isSettledRight,
+};
+// /**
+//  * @group Helper Tools
+//  */
+// export {
+//   extractFulfilledValues,
+//   extractSettledValues,
+//   filterLeft,
+//   filterRight,
+//   getTransformStep,
+//   toFulfilment,
+// };
+export type {
+  Collection,
+  Deferred,
+  DeferredCollection,
+  BaseOrDeferred,
+  NullSymbol,
+  SettledArray,
+  SettledValue,
+  SettledValues,
+  Base,
+  Settled,
+  SettledLeft,
+  SettledRight,
+  TransformStep,
+  CollectionOfDeferred,
+  OnlySideEffect,
+  AwaitedMappingFn,
+  GenerateMappingAsyncFn,
+  GenerateMappingFn,
+  ParallelMappingFn,
+  SerialMappingFn,
+};
+/**
+ * @category Delegates Functions
+ *
+ * @group Delegates
+ *
+ */
+export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn };
 
 /** @public */
 export const FULFILLED: typeof constants.FULFILLED = constants.FULFILLED;
@@ -117,33 +164,14 @@ export const REJECTED: typeof constants.REJECTED = constants.REJECTED;
 export const NULL_SYMBOL: typeof constants.NULL_SYMBOL = constants.NULL_SYMBOL;
 
 // @alpha, @beta, /** @public */, or @internal
-
 // export const assertions: typeof helpers.assertions = helpers.assertions;
 // /** @public */
 // export const tools: typeof helpers.tools = helpers.tools;
-
 // export const { assertions, tools } = helpers;
+/** @public */
 
-// /** @public */
-export const tools = {
-  extractFulfilledValues,
-  extractSettledValues,
-  filterLeft,
-  filterRight,
-  getTransformStep,
-};
-// /** @public */
-// export const assertions = {
-//   isPromise,
-//   isPromiseLike,
-//   isPromiseFulfilledResult,
-//   isPromiseRejectedResult,
-//   isPromiseSettledResult,
-//   hasTransformStep,
-//   isSettled,
-//   isSettledLeft,
-//   isSettledRight,
-// };
+/** @public */
+
 // import * as helpers2 from './helpers';
 // export default {
 //   helpers,
@@ -154,4 +182,13 @@ export const tools = {
 //   ...tools,
 //   ...constants,
 //   ...functions,
+// };
+
+/** @public */
+// export {
+//   extractFulfilledValues,
+//   extractSettledValues,
+//   filterLeft,
+//   filterRight,
+//   getTransformStep,
 // };

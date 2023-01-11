@@ -10,6 +10,7 @@ import {
 import { fn_a1f9a } from './core';
 
 /**
+ * @group Core Functions
  * @beta
  */
 

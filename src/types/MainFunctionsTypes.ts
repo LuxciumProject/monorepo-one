@@ -7,7 +7,10 @@ import type {
 } from './mapper-options';
 import type { Settled } from './Settled';
 
-/** @alpha */
+/**
+ * @group Core Functions Types
+ * @alpha
+ */
 export type ParallelMappingFn = Function &
   (<T, R>(
     collection: Collection<T>,
@@ -17,7 +20,10 @@ export type ParallelMappingFn = Function &
     errLookupFn?: ErrLookupFn | null
   ) => Promise<Settled<R>>[]);
 
-/** @alpha */
+/**
+ * @group Core Functions Types
+ * @alpha
+ */
 export type SerialMappingFn = Function &
   (<T, R>(
     collection: Collection<T> | PromiseLike<Collection<T>>,
@@ -27,7 +33,10 @@ export type SerialMappingFn = Function &
     errLookupFn?: ErrLookupFn | null
   ) => Promise<Settled<R>[]>);
 
-/** @alpha */
+/**
+ * @group Core Functions Types
+ * @alpha
+ */
 export type AwaitedMappingFn = Function &
   (<T, R>(
     collection: Collection<T> | PromiseLike<Collection<T>>,
@@ -37,7 +46,10 @@ export type AwaitedMappingFn = Function &
     errLookupFn?: ErrLookupFn | null
   ) => Promise<Settled<R>[]>);
 
-/** @alpha */
+/**
+ * @group Core Functions Types
+ * @alpha
+ */
 export type GenerateMappingFn = Function &
   (<T, R>(
     collection: Collection<T>,
@@ -47,7 +59,10 @@ export type GenerateMappingFn = Function &
     errLookupFn?: ErrLookupFn | null
   ) => Generator<Promise<Settled<R>>, void, unknown>);
 
-/** @alpha */
+/**
+ * @group Core Functions Types
+ * @alpha
+ */
 export type GenerateMappingAsyncFn = Function &
   (<R, T>(
     collection: Collection<T>,

@@ -17,6 +17,7 @@ import { isPromiseLike } from './isPromiseLike';
  * @param element - element of type U or Promise\<U\> to
  * validate as a Promise
  * @returns true if element is a Promise\<U\> object
+ * @category Assertion Tools
  *
  * @public
  *

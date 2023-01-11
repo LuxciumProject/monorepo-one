@@ -37,3 +37,4 @@ export type { SettledIso } from './SettledIso';
 export type { TransformStep } from './TransformStep';
 
 // TASK LIST: [TODO: Types] (Review Documentation) -------------------
+export type { IChain } from './IChain';

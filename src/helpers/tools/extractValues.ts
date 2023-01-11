@@ -8,6 +8,7 @@ import { isSettledLeft } from '../assertions/isSettled';
  * Function `filterRight` takes an array of `Settled<R>` and returns an array of `SettledRight<R>` values.
  * @param settledArray - an array of `Settled<R>`
  * @returns an array of `SettledRight<R>` values
+ * @group Filters
  * @public
  */
 export function filterRight<R>(settledArray: Settled<R>[]): SettledRight<R>[] {
@@ -18,6 +19,7 @@ export function filterRight<R>(settledArray: Settled<R>[]): SettledRight<R>[] {
  * Function `filterLeft` takes an array of `Settled<R>` and returns an array of `SettledLeft` values.
  * @param settledArray - an array of `Settled<R>`
  * @returns an array of `SettledLeft` values
+ * @group Filters
  * @public
  */
 export function filterLeft<R>(settledArray: Settled<R>[]): SettledLeft[] {
@@ -29,6 +31,7 @@ export function filterLeft<R>(settledArray: Settled<R>[]): SettledLeft[] {
  * of `R` values, filtering out any `null` or union types that include `null`.
  * @param settledArray - an array of `Settled<R>`
  * @returns an array of `R` values, filtering out any `null` or union types that include `null`.
+ * @category Helper Tools
  * @public
  */
 export function extractFulfilledValues<R>(settledArray: Settled<R>[]): R[] {
@@ -43,6 +46,7 @@ export function extractFulfilledValues<R>(settledArray: Settled<R>[]): R[] {
  * @param settledArray - an array of `Settled<R>`
  * @returns an array of `R` values, with a default value of
  * `NULL_SYMBOL` in place of `SettledLeft` wich lack of a value.
+ * @category Helper Tools
  * @public
  */
 
@@ -64,6 +68,7 @@ export function extractSettledValues<R>(
  *
  * @param list - an array or iterable of any values T
  * @returns an array of `SettledRight<T>`.
+ * @category Helper Tools
  * @public
  */
 export function toFulfilment<T>(list: Iterable<T>): SettledRight<T>[] {

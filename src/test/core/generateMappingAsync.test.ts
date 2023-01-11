@@ -78,3 +78,30 @@ describe('generateMappingAsync', () => {
     }
   });
 });
+describe('generateMappingAsync take both Collection<B> or PromiseLike<Collection<B>>', () => {
+  it('Should take PromiseLike<Collection<B>>', async () => {
+    const generator = generateMappingAsync((async () => [{ size: 10 }])());
+
+    for await (const generation of generator) {
+      expect(generation).toStrictEqual({
+        index: 0,
+        status: 'fulfilled',
+        transformStep: 1,
+        value: { size: 10 },
+      });
+    }
+  });
+
+  it('Should take Collection<B>', async () => {
+    const generator = generateMappingAsync((() => [{ size: 10 }])());
+
+    for await (const generation of generator) {
+      expect(generation).toStrictEqual({
+        index: 0,
+        status: 'fulfilled',
+        transformStep: 1,
+        value: { size: 10 },
+      });
+    }
+  });
+});

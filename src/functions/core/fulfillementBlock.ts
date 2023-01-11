@@ -1,3 +1,4 @@
+import { isPromiseLike } from '../../helpers/assertions';
 import { LookupFn, SettledRight, TransformFn, ValidateFn } from '../../types';
 import { makeFulfillement } from './makeFulfillement';
 // FUNC DEF:(fulfillementBlock<T, R>) ----------------------------------------
@@ -13,7 +14,9 @@ export async function fulfillementBlock<T, R>(
     void [value, index, array]
 ) {
   const transformation = transformFn(item.value, index, array);
-  const value = await transformation;
+  const value = isPromiseLike(transformation)
+    ? await transformation
+    : transformation;
   void lookupFn(value, index, array);
   await validateFn(value, index, array);
   let { transformStep } = item;
@@ -21,4 +24,4 @@ export async function fulfillementBlock<T, R>(
   return makeFulfillement<R>({ value, index, transformStep });
 }
 
-// TASK LIST: [TODO] (Review Documentation) --------------------------
+// TASK LIST: [TODO] (Review Documentation) -------------------------- /usr/bin/ionice /usr/bin/nice

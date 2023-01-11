@@ -1,6 +1,9 @@
 import { OnlySideEffect, Settled } from '..';
 
-/** @public */
+/**
+ * @group Delegates
+ * @public
+ */
 export interface LookupFn<S, U = unknown> {
   (
     value: U,

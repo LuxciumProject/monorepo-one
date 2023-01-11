@@ -2,12 +2,20 @@ import { FULFILLED, REJECTED } from '../../constants';
 import { Settled, SettledLeft, SettledRight } from '../../types';
 import { TransformStep } from '../../types/TransformStep';
 
-/** @public */
+/**
+ * @category Assertion Tools
+ *
+ *  @public
+ *
+ */
 export function isSettled<T>(contender: unknown): contender is Settled<T> {
   return isSettledRight<T>(contender) || isSettledLeft(contender);
 }
 
-/** @public*/
+/**
+ * @category Assertion Tools
+ * @public
+ */
 export function hasTransformStep(
   countender: unknown
 ): countender is TransformStep {
@@ -29,7 +37,10 @@ export function hasTransformStep(
   return result;
 }
 
-/** @public */
+/**
+ * @category Assertion Tools
+ * @public
+ */
 export function isSettledRight<T>(
   contender: unknown
 ): contender is SettledRight<T> {
@@ -67,7 +78,10 @@ export function isSettledRight<T>(
   return result;
 }
 
-/** @public */
+/**
+ * @category Assertion Tools
+ * @public
+ */
 export function isSettledLeft(contender: unknown): contender is SettledLeft {
   let result = false;
   try {

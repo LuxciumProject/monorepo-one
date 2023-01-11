@@ -19,6 +19,7 @@ import { OnlySideEffect } from '..';
  * if it was part of a previously raised exception that was already
  * part of the item currently being mapped from the ptovided collection.
  * @returns OnlySideEffect: Do not return any value is trigered syncrounously.
+ * @group Delegates
  * @public  */
 export interface ErrLookupFn {
   (reason: any, index: number, currentRejection: boolean): OnlySideEffect;

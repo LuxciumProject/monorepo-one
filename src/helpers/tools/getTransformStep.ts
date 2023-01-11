@@ -1,6 +1,10 @@
 import { hasTransformStep } from '../assertions';
 
-/** @public*/
+/**
+ * @category Helper Tools
+ *
+ * @public
+ * */
 export function getTransformStep(
   item: unknown,
   initialTransformStep: number = -1

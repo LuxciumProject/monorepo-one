@@ -77,7 +77,7 @@ import { SettledRight } from './SettledRight';
  * ```
  *
  *
- *
+ * @group Base Types
  * @public
  */
 export type Settled<T> = SettledLeft | SettledRight<T>;

@@ -1,7 +1,10 @@
 import { NULL_SYMBOL } from '../constants';
 import { Settled, SettledLeft, SettledRight } from './Settled';
 
-/** @public */
+/**
+ * @group Base Types
+ * @public
+ * */
 
 export type Base<TVal> =
   | TVal
@@ -11,6 +14,13 @@ export type Base<TVal> =
   | PromiseFulfilledResult<TVal>
   | SettledLeft
   | PromiseRejectedResult;
+
+/**
+ * Alias for `Iterable<Base<B>>` or `Iterable<PromiseLike<Base<B>>>`
+ * @group Base Types
+ * @public
+ */
+export type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
 
 /**
  * Alias `PromiseLike<Base<B>>`
@@ -29,12 +39,6 @@ export type CollectionOfDeferred<B> = Iterable<Deferred<B>>;
  * @public
  */
 export type BaseOrDeferred<B> = Base<B> | Deferred<B>;
-
-/**
- * Alias for `Iterable<Base<B>>` or `Iterable<PromiseLike<Base<B>>>`
- * @public
- */
-export type Collection<B> = Iterable<Base<B>> | Iterable<Deferred<B>>;
 
 /**
  * Alias for `Iterable<Base<B>> | Iterable<PromiseLike<Base<B>>>`
