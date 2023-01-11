@@ -2,7 +2,7 @@
 
 ![npm type definitions](https://img.shields.io/npm/types/mapping-tools?label=Powered%20by)[![Latest Version](https://img.shields.io/npm/v/mapping-tools)](https://www.npmjs.com/package/mapping-tools?activeTab=readme) ![npm](https://img.shields.io/npm/dt/mapping-tools)
 
-![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v5.5.1x&color=blue)
+![Version Badge](https://img.shields.io/static/v1?label=version&message=0.0.0-ALPHA-UNSAFE-v6.0.0x&color=blue)
 
 Mapping Tools is a powerful package for mapping over lists and iterables in JavaScript and TypeScript.
 
@@ -76,8 +76,8 @@ Overall, the mapping-tools package is a reliable choice for performing transform
 1. **[awaitedMapping](#awaitedmapping)**, is based on Promise.all($)
 2. **[parallelMapping](#parallelmapping)**, is based on Array.prototype.map($)
 3. **[serialMapping](#serialmapping)**, is based on a forOf loop
-4. **[generateMappingAsync](#generatemappingasync)**, is based on the AsyncGenerator protocol
-5. **[generateMapping](#generatemapping)**, is based on the Generator protocol
+4. **[generateMapping](#generatemapping)**, is based on the Generator protocol
+5. **[generateMappingAsync](#generatemappingasync)**, is based on the AsyncGenerator protocol
 
 These functions all take a collection of items as their main input, along with 4 delegate functions: [transformFn](#transformfn), [lookupFn](#lookupfn), [validateFn](#validatefn) and [errLookupFn](#errlookupfn).
 
@@ -175,9 +175,9 @@ main();
 
 The project currently have 5 main flavours for its core functions they have complex signatures taht are [easy to understand](#arguments), and they can be grouped in diferrent manner:
 
-1. Functions that can accept either `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>>>` and which return promises that resolve to arrays: [serialMapping](#serialmapping), [awaitedMapping](#awaitedmapping)
+1. Functions that can accept either `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` **or** `PromiseLike<Iterable<Base<T>>>` and which return promises that resolve to arrays: [serialMapping](#serialmapping), [awaitedMapping](#awaitedmapping), and [generateMappingAsync returns](#generatemappingasync)
 
-2. Functions that can accept only `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` and return arrays of promises or generators: [parallelMapping returns](#parallelmapping), [generateMapping returns](#generatemapping), [generateMappingAsync returns](#generatemappingasync)
+2. Functions that can accept only `Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>` and return arrays of promises or generators: [parallelMapping returns](#parallelmapping), [generateMapping returns](#generatemapping)
 
 ### parallelMapping
 
@@ -270,13 +270,13 @@ Applies the provided callback functions to each item in the collection, and retu
 Applies the provided callback functions to each item in the collection, and returns an async generator that yields the transformed and validated items, represented as `Settled<R>` objects.
 
 - Based on the `AsyncGenerator` _Protocol_
-- Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` only
+- Takes as its main input: `Iterable<Base<T> | PromiseLike<Base<T>>>` or `PromiseLike<Iterable<Base<T>> | Iterable<PromiseLike<Base<T>>>>`
 - Returns: `AsyncGenerator<Settled<R>, void, unknown>`
 - Function signature:
 
   ```typescript
   export async function* generateMappingAsync<R, T>(
-    collection: Collection<T>,
+    collection: DeferredCollection<T>,
     transformFn: TransformFn<T, R> | null = async value => value as any as R,
     lookupFn: LookupFn<T, R> | null = v => void v,
     validateFn: ValidateFn<T, R> | null = async v => void v,

@@ -2,6 +2,11 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "extends": "../typescript/tsconfig.json",
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typedoc-plugin-group"
+      }
+    ],
     /* Emit Options */
     "target": "ES5",
     "module": "CommonJS",
@@ -98,6 +103,7 @@
       ]
     }
   },
+  // "references": [],
   "include": [
     "src/**/*"
   ],

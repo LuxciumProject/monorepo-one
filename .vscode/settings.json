@@ -1917,5 +1917,8 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "audioCues.taskCompleted": "off",
-  "typescript.tsdk": "          📚🧭 mapping-tools/node_modules/typescript/lib"
-},
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "jestrunner.configPath": "config/jest.config.json",
+  "jestRunIt.jestConfigPath": "config/jest.config.json",
+  "prettier.configPath": ".prettierrc"
+}

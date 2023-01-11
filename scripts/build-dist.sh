@@ -67,9 +67,8 @@ yarn coverage
 
 # Generate API documentation.
 rm -fr "${DIST_DIR:?}/docs"
-api-extractor run --local
+# api-extractor run --local
 typedoc --options config/typedoc.json
-yarn build:api
 
 readonly LIB_DIR="${DIST_DIR:?}/lib"
 readonly SRC_DIR="${DIST_DIR:?}/src"
