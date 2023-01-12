@@ -1,0 +1,44 @@
+# Detailed Plan for Testing mapping-tools NPM Package
+
+- A. Design the testing environment
+  - A.1. Create a TypeScript project
+  - A.2. Identify the npm package to be tested
+  - A.3. Determine the parameters that will be set at build time
+  - A.4. Define the instructions for the compilation of the TypeScript project
+  - A.5. Determine the parameters that will be passed to the image at runtime
+  - A.6. Define the instructions for testing the package
+  - A.7. Define the instructions for collecting the test results
+- B. Create the npm package
+  - B.1. Write the code for the package
+  - B.2. Test the package using unit tests
+  - B.3. Create a .tgz file of the package using the `npm pack` command
+  - B.4. Validate that the .tgz file was created successfully
+- C. Create a Dockerfile
+  - C.1. Define base image - Use an official Node.js image as base, version specified by an ARG passed at build time - Use an official Alpine Linux image as base, version specified by an ARG passed at build time
+  - C.2. Copy TypeScript project into the image - Use COPY command to copy the TypeScript project files into the image
+  - C.3. Define build-time ARGs - Specify the Node.js version to use in the image - Specify the Alpine Linux version to use in the image
+  - C.4. Define ENV variables - Specify the NODE_ENV variable to "test"
+  - C.5. Define a CMD or ENTRYPOINT command - Compile the TypeScript project in the image with tsc
+  - C.6. Define a HEALTHCHECK command (optional) - Check if the compilation was successful and the compiled JavaScript files are present.
+- D. Build the image
+  - D.1. Use the "docker build" command to build the image - Provide the build-time ARGs and the path to the Dockerfile
+  - D.2. Tag the image with a meaningful name and version - Use the "docker tag" command to tag the image with a name and version
+  - D.3. Push the image to a container registry (optional) - Use the "docker push" command to push the image to a container registry
+- E. Design and Create a Dockerfile
+  - E.1 Decide on a base image for the testing environment
+  - E.2 Create a Dockerfile that describes the desired image
+  - E.3 Use ARG parameters in the Dockerfile to set certain values at build-time
+- F. Build the Image
+  - F.1 Use the Docker build command to create the image
+  - F.2 Provide the ARG parameters at build-time as instructed in the Dockerfile
+  - F.3 The image is now set in stone and can be used for standardized testing
+- G. Deployment
+  - G.1 Create a deployment plan
+  - G.2 Deploy the package to production
+  - G.3 Test the deployed package
+  - G.4 Monitor and troubleshoot
+- H. Maintenance
+  - H.1 Update the package
+  - H.2 Update the test environment
+  - H.3 Test the updated package
+  - H.4 Monitor and troubleshoot

@@ -1,0 +1,39 @@
+# Use an official Node.js runtime as the base image
+ARG NODE_VERSION=18
+FROM node:${NODE_VERSION}-alpine
+
+
+# Define environment variables
+ENV NODE_ENV=test
+ENV PACKAGE_PATH=/path/to/package.tgz
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Default typescript version
+ARG TYPESCRIPT_VERSION=4.2
+
+# Copy the package.json and package-lock.json
+COPY package*.json ./
+
+# Replace the TypeScript version in package.json
+run jq --arg TYPESCRIPT_VERSION $TYPESCRIPT_VERSION \
+ '.devDependencies.typescript = $TYPESCRIPT_VERSION' \
+ package.json >| package.json.tmp &&
+ mv package.json.tmp package.json
+
+# Install the dependencies
+RUN npm ci
+
+# Copy the rest of the files
+COPY . .
+
+# Build the package
+RUN npm run build
+
+# Install the package from the specified path
+CMD ["npm", "install", "${PACKAGE_PATH}"]
+
+
+
+# other instructions ...
