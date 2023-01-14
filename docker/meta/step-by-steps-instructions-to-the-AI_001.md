@@ -16,23 +16,23 @@ To create a customized Dockerfile and commands for building and running a second
 ## b) Create a command to build the image, including any arguments that can be passed at build time (e.g. --build-arg NODE_VERSION=18) for the **testing project**
 
 ```markdown
-1. Use the command "docker build" and specify the path to the Dockerfile (e.g. "docker build -t my-test-image -f /path/to/Dockerfile .")
-2. Pass any necessary build arguments (e.g. "docker build --build-arg NODE_VERSION=14 -t my-test-image -f /path/to/Dockerfile .")
+7. Use the command "docker build" and specify the path to the Dockerfile (e.g. "docker build -t my-test-image -f /path/to/Dockerfile .")
+8. Pass any necessary build arguments (e.g. "docker build --build-arg NODE_VERSION=14 -t my-test-image -f /path/to/Dockerfile .")
 ```
 
 ## c) Create a command to run the container, including any necessary arguments for installing the package and building the TypeScript project for the **testing project**
 
 ```markdown
-1. Use the command "docker run" and specify the image name (e.g. "docker run -it --rm my-test-image")
-2. Mount the package to be tested as a volume (e.g. "docker run -it --rm -v /path/to/package.tgz:/app/package.tgz my-test-image")
-3. Run the build command for the TypeScript project (e.g. "docker run -it --rm -v /path/to/package.tgz:/app/package.tgz my-test-image npm run build")
+9. Use the command "docker run" and specify the image name (e.g. "docker run -it --rm my-test-image")
+10. Mount the package to be tested as a volume (e.g. "docker run -it --rm -v /path/to/package.tgz:/app/package.tgz my-test-image")
+11. Run the build command for the TypeScript project (e.g. "docker run -it --rm -v /path/to/package.tgz:/app/package.tgz my-test-image npm run build")
 ```
 
 ## d) Once the container is running, you can use the command "docker exec" to run commands inside the container and interact with the compiled JavaScript package for the **testing project**
 
 ```markdown
-1. Use the command "docker exec -it [container name] [command]" (e.g. "docker exec -it my-test-container-1 npm test")
-2. Use any necessary package.json scripts or NPM run commands to run performance or integration tests.
+12. Use the command "docker exec -it [container name] [command]" (e.g. "docker exec -it my-test-container-1 npm test")
+13. Use any necessary package.json scripts or NPM run commands to run performance or integration tests.
 ```
 
 ## Note
