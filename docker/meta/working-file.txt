@@ -1,0 +1,68 @@
+Thanks, I do not know if it is trivial to make use of health checks to ensure that the container is running correctly.  I will add the ".dockerignore", can you please upgrade the Dockerfile to multistage using NodeJS 18 as the first stage and the parameterized value for the stage that will be used in the final image, can you add the additional environment variables you are talking about to configure the application at runtime.  can you please use the USER instruction to run the container? can you please Use EXEC form of CMD instruction which allows you to pass command arguments?
+
+(UPDATE THE FOLLOWING DOCKERFILE:
+```Dockerfile
+# Specify the base image to use
+FROM node:${NODE_VERSION:-18}
+
+# Set the working directory
+WORKDIR /app
+
+# Default typescript version
+ARG TYPESCRIPT_VERSION=4.2
+
+# Copy the package.json and package-lock.json
+COPY package*.json ./
+
+# Replace the TypeScript version in package.json
+RUN jq --arg TYPESCRIPT_VERSION $TYPESCRIPT_VERSION \
+ '.devDependencies.typescript = $TYPESCRIPT_VERSION' \
+ package.json >| package.json.tmp && \
+ mv package.json.tmp package.json
+
+# Install the dependencies
+RUN npm ci || \
+  { echo "npm ci failed" && exit 1; }
+
+# Copy the rest of the files
+COPY . .
+
+# Build the package
+RUN npm run build || \
+  { echo "npm run build failed" && exit 1; }
+
+# Install the package from the specified path
+CMD ["npm", "install", "/app/package.tgz"]
+```
+)
+
+Then update the shell script accordingly... I will use shellcheck to check the script, Also can you use functions to organize the script, can you please use the best practices to make use of proper error handling and logging to make it easier to diagnose and fix issues. Add comments to explain the purpose and behavior of both the Dockerfile and the shell script.
+
+(UPDATE THE FOLLOWING SHELL SCRIPT:
+```bash
+#!/usr/bin/env bash
+
+# Constants
+PACKAGE_PATH=$1
+NODE_VERSION=18
+TYPESCRIPT_VERSION=4.2
+
+# Build the image
+docker build \
+  --build-arg NODE_VERSION=$NODE_VERSION \
+  --build-arg TYPESCRIPT_VERSION=$TYPESCRIPT_VERSION \
+  -t my-test-image \
+  -f /path/to/Dockerfile . ||
+  { echo "docker build failed" && exit 1; }
+
+# Run the container
+docker run \
+  -it --rm \
+  -v $PACKAGE_PATH:/app/package.tgz \
+  -e NODE_ENV=development \
+  my-test-image ||
+  { echo "docker run failed" && exit 1; }
+```
+)
+
+Do not worry obviously I will test it before sending it to my management.

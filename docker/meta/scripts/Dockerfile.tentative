@@ -1,0 +1,18 @@
+# Specify the base image to use
+FROM node:${NODE_VERSION:-18}
+
+# Copy the testing project files from host to container
+COPY . .
+
+# Install dependencies
+RUN npm install || \
+  { echo "npm install failed" && exit 1; }
+
+# Define environment variables if necessary
+ENV NODE_ENV=${NODE_ENV:-development}
+
+# Expose any necessary ports
+EXPOSE ${PORT:-3000}
+
+# Specify a command to run when the container starts
+CMD ["npm", "start"]

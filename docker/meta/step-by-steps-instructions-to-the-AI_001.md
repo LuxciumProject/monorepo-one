@@ -1,8 +1,10 @@
-# Create a docker Pipeline to Test Typescript Project
+<!-- I have made a strict step by step recipe for you (you ChatGPT the AI Assistant) to follow (A, and B,C,D) so that I can have A) a Dockerfile. and (B,C,D) : 3 scripts to start a standardized test environment using arguments and parameters provided to the command line in a step by step fashion to create an isolated testing pipeline using  B) docker build, C) docker run, D) docker exec; For me the user to copy/paste to include this code directly into my project... the recipe is as follow please produce the scripts using ARGs & ENVs to delegate to future steps or using best practices:   -->
+
+# Create A Docker Pipeline Project To Test Main Project (Package.Tgz)
 
 To create a customized Dockerfile and commands for building and running a secondary project, please use the following instructions for the next session of the AI Assistant:
 
-## a) Create a Dockerfile template for the **testing project** that includes the following steps
+## a) Create a dockerfile template for the **testing project** that includes the following steps
 
 ```markdown
 1. Specify the base image to use (e.g. FROM node:18)
@@ -20,7 +22,7 @@ To create a customized Dockerfile and commands for building and running a second
 8. Pass any necessary build arguments (e.g. "docker build --build-arg NODE_VERSION=14 -t my-test-image -f /path/to/Dockerfile .")
 ```
 
-## c) Create a command to run the container, including any necessary arguments for installing the package and building the TypeScript project for the **testing project**
+## c) Create a command to run the container, including any necessary arguments for installing the package and building the typescript project for the **testing project**
 
 ```markdown
 9. Use the command "docker run" and specify the image name (e.g. "docker run -it --rm my-test-image")
@@ -28,7 +30,7 @@ To create a customized Dockerfile and commands for building and running a second
 11. Run the build command for the TypeScript project (e.g. "docker run -it --rm -v /path/to/package.tgz:/app/package.tgz my-test-image npm run build")
 ```
 
-## d) Once the container is running, you can use the command "docker exec" to run commands inside the container and interact with the compiled JavaScript package for the **testing project**
+## d) Once the container is running, you can use the command "docker exec" to run commands inside the container and interact with the compiled javascript package for the **testing project**
 
 ```markdown
 12. Use the command "docker exec -it [container name] [command]" (e.g. "docker exec -it my-test-container-1 npm test")
@@ -44,3 +46,5 @@ In this instruction, I have explicitly named the two projects, one is the projec
 The first project can be referred to as the "main project" or "development project" as it is the project that you are actively working on and developing.
 
 The second project can be referred to as the "testing pipeline project" or "docker pipeline project" as it is used to build the test pipeline for the main project using Docker.
+
+The instructions I provided above are instruction for YOU (the AI) to create A) a Dockerfile. and 3 shell scripts based on: B) docker build, C) docker run, D) docker exec; For me the user to copy/paste to include this code directly into my project...

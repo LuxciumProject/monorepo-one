@@ -1,0 +1,31 @@
+# Specify the base image to use
+FROM node:${NODE_VERSION:-18}
+
+# Set the working directory
+WORKDIR /app
+
+# Default typescript version
+ARG TYPESCRIPT_VERSION=4.2
+
+# Copy the package.json and package-lock.json
+COPY package*.json ./
+
+# Replace the TypeScript version in package.json
+RUN jq --arg TYPESCRIPT_VERSION $TYPESCRIPT_VERSION \
+ '.devDependencies.typescript = $TYPESCRIPT_VERSION' \
+ package.json >| package.json.tmp && \
+ mv package.json.tmp package.json
+
+# Install the dependencies
+RUN npm ci || \
+  { echo "npm ci failed" && exit 1; }
+
+# Copy the rest of the files
+COPY . .
+
+# Build the package
+RUN npm run build || \
+  { echo "npm run build failed" && exit 1; }
+
+# Install the package from the specified path
+CMD ["npm", "install", "/app/package.tgz"]
