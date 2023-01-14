@@ -3,10 +3,12 @@ Create a customized Dockerfile to set up a secondary project in a specific folde
 a package.json
 a config file
 an src folder with a typescript project to test a file (provided as a command line argument later, the package ending with .tgz that will be provided as a command line argument later)
-In the Dockerfile, include arguments for the NodeJS version and typescript version to be installed in the project. The NodeJS version is set as the base FROM argument and will have a default version of 18 but can be changed in the docker build command line, allowing you to create different test environments targeting different NodeJS or typescript versions.
+In the Dockerfile, include arguments for the NodeJS version and typescript version to be installed in the project, these arguments can be determined at the docker build step and allow for different test environments targeting different NodeJS or typescript versions.
 
-When running the docker build command, provide env parameters such as the path to the newly created (npm pack) package to be tested. This allows for testing different versions of the package using the same isolated and standardized image previously created.
+When running the docker build command, pass the arguments to create different standardized images.
 
-When running the docker run command, it should do the compilation of the typescript project using a preset package.json script with npm run build, or similar. After the container is running, you should be able to interact with the compiled javascript package to run performance tests or integration tests in a standardized and isolated environment.
+When running the docker run command, it should install the recent package (the library you are working on that was created using NPM pack) and then build the typescript testing project into the javascript isolated test environment. The build step of the typescript project is part of the tests, failure should be logged or reported, but the success should permit to go to the following steps.
+
+The environment inside the container is still running and the NodeJS compiled version is ready to receive commands, you can use the package.json scripts, NPM run command or any other mean internally to run tests (performance or integration).
 
 Please note that the above instructions are just a template and may require additional modifications to fit the specific needs of your project.

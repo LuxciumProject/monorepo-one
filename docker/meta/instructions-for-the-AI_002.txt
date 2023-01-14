@@ -8,3 +8,5 @@ In the Dockerfile, include arguments for the NodeJS and typescript versions to b
 When running the docker build command, provide env parameters such as the path to the newly created (npm pack) package to be tested. This allows for testing different versions of the package using the same isolated and standardized image previously created.
 
 When running the docker run command, it should do the compilation of the typescript project and after the container is running, one should be able to interact with the compiled javascript package to run performance or integration tests in a standardized and isolated environment.
+
+Please note that the above instructions are just a template and may require additional modifications to fit the specific needs of your project.

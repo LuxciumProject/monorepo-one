@@ -1,12 +1,19 @@
-Can you please help me correct this text and remove the repetitions... I want to remove the redundant instructions and use the imperative form to instruct another session of ChatGPT how to do something so it must be super clear and straightforward so that if provided to an AI Assistant he would produce me with A) a Dockerfile template B) a command line script to run the docker build C) a command line script to run docker run (which would build the internal project in the container) D) would provide me with a dummy command line script to interact with the container that would still be running if the build in step C) has been successful ... THIS IS THE TEXT TO USE TO CREATE THE INSTRUCTIONS REMOVING REDONDANCIES AND MAKE SURE IT IS CONCISE:: «# This approach has been far more effective at facilitating testing for this project.
+# Can you please help me correct this text and remove the repetitions... I want to remove the redundant instructions and use the imperative form to instruct another session of ChatGPT how to do something so it must be super clear and straightforward so that if provided to an AI Assistant he would produce me with A) a Dockerfile template B) a command line script to run the docker build C) a command line script to run docker run (which would build the internal project in the container) D) would provide me with a dummy command line script to interact with the container that would still be running if the build in step C) has been successful ... THIS IS THE TEXT TO USE TO CREATE THE INSTRUCTIONS REMOVING REDONDANCIES AND MAKE SURE IT IS CONCISE:: «# This approach has been far more effective at facilitating testing for this project.
 
-# can you explicitly tell the AI that I need to have help to create a customized:
+
+
+# Explicitly tell the AI that I need to have help to create a customized:
 #1) Dockerfile to set in stone a secondary project that is in a particular folder it would contain
 # a) a package.json  a config file and an src folder with a typescript project to test a file (the package ending with .tgz that will be provided as a command line argument later)
 # b) the Dockerfile contains many arguments that would be determined at the docker build step like the NodeJS version and typescript version to be installed in the project (the NodeJS is not installed, in fact, it is the base FROM argument which would have a default version of 18 but could be changed in the docker build command line) so that I can create many different test environment targeting different nodeJS or typescript versions...
 # c) some env parameters would be provided to the docker run step like the path to the newly created (npm pack) package to be tested so that I can use my previously created images to test different versions of my package using the same isolated and standardized image previously created...
 # d) the docker run command would do the compilation of the typescript project (maybe from a preset package.json script with npm run build or such)
 # e) after the container is running I should be able to interact with the compiled javascript package to run some performance tests or integration tests in a standardized manner and in a completely isolated environment
+
+
+# (Make sure you use the imperative form, make sure the instruction are directed at an other session of the AI Assistant so that he can produce a template for (a,b,c, and d) please give as many details as possible so the next session of the AI can produce the final output for me to use in my project (copy-pasting it)::)
+
+# Explicitly tell the AI that I need to have help to create a customized:
 
 # a) Dockerfile set a part of the steps
 # b) docker build gives some ARG to create different standardized images

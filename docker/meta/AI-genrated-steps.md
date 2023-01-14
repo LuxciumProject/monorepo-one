@@ -25,7 +25,8 @@ docker build -t my-ts-project .
 Run the following command to start a container with your project and test package:
 
 ```bash
-docker run -v $(pwd)/test-package.tgz:/app/test-package.tgz -it my-ts-project npm install ./test-package.tgz && npm run test
+docker run -v $(pwd)/test-package.tgz:/app/test-package.tgz \
+ -it my-ts-project npm install ./test-package.tgz && npm run test
 ```
 
 Once the container is running, you can use the following command to attach to it and run additional commands:
