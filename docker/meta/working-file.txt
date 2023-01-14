@@ -66,3 +66,6 @@ docker run \
 )
 
 Do not worry obviously I will test it before sending it to my management.
+
+
+ the shell script should receive as its first argument when invoque the real path of the actual package)... Make sure the CDM is ready to be run in the real life scenario. If actual concrete informations are missing use the export keyword to set constants at the top of the script I will modify them accordingly...

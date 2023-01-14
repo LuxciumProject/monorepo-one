@@ -1,5 +1,5 @@
-# Use Node 18 as the builder image
-FROM node:18 AS builder
+# Specify the base image to use for the builder stage
+FROM node:${NODE_VERSION:-18} as builder
 
 # Set the working directory
 WORKDIR /app
@@ -27,17 +27,27 @@ COPY . .
 RUN npm run build || \
   { echo "npm run build failed" && exit 1; }
 
-# Use a smaller runtime image
-FROM node:${NODE_VERSION:-14}
+# Specify the base image to use for the final stage
+FROM node:${NODE_VERSION:-18}-alpine
+
+# Node runtime options and defaults for the container environment
+ENV NODE_ENV development
+ENV DEBUG true
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the built files from the builder image
-COPY --from=builder /app /app
+# Copy the package.json and package-lock.json
+COPY --from=build /app/package*.json ./
 
-# Create a non-root user
+# Copy the rest of the files from the previous stage
+COPY --from=build /app/dist ./dist
+
+# Run the container as a non-root user
 USER node
 
 # Install the package from the specified path
-CMD ["npm", "install", "/app/package.tgz"]
+ENTRYPOINT ["npm", "run", "start"]
+
+# MIT Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
+# Dockerfile created with the help of OpenAI's ChatGPT model

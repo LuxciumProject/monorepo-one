@@ -1,5 +1,5 @@
-# Specify the base image to use
-FROM node:${NODE_VERSION:-18}
+# Use Node 18 as the builder image
+FROM node:18 AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -12,9 +12,9 @@ COPY package*.json ./
 
 # Replace the TypeScript version in package.json
 RUN jq --arg TYPESCRIPT_VERSION $TYPESCRIPT_VERSION \
- '.devDependencies.typescript = $TYPESCRIPT_VERSION' \
- package.json >| package.json.tmp && \
- mv package.json.tmp package.json
+  '.devDependencies.typescript = $TYPESCRIPT_VERSION' \
+  package.json >| package.json.tmp && \
+  mv package.json.tmp package.json
 
 # Install the dependencies
 RUN npm ci || \
@@ -26,6 +26,18 @@ COPY . .
 # Build the package
 RUN npm run build || \
   { echo "npm run build failed" && exit 1; }
+
+# Use a smaller runtime image
+FROM node:${NODE_VERSION:-14}
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the built files from the builder image
+COPY --from=builder /app /app
+
+# Create a non-root user
+USER node
 
 # Install the package from the specified path
 CMD ["npm", "install", "/app/package.tgz"]
