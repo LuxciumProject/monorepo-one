@@ -1,0 +1,13 @@
+Create a pipeline that is configured in steps:
+
+Create a customized Dockerfile for a secondary project in a specific folder. The project should contain:
+a package.json
+a config file
+an src folder with a typescript project to test a file (provided as a command line argument later, the package ending with .tgz that will be provided as a command line argument later)
+Run the docker build command, passing arguments to install a precise base version of Node.js and a specific version of typescript.
+
+Run the docker run command, passing env parameters such as the path to the newly created (npm pack) package(.tgz) to be tested, this command will install the package, initiate the build process of the internal typescript project and the NodeJS project with the npm package to be tested.
+
+If the build step (in the docker run command) is successful, the container should not stop and wait to receive more instructions to perform tests included in the newly build javascript project in the container.
+
+Please note that the above instructions are just a template and may require additional modifications to fit the specific needs of your project.
