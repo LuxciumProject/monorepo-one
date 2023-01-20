@@ -1920,5 +1920,8 @@
   "typescript.tsdk": "./node_modules/typescript/lib",
   "jestrunner.configPath": "config/jest.config.json",
   "jestRunIt.jestConfigPath": "config/jest.config.json",
-  "prettier.configPath": ".prettierrc"
+  "prettier.configPath": ".prettierrc",
+  "[shellscript]": {
+    "editor.defaultFormatter": "shakram02.bash-beautify"
+  }
 }

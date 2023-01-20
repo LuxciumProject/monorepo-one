@@ -1,39 +1,62 @@
-# Use an official Node.js runtime as the base image
+# Specify the base image to use for the builder stage
 ARG NODE_VERSION=18
-FROM node:${NODE_VERSION}-alpine
-
-
-# Define environment variables
-ENV NODE_ENV=test
-ENV PACKAGE_PATH=/path/to/package.tgz
+FROM node:"${NODE_VERSION}" as builder
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Default typescript version
 ARG TYPESCRIPT_VERSION=4.2
+
+RUN apt update; apt upgrade; apt install jq -y; npm i -g npm;
 
 # Copy the package.json and package-lock.json
 COPY package*.json ./
 
 # Replace the TypeScript version in package.json
-run jq --arg TYPESCRIPT_VERSION $TYPESCRIPT_VERSION \
- '.devDependencies.typescript = $TYPESCRIPT_VERSION' \
- package.json >| package.json.tmp &&
- mv package.json.tmp package.json
+RUN jq --arg TYPESCRIPT_VERSION $TYPESCRIPT_VERSION \
+  '.devDependencies.typescript = $TYPESCRIPT_VERSION' \
+  package.json >| package.json.tmp && \
+  mv package.json.tmp package.json
 
 # Install the dependencies
-RUN npm ci
+RUN  npm ci || \
+  { echo "npm ci failed" && exit 10; }
 
-# Copy the rest of the files
-COPY . .
 
 # Build the package
-RUN npm run build
+# RUN npm run build || \
+# { echo "npm run build failed" && exit 11; }
+
+# Specify the base image to use for the final stage
+FROM node:${NODE_VERSION}-alpine
+
+# Node runtime options and defaults for the container environment
+ENV NODE_ENV development
+ENV DEBUG true
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the rest of the files
+COPY ./src /app/src/
+COPY ./tsconfig.json /app/tsconfig.json
+
+# Copy the package.json and package-lock.json
+COPY --from=builder /app/package*.json /app/
+
+# Copy the rest of the files from the previous stage
+COPY --from=builder /app/node_modules /app/node_modules/
+
+RUN npm i -g npm; npm run versions
+
+# Run the container as a non-root user
+# USER node
 
 # Install the package from the specified path
-CMD ["npm", "install", "${PACKAGE_PATH}"]
+ENTRYPOINT sh
+# npm run start
+# ["npm", "run", "start"]
 
-
-
-# other instructions ...
+# MIT Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
+# Dockerfile created with the help of OpenAI's ChatGPT model

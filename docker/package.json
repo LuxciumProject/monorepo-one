@@ -2,11 +2,19 @@
   "name": "docker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "start": "tsc",
+    "build": "tsc",
+    "versions": "echo -e \"\\nNodeJS $(node -v) \\nnpm v$(npm -v) \\ntsc $(tsc -V)\\n\\n\\n\"",
+    "sayHello": "node lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "18",
+    "typescript": "^3.0.5"
+  }
 }

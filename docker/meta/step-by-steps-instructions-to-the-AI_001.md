@@ -8,18 +8,18 @@ To create a customized Dockerfile and commands for building and running a second
 
 ```markdown
 1. Specify the base image to use (e.g. FROM node:18)
-2. Copy the **testing project** files from host to container (e.g. COPY . . )
-3. Install dependencies (e.g. RUN npm install)
-4. Define environment variables if necessary (e.g. ENV NODE_ENV=development)
-5. Expose any necessary ports (e.g. EXPOSE 3000)
-6. Specify a command to run when the container starts (e.g. CMD ["npm", "start"])
+1. use multistaged build process.
+1. Copy the **testing project** files from host to container (e.g. COPY . . )
+1. Install dependencies (e.g. RUN npm install)
+1. Define environment variables if necessary (e.g. ENV NODE_ENV=development DEBUG=true)
+1. Specify a command to run when the container starts (e.g. ENTRYPOINT ["npm", "run", "start"] )
 ```
 
 ## b) Create a command to build the image, including any arguments that can be passed at build time (e.g. --build-arg NODE_VERSION=18) for the **testing project**
 
 ```markdown
 7. Use the command "docker build" and specify the path to the Dockerfile (e.g. "docker build -t my-test-image -f /path/to/Dockerfile .")
-8. Pass any necessary build arguments (e.g. "docker build --build-arg NODE_VERSION=14 -t my-test-image -f /path/to/Dockerfile .")
+8. Pass any necessary build arguments (e.g. "docker build --build-arg NODE_VERSION=18 -t my-test-image -f /path/to/Dockerfile .")
 ```
 
 ## c) Create a command to run the container, including any necessary arguments for installing the package and building the typescript project for the **testing project**
