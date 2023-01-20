@@ -7,6 +7,7 @@ import {
   toFulfilment,
 } from '../../../../helpers/tools';
 import { Settled } from '../../../../types';
+
 filterLeft;
 describe('filterLeft and filterRight', () => {
   it('should filterRight', done => {

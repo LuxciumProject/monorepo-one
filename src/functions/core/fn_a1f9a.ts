@@ -5,6 +5,7 @@ import { MapperOptions, Settled } from '../../types';
 import { fulfillementBlock } from './fulfillementBlock';
 import { makeRejection } from './makeRejection';
 import { makeSettler } from './makeSettler';
+
 const {
   isPromiseFulfilledResult,
   isPromiseRejectedResult,
@@ -55,11 +56,11 @@ export async function fn_a1f9a<T, R>({
     throw new TypeError(
       `NEVER: item (${myItem}) is not assignable to type 'never'`
     );
-  } catch (reason) {
+  } catch (error) {
     const currentRejection = true;
-    void errLookup(reason, index, currentRejection);
+    void errLookup(error, index, currentRejection);
     return makeRejection({
-      reason,
+      reason: error,
       index,
       transformStep,
       currentRejection,

@@ -17,7 +17,9 @@ describe('Sanity check Level 1', () => {
   it('Should pass the smoke test serialMapping on rejection', async () => {
     expect(
       await serialMapping([{ item: 10 }], async element => {
-        if (element.item === 11) throw element;
+        if (element.item === 11) {
+          throw element;
+        }
       })
     ).toStrictEqual([
       {
@@ -35,13 +37,15 @@ describe('Sanity check Level 1', () => {
 describe('serialMapping', () => {
   it('Should survive when throwing', async () => {
     const result = serialMapping([{ size: 10 }], async obj => {
-      if (obj.size === 10) throw ['test'];
+      if (obj.size === 10) {
+        throw new Error('Test error');
+      }
     });
     const expected = {
       currentRejection: true,
       // fulfilled: null,
       index: 0,
-      reason: ['test'],
+      reason: new Error('Test error'),
       status: 'rejected',
       transformStep: 0,
     };
@@ -53,7 +57,9 @@ describe('serialMapping', () => {
     const result = serialMapping(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) throw ['test'];
+        if (obj.size === 10) {
+          throw new Error('Test error');
+        }
       },
       item => item,
       async item => item,
@@ -63,7 +69,7 @@ describe('serialMapping', () => {
       currentRejection: true,
       // fulfilled: null,
       index: 0,
-      reason: ['test'],
+      reason: new Error('Test error'),
       status: 'rejected',
       transformStep: 0,
     };
@@ -75,7 +81,9 @@ describe('serialMapping', () => {
     const result = serialMapping(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) throw ['test'];
+        if (obj.size === 10) {
+          throw new Error('Test error');
+        }
       },
       item => item,
       async item => item,
@@ -85,7 +93,7 @@ describe('serialMapping', () => {
       currentRejection: true,
       // fulfilled: null,
       index: 0,
-      reason: ['test'],
+      reason: new Error('Test error'),
       status: 'rejected',
       transformStep: 0,
     };
@@ -96,7 +104,9 @@ describe('serialMapping', () => {
     const result = serialMapping(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) throw ['test'];
+        if (obj.size === 10) {
+          throw new Error('Test error');
+        }
       },
       null,
       null,
@@ -106,7 +116,7 @@ describe('serialMapping', () => {
       currentRejection: true,
       // fulfilled: null,
       index: 0,
-      reason: ['test'],
+      reason: new Error('Test error'),
       status: 'rejected',
       transformStep: 0,
     };

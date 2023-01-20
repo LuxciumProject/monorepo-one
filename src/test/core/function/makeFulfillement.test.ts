@@ -15,7 +15,7 @@ describe('Sanity check Level 1', () => {
   });
   it('Should be resilient to an NaN index', () => {
     expect(
-      makeFulfillement({ value: 10, index: NaN, transformStep: 1 })
+      makeFulfillement({ value: 10, index: Number.NaN, transformStep: 1 })
     ).toStrictEqual({
       // currentRejection: null,
       transformStep: 1,

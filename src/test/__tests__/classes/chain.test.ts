@@ -198,7 +198,7 @@ describe('Class Chain', () => {
         null,
         async value => {
           if (value.item % 20 === 0) {
-            throw new Error();
+            throw new Error('Test error');
           }
         }
       )
@@ -208,7 +208,7 @@ describe('Class Chain', () => {
       {
         currentRejection: true,
         index: 1,
-        reason: new Error(),
+        reason: new Error('Test error'),
         status: 'rejected',
         transformStep: 0,
       },
@@ -230,7 +230,7 @@ describe('Class Chain', () => {
       null,
       async value => {
         if (value % 2 === 0) {
-          throw new Error();
+          throw new Error('Test error');
         }
       }
     );
@@ -242,14 +242,14 @@ describe('Class Chain', () => {
       {
         currentRejection: true,
         index: 1,
-        reason: new Error(),
+        reason: new Error('Test error'),
         status: 'rejected',
         transformStep: 0,
       },
       {
         currentRejection: true,
         index: 3,
-        reason: new Error(),
+        reason: new Error('Test error'),
         status: 'rejected',
         transformStep: 0,
       },

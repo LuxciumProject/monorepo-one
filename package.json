@@ -35,6 +35,8 @@
     "install:": "yarn base:install",
     "rebuild": "yarn base:rm:lib; yarn base:build",
     "test:": "yarn base:test",
+    "lint": " eslint ./src",
+    "lint:fix": " eslint ./src --fix; yarn test; yarn lint",
     "test": "jest --config='config/jest.config.json'",
     "coverage": "jest --coverage --config='config/jest.config.json'",
     "coverage:": "jest --coverage src",

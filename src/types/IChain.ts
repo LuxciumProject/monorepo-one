@@ -1,3 +1,4 @@
+import { Chain, NULL_SYMBOL } from '..';
 import {
   BaseOrDeferred,
   Collection,
@@ -9,7 +10,6 @@ import {
   TransformFn,
   ValidateFn,
 } from '.';
-import { Chain, NULL_SYMBOL } from '..';
 /** @beta */
 export interface IChain<B> {
   collection: Collection<B> | PromiseLike<Collection<B>>;

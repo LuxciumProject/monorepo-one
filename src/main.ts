@@ -41,7 +41,9 @@ void (async function MAIN() {
   const value = await Promise.all(parallelMapping([{ item: 10 }]));
   console.log('value =', value);
   const result3 = parallelMapping([{ size: 10 }], async obj => {
-    if (obj.size === 10) throw ['test'];
+    if (obj.size === 10) {
+      throw new Error('Test error');
+    }
   });
   result3.map(async item => console.log('result3 =', await item));
   return void step3;

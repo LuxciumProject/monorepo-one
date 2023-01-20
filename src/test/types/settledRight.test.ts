@@ -76,11 +76,11 @@ export function isSettledRight_<T>(
 }
 
 describe('SettledRight<T_type> syntetic testing', () => {
-  it("status: 'fulfilled', because status: 'fulfilled';", () => {
+  it('status: \'fulfilled\', because status: \'fulfilled\';', () => {
     const contender: any = { status: 'fulfilled' };
     expect(contender.status === FULFILLED).toBeTruthy();
   });
-  it("value: 'T', because value: T;", () => {
+  it('value: \'T\', because value: T;', () => {
     const contender: any = { value: 'T' };
     expect('value' in contender).toBeTruthy();
   });
@@ -94,7 +94,7 @@ describe('SettledRight<T_type> syntetic testing', () => {
     }
   );
   it.each([{ val: 'T', main: [1, 2, 3] } as any, 'T' as any])(
-    "fulfilled: 'T', because fulfilled: T;",
+    'fulfilled: \'T\', because fulfilled: T;',
     value => {
       const contender: any = { value, fulfilled: value };
       expect(contender.value === contender[FULFILLED]).toBeTruthy();
@@ -105,7 +105,7 @@ describe('SettledRight<T_type> syntetic testing', () => {
     expect(REJECTED in contender && contender.rejected === null).toBeTruthy();
   });
   it('transformStep: NaN, because transformStep: number;', () => {
-    const contender: any = { transformStep: NaN };
+    const contender: any = { transformStep: Number.NaN };
     expect(typeof contender.transformStep === 'number').toBeTruthy();
   });
   it('currentRejection: null, because currentRejection: null;', () => {

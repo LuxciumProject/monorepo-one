@@ -178,19 +178,15 @@ export class Chain<B> implements IChain<B> {
   }
   public async filterRight(): Promise<SettledRight<B>[]> {
     const list = [...(await this.collection)];
-    if (list.every((item): item is Settled<B> => isSettled(item))) {
-      return filterRight<B>(list);
-    } else {
-      return filterRight<B>(await awaitedMapping(list));
-    }
+    return list.every((item): item is Settled<B> => isSettled(item))
+      ? filterRight<B>(list)
+      : filterRight<B>(await awaitedMapping(list));
   }
   public async filterLeft(): Promise<SettledLeft[]> {
     const list = [...(await this.collection)];
-    if (list.every((item): item is Settled<B> => isSettled(item))) {
-      return filterLeft(list);
-    } else {
-      return filterLeft(await awaitedMapping(list));
-    }
+    return list.every((item): item is Settled<B> => isSettled(item))
+      ? filterLeft(list)
+      : filterLeft(await awaitedMapping(list));
   }
   public async extractFulfilledValues(): Promise<B[]> {
     return extractFulfilledValues<B>(await awaitedMapping(this._list));

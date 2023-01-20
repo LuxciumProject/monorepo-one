@@ -27,9 +27,9 @@ export function makeFulfillement<U>({
     base.index != null &&
     typeof base.index === 'number' &&
     base.index > -1 &&
-    !isNaN(base.index)
+    !Number.isNaN(base.index)
       ? base.index
-      : typeof index === 'number' && !isNaN(index)
+      : typeof index === 'number' && !Number.isNaN(index)
       ? index
       : -1;
 

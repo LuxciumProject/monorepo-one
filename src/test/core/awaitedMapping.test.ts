@@ -17,13 +17,15 @@ describe('Sanity check Level 1', () => {
 describe('awaitedMapping', () => {
   it('Should survive when throwing', async () => {
     const result = awaitedMapping([{ size: 10 }], async obj => {
-      if (obj.size === 10) throw ['test'];
+      if (obj.size === 10) {
+        throw new Error('Test error');
+      }
     });
     const expected = {
       currentRejection: true,
       // fulfilled: null,
       index: 0,
-      reason: ['test'],
+      reason: new Error('Test error'),
       status: 'rejected',
       transformStep: 0,
     };
@@ -34,7 +36,9 @@ describe('awaitedMapping', () => {
     const result = awaitedMapping(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) throw ['test'];
+        if (obj.size === 10) {
+          throw new Error('Test error');
+        }
       },
       null,
       null,
@@ -44,7 +48,7 @@ describe('awaitedMapping', () => {
       currentRejection: true,
       // fulfilled: null,
       index: 0,
-      reason: ['test'],
+      reason: new Error('Test error'),
       status: 'rejected',
       transformStep: 0,
     };
@@ -53,13 +57,15 @@ describe('awaitedMapping', () => {
   });
   it('Should recive the ccollection also as a promise', async () => {
     const result = awaitedMapping((async () => [{ size: 10 }])(), async obj => {
-      if (obj.size === 10) throw ['test'];
+      if (obj.size === 10) {
+        throw new Error('Test error');
+      }
     });
     const expected = {
       currentRejection: true,
       // fulfilled: null,
       index: 0,
-      reason: ['test'],
+      reason: new Error('Test error'),
       status: 'rejected',
       transformStep: 0,
     };

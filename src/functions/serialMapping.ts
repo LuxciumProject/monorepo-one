@@ -21,13 +21,9 @@ export async function serialMapping<T, R>(
   validateFn: ValidateFn<T, R> | null = async v => void v,
   errLookupFn: ErrLookupFn | null = v => void v
 ): Promise<Settled<R>[]> {
-  let array: (Base<T> | PromiseLike<Base<T>>)[];
-
-  if (isPromiseLike(collection)) {
-    array = [...(await collection)];
-  } else {
-    array = [...collection];
-  }
+  const array: (Base<T> | PromiseLike<Base<T>>)[] = isPromiseLike(collection)
+    ? [...(await collection)]
+    : [...collection];
   // const array = [...collection_];
   let index = 0;
   const results: Settled<R>[] = [];

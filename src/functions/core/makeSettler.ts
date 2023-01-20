@@ -143,7 +143,7 @@ export function makeSettler<T>(
 // FUNC DEF:(makeSettler_<T>) ----------------------------------------
 /** @internal */
 function makeSettler_<T>(item: Base<T>, index: number): Settled<T> {
-  let itemTransformStep = getTransformStep(item, 0);
+  const itemTransformStep = getTransformStep(item, 0);
   let transformStep = -1;
   if (!isPromiseSettledResult(item) || isPromiseFulfilledResult(item)) {
     let itemValue: T;

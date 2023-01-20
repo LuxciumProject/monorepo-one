@@ -25,7 +25,7 @@ describe('Main function serialMapping', () => {
   it('Should pass the smoke test serialMapping on rejection', async () => {
     expect(
       await serialMapping([{ item: 10 }], async element => {
-        if (element.item === 11) throw element;
+        if (element.item === 11) {throw element;}
       })
     ).toStrictEqual([
       {
@@ -43,7 +43,7 @@ describe('Main function serialMapping', () => {
 describe('serialMapping', () => {
   it('Should survive when throwing', async () => {
     const result = serialMapping([{ size: 10 }], async obj => {
-      if (obj.size === 10) throw ['test'];
+      if (obj.size === 10) {throw ['test'];}
     });
     const expected = {
       currentRejection: true,
@@ -61,7 +61,7 @@ describe('serialMapping', () => {
     const result = serialMapping(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) throw ['test'];
+        if (obj.size === 10) {throw ['test'];}
       },
       item => item,
       async item => item,
@@ -83,7 +83,7 @@ describe('serialMapping', () => {
     const result = serialMapping(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) throw ['test'];
+        if (obj.size === 10) {throw ['test'];}
       },
       item => item,
       async item => item,

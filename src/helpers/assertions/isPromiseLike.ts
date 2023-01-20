@@ -31,8 +31,8 @@ export function isPromiseLike<U>(
       'then' in element &&
       typeof element.then === 'function'
     )
-      return true;
-  } catch (error) {
+      {return true;}
+  } catch {
     // Do nothing
     /*
       The addition of the try/catch block

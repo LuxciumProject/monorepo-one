@@ -15,8 +15,8 @@ async function main() {
   });
 
   const settledValues = extractSettledValues(mappedArray);
-  console.log('settledValues :>> ', settledValues);
-  console.log('settledValues.length :>> ', settledValues.length);
+  console.log('settledValues :>>', settledValues);
+  console.log('settledValues.length :>>', settledValues.length);
   // settledValues :>>  [
   //   2,  Symbol(null),
   //   6,  8,
@@ -28,8 +28,8 @@ async function main() {
   // settledValues.length :>>  12
 
   const fulfilledValues = extractFulfilledValues(mappedArray);
-  console.log('fulfilledValues :>> ', fulfilledValues);
-  console.log('fulfilledValues.length :>> ', fulfilledValues.length);
+  console.log('fulfilledValues :>>', fulfilledValues);
+  console.log('fulfilledValues.length :>>', fulfilledValues.length);
   // fulfilledValues :>>  [
   //   2,  6,  8, 10, 14,
   //   16, 18, 22, 24
@@ -49,8 +49,8 @@ async function main2() {
   });
 
   const settledValues = extractSettledValues(mappedArray);
-  console.log('settledValues :>> ', settledValues);
-  console.log('settledValues.length :>> ', settledValues.length);
+  console.log('settledValues :>>', settledValues);
+  console.log('settledValues.length :>>', settledValues.length);
   // settledValues :>>  [
   //   2,  Symbol(null),
   //   6,  8,
@@ -62,8 +62,8 @@ async function main2() {
   // settledValues.length :>>  12
 
   const fulfilledValues = extractFulfilledValues(mappedArray);
-  console.log('fulfilledValues :>> ', fulfilledValues);
-  console.log('fulfilledValues.length :>> ', fulfilledValues.length);
+  console.log('fulfilledValues :>>', fulfilledValues);
+  console.log('fulfilledValues.length :>>', fulfilledValues.length);
   // fulfilledValues :>>  [
   //   2,  6,  8, 10, 14,
   //   16, 18, 22, 24
