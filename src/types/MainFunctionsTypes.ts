@@ -9,7 +9,6 @@ import type { Settled } from './Settled';
 
 /**
  * @group Core Functions Types
- * @alpha
  */
 export type ParallelMappingFn = Function &
   (<T, R>(
@@ -22,7 +21,6 @@ export type ParallelMappingFn = Function &
 
 /**
  * @group Core Functions Types
- * @alpha
  */
 export type SerialMappingFn = Function &
   (<T, R>(
@@ -35,7 +33,6 @@ export type SerialMappingFn = Function &
 
 /**
  * @group Core Functions Types
- * @alpha
  */
 export type AwaitedMappingFn = Function &
   (<T, R>(
@@ -48,7 +45,6 @@ export type AwaitedMappingFn = Function &
 
 /**
  * @group Core Functions Types
- * @alpha
  */
 export type GenerateMappingFn = Function &
   (<T, R>(
@@ -61,7 +57,6 @@ export type GenerateMappingFn = Function &
 
 /**
  * @group Core Functions Types
- * @alpha
  */
 export type GenerateMappingAsyncFn = Function &
   (<R, T>(

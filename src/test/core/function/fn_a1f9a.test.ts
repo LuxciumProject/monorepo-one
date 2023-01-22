@@ -120,7 +120,9 @@ describe('Sanity check Level 1', () => {
         transform: async item => item * 10,
         lookup: item => void item,
         validate: async value => {
-          if (value === 10) {throw value;}
+          if (value === 10) {
+            throw value;
+          }
         },
       })
     ).toStrictEqual({
@@ -143,7 +145,9 @@ describe('Sanity check Level 1', () => {
         transform: async item => item,
         lookup: item => void item,
         validate: async value => {
-          if (value === 10) {throw value;}
+          if (value === 10) {
+            throw value;
+          }
         },
         errLookup: reason => void reason,
       })

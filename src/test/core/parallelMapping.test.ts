@@ -15,7 +15,9 @@ describe('Sanity check Level 1', () => {
 describe('parallelMapping', () => {
   it('Should survive when throwing', async () => {
     const result = parallelMapping([{ size: 10 }], async obj => {
-      if (obj.size === 10) {throw ['test'];}
+      if (obj.size === 10) {
+        throw ['test'];
+      }
     });
     const expected = {
       status: 'rejected',
@@ -31,7 +33,9 @@ describe('parallelMapping', () => {
     const result = parallelMapping(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) {throw ['test'];}
+        if (obj.size === 10) {
+          throw ['test'];
+        }
       },
       null,
       null,

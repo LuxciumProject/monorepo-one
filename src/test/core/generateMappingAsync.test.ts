@@ -40,7 +40,9 @@ describe('Sanity check Level 1', () => {
 describe('generateMappingAsync', () => {
   it('Should survive when throwing', async () => {
     const generator = generateMappingAsync([{ size: 10 }], async obj => {
-      if (obj.size === 10) {throw ['test'];}
+      if (obj.size === 10) {
+        throw ['test'];
+      }
     });
 
     for await (const generation of generator) {
@@ -59,7 +61,9 @@ describe('generateMappingAsync', () => {
     const generator = generateMappingAsync(
       [{ size: 10 }],
       async obj => {
-        if (obj.size === 10) {throw ['test'];}
+        if (obj.size === 10) {
+          throw ['test'];
+        }
       },
       null,
       null,

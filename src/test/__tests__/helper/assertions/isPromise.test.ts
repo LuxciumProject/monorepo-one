@@ -17,7 +17,7 @@ describe('The assertion function isPromise', () => {
     expect(isPromise({ then: {} })).toBe(false);
     done();
   });
-  it('Should be false when \'then\' not in element', done => {
+  it("Should be false when 'then' not in element", done => {
     expect(isPromise({ thus: {} })).toBe(false);
     done();
   });

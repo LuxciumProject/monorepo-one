@@ -30,8 +30,9 @@ export function isPromiseLike<U>(
       typeof element === 'object' &&
       'then' in element &&
       typeof element.then === 'function'
-    )
-      {return true;}
+    ) {
+      return true;
+    }
   } catch {
     // Do nothing
     /*

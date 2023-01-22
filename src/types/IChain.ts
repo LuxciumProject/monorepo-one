@@ -10,7 +10,10 @@ import {
   TransformFn,
   ValidateFn,
 } from '.';
-/** @beta */
+/**
+ *  @beta
+ *  @group IChain
+ */
 export interface IChain<B> {
   collection: Collection<B> | PromiseLike<Collection<B>>;
   // of<BType>(

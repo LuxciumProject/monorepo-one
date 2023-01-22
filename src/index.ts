@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /**
  * A library for mapping tools.
  *
@@ -19,30 +20,8 @@
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol | The Iterable Protocol}
  * @packageDocumentation
  */
-/**
- * This is the doc comment for file1.ts
- *
- * Specify this is a module comment and rename it to my-module:
- * @module my-module
- */
-/* istanbul ignore file */
 
 import * as constants from './constants';
-import * as functions from './functions';
-import * as helpers from './helpers';
-import * as assertionTools from './helpers/assertions';
-import {
-  hasTransformStep,
-  isPromise,
-  isPromiseFulfilledResult,
-  isPromiseLike,
-  isPromiseRejectedResult,
-  isPromiseSettledResult,
-  isSettled,
-  isSettledLeft,
-  isSettledRight,
-} from './helpers/assertions';
-import * as tools from './helpers/tools';
 import {
   AwaitedMappingFn,
   Base,
@@ -70,38 +49,13 @@ import {
   TransformStep,
   ValidateFn,
 } from './types';
-/**
- * @experimental
- *
- * @group experimental
- *
- */
+
 export { Chain } from './classes/chain';
 export { awaitedMapping } from './functions/awaitedMapping';
 export { generateMapping } from './functions/generateMapping';
 export { generateMappingAsync } from './functions/generateMappingAsync';
 export { parallelMapping } from './functions/parallelMapping';
 export { serialMapping } from './functions/serialMapping';
-/**
- * @group Helper Tools
- */
-export {
-  extractFulfilledValues,
-  extractSettledValues,
-  filterLeft,
-  filterRight,
-  getTransformStep,
-  toFulfilment,
-} from './helpers/tools';
-/**
- * @experimental
- *
- * @group experimental
- *
- */
-export type { IChain };
-export { assertionTools, constants, functions, helpers,tools };
-/** @group Assertion Tools */
 export {
   hasTransformStep,
   isPromise,
@@ -112,18 +66,15 @@ export {
   isSettled,
   isSettledLeft,
   isSettledRight,
-};
-// /**
-//  * @group Helper Tools
-//  */
-// export {
-//   extractFulfilledValues,
-//   extractSettledValues,
-//   filterLeft,
-//   filterRight,
-//   getTransformStep,
-//   toFulfilment,
-// };
+} from './helpers/assertions';
+export {
+  extractFulfilledValues,
+  extractSettledValues,
+  filterLeft,
+  filterRight,
+  getTransformStep,
+  toFulfilment,
+} from './helpers/tools';
 export type {
   AwaitedMappingFn,
   Base,
@@ -134,6 +85,7 @@ export type {
   DeferredCollection,
   GenerateMappingAsyncFn,
   GenerateMappingFn,
+  IChain,
   NullSymbol,
   OnlySideEffect,
   ParallelMappingFn,
@@ -154,39 +106,27 @@ export type {
  */
 export type { ErrLookupFn, LookupFn, TransformFn, ValidateFn };
 
-/** @public */
+/**
+ * Constant `FULFILLED` is used in place of the string `'fulfilled'` to
+ * ensure the type system will properly infer the "flag nature" of this
+ * string rather than the more generic `string` type.
+ * @public
+ */
 export const FULFILLED: typeof constants.FULFILLED = constants.FULFILLED;
-/** @public */
+// export const FULFILLED: 'fulfilled' = 'fulfilled' as const;
+
+/**
+ * Constant `REJECTED` is used in place of the string `'rejected'` to
+ * ensure the type system will properly infer the "flag nature" of this
+ * string rather than the more generic `string` type.
+ * @public
+ */
 export const REJECTED: typeof constants.REJECTED = constants.REJECTED;
-/** @public */
+// export const REJECTED: 'rejected' = 'rejected' as const;
+
+/**
+ * Constant `NULL_SYMBOL` is a unique symbol that represents `null` or a union type that includes `null`.
+ * @public
+ */
 export const NULL_SYMBOL: typeof constants.NULL_SYMBOL = constants.NULL_SYMBOL;
-
-// @alpha, @beta, /** @public */, or @internal
-// export const assertions: typeof helpers.assertions = helpers.assertions;
-// /** @public */
-// export const tools: typeof helpers.tools = helpers.tools;
-// export const { assertions, tools } = helpers;
-/** @public */
-
-/** @public */
-
-// import * as helpers2 from './helpers';
-// export default {
-//   helpers,
-//   constants,
-//   functions,
-//   ...helpers,
-//   ...assertions,
-//   ...tools,
-//   ...constants,
-//   ...functions,
-// };
-
-/** @public */
-// export {
-//   extractFulfilledValues,
-//   extractSettledValues,
-//   filterLeft,
-//   filterRight,
-//   getTransformStep,
-// };
+// export const NULL_SYMBOL: unique symbol = Symbol.for('NULL_SYMBOL');
