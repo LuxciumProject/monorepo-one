@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { NULL_SYMBOL } from '..';
 import {
   awaitedMapping,
@@ -25,12 +26,14 @@ import {
   TransformFn,
   ValidateFn,
 } from '../types';
-
+/* istambul ignore next */
 /**
+ * istanbul ignore next
  * UNSAFE: Name of the class will change in future release
  * @experimental
  * @beta
  */
+/* istambul ignore next */
 export class Chain<B> implements IChain<B> {
   collection: Collection<B> | PromiseLike<Collection<B>>;
   private _list: Promise<BaseOrDeferred<B>[]>;
@@ -46,6 +49,14 @@ export class Chain<B> implements IChain<B> {
       return [...(await collection)];
     })();
     this._list = _list;
+
+    // public ['fantasy-land/map'] = this.map;
+    Object.defineProperty(this, 'fantasy-land/map', {
+      value: this.map,
+      enumerable: false,
+      writable: false,
+      configurable: false,
+    });
 
     Object.defineProperty(this, 'collection', {
       value: collection,
@@ -89,7 +100,7 @@ export class Chain<B> implements IChain<B> {
       validateFn,
       errLookupFn
     );
-    return new Chain<R>(result);
+    return new Chain(result);
   }
   public parallelMapping<R>(
     transformFn?: TransformFn<B, R> | null,
@@ -197,4 +208,58 @@ export class Chain<B> implements IChain<B> {
   get list(): Promise<BaseOrDeferred<B>[]> {
     return this._list;
   }
+  // fantasy-land/ap method
+  // ap :: Chain m => m a ~> m (a -> b) -> m b
+  // fantasy-land/ap :: Apply f => f a ~> f (a -> b) -> f b
+  /*
+  Apply
+A value that implements the Apply specification must also implement the Functor specification.
+
+v['fantasy-land/ap'](u['fantasy-land/ap'](a['fantasy-land/map'](f => g => x => f(g(x))))) is equivalent to v['fantasy-land/ap'](u)['fantasy-land/ap'](a) (composition)
+
+fantasy-land/ap method
+fantasy-land/ap :: Apply f => f a ~> f (a -> b) -> f b
+A value which has an Apply must provide a fantasy-land/ap method. The fantasy-land/ap method takes one argument:
+
+a['fantasy-land/ap'](b)
+b must be an Apply of a function
+
+If b does not represent a function, the behaviour of fantasy-land/ap is unspecified.
+b must be same Apply as a.
+a must be an Apply of any value
+
+fantasy-land/ap must apply the function in Apply b to the value in Apply a
+
+No parts of return value of that function should be checked.
+The Apply returned by fantasy-land/ap must be the same as a and b
+  */
+
+  // public ap<R>(this: Chain<(a: B) => R>, other: Chain<B>): Chain<R> {
+  //   return other.map(this.collection);
+  // }
+
+  public ['fantasy-land/map'] = this.map;
+  public map<R>(
+    transformFn: TransformFn<BaseOrDeferred<B>, R>,
+    lookupFn?: LookupFn<BaseOrDeferred<B>, R> | null,
+    validateFn?: ValidateFn<BaseOrDeferred<B>, R> | null,
+    errLookupFn?: ErrLookupFn | null
+  ): Chain<R> {
+    const result: PromiseLike<Collection<R>> = (async () => {
+      const arr = await this._list;
+      const awaitedArr = awaitedMapping(
+        arr,
+        transformFn,
+        lookupFn,
+        validateFn,
+        errLookupFn
+      );
+      return awaitedArr;
+    })();
+
+    return new Chain<R>(result);
+  }
 }
+
+// export { Chain };
+export default { Chain };

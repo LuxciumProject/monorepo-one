@@ -37,14 +37,23 @@
   "categoryOrder": [
     "Helper Tools",
     "Assertion Tools",
+    "Delegates",
+    "IChain",
     "*"
   ],
+  "searchGroupBoosts": {
+    "Helper Tools": 1,
+    "Assertion Tools": 1,
+    "Delegates": 2,
+    "IChain": 1,
+    "*": 1
+  },
   "kindSortOrder": [
     "Class",
     "Function",
     "Interface",
-    "Reference",
     "TypeAlias",
+    "Reference",
     "Namespace",
     "Variable",
     "Project",
