@@ -1,3 +1,3 @@
 #!/bin/sh
 
-tsc --noEmit false --generateCpuProfile ./lib/performance/tools.cpuprofile || exit 1
+tsc --noEmit false || exit 3

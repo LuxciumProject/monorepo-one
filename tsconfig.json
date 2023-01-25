@@ -8,32 +8,39 @@
       }
     ],
     /* Emit Options */
-    "target": "ES5",
+    "target": "es5",
     "module": "CommonJS",
     "moduleResolution": "node",
     "rootDir": "src",
     "baseUrl": "src",
     "outDir": "lib",
-    "declarationDir": "lib/typings",
+    "declarationDir": "./typings",
     "composite": true,
     "useDefineForClassFields": false,
     "tsBuildInfoFile": "lib/ts-out-info.lib",
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
-    "typeRoots": [
-      "./src/functions",
-      "./src/helpers",
-      "./src/helpers/tools",
-      "./src/helpers/assertions",
-      "./src/constants",
-      "./src/types",
-      "./src/classes/chain",
-      "./src"
-    ],
+    // "typeRoots": [
+    //   "./src/functions",
+    //   "./src/helpers",
+    //   "./src/helpers/tools",
+    //   "./src/helpers/assertions",
+    //   "./src/constants",
+    //   "./src/types",
+    //   "./src/classes/chain",
+    //   "./src"
+    // ],
     /* JavaScript Support */
     "allowJs": true,
     "checkJs": false,
     "resolveJsonModule": true,
+    /* Completeness */
+    "importHelpers": false,
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": true,
+    "noResolve": false,
+    "noLib": false,
+    "moduleDetection": "force",
     /* Bundled library declaration files that describe the target runtime environment. */
     "lib": [
       "dom",
@@ -44,6 +51,58 @@
       "node",
       "heft-jest"
     ],
+    /* Emit Options */
+    // "emitDecoratorMetadata": false,
+    // "experimentalDecorators": false,
+    /* JavaScript Support */
+    /* Module Resolution Interop Constraints */
+    // "target": "ESNext",
+    // "module": "CommonJS",
+    // "moduleResolution": "node",
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "preserveSymlinks": false,
+    // "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    /* JavaScript Support */
+    // "allowJs": true,
+    // "checkJs": false,
+    "maxNodeModuleJsDepth": 1,
+    "disableSizeLimit": false,
+    /* Emit Options */
+    "downlevelIteration": true,
+    "emitBOM": false,
+    "incremental": true,
+    "newLine": "lf",
+    "noEmit": false,
+    "noEmitHelpers": false,
+    "noEmitOnError": false,
+    "preserveConstEnums": true,
+    "preserveValueImports": false,
+    "pretty": true,
+    "removeComments": false,
+    "stripInternal": false,
+    "preserveWatchOutput": false,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "inlineSourceMap": false,
+    "emitDeclarationOnly": false,
+    /* Bundled library declaration files that describe the target runtime environment. */
+    // "lib": ["dom", "esnext"],
+    /* Package names to be included without being referenced in a source file. */
+    // "types": ["node", "heft-jest", "jest"],
+    /* Projects */
+    // "composite": true,
+    "disableSourceOfProjectReferenceRedirect": false,
+    "disableSolutionSearching": false,
+    "disableReferencedProjectLoad": false,
+    /* Compilation Options */
+    "noErrorTruncation": true,
+    // "useDefineForClassFields": true,
+    "assumeChangesOnlyAffectDirectDependencies": false
     /*
       "exports": {
     ".": "./lib/index.js",
@@ -67,41 +126,41 @@
         "tests/*": ["tests/*"]
   },
     */
-    "paths": {
-      "./functions": [
-        "./src/functions/index"
-      ],
-      "./helpers": [
-        "./src/helpers/index"
-      ],
-      "./tools": [
-        "./src/helpers/tools/index"
-      ],
-      "./assertions": [
-        "./src/helpers/assertions/index"
-      ],
-      "./helpers/tools": [
-        "./src/helpers/tools/index"
-      ],
-      "./helpers/assertions": [
-        "./src/helpers/assertions/index"
-      ],
-      "./constants": [
-        "./src/constants"
-      ],
-      "./types": [
-        "./src/types/index"
-      ],
-      "./chain": [
-        "./src/classes/chain"
-      ],
-      "./package.json": [
-        "./package.json"
-      ],
-      "*": [
-        "./src/index"
-      ]
-    }
+    // "paths": {
+    //   "./functions": [
+    //     "./src/functions/index"
+    //   ],
+    //   "./helpers": [
+    //     "./src/helpers/index"
+    //   ],
+    //   "./tools": [
+    //     "./src/helpers/tools/index"
+    //   ],
+    //   "./assertions": [
+    //     "./src/helpers/assertions/index"
+    //   ],
+    //   "./helpers/tools": [
+    //     "./src/helpers/tools/index"
+    //   ],
+    //   "./helpers/assertions": [
+    //     "./src/helpers/assertions/index"
+    //   ],
+    //   "./constants": [
+    //     "./src/constants"
+    //   ],
+    //   "./types": [
+    //     "./src/types/index"
+    //   ],
+    //   "./chain": [
+    //     "./src/classes/chain"
+    //   ],
+    //   "./package.json": [
+    //     "./package.json"
+    //   ],
+    //   "*": [
+    //     "./src/index"
+    //   ]
+    // }
   },
   // "references": [],
   "include": [
