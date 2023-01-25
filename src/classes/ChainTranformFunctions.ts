@@ -70,6 +70,7 @@ export class ChainTranformFunctions<InputType, U = InputType> {
     return this._lastFunction;
   }
 }
+
 export type TransformFnTuple<InputType, OutputType> =
   | [TransformFn<InputType, OutputType>]
   | [TransformFn<InputType, unknown>, TransformFn<unknown, OutputType>]
