@@ -237,7 +237,36 @@ The Apply returned by fantasy-land/ap must be the same as a and b
   // public ap<R>(this: Chain<(a: B) => R>, other: Chain<B>): Chain<R> {
   //   return other.map(this.collection);
   // }
-
+  /**
+   * ### Functor
+   *
+   * 1. `u['fantasy-land/map'](a => a)` is equivalent to `u` (identity)
+   * 2. `u['fantasy-land/map'](x => f(g(x)))` is equivalent to `u['fantasy-land/map'](g)['fantasy-land/map'](f)` (composition)
+   *
+   * <a name="map-method"></a>
+   *
+   * #### `fantasy-land/map` method
+   *
+   * ```hs
+   * fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b
+   * ```
+   *
+   * A value which has a Functor must provide a `fantasy-land/map` method. The `fantasy-land/map`
+   * method takes one argument:
+   *
+   *     u['fantasy-land/map'](f)
+   *
+   * 1. `f` must be a function,
+   *
+   *     1. If `f` is not a function, the behaviour of `fantasy-land/map` is
+   *        unspecified.
+   *     2. `f` can return any value.
+   *     3. No parts of `f`'s return value should be checked.
+   *
+   * 2. `fantasy-land/map` must return a value of the same Functor
+   *
+   * fantasy-laws jsverify sanctuary-show sanctuary-type-classes
+   */
   public ['fantasy-land/map'] = this.map;
   public map<R>(
     transformFn: TransformFn<BaseOrDeferred<B>, R>,

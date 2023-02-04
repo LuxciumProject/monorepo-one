@@ -50,7 +50,7 @@ import {
   ValidateFn,
 } from './types';
 
-export { Chain } from './classes/chain';
+export { Chain } from './classes/Chain';
 export { awaitedMapping } from './functions/awaitedMapping';
 export { generateMapping } from './functions/generateMapping';
 export { generateMappingAsync } from './functions/generateMappingAsync';

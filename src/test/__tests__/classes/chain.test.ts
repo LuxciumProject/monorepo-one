@@ -1,5 +1,51 @@
+// import laws from 'fantasy-laws';
+// import jsc from 'jsverify';
+// import show from 'sanctuary-show';
+// import Z from 'sanctuary-type-classes';
+
 import { awaitedMapping, serialMapping } from '../../../functions';
 import { Chain } from '../../../index';
+
+// describe('Fantasy Land Laws', () => {
+// //    ChainArb :: Arbitrary Chain
+// // const ChainArb = jsc.number.smap (Chain, chain => chain.value, show);
+//   // The `laws` function takes the following arguments:
+//   const { applicative, chain, functor } = laws(Z, {
+//     functions: {
+//       // `f` must return an Apply of any value
+//       'fantasy-land/map': [ Z.Functor ],
+//       // `f` must return an Apply of a function
+//       'fantasy-land/ap': [ Z.Apply ]
+//     },
+//     values: {
+//       // `a` must be an Apply of any value
+//       'fantasy-land/map': [ Z.Functor ],
+//       // `a` must be an Apply of any value
+//       'fantasy-land/ap': [ Z.Apply ]
+//     }
+//   });
+// it ('Should verify the Functor laws', () => {
+//     functor(Chain)([
+//       x => Chain.of(x + 1),
+//       x => Chain.of(x + 2),
+//       x => Chain.of(x + 3)
+//     ]);
+//   });
+//   it ('Should verify the Apply laws', () => {
+//     applicative(Chain)([
+//       x => Chain.of(x + 1),
+//       x => Chain.of(x + 2),
+//       x => Chain.of(x + 3)
+//     ]);
+//   });
+//   it ('Should verify the Chain laws', () => {
+//     chain(Chain)([
+//       x => Chain.of(x + 1),
+//       x => Chain.of(x + 2),
+//       x => Chain.of(x + 3)
+//     ]);
+//   });
+// });
 
 describe('Class Chain', () => {
   it('Should have a static function of', async () => {

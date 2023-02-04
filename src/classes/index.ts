@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-export { Chain } from './chain';
+export { Chain } from './Chain';
 export {
   addFirstFunction,
   ChainTranformFunctions,
