@@ -145,6 +145,10 @@
       "path": "examples/template"
     },
     {
+      "name": "        🪄🎱 gpu-stuff",
+      "path": "examples/gpu-stuff"
+    },
+    {
       "name": "        🪄🎱 playground",
       "path": "examples/playground"
     },
