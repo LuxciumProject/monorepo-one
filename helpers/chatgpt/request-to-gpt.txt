@@ -1,0 +1,7 @@
+Sure, here's a modified magic phrase in the imperative form that addresses an instance of ChatGPT:
+
+"ChatGPT, please generate a summary of the key points and action items discussed so far. Once you have the summary, please provide it so that I can copy and paste it into a new instance of ChatGPT to continue our conversation where we left off. Thank you!"
+
+And as for the reply, the ChatGPT instance could say:
+
+"Here's the summary of the key points and action items discussed so far. Once you have copied and pasted it into a new instance of ChatGPT, we can continue our conversation where we left off."

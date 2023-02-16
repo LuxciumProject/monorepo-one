@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////////////////////
+
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Overview:
+- Programming Language: TypeScript
+- Backend Runtime: Node.js
+- Project Architecture: Microservices/Microfrontends built on a monorepo with a custom structure using Rush Stack
+- Global Package Manager: pnpm
+- Project Package Manager: rush
+- Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
+
+Development Tools and Frameworks:
+- Frontend Framework: Next.js, React, or Create React App
+- Backend Development: Nest.js, Redis, MongoDB, Mongoose, Nginx
+- Web Development: Webpack, Babel
+- DevOps: Git, GitHub, Docker
+- Cloud Platforms: Azure
+- Machine Learning and Data Science: TensorFlow.js, OpenAI API
+- Other Technical Skills and Expertise: RxJS, TypeDoc, Puppeteer (PPTR) Headless, tsdoc
+
+Computer Capabilities:
+- Operating System: Linux Fedora with KDE Plasma shell 6.x-200.fc37.x86_64 GNU/Linux
+- Processor: Intel(R) Core(TM) i9-10900X CPU @ 3.70GHz (10 cores, 20 threads, Turbo Boost: 5.0GHz)
+- Graphics Card: 2x NVIDIA Corporation [TITAN Xp] dual GPU
+- RAM: 46Gi
