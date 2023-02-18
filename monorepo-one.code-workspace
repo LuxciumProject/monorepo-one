@@ -5,6 +5,11 @@
       "path": "."
     },
     {
+      "name": "  ↓✨🤖 PROMPTS",
+      "path": "prompts"
+    },
+    //
+    {
       "name": "  ↓🔐💫 PRIVATE",
       "path": "private"
     },
@@ -27,6 +32,10 @@
     {
       "name": "          💻👨‍💻 💅 home",
       "path": "frontend/home"
+    },
+    {
+      "name": "          💻👨‍💻 main-react",
+      "path": "frontend/main-react"
     },
     {
       "name": "          💻👨‍💻 my-next-js-app",
@@ -163,6 +172,10 @@
     {
       "name": "        🪄📘 typescript",
       "path": "examples/typescript"
+    },
+    {
+      "name": "📓📔Scripts",
+      "path": "scripts"
     }
   ],
   "tasks": {

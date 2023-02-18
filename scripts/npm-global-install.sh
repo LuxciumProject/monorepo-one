@@ -11,8 +11,7 @@ npm install --global --force \
   prettier@latest \
   ts-node@latest \
   typescript@latest \
-  vsce@latest \
-  yarn@latest
+ @vscode/vsce@latest \
 
 pnpm add --global \
   @microsoft/rush \
@@ -21,12 +20,10 @@ pnpm add --global \
   eslint@latest \
   jest@latest \
   nodemon@latest \
-  npm@latest \
-  pnpm@latest \
   prettier@latest \
   ts-node@latest \
   typescript@latest \
-  vsce@latest \
+ @vscode/vsce@latest \
   yarn@latest
 
 yarn global add \
@@ -36,12 +33,10 @@ yarn global add \
   eslint@latest \
   jest@latest \
   nodemon@latest \
-  npm@latest \
-  pnpm@latest \
   prettier@latest \
   ts-node@latest \
   typescript@latest \
-  vsce@latest \
-  yarn@latest
+ @vscode/vsce@latest \
 
 echo "$PATH"
+# /projects/monorepo-one/scripts/npm-global-install.sh
