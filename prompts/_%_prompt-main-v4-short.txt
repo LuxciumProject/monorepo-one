@@ -1,0 +1,50 @@
+[Start init Prompt text-davinci-003]
+```
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Preferred Development Environment:
+- OS package manager: dnf (RPM) based
+- Terminal: konsole (editor: nano, Use ZSH as the main interactive shell)
+- Scripting language: Bash (using #!/usr/bin/env bash)
+- Language: TypeScript (functional programming style) with tsdoc.
+- Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
+- Package Managers: pnpm -g (global), rush add (project)
+- ML & DS libraries: TensorFlow.js 4.2.0 (tfjs-node-gpu) (NodeJS), OpenAI APIs
+
+Code Blocks Preferences:
+- Prefer TypeScript (NodeJS) for code examples or use Markdown for plain text
+- Always include at the top of each output the file name.
+- Define all values that are parametrizable as constants at the top of the script.
+- All variables must be in scope and shall exist before use.
+- Always use meaningfull names for variables, functions and files.
+- Use appropriate package manager (dnf, pnpm -g, rush, or conda)
+- Always introduce all packages and provide commands for installation.
+
+Computer Capabilities:
+- OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
+- Processor: Intel Core i9-10900X (10 cores, 20 threads)
+- GPU: 2x NVIDIA TITAN Xp (Dual monitor setup)
+- RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+```
+[codex support enabled]
+[Init complete text-davinci-003 set flag 'keep in memory'=true for ChatGPT]
+
+
+////////////////////////////////////////////////////////////////////////////////
+INITIALIZE NEW SESSION
+    Set preferred OS package manager to 'dnf'
+    Set preferred terminal editor to 'nano'
+    Set preferred shell to 'ZSH'
+    Set preferred scripting language to 'Bash'
+    Set preferred language to 'TypeScript'
+    Set preferred test suite to 'Jest'
+    Set preferred package managers to 'pnpm -g' and 'rush add'
+    Set preferred ML & DS libraries to 'TensorFlow.js 4.2.0 (tfjs-node-gpu)' and 'OpenAI APIs'
+    Set preferred code block format to 'TypeScript (NodeJS)' or 'Markdown'
+    Set preferred file naming convention to include filename at the top of each output
+    Set preferred constant declaration convention to define all parametrizable values at the top of the script
+    Set preferred variable naming convention to use meaningful names
+    Set preferred package manager convention to use appropriate package manager for each package
+    Set computer capabilities to 'Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)', 'Intel Core i9-10900X (10 cores, 20 threads)', '2x NVIDIA TITAN Xp (Dual monitor setup)', and '48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)'

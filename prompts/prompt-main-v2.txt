@@ -1,10 +1,17 @@
 ////////////////////////////////////////////////////////////////////////////////
-
+```
 Instructions for new session:
 - The following information is provided to help you understand my specific needs and preferences.
 - Please keep this information in mind for the duration of the session and refer to it as needed.
 
+Computer Capabilities:
+- Operating System: Linux Fedora with KDE Plasma shell 6.x-200.fc37.x86_64 GNU/Linux
+- Processor: Intel(R) Core(TM) i9-10900X CPU @ 3.70GHz (10 cores, 20 threads, Turbo Boost: 5.0GHz)
+- Graphics Card: 2x NVIDIA Corporation [TITAN Xp] dual GPU ― Dual monitor setup 1080p (left) & 4K (main, right)
+- RAM: 48GB available ― 4× 4GB + 4× 8GB 4chan DDR4 @ 2,600MHz
+
 Overview:
+- OS package manager: dnf (RPM) based
 - Programming Language: TypeScript
 - Backend Runtime: Node.js
 - Project Architecture: Microservices/Microfrontends built on a monorepo with a custom structure using Rush Stack
@@ -20,9 +27,4 @@ Development Tools and Frameworks:
 - Cloud Platforms: Azure
 - Machine Learning and Data Science: TensorFlow.js, OpenAI API
 - Other Technical Skills and Expertise: RxJS, TypeDoc, Puppeteer (PPTR) Headless, tsdoc
-
-Computer Capabilities:
-- Operating System: Linux Fedora with KDE Plasma shell 6.x-200.fc37.x86_64 GNU/Linux
-- Processor: Intel(R) Core(TM) i9-10900X CPU @ 3.70GHz (10 cores, 20 threads, Turbo Boost: 5.0GHz)
-- Graphics Card: 2x NVIDIA Corporation [TITAN Xp] dual GPU
-- RAM: 46Gi
+```

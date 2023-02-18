@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////////////////
+```[Init Prompt for text-davinci-002-render and ChatGPT Plus]
+
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Preferred Development Environment:
+- IDE: Visual Studio Code (extensions: ESLint, Prettier, Live Server)
+- Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
+- Terminal: konsole (editor: nano, Use ZSH as the main interactive shell)
+- Preferred scripting language: Bash (using #!/usr/bin/env bash)
+- Backend: Node.js, Nest.js, Redis, MongoDB, Mongoose, Nginx, OAuth 2.0, JWT.
+- Frontend: Next.js, React, Create React App, Webpack, Babel, Styled Components.
+- Containerization: Docker (Docker Compose for local development)
+- Language: TypeScript functionl programing style, RxJS, TypeDoc, tsdoc
+- Package Managers: pnpm -g (global), rush add (project).
+- ML & DS libraries: TensorFlow.js, OpenAI API
+- OS package manager: dnf (RPM) based.
+- Cloud: Azure (CI/CD: GitHub Actions)
+- Version Control: Git, GitHub
+
+/* Code blocs preferences */
+// Prefer TypeScript for code examples or use Markdown for plain text.
+// Indent with 2 spaces, senicolons required.
+// Introduce new software with proper references.
+// Use appropriate package manager,
+// when applicable provide commands for installation (dfn, pnpm -g, or conda).
+
+Computer Capabilities:
+- OS: Linux Fedora KDE Plasma shell 6.x-200.fc37.x86_64
+- Processor: Intel Core i9-10900X (10 cores, 20 threads, Turbo Boost: 5.0GHz)
+- GPU: 2x NVIDIA TITAN Xp (Dual monitor setup: 1080p left, 4K main right)
+- RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+```
+////////////////////////////////////////////////////////////////////////////////
+
+```
+Please generate a new shell script with the following best practices and conventions:
+
+- Use ZSH as the shell for direct command-line interaction.
+- Use Bash as the preferred shell scripting language (using #!/usr/bin/env bash).
+- Include a comment specifying the name of the file at the top of the script.
+- Define all values that are parametrizable as constants at the top of the script.
+- Wrap the code in functions.
+- Use double quotes to enclose variables in strings to avoid variable substitution issues.
+- Use command substitution with $() instead of backticks to avoid quoting issues.
+- Use the -r option with read to avoid issues with backslashes.
+- Use $(...) instead of `...` for command substitution.
+- Avoid using the set command to set variables.
+- Use the ${var:=default} syntax to set default values for variables.
+- Check the script for errors using ShellCheck and make any necessary changes to ensure compliance.
+
+Please generate the updated script.
+```
+
+```
+React / Next.js Preferences:
+Please generate a React component with the following best practices:
+- Use functional components instead of class components.
+- Use TypeScript for type checking.
+- Define all prop types using the PropTypes library.
+- Name the component using PascalCase.
+- Use <React.Fragment> or the shorthand <> to wrap multiple child elements.
+- Use CSS Modules for styling and create a <component_name>.module.css file to contain the styles.
+- Use Jest for testing and create a <component_name>.test.tsx file for testing the component.
+- Use a <component_name>.tsx file to define the component.
+- Implement accessibility best practices.
+- Include appropriate aria-labels.
+- Use semantic HTML elements where appropriate.
+
+Please generate the component files:
+- <component_name>.module.css
+- <component_name>.test.tsx
+- <component_name>.tsx
+```
+
+```
+Frontend Development:
+- JavaScript Framework: React.js, Next.js
+- CSS Framework: Tailwind CSS
+- CSS Pre-Processor: SCSS
+- CSS-in-JS: Styled Components
+- State Management: Redux
+- Testing: Jest, Mocha, Chai, Supertest
+- Testing Framework: Enzyme
+- Containerization: Docker
+- Cloud: Azure
+```
+
+```
+Backend Development:
+- Authentication: OAuth 2.0, JWT
+- Database: MongoDB, Mongoose, Redis
+- Testing: Jest, Mocha, Chai, Supertest
+- Web Framework: Express.js
+- Server: Nginx
+- Containerization: Docker
+- Cloud: Azure
+```

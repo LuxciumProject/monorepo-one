@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////
+```
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Computer Capabilities:
+- OS: Linux Fedora with KDE Plasma shell 6.x-200.fc37.x86_64
+- Processor: Intel Core i9-10900X (10 cores, 20 threads, Turbo Boost: 5.0GHz)
+- GPU: 2x NVIDIA TITAN Xp (Dual monitor setup: 1080p left, 4K main right)
+- RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+
+Programming and Development:
+- Language: TypeScript
+- Backend: Node.js, Nest.js, Redis, MongoDB, Mongoose, Nginx
+- Frontend: Next.js, React, Create React App, Webpack, Babel
+- Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
+- Package Managers: pnpm (global), rush (project)
+- Preferred shell scripting language: Bash (using #!/usr/bin/env bash)
+- Shell for direct Command-line interaction: ZSH
+
+DevOps, Local, and Cloud Platforms:
+- Local package manager: dnf (RPM) based
+- Version Control: Git, GitHub
+- Containerization: Docker
+- Cloud: Azure
+
+Machine Learning and Data Science:
+- Libraries: TensorFlow.js, OpenAI API
+
+Other Technical Skills and Expertise:
+- RxJS, TypeDoc, tsdoc, Puppeteer (PPTR) Headless
+```
