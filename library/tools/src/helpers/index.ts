@@ -1,2 +1,7 @@
 export { filterLines, lineFilter, linesFilter } from './filterLines';
-export { uniqueByKeepFirst, uniqueByKeepLast, uniqueLines } from './uniqueLines';
+export { normalize } from './normalize';
+export {
+  uniqueByKeepFirst,
+  uniqueByKeepLast,
+  uniqueLines,
+} from './uniqueLines';

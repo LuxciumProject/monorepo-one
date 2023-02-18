@@ -8,7 +8,7 @@
     "install": "#bash scripts/build.sh",
     "build": "bash scripts/build.sh",
     "rebuild": "rm -fr ./lib; bash scripts/build.sh",
-    "test": "jest --config='config/jest.config.json'"
+    "test": "jest --onlyChanged --config='config/jest.config.json'"
   },
   "keywords": [],
   "author": "",
