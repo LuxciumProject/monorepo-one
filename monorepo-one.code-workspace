@@ -957,6 +957,11 @@
       "source.fixAll.eslint",
       "source.fixAll"
     ],
+    "material-icon-theme.folders.associations": {
+      "eslint-plugin": "rules",
+      "chatgpt": "cobol",
+      "prompts": "log"
+    },
     // #endregion: FORMAT BEHAVIOUR                                  !
     /*
   |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
@@ -2776,7 +2781,8 @@
       "RushStack",
       "services",
       "examples",
-      "Storybook"
+      "Storybook",
+      "ChatGPT"
     ],
     "workbench.colorCustomizations": {
       "activityBar.activeBackground": "#6a2bd499",

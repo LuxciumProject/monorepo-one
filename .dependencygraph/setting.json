@@ -1,0 +1,9 @@
+{
+  "entryFilePath": "entries",
+  "alias": {
+    "@libs": "./library/**/src"
+  },
+  "resolveExtensions": [
+    ".ts"
+  ]
+}
