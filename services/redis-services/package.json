@@ -6,7 +6,7 @@
   "types": "out/typings/index.d.ts",
   "scripts": {
     "build": "bash scripts/build.sh",
-    "install": "#bash scripts/build.sh",
+    "install": "yarn build; #bash scripts/build.sh",
     "prebuild:": "jest",
     "install:": "#heft build --clean #tsc --noEmit false --generateCpuProfile \"./out/redis-services.cpuprofile\" || exit 1;",
     "test": "jest --config='config/jest.config.json'"
@@ -18,7 +18,7 @@
     "@rushstack/heft-jest-plugin": "0.4.2",
     "@types/eslint-config-prettier": "6.11.0",
     "@types/eslint-plugin-prettier": "3.1.0",
-    "@types/node": "18.13.0",
+    "@types/node": "~18.14.0",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
     "eslint": "8.33.0",
