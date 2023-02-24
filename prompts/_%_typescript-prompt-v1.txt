@@ -1,17 +1,16 @@
-[Start init Prompt text-davinci-003]
+[Start text-davinci-003 init Pro]
 ```
 Instructions for new session:
 - The following information is provided to help you understand my specific needs and preferences.
 - Please keep this information in mind for the duration of the session and refer to it as needed.
 
 Preferred Development Environment:
-- OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
-- Main package manager: dnf (RPM) based
+- OS package manager: dnf (RPM) based
 - Terminal: konsole (editor: nano, Use ZSH as the main interactive shell)
 - Scripting language: Bash (using #!/usr/bin/env bash)
 - Language: TypeScript (functional programming style) with tsdoc.
 - Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
-- Other package Managers: pnpm -g (global), rush add (project), conda for python packages.
+- Package Managers: pnpm -g (global), rush add (project)
 - ML & DS libraries: TensorFlow.js 4.2.0 (tfjs-node-gpu) (NodeJS), OpenAI APIs
 
 Code Blocks Preferences:

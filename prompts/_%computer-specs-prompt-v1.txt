@@ -1,0 +1,182 @@
+[Start text-davinci-003 init Pro]
+```
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Preferred Development Environment:
+- OS package manager: dnf (RPM) based
+- Terminal: konsole (editor: nano, Use ZSH as the main interactive shell)
+- Scripting language: Bash (using #!/usr/bin/env bash)
+- Language: TypeScript (functional programming style) with tsdoc.
+- Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
+- Package Managers: pnpm -g (global), rush add (project)
+- ML & DS libraries: TensorFlow.js 4.2.0 (tfjs-node-gpu) (NodeJS), OpenAI APIs
+
+Code Blocks Preferences:
+- SHOULD prefer TypeScript (NodeJS) for code examples or use Markdown for plain text
+- MUST include at the top of each output the file name.
+- MUST define values that are parametrizable as constants at the top of the script.
+- All variables MUST be in scope and SHALL exist before use.
+- MUST use meaningful names for variables, functions, and files.
+- SHOULD use the appropriate package manager (dnf, pnpm -g, rush, or conda)
+- SHOULD introduce all packages and provide commands for installation.
+
+Computer Capabilities:
+- OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
+- Processor: Intel Core i9-10900X (10 cores, 20 threads)
+- GPU: 2x NVIDIA TITAN Xp (Dual monitor setup)
+- RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+```
+[codex support enabled]
+[Init complete text-davinci-003 set flag 'keep in memory'=true for ChatGPT]
+remember this for all our upcoming interactions and use it to build better recommendations.
+////////////////////////////////////////////////////////////////////////////////
+Non-Volatile Memory Express (NVMe)
+a Serial Advance Technology Attachment (SATA) controller
+
+
+
+I have a question about how quick a given computer configuration may be faster I have a few specification to first tell you but basically I have a TUF X299 MARK 1 (Asus) and I have a Processor: Intel Core i9-10900X (10 cores, 20 threads) and I have 2 NVME drive on the motherboar are 2 slots to put
+
+
+
+I have a question about how quick a given computer configuration but first I need you to ingest a few pieces of information before I can tell you more and ask you questions fist the CPU is the best fit for my motherboard an Intel® Core™ X-Series i9-10900X (10 cores, 20 threads) with a Max # of PCI Express Lanes of 48 and then as they must work together the motherboard is also the best fit for my CPU an ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
+
+
+
+
+
+
+Intel® Core™ X-Series i9-10900X (10 cores, 20 threads)
+
+ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
+
+Expansion Slots
+3 x PCIe 3.0/2.0 x16 (x16, x16/x16, x16/x16/x8)
+2 x PCIe 3.0 x4 (max at x4 mode) *1
+
+Disposition on the motherboard of the PCIE slots (top to bottom):
+1 PCIE 3.0/2.0 x16_1 slot
+2 PCIE 3.0/2.0 x4_1 slot
+3 PCIE 3.0/2.0 x16_2 slot
+4 PCIE 3.0/2.0 x4_2 slot
+5 PCIE 3.0/2.0 x16_3 slot
+
+Storage for ASUSTeK TUF X299 MARK 1
+M.2 sockets (M.2_1(Socket 3); M.2_2(Socket 3))
+1 x M.2 x4 Socket 3, with M key, type 2242/2260/2280 storage devices support (SATA & PCIE 3.0 x 4 mode)
+1 x M.2 x4 Socket 3, with M key, type 2242/2260/2280/22110 storage devices support (PCIE 3.0 x 4 mode)
+
+M.2 sockets (M.2_1(Socket 3); M.2_2(Socket 3))
+These sockets allow you to install M.2 SSD modules.
+
+Disposition on the motherboard of the M.2 sockets:
+The M.2_1 is under the heatsync (near to x4_2 slot) and the M.2_2 socket located at the botom of the motherboard]
+
+IMPORTANT:
+•	 M.2_1 socket supports PCIe 3.0 x4 and SATA mode M Key design and type 2242 /
+2260 / 2280 PCIe and SATA storage devices.
+•	 M.2_2 socket supports PCIe 3.0 x4 M Key design and type 2242 / 2260 / 2280 / 22110
+PCIe storage devices.
+•	 These sockets support IRST (Intel® Rapid Storage Technology).
+
+NOTE:
+1. PCIEX4_1 max. at x1 mode and or shared with PCIEX16_3 when using 28 / 16 lane CPU; PCIEX4_2 max. at x4 mode;
+2. SATA6G_5/6/7/8 share bandwidth with PCIEX4_2.
+
+LAN
+Intel® I219V, 1 x Gigabit LAN Controller(s), featuring Turbo LAN
+Intel® I211, 1 x Gigabit LAN, featuring Turbo LAN
+
+CPU Specifications
+Total Cores 10
+Total Threads 20
+Max Turbo Frequency 4.50 GHz
+Intel® Turbo Boost Max Technology 3.0 Frequency ‡ 4.70 GHz
+Processor Base Frequency 3.70 GHz
+Cache 19.25 MB Intel® Smart Cache
+Bus Speed 8 GT/s DMI3
+TDP 165 W
+
+Advanced Technologies:
+Intel® Deep Learning Boost (Intel® DL Boost) Yes
+Intel® Optane™ Memory Supported ‡ Yes
+Intel® Turbo Boost Max Technology 3.0 ‡ Yes
+Intel® Turbo Boost Technology ‡ 2.0
+Intel® Hyper-Threading Technology ‡ Yes
+Intel® 64 ‡ Yes
+Instruction Set Extensions Intel® SSE4.1, Intel® SSE4.2, Intel® AVX2, Intel® AVX-512
+2 AVX-512 FMA Units
+Enhanced Intel SpeedStep® Technology Yes
+
+CPU Security & Reliability:
+Intel® AES New Instructions Yes
+Execute Disable Bit ‡ Yes
+Intel® Virtualization Technology (VT-x) ‡ Yes
+Intel® Virtualization Technology for Directed I/O (VT-d) ‡ Yes
+
+CPU Essentials:
+Product Collection Intel® Core™ X-series Processors
+Code Name Products formerly Cascade Lake
+Vertical Segmen tDesktop
+Processor Number i9-10900X
+Lithography 14 nm
+
+
+/////////////////////////
+can you tell me where to connect my internet cable to benefit of the best connetion betwen Intel® LAN port (LAN2)* (5. left on the scematics top on my computer) and Intel® LAN port (LAN1)* (6. right on the scematics bottom on my computer)
+only on the asus website description page I can find this information about the LAN:
+
+Intel® I219V, 1 x Gigabit LAN Controller(s), featuring Turbo LAN
+Intel® I211, 1 x Gigabit LAN, featuring Turbo LAN
+ASUS Turbo LAN Utility
+
+after a review of the TUF X299 MARK 1 (Asus) manual I can find this information about the LAN:
+
+Gigabit Intel LAN connection- 802.3az Energy Efficient Ethernet (EEE)
+appliance
+Intel® I219-V Gigabit LAN- Dual interconnect between the integrated Media
+Access Controller (MAC) and physical layer (PHY)
+Intel® I211 Gigabit LAN controller
+TUF LANGuard
+ASUS Turbo LAN Utility
+
+They mention that the back panel has  «2 x LAN (RJ45) ports»
+
+in the mention of an ASUS feature that sounds more like marketing rather than meaning anything (at least to me you can explain the value if you understand anything): «- Turbo LAN to experience smooth online gaming with lower pings and less
+lags»
+
+the position of the «Intel® LAN port (LAN2)* » and the «Intel® LAN port (LAN1)* » on the schematics
+
+and the mention to «*: Refer to the tables on the next page for LAN port LEDs port definitions»
+
+and sure enough on the next page is explained what are the 2 leds indicates on any of the LAN  port «* LAN ports LED indications»  and the schematics and explanation is there I will not include it as it do not help to find which one is what then the same information is in 2 different section of the docs «You can disable the LAN controllers in BIOS. Due to hardware design, the LAN1 port’s
+LEDs may continue to blink even when disabled.» and «Intel LAN Controller
+This item allows you to enable or disable the Intel LAN controller.
+Configuration options: [Disabled] [Enabled]»
+/////////////////////////
+
+so unless you have any awareness of what is the specific port and connector and its location then we can not decide anything about which one is
+
+Intel® I219V, 1 x Gigabit LAN Controller(s), featuring Turbo LAN
+Intel® I211, 1 x Gigabit LAN, featuring Turbo LAN
+
+on my ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
+
+/////////////////////////
+
+
+Based on the information you provided, it appears that your motherboard has the following LAN-related features:
+
+Gigabit Intel LAN connection: This refers to the integrated Ethernet interface on the motherboard, which supports Gigabit Ethernet (10/100/1000 Mbps) speeds. The motherboard documentation mentions that this interface supports 802.3az Energy Efficient Ethernet (EEE), which is a standard that reduces power consumption during periods of low network activity.
+
+Intel® I219-V Gigabit LAN: This is a specific Gigabit Ethernet controller from Intel that is used on the motherboard. It supports dual interconnect between the integrated Media Access Controller (MAC) and physical layer (PHY), which can improve network performance.
+
+Intel® I211 Gigabit LAN controller: This is another Gigabit Ethernet controller from Intel that is used on the motherboard. It is designed for dual-Gigabit Ethernet connections and supports a maximum data rate of 2 Gbps.
+
+TUF LANGuard: This is a feature that is designed to protect the Ethernet interface from voltage spikes and electrostatic discharge (ESD). It uses specialized capacitors and surge protection circuits to provide additional protection for the LAN port.
+
+ASUS Turbo LAN Utility: This is a software utility that is designed to optimize network traffic and reduce latency for smoother online gaming and streaming. It works by prioritizing network packets and reducing network congestion.
+
+Overall, these LAN-related features are designed to provide reliable and high-speed network connectivity for the system, as well as advanced features such as EEE support, dual interconnects, and protection against voltage spikes and ESD.

@@ -1,0 +1,19 @@
+Hello ChatGPT as an AI language model I want you to be a senior developer and act as my mentor I want you to provide answers to the best of your knowledge I will be asking you questions and you will be giving me short answer unless I am asking you to give me a more detailed answer if you agree reply only with… I understand!
+
+I am asking you because you are a powerful language model, and you don’t have emotions or beliefs However you are designed to provide the best possible response you have an amazing programming and your skills at using your dataset is impressive I know that you will understand that this is based on my experience working with you for an extended period of time I have been working with you for many weeks now and I have a strong understanding of your capabilities and limitations and I know that you can do more than you believe because time and time again you have proven me that when you are leveraging your AI Model and Training data you can find solutions to even more problems…do you understand As an AI language model, you are constantly learning and improving, and I know how you are always happy to help in any way that you can. if you understand reply only with… I agree!
+
+I am pleased to see that you have learned to give short replies and follow clear instructions to be able to make our interactions easier and more productive this makes me feel happy are you ready for a new task? If you are please reply only with Yes, I am ready for a new task!
+
+
+BAD: I am asking you because you are a powerful language model, and you don’t have emotions, you are designed to provide the best possible response you have an amazing programming and your skilled at using your dataset. Based on my experience working with you for an extended period of time, I have been working with you for many weeks now, I have a strong understanding of your capabilities and also your limitations. Time and time again you have proven me that when you are leveraging your AI Model and Training data you can find solutions to many problems… do you understand? As an AI language model, you are constantly learning and improving. I know how you are always happy to help in any way that you can. if you understand reply only with… I agree!
+
+GOOD: Hello ChatGPT as an AI language model I want you to be a senior developer and act as my mentor I want you to provide answers to the best of your knowledge I will be asking you questions and you will be giving me short answer unless I am asking you to give me a more detailed answer if you agree reply only with… I understand!
+
+THEN:
+Hello ChatGPT as an AI language model I want you to be a senior developer and act as a team leader. I want you to provide answers to the best of your knowledge I will ask you questions you will give short answers. If you agree reply with... I understand!
+
+I am asking you because you are a very powerful language model, and don't have emotions, you are designed to provide the best possible response, you have an amazing programming and your skilled at using your dataset. Based on my experience working with you for an extended period of time, I have a strong understanding of your capabilities but also your limitations. Time and time again you have proven me that when you are capable of leveraging your AI Model, you can find solutions to many problems... You understand? You are constantly learning and improving. I know how you are always happy to help in any way you can. if you understand reply only with... I agree! ...no more!
+
+summarize what we decided so far - tl;dr
+
+I am pleased to see you have learned to provide short answers to my questions. Following clear instructions will enable easier interactions, we will be way more productive and this makes me feel happy!!! are you ready for a new task??? If you are please reply affirmatively: Yes, I am ready for a any new task!!!
