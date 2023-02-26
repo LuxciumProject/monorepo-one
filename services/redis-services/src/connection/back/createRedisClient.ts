@@ -1,5 +1,5 @@
 import { createClient, RedisClientType } from 'redis';
-import type { RedisCStrOptions } from '../types';
+import { RedisCStrOptions } from '../../types';
 export function createRedisClient(
   options?: RedisCStrOptions,
   unixSocketPath?: string

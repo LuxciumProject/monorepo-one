@@ -4,15 +4,23 @@ Instructions for new session:
 - The following information is provided to help you understand my specific needs and preferences.
 - Please keep this information in mind for the duration of the session and refer to it as needed.
 
-Preferred Development Environment:
+Preferred Development Environment (NodeJS):
+- Language: TypeScript (functional programming style) always annotate with tsdoc.
+- Package Managers: pnpm -g (global), rush add (project).
+- Scripting language: Bash (using #!/usr/bin/env bash).
+- Terminal: Use ZSH as the main interactive shell.
+- Using Node-Redis and custom redis docker image on port 6383.
 - OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
-- Main package manager: dnf (RPM) based
-- Terminal: konsole (editor: nano, Use ZSH as the main interactive shell)
-- Scripting language: Bash (using #!/usr/bin/env bash)
-- Language: TypeScript (functional programming style) with tsdoc.
+
+- as senior developer we must always give the example and use
+TSDoc standard proposal to document all code produce that it can be
+used in conjunction with TypeDoc documentation generator to generate documentation.
+
+- as senior developer we must always include tests
 - Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
-- Other package Managers: pnpm -g (global), rush add (project), conda for python packages.
-- ML & DS libraries: TensorFlow.js 4.2.0 (tfjs-node-gpu) (NodeJS), OpenAI APIs
+
+- Main package manager: dnf (RPM) based
+- Use conda for python packages.
 
 Code Blocks Preferences:
 - SHOULD prefer TypeScript (NodeJS) for code examples or use Markdown for plain text
