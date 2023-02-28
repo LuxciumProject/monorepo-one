@@ -1,7 +1,7 @@
 import { createRedisClient, RedisClientType } from '.';
 
 const REDIS_DEFAULT_UNIX_SOCKET_PATH = '/var/run/redis/redis.sock';
-const REDIS_DEFAULT_PORT = 6379;
+const REDIS_DEFAULT_PORT = 6378;
 
 export function rConnectFn(unixSocketPath: string): Promise<RedisClientType>;
 export function rConnectFn(
@@ -27,11 +27,14 @@ export async function rConnectTcp(
   host: string | null = '0.0.0.0'
 ): Promise<RedisClientType> {
   /** *REDIS CLIENT* */
-  const R = createRedisClient({
-    port: port || REDIS_DEFAULT_PORT,
-    dbNumber: dbNumber || 0,
-    host: host || '0.0.0.0',
-  });
+  const R = createRedisClient(
+    {
+      port: port || REDIS_DEFAULT_PORT,
+      dbNumber: dbNumber || 0,
+      host: host || '0.0.0.0',
+    },
+    undefined
+  );
   await R.connect();
   type REDIS_CLIENT = typeof R;
   return R as REDIS_CLIENT;
@@ -107,7 +110,7 @@ export const rConnectFn_002: RConnectAll = Object.assign(
  * **Invoke and await to get: *REDIS CLIENT***
  *
  * @param {number} port - By default, the Redis server runs on *TCP
- * Port 6379* but **this project use default of 6383**
+ * Port 63 79* but **this project use default of 6383**
  *
  * @param {number} dbNumber - Redis databases are numbered from 0
  * to 15. However, you can change the database you're using with this

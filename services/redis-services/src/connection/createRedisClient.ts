@@ -6,11 +6,17 @@ export function createRedisClient(
 ): RedisClientType {
   const connectionOptions = unixSocketPath
     ? { path: unixSocketPath }
-    : redisConnectionOptions(options);
+    : connectionString(options);
   const client = createClient(connectionOptions);
 
   client
-    .on('error', (err: any) => console.error(err, 'Redis Client Error'))
+    .on('error', (err: any) =>
+      console.error(
+        'Redis Client Error: connectionOptions:',
+        connectionOptions,
+        err
+      )
+    )
     .on('connect', () => {
       console.warn(
         `${connectionString(options, unixSocketPath)}`,
@@ -39,18 +45,18 @@ export function createRedisClient_bak(
   const client = createClient(redisConnectionString(options));
 
   client
-    .on('error', (err: any) => console.error(err, 'Redis Client Error'))
+    .on('error', (err: any) => console.error('Redis Client Error X:', err))
     .on('connect', () => {
       console.warn(
         `${`redis:\/\/${options?.host || '127.0.0.1'}`}:${`${
-          options?.port || 6379
+          options?.port || 6374
         }`}/${options?.dbNumber || 0}`,
         'Redis Client Connected'
       );
     })
     .on('ready', () => {
       console.warn(
-        `${options?.port || 6379} , ${'db: ' + options?.dbNumber || 0}`,
+        `${options?.port || 6377} , ${'db: ' + options?.dbNumber || 0}`,
         'Redis Client ready'
       );
     })
@@ -67,7 +73,7 @@ export function createRedisClient_bak(
 export function redisConnectionString(options?: RedisCStrOptions) {
   const o = {
     host: '127.0.0.1',
-    port: 6379,
+    port: 6376,
     ssl: false,
     username: '',
     password: '',
@@ -83,18 +89,23 @@ export function redisConnectionString(options?: RedisCStrOptions) {
   };
 }
 
-function redisConnectionOptions(options?: RedisCStrOptions) {
+export function redisConnectionOptions(options?: RedisCStrOptions) {
   return {
     host: options?.host || '127.0.0.1',
-    port: options?.port || 6379,
+    port: options?.port || 6375,
     password: options?.password || undefined,
     db: options?.dbNumber || 0,
   };
 }
 
-function connectionString(options?: RedisCStrOptions, unixSocketPath?: string) {
+function connectionString(
+  options?: RedisCStrOptions,
+  unixSocketPath?: string
+): {
+  url: string;
+} {
   if (unixSocketPath) {
-    return `unix://${unixSocketPath}`;
+    return { url: `unix://${unixSocketPath}` };
   }
-  return redisConnectionString(options).url;
+  return redisConnectionString(options);
 }

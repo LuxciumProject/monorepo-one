@@ -8,9 +8,9 @@
     "moduleResolution": "node",
     "rootDir": "./src",
     "composite": true,
-    "declarationDir": "./out/typings",
-    "outDir": "./out",
-    "tsBuildInfoFile": "./out/ts-out-info.lib",
+    "declarationDir": "node_modules/out/typings",
+    "outDir": "node_modules/out",
+    "tsBuildInfoFile": "node_modules/out/ts-out-info.lib",
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
     /* JavaScript Support */
