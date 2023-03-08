@@ -1,0 +1,29 @@
+As a team leader, I would suggest the following steps for our next steps in the project:
+
+
+previously mentioned steps:
+Decide on the design of the cursor blinker, including the frequency of the blink and the representation of the cursor (for example, using a red block character).
+Refactor the code to make it more modular and reusable, using functions for each distinct task (such as printing a character, a word, a line, or the entire text).
+Consider the possibility of changing the color of the text after it has been printed, and plan the implementation accordingly.
+Test the code on different terminal emulators and shells to ensure its compatibility and portability.
+Refine the code and make any necessary changes based on the results of the testing.
+
+We can start by implementing step 1 and 2, and then move on to the rest of the steps as we progress. Let's focus on making the code as robust and resilient as possible, while also making it easy to read and maintain
+
+most recently proposed steps:
+
+Create a new function display_typing_prompt which will be responsible for displaying the text with random delays between characters, words, and lines.
+
+In the display_typing_prompt function, split the demo_text into an array of words and loop over each word.
+
+For each word, split it into an array of characters and loop over each character.
+
+For each character, display it with a random delay using the sleep command and the printf command to display the text in the desired color.
+
+After each character is displayed, change the color of the recently typed characters using the RED, GREEN, BLUE, MAGENTA, CYAN and WHITE ANSI escape sequences.
+
+After each word is displayed, add a delay between words using the sleep command.
+
+After each line is displayed, add a delay between lines using the sleep command.
+
+Call the display_typing_prompt function in an infinite loop to continuously display the text.
