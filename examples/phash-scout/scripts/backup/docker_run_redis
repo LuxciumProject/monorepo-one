@@ -1,0 +1,27 @@
+#!/bin/bash
+
+function main() {
+  SCRIPT_DIR=$(getSource)
+  cd "$SCRIPT_DIR" || return
+
+  REDIS_MOUNT="${HOME}"/DATA/redis/6383
+
+  docker build --tag luxcium-imgscout:0.1.1 . || return 33
+  (docker container rm -f imgscout) >/dev/null 2>&1
+  docker run --detach --rm --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
+}
+
+function getSource() {
+  SOURCE=${BASH_SOURCE[0]}
+  while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+    DIR=$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)
+    SOURCE=$(readlink "$SOURCE")
+    [[ $SOURCE != /* ]] && SOURCE=$DIR/$SOURCE # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+  done
+  (cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)
+}
+
+main
+
+unset -f main
+unset -f getSource
