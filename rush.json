@@ -510,6 +510,11 @@
       "tags": ["examples"]
     },
     {
+      "packageName": "open-ai",
+      "projectFolder": "examples/open-ai",
+      "tags": ["examples"]
+    },
+    {
       "packageName": "gpu-stuff",
       "projectFolder": "examples/gpu-stuff",
       "tags": ["examples"]

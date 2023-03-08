@@ -154,6 +154,10 @@
       "path": "examples/template"
     },
     {
+      "name": "        🪄🎱 open-ai",
+      "path": "examples/open-ai"
+    },
+    {
       "name": "        🪄🎱 gpu-stuff",
       "path": "examples/gpu-stuff"
     },
