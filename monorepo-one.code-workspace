@@ -1,14 +1,26 @@
 {
   "folders": [
     {
-      "name": "→✨🖥️ MONOREPO-ONE",
+      "name": "→🖥️✨ MONOREPO-ONE",
       "path": "."
     },
     {
-      "name": "  ↓✨🤖 PROMPTS",
+      "name": "         ✨🤖 PROMPTS",
       "path": "prompts"
     },
-    //
+
+    {
+      "name": "              🤖📣 TYPING PROMPTER",
+      "path": "prompts/typing_prompter"
+    },
+    {
+      "name": "              🤖💬 CHAT GPT",
+      "path": "prompts/chatgpt"
+    },
+    {
+      "name": "                   💬💭 MORE PROMPTS",
+      "path": "prompts/chatgpt/more-prompts"
+    },
     {
       "name": "  ↓🔐💫 PRIVATE",
       "path": "private"
