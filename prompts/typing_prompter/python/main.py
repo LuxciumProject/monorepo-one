@@ -186,7 +186,13 @@ def main():
     """
     Main function
     """
-    print_text(DEMO_TEXT)
+    # Check if a command line argument was provided
+    if len(sys.argv) > 1:
+        text = sys.argv[1]
+    else:
+        text = DEMO_TEXT
+
+    print_text(text)
 
 
 if __name__ == "__main__":
@@ -194,7 +200,6 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print(" ...  \nKeyboard interrupt received. Stopping...")
-
 
 # Restore the terminal settings
 termios.tcsetattr(stdin_fd, termios.TCSADRAIN, old_term)
