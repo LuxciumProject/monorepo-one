@@ -7,63 +7,76 @@ script_dir="$(dirname "$(readlink -f "$0")")"
 
 # Shellcheck source="$script_dir/settings.sh"
 source "$script_dir/settings.sh"
+# Shellcheck source="$script_dir/functions.sh"
+source "$script_dir/functions.sh"
 
-# Shellcheck source="$script_dir/typing.sh"
-source "$script_dir/typing.sh"
-
-# Define the demo text
-demo_text="This is the demo text that will be displayed in a loop."
-
+# MODIFIED FUNCTION
 display_text_char_by_char() {
   local text="$1"
-  local delay="$2"
+  local min_delay="$2"
+  local max_delay="$3"
 
   # Loop through each character in the text
   for ((i = 0; i < ${#text}; i++)); do
     char="${text:i:1}"
+
+    # Generate a unique random delay time for each character
+    local delay
+    # Declare and assign separately to avoid masking return values.
+    delay=$(generate_random_delay "$min_delay" "$max_delay")
+    sleep "$delay"
+
     printf "%s" "$char"
-    sleep "$(awk "BEGIN {print $delay * rand()}")"
   done
 }
 
-# Display the demo text in a loop
-while true; do
-  printf "${RED}%s${DEFAULT}\n" "$demo_text"
-  sleep 0.5
-done
+# Define a function to print a single character with a random delay
+print_char() {
+  # Generate a unique random delay time for each character
+  char_delay=$(generate_random_delay "$char_min_delay" "$char_max_delay")
+  sleep "$char_delay"
+  printf "%c" "$1"
+}
 
-# display_typing_prompt() {
-#   # Split the demo text into an array of words
-#   local words=($(echo "$demo_text" | tr " " "\n"))
+# Define a function to print a single word with random delays between characters
+print_word() {
+  # Generate a unique random delay time for each word
+  word_delay=$(generate_random_delay "$word_min_delay" "$word_max_delay")
+  sleep "$word_delay"
+  for ((i = 0; i < ${#1}; i++)); do
+    print_char "${1:i:1}"
+  done
+}
 
-#   # Loop over each word
-#   for word in "${words[@]}"; do
-#     # Split the word into an array of characters
-#     local characters=($(echo "$word" | fold -w1))
+# Define a function to print a single line with random delays between words
+print_line() {
+  # Generate a unique random delay time for each line
+  line_delay=$(generate_random_delay "$line_min_delay" "$line_max_delay")
+  sleep "$line_delay"
 
-#     # Loop over each character
-#     for character in "${characters[@]}"; do
-#       # Display the character with a random delay
-#       sleep "$(awk 'BEGIN{srand();print rand()}')"
-#       printf "${RED}%s${DEFAULT}" "$character"
+  # Print each word in the line
+  for word in $1; do
+    print_word "$word"
+    printf " "
+  done
 
-#       # Change the color of the recently typed characters
-#       case "$RANDOM" in
-#       [0-2500]) color=${RED} ;;
-#       [2501-5000]) color=${GREEN} ;;
-#       [5001-7500]) color=${BLUE} ;;
-#       [7501-8750]) color=${MAGENTA} ;;
-#       [8751-9375]) color=${CYAN} ;;
-#       [9376-10000]) color=${WHITE} ;;
-#       esac
-#     done
+  # Print a newline character
+  printf "\n"
+}
 
-#     # Add a delay between words
-#     sleep "$(awk 'BEGIN{srand();print rand()}')"
-#     printf " "
-#   done
+# Define a function to print the entire text with random delays between lines
+print_text() {
+  # Read the lines of text into an array
+  readarray -t lines <<<"$1"
 
-#   # Add a delay between lines
-#   sleep "$(awk 'BEGIN{srand();print rand()}')"
-#   printf "\n"
-# }
+  # Loop through each line in the array
+  for line in "${lines[@]}"; do
+    print_line "$line"
+  done
+
+  # Print a final newline character to preserve the prompt
+  printf "\n"
+}
+
+# Call the print_text function with the text to display
+print_text "$demo_text"
