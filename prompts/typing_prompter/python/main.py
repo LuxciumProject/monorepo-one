@@ -7,45 +7,63 @@ This is a script to display a text character by character with random
 delays between characters, words, and lines.
 """
 
+import fcntl
 import os
 import random
+import signal
+import sys
+import termios
 import time
 
 # Get the directory of the script
-script_dir = os.path.dirname(os.path.realpath(__file__))
+# script_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Source the settings.sh script to set the environment variables
-os.system(f"source {script_dir}/settings.sh")
+# os.system(f"source {script_dir}/settings.sh")
+
+# Set constants for average words per minute and average characters per word
+AVG_WORDS_PER_MIN = 300
+AVG_CHARS_PER_WORD = 5
+
+# Calculate time per word in seconds
+TIME_PER_WORD = 60 / AVG_WORDS_PER_MIN
+
+# Calculate time per character in seconds
+TIME_PER_CHAR = TIME_PER_WORD / AVG_CHARS_PER_WORD
 
 # Define the delay times for characters, words, and lines
-# Define the delay times for characters, words, and lines
-CHAR_MIN_DELAY = 0.005
-CHAR_MAX_DELAY = 0.1
-WORD_MIN_DELAY = 0.025125
-WORD_MAX_DELAY = 0.251
-LINE_MIN_DELAY = 0.2
-LINE_MAX_DELAY = 0.5
+CHAR_MIN_DELAY = 0.0
+CHAR_MAX_DELAY = TIME_PER_CHAR
+WORD_MIN_DELAY = 0.0
+WORD_MAX_DELAY = TIME_PER_WORD
+LINE_MIN_DELAY = 0.1
+LINE_MAX_DELAY = 0.2
 
 
 # Define the demo text
-DEMO_TEXT = """As I sit and contemplate the universe,
-My mind begins to wander and my thoughts disperse.
+DEMO_TEXT = """As I wander through the corridors of my mind,
+I am struck by the overwhelming sense of uncertainty.
 
-I wonder how it all began,
-And how it will all end.
+What is the meaning of life,
+And why do we exist in this vast and complex universe?
 
-I think about the stars and planets,
-And how they spin and bend.
+Is there a purpose to our existence,
+Or are we merely a random product of chance and evolution?
 
-The mysteries of the universe are many,
-And we may never understand them all.
-But I find solace in the fact,
-That we're all a part of this great cosmic ball.
+These questions may seem daunting,
+But they are essential to understanding our place in the world.
 
-From the smallest particle to the largest star,
-We're all connected in some way,
-And that thought fills me with wonder and awe,
-As I ponder the universe each day."""
+For if we are to truly thrive and find happiness,
+We must first come to terms with the unknown and embrace the uncertainty.
+
+Only then can we begin to explore the depths of our potential,
+And unlock the secrets of the universe that lay before us.
+
+So let us not be afraid of the unknown,
+But rather embrace it as an opportunity to learn and grow.
+
+For it is through the mysteries of life that we find meaning,
+And it is through our own unique journey that we discover our true purpose."""
 
 # MODIFIED FUNCTION
 
@@ -136,4 +154,48 @@ def print_text(text):
 
 
 # Call the print_text function with the demo text
-print_text(DEMO_TEXT)
+# print_text(DEMO_TEXT)
+
+
+def handle_interrupt(_signum, _frame):
+    """
+    Interrupt function
+    """
+    # Restore the terminal settings
+    termios.tcsetattr(stdin_fd, termios.TCSADRAIN, old_term)
+    fcntl.fcntl(stdin_fd, fcntl.F_SETFL, old_flags)
+    sys.stdout.write("\b\b")
+    sys.stdout.flush()
+    print("...\n\nKeyboard interrupt received. Stopping...")
+    sys.exit(0)
+
+
+signal.signal(signal.SIGINT, handle_interrupt)
+
+
+# Set the terminal in raw mode
+stdin_fd = sys.stdin.fileno()
+old_term = termios.tcgetattr(stdin_fd)
+old_flags = fcntl.fcntl(stdin_fd, fcntl.F_GETFL)
+fcntl.fcntl(stdin_fd, fcntl.F_SETFL, old_flags | os.O_NONBLOCK)
+
+# Define the main function of your script here
+
+
+def main():
+    """
+    Main function
+    """
+    print_text(DEMO_TEXT)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(" ...  \nKeyboard interrupt received. Stopping...")
+
+
+# Restore the terminal settings
+termios.tcsetattr(stdin_fd, termios.TCSADRAIN, old_term)
+fcntl.fcntl(stdin_fd, fcntl.F_SETFL, old_flags)
