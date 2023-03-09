@@ -2835,6 +2835,9 @@
       "**/dist/**": true,
       "**/lib/**": true,
       "**/out/**": true
+    },
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8"
     }
   },
   "extensions": {
