@@ -118,17 +118,22 @@
       "path": "library/typescript"
     },
     {
-      "name": "→🛵🖥️ image-scout",
-      "path": "services/image-scout"
-    },
-    {
-      "name": "→📊🖥️ questrade-ts",
-      "path": "services/questrade-ts"
-    },
-    {
       "name": "  ↓💁🖥️ 📒 SERVICES",
       "path": "services"
     },
+    {
+      "name": "      →🛵🖥️ image-scout",
+      "path": "services/image-scout"
+    },
+    {
+      "name": "      →📊🖥️ questrade-ts",
+      "path": "services/questrade-ts"
+    },
+    {
+      "name": "      →💁💜 rpc-worker-pool",
+      "path": "services/rpc-worker-pool"
+    },
+
     {
       "name": "          💁📊 mongo-service",
       "path": "services/mongo-service"
@@ -152,10 +157,6 @@
     {
       "name": "          💁💙 service-two",
       "path": "services/service-two"
-    },
-    {
-      "name": "          💁💜 rpc-worker-pool",
-      "path": "services/rpc-worker-pool"
     },
     {
       "name": "  ↓🪄🎱 EXAMPLES",
