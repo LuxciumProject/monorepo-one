@@ -1,0 +1,42 @@
+Topic: Discussion of OpenAI's GPT-2 and GPT-3, TikToken tokenizer,
+and gpt-3-encoder npm package
+
+Context: We have been discussing information related to various
+OpenAI projects and tools, including the GPT-2 and GPT-3 language
+models, the TikToken tokenizer, and the gpt-3-encoder npm package.
+
+Action items:
+
+Provide information about TikToken tokenizer, including its purpose
+and how to use it.
+Discuss the gpt-3-encoder npm package and its role in encoding and
+decoding text for use with GPT-2 and GPT-3.
+Summarize information about OpenAI's GPT-2 language model and its
+related GitHub repository.
+Key Points:
+
+TikToken is a fast BPE tokenizer for use with OpenAI's models.
+The gpt-3-encoder npm package provides a JavaScript implementation
+of the BPE used by GPT-2 and GPT-3.
+The GPT-2 language model is based on the concept of unsupervised
+multitask learning and was developed by OpenAI. The code and models
+for GPT-2 are available on OpenAI's GitHub repository under the name
+"gpt-2".
+Contextual Information:
+
+TikToken is a fast BPE tokenizer written in Python and can be
+installed using pip.
+The gpt-3-encoder npm package is compatible with Node.js version 12
+or later.
+GPT-2 models were trained on a large dataset of text and have the
+potential to be biased and inaccurate.
+Next steps:
+
+Further discuss the TikToken tokenizer and its features.
+Provide additional information about the gpt-3-encoder npm package
+and its usage.
+Discuss the potential use cases and limitations of GPT-2 and its
+related models.
+Once you have the summary, please feel free to copy and paste this
+summary into a new instance of ChatGPT so we can continue our
+conversation where we left off.
