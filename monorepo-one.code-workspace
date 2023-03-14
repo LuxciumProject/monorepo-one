@@ -2799,7 +2799,8 @@
       "services",
       "examples",
       "Storybook",
-      "ChatGPT"
+      "ChatGPT",
+      "RpcWorkerPool"
     ],
     "workbench.colorCustomizations": {
       "activityBar.activeBackground": "#6a2bd499",
