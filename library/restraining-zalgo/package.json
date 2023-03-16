@@ -7,7 +7,7 @@
   "main": "lib/src/index.js",
   "types": "lib/typings/index.d.ts",
   "scripts": {
-    "install": "#bash scripts/build.sh",
+    "install": "pwd; yarn build; pwd",
     "build": "bash scripts/build.sh",
     "test": "jest --config='config/jest.config.json'"
   },
