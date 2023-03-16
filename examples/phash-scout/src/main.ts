@@ -2,6 +2,7 @@ import { BoxedAsyncGenerator, generateFromGen } from '@luxcium/boxed-list';
 import { getPhashCompute } from '@luxcium/phash-compute';
 import { rConnect } from '@luxcium/redis-services';
 import { getDataPath, scanDirsFrom } from '@luxcium/scan-dirs';
+import ScanDirs from '@luxcium/scan-dirs/out/typings/ScanDirs';
 import { readFileSync } from 'node:fs';
 import { stat } from 'node:fs/promises';
 import { boxImageFileWithStats } from './tools';
@@ -20,8 +21,10 @@ void (async function main() {
   const pathToFolder: string = getDataPath();
   configs['examples-phash-scout'].links.example;
   // -! Initialise the file scaner to scan each folders from the link provided
-  const folders = scanDirsFrom(pathToFolder).addValidExt(['.jpg', '.png']);
-
+  const folders: ScanDirs = scanDirsFrom(pathToFolder).addValidExt([
+    '.jpg',
+    '.png',
+  ]);
   // -! Then set the valid files extensions to be used from the file scanner
   phashCompute;
   folders;
