@@ -5,20 +5,20 @@
       "path": "."
     },
     {
-      "name": "         ✨🤖 PROMPTS",
+      "name": "    ✨🤖 PROMPTS",
       "path": "prompts"
     },
 
     {
-      "name": "              🤖📣 TYPING PROMPTER",
+      "name": "      🤖📣 TYPING PROMPTER",
       "path": "prompts/typing_prompter"
     },
     {
-      "name": "              🤖💬 CHAT GPT",
+      "name": "      🤖💬 CHAT GPT",
       "path": "prompts/chatgpt"
     },
     {
-      "name": "                   💬💭 MORE PROMPTS",
+      "name": "        💬💭 MORE PROMPTS",
       "path": "prompts/chatgpt/more-prompts"
     },
     {
