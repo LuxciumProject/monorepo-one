@@ -2,7 +2,7 @@ import { immediateZalgo, timeoutZalgo } from '@luxcium/restraining-zalgo';
 import { Box } from '../Box/Box';
 import { BoxedList } from '../BoxedList/BoxedList';
 import type { IUnbox, IUnboxList, Mapper, ThenMapper } from '../types';
-
+export type Bg<T> = BoxedGenerator<T>;
 export class BoxedGenerator<T> implements IUnboxList<T>, IUnbox<T[]> {
   #valueGenerator: () => Generator<T>;
   // static ============================================-| of() |-====
@@ -19,8 +19,8 @@ export class BoxedGenerator<T> implements IUnboxList<T>, IUnbox<T[]> {
       return Array.isArray(list)
         ? new BoxedGenerator<TVal>(arrayGenerator(list))
         : new BoxedGenerator<TVal>(
-          arrayGenerator([list])
-        ); /* as BoxedGenerator<TVal>; */
+            arrayGenerator([list])
+          ); /* as BoxedGenerator<TVal>; */
     } else {
       const list: TVal = [...values] as any;
       return BoxedGenerator.of<TVal>(list); /* as PseudoCode<TVal>; */
@@ -94,12 +94,12 @@ export class BoxedGenerator<T> implements IUnboxList<T>, IUnbox<T[]> {
 
         yield delay === 0
           ? immediateZalgo<TMap>(
-            (async () => fn(await item, that.awaitedMapIndex++))()
-          )
+              (async () => fn(await item, that.awaitedMapIndex++))()
+            )
           : timeoutZalgo<TMap>(
-            (async () => fn(await item, that.awaitedMapIndex++))(),
-            delay
-          );
+              (async () => fn(await item, that.awaitedMapIndex++))(),
+              delay
+            );
       }
     }
     return BoxedGenerator.fromGen(arrayGenerator);

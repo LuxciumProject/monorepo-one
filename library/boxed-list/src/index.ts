@@ -14,6 +14,7 @@ export {
   generateFromGen,
   generatorOf,
 } from './BoxedGenerator';
+export type { Bg } from './BoxedGenerator';
 export { BoxedList, boxedListFrom, boxedListOf } from './BoxedList';
 export type {
   IApply,
