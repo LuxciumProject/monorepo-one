@@ -6,8 +6,8 @@
   "types": "out/typings/index.d.ts",
   "scripts": {
     "prebuild:": "jest",
-    "build": "sh scripts/build.sh; #heft build --clean #tsc --noEmit false --generateCpuProfile \"./out/phash-convertor.cpuprofile\" || exit 1;",
-    "install": "yarn build; #bash scripts/build.sh",
+    "build": "bash scripts/build.sh;",
+    "install": "pwd; yarn build; pwd",
     "test": "jest --config='config/jest.config.json'"
   },
   "author": "Benjamin Vincent",

@@ -1,2 +1,4 @@
-#!/bin/sh
-tsc --noEmit false --generateCpuProfile "./out/performance/out.cpuprofile" || exit 1
+#!/usr/bin/bash
+
+tsc --noEmit false || exit 15
+echo "―0K―"

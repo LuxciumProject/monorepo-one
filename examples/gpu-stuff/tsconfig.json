@@ -6,7 +6,7 @@
     "target": "ESNext",
     "module": "CommonJS",
     "moduleResolution": "node",
-    "rootDir": "./src",
+    "rootDir": "./src/typescript",
     "composite": true,
     "declarationDir": "./out/typings",
     "outDir": "./out",

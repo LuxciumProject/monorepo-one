@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "bash scripts/build.sh || exit 15",
+    "install": "yarn build; #bash scripts/build.sh || exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

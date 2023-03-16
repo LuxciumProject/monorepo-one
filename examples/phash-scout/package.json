@@ -6,7 +6,7 @@
   "types": "out/typings/index.d.ts",
   "scripts": {
     "build": "pwd;bash scripts/build.sh",
-    "install": "#yarn build; #bash scripts/build.sh",
+    "install": "yarn build; #bash scripts/build.sh",
     "test": "heft test"
   },
   "keywords": [],
