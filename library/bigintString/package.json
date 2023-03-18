@@ -7,7 +7,7 @@
   "author": "Luxcium (Benjamin Vincent)",
   "license": "MIT",
   "scripts": {
-    "install": "#bash scripts/build.sh",
+    "install": "pwd; yarn build || exit 13; pwd",
     "build": "bash scripts/build.sh",
     "test": "jest --config='config/jest.config.json'"
   },
@@ -18,7 +18,7 @@
     "@rushstack/heft-jest-plugin": "0.4.2",
     "@types/eslint-config-prettier": "6.11.0",
     "@types/eslint-plugin-prettier": "3.1.0",
-    "@types/node": "~18.14.0",
+    "@types/node": "18",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
     "eslint": "8.33.0",
@@ -33,10 +33,10 @@
     "eslint-plugin-unicorn": "45.0.2",
     "nodemon": "2.0.20",
     "prettier": "2.8.1",
-    "ts-node": "10.9.1",
-    "typescript": "4.9.5",
-    "jest": "29.3.1",
-    "@types/jest": "29.4.0",
+    "ts-node": "~10.9.1",
+    "typescript": "~4.9.x",
+    "jest": "~29.5.0",
+    "@types/jest": "~29.5.0",
     "@babel/core": "7.20.7",
     "@babel/plugin-transform-typescript": "7.20.7",
     "@types/chai": "4.3.4",
@@ -45,12 +45,12 @@
     "@types/glob": "8.0.0",
     "@types/mime-types": "2.1.1",
     "@types/prettier": "2.7.2",
-    "babel-jest": "29.3.1",
+    "babel-jest": "~29.5.0",
     "chai": "4.3.7",
     "concurrently": "7.6.0",
     "eslint-plugin-tsdoc": "0.2.17",
     "rimraf": "3.0.2",
-    "ts-jest": "29.0.3",
+    "ts-jest": "~29.0.5",
     "ts-loader": "9.4.2",
     "tsconfig-paths": "4.1.1",
     "@types/heft-jest": "1.0.3",
@@ -58,7 +58,7 @@
     "webpack": "5.75.0"
   },
   "dependencies": {
-    "tslib": "2.5.0",
+    "tslib": "~2.5.0",
     "source-map-support": "~0.5.21"
   }
 }
