@@ -1,6 +1,6 @@
 # LUXCIUM MONOREPO ONE
 
-**† Scientia est lux principium✨ ™**
+† **Scientia est lux principium✨** ™
 
 - [/library](library/README.md): Contains code libraries or modules used by the project.
   - [Mapping Tools README](library/mapping-tools/README.md)
@@ -8,6 +8,11 @@
 - [/backend](backend/README.md): Contains files related to the backend or server-side.
 - [/common](common/README.md): Contains files shared by multiple parts, such as utility functions or libraries.
 - [/docker](docker/README.md): Contains files related to Docker, such as Dockerfiles or configuration files.
+  - [Local Docker Registry Creation Steps](docker/PROCEDURE-REGISTRY.md)
+    Revised version of the setup to create a private local docker registry,
+    which includes more detailed explanations and comments in the
+    configuration files. This setup will use ports 5555 and 5443,
+    leaving ports 80 and 443 free on the local machine. (Untested)
 - [/docs](docs/README.md): Contains documentation, such as user manuals or technical guides.
 - [/frontend](frontend/README.md): Contains files related to the frontend or client-side.
 - [/private](private/README.md): Contains files not intended to be shared or distributed, such as sensitive data or private configuration files.
@@ -60,14 +65,14 @@
     RESPONSIBILITY OF ANY PROBLEME IT MAY CAUSE TO YOU (or anyone) OR YOUR
     MACHINE (or any machine).
 
-### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE:
+### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
 
     1) NOT TO PUBLISH;
     2) NOT TO DISTRIBUTE;
     3) NOT TO SUBLICENSE;
     4) NOT TO SELL COPIES OF;
 
-#### NOTICE:
+#### NOTICE
 
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ALL OR ANY KIND,
 > EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
@@ -79,9 +84,9 @@
 
 Copyright © 2022 LUXCIUM
 
-### EXCEPTIONS:
+### EXCEPTIONS
 
-#### YOU HAVE THE RIGHT TO:
+#### YOU HAVE THE RIGHT TO
 
     A) USE IT FOR YOURSELF;
     B) DISTRIBUTE IT TO YOUR FRIENDS;
@@ -93,7 +98,7 @@ Copyright © 2022 LUXCIUM
 
 ### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
 
-###### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
+#### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
 
 In addition to these directories, there are also a number of files in the root of the repository, including:
 
