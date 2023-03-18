@@ -903,6 +903,28 @@
       } // *- "TASK Complete"-----------------------------------------
     ]
   },
+  "extensions": {
+    "recommendations": [
+      "aaron-bond.better-comments",
+      "alefragnani.Bookmarks",
+      "christian-kohler.path-intellisense",
+      "dbaeumer.vscode-eslint",
+      "dlech.chmod",
+      "dplain.jest-test-language-support",
+      "esbenp.prettier-vscode",
+      "formulahendry.code-runner",
+      "ghmcadams.lintlens",
+      "gruntfuggly.todo-tree",
+      "joeberria.statusbarerror",
+      "Luxcium.pop-n-lock-theme-vscode",
+      "PKief.material-icon-theme",
+      "salbert.comment-ts",
+      "SophodorosLLC.codevalet-vscode",
+      "ue.alphabetical-sorter",
+      "usernamehw.errorlens",
+      "VisualStudioExptTeam.vscodeintellicode"
+    ]
+  },
   "settings": {
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.activeIconPack": "nest",
@@ -2841,27 +2863,5 @@
     "[python]": {
       "editor.defaultFormatter": "ms-python.autopep8"
     }
-  },
-  "extensions": {
-    "recommendations": [
-      "aaron-bond.better-comments",
-      "alefragnani.Bookmarks",
-      "christian-kohler.path-intellisense",
-      "dbaeumer.vscode-eslint",
-      "dlech.chmod",
-      "dplain.jest-test-language-support",
-      "esbenp.prettier-vscode",
-      "formulahendry.code-runner",
-      "ghmcadams.lintlens",
-      "gruntfuggly.todo-tree",
-      "joeberria.statusbarerror",
-      "Luxcium.pop-n-lock-theme-vscode",
-      "PKief.material-icon-theme",
-      "salbert.comment-ts",
-      "SophodorosLLC.codevalet-vscode",
-      "ue.alphabetical-sorter",
-      "usernamehw.errorlens",
-      "VisualStudioExptTeam.vscodeintellicode"
-    ]
   }
 }
