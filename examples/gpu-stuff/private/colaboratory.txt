@@ -1,0 +1,247 @@
+. .
+
+OpenFace.mlmodel
+1. Add coreml model 2. Update Reademe 3. Remove redundant files 4. In…
+6 years ago
+
+nn4.small2.channel_first.h5
+1. Add coreml model 2. Update Reademe 3. Remove redundant files 4. In…
+6 years ago
+
+nn4.small2.lambdas.h5
+1. Add coreml model 2. Update Reademe 3. Remove redundant files 4. In…
+6 years ago
+
+nn4.small2.no_lambda.h5
+1. Add coreml model 2. Update Reademe 3. Remove redundant files 4. In…
+6 years ago
+
+nn4.small2.norm.h5
+1. Add coreml model 2. Update Reademe 3. Remove redundant files 4. In…
+6 years ago
+
+nn4.small2.v1.h5
+1. Add coreml model 2. Update Reademe 3. Remove redundant files 4. In…
+6 years ago
+
+https://github.com/iwantooxxoox/Keras-OpenFace/raw/master/model/...
+OpenFace.mlmodel
+nn4.small2.channel_first.h5
+nn4.small2.lambdas.h5
+nn4.small2.no_lambda.h5
+nn4.small2.norm.h5
+nn4.small2.v1.h5
+nn4.small2.v2.h5
+
+https://github.com/vsyw/Keras-OpenFace/blob/master/model/OpenFace.mlmodel?raw=true
+!curl -LJO https://github.com/iwantooxxoox/Keras-OpenFace/raw/master/model/...
+the nn4.small2.v2.h5 should be about 14,7 Mib (15 368 480)
+
+
+
+bn1_b.csv
+bn1_m.csv
+bn1_v.csv
+bn1_w.csv
+bn2_b.csv
+bn2_m.csv
+bn2_v.csv
+bn2_w.csv
+bn3_b.csv
+bn3_m.csv
+bn3_v.csv
+bn[123]_[a-z].csv
+conv3_w.csv
+dense_b.csv
+dense_w.csv
+
+all the commented out are because they are already provided in the workspace but may be required in an other context I did this:
+
+# !pip install tensorflow
+# !pip install opencv-python
+# !pip install facenet
+!pip install git+https://github.com/cmusatyalab/openface.git
+
+OK, so at this time, in the google colab, I currently have all what is already mentioned above and I also have all that is mentioned below look:
+
+import tensorflow as tf
+import cv2
+import facenet
+import openface
+import numpy as np
+
+, you can follow these general steps
+
+to I need to follow the instruction by loading the pre-trained weights but you probably do not know yet what we are trying to do so maybe you can not tell me what models and weights to load or get ?
+
+I was doing something in an other session of ChatGPT-3.5 it is related to facial recognition, the other AI told me different steps to create a Google colaboratory The other AI session is not giving me the expected results so I will reexplain you everything (because you are ChatGPT-4) you will probably be better to help me... First of all you must understand that I have basic knowledge of python and bash shell scripting and I know the basic about IPython Notebook and Google Colab notebooks... but on the other side I have no knowledge about machine learning or about AI or any such topics... I have a basic understanding but you can not take that for granted as I need a refresher I think you are capable of doing both at the same time... I would need a step by step plan to achieve the goals that I will explain you in great details and I will need you to provide me with the state of the art code to put in my `facial-recognizer.ipynb` but not only I will need also to get a few hints on what we are doing and why and general knowledge about image classification care recognition and face comparaison... remeber and keep in mind this verry important fact: I will have to copy and paste each code block myself into the notebook so I need your help to remember to output the text in its own code block as if it was a programming language but using the markdown language and alternating separate blocks of codes markdown for text (as if it was a programming language using markdown) and then bash or python for code (as if it was a programming language using bash or python) remember the goal of a notebook is to have separate text and code in an alternating fashion and that's exactly what the other instance of ChatGPT-3.5 was not able to do (he was putting all the text and the code in a single code block or was writing text normally or was never able to follow the simple instructions):
+
+NOW THE PROJECT WE WILL AIM TO CRAFT TOGETHER AS A TEAM IS AS FOLLOW:
+
+in a step by step fashion you will craft the project plan and then we will execute the plan together in an iterative manner... we will want to use both artificial intelligence and machine learning in conjunction to create the `facial-recognizer.ipynb` it will be powered by google colaboratory and will use the best practices in terms of free and opensource projects of that nature to analyse on image find the faces then analyse a second image and find faces and give a percentage value of how certain it is capab
+
+
+then:
+
+I was doing something in an other session of ChatGPT-3.5 it is related to facial recognition, the other AI told me different steps to create a Google colaboratory The other AI session is not giving me the expected results so I will reexplain you everything (because you are ChatGPT-4) you will probably be better to help me... First of all you must understand that I have basic knowledge of python and bash shell scripting and I know the basic about IPython Notebook and Google Colab notebooks... but on the other side I have no knowledge about machine learning or about AI or any such topics... I have a basic understanding but you can not take that for granted as I need a refresher I think you are capable of doing both at the same time... I would need a step by step plan to achieve the goals that I will explain you in great details and I will need you to provide me with the state of the art code to put in my `facial-recognizer.ipynb` but not only I will need also to get a few hints on what we are doing and why and general knowledge about image classification care recognition and face comparaison... remeber and keep in mind this verry important fact: I will have to copy and paste each code block myself into the notebook so I need your help to remember to output the text in its own code block as if it was a programming language but using the markdown language and alternating separate blocks of codes markdown for text (as if it was a programming language using markdown) and then bash or python for code (as if it was a programming language using bash or python) remember the goal of a notebook is to have separate text and code in an alternating fashion and that's exactly what the other instance of ChatGPT-3.5 was not able to do (he was putting all the text and the code in a single code block or was writing text normally or was never able to follow the simple instructions):
+
+NOW THE PROJECT WE WILL AIM TO CRAFT TOGETHER AS A TEAM IS AS FOLLOW:
+
+in a step by step fashion you will craft the project plan and then we will execute the plan together in an iterative manner... we will want to use both artificial intelligence and machine learning in conjunction to create the `facial-recognizer.ipynb` it will be powered by google colaboratory and will use the best practices in terms of free and opensource projects of that nature to analyse on image find the faces then analyse a second image and find faces and give a percentage value of how certain the AI is of the face recognition accuracy the goal is to use powerful pre trained model to perform Face Detection and then develop an algorithm using well know best practices and libraries to be able to do quick Face Recognition and given more images do a better analysis... but as I said I am not knowledgeable in this so I shall rather let you comme with the best plan on how to do that
+
+I need help to fix a broken function in a google colab IPython notebook I am trying to get an image inside of my notebook from an URL and I asked to see the image then I realized it was too large I asked to keep the proportions and make a thumbnail but then the image was processed so I got weird coulors so I asked to have the processed image and the normal image together the code is not producing the images the way I want and I now even have additional errors like this one:
+
+import cv2
+import numpy as np
+from PIL import Image
+from google.colab.patches import cv2_imshow
+
+# Function to load an image from a URL
+def load_image_from_url(url):
+    with urllib.request.urlopen(url) as url_response:
+        # Read the image data from the URL
+        image = np.asarray(bytearray(url_response.read()), dtype=np.uint8)
+        # Decode the image data into a NumPy array
+        image = cv2.imdecode(image, cv2.IMREAD_COLOR)
+        # Convert the image from BGR to RGB color space
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    return image
+
+# Function to resize an image while maintaining aspect ratio
+def resize_image(image, max_size):
+    # Get the dimensions of the original image
+    height, width, _ = image.shape
+    # Determine the new height and width to preserve aspect ratio
+    if height > width:
+        new_height = max_size
+        new_width = int(width * max_size / height)
+    else:
+        new_width = max_size
+        new_height = int(height * max_size / width)
+    # Resize the image to the new height and width
+    resized = cv2.resize(image, (new_width, new_height))
+    return resized, (new_width, new_height)
+
+# Function to pad an image with black pixels
+def pad_image(image, target_size):
+    # Get the dimensions of the original image
+    height, width, _ = image.shape
+    # Get the target height and width
+    target_height, target_width = target_size
+    # Calculate the amount of padding needed on each side
+    top_pad = (target_height - height) // 2
+    bottom_pad = target_height - height - top_pad
+    left_pad = (target_width - width) // 2
+    right_pad = target_width - width - left_pad
+    # Pad the image with black pixels
+    padded = cv2.copyMakeBorder(image, top_pad, bottom_pad, left_pad, right_pad, cv2.BORDER_CONSTANT, value=[0, 0, 0])
+    return padded
+
+# Function to display an original image and its thumbnail side by side
+def display_images(original_image, thumbnail_image):
+    # Get the target size of the original image
+    target_size = (original_image.shape[1], original_image.shape[0])
+    # Pad the thumbnail image to match the target size of the original image
+    padded_thumbnail = pad_image(thumbnail_image, target_size)
+    # Convert the original and padded thumbnail images to BGR color space
+    original_image = cv2.cvtColor(original_image, cv2.COLOR_RGB2BGR)
+    padded_thumbnail = cv2.cvtColor(padded_thumbnail, cv2.COLOR_RGB2BGR)
+    # Concatenate the original and padded thumbnail images along the horizontal axis
+    display_image = np.concatenate((original_image, padded_thumbnail), axis=1)
+    # Display the concatenated image
+    cv2_imshow(display_image)
+
+# URL of the image to load
+url_image1 = "https://media.cnn.com/api/v1/images/stellar/prod/230320123754-vladimir-putin-meet-xi-jinping.jpg?c=original"
+
+# Load the image from the URL
+original_image1 = load_image_from_url(url_image1)
+
+# Resize the image to a thumbnail size
+thumbnail_image1, thumbnail_size1 = resize_image(original_image1, 300)
+
+# Display the original and thumbnail images side by side
+display_images(original_image1, thumbnail_image1)
+
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-71-2cd43ca21a88> in <module>
+      9
+     10 # Display the original and thumbnail images side by side
+---> 11 display_images(original_image1, thumbnail_image1)
+
+1 frames
+/usr/local/lib/python3.9/dist-packages/numpy/core/overrides.py in concatenate(*args, **kwargs)
+
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 2320 and the array at index 1 has size 3232
+
+I fixed all the error messages but I am unable to get the result I was expecting... one original image is fetched from an URL this initial image was then processed and initially the image was of a strange colour so I asked to have both the original image and then the processed image in a same height and same width to display both along side in a thumbnail fashion I changed the code myself to fix some issues and I ended up with one image in which I can see the original size image and the thumbnail sized image with a large black pading to  set the smaller image in a compatible size to the larger one but this is not what I wanted I instead want to have the image processed as I first intended like the following:
+
+def load_image_from_url(url):
+    with urllib.request.urlopen(url) as url_response:
+        image = np.asarray(bytearray(url_response.read()), dtype=np.uint8)
+        image = cv2.imdecode(image, cv2.IMREAD_COLOR)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    return image
+
+url = "https://example.com/path/to/image.jpg"
+image = load_image_from_url(url)
+
+but also to display a thumbnail of that image and a thumbnail of the same image with normal colors (the original but the same dimensions as the thumbnail of the processed image) in any case the ration of both image and the original must be the same... I will give you the new updated code such that you can infer what was made you should give me back each function but keeping the load_image_from_url unchanged and updating the functions that come after in my processing pipeline I will provide you with the most recent code the load_image_from_url must stay the same and all the others are as follow:
+
+def resize_image(image, max_size):
+    # Get the dimensions of the original image
+    height, width, _ = image.shape
+    # Determine the new height and width to preserve aspect ratio
+    if height > width:
+        new_height = max_size
+        new_width = int(width * max_size / height)
+    else:
+        new_width = max_size
+        new_height = int(height * max_size / width)
+    # Resize the image to the new height and width
+    resized = cv2.resize(image, (new_width, new_height))
+    return resized, (new_width, new_height)
+
+def pad_image(image, target_size):
+    # Get the dimensions of the original image
+    height, width, _ = image.shape
+    # Get the target height and width
+    target_height, target_width = target_size
+    # Calculate the amount of padding needed on each side
+    top_pad = max((target_height - height) // 2, 0)
+    bottom_pad = max(target_height - height - top_pad, 0)
+    left_pad = max((target_width - width) // 2, 0)
+    right_pad = max(target_width - width - left_pad, 0)
+    # Pad the image with black pixels
+    padded = cv2.copyMakeBorder(image, top_pad, bottom_pad, left_pad, right_pad, cv2.BORDER_CONSTANT, value=[0, 0, 0])
+    return padded
+
+def display_images(original_image, thumbnail_image):
+    # Get the target size of the original image
+    target_size = (original_image.shape[1], original_image.shape[0])
+    # Pad the thumbnail image to match the target size of the original image
+    padded_thumbnail = pad_image(thumbnail_image, target_size)
+    # Determine the max height of the original and thumbnail images
+    max_height = max(original_image.shape[0], padded_thumbnail.shape[0])
+    # Pad both images to have the same height
+    original_image_padded = pad_image(original_image, (original_image.shape[1], max_height))
+    padded_thumbnail_padded = pad_image(padded_thumbnail, (padded_thumbnail.shape[1], max_height))
+    # Convert the original and padded thumbnail images to BGR color space
+    original_image_padded = cv2.cvtColor(original_image_padded, cv2.COLOR_RGB2BGR)
+    padded_thumbnail_padded = cv2.cvtColor(padded_thumbnail_padded, cv2.COLOR_RGB2BGR)
+    # Concatenate the original and padded thumbnail images along the horizontal axis
+    display_image = np.concatenate((original_image_padded, padded_thumbnail_padded), axis=1)
+    # Display the concatenated image
+    cv2_imshow(display_image)
+
+# URL of the image to load
+url_image1 = "https://media.cnn.com/api/v1/images/stellar/prod/230320123754-vladimir-putin-meet-xi-jinping.jpg?c=original"
+# Load the image from the URL
+original_image1 = load_image_from_url(url_image1)
+# Resize the image to a thumbnail size
+thumbnail_image1, thumbnail_size1 = resize_image(original_image1, 300)
+# Display the original and thumbnail images side by side
+display_images(original_image1, thumbnail_image1)
+
+such that I can get (and keep) the original processed by load_image_from_url for later in the pipeline a thumbnail version of the resulting image from load_image_from_url and a thumbnail of the same size of the unprocessed image put the thumbnail for the unprocessed image on the left and the put the thumbnail of the processed image on the right in a new image make sure that each step of the process respect both my requirement and the requirements of the librairies used in therm of size proportion and total sizes in term of pixel for the thumbnails and for the final image please
