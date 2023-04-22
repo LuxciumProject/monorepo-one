@@ -1,0 +1,430 @@
+Model: GPT-4
+
+Benjamin Vincent
+I have that weird problem with my computer and I need to do some troubleshooting... the ChatGPT-3.5 told me to ask a technician... but its my computer I make it myself I am using linux and I am system administrator so if I ask to someone else to help me they will know lees than I do about the topic
+
+As a more advanced AI language model, I'll do my best to help you with your issue. Please provide a detailed description of the problem you're experiencing, any error messages, the Linux distribution you're using, and any recent changes you've made to your system. This information will help me better understand the issue and provide more accurate troubleshooting steps.
+
+
+
+
+Benjamin Vincent
+I will ask you something you will provide me with copy/pate code that I can put inside of bask (I ma using zsh in fact) and that would give us the information I know when the problem occur so I should first give you more details then you can ask me question and code to get answers or such... let me give you the basics one moment
+Of course, I'll be happy to help you with your issue. Please take your time to provide the necessary information, and we can proceed from there. Once I have the details, I'll be able to provide you with specific commands and guidance for troubleshooting the problem.
+
+
+
+
+Benjamin Vincent
+I am unable to reduce it to give you only the essential information you will have more information I hope it will not confuse you then after ingesting this please wait I will tell you the problem more specifically...
+
+
+
+Intel® Core™ X-Series i9-10900X (10 cores, 20 threads)
+
+ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
+
+Expansion Slots
+3 x PCIe 3.0/2.0 x16 (x16, x16/x16, x16/x16/x8)
+2 x PCIe 3.0 x4 (max at x4 mode) *1
+
+Disposition on the motherboard of the PCIE slots (top to bottom):
+1 PCIE 3.0/2.0 x16_1 slot
+2 PCIE 3.0/2.0 x4_1 slot
+3 PCIE 3.0/2.0 x16_2 slot
+4 PCIE 3.0/2.0 x4_2 slot
+5 PCIE 3.0/2.0 x16_3 slot
+
+Storage for ASUSTeK TUF X299 MARK 1
+M.2 sockets (M.2_1(Socket 3); M.2_2(Socket 3))
+1 x M.2 x4 Socket 3, with M key, type 2242/2260/2280 storage devices support (SATA & PCIE 3.0 x 4 mode)
+1 x M.2 x4 Socket 3, with M key, type 2242/2260/2280/22110 storage devices support (PCIE 3.0 x 4 mode)
+
+M.2 sockets (M.2_1(Socket 3); M.2_2(Socket 3))
+These sockets allow you to install M.2 SSD modules.
+
+Disposition on the motherboard of the M.2 sockets:
+The M.2_1 is under the heatsync (near to x4_2 slot) and the M.2_2 socket located at the botom of the motherboard]
+
+IMPORTANT:
+•	 M.2_1 socket supports PCIe 3.0 x4 and SATA mode M Key design and type 2242 /
+2260 / 2280 PCIe and SATA storage devices.
+•	 M.2_2 socket supports PCIe 3.0 x4 M Key design and type 2242 / 2260 / 2280 / 22110
+PCIe storage devices.
+•	 These sockets support IRST (Intel® Rapid Storage Technology).
+
+NOTE:
+1. PCIEX4_1 max. at x1 mode and or shared with PCIEX16_3 when using 28 / 16 lane CPU; PCIEX4_2 max. at x4 mode;
+2. SATA6G_5/6/7/8 share bandwidth with PCIEX4_2.
+
+LAN
+Intel® I219V, 1 x Gigabit LAN Controller(s), featuring Turbo LAN
+Intel® I211, 1 x Gigabit LAN, featuring Turbo LAN
+
+CPU Specifications
+Total Cores 10
+Total Threads 20
+Max Turbo Frequency 4.50 GHz
+Intel® Turbo Boost Max Technology 3.0 Frequency ‡ 4.70 GHz
+Processor Base Frequency 3.70 GHz
+Cache 19.25 MB Intel® Smart Cache
+Bus Speed 8 GT/s DMI3
+TDP 165 W
+
+Advanced Technologies:
+Intel® Deep Learning Boost (Intel® DL Boost) Yes
+Intel® Optane™ Memory Supported ‡ Yes
+Intel® Turbo Boost Max Technology 3.0 ‡ Yes
+Intel® Turbo Boost Technology ‡ 2.0
+Intel® Hyper-Threading Technology ‡ Yes
+Intel® 64 ‡ Yes
+Instruction Set Extensions Intel® SSE4.1, Intel® SSE4.2, Intel® AVX2, Intel® AVX-512
+2 AVX-512 FMA Units
+Enhanced Intel SpeedStep® Technology Yes
+
+CPU Security & Reliability:
+Intel® AES New Instructions Yes
+Execute Disable Bit ‡ Yes
+Intel® Virtualization Technology (VT-x) ‡ Yes
+Intel® Virtualization Technology for Directed I/O (VT-d) ‡ Yes
+
+CPU Essentials:
+Product Collection Intel® Core™ X-series Processors
+Code Name Products formerly Cascade Lake
+Vertical Segmen tDesktop
+Processor Number i9-10900X
+Lithography 14 nm
+Thank you for providing the detailed information about your system. Now, please describe the specific problem you're experiencing so I can help you better.
+
+
+
+
+Benjamin Vincent
+it is an intermittent problem. it is a problem that occur since a few month. I changed my ssd and still have the problem I also reinstalled Fedora linux (instead of Ubuntu) and I still have the same problem... I need to find how to create the problem such that I could replicated it on demand and as of now I am unable to create the problem on purpose... when I am using the computer at his maximum capacities... the hard drive (it is a nvme in fact) the system partition lets say... get locked and it is impossible to write on dick any longer... it is not happening on each time the system is on high load (the other correlation is true) but when it happens it is always when some kind of high load is on the machine I did a memtest did not find anything I changed many paremeters and settings and I verified the temperature this CPU is made to throttle its unlikely that it would get too hot... it may involve the gpu  load as well and it is unclear how it would be involved in such a way that the main drive becomes read only... I can not even run reboot as it is not available anymore ... I have no idea how to trouble shoot in order to narrow down the problem... can you please give me commands to execute in the shell to get more informations and can you please ask me more questions in order to be able to understand what is really happening
+Thank you for providing more details about the issue. It seems like your system's NVMe drive is getting locked and turning into read-only mode under high loads. I'll suggest some steps and commands to gather more information and help you troubleshoot the issue.
+
+Check system logs:
+When the issue occurs, try checking the system logs for any error messages or warnings that might be related to the problem. You can use the following command to check the logs:
+css
+Copy code
+sudo journalctl -p err -b
+This command will display the error messages since the last boot. Look for any messages related to the NVMe drive or the file system.
+
+Check kernel logs:
+To check the kernel logs for any I/O errors or issues with the NVMe drive, use the following command:
+perl
+Copy code
+dmesg | grep -i "nvme\|error\|warn"
+Monitor drive temperature and health:
+Monitor your NVMe drive's temperature and health status to see if there are any issues. You can use the smartctl tool from the smartmontools package to do this:
+bash
+Copy code
+sudo smartctl -a /dev/nvme0
+Replace /dev/nvme0 with the correct device path for your NVMe drive. If you don't have smartmontools installed, you can install it using:
+
+Copy code
+sudo dnf install smartmontools
+Check the file system:
+When the issue is not happening, check the file system on the NVMe drive for any errors or inconsistencies:
+bash
+Copy code
+sudo fsck -f /dev/nvme0n1pX
+Replace /dev/nvme0n1pX with the correct partition identifier for your system partition.
+
+Monitor system resources:
+Keep an eye on your system resources during high load situations to identify if any resource is maxing out. You can use tools like htop, iotop, and glances to monitor CPU, memory, and disk usage.
+Copy code
+sudo dnf install htop iotop glances
+Then run htop, iotop, or glances in separate terminal windows while reproducing the high load situation.
+
+Please perform these steps and share any relevant findings. We can then proceed with more targeted troubleshooting based on the information gathered.
+
+
+
+
+Benjamin Vincent
+I already have smartmontools-1:7.3-3.fc37.x86_64
+an other problem is that since the drive is locked it is impossible to write errors on the logs at that moment we will need to investigate in an other way also we may need to find how to trigger the problem then maybe look if other drives are still accessible and from there put the minimum bin files to be able to investigate after the problem occurs
+
+❯ dmesg | grep -i "nvme\|error\|warn"
+
+[    0.006821] Warning: node 0 [mem 0x00000000-0x8ffffffff] overlaps with itself [mem 0x8a0000000-0xc9fffffff]
+[    1.282224] RAS: Correctable Errors collector initialized.
+[    2.386965] nvme nvme0: pci function 0000:05:00.0
+[    2.387094] nvme nvme1: pci function 0000:b3:00.0
+[    2.398827] nvme nvme0: Shutdown timeout set to 10 seconds
+[    2.399079] nvme nvme1: 7/0/0 default/read/poll queues
+[    2.402940] nvme nvme0: 20/0/0 default/read/poll queues
+[    2.405780]  nvme0n1: p1 p2 p3 p4 p5 p6 p7
+[    2.414462]  nvme1n1: p1 p2
+[    2.467764] BTRFS: device label home devid 1 transid 230431 /dev/nvme0n1p3 scanned by (udev-worker) (540)
+[    2.469180] BTRFS: device label sources devid 1 transid 3823 /dev/nvme0n1p5 scanned by (udev-worker) (546)
+[    2.469423] BTRFS: device label projects devid 1 transid 24195 /dev/nvme0n1p6 scanned by (udev-worker) (503)
+[    2.470575] BTRFS: device label system devid 1 transid 176089 /dev/nvme0n1p2 scanned by (udev-worker) (544)
+[    4.241900] BTRFS info (device nvme0n1p2): using crc32c (crc32c-intel) checksum algorithm
+[    4.242830] BTRFS info (device nvme0n1p2): using free space tree
+[    4.254186] BTRFS info (device nvme0n1p2): enabling ssd optimizations
+[    6.714107] Adding 67110128k swap on /dev/nvme0n1p4.  Priority:-2 extents:1 across:67110128k SSFS
+[    6.919842] BTRFS info (device nvme0n1p3): using crc32c (crc32c-intel) checksum algorithm
+[    6.919848] BTRFS info (device nvme0n1p3): using free space tree
+[    6.920656] BTRFS info (device nvme0n1p6): using crc32c (crc32c-intel) checksum algorithm
+[    6.920660] BTRFS info (device nvme0n1p6): using free space tree
+[    6.930465] BTRFS info (device nvme0n1p5): using crc32c (crc32c-intel) checksum algorithm
+[    6.930704] BTRFS info (device nvme0n1p5): using free space tree
+[    6.932174] BTRFS info (device nvme0n1p6): enabling ssd optimizations
+[    6.932879] BTRFS info (device nvme0n1p3): enabling ssd optimizations
+[    6.935760] BTRFS info (device nvme0n1p5): enabling ssd optimizations
+
+❯ sudo smartctl -a /dev/nvme1 | grep Temp
+Warning  Comp. Temp. Threshold:     73 Celsius
+Critical Comp. Temp. Threshold:     76 Celsius
+Temperature:                        32 Celsius
+Warning  Comp. Temperature Time:    0
+Critical Comp. Temperature Time:    0
+Temperature Sensor 1:               32 Celsius
+Temperature Sensor 2:               42 Celsius
+❯ sudo smartctl -a /dev/nvme0 | grep Temp
+Warning  Comp. Temp. Threshold:     82 Celsius
+Critical Comp. Temp. Threshold:     85 Celsius
+Temperature:                        44 Celsius
+Warning  Comp. Temperature Time:    0
+Critical Comp. Temperature Time:    0
+Temperature Sensor 1:               44 Celsius
+Temperature Sensor 2:               45 Celsius
+
+
+sudo fsck -f /dev/nvme0
+nvme0%      nvme0n1#    nvme0n1p1#  nvme0n1p2#  nvme0n1p3#  nvme0n1p4#  nvme0n1p5#  nvme0n1p6#  nvme0n1p7#
+sudo fsck -f /dev/nvme1
+nvme1%      nvme1n1#    nvme1n1p1#  nvme1n1p2#
+❯ sudo fsck -f /dev/nvme1
+fsck de util-linux 2.38.1
+e2fsck 1.46.5 (30-Dec-2021)
+fsck.ext2: Repérage non permis lors de la tentative d'ouverture de /dev/nvme1
+
+Le superbloc n'a pu être lu ou ne contient pas un système de fichiers
+ext2/ext3/ext4 correct. Si le périphérique est valide et qu'il contient réellement
+un système de fichiers ext2/ext3/ext4 (et non pas de type swap, ufs ou autre),
+alors le superbloc est corrompu, et vous pourriez tenter d'exécuter
+e2fsck avec un autre superbloc :
+    e2fsck -b 8193 <périphérique>
+ ou
+    e2fsck -b 32768 <périphérique>
+
+❯ sudo fsck -f /dev/nvme0
+fsck de util-linux 2.38.1
+e2fsck 1.46.5 (30-Dec-2021)
+fsck.ext2: Repérage non permis lors de la tentative d'ouverture de /dev/nvme0
+
+Le superbloc n'a pu être lu ou ne contient pas un système de fichiers
+ext2/ext3/ext4 correct. Si le périphérique est valide et qu'il contient réellement
+un système de fichiers ext2/ext3/ext4 (et non pas de type swap, ufs ou autre),
+alors le superbloc est corrompu, et vous pourriez tenter d'exécuter
+e2fsck avec un autre superbloc :
+    e2fsck -b 8193 <périphérique>
+ ou
+    e2fsck -b 32768 <périphérique>
+Apologies for the confusion, I should have asked you to run fsck on the specific partitions, not on the entire NVMe devices. From your previous response, it seems like the system partition is on /dev/nvme0n1p2. Please run the following command:
+
+bash
+Copy code
+sudo fsck -f /dev/nvme0n1p2
+Regarding the issue of logs not being written when the drive is locked, you can try creating a persistent log directory on a separate drive. This will allow you to write logs to that directory even if your main drive becomes read-only. Here's how you can set it up:
+
+Mount the separate drive (e.g., /dev/nvme1n1p1) to a folder (e.g., /mnt/external_logs):
+bash
+Copy code
+sudo mkdir /mnt/external_logs
+sudo mount /dev/nvme1n1p1 /mnt/external_logs
+Edit the journald.conf file:
+bash
+Copy code
+sudo nano /etc/systemd/journald.conf
+Uncomment the #Storage=auto line by removing the # and change auto to persistent. Then, uncomment the #RuntimePath= line and set it to the mounted directory you created in step 1:
+ini
+Copy code
+Storage=persistent
+RuntimePath=/mnt/external_logs
+Save the file and exit the editor (Ctrl + X, then Y, and hit Enter).
+
+Restart the systemd-journald service:
+
+bash
+Copy code
+sudo systemctl restart systemd-journald
+Now, your system logs should be written to the separate drive, and they will be accessible even if the main drive becomes read-only.
+
+To trigger the problem, you can try running stress tests on your system to simulate high load. You can use the stress-ng tool for this purpose:
+
+bash
+Copy code
+sudo dnf install stress-ng
+Then, run a stress test with a combination of CPU, memory, and I/O workloads:
+
+bash
+Copy code
+stress-ng --cpu 8 --io 4 --vm 2 --vm-bytes 1G --timeout 60s --metrics
+Adjust the parameters according to your system's capabilities. Monitor the system resources and logs during the stress test.
+
+Please let me know the results of the fsck command and whether creating a persistent log directory on a separate drive helps with the logging issue.
+
+
+
+
+Benjamin Vincent
+❯ sudo btrfs check --force  /dev/nvme0n1p2
+Opening filesystem to check...
+WARNING: filesystem mounted, continuing because of --force
+Checking filesystem on /dev/nvme0n1p2
+UUID: 7f291eea-0c76-4d31-baa9-d2ae94af7ca1
+[1/7] checking root items
+[2/7] checking extents
+[3/7] checking free space tree
+[4/7] checking fs roots
+[5/7] checking only csums items (without verifying data)
+[6/7] checking root refs
+[7/7] checking quota groups skipped (not enabled on this FS)
+found 44678148096 bytes used, no error found
+total csum bytes: 41733480
+total tree bytes: 1743765504
+total fs tree bytes: 1594228736
+total extent tree bytes: 90832896
+btree space waste bytes: 309147801
+file data blocks allocated: 147468050432
+ referenced 60005597184
+It seems that the btrfs check command did not find any errors on your system partition. Since the issue persists even after changing your SSD and reinstalling the operating system, it's possible that the problem lies elsewhere in your hardware or configuration.
+
+As previously mentioned, you can try running stress tests to see if you can replicate the issue on demand. If you can successfully trigger the problem, this might help you further narrow down the possible causes.
+
+Please also set up the persistent log directory on a separate drive, as I described in my previous response. This will allow you to write logs to that directory even if your main drive becomes read-only, which can provide valuable information when trying to identify the issue.
+
+Additionally, consider monitoring your system resources during the stress test. You can use tools like htop and iotop for real-time monitoring of CPU, memory, and I/O usage:
+
+bash
+Copy code
+sudo dnf install htop iotop
+Run htop and iotop in separate terminal windows while running the stress test:
+
+bash
+Copy code
+htop
+bash
+Copy code
+sudo iotop
+If you can provide any logs or additional information after setting up the persistent log directory and running the stress tests, I'd be happy to help you further investigate the issue.
+
+
+
+
+Benjamin Vincent
+how can I list the drives (devices) shuch tha I could relate which one is what please
+You can use the lsblk command to list all available block devices (drives) along with their partition layout and mount points. Run the following command in your terminal:
+
+bash
+Copy code
+lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,MODEL
+This command will display a list of block devices with their name, size, filesystem type, mount point, and model.
+
+For example, the output might look like:
+
+bash
+Copy code
+NAME        SIZE FSTYPE MOUNTPOINT   MODEL
+nvme0n1     1T                        Samsung SSD 970
+├─nvme0n1p1 500M vfat   /boot/efi
+├─nvme0n1p2 100G btrfs  /            (system partition)
+├─nvme0n1p3 100G btrfs  /home
+└─nvme0n1p4 800G btrfs  /data
+nvme1n1     500G                      Crucial MX500
+└─nvme1n1p1 500G ext4   /mnt/backup
+In this example, nvme0n1 is a 1TB Samsung SSD 970 with four partitions, and nvme1n1 is a 500GB Crucial MX500 SSD with one partition.
+
+You can also use the df command to display disk space usage for each mounted filesystem:
+
+bash
+Copy code
+df -h
+The -h option makes the output human-readable, displaying sizes in a more friendly format (e.g., in megabytes, gigabytes).
+
+
+
+
+Benjamin Vincent
+❯ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda           8:0    0   2,7T  0 disk
+├─sda1        8:1    0   2,7T  0 part
+└─sda2        8:2    0  30,6G  0 part
+sdb           8:16   0   1,8T  0 disk
+└─sdb1        8:17   0   1,8T  0 part
+zram0       252:0    0     8G  0 disk [SWAP]
+nvme0n1     259:0    0 931,5G  0 disk
+├─nvme0n1p1 259:1    0     1G  0 part /boot/efi
+├─nvme0n1p2 259:2    0   128G  0 part /
+├─nvme0n1p3 259:3    0   128G  0 part /home
+├─nvme0n1p4 259:4    0    64G  0 part [SWAP]
+├─nvme0n1p5 259:5    0    64G  0 part /src
+├─nvme0n1p6 259:6    0    64G  0 part /projects
+└─nvme0n1p7 259:7    0   250G  0 part
+nvme1n1     259:8    0 476,9G  0 disk
+├─nvme1n1p1 259:9    0   512M  0 part
+└─nvme1n1p2 259:10   0 476,4G  0 part
+
+❯ df -h
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+devtmpfs           4,0M    8,0K  4,0M   1% /dev
+tmpfs               24G    318M   24G   2% /dev/shm
+tmpfs              9,4G    2,6M  9,4G   1% /run
+/dev/nvme0n1p2     128G     42G   86G  33% /
+tmpfs               24G     23M   24G   1% /tmp
+/dev/nvme0n1p6      64G     53G  9,7G  85% /projects
+/dev/nvme0n1p3     128G     86G   42G  68% /home
+/dev/nvme0n1p5      64G     28G   37G  43% /src
+/dev/nvme0n1p1    1022M    397M  626M  39% /boot/efi
+tmpfs              4,7G    240K  4,7G   1% /run/user/1000
+
+we are not on a good path as we must create the problem trigger the issue and infer from that please give me some methotd to load the cpu maybe using dd
+If you want to load the CPU, using dd might not be the most efficient way, as it focuses more on disk I/O. Instead, you can use a tool called stress or stress-ng to put load on your CPU.
+
+First, you need to install the stress or stress-ng tool:
+
+For Debian-based systems (e.g., Ubuntu, Debian):
+
+bash
+Copy code
+sudo apt-get update
+sudo apt-get install stress-ng
+For Red Hat-based systems (e.g., CentOS, Fedora, RHEL):
+
+bash
+Copy code
+sudo dnf install stress-ng
+Once you have installed stress-ng, you can use the following command to put load on your CPU:
+
+bash
+Copy code
+stress-ng --cpu <number_of_cpu_cores> --timeout <duration>
+Replace <number_of_cpu_cores> with the number of CPU cores you want to stress, and <duration> with the desired duration of the test (e.g., 1m for 1 minute, 10m for 10 minutes, etc.).
+
+For example, to load 4 CPU cores for 5 minutes, run:
+
+bash
+Copy code
+stress-ng --cpu 4 --timeout 5m
+Please note that stressing the CPU can cause your system to become unresponsive or even crash if pushed too hard. Make sure to monitor your system temperature and usage, and stop the test if you notice any issues.
+access af-alg affinity aio aiol apparmor alarm atomic bad-altstack bad-ioctl bigheap bind-mount binderfs branch brk bsearch cache cacheline cap chattr chdir chmod chown chroot clock clone close context copy-file cpu cpu-online crypt cyclic daemon dccp dekker dentry dev dev-shm dir dirdeep dirmany dnotify dup dynlib efivar enosys env epoll eventfd exec exit-group fallocate fanotify fault fcntl fiemap fifo file-ioctl filename flock fork fp-error fpunch fstat full funccall funcret futex get getdent getrandom goto gpu handle hash hdd heapsort hrtimers hsearch icache icmp-flood idle-page inode-flags inotify io iomix ioport ioprio io-uring ipsec-mb itimer jpeg judy kcmp key kill klog kvm l1cache landlock lease link list loadavg locka lockbus lockf lockofd longjmp loop lsearch madvise malloc matrix matrix-3d mcontend membarrier memcpy memfd memhotplug memrate memthrash mergesort mincore misaligned mknod mlock mlockmany mmap mmapaddr mmapfixed mmapfork mmaphuge mmapmany mprotect mq mremap msg msync msyncmany munmap mutex nanosleep netdev netlink-proc netlink-task nice nop null numa oom-pipe opcode open pageswap pci personality peterson physpage pidfd ping-sock pipe pipeherd pkey plugin poll prctl prefetch procfs pthread ptrace pty qsort quota radixsort randlist ramfs rawdev rawpkt rawsock rawudp rdrand readahead reboot regs remap rename resched resources revio rlimit rmap rseq rtc schedpolicy sctp seal seccomp secretmem seek sem sem-sysv sendfile session set shellsort shm shm-sysv sigabrt sigchld sigfd sigfpe sigio signal signest sigpending sigpipe sigq sigrt sigsegv sigsuspend sigtrap skiplist sleep smi sock sockabuse sockdiag sockfd sockpair sockmany softlockup spawn sparsematrix splice stack stackmmap str stream swap switch symlink sync-file syncload sysbadaddr syscall sysinfo sysinval sysfs tee timer timerfd tlb-shootdown tmpfs touch tree tsc tsearch tun udp udp-flood unshare uprobe urandom userfaultfd usersyscall utime vdso vecfp vecmath vecshuf vecwide verity vfork vforkmany vm vm-addr vm-rw vm-segv vm-splice wait watchdog wcs x86syscall xattr yield zero zlib zombie
+It looks like you have pasted a list of stress-ng stressors. These stressors can be used to stress various aspects of your system, such as memory, CPU, I/O, and more.
+
+If you want to stress the CPU using stress-ng, you can follow the instructions I provided earlier:
+
+bash
+Copy code
+stress-ng --cpu <number_of_cpu_cores> --timeout <duration>
+Replace <number_of_cpu_cores> with the number of CPU cores you want to stress, and <duration> with the desired duration of the test (e.g., 1m for 1 minute, 10m for 10 minutes, etc.).
+
+For example, to load 4 CPU cores for 5 minutes, run:
+
+bash
+Copy code
+stress-ng --cpu 4 --timeout 5m
+However, if you want to stress other parts of your system using different stressors, you can refer to the stress-ng manual (man stress-ng) to learn more about the available options and their usage.

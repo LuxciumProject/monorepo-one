@@ -41,14 +41,18 @@ I have a question about how quick a given computer configuration may be faster I
 
 
 
-I have a question about how quick a given computer configuration but first I need you to ingest a few pieces of information before I can tell you more and ask you questions fist the CPU is the best fit for my motherboard an Intel® Core™ X-Series i9-10900X (10 cores, 20 threads) with a Max # of PCI Express Lanes of 48 and then as they must work together the motherboard is also the best fit for my CPU an ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
+I have a question about how quick a given computer configuration but first I need you to ingest a few pieces of information before I can tell you more and ask you questions first
+
+The CPU is the best fit for my motherboard an Intel® Core™ X-Series i9-10900X (10 cores, 20 threads) with a Max # of PCI Express Lanes of 48 and then as they must work together the motherboard is also the best fit for my CPU an ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
 
 
 
+LAN
+Intel® I219V, 1 x Gigabit LAN Controller(s), featuring Turbo LAN
+Intel® I211, 1 x Gigabit LAN, featuring Turbo LAN
 
 
-
-Intel® Core™ X-Series i9-10900X (10 cores, 20 threads)
+The CPU is the best fit for my motherboard an Intel® Core™ X-Series i9-10900X (10 cores, 20 threads) with a Max # of PCI Express Lanes of 48 and then as they must work together the motherboard is also the best fit for my CPU an ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
 
 ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299
 
@@ -85,9 +89,80 @@ NOTE:
 1. PCIEX4_1 max. at x1 mode and or shared with PCIEX16_3 when using 28 / 16 lane CPU; PCIEX4_2 max. at x4 mode;
 2. SATA6G_5/6/7/8 share bandwidth with PCIEX4_2.
 
-LAN
-Intel® I219V, 1 x Gigabit LAN Controller(s), featuring Turbo LAN
-Intel® I211, 1 x Gigabit LAN, featuring Turbo LAN
+Intel® Core™ X-Series i9-10900X (10 cores, 20 threads)
+
+!!? CPU Specifications
+Total Cores 10
+Total Threads 20
+Max Turbo Frequency 4.50 GHz
+Intel® Turbo Boost Max Technology 3.0 Frequency ‡ 4.70 GHz
+Processor Base Frequency 3.70 GHz
+Cache 19.25 MB Intel® Smart Cache
+Bus Speed 8 GT/s DMI3
+TDP 165 W
+
+!!? Expansion Options
+Scalability1S Only
+PCI Express Revision 3.0
+Max number of PCI Express Lanes 48
+
+
+Max # of PCI Express Lanes
+A PCI Express (PCIe) lane consists of two differential signaling pairs, one for receiving data, one for transmitting data, and is the basic unit of the PCIe bus. Max # of PCI Express Lanes is the total number of supported lanes.
+
+Samsung SSD 980 PRO 1TB
+05:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller PM9A1/PM9A3/980PRO
+Samsung SSD 960 PRO 512GB
+b3:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller SM961/PM961/SM963
+
+!!? Memory Specifications
+Max Memory Size (dependent on memory type) 256 GB
+Memory Types DDR4-2933
+Max number of Memory Channels 4
+Max Memory Bandwidth 94 GB/s
+ECC Memory Supported ‡ No
+
+!!? Package Specifications
+Sockets Supported FCLGA2066
+Max CPU Configuration1
+Thermal Solution Specification PCG 2017X
+TJUNCTION 94°C
+
+!!? Advanced Technologies
+Intel® Deep Learning Boost (Intel® DL Boost) Yes
+Intel® Optane™ Memory Supported ‡ Yes
+Intel® Turbo Boost Max Technology 3.0 ‡ Yes
+Intel® Turbo Boost Technology ‡ 2.0
+Intel® Hyper-Threading Technology ‡ Yes
+Intel® 64 ‡ Yes
+Instruction Set Extensions Intel® SSE4.1, Intel® SSE4.2, Intel® AVX2, Intel® AVX-512
+number of AVX-512 FMA Units 2
+Enhanced Intel SpeedStep® Technology Yes
+
+!!? Security & Reliability
+Intel® AES New Instructions Yes
+Execute Disable Bit ‡ Yes
+Intel® Virtualization Technology (VT-x) ‡ Yes
+Intel® Virtualization Technology for Directed I/O (VT-d) ‡ Yes
+
+!!? Essentials
+Download Specifications
+Product CollectionIntel® Core™ X-series Processors
+Code NameProducts formerly Cascade Lake
+Vertical SegmentDesktop
+Processor Number i9-10900X
+Lithography 14 nm
+Recommended Customer Price $648.00 - $658.00
+
+!!? Supplemental Information
+Marketing StatusLaunched
+Launch Date Q4'19
+Embedded Options Available No
+Included ItemsPlease note: The boxed product does not include a fan or heat sink
+
+
+
+/////////////////////////
 
 CPU Specifications
 Total Cores 10
@@ -123,8 +198,6 @@ Vertical Segmen tDesktop
 Processor Number i9-10900X
 Lithography 14 nm
 
-
-/////////////////////////
 can you tell me where to connect my internet cable to benefit of the best connetion betwen Intel® LAN port (LAN2)* (5. left on the scematics top on my computer) and Intel® LAN port (LAN1)* (6. right on the scematics bottom on my computer)
 only on the asus website description page I can find this information about the LAN:
 
@@ -180,3 +253,69 @@ TUF LANGuard: This is a feature that is designed to protect the Ethernet interfa
 ASUS Turbo LAN Utility: This is a software utility that is designed to optimize network traffic and reduce latency for smoother online gaming and streaming. It works by prioritizing network packets and reducing network congestion.
 
 Overall, these LAN-related features are designed to provide reliable and high-speed network connectivity for the system, as well as advanced features such as EEE support, dual interconnects, and protection against voltage spikes and ESD.
+
+
+sudo smartctl -a /dev/sda | grep Temp
+sudo smartctl -a /dev/sda1 | grep Temp
+sudo smartctl -a /dev/sda2 | grep Temp
+sudo smartctl -a /dev/sdb | grep Temp
+sudo smartctl -a /dev/sdb1 | grep Temp
+sudo fsck -f /dev/nvme0n1pX
+
+sudo fsck -f /dev/nvme0
+nvme0%      nvme0n1#    nvme0n1p1#  nvme0n1p2#  nvme0n1p3#  nvme0n1p4#  nvme0n1p5#  nvme0n1p6#  nvme0n1p7#
+sudo fsck -f /dev/nvme1
+nvme1%      nvme1n1#    nvme1n1p1#  nvme1n1p2#
+❯ sudo fsck -f /dev/nvme1
+fsck de util-linux 2.38.1
+e2fsck 1.46.5 (30-Dec-2021)
+fsck.ext2: Repérage non permis lors de la tentative d'ouverture de /dev/nvme1
+
+Le superbloc n'a pu être lu ou ne contient pas un système de fichiers
+ext2/ext3/ext4 correct. Si le périphérique est valide et qu'il contient réellement
+un système de fichiers ext2/ext3/ext4 (et non pas de type swap, ufs ou autre),
+alors le superbloc est corrompu, et vous pourriez tenter d'exécuter
+e2fsck avec un autre superbloc :
+    e2fsck -b 8193 <périphérique>
+ ou
+    e2fsck -b 32768 <périphérique>
+
+❯ sudo fsck -f /dev/nvme0
+fsck de util-linux 2.38.1
+e2fsck 1.46.5 (30-Dec-2021)
+fsck.ext2: Repérage non permis lors de la tentative d'ouverture de /dev/nvme0
+
+Le superbloc n'a pu être lu ou ne contient pas un système de fichiers
+ext2/ext3/ext4 correct. Si le périphérique est valide et qu'il contient réellement
+un système de fichiers ext2/ext3/ext4 (et non pas de type swap, ufs ou autre),
+alors le superbloc est corrompu, et vous pourriez tenter d'exécuter
+e2fsck avec un autre superbloc :
+    e2fsck -b 8193 <périphérique>
+ ou
+    e2fsck -b 32768 <périphérique>
+
+
+Hello I need help to understand the fastest connection for a nvme drive on my specific system and I will give you informations to infer from and hopefully you have enough knowledge about those to help me find out... I have 3 locations where I can place nvme drive and 2 are on the motherboard one is via a gizmo that I can use to plug direcly on the pci slote that I have in my system I will give you more information and you can tell me if you know 1) from your knowledge and 2) from the information I am giving you what can be the best most direct fastest option to connect the NVME drive (the one that is system file) the most important information to infer from is very specific to the type of mother board I have and the cpu connection I have a TUF X299 MARK 1 (Asus) and I have a Processor: Intel Core i9-10900X (10 cores, 20 threads) I want to know how to connect directly to the cpu without passing by the PCH if you know I would be happy that you explain me and if you dont know I would be happy is you can tell me how to find out the missing information to determine what I want to know... I will give you a little informations about the topology of the system:
+#
+# /etc/fstab
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+
+UUID=7f291eea-0c76-4d31-baa9-d2ae94af7ca1   /                         btrfs   defaults                     0 0
+UUID=A736-7274                              /boot/efi                 vfat    umask=0077,shortname=winnt   0 2
+UUID=d9787e5a-7a5e-4fcb-b9ac-c06e5835a55b   /home                     btrfs   defaults                     0 0
+UUID=32c5c000-3f37-46b9-b8bd-f4bbe1d1e7e3   none                      swap    defaults                     0 0
+
+UUID=111d7dfe-34d6-4975-b8a8-5407f8a3f7b0   /src                      btrfs   defaults                     0 0
+UUID=be72dc7b-78d9-427e-9a3d-d558a768448f   /projects                 btrfs   defaults                     0 0
+UUID=6a6bbf26-9327-4c63-9369-88f2ebc599a9   /home/luxcium/stockage    ext4    defaults,noatime             0 0
+
+#/dev/nvme0n1p5                             /src                      btrfs   defaults                     0 0
+#/dev/nvme0n1p6                             /projects                 btrfs   defaults                     0 0
+#UUID=6a6bbf26-9327-4c63-9369-88f2ebc599a9  /mnt/2TB-Seagate          ext4    defaults                     0 2
+#UUID=6a6bbf26-9327-4c63-9369-88f2ebc599a9  /home/luxcium/stockage    ext4    defaults                     0 2
