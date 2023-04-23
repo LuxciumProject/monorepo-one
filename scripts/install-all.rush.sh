@@ -35,6 +35,6 @@ rush add \
 rush add --package tslib@latest --dev --exact --make-consistent
 rush update -p
 pwd
-rush add --package tslib@latest --dev --exact --make-consistent
+# rush add --package tslib@latest --dev --exact --make-consistent
 # rush add --exact --make-consistent -p @testing-library/jest-dom -p @testing-library/react -p @testing-library/user-event -p @types/jest -p @types/node -p @types/react -p @types/react-dom -p react -p react-dom -p react-scripts -p typescript -p web-vitals
 #

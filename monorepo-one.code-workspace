@@ -41,38 +41,38 @@
       "name": "  ↓💻👨‍💻 FRONTEND",
       "path": "frontend"
     },
-    {
-      "name": "          💻👨‍💻 💅 home",
-      "path": "frontend/home"
-    },
-    {
-      "name": "          💻👨‍💻 main-react",
-      "path": "frontend/main-react"
-    },
-    {
-      "name": "          💻👨‍💻 my-next-js-app",
-      "path": "frontend/my-next-js-app"
-    },
-    {
-      "name": "          💻👨‍💻 home-bak",
-      "path": "frontend/home-bak"
-    },
-    {
-      "name": "          💻👨‍💻 home-ejector",
-      "path": "frontend/home-ejector"
-    },
-    {
-      "name": "          💻🏫 cart",
-      "path": "frontend/cart"
-    },
-    {
-      "name": "          💻🏫 federal-container",
-      "path": "frontend/federal-container"
-    },
-    {
-      "name": "          💻🏫 products",
-      "path": "frontend/products"
-    },
+    // {
+    //   "name": "          💻👨‍💻 💅 home",
+    //   "path": "frontend/home"
+    // },
+    // {
+    //   "name": "          💻👨‍💻 main-react",
+    //   "path": "frontend/main-react"
+    // },
+    // {
+    //   "name": "          💻👨‍💻 my-next-js-app",
+    //   "path": "frontend/my-next-js-app"
+    // },
+    // {
+    //   "name": "          💻👨‍💻 home-bak",
+    //   "path": "frontend/home-bak"
+    // },
+    // {
+    //   "name": "          💻👨‍💻 home-ejector",
+    //   "path": "frontend/home-ejector"
+    // },
+    // {
+    //   "name": "          💻🏫 cart",
+    //   "path": "frontend/cart"
+    // },
+    // {
+    //   "name": "          💻🏫 federal-container",
+    //   "path": "frontend/federal-container"
+    // },
+    // {
+    //   "name": "          💻🏫 products",
+    //   "path": "frontend/products"
+    // },
     {
       "name": "  ↓📚📓 📔 LIBRARY",
       "path": "library"
@@ -2853,7 +2853,7 @@
       "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "audioCues.taskCompleted": "off",
-    "typescript.tsdk": "          📚🧭 mapping-tools/node_modules/typescript/lib",
+    "typescript.tsdk": "      →💁💜 rpc-worker-pool/node_modules/typescript/lib",
     "files.watcherExclude": {
       "**/build/**": true,
       "**/dist/**": true,

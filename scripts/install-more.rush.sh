@@ -20,7 +20,6 @@ rush add \
   -p @types/prettier@latest \
   -p @typescript-eslint/eslint-plugin@latest \
   -p @typescript-eslint/parser@latest \
-  -p babel-jest@latest \
   -p chai@latest \
   -p concurrently@latest \
   -p eslint-import-resolver-typescript@latest \
@@ -44,13 +43,16 @@ rush add \
   -p tsconfig-paths@latest \
   -p typescript@latest \
   -p webpack@latest \
-  --exact --dev --make-consistent --all
+  --dev --exact --make-consistent --all
 
-rush add \
-  -p @types/node@18 \
-  --dev --make-consistent --all
+# rush add \
+#   -p @types/node@18 \
+#   --dev --make-consistent --all
 
-rush add --package tslib@latest --dev --exact --make-consistent --all
+# rush add --package tslib@latest --package typescript@latest --package ts-node@latest --dev --exact --make-consistent --all
+
+rush add -p @types/node@~18 --dev --make-consistent --all
+rush add -p tslib@latest -p ts-jest@latest -p ts-loader@latest -p ts-node@latest -p tsconfig-paths@latest -p typescript@latest --dev --exact --make-consistent --all
 rush purge --unsafe
 rush update --full
 rush rebuild --verbose --ignore-hooks --timeline
