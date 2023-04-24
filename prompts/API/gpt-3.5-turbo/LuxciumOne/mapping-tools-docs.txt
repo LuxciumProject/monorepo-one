@@ -162,3 +162,68 @@ export interface ErrLookupFn {
 ```
 
 The delegates are linked via parameters that can be accessed from the outside by providing a function of a certain type as an argument. The package allows you to alter the workflow in five different areas inside the specific mapping operation over each element. The interfaces define the signature of each delegate function and specify the types of the input and output parameters, allowing the consuming AI to correctly infer the types of the delegate functions and use them effectively."
+
+Base
+Settled<TVal>
+SettledRight<TVal>
+SettledLeft
+PromiseFulfilledResult<TVal>
+PromiseSettledResult<TVal>
+PromiseRejectedResult
+
+Base Types:
+
+Basic input type
+type Base<TBase> =
+  | TBase
+  | Settled<TBase>
+  | PromiseSettledResult<TBase>
+  | SettledRight<TBase>
+  | PromiseFulfilledResult<TBase>
+  | SettledLeft
+  | PromiseRejectedResult;
+Represents the aggregation of a naked value of type TBase, a resolved value wrapped in either SettledRight<TBase> | PromiseFulfilledResult<TBase>, or a rejection reason wrapped in either SettledLeft | PromiseRejectedResult or the equivalent union types Settled<TBase> | PromiseSettledResult<TBase>
+Settled<TVal>:
+An extension of the PromiseSettledResult<TVal> type
+Includes additional properties such as the transformStep and currentRejection status
+Allows users to more easily track the progress of the transformation process and quickly identify any errors that may have occurred
+SettledRight<TVal>:
+Represents successful transformation results
+Includes the fulfilled value as well as additional metadata such as the index of the item in the original collection and the transformation step at which it was resolved
+Allows users to easily track and analyze the transformation process, even in cases where errors may have been encountered
+SettledLeft:
+Represents unsuccessful transformation results
+Includes the rejected value as well as metadata such as the index and last transformStep
+Allows users to easily identify and troubleshoot any issues that may have occurred during the transformation process
+PromiseFulfilledResult<TVal>:
+Interface from typescript lib
+Includes the status of 'fulfilled' and the value of type T
+PromiseSettledResult<TVal>:
+Type from typescript lib
+Includes either a fulfilled or rejected result
+PromiseRejectedResult:
+
+Interface from typescript lib
+Includes the status of 'rejected' and the reason for rejection
+
+Section 1: Aliases Types
+This section defines various alias types that are used in the package. It includes four subsections:
+
+Subsection 1.1: Deferred<Base> - an alias for PromiseLike<Base<B>> that represents a promise-like object wrapping a value of type Base<B>.
+Subsection 1.2: BaseOrDeferred<Base> - an alias type representing either a promise-like Deferred<B> type or a Base<B> type.
+Subsection 1.3: Collection<Base> - a basic iterable input type and Iterable version of BaseOrDeferred<Base>.
+Subsection 1.4: DeferredCollection<Base> - an extended version of the basic Iterable input type that may be either Collection<B> or a PromiseLike<Collection<B>>.
+Section 2: SettledArray<Result>
+This section defines the SettledArray<Result> type and includes two subsections:
+
+Subsection 2.1: SettledValue<Result> - an alias type that represents either a value of type R or a NullSymbol.
+Subsection 2.2: SettledValues<Result> - an alias type that represents an array of SettledValue<Result>.
+Section 3: NullSymbol
+This section defines the NullSymbol type, which is an alias for typeof NULL_SYMBOL.
+
+Section 4: OnlySideEffect
+This section defines the OnlySideEffect type, which is an alias for void | undefined.
+
+The package's adaptive ability to handle both promises and non-promises as input, which allows it to be easily integrated into a wide range of contexts and projects.
+The package has been designed with resilience in mind, including robust error handling.
+The output of the package is based on the Settled<TVal> type, which allows users to easily distinguish between successful and unsuccessful results.
