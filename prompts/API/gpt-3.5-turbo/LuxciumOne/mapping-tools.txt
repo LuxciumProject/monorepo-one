@@ -18,7 +18,7 @@ Table of Contents
     [X] serialMapping Signature
     [X] awaitedMapping Signature
     [X] generateMapping Signature
-    [ ] generateMappingAsync Signature
+    [X] generateMappingAsync Signature
     [ ] Return Types
     [ ] Arguments
 ...
@@ -111,7 +111,21 @@ export function* generateMapping<T, R>(
 ): Generator<Promise<Settled<R>>, void, unknown>;
 ```
 
-Note that `generateMapping` returns a `Generator<Promise<Settled<R>>, void, unknown>`. The `TransformFn`, `LookupFn`, `ValidateFn`, and `ErrLookupFn` are optional delegate functions that can perform additional operations.
+Note that it is based on the Generator Protocol
+
+`generateMappingAsync` is a function that applies the provided callback functions to each item in the collection, and returns an async generator that yields the transformed and validated items, represented as `Settled<R>` objects. It takes an iterable of `Base<T>` or `PromiseLike<Base<T>>` and returns an `AsyncGenerator<Settled<R>, void, unknown>`. The function signature is:
+
+```TypeScript
+export async function* generateMappingAsync<R, T>(
+  collection: Collection<T>,
+  transformFn: TransformFn<T, R> | null = async value => value as any as R,
+  lookupFn: LookupFn<T, R> | null = v => void v,
+  validateFn: ValidateFn<T, R> | null = async v => void v,
+  errLookupFn: ErrLookupFn | null = v => void v
+): AsyncGenerator<Settled<R>, void, unknown>;
+```
+
+Note that it is based on the AsyncGenerator Protocol.
 
 METHODOLOGY: the already converted part of the documentation are already provided to you or you already know it. Now the user will be acting methodically and will provide you one section at a time of the documentation each section will be explained to you one at a time
 
