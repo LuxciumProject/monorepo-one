@@ -19,8 +19,13 @@ Table of Contents
     [X] awaitedMapping Signature
     [X] generateMapping Signature
     [X] generateMappingAsync Signature
-    [ ] Return Types
-    [ ] Arguments
+    [X] Return Types
+    [X] Arguments
+Delegates Functions
+    [ ] transformFn
+    [ ] lookupFn
+    [ ] validateFn
+    [ ] errLookupFn
 ...
 
 Installation:
@@ -127,13 +132,19 @@ export async function* generateMappingAsync<R, T>(
 
 Note that it is based on the AsyncGenerator Protocol.
 
+"Mapping Tools provides 5 main functions with complex signatures:
+
+- parallelMapping returns: Array<Promise<Settled<R>>>
+- serialMapping returns: Promise<Array<Settled<R>>>
+- awaitedMapping returns: Promise<Array<Settled<R>>>
+- generateMapping returns: Generator<Promise<Settled<R>>, void, unknown>
+- generateMappingAsync returns: AsyncGenerator<Settled<R>, void, unknown>
+
+The functions take a collection of items and optional delegate functions: transformFn, lookupFn, validateFn, and errLookupFn. The collection can be an iterable or a combination of an iterable and a promise of an iterable. The delegate functions are applied to each item in the collection and take an item of type T as input and return a value of type R. The Base<T> type represents a resolved or rejected promise, or a value."
+
 METHODOLOGY: the already converted part of the documentation are already provided to you or you already know it. Now the user will be acting methodically and will provide you one section at a time of the documentation each section will be explained to you one at a time
 
 ## Table of Contents
-Main Functions
-    generateMappingAsync Signature
-    Return Types
-    Arguments
 Delegates Functions
     transformFn
     lookupFn
