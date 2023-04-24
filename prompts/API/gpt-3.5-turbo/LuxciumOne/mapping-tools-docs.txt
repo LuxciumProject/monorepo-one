@@ -115,3 +115,50 @@ Note that it is based on the AsyncGenerator Protocol.
 - generateMappingAsync returns: AsyncGenerator<Settled<R>, void, unknown>
 
 The functions take a collection of items and optional delegate functions: transformFn, lookupFn, validateFn, and errLookupFn. The collection can be an iterable or a combination of an iterable and a promise of an iterable. The delegate functions are applied to each item in the collection and take an item of type T as input and return a value of type R. The Base<T> type represents a resolved or rejected promise, or a value."
+"Mapping Tools provides four main types of delegate functions that can be used as arguments to the main functions: `TransformFn`, `LookupFn`, `ValidateFn`, and `ErrLookupFn`. These delegates are responsible for carrying out the mapping, validation, and error handling processes. They can take null or undefined values that are replaced by default values.
+
+`TransformFn` is used for the actual mapping process and expects that you will transform from input type T to returned type U. Proper type annotations are required if you return an unchanged value. The function signature is:
+
+```TypeScript
+export interface TransformFn<T, U = unknown> {
+  (
+    value: T,
+    index: number,
+    array: readonly (T | PromiseSettledResult<T>)[]
+  ): Promise<U>;
+}
+```
+
+`LookupFn` is used to acknowledge the transformed value U in an asynchronous manner. The return value must be void and must not have any internal side effects within the function. The function signature is:
+
+```TypeScript
+export interface LookupFn<S, U = unknown> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
+  ): OnlySideEffect;
+}
+```
+
+`ValidateFn` is similar to the `LookupFn` delegate but is awaited within the function where it is executed. The return value must be a Promise<void>, and the only way to communicate with the main function is to throw a value or exception, which will be caught in the function and returned as a `SettledLeft`. The function signature is:
+
+```TypeScript
+export interface ValidateFn<S, U = unknown> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | PromiseSettledResult<S>)[]
+  ): Promise<OnlySideEffect>;
+}
+```
+
+`ErrLookupFn` is used to handle errors and is similar to the `LookupFn` delegate, but for rejections. It takes a `currentRejection` flag as its third argument, which indicates whether the error occurred during the current iteration or a previous iteration. The function signature is:
+
+```TypeScript
+export interface ErrLookupFn {
+  (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
+}
+```
+
+The delegates are linked via parameters that can be accessed from the outside by providing a function of a certain type as an argument. The package allows you to alter the workflow in five different areas inside the specific mapping operation over each element. The interfaces define the signature of each delegate function and specify the types of the input and output parameters, allowing the consuming AI to correctly infer the types of the delegate functions and use them effectively."
