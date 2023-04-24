@@ -17,7 +17,7 @@ Table of Contents
     [x] parallelMapping Signature
     [X] serialMapping Signature
     [X] awaitedMapping Signature
-    [ ] generateMapping Signature
+    [X] generateMapping Signature
     [ ] generateMappingAsync Signature
     [ ] Return Types
     [ ] Arguments
@@ -99,11 +99,24 @@ export async function awaitedMapping<T, R>(
 
 Note that it is based on Promise.all($)."
 
+`generateMapping` applies the provided callback functions to each item in the collection, and returns a generator that yields promises that resolve to the transformed and validated items, represented as `Settled<R>` objects. It is based on the Generator Protocol and takes an iterable of `Base<T>` or `PromiseLike<Base<T>>`. The function signature is:
+
+```TypeScript
+export function* generateMapping<T, R>(
+  collection: Collection<T>,
+  transformFn?: TransformFn<T, R> | null,
+  lookupFn?: LookupFn<T, R> | null,
+  validateFn?: ValidateFn<T, R> | null,
+  errLookupFn?: ErrLookupFn | null
+): Generator<Promise<Settled<R>>, void, unknown>;
+```
+
+Note that `generateMapping` returns a `Generator<Promise<Settled<R>>, void, unknown>`. The `TransformFn`, `LookupFn`, `ValidateFn`, and `ErrLookupFn` are optional delegate functions that can perform additional operations.
+
 METHODOLOGY: the already converted part of the documentation are already provided to you or you already know it. Now the user will be acting methodically and will provide you one section at a time of the documentation each section will be explained to you one at a time
 
 ## Table of Contents
 Main Functions
-    generateMapping Signature
     generateMappingAsync Signature
     Return Types
     Arguments
