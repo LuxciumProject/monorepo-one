@@ -48,9 +48,9 @@ trap cleanup SIGINT
 # Prompt the user for confirmation before proceeding
 read -r -p "
 ${RESET}
-❯  ${BRIGHT_GREEN}WARNING:${RESET} ${GREEN}This script will stop and remove the Docker engine and containerd services,${RESET} ${BRIGHT_RED}
+❯  ${BRIGHT_GREEN}WARNING:${RESET} ${GREEN}This script will stop and remove the Docker engine and containerd services,${RESET}
 
-   THIS WILL DELETE${RESET} ${YELLOW}/var/lib/docker${GREEN},${RESET} ${YELLOW}/var/lib/containerd ${GREEN}and${RESET} ${YELLOW}$HOME/.docker${GREEN}${RESET}
+   ${BRIGHT_RED}THIS WILL DELETE${RESET} ${YELLOW}/var/lib/docker${GREEN},${RESET} ${YELLOW}/var/lib/containerd ${GREEN}and${RESET} ${YELLOW}$HOME/.docker${GREEN}${RESET}
    ${GREEN}and it will reinstall Docker engine.${RESET}
 
    ${BRIGHT_GREEN}Are you sure you want to continue?${RESET} [NO]/YES: " confirm
@@ -62,6 +62,7 @@ else
   echo -e "${RESET}\n\n❯  ${BRIGHT_GREEN}URGENT\u0021\u0021\u0021${RESET} ${GREEN}PLEASE USE CTRL+C TO ARBORT THIS WILL DELETE IMPORTANT FILES FROM YOUR SYSTEM${RESET}"
   echo -e "  ${YELLOW}/var/lib/docker${GREEN},${RESET} ${YELLOW}/var/lib/containerd ${GREEN}and${RESET} ${YELLOW}$HOME/.docker ${RED}WILL BE DELETED IN:${RESET}"
 fi
+sleep 2
 echo -ne "  ${BRIGHT_YELLOW}"
 # Display countdown timer before proceeding
 for i in {10..1}; do
@@ -95,11 +96,15 @@ printf "%*s\n" "$(tput cols)" "" | tr ' ' '='
 echo ''
 
 sudo du /var/lib/docker
-sleep 1
-sudo du /var/lib/containerd
 sleep 2
-sudo du "$HOME/.docker"
+sudo du /var/lib/containerd
 sleep 3
+du "$HOME/.docker"
+echo ''
+echo -e "${BRIGHT_RED}WILL DELETE${RESET} ${YELLOW}/var/lib/docker${GREEN},${RESET} ${YELLOW}/var/lib/containerd ${GREEN}and${RESET} ${YELLOW}$HOME/.docker${GREEN}${RESET} ${BRIGHT_RED}NOW\u0021${RESET}"
+echo ''
+sleep 10
+
 sudo rm -rf /var/lib/docker
 sudo rm -rf /var/lib/containerd
 sudo rm -rf "$HOME/.docker"
@@ -156,7 +161,7 @@ echo 'Run hello-world to verify installation'
 printf "%*s\n" "$(tput cols)" "" | tr ' ' '='
 echo ''
 sudo systemctl status docker docker.socket containerd --no-pager
-sudo docker run hello-world
+sudo docker run hello-world && echo_E="\n${GREEN}―0K―${RESET}\n"
 # ――------------------------------------------------------------------
 printf "%*s\n" "$(tput cols)" "" | tr ' ' '-'
-echo ''
+echo "${echo_E}"
