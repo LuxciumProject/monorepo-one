@@ -993,8 +993,8 @@
     "editor.codeActionsOnSave": [
       "source.addMissingImports",
       "source.organizeImports",
-      "source.fixAll.eslint",
-      "source.fixAll"
+      // "source.fixAll",
+      "source.fixAll.eslint"
     ],
     "material-icon-theme.folders.associations": {
       "eslint-plugin": "rules",
@@ -2822,7 +2822,8 @@
       "examples",
       "Storybook",
       "ChatGPT",
-      "RpcWorkerPool"
+      "RpcWorkerPool",
+      "scripts"
     ],
     "workbench.colorCustomizations": {
       "activityBar.activeBackground": "#6a2bd499",

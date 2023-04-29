@@ -71,12 +71,12 @@
   "files.trimTrailingWhitespace": true,
   //                                                                  ――
   // ―― CODEACTIONSONSAVE BEHAVIOUR:
-  "editor.codeActionsOnSave": [
-    "source.addMissingImports",
-    "source.organizeImports",
-    "source.fixAll.eslint",
-    "source.fixAll"
-  ],
+  // "editor.codeActionsOnSave": [
+  //   "source.addMissingImports",
+  //   "source.organizeImports",
+  //   "source.fixAll",
+  //   "source.fixAll.eslint"
+  // ],
   "material-icon-theme.folders.associations": {
     "eslint-plugin": "rules"
   },
