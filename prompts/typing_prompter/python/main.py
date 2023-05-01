@@ -22,7 +22,7 @@ import time
 # os.system(f"source {script_dir}/settings.sh")
 
 # Set constants for average words per minute and average characters per word
-AVG_WORDS_PER_MIN = 300
+AVG_WORDS_PER_MIN = 700
 AVG_CHARS_PER_WORD = 5
 
 # Calculate time per word in seconds
