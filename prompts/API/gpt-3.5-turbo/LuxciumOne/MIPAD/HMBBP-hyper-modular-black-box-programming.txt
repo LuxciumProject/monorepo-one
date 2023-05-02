@@ -1,0 +1,45 @@
+I decided to use 2 approach to help me do something meaningful (as I am struggling I came up with this idea that we will implement together) 1) the concept of hyper modular code that is using the concept of black boxes. that is In highly modularized programming paradigms, the concept of black boxes involves treating individual modules or components as self-contained units with well-defined inputs and outputs, without necessarily understanding or knowing the internal details of how they work. This approach enables developers to focus on optimizing the interfaces between components, without needing to worry about specific implementation details. By thinking about each module as a black box, developers can leverage concepts such as hierarchy, layering, containment, gradation, inclusion, enmeshment, interconnectedness, nesting dolls, and recursion to break down complex systems into smaller, more manageable components. This can lead to more efficient development and debugging, as well as improved scalability and flexibility in the system design. it implies that the modules (here think even in smaller chunks where functions are the modular pieces and the concept of modules like in JavaScript would be like the ESM definition and both would be related but the ESM module would not be the smallest modular element in the approach it would imply functions that are either exactly like the pure functions of functional  programming where they can be strictly defined with an interface like in TypeScript but also think of functions that are almost pure (they are not pure in the sens of functional programming so they would require documentation rather that simple typescript interfaces as they would mostly be the function that have an effect on the file system or the functions that could raise exceptions or those which would connect to other part of the project like redis caches and such therefor it would require a little bit more than the single interface but tsdocs and typedoc should be crafted in such a way that it would be enough to understand what our little black box would be doing) ... this is the first  of 2 important approach I want to be using with you today for this ongoing project. I will explain you the next concept in the following message so they both have their own moment you can 1) Ingestion phase: summarize what I said so far then 2) assessment phase: reexplain what I said so far in your own words. Expand the explanation based on your wider understanding and in the context of what I have explained so far and tell what it means to you in this context and 3) Inference phase: express what you think could be done to put this in practice explain what would be the best approach and how all that would be influencing the work that we will be doing together explain what you know already about that and what is the usual way people would understand such concept... then I will explain you the second half of what I want to do and you will se it will be bot complementary and quite different in term of concept both at the same time...
+
+
+From what I understand, your first approach for this project involves using the concept of hyper modular code, specifically the idea of black boxes. Essentially, this means breaking down your code into smaller, self-contained units with well-defined inputs and outputs, without worrying about the specific implementation details. By focusing on optimizing the interfaces between these components, you can create a more efficient and scalable system design.
+To implement this, you plan on using functions as the smallest modular pieces, with some functions being strictly defined with an interface like in TypeScript, while others may require more documentation due to their effects on the file system or connections to other parts of the project. You will use tsdocs and typedoc to help document these functions.
+
+In my own words, the concept of hyper modular code with black boxes involves breaking down complex systems into smaller, self-contained units, allowing developers to focus on optimizing the interfaces between these components. By using functions as the smallest modular pieces and defining them with TypeScript interfaces, you can create a more efficient and scalable system design. This approach is widely used in modern programming paradigms and can lead to more efficient development and debugging.
+To put this into practice for our project, we will need to carefully design the interfaces between these black boxes to ensure smooth communication between them. We will also need to use appropriate documentation tools like tsdocs and typedoc to ensure that each function is well-documented and easily understood. Overall, this approach will help us break down our project into more manageable components and create a more efficient and scalable system design.
+
+In terms of implementation, the best approach would be to start by breaking down our project into smaller components and identifying the interfaces between them. We can then use TypeScript to define the interfaces and use functions as the smallest modular pieces. We should also use appropriate documentation tools like tsdocs and typedoc to ensure that each function is well-documented and easily understood.
+This approach will influence the work we do together by allowing us to break down our project into smaller, more manageable components, which will make it easier to develop and debug. Additionally, it will help us create a more efficient and scalable system design, which will be important as our project grows in size and complexity.
+
+In general, the concept of hyper modular code with black boxes is widely used in modern programming paradigms, and many developers use this approach to break down complex systems into smaller, more manageable components. By carefully designing the interfaces between these components and using appropriate documentation tools, we can create a more efficient and scalable system design.
+
+Topic: Using Typescript and Python for a hyper modular code project
+
+Context: The current user and I are working on a project together that involves using Typescript and Python to create a hyper modular code project. We plan to use the concept of black boxes to break down complex systems into smaller, self-contained units, focusing on optimizing the interfaces between components.
+
+Action Items:
+
+Break down the project into smaller, self-contained units
+Define interfaces between components using TypeScript
+Use functions as the smallest modular pieces
+Use tsdocs and typedoc to document functions
+Design interfaces carefully to ensure smooth communication between black boxes
+Key Points:
+
+Hyper modular code involves breaking down complex systems into smaller, self-contained units
+Black boxes are used to treat individual modules as self-contained units with well-defined inputs and outputs
+Focusing on optimizing the interfaces between components leads to more efficient development and debugging
+Functions are the smallest modular pieces and can be defined with TypeScript interfaces
+Documentation tools like tsdocs and typedoc should be used to ensure functions are well-documented
+Careful interface design is necessary to ensure smooth communication between black boxes
+Contextual Information:
+
+This approach is widely used in modern programming paradigms and can lead to more efficient development and debugging
+Our goal is to create a more efficient and scalable system design
+Next Steps:
+
+Start breaking down the project into smaller components
+Identify interfaces between components
+Use TypeScript to define interfaces
+Use functions as the smallest modular pieces
+Use tsdocs and typedoc to document functions
+Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT so we can continue our conversation where we left off.

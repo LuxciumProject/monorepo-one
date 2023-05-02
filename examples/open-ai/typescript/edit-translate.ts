@@ -37,7 +37,7 @@ export function createEdit(
         '"The grass is always greener on the other side." - This means that people often think that things would be better in a different situation or circumstance, but this may not actually be true.',
       instruction:
         instruction ||
-        'Make this in the voice of a french speaker from Quebec: Translate each of the following words of the entire input into French, output only the French translation as a French Canadian would have written it, ensure that the resulting text is grammatically correct and reflects the original meaning accurately.',
+        'Make this in the voice of a french speaker from Quebec: Translate in french (fr_CA) each words of the following input. Ensure that the resulting french text is grammatically correct and reflects the original meaning accurately. You must specifically output the French translation only.',
       top_p,
       temperature,
       n,
