@@ -1,6 +1,6 @@
 Topic: Software Development Methodology - Modular Incremental Programming and Development (MIPAD)
 
-Context: We have discussed two distinct software development methodologies, the Hyper-Modular Black Box approach and Incremental Development with Pseudocode as Code (IDPAC) approach. We then introduced a unified methodology called Modular Incremental Programming and Development (MIPAD), which combines the best elements of both approaches.
+Context: We have discussed two distinct software development methodologies, the Hyper-Modular Black Box approach and Incremental Development Pseudocode as Code (IDPAC) approach. We then introduced a unified methodology called Modular Incremental Programming and Development (MIPAD), which combines the best elements of both approaches.
 
 Action items:
 

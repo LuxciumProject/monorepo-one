@@ -1,4 +1,4 @@
-# Incremental Development Programming and Coding (IDPAC): A New Approach to Software Development
+# Incremental Development Pseudocode as Code (IDPAC): A New Approach to Software Development
 
 Software development is a complex process, and managing the various moving parts can be a challenge. To simplify this process, we recommend a unified strategy that utilizes a few key concepts and approaches. This guide will explain this method in a clear and structured manner, outlining the benefits of following it and the problems it aims to solve.
 

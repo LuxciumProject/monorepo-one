@@ -62,7 +62,7 @@ In summary, integrating these best practices into the MIPAD approach involves im
 
 Topic: Modular Incremental Programming and Development (MIPAD)
 
-Context: We have been discussing a development methodology called Modular Incremental Programming and Development (MIPAD) which combines the best elements of Hyper-Modular Black Box and Incremental Development Programming and Coding (IDPAC) concepts to create a comprehensive and efficient development methodology. We have discussed the key concepts, including hyper-modular code, black boxes, incremental development, and always-ready-to-work code. We have also discussed the best practices for software development and how they can be integrated into the MIPAD methodology.
+Context: We have been discussing a development methodology called Modular Incremental Programming and Development (MIPAD) which combines the best elements of Hyper-Modular Black Box and Incremental Development Pseudocode as Code (IDPAC) concepts to create a comprehensive and efficient development methodology. We have discussed the key concepts, including hyper-modular code, black boxes, incremental development, and always-ready-to-work code. We have also discussed the best practices for software development and how they can be integrated into the MIPAD methodology.
 
 Action items:
 
