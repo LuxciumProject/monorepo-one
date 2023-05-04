@@ -2,7 +2,7 @@
 
 <a name="top"></a>
 
-**† Scientia est lux principium✨ ™**
+† **Scientia est lux principium✨** ™
 
 ## libraries
 
