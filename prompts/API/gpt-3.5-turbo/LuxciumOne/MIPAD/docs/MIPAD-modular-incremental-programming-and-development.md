@@ -61,6 +61,29 @@ Key takeaways from the MIPAD approach include:
 
 By embracing MIPAD and its unified approach to software development, developers can overcome the challenges often faced in the development process, ultimately leading to better products and a more rewarding development experience.
 
-Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
+### Instructions for you AI Assistant
+
+```text
+INCIPE Lorem Ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. FINIS
+```
+
+## Luxcium License: NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+
+- THESE FILES ARE **NOT** FIT FOR ANY PARTICULAR PURPOSE IN THEIR CURRENT FORM.
+- THESE FILES OR THEIR CONTENT HAVE NOT BEEN TESTED OR RUN YET IN ANY OR ALL ENVIRONMENTS!
+- **DO NOT** RUN ANY OF THESE FILES UNLESS YOU HAVE REVIEWED THEIR FULL CONTENT.
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOU (or anyone).
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOUR MACHINE (or any machine).
+
+### NO PERMISSIONS ARE GRANTED FOR THIS SOFTWARE OR DOCUMENTATION
+
+```text
+    1) NOT TO PUBLISH;
+    2) NOT TO DISTRIBUTE;
+    3) NOT TO SUBLICENSE;
+    4) NOT TO SELL COPIES OF;
+```
+
+#### Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
 
 † **Scientia est lux principium✨** ™

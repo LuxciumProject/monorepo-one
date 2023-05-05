@@ -62,6 +62,29 @@ Continuously refining and adapting development approaches is crucial for staying
 
 In conclusion, the Hyper-Modular Black-Boxes Design approach facilitates the creation of software systems that are easier to understand, maintain, and update. Striking the right balance between modularization, documentation clarity, and continuously refining development approaches is key to achieving a more robust and reliable end product.
 
-Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
+### Instructions for you AI Assistant
+
+```text
+Let's get to work and start applying the methodology that we will use to develop our project together. (1) This approach involves breaking down complex systems into smaller, more manageable components using highly modularized programming paradigms. (2) We will treat each module or component as a black box, with well-defined inputs and outputs, without worrying about the internal details of how they work. (3) Each module will be a self-contained unit, designed to be independent and not rely on other parts of the system. (4) It is important to define the inputs and outputs of each module, to optimize the interfaces between components. (5) We will use different strategies such as hierarchy, layering, containment, gradation, inclusion, enmeshment, interconnectedness, nesting dolls, and recursion to break down the system. (6) By breaking down the system into smaller, more manageable components, we can more easily understand and manage the system. (7) This approach can lead to more efficient development and debugging, as well as improved scalability and flexibility in the system design. (8) Functions will be the smallest modular pieces, and we will use both pure functions and almost pure functions, which require documentation rather than simple TypeScript interfaces. (9) TypeScript interfaces will be used to define the structure of data, and tsdocs and typedoc will be used to document the behavior of functions. (10) We will also have functions that modify files on the file system (11), functions that may encounter errors and raise exceptions (12), and functions that interact with other parts of the system, such as caches or databases (13). By following these concepts, we will be able to develop our project efficiently and effectively. (14) Let's keep working together and ensure that we are on the same page as we move forward with the development process. (15)
+```
+
+## Luxcium License: NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+
+- THESE FILES ARE **NOT** FIT FOR ANY PARTICULAR PURPOSE IN THEIR CURRENT FORM.
+- THESE FILES OR THEIR CONTENT HAVE NOT BEEN TESTED OR RUN YET IN ANY OR ALL ENVIRONMENTS!
+- **DO NOT** RUN ANY OF THESE FILES UNLESS YOU HAVE REVIEWED THEIR FULL CONTENT.
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOU (or anyone).
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOUR MACHINE (or any machine).
+
+### NO PERMISSIONS ARE GRANTED FOR THIS SOFTWARE OR DOCUMENTATION
+
+```text
+    1) NOT TO PUBLISH;
+    2) NOT TO DISTRIBUTE;
+    3) NOT TO SUBLICENSE;
+    4) NOT TO SELL COPIES OF;
+```
+
+#### Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
 
 † **Scientia est lux principium✨** ™
