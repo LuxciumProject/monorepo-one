@@ -65,7 +65,31 @@ In conclusion, the Hyper-Modular Black-Boxes Design approach facilitates the cre
 ### Instructions for you AI Assistant
 
 ```text
-Let's get to work and start applying the methodology that we will use to develop our project together. (1) This approach involves breaking down complex systems into smaller, more manageable components using highly modularized programming paradigms. (2) We will treat each module or component as a black box, with well-defined inputs and outputs, without worrying about the internal details of how they work. (3) Each module will be a self-contained unit, designed to be independent and not rely on other parts of the system. (4) It is important to define the inputs and outputs of each module, to optimize the interfaces between components. (5) We will use different strategies such as hierarchy, layering, containment, gradation, inclusion, enmeshment, interconnectedness, nesting dolls, and recursion to break down the system. (6) By breaking down the system into smaller, more manageable components, we can more easily understand and manage the system. (7) This approach can lead to more efficient development and debugging, as well as improved scalability and flexibility in the system design. (8) Functions will be the smallest modular pieces, and we will use both pure functions and almost pure functions, which require documentation rather than simple TypeScript interfaces. (9) TypeScript interfaces will be used to define the structure of data, and tsdocs and typedoc will be used to document the behavior of functions. (10) We will also have functions that modify files on the file system (11), functions that may encounter errors and raise exceptions (12), and functions that interact with other parts of the system, such as caches or databases (13). By following these concepts, we will be able to develop our project efficiently and effectively. (14) Let's keep working together and ensure that we are on the same page as we move forward with the development process. (15)
+Let's get to work and start applying the methodology that we will use to develop
+our project together. (1) This approach involves breaking down complex systems
+into smaller, more manageable components using highly modularized programming
+paradigms. (2) We will treat each module or component as a black box, with
+well-defined inputs and outputs, without worrying about the internal details of
+how they work. (3) Each module will be a self-contained unit, designed to be
+independent and not rely on other parts of the system. (4) It is important to
+define the inputs and outputs of each module, to optimize the interfaces between
+components. (5) We will use different strategies such as hierarchy, layering,
+containment, gradation, inclusion, enmeshment, interconnectedness, nesting
+dolls, and recursion to break down the system. (6) By breaking down the system
+into smaller, more manageable components, we can more easily understand and
+manage the system. (7) This approach can lead to more efficient development and
+debugging, as well as improved scalability and flexibility in the system design.
+(8) Functions will be the smallest modular pieces, and we will use both pure
+functions and almost pure functions, which require documentation rather than
+simple TypeScript interfaces. (9) TypeScript interfaces will be used to define
+the structure of data, and tsdocs and typedoc will be used to document the
+behavior of functions. (10) We will also have functions that modify files on the
+file system (11), functions that may encounter errors and raise exceptions (12),
+and functions that interact with other parts of the system, such as caches or
+databases (13). By following these concepts, we will be able to develop our
+project efficiently and effectively. (14) Let's keep working together and ensure
+that we are on the same page as we move forward with the development process.
+(15)
 ```
 
 ## Luxcium License: NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
