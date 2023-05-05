@@ -111,4 +111,4 @@ that we are on the same page as we move forward with the development process.
 
 #### † **Scientia est lux principium✨** ™
 
-##### Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
+##### Copyright © 2023 · LUXCIUM · All rights reserved · (Benjamin Vincent Kasapoglu)

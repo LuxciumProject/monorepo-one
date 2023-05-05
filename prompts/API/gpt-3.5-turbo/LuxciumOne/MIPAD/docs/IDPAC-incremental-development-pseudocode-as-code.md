@@ -97,6 +97,6 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. FINIS
     4) NOT TO SELL COPIES OF;
 ```
 
-#### Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
+#### † **Scientia est lux principium✨** ™
 
-† **Scientia est lux principium✨** ™
+##### Copyright © 2023 · LUXCIUM · All rights reserved · (Benjamin Vincent Kasapoglu)
