@@ -109,6 +109,6 @@ that we are on the same page as we move forward with the development process.
     4) NOT TO SELL COPIES OF;
 ```
 
-#### Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
+#### † **Scientia est lux principium✨** ™
 
-##### † **Scientia est lux principium✨** ™
+##### Copyright © 2023 · LUXCIUM · (Benjamin Vincent Kasapoglu)
