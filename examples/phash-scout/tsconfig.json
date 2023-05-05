@@ -17,21 +17,11 @@
     "allowJs": true,
     "checkJs": false,
     /* Bundled library declaration files that describe the target runtime environment. */
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     /* Package names to be included without being referenced in a source file. */
-    "types": [
-      "node",
-      "heft-jest"
-    ]
+    "types": ["node", "heft-jest"]
   },
-  "include": [
-    "./src/**/*.js",
-    "./src/**/*.ts",
-    "./src/**/*.json"
-  ],
+  "include": ["./src/**/*.js", "./src/**/*.ts", "./src/**/*.json"],
   "exclude": [
     // "lib",
     // "**/jest.*.js"

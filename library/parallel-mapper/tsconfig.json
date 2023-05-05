@@ -16,15 +16,9 @@
     "allowJs": true,
     "checkJs": false,
     /* Bundled library declaration files that describe the target runtime environment. */
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     /* Package names to be included without being referenced in a source file. */
-    "types": [
-      "node",
-      "heft-jest"
-    ],
+    "types": ["node", "heft-jest"],
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "declaration": true,
@@ -35,11 +29,6 @@
     "strictNullChecks": true,
     "noUnusedLocals": true
   },
-  "include": [
-    "./src"
-  ],
-  "exclude": [
-    "lib",
-    "**/jest.*.js"
-  ]
+  "include": ["./src"],
+  "exclude": ["lib", "**/jest.*.js"]
 }

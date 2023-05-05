@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    
-    
-    
     "eslint-config-next": "13.0.2",
     "next": "13.0.2",
     "react-dom": "18.2.0",

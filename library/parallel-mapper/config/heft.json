@@ -41,11 +41,7 @@
       //     "lib-esnext",
       //     "temp"
       //   ]
-      "globsToDelete": [
-        "out",
-        "lib",
-        "temp"
-      ]
+      "globsToDelete": ["out", "lib", "temp"]
     }
     //
     // {

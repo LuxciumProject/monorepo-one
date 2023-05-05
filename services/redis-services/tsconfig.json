@@ -1,8 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
-  "include": [
-    "./src"
-  ],
+  "include": ["./src"],
   "exclude": [
     "out"
     // "**/*test.ts"
@@ -62,15 +60,9 @@
     "useDefineForClassFields": true,
     "assumeChangesOnlyAffectDirectDependencies": false,
     /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     /* Specify type package names to be included without being referenced in a source file. */
-    "types": [
-      "node",
-      "heft-jest"
-    ],
+    "types": ["node", "heft-jest"],
     /* Completeness */
     "skipDefaultLibCheck": false,
     "skipLibCheck": true,
@@ -160,7 +152,7 @@
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],
     /* Specify type package names to be included without being referenced in a source file. */
-    // "types": ["node", "jest"],
+    // "types": ["node", ],
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
     // "resolveJsonModule": true,                        /* Enable importing .json files. */

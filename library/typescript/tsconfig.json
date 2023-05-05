@@ -44,7 +44,7 @@
     /* Bundled library declaration files that describe the target runtime environment. */
     "lib": ["dom", "esnext"],
     /* Package names to be included without being referenced in a source file. */
-    "types": ["node", "heft-jest", "jest"],
+    "types": ["node", "heft-jest"],
     /* Projects */
     "composite": true,
     "disableSourceOfProjectReferenceRedirect": false,

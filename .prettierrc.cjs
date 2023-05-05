@@ -18,4 +18,23 @@ module.exports = {
   embeddedLanguageFormatting: 'auto',
   htmlWhitespaceSensitivity: 'css',
   semi: true,
+  overrides: [
+    {
+      files: '**/*.{json,jsonc}',
+      options: {
+        singleQuote: false,
+        semi: false,
+        trailingComma: 'none',
+        printWidth: 80,
+        tabWidth: 2,
+        useTabs: false,
+        quoteProps: 'as-needed',
+        bracketSpacing: true,
+        jsxBracketSameLine: false,
+        arrowParens: 'avoid',
+        rangeStart: 0,
+        rangeEnd: Infinity,
+      },
+    },
+  ],
 };

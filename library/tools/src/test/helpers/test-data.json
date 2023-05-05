@@ -5,22 +5,13 @@
       "Alice and Bob",
       "The original, generic characters. Generally, Alice and Bob want to exchange a message or cryptographic key."
     ],
-    [
-      "Carol",
-      " Carlos or Charlie A generic third participant."
-    ],
-    [
-      "Chad",
-      "or  Chuck A third participant, usually of malicious intent."
-    ],
+    ["Carol", " Carlos or Charlie A generic third participant."],
+    ["Chad", "or  Chuck A third participant, usually of malicious intent."],
     [
       "Craig",
       "A password cracker, often encountered in situations with stored passwords."
     ],
-    [
-      "Dan",
-      " Dave or David A generic fourth participant."
-    ],
+    ["Dan", " Dave or David A generic fourth participant."],
     [
       "Erin",
       "A generic fifth participant, but rarely used, as 'E' is usually reserved for Eve."
@@ -33,10 +24,7 @@
       "Faythe",
       "A trusted advisor, courier or intermediary. Faythe is used infrequently, and is associated with faith and faithfulness. Faythe may be a repository of key service or courier of shared secrets."
     ],
-    [
-      "Frank",
-      "A generic sixth participant."
-    ],
+    ["Frank", "A generic sixth participant."],
     [
       "Grace",
       "A government representative. For example, Grace may try to force Alice or Bob to implement backdoors in their protocols. Grace may also deliberately weaken standards."
@@ -89,18 +77,9 @@
       "Trent",
       "or Ted A trusted arbitrator, who acts as a neutral third party."
     ],
-    [
-      "Trudy",
-      "An intruder."
-    ],
-    [
-      "Victor",
-      "or Vanna A verifier, who requires proof from the prover."
-    ],
-    [
-      "Walter",
-      "A warden, who may guard Alice and Bob."
-    ],
+    ["Trudy", "An intruder."],
+    ["Victor", "or Vanna A verifier, who requires proof from the prover."],
+    ["Walter", "A warden, who may guard Alice and Bob."],
     [
       "Wendy",
       "A whistleblower, who is an insider with privileged access capable of divulging information."

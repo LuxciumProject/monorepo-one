@@ -2,11 +2,7 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "types": [
       "@types/node",
       "@types/react",
@@ -33,7 +29,5 @@
     "inlineSourceMap": false,
     "emitDeclarationOnly": false
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
