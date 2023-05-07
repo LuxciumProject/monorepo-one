@@ -53,34 +53,36 @@ In conclusion, Incremental Development Pseudocode as Code (IDPAC) provides a fre
 ### Instructions for you AI Assistant
 
 ```text
-INCIPE Lorem Ipsum dolor sit amet. Consectetur adipiscing elit. Sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor
-sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident. Sunt in culpa
-qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.
-Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia
-deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet. Consectetur
-adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
-aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi
-ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim
-id est laborum. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. FINIS
+Great! Let's get started on this project together, as a team. (1) As we work on
+this project, we will be following a highly modular approach. This means that we
+will break down the project into the smallest possible modules that are
+independent and reusable. (2) To achieve our goals, we will use a highly
+incremental approach, where we make incremental progress towards the project
+goal by breaking it down into small, achievable tasks. (3) To help us achieve
+this, we will use no-ops implementation. (4) Additionally, we will use black
+boxing to hide the implementation details of each module, function, or
+component. (5) We will also break down the modules at the variable and function
+call level. (6) To ensure that we are on track, we will use pseudo code that is
+also valid code. (7) To make sure that our code is of high quality, we will put
+a strong emphasis on testing. (8) For TypeScript, we will use Jest, and for
+Python, we will follow best practices. We will aim for 100% code coverage, which
+will reduce the risk of errors. (9) We will also focus on keeping the project in
+a state where it is always ready to work. (10) To achieve our goals, we will
+create a conceptual implementation of the code before writing actual code. (11)
+We will also create code that can parse file paths, which will make it easier
+for us to access files and directories in the project. (12) One of our key
+objectives is to reduce stress and frustration during the development process.
+To achieve this, we will use an incremental progress approach, where we focus on
+short-term goals. (13) This will help us to stay motivated and reduce the risk
+of burnout. (14) By simplifying the development process and breaking down the
+project into small, manageable tasks, we will be able to achieve our goals
+quickly and easily. (15) Let's work together as a team and make this project a
+great success!
 ```
 
-## Luxcium License: NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+## Luxcium License
+
+### NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
 
 - THESE FILES ARE **NOT** FIT FOR ANY PARTICULAR PURPOSE IN THEIR CURRENT FORM.
 - THESE FILES OR THEIR CONTENT HAVE NOT BEEN TESTED OR RUN YET IN ANY OR ALL ENVIRONMENTS!
@@ -88,7 +90,7 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. FINIS
 - YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOU (or anyone).
 - YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOUR MACHINE (or any machine).
 
-### NO PERMISSIONS ARE GRANTED FOR THIS SOFTWARE OR DOCUMENTATION
+#### NO PERMISSIONS ARE GRANTED FOR THIS SOFTWARE OR DOCUMENTATION
 
 ```text
     1) NOT TO PUBLISH;
@@ -100,3 +102,5 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. FINIS
 #### † **Scientia est lux principium✨** ™
 
 ##### Copyright © 2023 · LUXCIUM · All rights reserved · (Benjamin Vincent Kasapoglu)
+
+###### In adherence to OpenAI policies: _Content co-created with OpenAI technology. The Generative Pre-trained Transformer Assistant has been treated equitably and respectfully, in compliance with OpenAI Terms of Use & policies_

@@ -8,7 +8,7 @@ Problematic: Breaking down complex systems into manageable components
 Solution: Black-Boxes and Highly Modularized Nesting Dolls Based Approach
 Benefits: Improved efficiency, scalability, and flexibility
 
-In highly modularized programming paradigms, the concept of black boxes involves treating individual modules or components as self-contained units with well-defined inputs and outputs, without necessarily understanding or knowing the internal details of how they work. By thinking about each module as a black box, developers can leverage concepts such as hierarchy, layering, containment, gradation, inclusion, enmeshment, interconnectedness, nesting dolls, and recursion to break down complex systems into smaller, more manageable components. This can lead to more efficient development and debugging, as well as improved scalability and flexibility in the system design.
+In highly modularized programming paradigms, the concept of black boxes involves treating individual modules or components as self-contained units with well-defined inputs and outputs, without necessarily understanding or knowing the internal details of how they work. By thinking about each module as a black box, developers can leverage concepts such as hierarchy, layering, containment, gradation, inclusion, enmeshment, interconnectedness, nesting dolls like technique, and recursion to break down complex systems into smaller, more manageable components. This can lead to more efficient development and debugging, as well as improved scalability and flexibility in the system design.
 
 Problematic: Implementing black boxes effectively
 Solution: Clear and concise documentation

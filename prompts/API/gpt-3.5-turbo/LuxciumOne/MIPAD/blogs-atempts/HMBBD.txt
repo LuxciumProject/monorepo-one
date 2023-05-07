@@ -10,7 +10,7 @@ Hyper-modular code is an approach to programming that emphasizes breaking down a
 
 Black Boxes and Modular Components
 
-In the context of hyper-modular code, black boxes are individual modules or components that are treated as self-contained units without necessarily understanding or knowing their internal workings. This approach enables developers to leverage concepts such as hierarchy, layering, containment, gradation, inclusion, enmeshment, interconnectedness, nesting dolls, and recursion. As a result, complex systems can be broken down into smaller, more manageable components, leading to more efficient development and debugging processes.
+In the context of hyper-modular code, black boxes are individual modules or components that are treated as self-contained units without necessarily understanding or knowing their internal workings. This approach enables developers to leverage concepts such as hierarchy, layering, containment, gradation, inclusion, enmeshment, interconnectedness, nesting dolls like technique, and recursion. As a result, complex systems can be broken down into smaller, more manageable components, leading to more efficient development and debugging processes.
 
 Function Definitions and Documentation
 
