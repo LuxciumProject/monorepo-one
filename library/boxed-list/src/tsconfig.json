@@ -1,7 +1,11 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["."],
-  "exclude": ["node_modules"],
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     /* Emit Options */
     "noEmit": false,
@@ -9,14 +13,14 @@
     "emitDeclarationOnly": false,
     "newLine": "lf",
     "rootDir": ".",
-    "outDir": "../out/src",
+    "outDir": "../out/gpt", // !!!
     "incremental": true,
     "noEmitOnError": false,
     "declarationDir": "../out/typings",
     "tsBuildInfoFile": "../out/ts-out-info.lib",
     "importHelpers": true,
-    "noEmitHelpers": false,
-    "removeComments": false,
+    "noEmitHelpers": true, // !!!
+    "removeComments": true, // !!!
     "importsNotUsedAsValues": "remove",
     "downlevelIteration": true,
     "emitBOM": false,
@@ -52,9 +56,15 @@
     "assumeChangesOnlyAffectDirectDependencies": false,
     // "generateCpuProfile": "../performance/.cpuprofile",
     /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     /* Specify type package names to be included without being referenced in a source file. */
-    "types": ["node", "heft-jest"],
+    "types": [
+      "node",
+      "heft-jest"
+    ],
     /* Completeness */
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
