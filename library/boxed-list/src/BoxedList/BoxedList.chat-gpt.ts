@@ -7,10 +7,13 @@ import type {
   IUnboxList,
 } from '../types';
 
-export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
+export class BoxedList<T>
+  extends Box<T[]>
+  implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T>
+{
   #value: T[];
 
-  public static of = <TVal>(...values: TVal[] | [TVal[]]) => {
+  public static override of = <TVal>(...values: TVal[] | [TVal[]]) => {
     if (values.length === 1) {
       const value = values[0];
 
@@ -20,7 +23,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return new BoxedList<TVal>([...(values as TVal[])]);
   };
 
-  public static from<TVal>(
+  public static override from<TVal>(
     box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>
   ) {
     const unbox: TVal | TVal[] = box.unbox();
@@ -28,6 +31,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   }
 
   protected constructor(value: T[]) {
+    super(value);
     this.#value = value;
     return this;
   }
@@ -169,14 +173,20 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   public includes(searchElement: T, fromIndex?: number | undefined): boolean {
     return this.list.includes(searchElement, fromIndex);
   }
-  public unbox<R_unsafe = T>() {
+  public override unbox<R_unsafe = T>() {
     return this.#value as any as R_unsafe[];
   }
 
-  public map<R>(fn: (value: T[]) => R[]) {
-    return BoxedList.of<R>(...fn(this.#value));
+  public override map<R>(fn: (value: T, index?: number) => R) {
+    // const newValue: R[] = this.#value.map(fn);
+    return super.map(value => value.map(fn));
+    // return new BoxedList(newValue);
+    // return BoxedList.of<R>(...this.#value.map((v,i)=>fn(v,i)));
   }
 
+  // public 'map'<R>(fn: (value: T, index?: number) => R): Box<R> {
+  //     return Box.of(fn(this.#value, -1));
+  //   }
   public mapItems<R>(fn: (value: T) => R) {
     return BoxedList.of<R>(...this.#value.map(fn));
   }
