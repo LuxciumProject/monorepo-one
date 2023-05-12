@@ -8,7 +8,6 @@
       "name": "    ✨🤖 PROMPTS",
       "path": "prompts"
     },
-
     {
       "name": "      🤖📣 TYPING PROMPTER",
       "path": "prompts/typing_prompter"
@@ -133,7 +132,6 @@
       "name": "      →💁💜 rpc-worker-pool",
       "path": "services/rpc-worker-pool"
     },
-
     {
       "name": "          💁📊 mongo-service",
       "path": "services/mongo-service"
@@ -277,7 +275,10 @@
           "cwd": "${workspaceFolder}/services/phash-compute"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/services/phash-compute"
       {
         "label": "Build/services/scan-directories",
@@ -300,7 +301,10 @@
           "cwd": "${workspaceFolder}/services/scan-directories"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
         // "problemMatcher": {
         //   "base": "$tsc",
         //   "applyTo": "allDocuments"
@@ -327,7 +331,10 @@
           "cwd": "${workspaceFolder}/services/questrade-ts"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/services/questrade-ts"
       {
         "label": "Build/services/redis-services",
@@ -350,7 +357,10 @@
           "cwd": "${workspaceFolder}/services/redis-services"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/services/redis-services"
       {
         "label": "Build/services/service-one",
@@ -373,7 +383,10 @@
           "cwd": "${workspaceFolder}/services/service-one"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/services/service-one"
       {
         "label": "Build/services/service-two",
@@ -396,7 +409,10 @@
           "cwd": "${workspaceFolder}/services/service-two"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/services/service-two"
       {
         "label": "Build/all/library",
@@ -446,7 +462,10 @@
           "cwd": "${workspaceFolder}/library/mapping-tools"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/mapping-tools"
       {
         "label": "Build/library/bigintString",
@@ -469,7 +488,10 @@
           "cwd": "${workspaceFolder}/library/bigintString"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/bigintString"
       {
         "label": "Build/library/boxed-list",
@@ -492,7 +514,10 @@
           "cwd": "${workspaceFolder}/library/boxed-list"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/boxed-list"
       {
         "label": "Build/library/colors-tools",
@@ -515,7 +540,10 @@
           "cwd": "${workspaceFolder}/library/colors-tools"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/colors-tools"
       {
         "label": "Build/library/human-size",
@@ -538,7 +566,10 @@
           "cwd": "${workspaceFolder}/library/human-size"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/human-size"
       {
         "label": "Build/library/object-with-expectations",
@@ -561,7 +592,10 @@
           "cwd": "${workspaceFolder}/library/object-with-expectations"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/object-with-expectations"
       {
         "label": "Build/library/parallel-mapper",
@@ -584,7 +618,10 @@
           "cwd": "${workspaceFolder}/library/parallel-mapper"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/parallel-mapper"
       {
         "label": "Build/library/restraining-zalgo",
@@ -607,7 +644,10 @@
           "cwd": "${workspaceFolder}/library/restraining-zalgo"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/restraining-zalgo"
       {
         "label": "Build/library/tools",
@@ -630,7 +670,10 @@
           "cwd": "${workspaceFolder}/library/tools"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/library/tools"
       {
         "label": "Build/all/examples",
@@ -645,7 +688,9 @@
           "instanceLimit": 1,
           "runOn": "default"
         },
-        "dependsOn": ["Build/examples/phash-scout"]
+        "dependsOn": [
+          "Build/examples/phash-scout"
+        ]
       }, // + "Build/all/examples" -----------------------------------
       {
         "label": "Build/examples/phash-scout",
@@ -668,7 +713,10 @@
           "cwd": "${workspaceFolder}/examples/phash-scout"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/examples/phash-scout"
       {
         "label": "Build/all/frontend",
@@ -707,7 +755,10 @@
           "cwd": "${workspaceFolder}/frontend/federal-container"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/frontend/federal-container"
       {
         "label": "Build/frontend/products",
@@ -727,7 +778,10 @@
           "cwd": "${workspaceFolder}/frontend/products"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/frontend/products"
       {
         "label": "Build/frontend/cart",
@@ -747,7 +801,10 @@
           "cwd": "${workspaceFolder}/frontend/cart"
         },
         "command": "npm",
-        "args": ["run", "build"]
+        "args": [
+          "run",
+          "build"
+        ]
       }, // "Build/frontend/cart"
       {
         "label": "Start/all/frontend",
@@ -767,7 +824,10 @@
           "color": "terminal.ansiYellow"
         },
         "dependsOrder": "parallel",
-        "dependsOn": ["Start/frontend/products", "Start/frontend/cart"]
+        "dependsOn": [
+          "Start/frontend/products",
+          "Start/frontend/cart"
+        ]
       }, // % "Start/all/frontend" -----------------------------------
       {
         "label": "Start/frontend/home",
@@ -791,7 +851,9 @@
           "cwd": "${workspaceFolder}/frontend/home"
         },
         "command": "npm",
-        "args": ["start"]
+        "args": [
+          "start"
+        ]
       }, // "Start/frontend/home"
       {
         "label": "Start/frontend/products",
@@ -811,7 +873,9 @@
           "cwd": "${workspaceFolder}/frontend/products"
         },
         "command": "npm",
-        "args": ["start"]
+        "args": [
+          "start"
+        ]
       }, // "Start/frontend/products"
       {
         "label": "Start/frontend/cart",
@@ -831,7 +895,9 @@
           "cwd": "${workspaceFolder}/frontend/cart"
         },
         "command": "npm",
-        "args": ["start"]
+        "args": [
+          "start"
+        ]
       }, // "Start/frontend/cart"
       {
         "label": "Start/frontend/federal-container",
@@ -851,14 +917,18 @@
           "cwd": "${workspaceFolder}/frontend/federal-container"
         },
         "command": "npm",
-        "args": ["start"]
+        "args": [
+          "start"
+        ]
       }, // "Start/frontend/federal-container"
       {
         "label": "Start/redis-6383",
         "type": "shell",
         "detail": "Start REDIS container on port 6383 this project",
         "command": "bash",
-        "args": ["${workspaceFolder}/scripts/start_6383.sh"],
+        "args": [
+          "${workspaceFolder}/scripts/start_6383.sh"
+        ],
         "isBackground": true,
         "runOptions": {
           "reevaluateOnRerun": true,
@@ -875,7 +945,9 @@
         "label": "TASK Fail",
         "detail": "Just to test the task processes.",
         "isBackground": false,
-        "command": ["false"],
+        "command": [
+          "false"
+        ],
         "presentation": {
           "close": false,
           "echo": true,
@@ -890,7 +962,9 @@
         "label": "TASK Complete",
         "detail": "Just to test the task processes.",
         "isBackground": false,
-        "command": ["true"],
+        "command": [
+          "true"
+        ],
         "presentation": {
           "close": false,
           "echo": true,
@@ -926,17 +1000,22 @@
     ]
   },
   "settings": {
+    // ~@-----------------------------------------------------------@~
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.activeIconPack": "nest",
     "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
     "workbench.preferredDarkColorTheme": "Pop N' Lock Theme by Luxcium ✨",
     "terminal.integrated.defaultProfile.linux": "MonoRepoOne",
     "task.allowAutomaticTasks": "on",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "500",
+    "editor.fontFamily": "'FiraCode Nerd Font'",
+    "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
     "files.associations": {
       "*.json": "jsonc"
     },
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-···----------------------------------------------------------···-|
   */
     // #region: excludes                                             !
     "files.exclude": {
@@ -974,7 +1053,7 @@
     },
     // #endregion: excludes                                          !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
   */
     // #region: FORMAT BEHAVIOUR                                     !
     "editor.formatOnPaste": false,
@@ -1003,7 +1082,7 @@
     },
     // #endregion: FORMAT BEHAVIOUR                                  !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
   */
     // #region: PRETTIER                                             !
     "prettier.enable": true,
@@ -1015,17 +1094,16 @@
     "prettier.useTabs": false,
     // #endregion: PRETTIER                                          !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
   */
     // #region: ESLINT                                               !
     "eslint.quiet": true,
     "eslint.format.enable": true,
     "eslint.lintTask.enable": false,
-    "eslint.alwaysShowStatus": true,
-    "eslint.packageManager": "yarn",
+    "eslint.packageManager": "pnpm",
     // #endregion: ESLINT                                            !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
   */
     // #region: JAVASCRIPT BEHAVIOUR                                 !
     "javascript.format.enable": true,
@@ -1042,7 +1120,7 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     // #endregion: JAVASCRIPT                                          !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------――··-|
   */
     // #region: TYPESCRIPT BEHAVIOUR                                   !
     "typescript.check.npmIsInstalled": false,
@@ -1064,9 +1142,9 @@
     "typescript.tsserver.maxTsServerMemory": 4096,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.workspaceSymbols.scope": "currentProject",
-    // #endregion: TYPESCRIPT BEHAVIOUR                                         !
+    // #endregion: TYPESCRIPT BEHAVIOUR                               !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
   */
     // #region: PATH-INTELLISENSE                                               !
     "path-intellisense.extensionOnImport": false,
@@ -1074,9 +1152,8 @@
     "path-intellisense.autoSlashAfterDirectory": false,
     "path-intellisense.showHiddenFiles": true,
     // #endregion: PATH-INTELLISENSE                                            !
-
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------――··-|
   */
     // #region: editor.rulers                                                     !
     "editor.rulers": [
@@ -1180,7 +1257,6 @@
       //   "column": 82,
       //   "color": "#90BCFF"
       // },
-
       {
         "column": 120,
         "color": "#F368"
@@ -1232,7 +1308,7 @@
     ],
     // #endregion: editor.rulers                                                  !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
   */
     // #region: BETTER COMMENTS                                                 !
     /*
@@ -1258,63 +1334,63 @@
     "better-comments.multilineComments": true,
     "better-comments.tags": [
       {
-        // ~!-----------------------------------------------------------!~
+        // ~!---------------------------------------------------------!~
         "tag": "~!",
         "color": "#F36",
         "strikethrough": false,
         "backgroundColor": "#F365"
       },
       {
-        // ~$-----------------------------------------------------------$~
+        // ~$---------------------------------------------------------$~
         "tag": "~$",
         "color": "#F80",
         "strikethrough": false,
         "backgroundColor": "#F806"
       },
       {
-        // ~+-----------------------------------------------------------+~
+        // ~+---------------------------------------------------------+~
         "tag": "~+",
         "color": "#7C2F",
         "strikethrough": false,
         "backgroundColor": "#7C25"
       },
       {
-        // ~*-----------------------------------------------------------*~
+        // ~*---------------------------------------------------------*~
         "tag": "~*",
         "color": "#FF0B",
         "strikethrough": false,
         "backgroundColor": "#FF05"
       },
       {
-        // ~#-----------------------------------------------------------#~
+        // ~#---------------------------------------------------------#~
         "tag": "~#",
         "color": "#39F",
         "strikethrough": false,
         "backgroundColor": "#39F5"
       },
       {
-        // ~&-----------------------------------------------------------&~
+        // ~&---------------------------------------------------------&~
         "tag": "~&",
         "color": "#93F",
         "strikethrough": false,
         "backgroundColor": "#93F5"
       },
       {
-        // ~@-----------------------------------------------------------@~
+        // ~@---------------------------------------------------------@~
         "tag": "~@",
         "color": "#F36",
         "strikethrough": false,
         "backgroundColor": "#39C3"
       },
       {
-        // ~%-----------------------------------------------------------%~
+        // ~%---------------------------------------------------------%~
         "tag": "~%",
         "color": "#4EF",
         "strikethrough": false,
         "backgroundColor": "#4EF5"
       },
       {
-        // ~?-----------------------------------------------------------?~
+        // ~?---------------------------------------------------------?~
         "tag": "~?",
         "color": "#5AF",
         "strikethrough": false,
@@ -1496,7 +1572,7 @@
         "backgroundColor": "transparent"
       },
       /*
-  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+  |-···-----------------------------------------------------------―――――――――···-|
 
     */
       {
@@ -2039,10 +2115,12 @@
     ],
     // #endregion: BETTER COMMENTS                                     !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
   */
     // #region: TODO TREE                                                       !
-    "todo-tree.filtering.excludeGlobs": ["**/node_modules"],
+    "todo-tree.filtering.excludeGlobs": [
+      "**/node_modules"
+    ],
     "todo-tree.highlights.defaultHighlight": {
       "background": "#FFF",
       "borderRadius": "0px",
@@ -2060,8 +2138,8 @@
       "type": "line"
     },
     "todo-tree.highlights.customHighlight": {
-      // #region: ------------------------------------------------------
-      "#region:": {
+      // #region ------------------------------------------------------
+      "#region": {
         "foreground": "#DF3",
         "background": "#DF3",
         "iconColour": "#DF3",
@@ -2071,8 +2149,8 @@
         // "type": "tag-and-comment",
         // "borderRadius": "7px",
       },
-      // #endregion: ---------------------------------------------------
-      "#endregion:": {
+      // #endregion ---------------------------------------------------
+      "#endregion": {
         "foreground": "#F15",
         "background": "#F15",
         "iconColour": "#F15",
@@ -2284,9 +2362,7 @@
         "icon": "checklist",
         "gutterIcon": true
       },
-
       // "TASK LIST:",
-
       // TASK LIST: [TODO] (Review Documentation) ----------------------------
       "TASK LIST:": {
         "foreground": "#FB7",
@@ -2627,8 +2703,8 @@
       "&:",
       "#-|",
       "#:",
-      "#endregion:",
-      "#region:",
+      "#endregion",
+      "#region",
       "%:",
       "←:",
       "→",
@@ -2808,7 +2884,7 @@
     // "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
     // #endregion: TODO TREE                                                      !
     /*
-  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  |-····-----------------------------------------------------------··-|
     */
     "conventionalCommits.scopes": [
       "backend",

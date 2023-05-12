@@ -6,15 +6,38 @@
     "*.json": "jsonc"
   },
   // #region: EDITOR & TERMINAL                                      !
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "'VictorMono Nerd Font',Victor Mono, Fira Code",
-  "editor.fontLigatures": true,
-  // "editor.fontSize": 20,
-  "editor.fontWeight": "500",
-  "terminal.integrated.fontFamily": "mono, 'TerminessTTF Nerd Font Mono', mono, 'Anonymice NF', '3270Narrow NF', mono",
-  // "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontWeight": "600",
-  "terminal.integrated.fontWeightBold": "bold",
+  // "workbench.iconTheme": "material-icon-theme",
+  // "editor.fontFamily": "'FiraCode Nerd Font'",
+  // "editor.fontWeight": "500",
+  // "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+  // // "editor.fontFamily": "'VictorMono Nerd Font',Victor Mono, Fira Code",
+  // // "editor.fontLigatures": true,
+  // // "editor.fontSize": 20,
+  // "terminal.integrated.fontFamily": "mono, 'TerminessTTF Nerd Font Mono', mono, 'Anonymice NF', '3270Narrow NF', mono",
+  // // "terminal.integrated.fontSize": 14,
+  // "terminal.integrated.fontWeight": "600",
+  // "terminal.integrated.fontWeightBold": "bold",
+  "[typescript]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
+    // // "editor.fontSize": 26,
+    // // "editor.fontWeight": "400",
+    // // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
+    // // "editor.fontSize": 22,
+    // // "editor.fontWeight": "500",
+    // // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    // "editor.defaultFormatter": "vscode.json-language-features",
+    // "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
+    // // "editor.fontSize": 22,
+    // // "editor.fontWeight": "500",
+    // // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
   // #endregion: EDITOR & TERMINAL                                   !
   /*
   |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
@@ -983,27 +1006,7 @@
   |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
   */
   // #region: CUSTOMS RULES                                          !
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
-    // "editor.fontSize": 26,
-    // "editor.fontWeight": "400",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
-    // "editor.fontSize": 22,
-    // "editor.fontWeight": "500",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
-    // "editor.fontSize": 22,
-    // "editor.fontWeight": "500",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
+
   "typescript.tsdk": "node_modules/typescript/lib",
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
