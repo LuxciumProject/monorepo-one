@@ -1,4 +1,5 @@
-import { Page } from 'puppeteer';
+import type { Page } from 'puppeteer';
+
 import { getNewUniqueBrowser } from './UniqueBrowser';
 
 export async function fn_78a85a() {

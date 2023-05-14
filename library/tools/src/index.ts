@@ -1,3 +1,6 @@
+import * as ScanDirs from './scan-dirs';
+import type { Mapper } from './types/scan-dir';
+
 export * as assertionTools from './assertion-tools';
 export { UniqueBrowser } from './browser';
 export { delay } from './delay';
@@ -6,9 +9,6 @@ export * as dummyExampleStructure_002 from './dummy-example-structure-002';
 export * as utils from './helpers';
 export { range } from './range';
 export type { Mapper } from './types/scan-dir';
-
-import * as ScanDirs from './scan-dirs';
-import type { Mapper } from './types/scan-dir';
 type Mapper_ = Mapper;
 export namespace types {
   export type Mapper = Mapper_;

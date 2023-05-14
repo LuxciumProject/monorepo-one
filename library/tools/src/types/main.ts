@@ -1,4 +1,3 @@
-
 export type QueryResultItem = [path: string, id: number, radius: string];
 export type QueryResult = QueryResultItem[];
 
@@ -32,22 +31,22 @@ export type NotExcluded = {
 
 export type WithExclude = IsExcluded | NotExcluded;
 
-export type Excluded<T extends true | false> = T extends true
+export type Excluded<T extends false | true> = T extends true
   ? IsExcluded
   : NotExcluded;
 
-export type ParsedWithTypeAndExcludeFlag = ParsedWithType & ParsedWithFlag;
+export type ParsedWithTypeAndExcludeFlag = ParsedWithFlag & ParsedWithType;
 export type ParsedWithType = MyParsedPath & WithType;
 export type ParsedWithFlag = MyParsedPath & WithExcludeFlag;
-export type CurrentPath = WithFileName &
-  WithFileExtname &
-  WithBaseName &
-  WithFullPath &
-  WithExtname &
+export type CurrentPath = WithBaseName &
   WithDir &
-  WithExt &
   WithExclude &
-  WithFileType;
+  WithExt &
+  WithExtname &
+  WithFileExtname &
+  WithFileName &
+  WithFileType &
+  WithFullPath;
 
 export type WithRoot = {
   /**
@@ -67,6 +66,7 @@ export type WithBaseName = {
 export type WithFileName = {
   fileName: string;
 };
+
 /** @deprecated use {@link WithDir} instead */
 export type WithPathToFile = {
   /**
@@ -88,7 +88,7 @@ export type WithExt = {
   ext: string;
 };
 
-export type WithExtention = WithExtname & WithExt;
+export type WithExtention = WithExt & WithExtname;
 
 export type WithFileType = {
   type: FileType;
@@ -96,7 +96,7 @@ export type WithFileType = {
 export type WithType = {
   type: FileType;
 };
-export type WithPHash = IsValidPHash | IsNotValidPHash;
+export type WithPHash = IsNotValidPHash | IsValidPHash;
 
 export type WithCount = {
   count: number;
@@ -108,12 +108,12 @@ export type WithIndex = {
 export type WithExcludeFlag = {
   exclude: boolean;
 };
-export type MyParsedPath = WithFullPath &
+export type MyParsedPath = WithBaseName &
   WithDir &
-  WithFileName &
-  WithBaseName &
   WithExt &
   WithExtname &
+  WithFileName &
+  WithFullPath &
   WithRoot;
 
 export interface ParsedPath {
@@ -121,18 +121,22 @@ export interface ParsedPath {
    * The root of the path such as '/' or 'c:\'
    */
   root: string;
+
   /**
    * The full directory path such as '/home/user/dir' or 'c:\path\dir'
    */
   dir: string;
+
   /**
    * The file name including extension (if any) such as 'index.html'
    */
   base: string;
+
   /**
    * The file extension (if any) such as '.html'
    */
   ext: string;
+
   /**
    * The file name without extension (if any) such as 'index'
    */

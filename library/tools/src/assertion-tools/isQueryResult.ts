@@ -1,14 +1,14 @@
-import { QueryResult } from '../types/main';
+import type { QueryResult } from '../types/main';
 
 export function isQueryResult(contender: unknown): contender is QueryResult {
   if (Array.isArray(contender)) {
     return contender.every(item => {
       return (
         Array.isArray(item) &&
-        item.length === 3 &&
-        typeof item[0] === 'string' &&
-        typeof item[1] === 'number' &&
-        typeof item[2] === 'string'
+        3 === item.length &&
+        'string' === typeof item[0] &&
+        'number' === typeof item[1] &&
+        'string' === typeof item[2]
       );
     });
   }

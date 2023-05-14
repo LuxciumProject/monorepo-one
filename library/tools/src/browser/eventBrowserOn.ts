@@ -1,4 +1,4 @@
-import { Browser } from 'puppeteer';
+import type { Browser } from 'puppeteer';
 
 export function eventBrowserOn(browser: Browser, name = '') {
   console.log(`CONNECTED ${name}`);

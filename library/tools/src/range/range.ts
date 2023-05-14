@@ -11,20 +11,22 @@
  * @param step - The step size between numbers.
  * @returns An array of numbers within the given range, with the specified step size.
  */
-
-export function range(start: number, end: number, step: number = 1): number[] {
-  if (!isFinite(start) || !isFinite(end) || !isFinite(step) || step === 0) {
+const { isFinite: isFinite_ } = Number;
+export function range(start: number, end: number, step = 1): number[] {
+  if (!isFinite_(start) || !isFinite_(end) || !isFinite_(step) || 0 === step) {
     return [];
   }
 
   const difference = end - start;
-  if (difference === 0) return [start || end];
+  if (0 === difference) {
+    return [start || end];
+  }
   if (Math.abs(step) > Math.abs(difference)) {
     return step > 0 ? [start, end] : [end, start];
   }
 
   let increment = start < end;
-  let [first, last] = step > 0 ? [start, end] : [end, start];
+  const [first, last] = step > 0 ? [start, end] : [end, start];
   const absolutStep = Math.abs(step);
 
   increment = step < 0 ? !increment : increment;

@@ -46,7 +46,7 @@
  *  time_0 to the time after the delay.
  */
 export async function delay(
-  lowerBound: number = 500,
+  lowerBound = 500,
   upperBound: number = lowerBound
 ): Promise<[number, number, number]> {
   const initialTime_0 = performance.now();
@@ -57,7 +57,7 @@ export async function delay(
 
   // Ensure lowerBound is the smallest number and upperBound is the largest
   if (lowerBound > upperBound) {
-    [lowerBound, upperBound] = [upperBound, lowerBound];
+    [lowerBound, upperBound] = [upperBound, lowerBound]; // line 60
   }
 
   // Get the initial time
@@ -68,11 +68,14 @@ export async function delay(
     const delay =
       Math.floor(Math.random() * (upperBound - lowerBound + 1)) + lowerBound;
     return new Promise<number>(resolve =>
-      setTimeout(() => resolve(delay), delay)
+      setTimeout(() => {
+        resolve(delay); // line 72
+      }, delay)
     );
   })();
 
   // Return the chosen delay and the actual delay
+  // line 78
   return [
     chosenDelay,
     Math.round((performance.now() - initialTime) * 1_000_000) / 1_000_000,

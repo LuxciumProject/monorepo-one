@@ -23,18 +23,20 @@ import { constants } from 'node:os';
 import path, { normalize } from 'node:path';
 import { chdir } from 'node:process';
 
-import { Mapper } from '../types/scan-dir';
+import type { Mapper } from '../types/scan-dir';
 
 // HACK: Must implement { logHigh, logLow }
 // import { logHigh, logLow } from '../../../constants';
 const logHigh = console.warn;
 const logLow = console.log;
 export class ScanDirs {
-  private _cwd: { path: string; };
-  private _parents: string[];
-  private _queue: string[];
+  private readonly _cwd: { path: string };
 
-  private _validExts: Set<string>;
+  private readonly _parents: string[];
+
+  private readonly _queue: string[];
+
+  private readonly _validExts: Set<string>;
 
   static from(absolutePath: string) {
     return new ScanDirs(absolutePath);
@@ -43,6 +45,7 @@ export class ScanDirs {
   static scanFrom(absolutePath: string) {
     return new ScanDirs(absolutePath).scan();
   }
+
   static mapFrom<U = unknown>(
     absolutePath: string[] | string,
     transformFn: Mapper<any, U>
@@ -50,8 +53,10 @@ export class ScanDirs {
   ) {
     return new ScanDirs(absolutePath).map(transformFn);
   }
-  private _absolutePath: string[];
-  private constructor(absolutePath: string | string[]) {
+
+  private readonly _absolutePath: string[];
+
+  private constructor(absolutePath: string[] | string) {
     this._absolutePath = Array.isArray(absolutePath)
       ? [...absolutePath]
       : [absolutePath];
@@ -60,6 +65,7 @@ export class ScanDirs {
     this._queue = [...this._absolutePath];
     this._validExts = new Set();
   }
+
   public get scan() {
     const self = this;
     return function* () {
@@ -72,6 +78,7 @@ export class ScanDirs {
       return false;
     };
   }
+
   public get map() {
     const self = this;
     return async function* (
@@ -90,6 +97,7 @@ export class ScanDirs {
       return false;
     };
   }
+
   private _traverse() {
     const next = this._queue.pop()!;
     try {
@@ -109,7 +117,7 @@ export class ScanDirs {
       }
       throw error;
     }
-    if (next === '..') {
+    if ('..' === next) {
       this._cwd.path = this._cwd.path.slice(
         0,
         -(this._parents.pop()!.length + 1)
@@ -118,7 +126,7 @@ export class ScanDirs {
     } else {
       this._parents.push(next);
       this._cwd.path =
-        this._cwd.path.length === 0
+        0 === this._cwd.path.length
           ? next
           : normalize(`${this._cwd.path}/${next}`);
       logHigh(this._cwd.path);
@@ -126,10 +134,11 @@ export class ScanDirs {
       return true;
     }
   }
+
   private _scanGenerator() {
     const d = opendirSync('.', {});
     const self = this;
-    return function* (): Generator<string, boolean, unknown> {
+    return function* (): Generator<string, boolean> {
       for (let ent = d.readSync(); ent !== null; ent = d.readSync()) {
         if (ent.isDirectory()) {
           self._queue.push(ent.name);
@@ -142,7 +151,8 @@ export class ScanDirs {
       return false;
     };
   }
-  addValidExt(ext: string | string[]) {
+
+  addValidExt(ext: string[] | string) {
     if (!Array.isArray(ext)) {
       if (this._validExts.has(ext.toLowerCase())) {
         return this;
@@ -157,7 +167,8 @@ export class ScanDirs {
     }
     return this;
   }
-  remValidExt(ext: string | string[]) {
+
+  remValidExt(ext: string[] | string) {
     if (!Array.isArray(ext)) {
       if (!this._validExts.has(ext.toLowerCase())) {
         return this;
@@ -172,26 +183,30 @@ export class ScanDirs {
     }
     return this;
   }
+
   get validExts() {
-    if (this._validExts.size === 0) {
+    if (0 === this._validExts.size) {
       return [];
     }
     return [...this._validExts.values()];
   }
+
   get hasValidExts() {
-    if (this._validExts.size === 0) {
+    if (0 === this._validExts.size) {
       return false;
     }
     return true;
   }
+
   hasExt(ext: string) {
     return this._validExts.has(ext.toLowerCase());
   }
+
   private _hasKey<K extends PropertyKey>(
     o: unknown,
     key: K
   ): o is { [P in K]: unknown } {
-    return typeof o === 'object' && o !== null && key in o;
+    return 'object' === typeof o && o !== null && key in o;
   }
 }
 export default ScanDirs;

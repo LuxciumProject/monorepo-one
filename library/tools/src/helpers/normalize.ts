@@ -11,7 +11,7 @@ export function normalize(numbers: number[]): number[] {
   const max = Math.max(...numbers);
   const range = max - min;
 
-  if (range === 0) {
+  if (0 === range) {
     return numbers.map(() => 0);
   }
 

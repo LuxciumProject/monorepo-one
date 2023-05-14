@@ -1,10 +1,14 @@
-import puppeteer, { Browser } from 'puppeteer';
+import type { Browser } from 'puppeteer';
+import puppeteer from 'puppeteer';
+
 import { eventBrowserOn } from './eventBrowserOn';
 
 export class UniqueBrowser {
-  private _browser: { browser: Browser; ID: number };
-  private static _browserID: number = 1;
-  private static _browserCount: number = 0;
+  private readonly _browser: { browser: Browser; ID: number };
+
+  private static _browserID = 1;
+
+  private static _browserCount = 0;
 
   private static async getNewBrowser(name = '', headless = false) {
     let browser = await puppeteer.launch({ headless });
@@ -22,6 +26,7 @@ export class UniqueBrowser {
 
     return new UniqueBrowser(browser, ID);
   }
+
   private constructor(browser: Browser, ID: number) {
     this._browser = { browser, ID };
   }

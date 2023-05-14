@@ -1,4 +1,8 @@
-import { uniqueByKeepFirst, uniqueByKeepLast, uniqueLines } from '../../helpers';
+import {
+  uniqueByKeepFirst,
+  uniqueByKeepLast,
+  uniqueLines,
+} from '../../helpers';
 
 describe('Sort unique objects.', () => {
   const data = [
@@ -28,10 +32,19 @@ describe('Sort unique objects.', () => {
 });
 
 describe('Sort unique lines.', () => {
-  const data2 = ['Unique data !!!', 'Unique data ???', 'Unique data ???', 'Unique data ???', 'Unique data ???'];
+  const data2 = [
+    'Unique data !!!',
+    'Unique data ???',
+    'Unique data ???',
+    'Unique data ???',
+    'Unique data ???',
+  ];
 
   it('should have a function to uniqueLines.', () => {
-    expect(uniqueLines(data2)).toStrictEqual(['Unique data !!!', 'Unique data ???']);
+    expect(uniqueLines(data2)).toStrictEqual([
+      'Unique data !!!',
+      'Unique data ???',
+    ]);
   });
 });
 

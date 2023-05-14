@@ -1,7 +1,6 @@
-
 import * as tf from '@tensorflow/tfjs-node-gpu';
 
-tf.tensor
+tf.tensor;
 // tf.scalar
 // tf.tensor1d
 // tf.tensor2d
@@ -28,7 +27,6 @@ tf.tensor
 // tf.zeros
 // tf.zerosLike
 
-
 export const letterLists = [
   [
     ['1', '2', '3', '4', '5'],
@@ -41,13 +39,11 @@ export const letterLists = [
     ['y', 'u', 'i', 'o', 'p'],
     ['h', 'j', 'k', 'l', ';'],
     ['n', 'm', ',', '.', 'é'],
-  ]
+  ],
 ];
 
 export function letterMixer() {
-
-  return "";
-
+  return '';
 }
 
 /*

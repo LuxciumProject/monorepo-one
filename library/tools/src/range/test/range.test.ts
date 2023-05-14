@@ -49,14 +49,14 @@ describe('range function', () => {
 
   describe('edge cases', () => {
     it('returns an empty array when given non-finite values', () => {
-      expect(range(Infinity, 5, 1)).toEqual([]);
-      expect(range(5, Infinity, 1)).toEqual([]);
-      expect(range(5, 1, Infinity)).toEqual([]);
+      expect(range(Number.POSITIVE_INFINITY, 5, 1)).toEqual([]);
+      expect(range(5, Number.POSITIVE_INFINITY, 1)).toEqual([]);
+      expect(range(5, 1, Number.POSITIVE_INFINITY)).toEqual([]);
     });
     it('returns an empty array when given NaN values', () => {
-      expect(range(NaN, 5, 1)).toEqual([]);
-      expect(range(5, NaN, 1)).toEqual([]);
-      expect(range(5, 1, NaN)).toEqual([]);
+      expect(range(Number.NaN, 5, 1)).toEqual([]);
+      expect(range(5, Number.NaN, 1)).toEqual([]);
+      expect(range(5, 1, Number.NaN)).toEqual([]);
     });
     it('returns an empty array when the step size is 0', () => {
       expect(range(1, 5, 0)).toEqual([]);

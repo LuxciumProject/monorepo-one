@@ -1,4 +1,4 @@
-import { CurrentPath } from '../types/main';
+import type { CurrentPath } from '../types/main';
 
 const S = 'string';
 
