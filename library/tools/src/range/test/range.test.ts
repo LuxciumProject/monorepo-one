@@ -2,6 +2,13 @@ import { range } from '..';
 
 describe('range function', () => {
   describe('range', () => {
+    it('returns an array of length 6 when start is 20, end is 40 with steps of 4', () => {
+      const rangeVals = range(20, 40, 4);
+      expect(rangeVals).toEqual([20, 24, 28, 32, 36, 40]);
+      expect(rangeVals.length).toBe(6);
+      // similarly:
+      expect(range(200, 400, 40)).toEqual([200, 240, 280, 320, 360, 400]);
+    });
     it('returns an array of length 1 when start and end are the same', () => {
       expect(range(3, 3, 1)).toEqual([3]);
     });

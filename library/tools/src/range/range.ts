@@ -12,7 +12,7 @@
  * @returns An array of numbers within the given range, with the specified step size.
  */
 
-export function range(start: number, end: number, step: number): number[] {
+export function range(start: number, end: number, step: number = 1): number[] {
   if (!isFinite(start) || !isFinite(end) || !isFinite(step) || step === 0) {
     return [];
   }
