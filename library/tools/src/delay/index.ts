@@ -1,1 +1,6 @@
-export { delay } from './delay';
+export {
+  calculateRandomNumber,
+  delay,
+  heavyTask,
+  measurePerformance,
+} from './delay';

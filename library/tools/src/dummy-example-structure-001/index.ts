@@ -5,4 +5,4 @@ const newAccountNumber = (accountNumber: number): AcconuntNumber =>
 
 export const dummyValue = newAccountNumber(14);
 
-console.log(dummyValue);
+// console.log(dummyValue);
