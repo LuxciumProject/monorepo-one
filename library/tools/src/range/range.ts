@@ -12,7 +12,7 @@
  * @returns An array of numbers within the given range, with the specified step size.
  */
 const { isFinite: isFinite_ } = Number;
-export function range(start: number, end: number, step = 1): number[] {
+export function range(start: number, end: number = start, step = 1): number[] {
   if (!isFinite_(start) || !isFinite_(end) || !isFinite_(step) || 0 === step) {
     return [];
   }
@@ -42,18 +42,4 @@ export function range(start: number, end: number, step = 1): number[] {
     }
   }
   return result;
-  // const first
-  //step is positive and difference is positive
-  //step is negative and difference is positive
-  //step is positive and difference is negative
-  //step is negative and difference is negative
-  // start is of type number treated as an integer value (if it has a float value the beaviour is unspecified)
-  // end is of type number treated as an integer value (if it has a float value the beaviour is unspecified)
-  // increment is given by this typescript asignment `const increment = start < end ;`
-  // if increment is true it will indeed increase but if it is false then it would decrease
-  // step is an absolute value with a negative or positive component
-  // the negative would invert the increase vs deacrease property of a for loop
-  //
-  // const length = Math.floor(Math.abs(difference / increment)) + 1;
-  // return Array.from({ length }, (_, i) => start + i * increment);
 }

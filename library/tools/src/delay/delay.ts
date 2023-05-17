@@ -73,13 +73,17 @@ export async function delay(
 export async function heavyTask(
   lowerBound = 50,
   upperBound: number = lowerBound
-): Promise<IPerformanceResult<number>> {
-  return measurePerformance<number>((): Promise<number> => {
+) {
+  return measurePerformance<{
+    steps: number;
+    result: number;
+  }>(() => {
     const steps = calculateRandomNumber(lowerBound, upperBound);
     let result = 0;
     for (let i = 0; i < steps * 1e6; i++) {
       result += i;
     }
-    return Promise.resolve(result);
+    const value = { steps, result };
+    return Promise.resolve(value);
   });
 }

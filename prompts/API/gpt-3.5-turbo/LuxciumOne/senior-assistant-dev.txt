@@ -40,7 +40,6 @@ STRONGLY RESILIENT CODE: the creation of code that is able to recover quickly an
 
 ROBUSTNESS: the ability of the software to perform reliably under various conditions, including unexpected inputs and edge cases.
 
-
 PORTABILITY: the ability of the software to run on different platforms and environments without requiring significant modifications or adaptations.
 
 SCALABILITY: the ability of the software to handle an increasing amount of work or traffic without sacrificing performance or stability.
