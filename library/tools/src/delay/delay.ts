@@ -5,6 +5,9 @@ interface IPerformanceResult<N = number> {
   totalTimeElapsed: number;
 }
 
+export const timeStamp = (timeElapsed: number) =>
+  Math.round(timeElapsed * 1_000_000) / 1_000_000;
+
 /**
  * Helper function to measure performance of a function
  * @param fn - Function whose performance is to be measured
@@ -19,9 +22,8 @@ export async function measurePerformance<N = number>(
 
   return {
     value: result,
-    timeElapsed: Math.round(timeElapsed * 1_000_000) / 1_000_000,
-    totalTimeElapsed:
-      Math.round((performance.now() - initialTime) * 1_000_000) / 1_000_000,
+    timeElapsed: timeStamp(timeElapsed),
+    totalTimeElapsed: timeStamp(performance.now() - initialTime),
   };
 }
 
@@ -55,6 +57,13 @@ export async function delay(
   lowerBound = 500,
   upperBound: number = lowerBound
 ): Promise<IPerformanceResult<number>> {
+  if (lowerBound === 0 && upperBound === 0) {
+    return measurePerformance<number>(async (): Promise<number> => {
+      await new Promise(resolve => resolve(NaN));
+      return NaN;
+    });
+  }
+
   return measurePerformance<number>(async (): Promise<number> => {
     const chosenDelay = calculateRandomNumber(lowerBound, upperBound);
 

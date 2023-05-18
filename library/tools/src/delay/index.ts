@@ -3,4 +3,5 @@ export {
   delay,
   heavyTask,
   measurePerformance,
+  timeStamp,
 } from './delay';
