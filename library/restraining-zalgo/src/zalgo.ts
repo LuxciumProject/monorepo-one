@@ -123,12 +123,12 @@ undefined | null | number | treue | false
     zalgo_;
  */
 /*
-WITHOUT PERMISSION ― NOT UNDER MIT LICENSE
+WITHOUT PERMISSION ― NOT UNDER MIT LICENSE ↓
 
 […] not to release Zalgo, possibly by using synthetic deferrals (say what?) so that you don’t make your API’s users unhappy. In the world of “lean” and MEAN MVPs, who has time to learn about leaky abstractions […]
 ― HissainMay 6, 2015 at 1:15 pm (https://blog.ometer.com/2011/07/24/callbacks-synchronous-and-asynchronous/)
 
-Copyright © 2020 Packt Publishing All rights reserved.
+Copyright © 2020 Packt Publishing All rights reserved:
 
 Node.js Design Patterns [Third Edition]
 ― Mario Casciaro
@@ -137,6 +137,79 @@ Node.js Design Patterns [Third Edition]
 3. Callbacks and Events
 ↓ Synchronous or asynchronous?
 ## § Unleashing Zalgo
+
+
+Synchronous or asynchronous?
+You have seen how the execution order of the instructions changes radically depending on the nature of a function—synchronous or asynchronous. This has strong repercussions on the flow of the entire application, both in terms of correctness and efficiency. The following is an analysis of these two paradigms and their pitfalls. In general, what must be avoided is creating inconsistency and confusion around the nature of an API, as doing so can lead to a set of problems that might be very hard to detect and reproduce. To drive our analysis, we will take, as an example, the case of an inconsistently asynchronous function.
+
+An unpredictable function
+One of the most dangerous situations is to have an API that behaves synchronously under certain conditions and asynchronously under others. Let's take the following code as an example:
+
+```JavaScript
+import { readFile } from 'fs'
+const cache = new Map()
+function inconsistentRead (filename, cb) {
+  if (cache.has(filename)) {
+    // invoked synchronously
+    cb(cache.get(filename))
+  } else {
+    // asynchronous function
+    readFile(filename, 'utf8', (err, data) => {
+      cache.set(filename, data)
+      cb(data)
+    })
+  }
+}
+```
+
+The preceding function uses the cache map to store the results of different file read operations. Bear in mind that this is just an example; it does not have error management, and the caching logic itself is suboptimal (in Chapter 11, Advanced Recipes, you'll learn how to handle asynchronous caching properly). But besides all this, the preceding function is dangerous because it behaves asynchronously until the file is read for the first time and the cache is set, but it is synchronous for all the subsequent requests once the file's content is already in the cache.
+
+Unleashing Zalgo
+Now, let's discuss how the use of an unpredictable function, such as the one that we just defined, can easily break an application. Consider the following code:
+
+```JavaScript
+function createFileReader (filename) {
+  const listeners = []
+  inconsistentRead(filename, value => {
+    listeners.forEach(listener => listener(value))
+  })
+  return {
+    onDataReady: listener => listeners.push(listener)
+  }
+}
+```
+
+When the preceding function is invoked, it creates a new object that acts as a notifier, allowing us to set multiple listeners for a file read operation. All the listeners will be invoked at once when the read operation completes and the data is available. The preceding function uses our inconsistentRead() function to implement this functionality. Let's see how to use the createFileReader() function:
+
+```JavaScript
+const reader1 = createFileReader('data.txt')
+reader1.onDataReady(data => {
+  console.log(`First call data: ${data}`)
+  // ...sometime later we try to read again from
+  // the same file
+  const reader2 = createFileReader('data.txt')
+  reader2.onDataReady(data => {
+    console.log(`Second call data: ${data}`)
+  })
+})
+```
+The preceding code will print the following:
+
+```text
+    First call data: some data
+```
+As you can see, the callback of the second reader is never invoked. Let's see why:
+
+During the creation of reader1, our inconsistentRead() function behaves asynchronously because there is no cached result available. This means that any onDataReady listener will be invoked later in another cycle of the event loop, so we have all the time we need to register our listener.
+Then, reader2 is created in a cycle of the event loop in which the cache for the requested file already exists. In this case, the inner call to inconsistentRead() will be synchronous. So, its callback will be invoked immediately, which means that all the listeners of reader2 will be invoked synchronously as well. However, we are registering the listener after the creation of reader2, so it will never be invoked.
+The callback behavior of our inconsistentRead() function is really unpredictable as it depends on many factors, such as the frequency of its invocation, the filename passed as an argument, and the amount of time taken to load the file.
+
+The bug that you've just seen can be extremely complicated to identify and reproduce in a real application. Imagine using a similar function in a web server, where there can be multiple concurrent requests. Imagine seeing some of those requests hanging, without any apparent reason and without any error being logged. This can definitely be considered a nasty defect.
+
+Isaac Z. Schlueter, the creator of npm and former Node.js project lead, in one of his blog posts, compared the use of this type of unpredictable function to unleashing Zalgo.
+
+Zalgo is an internet legend about an ominous entity believed to cause insanity, death, and the destruction of the world. If you're not familiar with Zalgo, you are invited to find out what it is.
+
 
 [...]
 Isaac Z. Schlueter, the creator of npm and former Node.js project lead, in one of his blog posts, compared the use of
@@ -173,4 +246,5 @@ Second Edition: July 2016
 Third Edition: July 2020
 --//
 
+WITHOUT PERMISSION ― NOT UNDER MIT LICENSE ↑
  */
