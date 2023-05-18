@@ -1,12 +1,48 @@
-// Define a type for the performance result
-interface IPerformanceResult<N = number> {
-  value: N;
-  timeElapsed: number;
-  totalTimeElapsed: number;
+/**
+ * Function to simulate a delay and measure its performance
+ * @param lowerBound - Lower limit for the delay
+ * @param upperBound - Upper limit for the delay
+ * @returns PerformanceResult containing the chosen delay and execution time
+ */
+
+export async function delay(
+  lowerBound: number = 500,
+  upperBound: number = lowerBound
+): PerformanceResult<number> {
+  return measurePerformance(async (): Promise<number> => {
+    if (lowerBound === 0 && upperBound === 0) {
+      return Promise.resolve(NaN);
+    }
+    const chosenDelay = calculateRandomNumber(lowerBound, upperBound);
+    return new Promise(resolve => setTimeout(resolve, chosenDelay));
+  });
 }
 
-export const timeStamp = (timeElapsed: number) =>
-  Math.round(timeElapsed * 1_000_000) / 1_000_000;
+/**
+ * Function to execute a heavy CPU-bound task and measure its performance
+ * @param lowerBound - Lower limit for the task's complexity
+ * @param upperBound - Upper limit for the task's complexity
+ * @returns PerformanceResult containing the computed result and execution time
+ */
+export async function heavyTask(
+  lowerBound = 50,
+  upperBound: number = lowerBound
+) {
+  return measurePerformance<{
+    steps: number;
+    result: number;
+  }>(() => {
+    if (lowerBound === 0 && upperBound === 0) {
+      return Promise.resolve({ steps: NaN, result: NaN });
+    }
+    const steps = calculateRandomNumber(lowerBound, upperBound);
+    let result = 0;
+    for (let i = 0; i < steps * 1e6; i++) {
+      result += i;
+    }
+    return Promise.resolve({ steps, result });
+  });
+}
 
 /**
  * Helper function to measure performance of a function
@@ -15,7 +51,7 @@ export const timeStamp = (timeElapsed: number) =>
  */
 export async function measurePerformance<N = number>(
   fn: () => Promise<N>
-): Promise<IPerformanceResult<N>> {
+): PerformanceResult<N> {
   const initialTime = performance.now();
   const result = await fn();
   const timeElapsed = performance.now() - initialTime;
@@ -24,6 +60,7 @@ export async function measurePerformance<N = number>(
     value: result,
     timeElapsed: timeStamp(timeElapsed),
     totalTimeElapsed: timeStamp(performance.now() - initialTime),
+    initialTime: initialTime,
   };
 }
 
@@ -47,52 +84,15 @@ export function calculateRandomNumber(
   return Math.floor(Math.random() * (upperBound - lowerBound + 1)) + lowerBound;
 }
 
-/**
- * Function to simulate a delay and measure its performance
- * @param lowerBound - Lower limit for the delay
- * @param upperBound - Upper limit for the delay
- * @returns PerformanceResult containing the chosen delay and execution time
- */
-export async function delay(
-  lowerBound = 500,
-  upperBound: number = lowerBound
-): Promise<IPerformanceResult<number>> {
-  if (lowerBound === 0 && upperBound === 0) {
-    return measurePerformance<number>(async (): Promise<number> => {
-      await new Promise(resolve => resolve(NaN));
-      return NaN;
-    });
-  }
-
-  return measurePerformance<number>(async (): Promise<number> => {
-    const chosenDelay = calculateRandomNumber(lowerBound, upperBound);
-
-    await new Promise(resolve => setTimeout(resolve, chosenDelay));
-
-    return chosenDelay;
-  });
+export function timeStamp(timeElapsed: number) {
+  return Math.round(timeElapsed * 1000000) / 1000000;
 }
 
-/**
- * Function to execute a heavy CPU-bound task and measure its performance
- * @param lowerBound - Lower limit for the task's complexity
- * @param upperBound - Upper limit for the task's complexity
- * @returns PerformanceResult containing the computed result and execution time
- */
-export async function heavyTask(
-  lowerBound = 50,
-  upperBound: number = lowerBound
-) {
-  return measurePerformance<{
-    steps: number;
-    result: number;
-  }>(() => {
-    const steps = calculateRandomNumber(lowerBound, upperBound);
-    let result = 0;
-    for (let i = 0; i < steps * 1e6; i++) {
-      result += i;
-    }
-    const value = { steps, result };
-    return Promise.resolve(value);
-  });
+export type PerformanceResult<N> = Promise<IPerformanceResult<N>>;
+
+export interface IPerformanceResult<N = number> {
+  value: N;
+  timeElapsed: number;
+  totalTimeElapsed: number;
+  initialTime: number;
 }
