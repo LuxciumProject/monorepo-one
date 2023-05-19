@@ -1,3 +1,28 @@
+Understand this:
+
+The project is in a monorepo named monorepo-one under the LuxciumProject GitHub account. This monorepo holds multiple projects. Some projects, like the rpc-worker-pool, have individual repositories under the Luxcium GitHub account.
+
+Focus on the main file in /projects/monorepo-one/services/rpc-worker-pool/src/server/_pool-instance.ts. Identify that src/server/RpcWorkerPool.ts, src/server/_pool-instance.ts, src/server/worker.ts, and src/commands/tools/commands.ts are the main files in the rpc-worker-pool project.
+
+Recognize that rush.json and monorepo-one.code-workspace files provide the structure of the monorepo. These files hold information on project names and project structure respectively.
+
+Know that the GitHub files have raw format versions accessible with this URL structure: ${https:}//${"raw.githubusercontent.com"}/${git_hub_user_name}/${repo_name}/${git_branch}/${path_to_filename}.
+
+Study these important files:
+
+_pool-instance.ts - The project's (main) entry point.
+RpcWorkerPool.ts - The primary (main) class.
+worker.ts - The worker instances' functionality.
+commands.ts - Lists methods that the worker file can call.
+rush.json - Overviews the monorepo structure.
+monorepo-one.code-workspace - Gives insight into the monorepo structure.
+.gitmodules - Contains details about the submodules in the monorepo.
+Prepare to ask for additional information or clarification. Some files, like .gitmodules, might be easier to browse directly.
+
+Plan for a pre-analysis of the RpcWorkerPool class and the rpc-worker-pool project. Understand the class structure, methods, and interactions with _pool-instance.ts, worker.ts, and commands.ts. Collect this information from the files and ask for clarifications as needed.
+
+To summarize, comprehend the rpc-worker-pool project within the monorepo-one repo. Analyze the RpcWorkerPool class and its interactions with the other main files. Refer to the rush.json and monorepo-one.code-workspace files to understand the monorepo structure. Access files from their GitHub links or in raw format using the provided URL structure. Seek input or directly browse files as necessary.
+
 # File structure:
 # / (file system root)
 # /projects (../)
