@@ -8,7 +8,7 @@
 export async function delay(
   lowerBound: number = 500,
   upperBound: number = lowerBound
-): PerformanceResult<number> {
+): Promise<DelayValue> {
   return measurePerformance(async (): Promise<number> => {
     if (lowerBound === 0 && upperBound === 0) {
       return Promise.resolve(NaN);
@@ -27,7 +27,7 @@ export async function delay(
 export async function heavyTask(
   lowerBound = 50,
   upperBound: number = lowerBound
-) {
+): Promise<TaskValue> {
   return measurePerformance<{
     steps: number;
     result: number;
@@ -51,7 +51,7 @@ export async function heavyTask(
  */
 export async function measurePerformance<N = number>(
   fn: () => Promise<N>
-): PerformanceResult<N> {
+): Promise<PerformanceResult<N>> {
   const initialTime = performance.now();
   const result = await fn();
   const timeElapsed = performance.now() - initialTime;
@@ -88,11 +88,19 @@ export function timeStamp(timeElapsed: number) {
   return Math.round(timeElapsed * 1000000) / 1000000;
 }
 
-export type PerformanceResult<N> = Promise<IPerformanceResult<N>>;
+// export type PerformanceResult<N> = Promise<IPerformanceResult<N>>;
 
-export interface IPerformanceResult<N = number> {
+export interface PerformanceResult<N = number> {
   value: N;
   timeElapsed: number;
   totalTimeElapsed: number;
   initialTime: number;
 }
+
+export type DelayValue = PerformanceResult;
+
+export type TaskStepsResult = {
+  steps: number;
+  result: number;
+};
+export type TaskValue = PerformanceResult<TaskStepsResult>;
