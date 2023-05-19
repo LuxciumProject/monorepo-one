@@ -8,5 +8,5 @@ url = https://github.com/Luxcium/questrade-ts.git
 path = services/rpc-worker-pool
 url = https://github.com/Luxcium/rpc-worker-pool.git
 [submodule "library/mapping-tools"]
-	path = library/mapping-tools
-	url = https://github.com/LuxciumProject/mapping-tools.git
+path = library/mapping-tools
+url = https://github.com/LuxciumProject/mapping-tools.git

@@ -1007,8 +1007,6 @@
     "workbench.preferredDarkColorTheme": "Pop N' Lock Theme by Luxcium ✨",
     "terminal.integrated.defaultProfile.linux": "MonoRepoOne",
     "task.allowAutomaticTasks": "on",
-    "editor.fontSize": 14,
-    "editor.fontWeight": "500",
     "editor.fontFamily": "'FiraCode Nerd Font'",
     "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
     "files.associations": {
