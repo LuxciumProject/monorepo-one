@@ -1,5 +1,16 @@
 Understand this:
 
+https://raw.githubusercontent.com
+  /Luxcium/rpc-worker-pool/rpc-worker-pool/src
+    /main.ts # points to /server/clients/_pool-instance.ts
+    /server/RpcWorkerPool.ts
+    /server/worker.ts
+    /commands/methods.ts
+    /types/specs/json-rpc-2.0/request-object.ts
+    /types/specs/json-rpc-2.0/response-object.ts
+    /API/RPC-serialise.ts
+    /API/RPC-errors.ts
+
 The project is in a monorepo named monorepo-one under the LuxciumProject GitHub account. This monorepo holds multiple projects. Some projects, like the rpc-worker-pool, have individual repositories under the Luxcium GitHub account.
 
 Focus on the main file in /projects/monorepo-one/services/rpc-worker-pool/src/server/_pool-instance.ts. Identify that src/server/RpcWorkerPool.ts, src/server/_pool-instance.ts, src/server/worker.ts, and src/commands/tools/commands.ts are the main files in the rpc-worker-pool project.
