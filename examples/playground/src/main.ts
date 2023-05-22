@@ -8,3 +8,7 @@ void (async function MAIN() {
   console.log(`at: MAIN from ${__filename}`);
   return void 0;
 })();
+
+
+let any = 14 ;
+any + any + any + any + any + any + any + any + any + any + any + any + any + any + any + any + any + any + any + any

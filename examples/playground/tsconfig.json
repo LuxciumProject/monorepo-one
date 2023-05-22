@@ -1,11 +1,13 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
-  "extends": "../typescript/tsconfig.json",
+  // "extends": "../typescript/tsconfig.json",
   "compilerOptions": {
+    "strict": false,
+    "allowUnusedLabels": true,
     /* Emit Options */
     "target": "ESNext",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "nodenext",
     "rootDir": "./src",
     "composite": true,
     "declarationDir": "./out/typings",

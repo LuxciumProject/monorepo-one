@@ -1006,7 +1006,6 @@
   |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
   */
   // #region: CUSTOMS RULES                                          !
-
   "typescript.tsdk": "node_modules/typescript/lib",
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -1619,5 +1618,8 @@
     "sideBar.border": "#ff33334d",
     "tab.activeBorder": "#ff33334d"
   },
-  "peacock.color": "#FF00004D"
+  "peacock.color": "#FF00004D",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }

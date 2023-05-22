@@ -7,8 +7,8 @@
   "author": "Luxcium (Benjamin Vincent)",
   "license": "MIT",
   "scripts": {
+    "build": "bash scripts/build.sh|| exit 15; pwd",
     "install": "pwd; yarn build || exit 13; pwd",
-    "build": "bash scripts/build.sh",
     "test": "jest --config='config/jest.config.json'"
   },
   "keywords": [],

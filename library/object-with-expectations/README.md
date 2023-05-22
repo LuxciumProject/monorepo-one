@@ -8,7 +8,7 @@ Let you merge objects with expected asyncronious results and normal properties.
 
     pnpm add @luxcium/object-with-expectations
 
-### All example imply this code:
+### All example imply this code
 
 ```typescript
 import { mixBases, mixExpected } from '@luxcium/object-with-expectations';
@@ -35,7 +35,7 @@ const bar = {
 };
 ```
 
-### Use mixBases to mix 2 objects without an `expected` property.
+### Use mixBases to mix 2 objects without an `expected` property
 
 ```typescript
 const withBaseOnly = {
@@ -45,7 +45,7 @@ console.log('at withBaseOnly:', withBaseOnly);
 // at withBaseOnly: { foo: 'machin', bar: 'bidule' }
 ```
 
-### Use mixBases to mix 2 objects with an `expected` property.
+### Use mixBases to mix 2 objects with an `expected` property
 
 ```typescript
 const withExpectedProperty = { ...mixBases(foo, bar) };
@@ -53,7 +53,7 @@ console.log('at withExpectedProperty:', withExpectedProperty);
 // at withExpectedProperty: { foo: 'machin', bar: 'bidule' }
 ```
 
-### A separate function is required in order to merge the sub-properties from your `expeceted` object.
+### A separate function is required in order to merge the sub-properties from your `expeceted` object
 
 ```typescript
 /**
@@ -76,7 +76,7 @@ console.log('at mergeExpected:', mergeExpected);
 // }
 ```
 
-### To have meaningfull type inference it is required to groom your data in order to get the best TypeScript support.
+### To have meaningfull type inference it is required to groom your data in order to get the best TypeScript support
 
 Gradually reshaping the output type infered keeping the same value shape as expected.
 
@@ -100,7 +100,7 @@ console.log('at expected:', expected);
 // at expected: { bolo: Promise { 'await bolo' }, toto: Promise { 'await toto' } }
 ```
 
-### To have meaningfull type inference it is required to groom your data in order to get the best TypeScript support.
+### To have meaningfull type inference it is required to groom your data in order to get the best TypeScript inference
 
 Giving its final shape (type wise) for the outpput
 
@@ -125,7 +125,7 @@ console.log('at expectedResult:', expectedResult);
 // }
 ```
 
-### You can then finalize by merging the 2 objects parts together.
+### You can then finalize by merging the 2 objects parts together
 
 ```typescript
 /**
@@ -152,4 +152,4 @@ console.log('at mergingAll:', mergingAll);
 
 † Scientia est lux principium✨ ™
 
-###### MIT © 2022 Luxcium ✨ (Benjamin Vincent)
+#### MIT © 2022 Luxcium ✨ (Benjamin Vincent)

@@ -8,11 +8,11 @@ const onlyBar = {
 };
 const foo = {
   foo: 'machin',
-  expected: { bolo: (async () => 'await bolo')() },
+  expected: { bolo: async () => 'await bolo' },
 };
 const bar = {
   bar: 'bidule',
-  expected: { toto: (async () => 'await toto')() },
+  expected: { toto: async () => 'await toto' },
 };
 
 describe('Example Test', () => {
@@ -66,7 +66,9 @@ describe('Example Test', () => {
   const expects1 = mixExpected(foo, bar);
 
   it('Testing the mixExpected keeping expected sub module (property/object) but discaring base properties.', () => {
-    expect(expects1).toStrictEqual({
+    expect({
+      expected: { bolo: expected.bolo(), toto: expected.toto() },
+    }).toStrictEqual({
       expected: {
         bolo: Promise.resolve('await bolo'),
         toto: Promise.resolve('await toto'),
@@ -93,7 +95,7 @@ describe('Example Test', () => {
   const expected = expects1.expected;
 
   it('Gradually reshaping the output type infered keeping the same value.', () => {
-    expect(expected).toStrictEqual({
+    expect({ bolo: expected.bolo(), toto: expected.toto() }).toStrictEqual({
       bolo: Promise.resolve('await bolo'),
       toto: Promise.resolve('await toto'),
     });
@@ -116,7 +118,12 @@ describe('Example Test', () => {
   const expectedFinal = { expected: { ...expected } };
 
   it('Gradually reshaping the output type infered keeping the same value.', () => {
-    expect(expectedFinal).toStrictEqual({
+    expect({
+      expected: {
+        bolo: expectedFinal.expected.bolo(),
+        toto: expectedFinal.expected.toto(),
+      },
+    }).toStrictEqual({
       expected: {
         bolo: Promise.resolve('await bolo'),
         toto: Promise.resolve('await toto'),
@@ -144,7 +151,14 @@ describe('Example Test', () => {
   const expectBoth = { ...expectOnly, ...expectedFinal };
 
   it('Gradually reshaping the output type infered keeping the same value.', () => {
-    expect(expectBoth).toStrictEqual({
+    expect({
+      bar: 'bidule',
+      foo: 'machin',
+      expected: {
+        bolo: expectBoth.expected.bolo(),
+        toto: expectBoth.expected.toto(),
+      },
+    }).toStrictEqual({
       bar: 'bidule',
       foo: 'machin',
       expected: {

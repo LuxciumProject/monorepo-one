@@ -1,6 +1,3 @@
-#-------------------------------------------------------------------------------------------------------------------
-# Prettier-specific overrides
-
 # Rush files
 common/changes/
 common/scripts/
@@ -31,6 +28,11 @@ release
 !**/*
 !**/.*
 !typings
+#-------------------------------------------------------------------------------------------------------------------
+# Prettier-specific overrides
+
+examples/playground
+
 ## FOLDERS and FOLDER infos files
 node_modules/
 jspm_packages/
