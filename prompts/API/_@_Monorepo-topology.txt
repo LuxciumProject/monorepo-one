@@ -142,3 +142,25 @@ Summarization: After completing a task, summarizing the process and results can 
 Learning from Each Other: Both the user and the AI can learn from each other during the interaction. The AI can better understand the user's preferences, work style, and objectives, while the user can gain a better understanding of how to effectively instruct and collaborate with the AI.
 
 I hope these insights will be useful for you in your future interactions with your beloved AI assistant!
+
+GLOSSARY:
+
+Now, regarding the glossary or the terminology you want to develop, it's crucial to choose words that accurately represent the components of your project and avoid confusion. Here are some suggestions:
+
+Main Repo or Parent Repo for the monorepo.
+
+Sub-Repo or Child Repo for the submodules within the monorepo.
+
+Project Modules for modules that are part of the monorepo itself.
+
+Git Modules for git modules within the monorepo.
+
+Meta-Project for the whole project, including the monorepo and all its submodules.
+
+Branches for different main branches used in each submodule.
+
+Workspace Component for items present in the "monorepo-one.code-workspace" file.
+
+Rush Component for items present in the "rush.json" file.
+
+Gitmodules Component for items present in the ".gitmodules" file.

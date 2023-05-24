@@ -1,0 +1,15 @@
+prompts: This directory may contain scripts or files that prompt the user for input or display messages to the user.
+
+private: As the name suggests, this directory might contain sensitive data or files that aren't intended to be shared publicly.
+
+⚑backend: Marked with a flag, this directory likely houses the backend code of a web application or service. The flag might indicate the directory's importance or that it contains key components of the project.
+
+⚑examples: This directory may store example code or projects that demonstrate the usage of the library or service provided by the monorepo. The flag likely marks this directory as significant or containing key components.
+
+frontend: Likely contains the frontend code of a web application or service, such as user interface or client-side code.
+
+⚑library: Might contain a library of reusable code across multiple projects or components within the monorepo. The flag may signify its importance or that it contains key components of the project.
+
+⚑services: Likely contains code for various services that the monorepo depends on, such as microservices, APIs, or other types of services. The flag might indicate the directory's importance or that it contains key components.
+
+scripts: This directory could hold scripts that automate tasks related to the monorepo, such as build scripts, test scripts, or deployment scripts.
