@@ -2368,6 +2368,7 @@ importers:
       eslint-plugin-unicorn: ~47.0.0
       eslint-webpack-plugin: ~4.0.1
       jest: ~29.5.0
+      mapping-tools: workspace:*
       nodemon: ~2.0.22
       prettier: ~2.8.8
       rimraf: ~5.0.0
@@ -2383,6 +2384,7 @@ importers:
       '@luxcium/redis-services': link:../redis-services
       '@luxcium/tools': link:../../library/tools
       chalk: 4.1.2
+      mapping-tools: link:../../library/mapping-tools
     devDependencies:
       '@babel/core': 7.21.8
       '@babel/plugin-syntax-flow': 7.21.4_@babel+core@7.21.8
