@@ -1,0 +1,89 @@
+I am doing some functional programming like type of programming.
+I am using typescript, I am creating tools using classes.
+Iwill use them as functional programming constructs...
+So far I am aware of the concept of a functor or such...
+The concept having a map/flatmap to tranform an internal value.
+Excetp that to me something is missing, something is not useful...
+Because if you can not both a. put into an b. get out of the value...
+I needed a construct taht can act as a box similar to the functir.
+I created my own «boxing» element that can inbox and unbox.
+I have not the knowledge of wordings, naming or appelataions.
+Actual terms used in academic real, pure functional programming...
+Maybe something in true functional programming taht I am unaware of.
+Nonetheless I am creating the stuff I need to accomplish the task.
+I need to accomplished my goals regardless if the tools exist already.
+Regardless of the academic soundness of what I am doing...
+It is more important to me to focus on the actual functionality.
+Or lets say usefulness to avoid confusion when using «functionality».
+I have therefor created some type (a class) that can get value inside.
+Also it can get value ot of itbecaus it is what is usefull to me.
+So it can place some value in it (the container) and get value out.
+At this stage it's not a functor yet, as it do not have a map/flatmap.
+It will later get such capability by inheritance or extension or such.
+
+For me this is a recurring theme since forever I have been doing this.
+Again and again, in what I am doing, in multiple different shapes.
+In different projects, with different goals, different purposes.
+Today I have decide it was time to find out the true nature of that.
+Today I will need to discover the true nature of what I am doing.
+Because I am looking at to concepts I am dealing with and I wonder...
+For so long contemplating all I did and all what I am doing...
+And today I realist that I do not know how to name theses concepts...
+
+I have created my own personal paradigms based on my needs.
+But maybe and those patterns perhaps already exist or perhaps not.
+Maybe they are completely new to man kind or well known concepts.
+Regardless either way I need to know the appellation of such concepts.
+Maybe names already exists or maybe name will have to be created.
+
+So I am asking you to help me find the peace of mind I am looking for.
+Tell me... For such concept... Something like a class or an object...
+Some sort of a construct, the concrete concept or the abstract one.
+Maybe as far as the «meta» concept, one of similar nature if anything.
+Even something that beyonf the topic at hand woud exist conceptually.
+
+As an analogy would help you fid out the patern and the shape behind:
+It is all about something that can ingest a value lets use an image...
+Imagine someone eat food, ingest it, this would be the first phase.
+Then imagine digestion would be the mapping phase the transform.
+Lastly imagine that excretion, you guessed it, would be the unboxing.
+The generalize it to any such concept. Then think more specifically,
+really for the moment think specifically about my programming concept.
+This so called construct, I need to understand what to name all parts.
+
+I think you can help me understand existing conventions, help me...
+Help me create also, new conventions and new concepts out of it.
+Explain me if the concepts already exist because it is unclear to me.
+I mean at least from what I said we know that mapping is the functor.
+I need to understand it (if it already exists) or create it.
+I need to know, or I need to invent: Names, appellation, descriptions.
+
+For each of those 3 concept separated, in isolation...
+Or all together in a same class or togeter 2 by two in tandem...
+those things that are about, in a first part:
+inboxing, lifting, ingesting, boxing or such as the 1st concept...
+then in a second part those things that are about:
+mapping, map, flatmap, transform, functor or such as 2nd concept...
+Lastly then in the third part those things that are about:
+unboxing, excreting, getting out of and such as the 3rd concept...
+
+Can you, from TypeScript perpective extending to computer science,
+in the context of a tool, a class, an object, any type of construct.
+can you please:
+A) Summarize all that I have said... crafting a comprehensive summary.
+B) Extracting from what I said the concepts that exist already or not.
+C) Extract each of the question I am asking about those concepts.
+D) drafting elements of answers based on your knowledge and dataset.
+extanding to include common knowledge and well know best practices.
+E) Expanding from the known concepts and from the unknown elements,
+in a creative manner, with te objective to create new ideas
+ideas that extend from the already well know ideas, extending from
+what you understand about what I am explaining...
+Using a creative and novel appraoch, describe my concept in ways that
+would be useful for my work.
+F) finally please sum up all that was said in a, b, c, d, and e...
+Outline (list) the key elements surrounding theses 3 main concept.
+Listing names and words that could act as synonyms or remplacement of
+well known appellations both those you would already have mentioned
+and reiterating them now but also others that you would add to list
+even more options that would be usefull to name these concept.
