@@ -2329,6 +2329,7 @@ importers:
       '@babel/plugin-transform-typescript': ~7.21.3
       '@jest/globals': ~29.5.0
       '@luxcium/bigintstring': workspace:*
+      '@luxcium/phash-compute': workspace:*
       '@luxcium/redis-services': workspace:*
       '@luxcium/tools': workspace:*
       '@rushstack/eslint-config': ~3.2.0
@@ -2381,6 +2382,7 @@ importers:
       webpack: ~5.82.0
     dependencies:
       '@luxcium/bigintstring': link:../../library/bigintString
+      '@luxcium/phash-compute': link:../phash-compute
       '@luxcium/redis-services': link:../redis-services
       '@luxcium/tools': link:../../library/tools
       chalk: 4.1.2

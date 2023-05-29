@@ -1,3 +1,4 @@
+export { getBigStrPhashFromFile } from './getBigStrPHashFromFile';
 export {
   getCachedPhashString_core as default,
   getCachedPhashString_core,

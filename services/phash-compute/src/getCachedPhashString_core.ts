@@ -6,10 +6,9 @@ import type {
 } from './types';
 
 import { mixBases, mixExpected } from '@luxcium/object-with-expectations';
-import { getBigStrPHashFromFile } from './getBigStrPHashFromFile';
+import { getBigStrPhashFromFile } from './getBigStrPHashFromFile';
 import { pHashGetLookUp } from './pHashGetLookUp';
 import { redisSetK } from './redisSetK';
-// import { WithPHashString } from './types/ImageFileWithPHashString';
 /**
  *
  * @param R
@@ -37,7 +36,7 @@ export function getCachedPhashString_core(
 
     // Without RedisClient no need to look into the cache
     if (!R) {
-      const bigStr = await getBigStrPHashFromFile(pathObj.path);
+      const bigStr = await getBigStrPhashFromFile(pathObj.path);
       const pHashString = bigStr;
       const pHashMethod = 'direct';
       const lookup = { pHashString, pHashMethod };
@@ -64,7 +63,7 @@ export function getCachedPhashString_core(
       };
     } else {
       // Else calculate the value
-      const bigStr = await getBigStrPHashFromFile(pathObj.path);
+      const bigStr = await getBigStrPhashFromFile(pathObj.path);
 
       // If the calculated string is not an empty string
       if (bigStr !== '') {
@@ -102,34 +101,3 @@ export function getCachedPhashString_core(
     }
   };
 }
-
-// function joinPhashString<
-//   T extends Omit<any, 'expected'>,
-//   U extends Omit<any, 'expected'>
-// >(imageFilePath: T, lookup: U) {
-//   return {
-//     ...mixBases<any, any, T, typeof lookup>(imageFilePath, lookup),
-//   };
-// }
-
-//  function joinPhashExpected<
-//   T extends { expected: object },
-//   U extends { expected: object }
-// >(
-//   imageFilePath: T,
-//   lookup: U
-//   // pHashString: string,
-//   // pHashMethod: string | null
-// ) {
-//   const bases = joinPhashString(imageFilePath, lookup);
-
-//   return {
-//     ...bases, //  ...mixBases
-//     ...mixExpected(imageFilePath, lookup),
-//   };
-// }
-
-/*
-     const bases = joinPhashString(imageFilePath, bigStr, 'direct');
-      return { ...bases, ...joinPhashExpected(imageFilePath) };
- */
