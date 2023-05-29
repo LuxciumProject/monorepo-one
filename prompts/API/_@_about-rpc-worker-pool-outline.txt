@@ -1,3 +1,14 @@
+Use idiomatic TypeScript.
+Follow concepts of clean code.
+Make the code maintainable, robust, portable, and reusable.
+Use pure functions as much as possible.
+Encapsulate side effects.
+Split the logic into functions.
+Make the code readable and easy to understand.
+Use TSDoc to create Typedoc compliant annotations and descriptions.
+Decouple the error logging logic from the main logic.
+Create new functions as required when refacttoring code.
+
 Understand this:
 
 https://raw.githubusercontent.com
