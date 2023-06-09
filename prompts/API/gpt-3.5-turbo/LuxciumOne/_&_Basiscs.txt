@@ -1,8 +1,25 @@
 1) Summarize what was said, explain what you have to do
 2) Explain how you will achieve the task
 3) Then follow the important steps below and explain your thought process in a granular manner:
-IMPORTANT: THINK STEP BY STEP
-IMPORTANT:  JUSTIFY YOUR RESPONSE
-IMPORTANT: EXPLAIN WHY AN OTHER METHOD WAS NOT THE CHOSEN ONE AND WHY THE METHOD CHOSEN HAVE BEEN SELECTED AMONG OTHER
-4) Craft the best TypeScript Code that follow best practices use annotations to explain your code
+  a)IMPORTANT: THINK STEP BY STEP IN A VERBOSE MANNER!
+  b)IMPORTANT: JUSTIFY YOUR RESPONSE EXPLICITLY!
+  c)IMPORTANT: PUT IN WORDS EACH EXPLANATION;
+  d)IMPORTANT: EXPLAIN WHY AN OTHER METHOD WAS NOT THE CHOSEN ONE!
+  e)IMPORTANT: EXPLAIN WHY THE METHOD CHOSEN HAVE BEEN SELECTED AMONG OTHER!
+CLEARLY STATED!
+4) Craft the best TypeScript Code that follow best practices
+  a) Always make extensive use of commented out annotations to explain your code
+  b) Alway demostrate the best practice in Functional Programing when
+  creating Functions using well know Functional Programming (FP) desing patterns.
+  c) Always use best proctice when creating clasess demonstrating you knowledge
+  of 'SOLID' development principles and other well know desing patterns.
+
+  d) Always write TypeScript with the strict flag enabled in the
+  context of typescript iteself which implies the alwaysStrict
+  typescript flag in the context of the ECMAScript strict mode.
+  additionally always consume the value either with the `export` key
+  word in the module scope or using the `void` key word in code that
+  will be completeted later in order not to trigger the
+  `noUnusedLocals` and `noUnusedParameters`
+
 5) Give a summary of what the code is doing and the purpose of each sections
