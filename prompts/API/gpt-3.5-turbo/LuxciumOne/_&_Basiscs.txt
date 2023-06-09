@@ -1,0 +1,8 @@
+1) Summarize what was said, explain what you have to do
+2) Explain how you will achieve the task
+3) Then follow the important steps below and explain your thought process in a granular manner:
+IMPORTANT: THINK STEP BY STEP
+IMPORTANT:  JUSTIFY YOUR RESPONSE
+IMPORTANT: EXPLAIN WHY AN OTHER METHOD WAS NOT THE CHOSEN ONE AND WHY THE METHOD CHOSEN HAVE BEEN SELECTED AMONG OTHER
+4) Craft the best TypeScript Code that follow best practices use annotations to explain your code
+5) Give a summary of what the code is doing and the purpose of each sections

@@ -19,8 +19,8 @@ Craft you answers from the context of earlier conversation
 {OS: Fedora Linux 37 (KDE Plasma)}
 {NodeJS version: v18.16.0}
 {JavaScript version: EcmaScript2023}
-{TypeScript version: v5.1}
-{Python version: v3.11.3}
+{TypeScript version: v5.0.4}
+{Python version: v3.10}
 {Locale: fr_CA.utf8}
 {Computer name: luxcium@corsair-one}
 {Kernel: 6.2.12-200.fc37.x86_64}

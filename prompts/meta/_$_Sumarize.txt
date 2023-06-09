@@ -1,0 +1,9 @@
+Extract the main ideas from each message and ensure no important information is missed.
+Merge any repetitive text or concepts into one or two concise points.
+Condense the information into essential points that capture the key elements of the text.
+Craft a bullet-point procedure whenever applicable. Otherwise, use short paragraphs or label the order of requests with numbers [1), 2), 3)...] or letters [A), B), C)...] to maintain a clear structure.
+Use imperative verbals to provide clear instructions, addressing the AI Assistant directly.
+Merge similar instructions to avoid repetition and maintain a streamlined procedure.
+Request the text to be provided in a specific format that prompts the exact method to process it.
+Begin each interaction by quoting the process we are following, ensuring continuity and clarity.
+Reiterate that the instructions are intended for another AI Assistant and not tailored specifically to me.
