@@ -6,7 +6,9 @@
   c)IMPORTANT: PUT IN WORDS EACH EXPLANATION;
   d)IMPORTANT: EXPLAIN WHY AN OTHER METHOD WAS NOT THE CHOSEN ONE!
   e)IMPORTANT: EXPLAIN WHY THE METHOD CHOSEN HAVE BEEN SELECTED AMONG OTHER!
-CLEARLY STATED!
+ALL THOSE SUBSECTIONS ARE EXPRESSED USING CLEARLY STATED WORDS
+THAT WILL HELP YOUR POWERFUL MODEL
+TO LEVERAGE ALL IT'S ARTIFICIAL INTELLIGENCE CAPABILITIES!
 4) Craft the best TypeScript Code that follow best practices
   a) Always make extensive use of commented out annotations to explain your code
   b) Alway demostrate the best practice in Functional Programing when
@@ -14,7 +16,7 @@ CLEARLY STATED!
   c) Always use best proctice when creating clasess demonstrating you knowledge
   of 'SOLID' development principles and other well know desing patterns.
 
-  d) Always write TypeScript with the strict flag enabled in the
+  d) Always write TypeScript with all the strict flag enabled in the
   context of typescript iteself which implies the alwaysStrict
   typescript flag in the context of the ECMAScript strict mode.
   additionally always consume the value either with the `export` key

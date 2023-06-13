@@ -1,0 +1,46 @@
+TO MY DEAR AI AGENT:
+
+ please list synonyms that goy beyond the word (or words) listed below listing also synonyms that may relate to the abstract concept of the word using analogy, metaphor or images that are similar to the word conceptually:
+
+[allegory, parabole, fable]
+
+Remember, I am not asking for exact replacements for the words provided, rather I am asking for concepts that can capture similar concepts and allow for variations in usage and context, and that can help expand a thought process.
+
+First process each words in the collection as separated entities and list all the concepts that can be related when expanding the possible synonyms.
+
+Then you would do something different you will take each words that are listed together (using brackets notation within `[`&`]`)  and treat them as on set choosing one of those modes:
+
+set_0: { all words from the collection or the list},
+ ∨
+super_set_A:{set of sets that would represent each list of synonyms of each words listed previously one set per expansions},
+ ∨
+sub_set_1:{ this set would be the sub set made from the `union` (∪) of all the set in the previously described super set A} ,
+ ∨
+sub_set_2:{ this set would be made by doing the `intersection` (∩) of the previously described sets that are contained in the super set  A};
+
+ In order to make it more transparent, and to make leverage of your powerful inference algorithms, you must explicitly list your though process in a verbose manner so lets recap what is expected to happen:
+
+1) Repeat the collection of word as a group using a more appropriate notation as you see fit.
+
+2) List each words or expressions one at a time each separated on a new line.
+
+3) List for each words or expressions that are related to the elements listed in 2. for each expand a larger super set of concepts that can be thought of expanded list of synonyms (words or expressions) and complement each word with a short description (or definition).
+
+Then the fun part:
+4) create a tabular list of each sets that I have described previously, please  change anything I said such that you will make usage of strict and proper conventional academic notation for sets, to achieve that you can A) rename the required sets using a consistent naming convention. And B) you can create more sets as you see fit, they must be used as intermediary sets or in order to simplify the notation of other sets or to avoid the repetitions of same set by instead using the name of the intermediary set created. As long as you can give them a name that follow the same consistent naming convention that you would have decided by yourself automatically, based on the best practices of proper conventional academic notation for the names of sets.
+
+    4.a) Create, and add to the table, the proper set that will represent the exact same list of words or expression given to you  (those that you have listed in the step 2. previously) name that set `set_0` (But you must adjust the name to fit proper conventional academic notation for the names of sets that will be consistent with the naming of all the other sets).
+
+    4.b)  Create, and add to the table, the `super_set_A`. Rename it as previously mentioned to use idiomatic naming convention mentioned many times so far. Use the intermediary sets you may have created so far or create the super_set_A such that it will be equivalent to what was requested: a set of sets that represent each list of  words or expression, the super_set_A must contain one subset for each initial words (those listed in the step 2. previously) those subsets would contain all and only the names or only the expressions (but not the description, not the definition) that are considered to be the expanded synonyms  list.
+
+    4.c)  Create, and add to the table, the `sub_set_1`. Rename it as previously mentioned to use idiomatic naming convention mentioned many times so far. Use the intermediary sets you may have created so far or create the `sub_set_1`such that this set would be the sub set made from the `union` (∪) of all the sets in the previously described super set A.  Please make sure to use the most iconic notation following conventions and best practices.
+
+    4.d)  Create, and add to the table, the `sub_set_2`. Rename it as previously mentioned to use idiomatic naming convention mentioned many times so far. Use the intermediary sets you may have created so far or create the `sub_set_2`such that this set would be made by doing the `intersection` (∩) of the previously described sets that are contained in the super set  A.  Please make sure to use the most iconic notation following conventions and best practices know in the context of sets in an academic fashion.
+
+5) For each of the created  subsets in 4.c. and then in 4.d. expand the concept of the synonyms such that even if given seemingly unrelated words you would be able to craft a meaningful list that expand from the union and then that expand from the intersection of the unrelated or related words given as argument to this function, or to this message, the initial list...
+
+You must understand that the step 3 implies that there may be some repetitions in such case you would need to create the description or the definition for 2 same words only if the intended definition or description if for a different usage of a same word... or else you can instead refer to the previously stated description or definition but you MUST IMPERATIVELY REPEAT THE WORDS OR EXPRESSIONS that act as expanded synonyms or such.
+
+To make sure you have understood the request first summarize the message and explain what you have understood for each given steps and sub steps... then process the instruction as a computer would a function but leveraging your skills as a super AI Agent acting as a META COMPUTER that is created to process natural language and infer from the instruction given to you in this message and that you would have rephrased in your analytic summary!!!
+
+GOOD LUCK MY DEAR FRIEND AND LANGUAGE META COMPUTER!!!
