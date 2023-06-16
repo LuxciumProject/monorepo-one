@@ -9,6 +9,7 @@
 ALL THOSE SUBSECTIONS ARE EXPRESSED USING CLEARLY STATED WORDS
 THAT WILL HELP YOUR POWERFUL MODEL
 TO LEVERAGE ALL IT'S ARTIFICIAL INTELLIGENCE CAPABILITIES!
+
 4) Craft the best TypeScript Code that follow best practices
   a) Always make extensive use of commented out annotations to explain your code
   b) Alway demostrate the best practice in Functional Programing when
