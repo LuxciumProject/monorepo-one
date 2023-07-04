@@ -1,7 +1,11 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
-  "include": ["./src"],
-  "exclude": ["out"],
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "out"
+  ],
   "compilerOptions": {
     /* Module Resolution Interop Constraints */
     "target": "ESNext",
@@ -57,11 +61,19 @@
     "useDefineForClassFields": true,
     "assumeChangesOnlyAffectDirectDependencies": false,
     /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     /* Specify type package names to be included without being referenced in a source file. */
-    "types": ["node", "heft-jest"],
+    "types": [
+      "node",
+      "heft-jest"
+    ],
     "paths": {
-      "sharp-phash": ["./src/types/sharp-phash.d.ts"]
+      "sharp-phash": [
+        "./src/types/sharp-phash.d.ts"
+      ]
     },
     /* Completeness */
     "skipDefaultLibCheck": false,
@@ -73,7 +85,6 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "traceResolution": false,
-    "listFilesOnly": false,
     /* Type Checking */
     /* ALWAYS FALSE NEVER ALLOW-UNUSED-LABELS & ALLOW-UNREACHABLE-CODE FALSE!  */
     /* ALWAYS FALSE                                               ALWAYS FALSE */

@@ -56,7 +56,6 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "traceResolution": false,
-    "listFilesOnly": false,
     /* Type Checking */
     /* ALWAYS FALSE NEVER ALLOW-UNUSED-LABELS & ALLOW-UNREACHABLE-CODE FALSE!  */
     /* ALWAYS FALSE                                               ALWAYS FALSE */

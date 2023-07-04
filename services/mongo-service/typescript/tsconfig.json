@@ -1,6 +1,8 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
-  "exclude": ["lib"],
+  "exclude": [
+    "lib"
+  ],
   "compilerOptions": {
     /* Emit Options */
     "emitDecoratorMetadata": false,
@@ -42,9 +44,15 @@
     "inlineSourceMap": false,
     "emitDeclarationOnly": false,
     /* Bundled library declaration files that describe the target runtime environment. */
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     /* Package names to be included without being referenced in a source file. */
-    "types": ["node", "heft-jest"],
+    "types": [
+      "node",
+      "heft-jest"
+    ],
     /* Projects */
     "composite": true,
     "disableSourceOfProjectReferenceRedirect": false,
@@ -67,7 +75,6 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "traceResolution": false,
-    "listFilesOnly": false,
     /* Type Checking */
     /* ALWAYS FALSE NEVER ALLOW-UNUSED-LABELS & ALLOW-UNREACHABLE-CODE FALSE!  */
     /* ALWAYS FALSE                                               ALWAYS FALSE */

@@ -78,7 +78,6 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "traceResolution": false,
-    "listFilesOnly": false,
     //
     "isolatedModules": true,
     // "preserveSymlinks": false,

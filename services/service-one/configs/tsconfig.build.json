@@ -1,6 +1,11 @@
 {
   "extends": "../tsconfig.json",
-  "exclude": ["out", "dist", "build", "../src/helpers"],
+  "exclude": [
+    "out",
+    "dist",
+    "build",
+    "../src/helpers"
+  ],
   "compilerOptions": {
     "module": "commonjs",
     "target": "ESNext",
@@ -13,7 +18,6 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "traceResolution": false,
-    "listFilesOnly": false
     //     /* Module Resolution Interop Constraints */
     // "moduleResolution": "node",
     //     "isolatedModules": true,

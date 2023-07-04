@@ -1,6 +1,8 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
-  "include": ["./src"],
+  "include": [
+    "./src"
+  ],
   "exclude": [
     "out"
     // "**/*test.ts"
@@ -60,9 +62,15 @@
     "useDefineForClassFields": true,
     "assumeChangesOnlyAffectDirectDependencies": false,
     /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     /* Specify type package names to be included without being referenced in a source file. */
-    "types": ["node", "heft-jest"],
+    "types": [
+      "node",
+      "heft-jest"
+    ],
     /* Completeness */
     "skipDefaultLibCheck": false,
     "skipLibCheck": true,
@@ -73,7 +81,6 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "traceResolution": false,
-    "listFilesOnly": false,
     /* Type Checking */
     /* ALWAYS FALSE NEVER ALLOW-UNUSED-LABELS & ALLOW-UNREACHABLE-CODE FALSE!  */
     /* ALWAYS FALSE                                               ALWAYS FALSE */
