@@ -13,3 +13,6 @@ export type WithExpectedStats = WithExpected<{
 }>;
 
 export type ImageFilePathWithExpectedStats = WithExpectedStats & ImageFilePath;
+
+// import { stat } from 'node:fs/promises';
+// import type { ImageFilePath, ImageFilePathWithExpectedStats } from './types'; // Adjust the import path to where your types are defined

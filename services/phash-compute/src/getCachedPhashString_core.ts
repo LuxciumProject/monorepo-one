@@ -1,11 +1,14 @@
 import { RedisClientType } from 'redis';
 import type {
   DebugFlag,
+  ImageFilePath,
   ImageFilePathWithExpectedStats,
   ImageFileWithPHashString,
 } from './types';
 
 import { mixBases, mixExpected } from '@luxcium/object-with-expectations';
+import { stat } from 'node:fs/promises';
+import { normalize } from 'node:path';
 import { getBigStrPhashFromFile } from './getBigStrPHashFromFile';
 import { pHashGetLookUp } from './pHashGetLookUp';
 import { redisSetK } from './redisSetK';
@@ -27,9 +30,15 @@ export function getCachedPhashString_core(
   debug: DebugFlag = null
 ) {
   return async <T extends ImageFilePathWithExpectedStats>(
-    imageFilePath: T
+    imageFilePath: T | string
   ): Promise<T & ImageFileWithPHashString> => {
-    const { compatibleImagefilePath } = imageFilePath;
+    // Convert imageFilePath to ImageFilePathWithExpectedStats if it's a string imageFilePath
+    const normalizedImageFilePath =
+      typeof imageFilePath === 'string'
+        ? await getImageFilePathWithExpectedStats(imageFilePath)
+        : imageFilePath;
+
+    const { compatibleImagefilePath } = normalizedImageFilePath;
     const pathObj = {
       path: compatibleImagefilePath,
     };
@@ -42,10 +51,9 @@ export function getCachedPhashString_core(
       const lookup = { pHashString, pHashMethod };
 
       return {
-        ...mixBases<any, any, any, any>(imageFilePath, lookup), //
-        ...mixExpected<any, any>(imageFilePath, lookup),
+        ...mixBases<any, any, any, any>(normalizedImageFilePath, lookup), //
+        ...mixExpected<any, any>(normalizedImageFilePath, lookup),
       };
-      // return { ...joinPhashExpected(imageFilePath,  {pHashString, pHashMethod}) };
     }
 
     // Lookup if available from inside the cache
@@ -58,8 +66,8 @@ export function getCachedPhashString_core(
 
       // Then return from cache
       return {
-        ...mixBases<any, any, any, any>(imageFilePath, lookUP), //
-        ...mixExpected<any, any>(imageFilePath, lookUP),
+        ...mixBases<any, any, any, any>(normalizedImageFilePath, lookUP), //
+        ...mixExpected<any, any>(normalizedImageFilePath, lookUP),
       };
     } else {
       // Else calculate the value
@@ -77,8 +85,8 @@ export function getCachedPhashString_core(
           const lookup = { pHashString, pHashMethod };
 
           return {
-            ...mixBases<any, any, any, any>(imageFilePath, lookup), //
-            ...mixExpected<any, any>(imageFilePath, lookup),
+            ...mixBases<any, any, any, any>(normalizedImageFilePath, lookup), //
+            ...mixExpected<any, any>(normalizedImageFilePath, lookup),
           };
         }
       }
@@ -89,15 +97,30 @@ export function getCachedPhashString_core(
         );
 
       // Return the newly calculated value
-
       const pHashString = bigStr;
       const pHashMethod = null;
       const lookup = { pHashString, pHashMethod };
 
       return {
-        ...mixBases<any, any, any, any>(imageFilePath, lookup), //
-        ...mixExpected<any, any>(imageFilePath, lookup),
+        ...mixBases<any, any, any, any>(normalizedImageFilePath, lookup), //
+        ...mixExpected<any, any>(normalizedImageFilePath, lookup),
       };
     }
+  };
+}
+
+export async function getImageFilePathWithExpectedStats(
+  filePathOrObject: string | ImageFilePath
+): Promise<ImageFilePathWithExpectedStats> {
+  const compatibleImagefilePath =
+    typeof filePathOrObject === 'string'
+      ? normalize(filePathOrObject)
+      : filePathOrObject.compatibleImagefilePath;
+
+  return {
+    compatibleImagefilePath,
+    expected: {
+      stats: stat(compatibleImagefilePath),
+    },
   };
 }
