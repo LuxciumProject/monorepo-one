@@ -23,7 +23,7 @@ export async function processFiles(): Promise<void> {
   >[] = [...folders.scan()].map(async (filePath, index) => {
     const result = await phashCompute({
       compatibleImagefilePath: filePath,
-      expected: { stats: stat(filePath) },
+      expected: { stats: () => stat(filePath) },
     });
     console.log(index, result);
     return result;

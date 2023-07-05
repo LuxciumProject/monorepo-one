@@ -7,7 +7,7 @@ export function boxImageFileWithStats(
   return {
     compatibleImagefilePath,
     expected: {
-      stats: (async () => await stat(compatibleImagefilePath))(),
+      stats: () => stat(compatibleImagefilePath),
     },
   };
 }

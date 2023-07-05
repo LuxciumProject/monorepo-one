@@ -36,7 +36,7 @@ void (async function main() {
     const result = getPhashCompute(
       R,
       false
-    )({ compatibleImagefilePath: x, expected: { stats: stat(x) } });
+    )({ compatibleImagefilePath: x, expected: { stats: () => stat(x) } });
     console.log(y, await result);
     return [result];
   });
@@ -44,7 +44,7 @@ void (async function main() {
   await Promise.allSettled(
     results.map(async (str, i) => {
       const shifted = await (await str).shift();
-      await shifted?.expected.stats;
+      await shifted?.expected.stats();
       return console.log('str :>> ', shifted, '\n', shifted?.expected.stats, i);
     })
   );

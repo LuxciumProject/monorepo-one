@@ -9,7 +9,7 @@ export type WithExpected<T extends Object> = {
 };
 
 export type WithExpectedStats = WithExpected<{
-  stats: Promise<Stats>;
+  stats: () => Promise<Stats>;
 }>;
 
 export type ImageFilePathWithExpectedStats = WithExpectedStats & ImageFilePath;
