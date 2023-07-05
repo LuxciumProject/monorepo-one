@@ -161,7 +161,7 @@ echo 'Run hello-world to verify installation'
 printf "%*s\n" "$(tput cols)" "" | tr ' ' '='
 echo ''
 sudo systemctl status docker docker.socket containerd --no-pager
-sudo docker run hello-world && echo_E="\n${GREEN}―0K―${RESET}\n"
+sudo docker run hello-world && echo_E="\n― ${GREEN}0K${RESET} ―\n"
 # ――------------------------------------------------------------------
 printf "%*s\n" "$(tput cols)" "" | tr ' ' '-'
-echo "${echo_E}"
+echo -e "${echo_E}"

@@ -1,0 +1,146 @@
+bin@
+lib@
+lib32@
+lib64@
+libx32@
+sbin@
+src@
+swapfile
+
+
+(sudo du -sh -- /tmp/*/ | sort -h)
+(sudo du -sh -- /boot/*/ | sort -h)
+(sudo du -sh -- /home/*/ | sort -h)
+(sudo du -sh -- /snap/*/ | sort -h)
+(sudo du -sh -- /opt/*/ | sort -h)
+(sudo du -sh -- /etc/*/ | sort -h)
+(sudo du -sh -- /usr/*/ | sort -h)
+(sudo du -sh -- /var/*/ | sort -h)
+(sudo du -sh -- /home/luxcium/src/*/ | sort -h)
+
+
+
+(sudo du -sh -- /etc/ | sort -h)
+(sudo du -sh -- /boot/ | sort -h)
+(sudo du -sh -- /tmp/ | sort -h)
+(sudo du -sh -- /opt/ | sort -h)
+(sudo du -sh -- /src/ | sort -h)
+(sudo du -sh -- /snap/ | sort -h)
+(sudo du -sh -- /usr/ | sort -h)
+(sudo du -sh -- /var/ | sort -h)
+(sudo du -sh -- /home/ | sort -h)
+
+
+(sudo du -sh -- /bin/ | sort -h)
+(sudo du -sh -- /lib/ | sort -h)
+(sudo du -sh -- /lib32/ | sort -h)
+(sudo du -sh -- /lib64/ | sort -h)
+(sudo du -sh -- /libx32/ | sort -h)
+(sudo du -sh -- /sbin/ | sort -h)
+(sudo du -sh -- /src/ | sort -h)
+
+
+boot/
+cdrom/
+dev/
+etc/
+home/
+lost+found/
+media/
+mnt/
+opt/
+proc/
+root/
+run/
+snap/
+srv/
+swapfile
+sys/
+tmp/
+usr/
+var/
+
+1,1G    /bin/
+9,0G    /lib/
+83M     /lib32/
+4,1M    /lib64/
+86M     /libx32/
+74M     /sbin/
+8,4G    /src/
+
+
+
+cdrom/
+dev/
+media/
+mnt/
+proc/
+root/
+run/
+
+du -sh -- */ | sort -h  # Directories only
+
+sudo tar -zcvf /home/luxcium/etc-2022-10-28.tar.gz /etc
+(sudo tar -zcvf /home/luxcium/usr-2022-10-28.tar.gz /usr)
+
+
+(sudo du -sh -- backups/ | sort -h)
+(sudo du -sh -- BlackmagicDesign/ | sort -h)
+(sudo du -sh -- cache/ | sort -h)
+(sudo du -sh -- crash/ | sort -h)
+(sudo du -sh -- cudnn-local-repo-ubuntu2204-8.6.0.163/ | sort -h)
+(sudo du -sh -- games/ | sort -h)
+(sudo du -sh -- lib/ | sort -h)
+(sudo du -sh -- local/ | sort -h)
+(sudo du -sh -- log/ | sort -h)
+(sudo du -sh -- mail/ | sort -h)
+(sudo du -sh -- metrics/ | sort -h)
+(sudo du -sh -- opt/ | sort -h)
+(sudo du -sh -- snap/ | sort -h)
+(sudo du -sh -- spool/ | sort -h)
+(sudo du -sh -- www/ | sort -h)
+
+
+(sudo du -sh -- tmp/ | sort -h)
+(sudo du -sh -- lock@ | sort -h)
+(sudo du -sh -- run@ | sort -h)
+
+
+ (sudo du -sh --  /home/luxcium/src/modules/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/Redis-ImageScout-backup/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/svg-parser/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/Operator-Mono/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/PressStart2P/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/redis-json-directory-spider/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/FiraCodeiScript/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/100-days-of-code/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/autojump/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/Redis-ImageScout/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/regexp-tree/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/sharp-phash/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/color-math/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/second_iex/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/hexSorter/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/chroma.js/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/v4l2loopback/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/jacobo-test/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/iexjs/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/Input-Font/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/nestjs-colligated-docs/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/pHash/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/ckb-next/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/zsh/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/telegram-bot-api/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/nodegpu/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/rushstack-samples/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/node-redis/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/gcc-10.3.0/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/rushstack/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/tfjs/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/RedisJSON/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/temp/node_modules/  | sort -h)
+ (sudo du -sh --  /home/luxcium/src/nest/node_modules/  | sort -h)
+
+
+273M    rm -fr /home/luxcium/src/tfjs/node_modules/
+572M    rm -fr /home/luxcium/src/nest/node_modules/
