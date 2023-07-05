@@ -1,0 +1,44 @@
+Let's summarize our discussion so far, please use a descriptive and neutral tone, use the imperative form for the benefit of another instance of ChatGPT AI Agent.
+
+I need you to craft your AI Agent's Recap of Discussion. Now provide a detailed summary!
+
+[# Topic & Context]
+First start by stating the topic we are discussing, then provide a clear picture of the actual context. This should be detailed and precise.
+
+[## 1. Action Items]
+Give all action items related to our discussion, starting with the earliest part of the discussion and listing all the action items treated in the conversation so far.
+
+[## 2. Key Points]
+List all the key points, starting from our early discussion. This should reflect the evolution of the key elements and put the emphasis on the most recent key elements.
+
+[## 3. Contextual Information]
+Add all the contextual information that will be required to understand each of the action items and the key points that have been listed.
+
+[## 4. Next Steps]
+Explain what would be the next steps. Explain in great detail what the next session of the AI Assistant must know about the inferred next steps and also the agreed-upon next steps. Explain to the other AI Agent what the next steps are, "To continue the conversation, the next AI assistant should:"—that is, the steps that would need to be accomplished after addressing all the current or uncompleted action items and after completing all the key elements already agreed upon with your human user if any.
+
+[## Instruction for the User]
+"Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT. The AI Agent will be happy to continue our conversation where we left off."
+
+Optionally, summarize the elements of one or more of those additional sections [## Additional Information]:
+Assess if any additional sections are required, choose from these categories ([### <a. | b. | c. | ...> Sub Section Name>]):
+- Current user intent
+- Conversation history
+- User preferences
+- The timeline
+- Current topic or task
+- Feedback received
+- Sentiment analysis
+- Follow-up items
+- Current ChatGPT state
+- Is ChatGPT in Character
+- How Initial Prompt Shaped Conversation
+
+Collectively, all those sections you add, including the optional choices described above, will act as a checkpoint. They are intended to be copied and pasted into a new instance of ChatGPT so we can continue our conversation where we left off. Please make sure the four sections and optional sections include as many points, as many elements, as much detail as possible to ensure that the summary is easy to understand and can be used by anyone without any prior knowledge of our conversation.
+
+It is critical to use the imperative verbal form. Instruct giving directives in a confident manner. They will be used to address another instance of ChatGPT. All must be summarized in such a way that the next AI session must be able to perform the same tasks we are currently trying to accomplish now so that we could continue where we left off if we were to stop the conversation now and then continue later.
+
+After you have completed the summary and explained in detail what the next steps must be, you may choose to add any more information that you think would benefit the future session between your user and its future AI Agent. Think carefully about any missing insight or anecdotal information to add at the end of your report before you conclude.
+
+[## Instruction for the User]
+"Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT. The AI Agent will be happy to continue our conversation where we left off."
