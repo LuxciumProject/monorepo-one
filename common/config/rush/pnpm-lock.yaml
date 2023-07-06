@@ -625,6 +625,7 @@ importers:
       mapping-tools: workspace:*
       nodemon: ~2.0.22
       prettier: ~2.8.8
+      redis: ~4.6.7
       rimraf: ~5.0.0
       source-map-support: ~0.5.21
       ts-jest: ~29.1.1
@@ -642,6 +643,7 @@ importers:
       '@luxcium/restraining-zalgo': link:../../library/restraining-zalgo
       '@luxcium/scan-dirs': link:../../services/scan-directories
       mapping-tools: link:../../library/mapping-tools
+      redis: 4.6.7
       source-map-support: 0.5.21
     devDependencies:
       '@babel/core': 7.22.5
@@ -2133,7 +2135,7 @@ importers:
       jest: ~29.5.0
       nodemon: ~2.0.22
       prettier: ~2.8.8
-      redis: ~4.3.1
+      redis: ~4.6.7
       rimraf: ~5.0.0
       sharp: ~0.31.1
       sharp-phash: ~2.0.0
@@ -2151,7 +2153,7 @@ importers:
       '@luxcium/colors-tools': link:../../library/colors-tools
       '@luxcium/object-with-expectations': link:../../library/object-with-expectations
       '@luxcium/redis-services': link:../redis-services
-      redis: 4.3.1
+      redis: 4.6.7
       sharp: 0.31.3
       sharp-phash: 2.0.0_sharp@0.31.3
       source-map-support: 0.5.21
@@ -2255,7 +2257,7 @@ importers:
       jest: ~29.5.0
       nodemon: ~2.0.22
       prettier: ~2.8.8
-      redis: ~4.3.1
+      redis: ~4.6.7
       rimraf: ~5.0.0
       source-map-support: ~0.5.21
       ts-jest: ~29.1.1
@@ -2266,7 +2268,7 @@ importers:
       typescript: ~5.1.6
       webpack: ~5.88.1
     dependencies:
-      redis: 4.3.1
+      redis: 4.6.7
       source-map-support: 0.5.21
     devDependencies:
       '@babel/core': 7.22.5
@@ -6242,53 +6244,53 @@ packages:
       - supports-color
     dev: false
 
-  /@redis/bloom/1.0.2_@redis+client@1.3.0:
-    resolution: {integrity: sha512-EBw7Ag1hPgFzdznK2PBblc1kdlj5B5Cw3XwI9/oG7tSn85/HKy3X9xHy/8tm/eNXJYHLXHJL/pkwBpFMVVefkw==}
+  /@redis/bloom/1.2.0_@redis+client@1.5.8:
+    resolution: {integrity: sha512-HG2DFjYKbpNmVXsa0keLHp/3leGJz1mjh09f2RLGGLQZzSHpkmZWuwJbAvo3QcRY8p80m5+ZdXZdYOSBLlp7Cg==}
     peerDependencies:
       '@redis/client': ^1.0.0
     dependencies:
-      '@redis/client': 1.3.0
+      '@redis/client': 1.5.8
     dev: false
 
-  /@redis/client/1.3.0:
-    resolution: {integrity: sha512-XCFV60nloXAefDsPnYMjHGtvbtHR8fV5Om8cQ0JYqTNbWcQo/4AryzJ2luRj4blveWazRK/j40gES8M7Cp6cfQ==}
+  /@redis/client/1.5.8:
+    resolution: {integrity: sha512-xzElwHIO6rBAqzPeVnCzgvrnBEcFL1P0w8P65VNLRkdVW8rOE58f52hdj0BDgmsdOm4f1EoXPZtH4Fh7M/qUpw==}
     engines: {node: '>=14'}
     dependencies:
-      cluster-key-slot: 1.1.0
-      generic-pool: 3.8.2
+      cluster-key-slot: 1.1.2
+      generic-pool: 3.9.0
       yallist: 4.0.0
     dev: false
 
-  /@redis/graph/1.0.1_@redis+client@1.3.0:
-    resolution: {integrity: sha512-oDE4myMCJOCVKYMygEMWuriBgqlS5FqdWerikMoJxzmmTUErnTRRgmIDa2VcgytACZMFqpAOWDzops4DOlnkfQ==}
+  /@redis/graph/1.1.0_@redis+client@1.5.8:
+    resolution: {integrity: sha512-16yZWngxyXPd+MJxeSr0dqh2AIOi8j9yXKcKCwVaKDbH3HTuETpDVPcLujhFYVPtYrngSco31BUcSa9TH31Gqg==}
     peerDependencies:
       '@redis/client': ^1.0.0
     dependencies:
-      '@redis/client': 1.3.0
+      '@redis/client': 1.5.8
     dev: false
 
-  /@redis/json/1.0.4_@redis+client@1.3.0:
+  /@redis/json/1.0.4_@redis+client@1.5.8:
     resolution: {integrity: sha512-LUZE2Gdrhg0Rx7AN+cZkb1e6HjoSKaeeW8rYnt89Tly13GBI5eP4CwDVr+MY8BAYfCg4/N15OUrtLoona9uSgw==}
     peerDependencies:
       '@redis/client': ^1.0.0
     dependencies:
-      '@redis/client': 1.3.0
+      '@redis/client': 1.5.8
     dev: false
 
-  /@redis/search/1.1.0_@redis+client@1.3.0:
-    resolution: {integrity: sha512-NyFZEVnxIJEybpy+YskjgOJRNsfTYqaPbK/Buv6W2kmFNaRk85JiqjJZA5QkRmWvGbyQYwoO5QfDi2wHskKrQQ==}
+  /@redis/search/1.1.3_@redis+client@1.5.8:
+    resolution: {integrity: sha512-4Dg1JjvCevdiCBTZqjhKkGoC5/BcB7k9j99kdMnaXFXg8x4eyOIVg9487CMv7/BUVkFLZCaIh8ead9mU15DNng==}
     peerDependencies:
       '@redis/client': ^1.0.0
     dependencies:
-      '@redis/client': 1.3.0
+      '@redis/client': 1.5.8
     dev: false
 
-  /@redis/time-series/1.0.3_@redis+client@1.3.0:
-    resolution: {integrity: sha512-OFp0q4SGrTH0Mruf6oFsHGea58u8vS/iI5+NpYdicaM+7BgqBZH8FFvNZ8rYYLrUO/QRqMq72NpXmxLVNcdmjA==}
+  /@redis/time-series/1.0.4_@redis+client@1.5.8:
+    resolution: {integrity: sha512-ThUIgo2U/g7cCuZavucQTQzA9g9JbDDY2f64u3AbAoz/8vE2lt2U37LamDUVChhaDA3IRT9R6VvJwqnUfTJzng==}
     peerDependencies:
       '@redis/client': ^1.0.0
     dependencies:
-      '@redis/client': 1.3.0
+      '@redis/client': 1.5.8
     dev: false
 
   /@rushstack/eslint-config/3.3.2_iqf7tbmerllfqanu4l3d6aqdn4:
@@ -8996,8 +8998,8 @@ packages:
     engines: {node: '>=0.8'}
     dev: true
 
-  /cluster-key-slot/1.1.0:
-    resolution: {integrity: sha512-2Nii8p3RwAPiFwsnZvukotvow2rIHM+yQ6ZcBXGHdniadkYGZYiGmkHJIbZPIV9nfv7m/U1IPMVVcAhoWFeklw==}
+  /cluster-key-slot/1.1.2:
+    resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
     engines: {node: '>=0.10.0'}
     dev: false
 
@@ -10765,8 +10767,8 @@ packages:
       wide-align: 1.1.5
     dev: false
 
-  /generic-pool/3.8.2:
-    resolution: {integrity: sha512-nGToKy6p3PAbYQ7p1UlWl6vSPwfwU6TMSWK7TTu+WUY4ZjyZQGniGGt2oNVvyNSpyZYSB43zMXVLcBm08MTMkg==}
+  /generic-pool/3.9.0:
+    resolution: {integrity: sha512-hymDOu5B53XvN4QT9dBmZxPX4CWhBPPLguTZ9MMFeFa/Kg0xWVfylOVNlJji/E7yTZWFd/q9GO5TxDLq156D7g==}
     engines: {node: '>= 4'}
     dev: false
 
@@ -14129,15 +14131,15 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
-  /redis/4.3.1:
-    resolution: {integrity: sha512-cM7yFU5CA6zyCF7N/+SSTcSJQSRMEKN0k0Whhu6J7n9mmXRoXugfWDBo5iOzGwABmsWKSwGPTU5J4Bxbl+0mrA==}
+  /redis/4.6.7:
+    resolution: {integrity: sha512-KrkuNJNpCwRm5vFJh0tteMxW8SaUzkm5fBH7eL5hd/D0fAkzvapxbfGPP/r+4JAXdQuX7nebsBkBqA2RHB7Usw==}
     dependencies:
-      '@redis/bloom': 1.0.2_@redis+client@1.3.0
-      '@redis/client': 1.3.0
-      '@redis/graph': 1.0.1_@redis+client@1.3.0
-      '@redis/json': 1.0.4_@redis+client@1.3.0
-      '@redis/search': 1.1.0_@redis+client@1.3.0
-      '@redis/time-series': 1.0.3_@redis+client@1.3.0
+      '@redis/bloom': 1.2.0_@redis+client@1.5.8
+      '@redis/client': 1.5.8
+      '@redis/graph': 1.1.0_@redis+client@1.5.8
+      '@redis/json': 1.0.4_@redis+client@1.5.8
+      '@redis/search': 1.1.3_@redis+client@1.5.8
+      '@redis/time-series': 1.0.4_@redis+client@1.5.8
     dev: false
 
   /reflect-metadata/0.1.13:
