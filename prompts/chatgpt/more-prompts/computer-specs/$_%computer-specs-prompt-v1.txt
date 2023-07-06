@@ -115,6 +115,10 @@ Samsung SSD 980 PRO 1TB
 Samsung SSD 960 PRO 512GB
 b3:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller SM961/PM961/SM963
 
+WDC WDS250G2B0B-00YS70 is the sda
+WDC WD30EZRZ-00GXCB0 is the sdb
+ST2000DL001-9VT156  is the sdc
+
 !!? Memory Specifications
 Max Memory Size (dependent on memory type) 256 GB
 Memory Types DDR4-2933
