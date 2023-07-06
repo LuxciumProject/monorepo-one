@@ -21,5 +21,7 @@ fi
 sleep 2
 
 echo "redis-cli exists. Proceeding with command execution..."
+redis-cli -h localhost -p 6383 COMMAND list
+redis-cli -h localhost -p 6383 MODULE LIST
 echo 'Will now monitor:'
 redis-cli -p 6383 monitor
