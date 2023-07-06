@@ -1,6 +1,8 @@
 // UNIMPLEMENTED: Dummy redisCreateClient function as a placeholder  !
 /** @deprecated placeholder is unimplemented */
-const redisCreateClient: any = () => null;
+const redisCreateClient: any = () => {
+  throw null;
+};
 // HACK: place holder code and dummy connector                       !
 const logInfo = console.log;
 const logError = console.error;

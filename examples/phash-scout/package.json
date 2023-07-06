@@ -1,6 +1,6 @@
 {
   "name": "phash-scout-examples",
-  "version": "1.0.0",
+  "version": "1.2.3",
   "description": "",
   "main": "out/index.js",
   "types": "out/typings/index.d.ts",
@@ -12,6 +12,17 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "@luxcium/phash-compute": "workspace:*",
+    "@luxcium/redis-services": "workspace:*",
+    "@luxcium/scan-dirs": "workspace:*",
+    "@luxcium/boxed-list": "workspace:*",
+    "source-map-support": "~0.5.21",
+    "@luxcium/object-with-expectations": "workspace:*",
+    "mapping-tools": "workspace:*",
+    "@luxcium/restraining-zalgo": "workspace:*",
+    "redis": "~4.6.7"
+  },
   "devDependencies": {
     "@rushstack/heft-jest-plugin": "~0.7.11",
     "@rushstack/heft": "~0.56.0",
@@ -64,16 +75,5 @@
     "@babel/plugin-transform-react-jsx": "~7.22.5",
     "tslib": "~2.6.0",
     "@types/jest": "~29.5.2"
-  },
-  "dependencies": {
-    
-    "@luxcium/phash-compute": "workspace:*",
-    "@luxcium/redis-services": "workspace:*",
-    "@luxcium/scan-dirs": "workspace:*",
-    "@luxcium/boxed-list": "workspace:*",
-    "source-map-support": "~0.5.21",
-    "@luxcium/object-with-expectations": "workspace:*",
-    "mapping-tools": "workspace:*",
-    "@luxcium/restraining-zalgo": "workspace:*"
   }
 }
