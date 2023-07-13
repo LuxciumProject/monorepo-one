@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../layout/Button';
 import Card from '../layout/Card';
 
-import css from './AddUser.module.css';
+import css from './AddUser.module.scss'; // works when using .css extension
 export const AddUser = (props: any) => {
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredAge, setEnteredAge] = useState('');

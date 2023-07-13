@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../layout/Card';
 
-import css from './UserList.module.scss';
+import css from './UserList.module.css';
 export const UserList = (props: any) => {
   return (
     <Card className={css.users}>

@@ -1,12 +1,20 @@
 import React from 'react';
-// import ColorCard from './components/ColorCard';
 import AddUser from './components/Users/AddUser';
 
-import './App.scss';
+import './App.css';
 
-// const hostName = '';
 
 function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <AddUser />
+      </header>
+    </div>
+  );
+}
+
+export default App;
   // const [fetchedData, setFetchedData] = useState([] as any[]);
 
   // function fetchDataHandler() {
@@ -15,20 +23,10 @@ function App() {
   //     .then(data => setFetchedData([data]));
   // }
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        {/* <ColorCard property="editorError.border" hex="#FFFFFF" />
-        <button onClick={fetchDataHandler}>Test Fetch</button>
-        <ul>
-          {fetchedData.map((data, index) => (
-            <li key={index}> {data} </li>
-          ))}
-        </ul>{' '} */}
-        <AddUser />
-      </header>
-    </div>
-  );
-}
-
-export default App;
+        // {/* <ColorCard property="editorError.border" hex="#FFFFFF" />
+        // <button onClick={fetchDataHandler}>Test Fetch</button>
+        // <ul>
+          // {fetchedData.map((data, index) => (
+            // <li key={index}> {data} </li>
+          // ))}
+        // </ul>{' '} */}
