@@ -385,11 +385,13 @@
         "backend"
       ]
     },
-    // {
-    //   "packageName": "home-react",
-    //   "projectFolder": "frontend/home",
-    //   "tags": ["frontend"]
-    // }, // main-react
+    {
+      "packageName": "home-nextjs",
+      "projectFolder": "frontend/home",
+      "tags": [
+        "frontend"
+      ]
+    }, // main-react
     // {
     //   "packageName": "main-react",
     //   "projectFolder": "frontend/main-react",

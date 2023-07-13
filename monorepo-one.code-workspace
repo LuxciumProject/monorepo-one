@@ -40,10 +40,10 @@
       "name": "  ↓💻👨‍💻 FRONTEND",
       "path": "frontend"
     },
-    // {
-    //   "name": "          💻👨‍💻 💅 home",
-    //   "path": "frontend/home"
-    // },
+    {
+      "name": "          💻👨‍💻 💅 home",
+      "path": "frontend/home"
+    },
     // {
     //   "name": "          💻👨‍💻 main-react",
     //   "path": "frontend/main-react"
@@ -1101,7 +1101,6 @@
     "eslint.quiet": true,
     "eslint.format.enable": true,
     "eslint.lintTask.enable": false,
-    "eslint.packageManager": "pnpm",
     // #endregion: ESLINT                                            !
     /*
   |-····-----------------------------------------------------------··-|
@@ -3023,20 +3022,7 @@
       "RpcWorkerPool",
       "scripts"
     ],
-    "workbench.colorCustomizations": {
-      "activityBar.activeBackground": "#6a2bd499",
-      "activityBar.background": "#6a2bd499",
-      "activityBar.foreground": "#e7e7e7",
-      "activityBar.inactiveForeground": "#e7e7e799",
-      "activityBarBadge.background": "#d46a2b",
-      "activityBarBadge.foreground": "#15202b",
-      "sash.hoverBorder": "#6a2bd499",
-      "sideBar.border": "#6a2bd499",
-      "tab.activeBorder": "#6a2bd499",
-      "problemsErrorIcon.foreground": "#ff3366",
-      "problemsInfoIcon.foreground": "#ffcc44ee",
-      "problemsWarningIcon.foreground": "#ccff44"
-    },
+    "workbench.colorCustomizations": {},
     "peacock.color": "#5522aa99",
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -3061,6 +3047,296 @@
     },
     "[python]": {
       "editor.defaultFormatter": "ms-python.autopep8"
-    }
+    },
+    "redisXplorer.config": {
+      "profiles": [],
+      "scanLimit": 200
+    },
+    "redis-console.host": "localhost",
+    "redis-console.port": 6383,
+    "redis-console.password": "",
+    "redis-console.hostIpFamily": 4,
+    "ColorfulMonorepo.workspaces.collection": [
+      {
+        "path": "/projects/monorepo-one",
+        "packageName": "monorepo-one",
+        "label": "monorepo-one",
+        "foreground": "#ffffff",
+        "background": "#9e0317"
+      },
+      {
+        "path": "/projects/monorepo-one/prompts",
+        "packageName": "prompts",
+        "label": "prompts",
+        "foreground": "#000000",
+        "background": "#d59376"
+      },
+      {
+        "path": "/projects/monorepo-one/prompts/typing_prompter",
+        "packageName": "typing_prompter",
+        "label": "typing_prompter",
+        "foreground": "#000000",
+        "background": "#ced41e"
+      },
+      {
+        "path": "/projects/monorepo-one/prompts/chatgpt",
+        "packageName": "chatgpt",
+        "label": "chatgpt",
+        "foreground": "#000000",
+        "background": "#8cbe40"
+      },
+      {
+        "path": "/projects/monorepo-one/prompts/chatgpt/more-prompts",
+        "packageName": "more-prompts",
+        "label": "more-prompts",
+        "foreground": "#000000",
+        "background": "#36a9ca"
+      },
+      {
+        "path": "/projects/monorepo-one/private",
+        "packageName": "private",
+        "label": "private",
+        "foreground": "#000000",
+        "background": "#c57cce"
+      },
+      {
+        "path": "/projects/monorepo-one/backend",
+        "packageName": "backend",
+        "label": "backend",
+        "foreground": "#ffffff",
+        "background": "#9e767a"
+      },
+      {
+        "path": "/projects/monorepo-one/backend/api",
+        "packageName": "api-server",
+        "label": "🍀  api-server",
+        "foreground": "#000000",
+        "background": "#49b867"
+      },
+      {
+        "path": "/projects/monorepo-one/backend/scratch",
+        "packageName": "scratch-server",
+        "label": "🍀  scratch-server",
+        "foreground": "#000000",
+        "background": "#e4e7bf"
+      },
+      {
+        "path": "/projects/monorepo-one/frontend",
+        "packageName": "frontend",
+        "label": "frontend",
+        "foreground": "#ffffff",
+        "background": "#1840fb"
+      },
+      {
+        "path": "/projects/monorepo-one/library",
+        "packageName": "library",
+        "label": "library",
+        "foreground": "#ffffff",
+        "background": "#b4602f"
+      },
+      {
+        "path": "/projects/monorepo-one/library/mapping-tools",
+        "packageName": "mapping-tools",
+        "label": "📦  mapping-tools",
+        "foreground": "#ffffff",
+        "background": "#a14519"
+      },
+      {
+        "path": "/projects/monorepo-one/library/bigintString",
+        "packageName": "@luxcium/bigintstring",
+        "label": "📦  @luxcium/bigintstring",
+        "foreground": "#000000",
+        "background": "#96e2bc"
+      },
+      {
+        "path": "/projects/monorepo-one/library/boxed-list",
+        "packageName": "@luxcium/boxed-list",
+        "label": "📦  @luxcium/boxed-list",
+        "foreground": "#ffffff",
+        "background": "#83008a"
+      },
+      {
+        "path": "/projects/monorepo-one/library/colors-tools",
+        "packageName": "@luxcium/colors-tools",
+        "label": "📦  @luxcium/colors-tools",
+        "foreground": "#ffffff",
+        "background": "#452fe8"
+      },
+      {
+        "path": "/projects/monorepo-one/library/human-size",
+        "packageName": "@luxcium/human-size",
+        "label": "📦  @luxcium/human-size",
+        "foreground": "#ffffff",
+        "background": "#2686ed"
+      },
+      {
+        "path": "/projects/monorepo-one/library/object-with-expectations",
+        "packageName": "@luxcium/object-with-expectations",
+        "label": "📦  @luxcium/object-with-expectations",
+        "foreground": "#000000",
+        "background": "#d7d3be"
+      },
+      {
+        "path": "/projects/monorepo-one/library/parallel-mapper",
+        "packageName": "@luxcium/parallel-mapper",
+        "label": "📦  @luxcium/parallel-mapper",
+        "foreground": "#000000",
+        "background": "#789e33"
+      },
+      {
+        "path": "/projects/monorepo-one/library/restraining-zalgo",
+        "packageName": "@luxcium/restraining-zalgo",
+        "label": "📦  @luxcium/restraining-zalgo",
+        "foreground": "#ffffff",
+        "background": "#e026bd"
+      },
+      {
+        "path": "/projects/monorepo-one/library/tools",
+        "packageName": "@luxcium/tools",
+        "label": "📦  @luxcium/tools",
+        "foreground": "#ffffff",
+        "background": "#3c1737"
+      },
+      {
+        "path": "/projects/monorepo-one/library/typescript",
+        "packageName": "typescript",
+        "label": "typescript",
+        "foreground": "#000000",
+        "background": "#3ec2db"
+      },
+      {
+        "path": "/projects/monorepo-one/services",
+        "packageName": "services",
+        "label": "services",
+        "foreground": "#000000",
+        "background": "#96aec0"
+      },
+      {
+        "path": "/projects/monorepo-one/services/image-scout",
+        "packageName": "image-scout",
+        "label": "image-scout",
+        "foreground": "#ffffff",
+        "background": "#389938"
+      },
+      {
+        "path": "/projects/monorepo-one/services/questrade-ts",
+        "packageName": "questrade-ts",
+        "label": "questrade-ts",
+        "foreground": "#000000",
+        "background": "#a0ce93"
+      },
+      {
+        "path": "/projects/monorepo-one/services/rpc-worker-pool",
+        "packageName": "@luxcium/rpc-worker-pool",
+        "label": "❔  @luxcium/rpc-worker-pool",
+        "foreground": "#ffffff",
+        "background": "#d225ef"
+      },
+      {
+        "path": "/projects/monorepo-one/services/mongo-service",
+        "packageName": "mongo-service",
+        "label": "❔  mongo-service",
+        "foreground": "#000000",
+        "background": "#cc943a"
+      },
+      {
+        "path": "/projects/monorepo-one/services/phash-compute",
+        "packageName": "@luxcium/phash-compute",
+        "label": "❔  @luxcium/phash-compute",
+        "foreground": "#000000",
+        "background": "#1cdc93"
+      },
+      {
+        "path": "/projects/monorepo-one/services/redis-services",
+        "packageName": "@luxcium/redis-services",
+        "label": "❔  @luxcium/redis-services",
+        "foreground": "#ffffff",
+        "background": "#4a45b4"
+      },
+      {
+        "path": "/projects/monorepo-one/services/scan-directories",
+        "packageName": "@luxcium/scan-dirs",
+        "label": "❔  @luxcium/scan-dirs",
+        "foreground": "#ffffff",
+        "background": "#9c07c4"
+      },
+      {
+        "path": "/projects/monorepo-one/services/service-one",
+        "packageName": "service-one",
+        "label": "❔  service-one",
+        "foreground": "#000000",
+        "background": "#73aeb6"
+      },
+      {
+        "path": "/projects/monorepo-one/services/service-two",
+        "packageName": "service-two",
+        "label": "❔  service-two",
+        "foreground": "#ffffff",
+        "background": "#4a63b5"
+      },
+      {
+        "path": "/projects/monorepo-one/examples",
+        "packageName": "examples",
+        "label": "examples",
+        "foreground": "#000000",
+        "background": "#c4d909"
+      },
+      {
+        "path": "/projects/monorepo-one/examples/template",
+        "packageName": "template-example",
+        "label": "❔  template-example",
+        "foreground": "#000000",
+        "background": "#e88ac9"
+      },
+      {
+        "path": "/projects/monorepo-one/examples/open-ai",
+        "packageName": "open-ai",
+        "label": "❔  open-ai",
+        "foreground": "#000000",
+        "background": "#adaae2"
+      },
+      {
+        "path": "/projects/monorepo-one/examples/gpu-stuff",
+        "packageName": "gpu-stuff",
+        "label": "❔  gpu-stuff",
+        "foreground": "#ffffff",
+        "background": "#cb324c"
+      },
+      {
+        "path": "/projects/monorepo-one/examples/playground",
+        "packageName": "playground-example",
+        "label": "❔  playground-example",
+        "foreground": "#ffffff",
+        "background": "#0a3d3c"
+      },
+      {
+        "path": "/projects/monorepo-one/examples/node-js",
+        "packageName": "node-js-example",
+        "label": "❔  node-js-example",
+        "foreground": "#000000",
+        "background": "#49c880"
+      },
+      {
+        "path": "/projects/monorepo-one/examples/phash-scout",
+        "packageName": "phash-scout-examples",
+        "label": "❔  phash-scout-examples",
+        "foreground": "#ffffff",
+        "background": "#b92775"
+      },
+      {
+        "path": "/projects/monorepo-one/examples/typescript",
+        "packageName": "typescript",
+        "label": "typescript",
+        "foreground": "#000000",
+        "background": "#87d434"
+      },
+      {
+        "path": "/projects/monorepo-one/scripts",
+        "packageName": "scripts",
+        "label": "scripts",
+        "foreground": "#000000",
+        "background": "#e3c658"
+      }
+    ]
   }
 }
