@@ -16,17 +16,87 @@ export type RedisJSON =
   | RedisJSONArray
   | RedisJSONObject;
 
+interface NX {
+  NX: true;
+}
+
+interface XX {
+  XX: true;
+}
+interface GetOptions {
+  path?: string | Array<string>;
+  INDENT?: string;
+  NEWLINE?: string;
+  SPACE?: string;
+  NOESCAPE?: true;
+}
+type RESPReply = Array<string | number | RESPReply>;
+type RedisCommandArguments = Array<RedisCommandArgument> & {
+  preserve?: unknown;
+};
+type RedisCommandArgument = string | Buffer;
+type AppendArguments = [key: string, append: string];
+
+type AppendWithPathArguments = [key: string, path: string, append: string];
+
 /**
  * A Redis client that supports the `send_command` method.
  */
 export type RedisClient = {
   json: {
-    arrAppend: (
+    ARRAPPEND: (key: string, path: string, ...jsons: RedisJSON[]) => string[];
+    ARRINDEX: (
       key: string,
       path: string,
-      ...jsons: Array<RedisJSON>
-    ) => Array<string>;
+      json: RedisJSON,
+      start?: number,
+      stop?: number
+    ) => string[];
+    ARRINSERT: (
+      key: string,
+      path: string,
+      index: number,
+      ...jsons: RedisJSON[]
+    ) => string[];
+    ARRLEN: (key: string, path?: string) => string[];
+    ARRPOP: (
+      key: string,
+      path?: string,
+      index?: number
+    ) => (null | RedisJSON)[];
+    ARRTRIM: (
+      key: string,
+      path: string,
+      start: number,
+      stop: number
+    ) => string[];
+    DEBUG_MEMORY: (key: string, path?: string) => number;
+    DEL: (key: string, path?: string) => number;
+    FORGET: (key: string, path?: string) => number;
+    GET: (key: string, options?: GetOptions) => RedisCommandArguments;
+    MGET: (keys: string[], path: string) => string[];
+    NUMINCRBY: (key: string, path: string, by: number) => string[];
+    NUMMULTBY: (key: string, path: string, by: number) => string[];
+    OBJKEYS: (key: string, path?: string) => string[];
+    OBJLEN: (key: string, path?: string) => string[];
+    RESP: (key: string, path?: string) => RESPReply;
+    SET: (
+      key: string,
+      path: string,
+      json: RedisJSON,
+      options?: NX | XX
+    ) => string[];
+    STRAPPEND: (...args: AppendArguments | AppendWithPathArguments) => string[];
+    STRLEN: (key: string, path?: string) => string[];
+    TYPE: (key: string, path?: string) => string[];
   };
+  // json: {
+  //   arrAppend: (
+  //     key: string,
+  //     path: string,
+  //     ...jsons: Array<RedisJSON>
+  //   ) => Array<string>;
+  // };
   send_command: <R>(
     command: string,
     args: Array<string | number>,
@@ -34,7 +104,59 @@ export type RedisClient = {
   ) => Promise<R>;
   close?: () => Promise<void>;
 };
-
+export interface RedisJsonCommands {
+  json: {
+    arrAppend(key: string, path: string, json: object): Promise<number>;
+    arrIndex(
+      key: string,
+      path: string,
+      jsonScalar: any,
+      optionalStartAndStop?: [number, number]
+    ): Promise<number>;
+    arrInsert(
+      key: string,
+      path: string,
+      index: number,
+      jsonArray: any[]
+    ): Promise<number>;
+    arrLen(key: string, path?: string): Promise<number>;
+    arrPop(key: string, path?: string): Promise<any>;
+    arrTrim(
+      key: string,
+      path: string,
+      start: number,
+      stop: number
+    ): Promise<number>;
+    clear(key: string, path?: string): Promise<boolean>;
+    debug(subcommand: string, key: string, path?: string): Promise<any>; // It's not clear what this command returns
+    del(key: string, path: string): Promise<number>;
+    get(key: string, path?: string): Promise<any>; // It returns the JSON value at path in key
+    merge(
+      key: string,
+      path: string,
+      json: object,
+      ...otherKeysAndJson: any[]
+    ): Promise<number>;
+    mget(keys: string[], path?: string): Promise<any[]>;
+    mset(keyPathJson: [string, string, object][]): Promise<'OK'>;
+    numIncrBy(key: string, path: string, number: number): Promise<number>;
+    numMultBy(key: string, path: string, number: number): Promise<number>;
+    objKeys(key: string, path?: string): Promise<string[]>;
+    objLen(key: string, path?: string): Promise<number>;
+    resp(key: string, path?: string): Promise<any>; // It's not clear what this command returns
+    set(
+      key: string,
+      path: string,
+      json: object,
+      optionalConditions?: any[],
+      optionalOptions?: any[]
+    ): Promise<'OK'>;
+    strAppend(key: string, path: string, jsonString: string): Promise<number>;
+    strlen(key: string, path: string): Promise<number>;
+    toggle(key: string, path: string): Promise<any[]>; // It's not clear what this command returns
+    type(key: string, path: string): Promise<string>;
+  };
+}
 // JSON.arrAppend
 /**
  * Home
@@ -169,7 +291,7 @@ export function arrAppend(
   value: string,
   client: RedisClient
 ) {
-  return client.json.arrAppend(key, path, value);
+  return client.json.ARRAPPEND(key, path, value);
 }
 
 /*

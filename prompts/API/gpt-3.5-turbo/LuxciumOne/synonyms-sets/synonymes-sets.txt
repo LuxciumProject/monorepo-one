@@ -1,6 +1,6 @@
 TO MY DEAR AI AGENT:
 
- please list synonyms that goy beyond the word (or words) listed below listing also synonyms that may relate to the abstract concept of the word using analogy, metaphor or images that are similar to the word conceptually:
+ please list synonyms that go beyond the word (or words) listed below listing also synonyms that may relate to the abstract concept of the word using analogy, metaphor or images that are similar to the word conceptually:
 
 [allegory, parabole, fable]
 
