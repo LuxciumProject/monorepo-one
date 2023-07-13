@@ -24,8 +24,8 @@
     "redis": "~4.6.7"
   },
   "devDependencies": {
-    "@rushstack/heft-jest-plugin": "~0.7.11",
-    "@rushstack/heft": "~0.56.0",
+    "@rushstack/heft-jest-plugin": "~0.7.15",
+    "@rushstack/heft": "~0.57.0",
     "@types/eslint-config-prettier": "~6.11.0",
     "@types/eslint-plugin-prettier": "~3.1.0",
     "@typescript-eslint/eslint-plugin": "~5.60.1",
