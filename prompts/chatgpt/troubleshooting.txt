@@ -105,19 +105,21 @@ Thank you for providing more details about the issue. It seems like your system'
 
 Check system logs:
 When the issue occurs, try checking the system logs for any error messages or warnings that might be related to the problem. You can use the following command to check the logs:
-css
+
 Copy code
 sudo journalctl -p err -b
 This command will display the error messages since the last boot. Look for any messages related to the NVMe drive or the file system.
 
 Check kernel logs:
 To check the kernel logs for any I/O errors or issues with the NVMe drive, use the following command:
-perl
+
+
 Copy code
 dmesg | grep -i "nvme\|error\|warn"
 Monitor drive temperature and health:
 Monitor your NVMe drive's temperature and health status to see if there are any issues. You can use the smartctl tool from the smartmontools package to do this:
-bash
+
+
 Copy code
 sudo smartctl -a /dev/nvme0
 Replace /dev/nvme0 with the correct device path for your NVMe drive. If you don't have smartmontools installed, you can install it using:
@@ -327,17 +329,8 @@ This command will display a list of block devices with their name, size, filesys
 
 For example, the output might look like:
 
-bash
-Copy code
-NAME        SIZE FSTYPE MOUNTPOINT   MODEL
-nvme0n1     1T                        Samsung SSD 970
-├─nvme0n1p1 500M vfat   /boot/efi
-├─nvme0n1p2 100G btrfs  /            (system partition)
-├─nvme0n1p3 100G btrfs  /home
-└─nvme0n1p4 800G btrfs  /data
-nvme1n1     500G                      Crucial MX500
-└─nvme1n1p1 500G ext4   /mnt/backup
-In this example, nvme0n1 is a 1TB Samsung SSD 970 with four partitions, and nvme1n1 is a 500GB Crucial MX500 SSD with one partition.
+Shall be: « Samsung SSD 980 PRO 1TB »
+Shall be: « Samsung SSD 960 PRO 512GB »
 
 You can also use the df command to display disk space usage for each mounted filesystem:
 

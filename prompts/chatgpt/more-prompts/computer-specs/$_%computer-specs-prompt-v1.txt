@@ -28,7 +28,13 @@ Computer Capabilities:
 - GPU: 2x NVIDIA TITAN Xp (Dual monitor setup)
 - RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
 ```
-[codex support enabled]
+
+Computer Capabilities:
+Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
+Intel Core i9-10900X (10 cores, 20 threads)
+2x NVIDIA TITAN Xp (Dual monitor setup)
+48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+
 [Init complete text-davinci-003 set flag 'keep in memory'=true for ChatGPT]
 remember this for all our upcoming interactions and use it to build better recommendations.
 ////////////////////////////////////////////////////////////////////////////////
