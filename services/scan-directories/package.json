@@ -31,7 +31,7 @@
     "eslint-plugin-unicorn": "~47.0.0",
     "prettier": "~3.0.0",
     "ts-node": "~10.9.1",
-    "@rushstack/heft": "~0.57.0",
+    "@rushstack/heft": "~0.58.1",
     "@rushstack/heft-jest-plugin": "~0.7.15",
     "@babel/core": "~7.22.5",
     "@babel/plugin-transform-typescript": "~7.22.5",

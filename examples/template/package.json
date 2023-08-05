@@ -15,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@rushstack/heft-jest-plugin": "~0.7.15",
-    "@rushstack/heft": "~0.57.0",
+    "@rushstack/heft": "~0.58.1",
     "@types/eslint-config-prettier": "~6.11.0",
     "@types/eslint-plugin-prettier": "~3.1.0",
     "@typescript-eslint/eslint-plugin": "~5.60.1",
