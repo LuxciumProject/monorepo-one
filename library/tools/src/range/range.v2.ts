@@ -1,3 +1,7 @@
+export const range_ = (x: number, y: number) => {
+  const res = Array.from(Array(y).keys()).slice(x);
+  return res;
+};
 /**
  * Returns an array of numbers within the given range, with the specified step size.
  *

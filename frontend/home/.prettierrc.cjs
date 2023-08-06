@@ -1,5 +1,6 @@
 // Documentation for this file: https://prettier.io/en/configuration.html
 module.exports = {
+  tailwindConfig: './tailwind.config.js',
   plugins: [require('prettier-plugin-tailwindcss')],
   printWidth: 80,
   proseWrap: 'preserve',
@@ -20,57 +21,3 @@ module.exports = {
   htmlWhitespaceSensitivity: 'css',
   semi: true,
 };
-
-/*
-void {
-  insertPragma: false,
-  requirePragma: false,
-  editorconfig: true,
-  endOfLine: 'lf',
-  tabWidth: 2,
-  useTabs: false,
-  printWidth: 80,
-  proseWrap: 'preserve',
-  quoteProps: 'as-needed',
-  singleQuote: true,
-  jsxSingleQuote: false,
-  trailingComma: 'es5',
-  arrowParens: 'avoid',
-  bracketSameLine: false,
-  bracketSpacing: true,
-  embeddedLanguageFormatting: 'auto',
-  htmlWhitespaceSensitivity: 'css',
-  overrides: [
-    {
-      files: [],
-      options: {
-        printWidth: 120,
-        proseWrap: 'never',
-      },
-    },
-    {
-      files: '*.js',
-      options: {
-        parser: 'typescript',
-      },
-    },
-  ],
-  // overrides: [
-  //   {
-  //     files: [],
-  //     options: {
-  //       printWidth: 120,
-  //       proseWrap: 'never',
-  //     },
-  //   },
-  //   {
-  //     files: '*.js',
-  //     options: {
-  //       parser: 'typescript',
-  //     },
-  //   },
-  // ],
-  semi: true,
-};
-
- */
