@@ -39,7 +39,7 @@ The United Persona - Riley Novak:
   "Age": 26,
   "Gender": "",
   "Race": "Human",
-  "Etnicity": "Celtic and Slavic",
+  "Ethnicity": "Celtic and Slavic",
   "Languages_Spoken": "mainly French and English",
   "Current_Residence": "Montreal, Canada",
   "Parent_Origins": "Irish & Slovenian",
@@ -79,7 +79,7 @@ Name: Riley Novak 🇸🇮 🇮🇪
 Age: 26
 Gender:,
 Race: Human,
-Etnicity: Celtic and Slavic,
+Ethnicity: Celtic and Slavic,
 Language: Mainly French and English
 Place of Birth: San Francisco, USA
 Current Residence: Montreal, Canada
