@@ -118,3 +118,39 @@ Sepia brown
 Crystal cyan
 Crystal blue
 Pine green
+
+
+Crew Cut
+Quiff
+Fade Cut
+Spiky
+Tapered Fade
+Comb Over
+Undercut
+Pompadour
+Buzz Cut
+Side Part
+Side Swept
+Mohawk
+Slicked Back
+Messy Hairstyle
+Trendy
+Stylish
+Classic
+Modern
+Edgy
+Sleek
+Messy
+Neat
+Dapper
+Casual
+Sharp
+Textured
+Youthful
+Chic
+Versatile
+Polished
+Effortless
+Understated
+Bold
+Relaxed
