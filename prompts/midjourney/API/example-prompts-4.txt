@@ -1,0 +1,179 @@
+
+/imagine prompt:a young person with a hoodie looking at the traffic in a small town --raw --s 100
+/imagine prompt:in a small town, looking at the traffic, a young person with a hoodie --raw --s 100
+
+/imagine prompt:a young evilcore person with a evilcore hoodie looking at the evilcore traffic in a small evilcore town --raw --s 100
+
+/imagine prompt:Abstract landscape
+/imagine prompt:Renaissance portrait
+/imagine prompt:Surreal cityscape
+/imagine prompt:Still life with flowers
+/imagine prompt:Mythical creature
+/imagine prompt:Futuristic architecture
+
+/imagine prompt:Abstract landscape acherontia
+/imagine prompt:Renaissance portrait acherontia
+/imagine prompt:Surreal cityscape acherontia
+/imagine prompt:Still life with flowers acherontia
+/imagine prompt:Mythical creature acherontia
+/imagine prompt:Futuristic architecture acherontia
+
+/imagine prompt:colored acherontia
+/imagine prompt:coloured acherontia
+
+/imagine prompt:cinematic photo of a Sunflower yellow colored acherontia
+/imagine prompt:cinematic photo of a Crimson red colored acherontia
+/imagine prompt:cinematic photo of a Electric purple colored acherontia
+/imagine prompt:cinematic photo of a Charcoal grey colored acherontia
+/imagine prompt:cinematic photo of a Tangerine orange colored acherontia
+/imagine prompt:cinematic photo of a Fuchsia magenta colored acherontia
+/imagine prompt:cinematic photo of a Ocean teal colored acherontia
+/imagine prompt:cinematic photo of a Bubblegum pink colored acherontia
+/imagine prompt:cinematic photo of a Chestnut brown colored acherontia
+/imagine prompt:cinematic photo of a Aqua cyan colored acherontia
+/imagine prompt:cinematic photo of a Midnight blue colored acherontia
+/imagine prompt:cinematic photo of a Emerald green colored acherontia
+/imagine prompt:cinematic photo of a Canary yellow colored acherontia
+/imagine prompt:cinematic photo of a Ruby red colored acherontia
+/imagine prompt:cinematic photo of a Pastel purple colored acherontia
+/imagine prompt:cinematic photo of a Ash grey colored acherontia
+/imagine prompt:cinematic photo of a Burnt orange colored acherontia
+/imagine prompt:cinematic photo of a Deep magenta colored acherontia
+/imagine prompt:cinematic photo of a Peacock teal colored acherontia
+/imagine prompt:cinematic photo of a Blush pink colored acherontia
+/imagine prompt:cinematic photo of a Chocolate brown colored acherontia
+/imagine prompt:cinematic photo of a Electric cyan colored acherontia
+/imagine prompt:cinematic photo of a Sky blue colored acherontia
+/imagine prompt:cinematic photo of a Moss green colored acherontia
+/imagine prompt:cinematic photo of a Lemon yellow colored acherontia
+/imagine prompt:cinematic photo of a Scarlet red colored acherontia
+/imagine prompt:cinematic photo of a Deep purple colored acherontia
+/imagine prompt:cinematic photo of a Slate grey colored acherontia
+/imagine prompt:cinematic photo of a Coral orange colored acherontia
+/imagine prompt:cinematic photo of a Berry magenta colored acherontia
+/imagine prompt:cinematic photo of a Turquoise teal colored acherontia
+/imagine prompt:cinematic photo of a Rose pink colored acherontia
+/imagine prompt:cinematic photo of a Mocha brown colored acherontia
+/imagine prompt:cinematic photo of a Sky cyan colored acherontia
+/imagine prompt:cinematic photo of a Royal blue colored acherontia
+/imagine prompt:cinematic photo of a Jade green colored acherontia
+/imagine prompt:cinematic photo of a Goldenrod yellow colored acherontia
+/imagine prompt:cinematic photo of a Brick red colored acherontia
+/imagine prompt:cinematic photo of a Vibrant purple colored acherontia
+/imagine prompt:cinematic photo of a Silver grey colored acherontia
+/imagine prompt:cinematic photo of a Apricot orange colored acherontia
+/imagine prompt:cinematic photo of a Orchid magenta colored acherontia
+/imagine prompt:cinematic photo of a Deep teal colored acherontia
+/imagine prompt:cinematic photo of a Flamingo pink colored acherontia
+/imagine prompt:cinematic photo of a Sienna brown colored acherontia
+/imagine prompt:cinematic photo of a Bright cyan colored acherontia
+/imagine prompt:cinematic photo of a Teal blue colored acherontia
+/imagine prompt:cinematic photo of a Lime green colored acherontia
+/imagine prompt:cinematic photo of a Mustard yellow colored acherontia
+/imagine prompt:cinematic photo of a Rose red colored acherontia
+/imagine prompt:cinematic photo of a Matte purple colored acherontia
+/imagine prompt:cinematic photo of a Smoky grey colored acherontia
+/imagine prompt:cinematic photo of a Pumpkin orange colored acherontia
+/imagine prompt:cinematic photo of a Vivid magenta colored acherontia
+/imagine prompt:cinematic photo of a Lagoon teal colored acherontia
+/imagine prompt:cinematic photo of a Cotton candy pink colored acherontia
+/imagine prompt:cinematic photo of a Caramel brown colored acherontia
+/imagine prompt:cinematic photo of a Tropical cyan colored acherontia
+/imagine prompt:cinematic photo of a Ice blue colored acherontia
+/imagine prompt:cinematic photo of a Forest green colored acherontia
+/imagine prompt:cinematic photo of a Butter yellow colored acherontia
+/imagine prompt:cinematic photo of a Wine red colored acherontia
+/imagine prompt:cinematic photo of a Iridescent purple colored acherontia
+/imagine prompt:cinematic photo of a Steel grey colored acherontia
+/imagine prompt:cinematic photo of a Amber orange colored acherontia
+/imagine prompt:cinematic photo of a Roseate magenta colored acherontia
+/imagine prompt:cinematic photo of a Jade teal colored acherontia
+/imagine prompt:cinematic photo of a Salmon pink colored acherontia
+/imagine prompt:cinematic photo of a Walnut brown colored acherontia
+/imagine prompt:cinematic photo of a Marine cyan colored acherontia
+/imagine prompt:cinematic photo of a Cerulean blue colored acherontia
+/imagine prompt:cinematic photo of a Mint green colored acherontia
+/imagine prompt:cinematic photo of a Saffron yellow colored acherontia
+/imagine prompt:cinematic photo of a Cherry red colored acherontia
+/imagine prompt:cinematic photo of a Metallic purple colored acherontia
+/imagine prompt:cinematic photo of a Pewter grey colored acherontia
+/imagine prompt:cinematic photo of a Rust orange colored acherontia
+/imagine prompt:cinematic photo of a Electric magenta colored acherontia
+/imagine prompt:cinematic photo of a Tropical teal colored acherontia
+/imagine prompt:cinematic photo of a Coral pink colored acherontia
+/imagine prompt:cinematic photo of a Mahogany brown colored acherontia
+/imagine prompt:cinematic photo of a Glacier cyan colored acherontia
+/imagine prompt:cinematic photo of a Dusty blue colored acherontia
+/imagine prompt:cinematic photo of a Olive green colored acherontia
+/imagine prompt:cinematic photo of a Amber yellow colored acherontia
+/imagine prompt:cinematic photo of a Garnet red colored acherontia
+/imagine prompt:cinematic photo of a Muted purple colored acherontia
+/imagine prompt:cinematic photo of a Misty grey colored acherontia
+/imagine prompt:cinematic photo of a Sunset orange colored acherontia
+/imagine prompt:cinematic photo of a Plum magenta colored acherontia
+/imagine prompt:cinematic photo of a Aquamarine teal colored acherontia
+/imagine prompt:cinematic photo of a Ballet pink colored acherontia
+/imagine prompt:cinematic photo of a Taupe brown colored acherontia
+/imagine prompt:cinematic photo of a Luminous cyan colored acherontia
+/imagine prompt:cinematic photo of a Turquoise blue colored acherontia
+/imagine prompt:cinematic photo of a Chartreuse green colored acherontia
+/imagine prompt:cinematic photo of a Honey yellow colored acherontia
+/imagine prompt:cinematic photo of a Berry red colored acherontia
+/imagine prompt:cinematic photo of a Satin purple colored acherontia
+/imagine prompt:cinematic photo of a Dove grey colored acherontia
+/imagine prompt:cinematic photo of a Peachy orange colored acherontia
+/imagine prompt:cinematic photo of a Wine magenta colored acherontia
+/imagine prompt:cinematic photo of a Misty teal colored acherontia
+/imagine prompt:cinematic photo of a Fuchsia pink colored acherontia
+/imagine prompt:cinematic photo of a Coffee brown colored acherontia
+/imagine prompt:cinematic photo of a Icy cyan colored acherontia
+/imagine prompt:cinematic photo of a Navy blue colored acherontia
+/imagine prompt:cinematic photo of a Seafoam green colored acherontia
+/imagine prompt:cinematic photo of a Pastel yellow colored acherontia
+/imagine prompt:cinematic photo of a Fire engine red colored acherontia
+/imagine prompt:cinematic photo of a Glossy purple colored acherontia
+/imagine prompt:cinematic photo of a Graphite grey colored acherontia
+/imagine prompt:cinematic photo of a Terracotta orange colored acherontia
+/imagine prompt:cinematic photo of a Cerise magenta colored acherontia
+/imagine prompt:cinematic photo of a Harbor teal colored acherontia
+/imagine prompt:cinematic photo of a Peony pink colored acherontia
+/imagine prompt:cinematic photo of a Sepia brown colored acherontia
+/imagine prompt:cinematic photo of a Crystal cyan colored acherontia
+/imagine prompt:cinematic photo of a Crystal blue colored acherontia
+/imagine prompt:cinematic photo of a Pine green colored acherontia
+
+
+Crew Cut
+Quiff
+Fade Cut
+Spiky
+Tapered Fade
+Comb Over
+Undercut
+Pompadour
+Buzz Cut
+Side Part
+Side Swept
+Mohawk
+Slicked Back
+Messy Hairstyle
+Trendy
+Stylish
+Classic
+Modern
+Edgy
+Sleek
+Messy
+Neat
+Dapper
+Casual
+Sharp
+Textured
+Youthful
+Chic
+Versatile
+Polished
+Effortless
+Understated
+Bold
+Relaxed
