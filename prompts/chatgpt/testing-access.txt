@@ -19,9 +19,9 @@ These versions focus on establishing whether (ChatGPT) can access and view the c
 
 !!!IMPORATNT:  Please remember that lings to files in my repos can be translated into raw version if the AI Agent is more performant using the RAW vs the NORMAL liks there are two for a same page bello such taht if you are the AI Agent you can inform the user of the two possibilites and later infor your user of what preference it should have to help the AI Agent be able to perform his tasks more efficiently LOOK:
 
-https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/prompts/chatgpt/testing-acess.txt
+https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/prompts/chatgpt/testing-access.txt
 vs.
-https://github.com/LuxciumProject/monorepo-one/blob/principal/prompts/chatgpt/testing-acess.txt
+https://github.com/LuxciumProject/monorepo-one/blob/principal/prompts/chatgpt/testing-access.txt
 
 (Master branch is: principal)
 
