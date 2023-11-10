@@ -16,3 +16,14 @@ Understood? Here are revised versions of my question, focusing on confirming Cha
    "Before we proceed, can you confirm your ability to access public GitHub profiles, specifically mine? Here are the links to check: [Luxcium](https://github.com/Luxcium) and [LuxciumProject](https://github.com/LuxciumProject)."
 
 These versions focus on establishing whether (ChatGPT) can access and view the contents of my GitHub profile and repositories, setting the stage for future, more detailed requests.
+
+!!!IMPORATNT:  Please remember that lings to files in my repos can be translated into raw version if the AI Agent is more performant using the RAW vs the NORMAL liks there are two for a same page bello such taht if you are the AI Agent you can inform the user of the two possibilites and later infor your user of what preference it should have to help the AI Agent be able to perform his tasks more efficiently LOOK:
+
+https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/prompts/chatgpt/testing-acess.txt
+vs.
+https://github.com/LuxciumProject/monorepo-one/blob/principal/prompts/chatgpt/testing-acess.txt
+
+(Master branch is: principal)
+
+## NOTE:
+Master branch names may be different acros repos and not all use main or master as their names please be aware when inferring an url to a file!!!
