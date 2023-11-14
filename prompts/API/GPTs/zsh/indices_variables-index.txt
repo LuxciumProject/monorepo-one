@@ -1,0 +1,400 @@
+Index Entry	 	Section
+!
+!	 	15.5 Parameters Set By The Shell
+#
+#	 	15.5 Parameters Set By The Shell
+$
+$	 	15.5 Parameters Set By The Shell
+*
+*	 	15.5 Parameters Set By The Shell
+-
+-	 	15.5 Parameters Set By The Shell
+0
+0	 	15.5 Parameters Set By The Shell
+?
+?	 	15.5 Parameters Set By The Shell
+@
+@	 	15.5 Parameters Set By The Shell
+_
+_	 	15.5 Parameters Set By The Shell
+A
+aliases	 	22.20 The zsh/parameter Module
+all_quotes, compstate	 	19.2 Completion Special Parameters
+ARGC	 	15.5 Parameters Set By The Shell
+argv	 	15.5 Parameters Set By The Shell
+ARGV0	 	15.6 Parameters Used By The Shell
+B
+BAUD	 	15.6 Parameters Used By The Shell
+BAUD, use of	 	18.1 Description
+BUFFER	 	18.5 User-Defined Widgets
+BUFFERLINES	 	18.5 User-Defined Widgets
+builtins	 	22.20 The zsh/parameter Module
+C
+cdpath	 	15.6 Parameters Used By The Shell
+CDPATH	 	15.6 Parameters Used By The Shell
+chpwd_functions	 	9.3.1 Hook Functions
+COLUMNS	 	15.6 Parameters Used By The Shell
+COLUMNS, use of	 	18.1 Description
+commands	 	22.20 The zsh/parameter Module
+comppostfuncs, use of	 	20.7 Completion System Variables
+compprefuncs, use of	 	20.7 Completion System Variables
+compstate	 	19.2 Completion Special Parameters
+CONTEXT	 	18.5 User-Defined Widgets
+context, compstate	 	19.2 Completion Special Parameters
+context, use of	 	20.6 Utility Functions
+CORRECT_IGNORE	 	15.6 Parameters Used By The Shell
+CORRECT_IGNORE_FILE	 	15.6 Parameters Used By The Shell
+CPUTYPE	 	15.5 Parameters Set By The Shell
+CURRENT	 	19.2 Completion Special Parameters
+CURSOR	 	18.5 User-Defined Widgets
+CUTBUFFER	 	18.5 User-Defined Widgets
+D
+dirstack	 	22.20 The zsh/parameter Module
+DIRSTACKSIZE	 	15.6 Parameters Used By The Shell
+dis_aliases	 	22.20 The zsh/parameter Module
+dis_builtins	 	22.20 The zsh/parameter Module
+dis_functions	 	22.20 The zsh/parameter Module
+dis_functions_source	 	22.20 The zsh/parameter Module
+dis_galiases	 	22.20 The zsh/parameter Module
+dis_patchars	 	22.20 The zsh/parameter Module
+dis_reswords	 	22.20 The zsh/parameter Module
+dis_saliases	 	22.20 The zsh/parameter Module
+E
+EDITOR	 	18.2 Keymaps
+EGID	 	15.5 Parameters Set By The Shell
+ENV	 	15.6 Parameters Used By The Shell
+ENV, use of	 	4.2 Compatibility
+EPOCHREALTIME	 	22.10 The zsh/datetime Module
+EPOCHSECONDS	 	22.10 The zsh/datetime Module
+epochtime	 	22.10 The zsh/datetime Module
+ERRNO	 	15.5 Parameters Set By The Shell
+errnos	 	22.27.3 Parameters
+EUID	 	15.5 Parameters Set By The Shell
+exact, compstate	 	19.2 Completion Special Parameters
+exact_string, compstate	 	19.2 Completion Special Parameters
+expl, use of	 	20.6 Utility Functions
+F
+FCEDIT	 	15.6 Parameters Used By The Shell
+fignore	 	15.6 Parameters Used By The Shell
+FIGNORE	 	15.6 Parameters Used By The Shell
+fpath	 	15.6 Parameters Used By The Shell
+FPATH	 	15.6 Parameters Used By The Shell
+fpath, searching	 	17 Shell Builtin Commands
+fpath, use of	 	9.1 Autoloading Functions
+fpath, with zcompile	 	17 Shell Builtin Commands
+funcfiletrace	 	22.20 The zsh/parameter Module
+FUNCNEST	 	15.5 Parameters Set By The Shell
+funcsourcetrace	 	22.20 The zsh/parameter Module
+funcstack	 	22.20 The zsh/parameter Module
+functions	 	22.20 The zsh/parameter Module
+functions_source	 	22.20 The zsh/parameter Module
+functrace	 	22.20 The zsh/parameter Module
+G
+galiases	 	22.20 The zsh/parameter Module
+GID	 	15.5 Parameters Set By The Shell
+H
+HELPDIR	 	26.2.1 Accessing On-Line Help
+histchars	 	15.6 Parameters Used By The Shell
+HISTCHARS	 	15.6 Parameters Used By The Shell
+histchars, use of	 	6.7 Comments
+histchars, use of	 	14.1.1 Overview
+HISTCMD	 	15.5 Parameters Set By The Shell
+HISTFILE	 	15.6 Parameters Used By The Shell
+HISTNO	 	18.5 User-Defined Widgets
+history	 	22.20 The zsh/parameter Module
+historywords	 	22.20 The zsh/parameter Module
+HISTORY_IGNORE	 	15.6 Parameters Used By The Shell
+HISTSIZE	 	15.6 Parameters Used By The Shell
+HISTSIZE, use of	 	14.1 History Expansion
+HOME	 	15.6 Parameters Used By The Shell
+HOME, use of	 	5.1 Startup/Shutdown Files
+HOST	 	15.5 Parameters Set By The Shell
+I
+IFS	 	15.6 Parameters Used By The Shell
+IFS, use of	 	14.3 Parameter Expansion
+IFS, use of	 	14.4 Command Substitution
+IFS, use of	 	17 Shell Builtin Commands
+ignored, compstate	 	19.2 Completion Special Parameters
+incarg, use of	 	26.7.1 Widgets
+insert, compstate	 	19.2 Completion Special Parameters
+insert_positions, compstate	 	19.2 Completion Special Parameters
+IPREFIX	 	19.2 Completion Special Parameters
+ISEARCHMATCH_ACTIVE	 	18.5 User-Defined Widgets
+ISEARCHMATCH_END	 	18.5 User-Defined Widgets
+ISEARCHMATCH_START	 	18.5 User-Defined Widgets
+ISUFFIX	 	19.2 Completion Special Parameters
+J
+jobdirs	 	22.20 The zsh/parameter Module
+jobstates	 	22.20 The zsh/parameter Module
+jobtexts	 	22.20 The zsh/parameter Module
+K
+KEYBOARD_HACK	 	15.6 Parameters Used By The Shell
+KEYMAP	 	18.5 User-Defined Widgets
+keymaps	 	22.34 The zsh/zleparameter Module
+KEYS	 	18.5 User-Defined Widgets
+KEYS_QUEUED_COUNT	 	18.5 User-Defined Widgets
+KEYTIMEOUT	 	15.6 Parameters Used By The Shell
+killring	 	18.5 User-Defined Widgets
+L
+LANG	 	15.6 Parameters Used By The Shell
+langinfo	 	22.15 The zsh/langinfo Module
+LASTABORTEDSEARCH	 	18.5 User-Defined Widgets
+LASTSEARCH	 	18.5 User-Defined Widgets
+LASTWIDGET	 	18.5 User-Defined Widgets
+last_prompt, compstate	 	19.2 Completion Special Parameters
+LBUFFER	 	18.5 User-Defined Widgets
+LC_ALL	 	15.6 Parameters Used By The Shell
+LC_COLLATE	 	15.6 Parameters Used By The Shell
+LC_CTYPE	 	15.6 Parameters Used By The Shell
+LC_MESSAGES	 	15.6 Parameters Used By The Shell
+LC_NUMERIC	 	15.6 Parameters Used By The Shell
+LC_TIME	 	15.6 Parameters Used By The Shell
+line, use of	 	20.6 Utility Functions
+LINENO	 	15.5 Parameters Set By The Shell
+LINES	 	15.6 Parameters Used By The Shell
+LINES, use of	 	18.1 Description
+list, compstate	 	19.2 Completion Special Parameters
+LISTMAX	 	15.6 Parameters Used By The Shell
+list_lines, compstate	 	19.2 Completion Special Parameters
+list_max, compstate	 	19.2 Completion Special Parameters
+LOGCHECK	 	22.31 The zsh/watch Module
+LOGNAME	 	15.5 Parameters Set By The Shell
+M
+MACHTYPE	 	15.5 Parameters Set By The Shell
+MAIL	 	15.6 Parameters Used By The Shell
+MAILCHECK	 	15.6 Parameters Used By The Shell
+mailpath	 	15.6 Parameters Used By The Shell
+MAILPATH	 	15.6 Parameters Used By The Shell
+manpath	 	15.6 Parameters Used By The Shell
+MANPATH	 	15.6 Parameters Used By The Shell
+mapfile	 	22.16 The zsh/mapfile Module
+MARK	 	18.5 User-Defined Widgets
+match	 	14.8.4 Globbing Flags
+MATCH	 	14.8.4 Globbing Flags
+mbegin	 	14.8.4 Globbing Flags
+MBEGIN	 	14.8.4 Globbing Flags
+mend	 	14.8.4 Globbing Flags
+MEND	 	14.8.4 Globbing Flags
+MENUSELECT	 	22.7.3 Menu selection
+modules	 	22.20 The zsh/parameter Module
+module_path	 	15.6 Parameters Used By The Shell
+MODULE_PATH	 	15.6 Parameters Used By The Shell
+N
+nameddirs	 	22.20 The zsh/parameter Module
+nmatches, compstate	 	19.2 Completion Special Parameters
+NULLCMD	 	15.6 Parameters Used By The Shell
+NULLCMD, ignoring	 	16.2.10 Shell Emulation
+NULLCMD, ignoring	 	16.2.10 Shell Emulation
+NULLCMD, use of	 	7.3 Redirections with no command
+NUMERIC	 	18.5 User-Defined Widgets
+O
+OLDPWD	 	15.5 Parameters Set By The Shell
+old_insert, compstate	 	19.2 Completion Special Parameters
+old_list, compstate	 	19.2 Completion Special Parameters
+OPTARG	 	15.5 Parameters Set By The Shell
+OPTARG, use of	 	17 Shell Builtin Commands
+OPTIND	 	15.5 Parameters Set By The Shell
+OPTIND, use of	 	17 Shell Builtin Commands
+options	 	22.20 The zsh/parameter Module
+opt_args, use of	 	20.6 Utility Functions
+OSTYPE	 	15.5 Parameters Set By The Shell
+P
+parameter, compstate	 	19.2 Completion Special Parameters
+parameters	 	22.20 The zsh/parameter Module
+patchars	 	22.20 The zsh/parameter Module
+path	 	15.6 Parameters Used By The Shell
+PATH	 	15.6 Parameters Used By The Shell
+path, use of	 	8 Command Execution
+pattern_insert, compstate	 	19.2 Completion Special Parameters
+pattern_match, compstate	 	19.2 Completion Special Parameters
+PENDING	 	18.5 User-Defined Widgets
+PERIOD	 	9.3.1 Hook Functions
+periodic_functions	 	9.3.1 Hook Functions
+pid, sysparams	 	22.27.3 Parameters
+pipestatus	 	15.5 Parameters Set By The Shell
+POSTDISPLAY	 	18.5 User-Defined Widgets
+POSTEDIT	 	15.6 Parameters Used By The Shell
+PPID	 	15.5 Parameters Set By The Shell
+ppid, sysparams	 	22.27.3 Parameters
+PREBUFFER	 	18.5 User-Defined Widgets
+precmd_functions	 	9.3.1 Hook Functions
+PREDISPLAY	 	18.5 User-Defined Widgets
+preexec_functions	 	9.3.1 Hook Functions
+PREFIX	 	19.2 Completion Special Parameters
+PROMPT	 	15.6 Parameters Used By The Shell
+prompt	 	15.6 Parameters Used By The Shell
+PROMPT2	 	15.6 Parameters Used By The Shell
+PROMPT3	 	15.6 Parameters Used By The Shell
+PROMPT4	 	15.6 Parameters Used By The Shell
+PROMPT_EOL_MARK	 	15.6 Parameters Used By The Shell
+PS1	 	15.6 Parameters Used By The Shell
+PS2	 	15.6 Parameters Used By The Shell
+PS3	 	15.6 Parameters Used By The Shell
+PS4	 	15.6 Parameters Used By The Shell
+psvar	 	15.6 Parameters Used By The Shell
+PSVAR	 	15.6 Parameters Used By The Shell
+psvar, use of	 	13.3 Conditional Substrings in Prompts
+PWD	 	15.5 Parameters Set By The Shell
+Q
+QIPREFIX	 	19.2 Completion Special Parameters
+QISUFFIX	 	19.2 Completion Special Parameters
+quote, compstate	 	19.2 Completion Special Parameters
+quoting, compstate	 	19.2 Completion Special Parameters
+R
+RANDOM	 	15.5 Parameters Set By The Shell
+RBUFFER	 	18.5 User-Defined Widgets
+READNULLCMD	 	15.6 Parameters Used By The Shell
+READNULLCMD, ignoring	 	16.2.10 Shell Emulation
+READNULLCMD, ignoring	 	16.2.10 Shell Emulation
+READNULLCMD, use of	 	7.3 Redirections with no command
+redirect, compstate	 	19.2 Completion Special Parameters
+REGION_ACTIVE	 	18.5 User-Defined Widgets
+region_highlight	 	18.5 User-Defined Widgets
+registers	 	18.5 User-Defined Widgets
+REPLY	 	15.6 Parameters Used By The Shell
+reply	 	15.6 Parameters Used By The Shell
+REPLY, use of	 	6.3 Complex Commands
+REPLY, use of	 	14.8.7 Glob Qualifiers
+reply, use of	 	14.8.7 Glob Qualifiers
+REPLY, use of	 	17 Shell Builtin Commands
+reply, use of	 	17 Shell Builtin Commands
+reply, use of	 	21.4.2 Flags with Arguments
+reply, use of	 	21.4.3 Control Flags
+reply, use of	 	22.38 The zsh/zutil Module
+REPORTMEMORY	 	15.6 Parameters Used By The Shell
+REPORTTIME	 	15.6 Parameters Used By The Shell
+restore, compstate	 	19.2 Completion Special Parameters
+reswords	 	22.20 The zsh/parameter Module
+RPROMPT	 	15.6 Parameters Used By The Shell
+RPROMPT2	 	15.6 Parameters Used By The Shell
+RPS1	 	15.6 Parameters Used By The Shell
+RPS2	 	15.6 Parameters Used By The Shell
+S
+saliases	 	22.20 The zsh/parameter Module
+SAVEHIST	 	15.6 Parameters Used By The Shell
+SECONDS	 	15.5 Parameters Set By The Shell
+SHLVL	 	15.5 Parameters Set By The Shell
+signals	 	15.5 Parameters Set By The Shell
+SPROMPT	 	15.6 Parameters Used By The Shell
+status	 	15.5 Parameters Set By The Shell
+STTY	 	15.6 Parameters Used By The Shell
+SUFFIX	 	19.2 Completion Special Parameters
+SUFFIX_ACTIVE	 	18.5 User-Defined Widgets
+SUFFIX_END	 	18.5 User-Defined Widgets
+SUFFIX_START	 	18.5 User-Defined Widgets
+sysparams	 	22.27.3 Parameters
+T
+tcp_expect_lines	 	24.5 TCP User Parameters
+tcp_filter	 	24.5 TCP User Parameters
+TCP_HANDLER_ACTIVE	 	24.5 TCP User Parameters
+TCP_LINE	 	24.5 TCP User Parameters
+tcp_lines	 	24.5 TCP User Parameters
+TCP_LINE_FD	 	24.5 TCP User Parameters
+TCP_LOG	 	24.5 TCP User Parameters
+tcp_no_spam_list	 	24.5 TCP User Parameters
+tcp_on_read	 	24.6 TCP User-defined Parameters
+TCP_OUTPUT	 	24.5 TCP User Parameters
+TCP_PROMPT	 	24.5 TCP User Parameters
+TCP_READ_DEBUG	 	24.5 TCP User Parameters
+TCP_SECONDS_START	 	24.5 TCP User Parameters
+TCP_SESS	 	24.5 TCP User Parameters
+TCP_SILENT	 	24.5 TCP User Parameters
+tcp_spam_list	 	24.5 TCP User Parameters
+TCP_TALK_ESCAPE	 	24.5 TCP User Parameters
+TCP_TIMEOUT	 	24.5 TCP User Parameters
+TERM	 	15.6 Parameters Used By The Shell
+termcap	 	22.29 The zsh/termcap Module
+TERMINFO	 	15.6 Parameters Used By The Shell
+terminfo	 	22.30 The zsh/terminfo Module
+TERMINFO_DIRS	 	15.6 Parameters Used By The Shell
+TIMEFMT	 	15.6 Parameters Used By The Shell
+TMOUT	 	15.6 Parameters Used By The Shell
+TMPPREFIX	 	15.6 Parameters Used By The Shell
+TMPSUFFIX	 	15.6 Parameters Used By The Shell
+to_end, compstate	 	19.2 Completion Special Parameters
+TRY_BLOCK_ERROR	 	15.5 Parameters Set By The Shell
+TRY_BLOCK_INTERRUPT	 	15.5 Parameters Set By The Shell
+TTY	 	15.5 Parameters Set By The Shell
+TTYIDLE	 	15.5 Parameters Set By The Shell
+U
+UID	 	15.5 Parameters Set By The Shell
+unambiguous, compstate	 	19.2 Completion Special Parameters
+unambiguous_cursor, compstate	 	19.2 Completion Special Parameters
+unambiguous_positions, compstate	 	19.2 Completion Special Parameters
+UNDO_CHANGE_NO	 	18.5 User-Defined Widgets
+UNDO_LIMIT_NO	 	18.5 User-Defined Widgets
+userdirs	 	22.20 The zsh/parameter Module
+usergroups	 	22.20 The zsh/parameter Module
+USERNAME	 	15.5 Parameters Set By The Shell
+V
+vared, compstate	 	19.2 Completion Special Parameters
+VENDOR	 	15.5 Parameters Set By The Shell
+VISUAL	 	18.2 Keymaps
+W
+watch	 	22.31 The zsh/watch Module
+WATCH	 	22.31 The zsh/watch Module
+watch, use of	 	22.31 The zsh/watch Module
+WATCHFMT	 	22.31 The zsh/watch Module
+WIDGET	 	18.5 User-Defined Widgets
+WIDGET, in hooks	 	26.2.5 Manipulating Hook Functions
+WIDGETFUNC	 	18.5 User-Defined Widgets
+widgets	 	22.34 The zsh/zleparameter Module
+WIDGETSTYLE	 	18.5 User-Defined Widgets
+WORDCHARS	 	15.6 Parameters Used By The Shell
+words	 	19.2 Completion Special Parameters
+Y
+YANK_ACTIVE	 	18.5 User-Defined Widgets
+YANK_END	 	18.5 User-Defined Widgets
+YANK_START	 	18.5 User-Defined Widgets
+Z
+ZBEEP	 	15.6 Parameters Used By The Shell
+zcurses_attrs	 	22.9.2 Parameters
+ZCURSES_COLORS	 	22.9.2 Parameters
+zcurses_colors	 	22.9.2 Parameters
+ZCURSES_COLOR_PAIRS	 	22.9.2 Parameters
+zcurses_keycodes	 	22.9.2 Parameters
+zcurses_windows	 	22.9.2 Parameters
+ZDOTDIR	 	15.6 Parameters Used By The Shell
+ZDOTDIR, use of	 	5.1 Startup/Shutdown Files
+ZFTP_ACCOUNT	 	22.32.2 Parameters
+ZFTP_CODE	 	22.32.2 Parameters
+ZFTP_COUNT	 	22.32.3 Functions
+ZFTP_FILE	 	22.32.3 Functions
+ZFTP_HOST	 	22.32.2 Parameters
+ZFTP_IP	 	22.32.2 Parameters
+ZFTP_PORT	 	22.32.2 Parameters
+ZFTP_PREFS	 	22.32.2 Parameters
+ZFTP_PWD	 	22.32.2 Parameters
+ZFTP_REPLY	 	22.32.2 Parameters
+ZFTP_SESSION	 	22.32.2 Parameters
+ZFTP_SIZE	 	22.32.3 Functions
+ZFTP_SYSTEM	 	22.32.2 Parameters
+ZFTP_TMOUT	 	22.32.2 Parameters
+ZFTP_TRANSFER	 	22.32.3 Functions
+ZFTP_TYPE	 	22.32.2 Parameters
+ZFTP_USER	 	22.32.2 Parameters
+ZFTP_VERBOSE	 	22.32.2 Parameters
+zle_bracketed_paste	 	15.6 Parameters Used By The Shell
+zle_highlight	 	15.6 Parameters Used By The Shell
+zle_highlight, setting	 	18.7 Character Highlighting
+zle_highlight, use of	 	18.1 Description
+ZLE_LINE_ABORTED	 	15.6 Parameters Used By The Shell
+ZLE_RECURSIVE	 	18.5 User-Defined Widgets
+ZLE_REMOVE_SUFFIX_CHARS	 	15.6 Parameters Used By The Shell
+ZLE_RPROMPT_INDENT	 	15.6 Parameters Used By The Shell
+ZLE_SPACE_SUFFIX_CHARS	 	15.6 Parameters Used By The Shell
+ZLE_STATE	 	18.5 User-Defined Widgets
+ZLS_COLORS	 	22.7.1 Colored completion listings
+ZLS_COLOURS	 	22.7.1 Colored completion listings
+zshaddhistory_functions	 	9.3.1 Hook Functions
+zshexit_functions	 	9.3.1 Hook Functions
+ZSH_ARGZERO	 	15.5 Parameters Set By The Shell
+zsh_eval_context	 	15.5 Parameters Set By The Shell
+ZSH_EVAL_CONTEXT	 	15.5 Parameters Set By The Shell
+ZSH_EXECUTION_STRING	 	15.5 Parameters Set By The Shell
+ZSH_NAME	 	15.5 Parameters Set By The Shell
+ZSH_PATCHLEVEL	 	15.5 Parameters Set By The Shell
+zsh_scheduled_events	 	22.24 The zsh/sched Module
+ZSH_SCRIPT	 	15.5 Parameters Set By The Shell
+ZSH_SUBSHELL <S>	 	15.5 Parameters Set By The Shell
+ZSH_VERSION	 	15.5 Parameters Set By The Shell

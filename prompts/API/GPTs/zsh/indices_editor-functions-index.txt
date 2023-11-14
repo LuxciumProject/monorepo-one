@@ -1,0 +1,278 @@
+	Index Entry	 	Section
+A
+accept-and-hold	 	18.6.6 Miscellaneous
+accept-and-infer-next-history	 	18.6.6 Miscellaneous
+accept-and-menu-complete	 	18.6.5 Completion
+accept-line	 	18.6.6 Miscellaneous
+accept-line-and-down-history	 	18.6.6 Miscellaneous
+argument-base	 	18.6.4 Arguments
+auto-suffix-remove	 	18.6.6 Miscellaneous
+auto-suffix-retain	 	18.6.6 Miscellaneous
+B
+backward-char	 	18.6.1 Movement
+backward-delete-char	 	18.6.3 Modifying Text
+backward-delete-word	 	18.6.3 Modifying Text
+backward-kill-line	 	18.6.3 Modifying Text
+backward-kill-word	 	18.6.3 Modifying Text
+backward-kill-word-match	 	26.7.1 Widgets
+backward-word	 	18.6.1 Movement
+backward-word-match	 	26.7.1 Widgets
+beep	 	18.6.6 Miscellaneous
+beginning-of-buffer-or-history	 	18.6.2 History Control
+beginning-of-history	 	18.6.2 History Control
+beginning-of-line	 	18.6.1 Movement
+beginning-of-line-hist	 	18.6.2 History Control
+bracketed-paste	 	18.6.6 Miscellaneous
+bracketed-paste-magic	 	26.7.1 Widgets
+C
+capitalize-word	 	18.6.3 Modifying Text
+capitalize-word-match	 	26.7.1 Widgets
+clear-screen	 	18.6.6 Miscellaneous
+complete-word	 	18.6.5 Completion
+copy-earlier-word	 	26.7.1 Widgets
+copy-prev-shell-word	 	18.6.3 Modifying Text
+copy-prev-word	 	18.6.3 Modifying Text
+copy-region-as-kill	 	18.6.3 Modifying Text
+cycle-completion-positions	 	26.7.1 Widgets
+D
+deactivate-region	 	18.6.6 Miscellaneous
+delete-char	 	18.6.3 Modifying Text
+delete-char-or-list	 	18.6.5 Completion
+delete-to-char	 	22.12 The zsh/deltochar Module
+delete-whole-word-match	 	26.7.1 Widgets
+delete-whole-word-match	 	26.7.1 Widgets
+delete-word	 	18.6.3 Modifying Text
+describe-key-briefly	 	18.6.6 Miscellaneous
+digit-argument	 	18.6.4 Arguments
+down-case-word	 	18.6.3 Modifying Text
+down-case-word-match	 	26.7.1 Widgets
+down-history	 	18.6.2 History Control
+down-line	 	18.6.1 Movement
+down-line-or-beginning-search	 	26.7.1 Widgets
+down-line-or-history	 	18.6.2 History Control
+down-line-or-search	 	18.6.2 History Control
+E
+edit-command-line	 	26.7.1 Widgets
+emacs-backward-word	 	18.6.1 Movement
+emacs-forward-word	 	18.6.1 Movement
+end-of-buffer-or-history	 	18.6.2 History Control
+end-of-history	 	18.6.2 History Control
+end-of-line	 	18.6.1 Movement
+end-of-line-hist	 	18.6.2 History Control
+end-of-list	 	18.6.5 Completion
+exchange-point-and-mark	 	18.6.6 Miscellaneous
+execute-last-named-cmd	 	18.6.6 Miscellaneous
+execute-named-cmd	 	18.6.6 Miscellaneous
+expand-absolute-path	 	26.7.1 Widgets
+expand-cmd-path	 	18.6.5 Completion
+expand-history	 	18.6.5 Completion
+expand-or-complete	 	18.6.5 Completion
+expand-or-complete-prefix	 	18.6.5 Completion
+expand-word	 	18.6.5 Completion
+F
+forward-char	 	18.6.1 Movement
+forward-word	 	18.6.1 Movement
+forward-word-match	 	26.7.1 Widgets
+G
+get-line	 	18.6.6 Miscellaneous
+gosmacs-transpose-chars	 	18.6.3 Modifying Text
+H
+history-beginning-search-backward	 	18.6.2 History Control
+history-beginning-search-backward-end	 	26.7.1 Widgets
+history-beginning-search-forward	 	18.6.2 History Control
+history-beginning-search-forward-end	 	26.7.1 Widgets
+history-beginning-search-menu	 	26.7.1 Widgets
+history-incremental-pattern-search-backward	 	18.6.2 History Control
+history-incremental-pattern-search-forward	 	18.6.2 History Control
+history-incremental-search-backward	 	18.6.2 History Control
+history-incremental-search-forward	 	18.6.2 History Control
+history-pattern-search	 	26.7.1 Widgets
+history-pattern-search-backward	 	26.7.1 Widgets
+history-pattern-search-forward	 	26.7.1 Widgets
+history-search-backward	 	18.6.2 History Control
+history-search-forward	 	18.6.2 History Control
+I
+incarg	 	26.7.1 Widgets
+incremental-complete-word	 	26.7.1 Widgets
+infer-next-history	 	18.6.2 History Control
+insert-composed-char	 	26.7.1 Widgets
+insert-files	 	26.7.1 Widgets
+insert-last-word	 	18.6.2 History Control
+insert-unicode-char	 	26.7.1 Widgets
+K
+kill-buffer	 	18.6.3 Modifying Text
+kill-line	 	18.6.3 Modifying Text
+kill-region	 	18.6.3 Modifying Text
+kill-whole-line	 	18.6.3 Modifying Text
+kill-word	 	18.6.3 Modifying Text
+kill-word-match	 	26.7.1 Widgets
+L
+list-choices	 	18.6.5 Completion
+list-expand	 	18.6.5 Completion
+M
+magic-space	 	18.6.5 Completion
+match-word-context	 	26.7.1 Widgets
+match-words-by-style	 	26.7.1 Widgets
+menu-complete	 	18.6.5 Completion
+menu-expand-or-complete	 	18.6.5 Completion
+menu-select	 	22.7.3 Menu selection
+modify-current-argument	 	26.7.2 Utility Functions
+N
+narrow-to-region	 	26.7.1 Widgets
+narrow-to-region-invisible	 	26.7.1 Widgets
+neg-argument	 	18.6.4 Arguments
+O
+overwrite-mode	 	18.6.3 Modifying Text
+P
+pound-insert	 	18.6.6 Miscellaneous
+predict-off	 	26.7.1 Widgets
+predict-on	 	26.7.1 Widgets
+push-input	 	18.6.6 Miscellaneous
+push-line	 	18.6.6 Miscellaneous
+push-line-or-edit	 	18.6.6 Miscellaneous
+put-replace-selection	 	18.6.3 Modifying Text
+Q
+quote-line	 	18.6.3 Modifying Text
+quote-region	 	18.6.3 Modifying Text
+quoted-insert	 	18.6.3 Modifying Text
+R
+read-command	 	18.6.6 Miscellaneous
+read-from-minibuffer	 	26.7.1 Widgets
+recursive-edit	 	18.6.6 Miscellaneous
+redisplay	 	18.6.6 Miscellaneous
+redo	 	18.6.6 Miscellaneous
+replace-argument	 	26.7.1 Widgets
+replace-argument-edit	 	26.7.1 Widgets
+replace-pattern	 	26.7.1 Widgets
+replace-string	 	26.7.1 Widgets
+replace-string-again	 	26.7.1 Widgets
+reset-prompt	 	18.6.6 Miscellaneous
+reverse-menu-complete	 	18.6.5 Completion
+run-help	 	18.6.6 Miscellaneous
+S
+select-a-blank-word	 	18.6.7 Text Objects
+select-a-shell-word	 	18.6.7 Text Objects
+select-a-word	 	18.6.7 Text Objects
+select-in-blank-word	 	18.6.7 Text Objects
+select-in-shell-word	 	18.6.7 Text Objects
+select-in-word	 	18.6.7 Text Objects
+select-word-match	 	26.7.1 Widgets
+select-word-style	 	26.7.1 Widgets
+self-insert	 	18.6.3 Modifying Text
+self-insert-unmeta	 	18.6.3 Modifying Text
+send-break	 	18.6.6 Miscellaneous
+send-invisible	 	26.7.1 Widgets
+set-local-history	 	18.6.2 History Control
+set-mark-command	 	18.6.6 Miscellaneous
+smart-insert-last-word	 	26.7.1 Widgets
+spell-word	 	18.6.6 Miscellaneous
+split-shell-arguments	 	26.7.2 Utility Functions
+split-undo	 	18.6.6 Miscellaneous
+T
+transpose-chars	 	18.6.3 Modifying Text
+transpose-lines	 	26.7.1 Widgets
+transpose-words	 	18.6.3 Modifying Text
+transpose-words-match	 	26.7.1 Widgets
+U
+undefined-key	 	18.6.6 Miscellaneous
+undo	 	18.6.6 Miscellaneous
+universal-argument	 	18.6.4 Arguments
+up-case-word	 	18.6.3 Modifying Text
+up-case-word-match	 	26.7.1 Widgets
+up-history	 	18.6.2 History Control
+up-line	 	18.6.1 Movement
+up-line-or-beginning-search	 	26.7.1 Widgets
+up-line-or-history	 	18.6.2 History Control
+up-line-or-search	 	18.6.2 History Control
+url-quote-magic	 	26.7.1 Widgets
+V
+vi-add-eol	 	18.6.3 Modifying Text
+vi-add-next	 	18.6.3 Modifying Text
+vi-backward-blank-word	 	18.6.1 Movement
+vi-backward-blank-word-end	 	18.6.1 Movement
+vi-backward-char	 	18.6.1 Movement
+vi-backward-delete-char	 	18.6.3 Modifying Text
+vi-backward-kill-word	 	18.6.3 Modifying Text
+vi-backward-word	 	18.6.1 Movement
+vi-backward-word-end	 	18.6.1 Movement
+vi-beginning-of-line	 	18.6.1 Movement
+vi-caps-lock-panic	 	18.6.6 Miscellaneous
+vi-change	 	18.6.3 Modifying Text
+vi-change-eol	 	18.6.3 Modifying Text
+vi-change-whole-line	 	18.6.3 Modifying Text
+vi-cmd-mode	 	18.6.6 Miscellaneous
+vi-delete	 	18.6.3 Modifying Text
+vi-delete-char	 	18.6.3 Modifying Text
+vi-digit-or-beginning-of-line	 	18.6.6 Miscellaneous
+vi-down-case	 	18.6.3 Modifying Text
+vi-down-line-or-history	 	18.6.2 History Control
+vi-end-of-line	 	18.6.1 Movement
+vi-fetch-history	 	18.6.2 History Control
+vi-find-next-char	 	18.6.1 Movement
+vi-find-next-char-skip	 	18.6.1 Movement
+vi-find-prev-char	 	18.6.1 Movement
+vi-find-prev-char-skip	 	18.6.1 Movement
+vi-first-non-blank	 	18.6.1 Movement
+vi-forward-blank-word	 	18.6.1 Movement
+vi-forward-blank-word-end	 	18.6.1 Movement
+vi-forward-char	 	18.6.1 Movement
+vi-forward-word	 	18.6.1 Movement
+vi-forward-word-end	 	18.6.1 Movement
+vi-goto-column	 	18.6.1 Movement
+vi-goto-mark	 	18.6.1 Movement
+vi-goto-mark-line	 	18.6.1 Movement
+vi-history-search-backward	 	18.6.2 History Control
+vi-history-search-forward	 	18.6.2 History Control
+vi-indent	 	18.6.3 Modifying Text
+vi-insert	 	18.6.3 Modifying Text
+vi-insert-bol	 	18.6.3 Modifying Text
+vi-join	 	18.6.3 Modifying Text
+vi-kill-eol	 	18.6.3 Modifying Text
+vi-kill-line	 	18.6.3 Modifying Text
+vi-match-bracket	 	18.6.3 Modifying Text
+vi-open-line-above	 	18.6.3 Modifying Text
+vi-open-line-below	 	18.6.3 Modifying Text
+vi-oper-swap-case	 	18.6.3 Modifying Text
+vi-pipe	 	26.7.1 Widgets
+vi-pound-insert	 	18.6.6 Miscellaneous
+vi-put-after	 	18.6.3 Modifying Text
+vi-put-before	 	18.6.3 Modifying Text
+vi-quoted-insert	 	18.6.3 Modifying Text
+vi-repeat-change	 	18.6.3 Modifying Text
+vi-repeat-find	 	18.6.1 Movement
+vi-repeat-search	 	18.6.2 History Control
+vi-replace	 	18.6.3 Modifying Text
+vi-replace-chars	 	18.6.3 Modifying Text
+vi-rev-repeat-find	 	18.6.1 Movement
+vi-rev-repeat-search	 	18.6.2 History Control
+vi-set-buffer	 	18.6.6 Miscellaneous
+vi-set-mark	 	18.6.6 Miscellaneous
+vi-substitute	 	18.6.3 Modifying Text
+vi-swap-case	 	18.6.3 Modifying Text
+vi-undo-change	 	18.6.6 Miscellaneous
+vi-unindent	 	18.6.3 Modifying Text
+vi-up-case	 	18.6.3 Modifying Text
+vi-up-line-or-history	 	18.6.2 History Control
+vi-yank	 	18.6.3 Modifying Text
+vi-yank-eol	 	18.6.3 Modifying Text
+vi-yank-whole-line	 	18.6.3 Modifying Text
+visual-line-mode	 	18.6.6 Miscellaneous
+visual-mode	 	18.6.6 Miscellaneous
+W
+what-cursor-position	 	18.6.6 Miscellaneous
+where-is	 	18.6.6 Miscellaneous
+which-command	 	18.6.6 Miscellaneous
+which-command	 	26.7.1 Widgets
+Y
+yank	 	18.6.3 Modifying Text
+yank-pop	 	18.6.3 Modifying Text
+Z
+zap-to-char	 	22.12 The zsh/deltochar Module
+zcalc-auto-insert	 	26.7.1 Widgets
+zle-history-line-set	 	18.5.1 Special Widgets
+zle-isearch-exit	 	18.5.1 Special Widgets
+zle-isearch-update	 	18.5.1 Special Widgets
+zle-keymap-select	 	18.5.1 Special Widgets
+zle-line-finish	 	18.5.1 Special Widgets
+zle-line-init	 	18.5.1 Special Widgets
+zle-line-pre-redraw	 	18.5.1 Special Widgets

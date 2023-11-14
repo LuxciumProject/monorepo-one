@@ -1,0 +1,698 @@
+**Index Entry**	 	**Section**
+$
+$0, setting	 	16.2.9 Scripts and Functions
+$0, using	 	16.2.10 Shell Emulation
+-
+–help	 	4.1 Invocation
+–version	 	4.1 Invocation
+.
+.zwc files, creation	 	17 Shell Builtin Commands
+A
+acquiring zsh by FTP	 	2.2 Availability
+aliases, completion of	 	16.2.2 Completion
+aliases, defining	 	17 Shell Builtin Commands
+aliases, expanding in function definition	 	16.2.9 Scripts and Functions
+aliases, expansion	 	16.2.6 Input/Output
+aliases, global	 	6.8 Aliasing
+aliases, listing	 	17 Shell Builtin Commands
+aliases, removing	 	17 Shell Builtin Commands
+aliasing	 	6.8 Aliasing
+alternate forms for complex commands	 	6.4 Alternate Forms For Complex Commands
+always blocks	 	6.3 Complex Commands
+ambiguous completion	 	16.2.2 Completion
+annoying keyboard, sun	 	16.2.6 Input/Output
+anonymous functions	 	9.2 Anonymous Functions
+approximate matching	 	14.8.5 Approximate Matching
+argument splitting, in typeset etc.	 	16.2.10 Shell Emulation
+arithmetic base	 	11 Arithmetic Evaluation
+arithmetic evaluation	 	11 Arithmetic Evaluation
+arithmetic expansion	 	14.5 Arithmetic Expansion
+arithmetic operators	 	11 Arithmetic Evaluation
+array assignment	 	15.2 Array Parameters
+array expansion style, rc	 	14.3 Parameter Expansion
+array parameters, setting	 	17 Shell Builtin Commands
+array style, ksh	 	16.2.10 Shell Emulation
+arrays, behaviour of index zero	 	16.2.10 Shell Emulation
+arrays, ksh style	 	16.2.10 Shell Emulation
+assignment	 	15.1 Description
+asynchronous jobs, and exiting shell	 	10.2 Signals
+author	 	2.1 Author
+autocd, silencing	 	16.2.1 Changing Directories
+autoloading functions	 	9.1 Autoloading Functions
+autoloading functions	 	17 Shell Builtin Commands
+availability of zsh	 	2.2 Availability
+B
+background jobs, I/O	 	10.1 Jobs
+background jobs, notification	 	16.2.7 Job Control
+background jobs, priority of	 	16.2.7 Job Control
+bases, in arithmetic	 	11 Arithmetic Evaluation
+bases, output in C format	 	16.2.9 Scripts and Functions
+bash, BASH_REMATCH variable	 	16.2.10 Shell Emulation
+beep, ambiguous completion	 	16.2.2 Completion
+beep, enabling	 	16.2.12 Zle
+beep, history	 	16.2.4 History
+bg, output in POSIX format	 	16.2.7 Job Control
+binding keys	 	18.3 Zle Builtins
+binding widgets	 	18.3 Zle Builtins
+bindings, key	 	18.2 Keymaps
+brace expansion	 	14.6 Brace Expansion
+brace expansion, disabling	 	16.2.3 Expansion and Globbing
+brace expansion, extending	 	16.2.3 Expansion and Globbing
+bracketed paste	 	15.6 Parameters Used By The Shell
+break, inside function	 	16.2.9 Scripts and Functions
+builtin commands	 	17 Shell Builtin Commands
+builtins, utility	 	22.38 The zsh/zutil Module
+C
+calendar function system	 	23 Calendar Function System
+calling widgets	 	18.3 Zle Builtins
+capabilities, getting from files	 	22.3 The zsh/cap Module
+capabilities, setting	 	22.3 The zsh/cap Module
+capabilities, setting on files	 	22.3 The zsh/cap Module
+case selection	 	6.3 Complex Commands
+case-insensitive globbing, option	 	16.2.3 Expansion and Globbing
+case-insensitive regular expression matches, option	 	16.2.3 Expansion and Globbing
+case-sensitive globbing, option	 	16.2.3 Expansion and Globbing
+cd, automatic	 	16.2.1 Changing Directories
+cd, behaving like pushd	 	16.2.1 Changing Directories
+cd, silencing	 	16.2.1 Changing Directories
+cd, to parameter	 	16.2.1 Changing Directories
+cd, with .. in argument	 	16.2.1 Changing Directories
+CDPATH, order of checking	 	16.2.1 Changing Directories
+character classes	 	14.8.1 Glob Operators
+characters, (Unicode) combining	 	16.2.12 Zle
+characters, multibyte, in expansion and globbing	 	16.2.3 Expansion and Globbing
+clobbering, of empty files	 	16.2.6 Input/Output
+clobbering, of files	 	16.2.6 Input/Output
+clobbering, POSIX compatibility	 	16.2.10 Shell Emulation
+cloning the shell	 	22.4 The zsh/clone Module
+colon modifiers	 	14.1.4 Modifiers
+combining characters (Unicode)	 	16.2.12 Zle
+command execution	 	8 Command Execution
+command execution, enabling	 	16.2.9 Scripts and Functions
+command hashing	 	16.2.6 Input/Output
+command not found, handling of	 	8 Command Execution
+command substitution	 	14.4 Command Substitution
+commands, alternate forms for complex	 	6.4 Alternate Forms For Complex Commands
+commands, builtin	 	17 Shell Builtin Commands
+commands, complex	 	6.3 Complex Commands
+commands, disabling	 	17 Shell Builtin Commands
+commands, enabling	 	17 Shell Builtin Commands
+commands, simple	 	6.1 Simple Commands & Pipelines
+commands, tracing	 	16.2.9 Scripts and Functions
+comments	 	6.7 Comments
+comments, in interactive shells	 	16.2.6 Input/Output
+compatibility	 	4.2 Compatibility
+compatibility, csh	 	17 Shell Builtin Commands
+compatibility, ksh	 	17 Shell Builtin Commands
+compatibility, sh	 	17 Shell Builtin Commands
+compdef, use of by compinit	 	20.2.2 Autoloaded files
+compilation	 	17 Shell Builtin Commands
+completion removable suffix, highlighting	 	18.7 Character Highlighting
+completion system	 	20 Completion System
+completion system, adding definitions	 	20.2.3 Functions
+completion system, autoloaded functions	 	20.2.2 Autoloaded files
+completion system, bindable commands	 	20.5 Bindable Commands
+completion system, choosing completers	 	20.4 Control Functions
+completion system, completers	 	20.4 Control Functions
+completion system, configuration	 	20.3 Completion System Configuration
+completion system, directory structure	 	20.8 Completion Directories
+completion system, initializing	 	20.2.1 Use of compinit
+completion system, installing	 	20.2 Initialization
+completion system, styles	 	20.3.3 Standard Styles
+completion system, tags	 	20.3.2 Standard Tags
+completion system, utility functions	 	20.6 Utility Functions
+completion system, variables	 	20.7 Completion System Variables
+completion widgets, adding specified matches	 	19.3 Completion Builtin Commands
+completion widgets, condition codes	 	19.4 Completion Condition Codes
+completion widgets, creating	 	18.3 Zle Builtins
+completion widgets, examining and setting state in	 	19.2 Completion Special Parameters
+completion widgets, example	 	19.6 Completion Widget Example
+completion widgets, modifying special parameters	 	19.3 Completion Builtin Commands
+completion, ambiguous	 	16.2.2 Completion
+completion, beep on ambiguous	 	16.2.2 Completion
+completion, coloured listings	 	22.7 The zsh/complist Module
+completion, controlling	 	19 Completion Widgets
+completion, controlling	 	20 Completion System
+completion, controlling	 	21 Completion Using compctl
+completion, exact matches	 	16.2.2 Completion
+completion, listing	 	16.2.2 Completion
+completion, listing	 	22.7 The zsh/complist Module
+completion, listing choices	 	16.2.2 Completion
+completion, listing choices, bash style	 	16.2.2 Completion
+completion, listing order	 	16.2.2 Completion
+completion, menu	 	16.2.2 Completion
+completion, menu	 	16.2.2 Completion
+completion, programmable	 	19 Completion Widgets
+completion, programmable	 	20 Completion System
+completion, programmable	 	21 Completion Using compctl
+completion, scroll listings	 	22.7 The zsh/complist Module
+completion, selecting by cursor	 	22.7.3 Menu selection
+completion, utility	 	22.8 The zsh/computil Module
+completion, widgets	 	19 Completion Widgets
+complex commands	 	6.3 Complex Commands
+conditional expression	 	6.3 Complex Commands
+conditional expressions	 	12 Conditional Expressions
+continue, inside function	 	16.2.9 Scripts and Functions
+continuing jobs automatically	 	16.2.7 Job Control
+continuing loops	 	17 Shell Builtin Commands
+coprocess	 	6.1 Simple Commands & Pipelines
+correction, spelling	 	16.2.6 Input/Output
+csh, compatibility	 	17 Shell Builtin Commands
+csh, history style	 	16.2.10 Shell Emulation
+csh, loop style	 	16.2.10 Shell Emulation
+csh, null command style	 	15.6 Parameters Used By The Shell
+csh, null globbing style	 	16.2.3 Expansion and Globbing
+csh, quoting style	 	16.2.10 Shell Emulation
+csh, redirections with no command	 	16.2.10 Shell Emulation
+D
+database file path, reading	 	22.11 The zsh/db/gdbm Module
+database tied array, creating	 	22.11 The zsh/db/gdbm Module
+database tied array, destroying	 	22.11 The zsh/db/gdbm Module
+database tied arrays, enumerating	 	22.11 The zsh/db/gdbm Module
+date string, printing	 	22.10 The zsh/datetime Module
+DEBUG trap, before or after command	 	16.2.9 Scripts and Functions
+defining mathematical functions	 	17 Shell Builtin Commands
+defining widgets	 	18.3 Zle Builtins
+descriptors, file	 	7 Redirection
+directories, changing	 	17 Shell Builtin Commands
+directories, hashing	 	16.2.6 Input/Output
+directories, maintaining list of recent	 	26.3 Remembering Recent Directories
+directories, marking	 	16.2.3 Expansion and Globbing
+directories, named	 	16.2.2 Completion
+directories, named, dynamic	 	14.7.1 Dynamic named directories
+directories, named, dynamic, helper function	 	26.4 Abbreviated dynamic references to directories
+directories, named, static	 	14.7.2 Static named directories
+directory stack, controlling syntax	 	16.2.1 Changing Directories
+directory stack, ignoring duplicates	 	16.2.1 Changing Directories
+directory stack, printing	 	17 Shell Builtin Commands
+directory stack, silencing	 	16.2.1 Changing Directories
+disabling brace expansion	 	16.2.3 Expansion and Globbing
+disabling commands	 	17 Shell Builtin Commands
+discarding embedded nulls in $’...’	 	16.2.10 Shell Emulation
+disowning jobs	 	10.1 Jobs
+doing nothing	 	17 Shell Builtin Commands
+doing nothing, successfully	 	17 Shell Builtin Commands
+doing nothing, unsuccessfully	 	17 Shell Builtin Commands
+dynamic directory naming, helper function	 	26.4 Abbreviated dynamic references to directories
+dynamic named directories	 	14.7.1 Dynamic named directories
+E
+echo, BSD compatible	 	16.2.10 Shell Emulation
+editing history	 	17 Shell Builtin Commands
+editing over slow connection	 	15.6 Parameters Used By The Shell
+editing parameters	 	18.3 Zle Builtins
+editor ksh style	 	18.1 Description
+editor, enabling	 	16.2.12 Zle
+editor, line	 	18 Zsh Line Editor
+editor, overstrike mode	 	16.2.12 Zle
+editor, single line mode	 	16.2.12 Zle
+eight bit characters, printing	 	16.2.6 Input/Output
+embedded nulls, in $’...’	 	16.2.10 Shell Emulation
+enable globbing qualifiers	 	16.2.3 Expansion and Globbing
+enable history substitution	 	16.2.4 History
+enabling bracketed paste	 	15.6 Parameters Used By The Shell
+enabling commands	 	17 Shell Builtin Commands
+enabling globbing	 	16.2.3 Expansion and Globbing
+enabling the beep	 	16.2.12 Zle
+enabling the editor	 	16.2.12 Zle
+environment	 	15.1 Description
+environment variables	 	15.1 Description
+environment, and local parameters	 	16.2.5 Initialisation
+EOF, ignoring	 	16.2.6 Input/Output
+error, option to continue script on	 	16.2.10 Shell Emulation
+errors, handling of	 	6.6 Errors
+escape sequences, terminal, for highlighting	 	18.7 Character Highlighting
+evaluating arguments as commands	 	17 Shell Builtin Commands
+evaluation, arithmetic	 	11 Arithmetic Evaluation
+event designators, history	 	14.1.2 Event Designators
+executables, hashing	 	16.2.6 Input/Output
+execution, of commands	 	8 Command Execution
+execution, timed	 	22.24 The zsh/sched Module
+exit status from pipeline	 	16.2.9 Scripts and Functions
+exit status, printing	 	16.2.6 Input/Output
+exit status, trapping	 	16.2.9 Scripts and Functions
+exiting loops	 	17 Shell Builtin Commands
+exiting shell, and asynchronous jobs	 	10.2 Signals
+exiting, checking jobs when	 	16.2.7 Job Control
+exiting, checking running jobs when	 	16.2.7 Job Control
+expanding parameters	 	17 Shell Builtin Commands
+expansion	 	14 Expansion
+expansion style, sh	 	16.2.10 Shell Emulation
+expansion, arithmetic	 	14.5 Arithmetic Expansion
+expansion, brace	 	14.6 Brace Expansion
+expansion, brace, disabling	 	16.2.3 Expansion and Globbing
+expansion, brace, extending	 	16.2.3 Expansion and Globbing
+expansion, filename	 	14.7 Filename Expansion
+expansion, history	 	14.1 History Expansion
+expansion, parameter	 	14.3 Parameter Expansion
+expansion, prompt	 	13.1 Expansion of Prompt Sequences
+export	 	15.1 Description
+export, automatic	 	16.2.5 Initialisation
+exporting, and local parameters	 	16.2.5 Initialisation
+expressions, conditional	 	12 Conditional Expressions
+extended attributes, xattr, getting from files	 	22.2 The zsh/attr Module
+extended attributes, xattr, listing	 	22.2 The zsh/attr Module
+extended attributes, xattr, removing, deleting	 	22.2 The zsh/attr Module
+extended attributes, xattr, setting on files	 	22.2 The zsh/attr Module
+F
+fg, output in POSIX format	 	16.2.7 Job Control
+field splitting, sh style	 	16.2.10 Shell Emulation
+field splitting, sh style, parameter	 	14.3 Parameter Expansion
+file clobbering, allowing	 	16.2.6 Input/Output
+file clobbering, of empty files	 	16.2.6 Input/Output
+file clobbering, POSIX compatibility	 	16.2.10 Shell Emulation
+file descriptors	 	7 Redirection
+file descriptors, use with parameters	 	7.1 Opening file descriptors using parameters
+file descriptors, waiting for	 	22.37 The zsh/zselect Module
+file, history	 	17 Shell Builtin Commands
+filename expansion	 	14.7 Filename Expansion
+filename expansion, =	 	16.2.3 Expansion and Globbing
+filename expansion, notes	 	14.7.4 Notes
+filename generation	 	14.8 Filename Generation
+filename generation, bad pattern	 	16.2.3 Expansion and Globbing
+files used	 	5.2 Files
+files, examining	 	22.26 The zsh/stat Module
+files, global startup, inhibiting	 	16.2.5 Initialisation
+files, listing	 	22.26 The zsh/stat Module
+files, manipulating	 	22.14 The zsh/files Module
+files, marking type of	 	16.2.2 Completion
+files, shutdown	 	5.1 Startup/Shutdown Files
+files, startup	 	5.1 Startup/Shutdown Files
+files, transferring	 	22.32 The zsh/zftp Module
+flags, parameter expansion	 	14.3.1 Parameter Expansion Flags
+flags, shell	 	4.1 Invocation
+floating point parameters	 	11 Arithmetic Evaluation
+floating point, forcing use of	 	16.2.3 Expansion and Globbing
+flow control	 	16.2.6 Input/Output
+for loops	 	6.3 Complex Commands
+forcing use of floating point	 	16.2.3 Expansion and Globbing
+FTP	 	22.32 The zsh/zftp Module
+FTP sites for zsh	 	2.2 Availability
+FTP, functions for using shell as client	 	25 Zftp Function System
+FTP, starting a session	 	22.32.1 Subcommands
+function return, on error	 	16.2.9 Scripts and Functions
+function, scope of break and continue	 	16.2.9 Scripts and Functions
+functions	 	9 Functions
+functions, anonymous	 	9.2 Anonymous Functions
+functions, autoloading	 	9.1 Autoloading Functions
+functions, autoloading	 	17 Shell Builtin Commands
+functions, defining mathematical	 	17 Shell Builtin Commands
+functions, defining with expanded aliases	 	16.2.9 Scripts and Functions
+functions, math, use of	 	11 Arithmetic Evaluation
+functions, mathematical	 	22.17 The zsh/mathfunc Module
+functions, profiling	 	22.35 The zsh/zprof Module
+functions, recompiling	 	26.2.2 Recompiling Functions
+functions, removing	 	17 Shell Builtin Commands
+functions, returning from	 	17 Shell Builtin Commands
+G
+glob flags	 	14.8.4 Globbing Flags
+glob operators	 	14.8.1 Glob Operators
+globbing	 	14 Expansion
+globbing flags	 	14.8.4 Globbing Flags
+globbing modifiers	 	14.1.4 Modifiers
+globbing qualifiers, enable	 	16.2.3 Expansion and Globbing
+globbing style, sh	 	16.2.3 Expansion and Globbing
+globbing, ** special	 	16.2.3 Expansion and Globbing
+globbing, bad pattern	 	16.2.3 Expansion and Globbing
+globbing, enabling	 	16.2.3 Expansion and Globbing
+globbing, extended	 	16.2.3 Expansion and Globbing
+globbing, no matches	 	16.2.3 Expansion and Globbing
+globbing, no matches	 	16.2.3 Expansion and Globbing
+globbing, null, style, csh	 	16.2.3 Expansion and Globbing
+globbing, of . files	 	16.2.3 Expansion and Globbing
+globbing, qualifiers	 	14.8.7 Glob Qualifiers
+globbing, recursive	 	14.8.6 Recursive Globbing
+globbing, short forms	 	16.2.3 Expansion and Globbing
+globbing, sorting numerically	 	16.2.3 Expansion and Globbing
+grammar, shell	 	6 Shell Grammar
+H
+hash	 	15.1 Description
+hashing, of commands	 	16.2.6 Input/Output
+hashing, of directories	 	16.2.6 Input/Output
+hashing, of executables	 	16.2.6 Input/Output
+helpfiles utility	 	26.2.1 Accessing On-Line Help
+hexadecimal, output in C format	 	16.2.9 Scripts and Functions
+highlighting, region	 	18.7 Character Highlighting
+highlighting, special characters	 	18.7 Character Highlighting
+history	 	14.1 History Expansion
+history beeping	 	16.2.4 History
+history event designators	 	14.1.2 Event Designators
+history expansion	 	14.1 History Expansion
+history modifiers	 	14.1.4 Modifiers
+history style, csh	 	16.2.10 Shell Emulation
+history word designators	 	14.1.3 Word Designators
+history, appending to a file	 	16.2.4 History
+history, editing	 	17 Shell Builtin Commands
+history, enable substitution	 	16.2.4 History
+history, expiring duplicates	 	16.2.4 History
+history, file	 	17 Shell Builtin Commands
+history, hook when line is saved	 	9.3.1 Hook Functions
+history, ignoring all duplicates	 	16.2.4 History
+history, ignoring duplicates	 	16.2.4 History
+history, ignoring duplicates in search	 	16.2.4 History
+history, ignoring spaces	 	16.2.4 History
+history, incremental appending to a file	 	16.2.4 History
+history, incremental appending to a file with time	 	16.2.4 History
+history, sharing	 	16.2.4 History
+history, stack	 	17 Shell Builtin Commands
+history, timestamping	 	16.2.4 History
+history, verifying substitution	 	16.2.4 History
+hook function utility	 	26.2.5 Manipulating Hook Functions
+I
+identifiers, non-portable characters in	 	16.2.10 Shell Emulation
+if construct	 	6.3 Complex Commands
+input, tracing	 	16.2.9 Scripts and Functions
+integer parameters	 	11 Arithmetic Evaluation
+introduction	 	2 Introduction
+invocation	 	4 Invocation
+invoking widgets	 	18.3 Zle Builtins
+J
+job control, allowing	 	16.2.7 Job Control
+job control, in subshell	 	16.2.7 Job Control
+jobs	 	10.1 Jobs
+jobs, asynchronous, and exiting shell	 	10.2 Signals
+jobs, background priority	 	16.2.7 Job Control
+jobs, background, I/O	 	10.1 Jobs
+jobs, backgrounding	 	17 Shell Builtin Commands
+jobs, continuing automatically	 	16.2.7 Job Control
+jobs, disowning	 	10.1 Jobs
+jobs, disowning	 	17 Shell Builtin Commands
+jobs, foregrounding	 	17 Shell Builtin Commands
+jobs, HUP	 	16.2.7 Job Control
+jobs, killing	 	17 Shell Builtin Commands
+jobs, list format	 	16.2.7 Job Control
+jobs, output in subshell	 	16.2.7 Job Control
+jobs, referring to	 	10.1 Jobs
+jobs, resuming	 	17 Shell Builtin Commands
+jobs, resuming automatically	 	16.2.7 Job Control
+jobs, suspending	 	10.1 Jobs
+jobs, waiting for	 	17 Shell Builtin Commands
+K
+key bindings	 	18.2 Keymaps
+keyboard definition	 	26.2.3 Keyboard Definition
+keymaps	 	18.2 Keymaps
+keymaps	 	18.3 Zle Builtins
+keys, binding	 	18.3 Zle Builtins
+keys, rebinding	 	18.3 Zle Builtins
+killing jobs	 	17 Shell Builtin Commands
+ksh compatibility	 	4.2 Compatibility
+ksh, argument splitting in typeset	 	16.2.10 Shell Emulation
+ksh, array style	 	16.2.10 Shell Emulation
+ksh, compatibility	 	17 Shell Builtin Commands
+ksh, editor mode	 	18.1 Description
+ksh, null command style	 	15.6 Parameters Used By The Shell
+ksh, option printing style	 	16.2.10 Shell Emulation
+ksh, redirections with no command	 	16.2.10 Shell Emulation
+ksh, single letter options style	 	16.2.10 Shell Emulation
+L
+limits, resource	 	17 Shell Builtin Commands
+limits, resource	 	17 Shell Builtin Commands
+limits, resource	 	17 Shell Builtin Commands
+line editor	 	18 Zsh Line Editor
+line number, in evaluated expression	 	16.2.9 Scripts and Functions
+line, reading	 	17 Shell Builtin Commands
+links, symbolic	 	16.2.1 Changing Directories
+list	 	6.1 Simple Commands & Pipelines
+loading modules	 	17 Shell Builtin Commands
+local keymaps	 	18.2.2 Local Keymaps
+logging out, checking jobs when	 	16.2.7 Job Control
+logging out, checking running jobs when	 	16.2.7 Job Control
+long option	 	4.1 Invocation
+loop style, csh	 	16.2.10 Shell Emulation
+loops, continuing	 	17 Shell Builtin Commands
+loops, exiting	 	17 Shell Builtin Commands
+loops, for	 	6.3 Complex Commands
+loops, repeat	 	6.3 Complex Commands
+loops, until	 	6.3 Complex Commands
+loops, while	 	6.3 Complex Commands
+M
+mail, warning of reading	 	16.2.6 Input/Output
+mailing lists	 	2.3 Mailing Lists
+marking directories	 	16.2.3 Expansion and Globbing
+marking file types	 	16.2.2 Completion
+matching, approximate	 	14.8.5 Approximate Matching
+mathematical functions	 	22.17 The zsh/mathfunc Module
+mathematical functions, use of	 	11 Arithmetic Evaluation
+mode, privileged	 	16.2.11 Shell State
+modifiers	 	14.1.4 Modifiers
+modifiers, precommand	 	6.2 Precommand Modifiers
+modules	 	22 Zsh Modules
+modules, example	 	22.13 The zsh/example Module
+modules, loading	 	17 Shell Builtin Commands
+modules, writing	 	22.13 The zsh/example Module
+multibyte characters, in expansion and globbing	 	16.2.3 Expansion and Globbing
+multios	 	7.2 Multios
+N
+named directories, dynamic	 	14.7.1 Dynamic named directories
+named directories, dynamic, helper function	 	26.4 Abbreviated dynamic references to directories
+named directories, static	 	14.7.2 Static named directories
+no clobber, POSIX compatible	 	16.2.10 Shell Emulation
+notification of background jobs	 	16.2.7 Job Control
+null command style	 	15.6 Parameters Used By The Shell
+null globbing style, csh	 	16.2.3 Expansion and Globbing
+nulls, embedded in $’...’	 	16.2.10 Shell Emulation
+O
+octal, arithmetic expressions	 	16.2.9 Scripts and Functions
+octal, output in C format	 	16.2.9 Scripts and Functions
+operator precedence	 	16.2.9 Scripts and Functions
+operators, arithmetic	 	11 Arithmetic Evaluation
+option printing style, ksh	 	16.2.10 Shell Emulation
+option printing, ksh style	 	16.2.10 Shell Emulation
+options	 	16 Options
+options, aliases	 	16.3 Option Aliases
+options, description	 	16.2 Description of Options
+options, processing	 	17 Shell Builtin Commands
+options, setting	 	17 Shell Builtin Commands
+options, shell	 	4.1 Invocation
+options, single letter	 	16.4 Single Letter Options
+options, single letter, ksh style	 	16.2.10 Shell Emulation
+options, specifying	 	16.1 Specifying Options
+options, unsetting	 	17 Shell Builtin Commands
+overstrike mode, of editor	 	16.2.12 Zle
+P
+parameter expansion	 	14.3 Parameter Expansion
+parameter expansion flags	 	14.3.1 Parameter Expansion Flags
+parameter expansion rules	 	14.3.2 Rules
+parameter expansion style, rc	 	16.2.3 Expansion and Globbing
+parameter expansion, examples	 	14.3.3 Examples
+parameter modifiers	 	14.1.4 Modifiers
+parameter names, non-portable characters in	 	16.2.10 Shell Emulation
+parameter, file access via	 	22.16 The zsh/mapfile Module
+parameters	 	15 Parameters
+parameters, array	 	15.1 Description
+parameters, associative array	 	15.1 Description
+parameters, declaring	 	17 Shell Builtin Commands
+parameters, editing	 	18.3 Zle Builtins
+parameters, editor	 	18.5 User-Defined Widgets
+parameters, expanding	 	17 Shell Builtin Commands
+parameters, floating point	 	11 Arithmetic Evaluation
+parameters, for using file descriptors	 	7.1 Opening file descriptors using parameters
+parameters, integer	 	11 Arithmetic Evaluation
+parameters, listing	 	17 Shell Builtin Commands
+parameters, marking readonly	 	17 Shell Builtin Commands
+parameters, positional	 	17 Shell Builtin Commands
+parameters, positional	 	17 Shell Builtin Commands
+parameters, scalar	 	15.1 Description
+parameters, setting	 	17 Shell Builtin Commands
+parameters, setting array	 	17 Shell Builtin Commands
+parameters, special	 	15.1 Description
+parameters, special	 	22.20 The zsh/parameter Module
+parameters, special	 	22.34 The zsh/zleparameter Module
+parameters, substituting unset	 	16.2.3 Expansion and Globbing
+parameters, unsetting	 	17 Shell Builtin Commands
+parameters, warning when created globally	 	16.2.3 Expansion and Globbing
+parameters, warning when setting in enclosing scope	 	16.2.3 Expansion and Globbing
+parameters, zle	 	18.5 User-Defined Widgets
+path search, extended	 	16.2.6 Input/Output
+path search, for script argument to shell	 	16.2.6 Input/Output
+PCRE, regexp	 	16.2.3 Expansion and Globbing
+pipeline	 	6.1 Simple Commands & Pipelines
+pipeline, exit status from	 	16.2.9 Scripts and Functions
+precedence of glob operators	 	14.8.3 Precedence
+precedence, operator	 	16.2.9 Scripts and Functions
+precommand modifiers	 	6.2 Precommand Modifiers
+priority of background jobs	 	16.2.7 Job Control
+private parameter, creating	 	22.22 The zsh/param/private Module
+privileged mode	 	16.2.11 Shell State
+process substitution	 	14.2 Process Substitution
+prompt expansion	 	13.1 Expansion of Prompt Sequences
+prompt, ! expansion	 	16.2.8 Prompting
+prompt, % expansion	 	16.2.8 Prompting
+prompt, parameter expansion	 	16.2.8 Prompting
+prompt, save partial lines	 	16.2.8 Prompting
+prompt, with CR	 	16.2.8 Prompting
+pushd, making cd behave like	 	16.2.1 Changing Directories
+pushd, to home	 	16.2.1 Changing Directories
+Q
+qualifiers, globbing	 	14.8.7 Glob Qualifiers
+querying before rm *	 	16.2.6 Input/Output
+quoting	 	6.9 Quoting
+quoting style, csh	 	16.2.10 Shell Emulation
+quoting style, rc	 	16.2.6 Input/Output
+R
+rc, array expansion style	 	14.3 Parameter Expansion
+rc, parameter expansion style	 	16.2.3 Expansion and Globbing
+rc, quoting style	 	16.2.6 Input/Output
+reading a line	 	17 Shell Builtin Commands
+rebinding keys	 	18.3 Zle Builtins
+rebinding widgets	 	18.3 Zle Builtins
+recent directories, maintaining list of	 	26.3 Remembering Recent Directories
+recursive globbing	 	14.8.6 Recursive Globbing
+redirection	 	7 Redirection
+redirection, current shell’s I/O	 	17 Shell Builtin Commands
+redirections with no command, csh	 	16.2.10 Shell Emulation
+redirections with no command, ksh	 	16.2.10 Shell Emulation
+redirections with no command, sh	 	16.2.10 Shell Emulation
+referring to jobs	 	10.1 Jobs
+regex	 	22.23 The zsh/regex Module
+regexp, bash BASH_REMATCH variable	 	16.2.10 Shell Emulation
+regexp, PCRE	 	16.2.3 Expansion and Globbing
+region, highlighting	 	18.7 Character Highlighting
+regular expressions	 	22.23 The zsh/regex Module
+regular expressions, case-insensitive matching, option	 	16.2.3 Expansion and Globbing
+regular expressions, perl-compatible	 	22.21 The zsh/pcre Module
+removable suffix, highlighting in completion	 	18.7 Character Highlighting
+repeat loops	 	6.3 Complex Commands
+reporter utility	 	26.2.4 Dumping Shell State
+reserved words	 	6.5 Reserved Words
+resource limits	 	17 Shell Builtin Commands
+resource limits	 	17 Shell Builtin Commands
+resource limits	 	17 Shell Builtin Commands
+restricted shell	 	4.3 Restricted Shell
+restricted shell	 	16.2.11 Shell State
+resuming jobs automatically	 	16.2.7 Job Control
+return from function, on error	 	16.2.9 Scripts and Functions
+rm *, querying before	 	16.2.6 Input/Output
+rm *, waiting before	 	16.2.6 Input/Output
+roadmap	 	3 Roadmap
+rules, parameter expansion	 	14.3.2 Rules
+S
+scalar	 	15.1 Description
+select, system call	 	22.37 The zsh/zselect Module
+selection, case	 	6.3 Complex Commands
+selection, user	 	6.3 Complex Commands
+sh compatibility	 	4.2 Compatibility
+sh, compatibility	 	17 Shell Builtin Commands
+sh, expansion style	 	16.2.10 Shell Emulation
+sh, field splitting style	 	16.2.10 Shell Emulation
+sh, field splitting style, parameter	 	14.3 Parameter Expansion
+sh, globbing style	 	16.2.3 Expansion and Globbing
+sh, redirections with no command	 	16.2.10 Shell Emulation
+sh, single letter options style	 	16.2.10 Shell Emulation
+share history	 	16.2.4 History
+shell flags	 	4.1 Invocation
+shell grammar	 	6 Shell Grammar
+shell options	 	4.1 Invocation
+shell, cloning	 	22.4 The zsh/clone Module
+shell, suspending	 	17 Shell Builtin Commands
+shell, timing	 	17 Shell Builtin Commands
+shutdown files	 	5.1 Startup/Shutdown Files
+signals, trapping	 	9.3.2 Trap Functions
+signals, trapping	 	17 Shell Builtin Commands
+simple commands	 	6.1 Simple Commands & Pipelines
+single command	 	16.2.11 Shell State
+single letter options	 	16.4 Single Letter Options
+single letter options, ksh style	 	16.2.10 Shell Emulation
+slash, removing trailing	 	16.2.2 Completion
+slow connection, editing over	 	15.6 Parameters Used By The Shell
+sockets	 	22.25 The zsh/net/socket Module
+sockets, closing TCP	 	22.28.3 Closing Connections
+sockets, inbound TCP	 	22.28.2 Inbound Connections
+sockets, inbound Unix domain	 	22.25.2 Inbound Connections
+sockets, outbound TCP	 	22.28.1 Outbound Connections
+sockets, outbound Unix domain	 	22.25.1 Outbound Connections
+sockets, TCP	 	22.28 The zsh/net/tcp Module
+sockets, Unix domain	 	22.25 The zsh/net/socket Module
+special characters, highlighting	 	18.7 Character Highlighting
+special parameters	 	15.1 Description
+spelling correction	 	16.2.6 Input/Output
+stack, history	 	17 Shell Builtin Commands
+startup files	 	5.1 Startup/Shutdown Files
+startup files, global, inhibiting	 	16.2.5 Initialisation
+startup files, sourcing	 	16.2.5 Initialisation
+static named directories	 	14.7.2 Static named directories
+status, on exit from pipeline	 	16.2.9 Scripts and Functions
+styles in zftp functions	 	25.4.1 Configuration
+sublist	 	6.1 Simple Commands & Pipelines
+subscript flags	 	15.2.3 Subscript Flags
+subscripts	 	15.2.1 Array Subscripts
+subshell	 	6.3 Complex Commands
+substitution, command	 	14.4 Command Substitution
+substitution, parameter, flags	 	14.3.1 Parameter Expansion Flags
+substitution, parameter, rules	 	14.3.2 Rules
+substitution, process	 	14.2 Process Substitution
+suffix, highlighting removable, in completion	 	18.7 Character Highlighting
+sun keyboard, annoying	 	16.2.6 Input/Output
+suspending jobs	 	10.1 Jobs
+suspending the shell	 	17 Shell Builtin Commands
+symbolic links	 	16.2.1 Changing Directories
+T
+TCP	 	22.28 The zsh/net/tcp Module
+TCP function system	 	24 TCP Function System
+TCP, example	 	22.28.4 Example
+termcap value, printing	 	22.29 The zsh/termcap Module
+terminal	 	22.4 The zsh/clone Module
+terminal escape sequences for highlighting	 	18.7 Character Highlighting
+terminfo value, printing	 	22.30 The zsh/terminfo Module
+text objects	 	18.6.7 Text Objects
+timed execution	 	22.24 The zsh/sched Module
+timing	 	6.3 Complex Commands
+timing the shell	 	17 Shell Builtin Commands
+tracing, of commands	 	16.2.9 Scripts and Functions
+tracing, of input lines	 	16.2.9 Scripts and Functions
+trapping signals	 	9.3.2 Trap Functions
+trapping signals	 	17 Shell Builtin Commands
+traps, asynchronous	 	16.2.10 Shell Emulation
+traps, DEBUG, before or after command	 	16.2.9 Scripts and Functions
+traps, on function exit	 	16.2.10 Shell Emulation
+traps, POSIX compatibility	 	16.2.10 Shell Emulation
+try blocks	 	6.3 Complex Commands
+tty, freezing	 	17 Shell Builtin Commands
+U
+umask	 	17 Shell Builtin Commands
+Unicode combining characters	 	16.2.12 Zle
+unset parameters, substituting	 	16.2.3 Expansion and Globbing
+until loops	 	6.3 Complex Commands
+user contributions	 	26 User Contributions
+user selection	 	6.3 Complex Commands
+users, watching	 	22.31 The zsh/watch Module
+V
+variables	 	15 Parameters
+variables, environment	 	15.1 Description
+version	 	The Z Shell Manual
+version control utility	 	26.5 Gathering information from version control systems
+W
+waiting before rm *	 	16.2.6 Input/Output
+waiting for jobs	 	17 Shell Builtin Commands
+watching users	 	22.31 The zsh/watch Module
+while loops	 	6.3 Complex Commands
+widgets	 	18.4 Zle Widgets
+widgets, binding	 	18.3 Zle Builtins
+widgets, calling	 	18.3 Zle Builtins
+widgets, defining	 	18.3 Zle Builtins
+widgets, invoking	 	18.3 Zle Builtins
+widgets, rebinding	 	18.3 Zle Builtins
+widgets, standard	 	18.6 Standard Widgets
+widgets, user-defined	 	18.5 User-Defined Widgets
+windows, curses	 	22.9.1 Builtin
+word designators, history	 	14.1.3 Word Designators
+writing modules	 	22.13 The zsh/example Module
+Z
+zftp function system	 	25 Zftp Function System
+zftp function system, automatic reopening	 	25.4.3 Automatic and temporary reopening
+zftp function system, configuration	 	25.4.1 Configuration
+zftp function system, remote globbing	 	25.4.2 Remote globbing
+zftp function system, styles	 	25.4.1 Configuration
+zftp, functions	 	22.32.3 Functions
+zftp, parameters	 	22.32.2 Parameters
+zftp, problems	 	22.32.4 Problems
+zftp, subcommands	 	22.32.1 Subcommands
+ZLE	 	18 Zsh Line Editor
+zle, builtin commands	 	18.3 Zle Builtins
+zlogin	 	5.1 Startup/Shutdown Files
+zlogout	 	5.1 Startup/Shutdown Files
+zprofile	 	5.1 Startup/Shutdown Files
+zrecompile utility	 	26.2.2 Recompiling Functions
+zsh/datetime, function system based on	 	23 Calendar Function System
+zshenv	 	5.1 Startup/Shutdown Files
+zshrc	 	5.1 Startup/Shutdown Files
+ztcp, function system based on	 	24 TCP Function System

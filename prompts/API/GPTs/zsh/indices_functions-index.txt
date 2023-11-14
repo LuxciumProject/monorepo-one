@@ -1,0 +1,426 @@
+	Index Entry	 	Section
+-
+-	 	6.2 Precommand Modifiers
+.
+.	 	17 Shell Builtin Commands
+:
+:	 	17 Shell Builtin Commands
+[
+[[	 	6.3 Complex Commands
+_
+_absolute_command_paths	 	20.6 Utility Functions
+_all_labels	 	20.6 Utility Functions
+_all_matches	 	20.4 Control Functions
+_alternative	 	20.6 Utility Functions
+_approximate	 	20.4 Control Functions
+_arguments	 	20.6 Utility Functions
+_bash_completions	 	20.5 Bindable Commands
+_cache_invalid	 	20.6 Utility Functions
+_call_function	 	20.6 Utility Functions
+_call_program	 	20.6 Utility Functions
+_canonical_paths	 	20.4 Control Functions
+_cdr	 	26.3 Remembering Recent Directories
+_cmdambivalent	 	20.4 Control Functions
+_cmdstring	 	20.4 Control Functions
+_combination	 	20.6 Utility Functions
+_command_names	 	20.6 Utility Functions
+_complete	 	20.4 Control Functions
+_completers	 	20.6 Utility Functions
+_complete_debug (^X?)	 	20.5 Bindable Commands
+_complete_help (^Xh)	 	20.5 Bindable Commands
+_complete_help_generic	 	20.5 Bindable Commands
+_complete_tag (^Xt)	 	20.5 Bindable Commands
+_comp_locale	 	20.6 Utility Functions
+_correct	 	20.4 Control Functions
+_correct_filename (^XC)	 	20.5 Bindable Commands
+_correct_word (^Xc)	 	20.5 Bindable Commands
+_default	 	20.6 Utility Functions
+_describe	 	20.6 Utility Functions
+_description	 	20.6 Utility Functions
+_dir_list	 	20.6 Utility Functions
+_dispatch	 	20.6 Utility Functions
+_email_addresses	 	20.6 Utility Functions
+_expand	 	20.4 Control Functions
+_expand_alias	 	20.4 Control Functions
+_expand_alias (^Xa)	 	20.5 Bindable Commands
+_expand_word (^Xe)	 	20.5 Bindable Commands
+_extensions	 	20.4 Control Functions
+_external_pwds	 	20.4 Control Functions
+_files	 	20.6 Utility Functions
+_generic	 	20.5 Bindable Commands
+_gnu_generic	 	20.6 Utility Functions
+_guard	 	20.6 Utility Functions
+_history	 	20.4 Control Functions
+_history_complete_word (\e/)	 	20.5 Bindable Commands
+_ignored	 	20.4 Control Functions
+_list	 	20.4 Control Functions
+_match	 	20.4 Control Functions
+_menu	 	20.4 Control Functions
+_message	 	20.6 Utility Functions
+_most_recent_file (^Xm)	 	20.5 Bindable Commands
+_multi_parts	 	20.6 Utility Functions
+_next_label	 	20.6 Utility Functions
+_next_tags (^Xn)	 	20.5 Bindable Commands
+_normal	 	20.6 Utility Functions
+_numbers	 	20.6 Utility Functions
+_oldlist	 	20.4 Control Functions
+_options	 	20.6 Utility Functions
+_options_set	 	20.6 Utility Functions
+_options_unset	 	20.6 Utility Functions
+_parameters	 	20.6 Utility Functions
+_path_files	 	20.6 Utility Functions
+_pick_variant	 	20.6 Utility Functions
+_precommand	 	20.4 Control Functions
+_prefix	 	20.4 Control Functions
+_read_comp (^X^R)	 	20.5 Bindable Commands
+_regex_arguments	 	20.6 Utility Functions
+_regex_words [ -t term ]	 	20.6 Utility Functions
+_requested	 	20.6 Utility Functions
+_retrieve_cache	 	20.6 Utility Functions
+_sep_parts	 	20.6 Utility Functions
+_sequence	 	20.6 Utility Functions
+_setup	 	20.6 Utility Functions
+_store_cache	 	20.6 Utility Functions
+_tags	 	20.6 Utility Functions
+_tilde_files	 	20.6 Utility Functions
+_user_expand	 	20.4 Control Functions
+_values	 	20.6 Utility Functions
+_wanted	 	20.6 Utility Functions
+_widgets	 	20.6 Utility Functions
+A
+add-zle-hook-widget	 	26.2.5 Manipulating Hook Functions
+add-zsh-hook	 	26.2.5 Manipulating Hook Functions
+after	 	23.3.2 Glob qualifiers
+age	 	23.3.2 Glob qualifiers
+alias	 	17 Shell Builtin Commands
+alias, use of	 	6.8 Aliasing
+always	 	6.3 Complex Commands
+autoload	 	17 Shell Builtin Commands
+autoload, use of	 	9.1 Autoloading Functions
+B
+bashcompinit	 	20.2.1 Use of compinit
+before	 	23.3.2 Glob qualifiers
+bg	 	17 Shell Builtin Commands
+bg, use of	 	10.1 Jobs
+bindkey	 	18.3 Zle Builtins
+bindkey, use of	 	18.2 Keymaps
+break	 	17 Shell Builtin Commands
+builtin	 	6.2 Precommand Modifiers
+builtin	 	17 Shell Builtin Commands
+bye	 	17 Shell Builtin Commands
+C
+calendar	 	23.3.1 Calendar system functions
+calendar_add	 	23.3.1 Calendar system functions
+calendar_edit	 	23.3.1 Calendar system functions
+calendar_lockfiles	 	23.5 Utility functions
+calendar_parse	 	23.3.1 Calendar system functions
+calendar_read	 	23.5 Utility functions
+calendar_scandate	 	23.5 Utility functions
+calendar_show	 	23.5 Utility functions
+calendar_showdate	 	23.3.1 Calendar system functions
+calendar_sort	 	23.3.1 Calendar system functions
+cap	 	22.3 The zsh/cap Module
+case	 	6.3 Complex Commands
+catch	 	26.8 Exception Handling
+cd	 	17 Shell Builtin Commands
+cdr	 	26.3 Remembering Recent Directories
+chdir	 	17 Shell Builtin Commands
+chgrp	 	22.14 The zsh/files Module
+chmod	 	22.14 The zsh/files Module
+chown	 	22.14 The zsh/files Module
+chpwd	 	9.3.1 Hook Functions
+chpwd_recent_add	 	26.3 Remembering Recent Directories
+chpwd_recent_dirs	 	26.3 Remembering Recent Directories
+chpwd_recent_filehandler	 	26.3 Remembering Recent Directories
+clone	 	22.4 The zsh/clone Module
+colors	 	26.12.1 Descriptions
+command	 	6.2 Precommand Modifiers
+command	 	17 Shell Builtin Commands
+command_not_found_handler	 	8 Command Execution
+compadd	 	19.3 Completion Builtin Commands
+comparguments	 	22.8 The zsh/computil Module
+compaudit	 	20.2.1 Use of compinit
+compctl	 	21.2 Description
+compdef	 	20.2.3 Functions
+compdescribe	 	22.8 The zsh/computil Module
+compfiles	 	22.8 The zsh/computil Module
+compgroups	 	22.8 The zsh/computil Module
+compinit	 	20.2.1 Use of compinit
+compinstall	 	20.2 Initialization
+compquote	 	22.8 The zsh/computil Module
+compset	 	19.3 Completion Builtin Commands
+comptags	 	22.8 The zsh/computil Module
+comptry	 	22.8 The zsh/computil Module
+compvalues	 	22.8 The zsh/computil Module
+continue	 	17 Shell Builtin Commands
+coproc	 	6.1 Simple Commands & Pipelines
+cube	 	17 Shell Builtin Commands
+D
+declare	 	17 Shell Builtin Commands
+dirs	 	17 Shell Builtin Commands
+disable	 	17 Shell Builtin Commands
+disable, use of	 	6.5 Reserved Words
+disown	 	17 Shell Builtin Commands
+disown, use of	 	10.1 Jobs
+E
+echo	 	17 Shell Builtin Commands
+echotc	 	22.29 The zsh/termcap Module
+echoti	 	22.30 The zsh/terminfo Module
+emulate	 	17 Shell Builtin Commands
+enable	 	17 Shell Builtin Commands
+eval	 	17 Shell Builtin Commands
+example	 	22.13 The zsh/example Module
+exec	 	6.2 Precommand Modifiers
+exit	 	17 Shell Builtin Commands
+export	 	17 Shell Builtin Commands
+F
+false	 	17 Shell Builtin Commands
+fc	 	17 Shell Builtin Commands
+fc, use of	 	14.1.1 Overview
+fg	 	17 Shell Builtin Commands
+fg, use of	 	10.1 Jobs
+float	 	17 Shell Builtin Commands
+float, use of	 	11 Arithmetic Evaluation
+fned	 	26.12.1 Descriptions
+for	 	6.3 Complex Commands
+foreach	 	6.4 Alternate Forms For Complex Commands
+function	 	6.3 Complex Commands
+function, use of	 	9 Functions
+functions	 	17 Shell Builtin Commands
+functions, hook	 	9.3.1 Hook Functions
+functions, use of	 	9 Functions
+G
+getcap	 	22.3 The zsh/cap Module
+getln	 	17 Shell Builtin Commands
+getopts	 	17 Shell Builtin Commands
+H
+hash	 	17 Shell Builtin Commands
+histed	 	26.12.1 Descriptions
+history	 	17 Shell Builtin Commands
+hook functions	 	9.3.1 Hook Functions
+I
+if	 	6.3 Complex Commands
+integer	 	17 Shell Builtin Commands
+integer, use of	 	11 Arithmetic Evaluation
+is-at-least	 	26.12.1 Descriptions
+J
+jobs	 	17 Shell Builtin Commands
+K
+kill	 	17 Shell Builtin Commands
+L
+let	 	17 Shell Builtin Commands
+let, use of	 	11 Arithmetic Evaluation
+limit	 	17 Shell Builtin Commands
+ln	 	22.14 The zsh/files Module
+local	 	17 Shell Builtin Commands
+log	 	22.31 The zsh/watch Module
+logout	 	17 Shell Builtin Commands
+M
+max	 	26.10 Mathematical Functions
+min	 	26.10 Mathematical Functions
+mkdir	 	22.14 The zsh/files Module
+mv	 	22.14 The zsh/files Module
+N
+nocorrect	 	6.2 Precommand Modifiers
+noglob	 	6.2 Precommand Modifiers
+nslookup	 	26.12.1 Descriptions
+P
+pcre-match	 	22.21 The zsh/pcre Module
+pcre_compile	 	22.21 The zsh/pcre Module
+pcre_match	 	22.21 The zsh/pcre Module
+pcre_study	 	22.21 The zsh/pcre Module
+periodic	 	9.3.1 Hook Functions
+pick-web-browser	 	26.9 MIME Functions
+popd	 	17 Shell Builtin Commands
+precmd	 	9.3.1 Hook Functions
+preexec	 	9.3.1 Hook Functions
+print	 	17 Shell Builtin Commands
+printf	 	17 Shell Builtin Commands
+private	 	22.22 The zsh/param/private Module
+pushd	 	17 Shell Builtin Commands
+pushln	 	17 Shell Builtin Commands
+pwd	 	17 Shell Builtin Commands
+R
+r	 	17 Shell Builtin Commands
+read	 	17 Shell Builtin Commands
+regex-match	 	22.23 The zsh/regex Module
+regexp-replace	 	26.12.1 Descriptions
+rehash	 	17 Shell Builtin Commands
+repeat	 	6.3 Complex Commands
+reporter	 	26.2.4 Dumping Shell State
+return	 	17 Shell Builtin Commands
+return, use of	 	9 Functions
+rm	 	22.14 The zsh/files Module
+rmdir	 	22.14 The zsh/files Module
+run-help	 	26.12.1 Descriptions
+run-help, use of	 	26.2.1 Accessing On-Line Help
+run-help-btrfs	 	26.12.1 Descriptions
+run-help-git	 	26.12.1 Descriptions
+run-help-ip	 	26.12.1 Descriptions
+run-help-openssl	 	26.12.1 Descriptions
+run-help-p4	 	26.12.1 Descriptions
+run-help-sudo	 	26.12.1 Descriptions
+run-help-svk	 	26.12.1 Descriptions
+run-help-svn	 	26.12.1 Descriptions
+S
+sched	 	22.24 The zsh/sched Module
+select	 	6.3 Complex Commands
+set	 	17 Shell Builtin Commands
+set, use of	 	15.2 Array Parameters
+setcap	 	22.3 The zsh/cap Module
+setopt	 	17 Shell Builtin Commands
+shift	 	17 Shell Builtin Commands
+source	 	17 Shell Builtin Commands
+stat	 	22.26 The zsh/stat Module
+strftime	 	22.10 The zsh/datetime Module
+sum	 	26.10 Mathematical Functions
+suspend	 	17 Shell Builtin Commands
+sync	 	22.14 The zsh/files Module
+syserror	 	22.27.1 Builtins
+sysopen	 	22.27.1 Builtins
+sysread	 	22.27.1 Builtins
+T
+tcp_alias	 	24.2.2 Session Management
+tcp_aliases	 	24.7 TCP Utility Parameters
+tcp_by_fd	 	24.7 TCP Utility Parameters
+tcp_by_name	 	24.7 TCP Utility Parameters
+tcp_close	 	24.2.1 Basic I/O
+tcp_command	 	24.2.3 Advanced I/O
+tcp_expect	 	24.2.3 Advanced I/O
+tcp_fd_handler	 	24.4 TCP Utility Functions
+tcp_log	 	24.2.2 Session Management
+TCP_LOG_SESS	 	24.5 TCP User Parameters
+tcp_on_alias	 	24.3 TCP User-defined Functions
+tcp_on_awol	 	24.3 TCP User-defined Functions
+tcp_on_close	 	24.3 TCP User-defined Functions
+tcp_on_open	 	24.3 TCP User-defined Functions
+tcp_on_rename	 	24.3 TCP User-defined Functions
+tcp_on_spam	 	24.3 TCP User-defined Functions
+tcp_on_unalias	 	24.3 TCP User-defined Functions
+tcp_open	 	24.2.1 Basic I/O
+tcp_output	 	24.4 TCP Utility Functions
+tcp_proxy	 	24.2.3 Advanced I/O
+tcp_read	 	24.2.1 Basic I/O
+tcp_rename	 	24.2.2 Session Management
+tcp_send	 	24.2.1 Basic I/O
+tcp_sess	 	24.2.2 Session Management
+tcp_spam	 	24.2.3 Advanced I/O
+tcp_talk	 	24.2.3 Advanced I/O
+tcp_wait	 	24.2.3 Advanced I/O
+test	 	17 Shell Builtin Commands
+throw	 	26.8 Exception Handling
+time	 	6.3 Complex Commands
+times	 	17 Shell Builtin Commands
+trap	 	17 Shell Builtin Commands
+trap, use of	 	9.3.2 Trap Functions
+TRAPDEBUG	 	9.3.2 Trap Functions
+TRAPERR	 	9.3.2 Trap Functions
+TRAPEXIT	 	9.3.2 Trap Functions
+TRAPZERR	 	9.3.2 Trap Functions
+true	 	17 Shell Builtin Commands
+ttyctl	 	17 Shell Builtin Commands
+type	 	17 Shell Builtin Commands
+typeset	 	17 Shell Builtin Commands
+typeset, use of	 	15.1 Description
+typeset, use of	 	15.2 Array Parameters
+U
+ulimit	 	17 Shell Builtin Commands
+umask	 	17 Shell Builtin Commands
+unfunction	 	17 Shell Builtin Commands
+unfunction, use of	 	9 Functions
+unhash	 	17 Shell Builtin Commands
+unlimit	 	17 Shell Builtin Commands
+unset	 	17 Shell Builtin Commands
+unsetopt	 	17 Shell Builtin Commands
+until	 	6.3 Complex Commands
+V
+vared	 	18.3 Zle Builtins
+vcs_info	 	26.5.5 Function Descriptions (Public API)
+vcs_info_hookadd	 	26.5.5 Function Descriptions (Public API)
+vcs_info_hookdel	 	26.5.5 Function Descriptions (Public API)
+vcs_info_lastmsg	 	26.5.5 Function Descriptions (Public API)
+vcs_info_printsys	 	26.5.5 Function Descriptions (Public API)
+vcs_info_setsys	 	26.5.5 Function Descriptions (Public API)
+W
+wait	 	17 Shell Builtin Commands
+weather, example function	 	22.38 The zsh/zutil Module
+whence	 	17 Shell Builtin Commands
+where	 	17 Shell Builtin Commands
+which	 	17 Shell Builtin Commands
+while	 	6.3 Complex Commands
+Z
+zargs	 	26.12.1 Descriptions
+zcalc	 	26.10 Mathematical Functions
+zcompile	 	17 Shell Builtin Commands
+zcompile, use of	 	9.1 Autoloading Functions
+zcp	 	26.12.1 Descriptions
+zcurses	 	22.9.1 Builtin
+zdelattr	 	22.2 The zsh/attr Module
+zed	 	26.12.1 Descriptions
+zed-set-file-name	 	26.12.1 Descriptions
+zfanon	 	25.3.1 Opening a connection
+zfautocheck	 	25.3.9 Other functions
+zfcd	 	25.3.2 Directory management
+zfcd_match	 	25.3.9 Other functions
+zfcget	 	25.3.4 Retrieving files
+zfclose	 	25.3.6 Closing the connection
+zfcput	 	25.3.5 Sending files
+zfdir	 	25.3.2 Directory management
+zffcache	 	25.3.9 Other functions
+zfgcp	 	25.3.4 Retrieving files
+zfget	 	25.3.4 Retrieving files
+zfget_match	 	25.3.9 Other functions
+zfgoto	 	25.3.8 Bookmarks
+zfhere	 	25.3.2 Directory management
+zfinit	 	25.3.9 Other functions
+zfls	 	25.3.2 Directory management
+zfmark	 	25.3.8 Bookmarks
+zfopen	 	25.3.1 Opening a connection
+zformat	 	22.38 The zsh/zutil Module
+zfparams	 	25.3.1 Opening a connection
+zfpcp	 	25.3.5 Sending files
+zfput	 	25.3.5 Sending files
+zfrglob	 	25.3.9 Other functions
+zfrtime	 	25.3.9 Other functions
+zfsession	 	25.3.7 Session management
+zfstat	 	25.3.3 Status commands
+zftp	 	22.32 The zsh/zftp Module
+zftp_chpwd, specification	 	22.32.3 Functions
+zftp_chpwd, supplied version	 	25.3.9 Other functions
+zftp_progress, specification	 	22.32.3 Functions
+zftp_progress, supplied version	 	25.3.9 Other functions
+zftransfer	 	25.3.7 Session management
+zftype	 	25.3.3 Status commands
+zfuget	 	25.3.4 Retrieving files
+zfuput	 	25.3.5 Sending files
+zgdbmpath	 	22.11 The zsh/db/gdbm Module
+zgdbm_tied	 	22.11 The zsh/db/gdbm Module
+zgetattr	 	22.2 The zsh/attr Module
+zkbd	 	26.2.3 Keyboard Definition
+zle	 	18.3 Zle Builtins
+zlistattr	 	22.2 The zsh/attr Module
+zln	 	26.12.1 Descriptions
+zmathfunc	 	26.10 Mathematical Functions
+zmathfuncdef	 	26.10 Mathematical Functions
+zmath_cube	 	17 Shell Builtin Commands
+zmodload	 	17 Shell Builtin Commands
+zmv	 	26.12.1 Descriptions
+zparseopts	 	22.38 The zsh/zutil Module
+zprof	 	22.35 The zsh/zprof Module
+zpty	 	22.36 The zsh/zpty Module
+zrecompile	 	26.2.2 Recompiling Functions
+zregexparse	 	22.38 The zsh/zutil Module
+zselect	 	22.37 The zsh/zselect Module
+zsetattr	 	22.2 The zsh/attr Module
+zsh-mime-handler	 	26.9 MIME Functions
+zsh-mime-setup	 	26.9 MIME Functions
+zshaddhistory	 	9.3.1 Hook Functions
+zshexit	 	9.3.1 Hook Functions
+zsh_directory_name_generic	 	26.4 Abbreviated dynamic references to directories
+zsocket	 	22.25 The zsh/net/socket Module
+zstat	 	22.26 The zsh/stat Module
+zstyle	 	22.38 The zsh/zutil Module
+zstyle+	 	26.12.1 Descriptions
+ztcp	 	22.28 The zsh/net/tcp Module
+ztie	 	22.11 The zsh/db/gdbm Module
+zuntie	 	22.11 The zsh/db/gdbm Module

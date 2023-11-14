@@ -1,0 +1,839 @@
+	Index Entry	 	Section
+A
+ALIASES	 	16.2.6 Input/Output
+ALIASFUNCDEF	 	16.2.9 Scripts and Functions
+ALIAS_FUNC_DEF	 	16.2.9 Scripts and Functions
+ALLEXPORT	 	16.2.5 Initialisation
+ALL_EXPORT	 	16.2.5 Initialisation
+ALWAYSLASTPROMPT	 	16.2.2 Completion
+ALWAYSTOEND	 	16.2.2 Completion
+ALWAYS_LAST_PROMPT	 	16.2.2 Completion
+ALWAYS_TO_END	 	16.2.2 Completion
+APPENDCREATE	 	16.2.10 Shell Emulation
+APPENDHISTORY	 	16.2.4 History
+APPEND_CREATE	 	16.2.10 Shell Emulation
+APPEND_HISTORY	 	16.2.4 History
+AUTOCD	 	16.2.1 Changing Directories
+AUTOCONTINUE	 	16.2.7 Job Control
+AUTOLIST	 	16.2.2 Completion
+AUTOMENU	 	16.2.2 Completion
+AUTONAMEDIRS	 	16.2.2 Completion
+AUTOPARAMKEYS	 	16.2.2 Completion
+AUTOPARAMSLASH	 	16.2.2 Completion
+AUTOPUSHD	 	16.2.1 Changing Directories
+AUTOREMOVESLASH	 	16.2.2 Completion
+AUTORESUME	 	16.2.7 Job Control
+AUTO_CD	 	16.2.1 Changing Directories
+AUTO_CONTINUE	 	16.2.7 Job Control
+AUTO_LIST	 	16.2.2 Completion
+AUTO_MENU	 	16.2.2 Completion
+AUTO_NAME_DIRS	 	16.2.2 Completion
+AUTO_PARAM_KEYS	 	16.2.2 Completion
+AUTO_PARAM_SLASH	 	16.2.2 Completion
+AUTO_PUSHD	 	16.2.1 Changing Directories
+AUTO_PUSHD, use of	 	15.6 Parameters Used By The Shell
+AUTO_REMOVE_SLASH	 	16.2.2 Completion
+AUTO_RESUME	 	16.2.7 Job Control
+B
+BADPATTERN	 	16.2.3 Expansion and Globbing
+BAD_PATTERN	 	16.2.3 Expansion and Globbing
+BANGHIST	 	16.2.4 History
+BANG_HIST	 	16.2.4 History
+BAREGLOBQUAL	 	16.2.3 Expansion and Globbing
+BARE_GLOB_QUAL	 	16.2.3 Expansion and Globbing
+BARE_GLOB_QUAL, use of	 	14.8.7 Glob Qualifiers
+BASHAUTOLIST	 	16.2.2 Completion
+BASHREMATCH	 	16.2.10 Shell Emulation
+BASH_AUTO_LIST	 	16.2.2 Completion
+BASH_REMATCH	 	16.2.10 Shell Emulation
+BEEP	 	16.2.12 Zle
+BGNICE	 	16.2.7 Job Control
+BG_NICE	 	16.2.7 Job Control
+BRACECCL	 	16.2.3 Expansion and Globbing
+BRACEEXPAND	 	16.3 Option Aliases
+BRACE_CCL	 	16.2.3 Expansion and Globbing
+BRACE_CCL, use of	 	14.6 Brace Expansion
+BRACE_EXPAND	 	16.3 Option Aliases
+BSDECHO	 	16.2.10 Shell Emulation
+BSD_ECHO	 	16.2.10 Shell Emulation
+BSD_ECHO, use of	 	17 Shell Builtin Commands
+C
+CASEGLOB	 	16.2.3 Expansion and Globbing
+CASEMATCH	 	16.2.3 Expansion and Globbing
+CASEPATHS	 	16.2.3 Expansion and Globbing
+CASE_GLOB	 	16.2.3 Expansion and Globbing
+CASE_MATCH	 	16.2.3 Expansion and Globbing
+CASE_PATHS	 	16.2.3 Expansion and Globbing
+CBASES	 	16.2.9 Scripts and Functions
+CDABLEVARS	 	16.2.1 Changing Directories
+CDABLE_VARS	 	16.2.1 Changing Directories
+CDABLE_VARS, use of	 	17 Shell Builtin Commands
+CDSILENT	 	16.2.1 Changing Directories
+CD_SILENT	 	16.2.1 Changing Directories
+CHASEDOTS	 	16.2.1 Changing Directories
+CHASELINKS	 	16.2.1 Changing Directories
+CHASE_DOTS	 	16.2.1 Changing Directories
+CHASE_LINKS	 	16.2.1 Changing Directories
+CHASE_LINKS, use of	 	17 Shell Builtin Commands
+CHECKJOBS	 	16.2.7 Job Control
+CHECKRUNNINGJOBS	 	16.2.7 Job Control
+CHECK_JOBS	 	16.2.7 Job Control
+CHECK_RUNNING_JOBS	 	16.2.7 Job Control
+CLOBBER	 	16.2.6 Input/Output
+CLOBBEREMPTY	 	16.2.6 Input/Output
+CLOBBER_EMPTY	 	16.2.6 Input/Output
+COMBININGCHARS	 	16.2.12 Zle
+COMBINING_CHARS	 	16.2.12 Zle
+COMPLETEALIASES	 	16.2.2 Completion
+COMPLETEINWORD	 	16.2.2 Completion
+COMPLETE_ALIASES	 	16.2.2 Completion
+COMPLETE_IN_WORD	 	16.2.2 Completion
+CONTINUEONERROR	 	16.2.10 Shell Emulation
+CONTINUE_ON_ERROR	 	16.2.10 Shell Emulation
+CORRECT	 	16.2.6 Input/Output
+CORRECTALL	 	16.2.6 Input/Output
+CORRECT_ALL	 	16.2.6 Input/Output
+CPRECEDENCES	 	16.2.9 Scripts and Functions
+CSHJUNKIEHISTORY	 	16.2.10 Shell Emulation
+CSHJUNKIELOOPS	 	16.2.10 Shell Emulation
+CSHJUNKIEQUOTES	 	16.2.10 Shell Emulation
+CSHNULLCMD	 	16.2.10 Shell Emulation
+CSHNULLGLOB	 	16.2.3 Expansion and Globbing
+CSH_JUNKIE_HISTORY	 	16.2.10 Shell Emulation
+CSH_JUNKIE_HISTORY, use of	 	14.1.1 Overview
+CSH_JUNKIE_LOOPS	 	16.2.10 Shell Emulation
+CSH_JUNKIE_QUOTES	 	16.2.10 Shell Emulation
+CSH_NULLCMD	 	16.2.10 Shell Emulation
+CSH_NULLCMD, use of	 	7.3 Redirections with no command
+CSH_NULL_GLOB	 	16.2.3 Expansion and Globbing
+C_BASES	 	16.2.9 Scripts and Functions
+C_BASES, use of	 	11 Arithmetic Evaluation
+C_PRECEDENCES	 	16.2.9 Scripts and Functions
+D
+DEBUGBEFORECMD	 	16.2.9 Scripts and Functions
+DEBUG_BEFORE_CMD	 	16.2.9 Scripts and Functions
+DOTGLOB	 	16.3 Option Aliases
+DOT_GLOB	 	16.3 Option Aliases
+DVORAK	 	16.2.6 Input/Output
+E
+EMACS	 	16.2.12 Zle
+EQUALS	 	16.2.3 Expansion and Globbing
+ERREXIT	 	16.2.9 Scripts and Functions
+ERRRETURN	 	16.2.9 Scripts and Functions
+ERR_EXIT	 	16.2.9 Scripts and Functions
+ERR_RETURN	 	16.2.9 Scripts and Functions
+EVALLINENO	 	16.2.9 Scripts and Functions
+EVAL_LINENO	 	16.2.9 Scripts and Functions
+EXEC	 	16.2.9 Scripts and Functions
+EXTENDEDGLOB	 	16.2.3 Expansion and Globbing
+EXTENDEDHISTORY	 	16.2.4 History
+EXTENDED_GLOB	 	16.2.3 Expansion and Globbing
+EXTENDED_GLOB, enable	 	14.3.1 Parameter Expansion Flags
+EXTENDED_GLOB, use of	 	14.8 Filename Generation
+EXTENDED_HISTORY	 	16.2.4 History
+F
+FLOWCONTROL	 	16.2.6 Input/Output
+FLOW_CONTROL	 	16.2.6 Input/Output
+FORCEFLOAT	 	16.2.3 Expansion and Globbing
+FORCE_FLOAT	 	16.2.3 Expansion and Globbing
+FUNCTIONARGZERO	 	16.2.9 Scripts and Functions
+FUNCTION_ARGZERO	 	16.2.9 Scripts and Functions
+G
+GLOB	 	16.2.3 Expansion and Globbing
+GLOB, use of	 	14.8 Filename Generation
+GLOBALEXPORT	 	16.2.5 Initialisation
+GLOBALRCS	 	16.2.5 Initialisation
+GLOBAL_EXPORT	 	16.2.5 Initialisation
+GLOBAL_RCS	 	16.2.5 Initialisation
+GLOBAL_RCS, use of	 	5.1 Startup/Shutdown Files
+GLOBASSIGN	 	16.2.3 Expansion and Globbing
+GLOBCOMPLETE	 	16.2.2 Completion
+GLOBDOTS	 	16.2.3 Expansion and Globbing
+GLOBSTARSHORT	 	16.2.3 Expansion and Globbing
+GLOBSUBST	 	16.2.3 Expansion and Globbing
+GLOB_ASSIGN	 	16.2.3 Expansion and Globbing
+GLOB_COMPLETE	 	16.2.2 Completion
+GLOB_DOTS	 	16.2.3 Expansion and Globbing
+GLOB_DOTS, setting in pattern	 	14.8.7 Glob Qualifiers
+GLOB_DOTS, use of	 	14.8 Filename Generation
+GLOB_STAR_SHORT	 	16.2.3 Expansion and Globbing
+GLOB_SUBST	 	16.2.3 Expansion and Globbing
+GLOB_SUBST, toggle	 	14.3 Parameter Expansion
+H
+HASHALL	 	16.3 Option Aliases
+HASHCMDS	 	16.2.6 Input/Output
+HASHDIRS	 	16.2.6 Input/Output
+HASHEXECUTABLESONLY	 	16.2.6 Input/Output
+HASHLISTALL	 	16.2.2 Completion
+HASH_ALL	 	16.3 Option Aliases
+HASH_CMDS	 	16.2.6 Input/Output
+HASH_DIRS	 	16.2.6 Input/Output
+HASH_EXECUTABLES_ONLY	 	16.2.6 Input/Output
+HASH_LIST_ALL	 	16.2.2 Completion
+HISTALLOWCLOBBER	 	16.2.4 History
+HISTAPPEND	 	16.3 Option Aliases
+HISTBEEP	 	16.2.4 History
+HISTEXPAND	 	16.3 Option Aliases
+HISTEXPIREDUPSFIRST	 	16.2.4 History
+HISTFCNTLLOCK	 	16.2.4 History
+HISTFINDNODUPS	 	16.2.4 History
+HISTIGNOREALLDUPS	 	16.2.4 History
+HISTIGNOREDUPS	 	16.2.4 History
+HISTIGNORESPACE	 	16.2.4 History
+HISTLEXWORDS	 	16.2.4 History
+HISTNOFUNCTIONS	 	16.2.4 History
+HISTNOSTORE	 	16.2.4 History
+HISTREDUCEBLANKS	 	16.2.4 History
+HISTSAVEBYCOPY	 	16.2.4 History
+HISTSAVENODUPS	 	16.2.4 History
+HISTSUBSTPATTERN	 	16.2.3 Expansion and Globbing
+HISTVERIFY	 	16.2.4 History
+HIST_ALLOW_CLOBBER	 	16.2.4 History
+HIST_APPEND	 	16.3 Option Aliases
+HIST_BEEP	 	16.2.4 History
+HIST_EXPAND	 	16.3 Option Aliases
+HIST_EXPIRE_DUPS_FIRST	 	16.2.4 History
+HIST_FCNTL_LOCK	 	16.2.4 History
+HIST_FIND_NO_DUPS	 	16.2.4 History
+HIST_IGNORE_ALL_DUPS	 	16.2.4 History
+HIST_IGNORE_DUPS	 	16.2.4 History
+HIST_IGNORE_SPACE	 	16.2.4 History
+HIST_LEX_WORDS	 	16.2.4 History
+HIST_NO_FUNCTIONS	 	16.2.4 History
+HIST_NO_STORE	 	16.2.4 History
+HIST_REDUCE_BLANKS	 	16.2.4 History
+HIST_SAVE_BY_COPY	 	16.2.4 History
+HIST_SAVE_NO_DUPS	 	16.2.4 History
+HIST_SUBST_PATTERN	 	16.2.3 Expansion and Globbing
+HIST_VERIFY	 	16.2.4 History
+HUP	 	16.2.7 Job Control
+HUP, use of	 	10.1 Jobs
+I
+IGNOREBRACES	 	16.2.3 Expansion and Globbing
+IGNORECLOSEBRACES	 	16.2.3 Expansion and Globbing
+IGNOREEOF	 	16.2.6 Input/Output
+IGNORE_BRACES	 	16.2.3 Expansion and Globbing
+IGNORE_CLOSE_BRACES	 	16.2.3 Expansion and Globbing
+IGNORE_EOF	 	16.2.6 Input/Output
+IGNORE_EOF, use of	 	17 Shell Builtin Commands
+INCAPPENDHISTORY	 	16.2.4 History
+INCAPPENDHISTORYTIME	 	16.2.4 History
+INC_APPEND_HISTORY	 	16.2.4 History
+INC_APPEND_HISTORY_TIME	 	16.2.4 History
+INTERACTIVE	 	16.2.11 Shell State
+INTERACTIVE, use of	 	16.2.11 Shell State
+INTERACTIVECOMMENTS	 	16.2.6 Input/Output
+INTERACTIVE_COMMENTS	 	16.2.6 Input/Output
+INTERACTIVE_COMMENTS, use of	 	6.7 Comments
+K
+KSHARRAYS	 	16.2.10 Shell Emulation
+KSHAUTOLOAD	 	16.2.10 Shell Emulation
+KSHGLOB	 	16.2.3 Expansion and Globbing
+KSHOPTIONPRINT	 	16.2.10 Shell Emulation
+KSHTYPESET	 	16.2.10 Shell Emulation
+KSHZEROSUBSCRIPT	 	16.2.10 Shell Emulation
+KSH_ARRAYS	 	16.2.10 Shell Emulation
+KSH_ARRAYS, use of	 	15.2.1 Array Subscripts
+KSH_ARRAYS, use of	 	17 Shell Builtin Commands
+KSH_AUTOLOAD	 	16.2.10 Shell Emulation
+KSH_AUTOLOAD, use of	 	9.1 Autoloading Functions
+KSH_GLOB	 	16.2.3 Expansion and Globbing
+KSH_GLOB, use of	 	14.8.2 ksh-like Glob Operators
+KSH_OPTION_PRINT	 	16.2.10 Shell Emulation
+KSH_TYPESET	 	16.2.10 Shell Emulation
+KSH_ZERO_SUBSCRIPT	 	16.2.10 Shell Emulation
+L
+LISTAMBIGUOUS	 	16.2.2 Completion
+LISTBEEP	 	16.2.2 Completion
+LISTPACKED	 	16.2.2 Completion
+LISTROWSFIRST	 	16.2.2 Completion
+LISTTYPES	 	16.2.2 Completion
+LIST_AMBIGUOUS	 	16.2.2 Completion
+LIST_BEEP	 	16.2.2 Completion
+LIST_PACKED	 	16.2.2 Completion
+LIST_ROWS_FIRST	 	16.2.2 Completion
+LIST_TYPES	 	16.2.2 Completion
+LOCALLOOPS	 	16.2.9 Scripts and Functions
+LOCALOPTIONS	 	16.2.9 Scripts and Functions
+LOCALPATTERNS	 	16.2.9 Scripts and Functions
+LOCALTRAPS	 	16.2.9 Scripts and Functions
+LOCAL_LOOPS	 	16.2.9 Scripts and Functions
+LOCAL_OPTIONS	 	16.2.9 Scripts and Functions
+LOCAL_PATTERNS	 	16.2.9 Scripts and Functions
+LOCAL_TRAPS	 	16.2.9 Scripts and Functions
+LOG	 	16.3 Option Aliases
+LOGIN	 	16.2.11 Shell State
+LOGIN, use of	 	5.1 Startup/Shutdown Files
+LONGLISTJOBS	 	16.2.7 Job Control
+LONG_LIST_JOBS	 	16.2.7 Job Control
+M
+MAGICEQUALSUBST	 	16.2.3 Expansion and Globbing
+MAGIC_EQUAL_SUBST	 	16.2.3 Expansion and Globbing
+MAILWARN	 	16.3 Option Aliases
+MAILWARNING	 	16.2.6 Input/Output
+MAIL_WARN	 	16.3 Option Aliases
+MAIL_WARNING	 	16.2.6 Input/Output
+MARKDIRS	 	16.2.3 Expansion and Globbing
+MARK_DIRS	 	16.2.3 Expansion and Globbing
+MARK_DIRS, setting in pattern	 	14.8.7 Glob Qualifiers
+MENUCOMPLETE	 	16.2.2 Completion
+MENU_COMPLETE	 	16.2.2 Completion
+MENU_COMPLETE, use of	 	18.6.5 Completion
+MONITOR	 	16.2.7 Job Control
+MONITOR, use of	 	10.1 Jobs
+MULTIBYTE	 	16.2.3 Expansion and Globbing
+MULTIFUNCDEF	 	16.2.9 Scripts and Functions
+MULTIOS	 	16.2.9 Scripts and Functions
+MULTIOS, use of	 	7.2 Multios
+MULTI_FUNC_DEF	 	16.2.9 Scripts and Functions
+N
+NOALIASES	 	16.2.6 Input/Output
+NOALIASFUNCDEF	 	16.2.9 Scripts and Functions
+NOALLEXPORT	 	16.2.5 Initialisation
+NOALWAYSLASTPROMPT	 	16.2.2 Completion
+NOALWAYSTOEND	 	16.2.2 Completion
+NOAPPENDCREATE	 	16.2.10 Shell Emulation
+NOAPPENDHISTORY	 	16.2.4 History
+NOAUTOCD	 	16.2.1 Changing Directories
+NOAUTOCONTINUE	 	16.2.7 Job Control
+NOAUTOLIST	 	16.2.2 Completion
+NOAUTOMENU	 	16.2.2 Completion
+NOAUTONAMEDIRS	 	16.2.2 Completion
+NOAUTOPARAMKEYS	 	16.2.2 Completion
+NOAUTOPARAMSLASH	 	16.2.2 Completion
+NOAUTOPUSHD	 	16.2.1 Changing Directories
+NOAUTOREMOVESLASH	 	16.2.2 Completion
+NOAUTORESUME	 	16.2.7 Job Control
+NOBADPATTERN	 	16.2.3 Expansion and Globbing
+NOBANGHIST	 	16.2.4 History
+NOBAREGLOBQUAL	 	16.2.3 Expansion and Globbing
+NOBASHAUTOLIST	 	16.2.2 Completion
+NOBASHREMATCH	 	16.2.10 Shell Emulation
+NOBEEP	 	16.2.12 Zle
+NOBGNICE	 	16.2.7 Job Control
+NOBRACECCL	 	16.2.3 Expansion and Globbing
+NOBRACEEXPAND	 	16.3 Option Aliases
+NOBSDECHO	 	16.2.10 Shell Emulation
+NOCASEGLOB	 	16.2.3 Expansion and Globbing
+NOCASEMATCH	 	16.2.3 Expansion and Globbing
+NOCASEPATHS	 	16.2.3 Expansion and Globbing
+NOCBASES	 	16.2.9 Scripts and Functions
+NOCDABLEVARS	 	16.2.1 Changing Directories
+NOCDSILENT	 	16.2.1 Changing Directories
+NOCHASEDOTS	 	16.2.1 Changing Directories
+NOCHASELINKS	 	16.2.1 Changing Directories
+NOCHECKJOBS	 	16.2.7 Job Control
+NOCHECKRUNNINGJOBS	 	16.2.7 Job Control
+NOCLOBBER	 	16.2.6 Input/Output
+NOCLOBBEREMPTY	 	16.2.6 Input/Output
+NOCOMBININGCHARS	 	16.2.12 Zle
+NOCOMPLETEALIASES	 	16.2.2 Completion
+NOCOMPLETEINWORD	 	16.2.2 Completion
+NOCONTINUEONERROR	 	16.2.10 Shell Emulation
+NOCORRECT	 	16.2.6 Input/Output
+NOCORRECTALL	 	16.2.6 Input/Output
+NOCPRECEDENCES	 	16.2.9 Scripts and Functions
+NOCSHJUNKIEHISTORY	 	16.2.10 Shell Emulation
+NOCSHJUNKIELOOPS	 	16.2.10 Shell Emulation
+NOCSHJUNKIEQUOTES	 	16.2.10 Shell Emulation
+NOCSHNULLCMD	 	16.2.10 Shell Emulation
+NOCSHNULLGLOB	 	16.2.3 Expansion and Globbing
+NODEBUGBEFORECMD	 	16.2.9 Scripts and Functions
+NODOTGLOB	 	16.3 Option Aliases
+NODVORAK	 	16.2.6 Input/Output
+NOEMACS	 	16.2.12 Zle
+NOEQUALS	 	16.2.3 Expansion and Globbing
+NOERREXIT	 	16.2.9 Scripts and Functions
+NOERRRETURN	 	16.2.9 Scripts and Functions
+NOEVALLINENO	 	16.2.9 Scripts and Functions
+NOEXEC	 	16.2.9 Scripts and Functions
+NOEXTENDEDGLOB	 	16.2.3 Expansion and Globbing
+NOEXTENDEDHISTORY	 	16.2.4 History
+NOFLOWCONTROL	 	16.2.6 Input/Output
+NOFORCEFLOAT	 	16.2.3 Expansion and Globbing
+NOFUNCTIONARGZERO	 	16.2.9 Scripts and Functions
+NOGLOB	 	16.2.3 Expansion and Globbing
+NOGLOBALEXPORT	 	16.2.5 Initialisation
+NOGLOBALRCS	 	16.2.5 Initialisation
+NOGLOBASSIGN	 	16.2.3 Expansion and Globbing
+NOGLOBCOMPLETE	 	16.2.2 Completion
+NOGLOBDOTS	 	16.2.3 Expansion and Globbing
+NOGLOBSTARSHORT	 	16.2.3 Expansion and Globbing
+NOGLOBSUBST	 	16.2.3 Expansion and Globbing
+NOHASHALL	 	16.3 Option Aliases
+NOHASHCMDS	 	16.2.6 Input/Output
+NOHASHDIRS	 	16.2.6 Input/Output
+NOHASHEXECUTABLESONLY	 	16.2.6 Input/Output
+NOHASHLISTALL	 	16.2.2 Completion
+NOHISTALLOWCLOBBER	 	16.2.4 History
+NOHISTAPPEND	 	16.3 Option Aliases
+NOHISTBEEP	 	16.2.4 History
+NOHISTEXPAND	 	16.3 Option Aliases
+NOHISTEXPIREDUPSFIRST	 	16.2.4 History
+NOHISTFCNTLLOCK	 	16.2.4 History
+NOHISTFINDNODUPS	 	16.2.4 History
+NOHISTIGNOREALLDUPS	 	16.2.4 History
+NOHISTIGNOREDUPS	 	16.2.4 History
+NOHISTIGNORESPACE	 	16.2.4 History
+NOHISTLEXWORDS	 	16.2.4 History
+NOHISTNOFUNCTIONS	 	16.2.4 History
+NOHISTNOSTORE	 	16.2.4 History
+NOHISTREDUCEBLANKS	 	16.2.4 History
+NOHISTSAVEBYCOPY	 	16.2.4 History
+NOHISTSAVENODUPS	 	16.2.4 History
+NOHISTSUBSTPATTERN	 	16.2.3 Expansion and Globbing
+NOHISTVERIFY	 	16.2.4 History
+NOHUP	 	16.2.7 Job Control
+NOIGNOREBRACES	 	16.2.3 Expansion and Globbing
+NOIGNORECLOSEBRACES	 	16.2.3 Expansion and Globbing
+NOIGNOREEOF	 	16.2.6 Input/Output
+NOINCAPPENDHISTORY	 	16.2.4 History
+NOINCAPPENDHISTORYTIME	 	16.2.4 History
+NOINTERACTIVE	 	16.2.11 Shell State
+NOINTERACTIVECOMMENTS	 	16.2.6 Input/Output
+NOKSHARRAYS	 	16.2.10 Shell Emulation
+NOKSHAUTOLOAD	 	16.2.10 Shell Emulation
+NOKSHGLOB	 	16.2.3 Expansion and Globbing
+NOKSHOPTIONPRINT	 	16.2.10 Shell Emulation
+NOKSHTYPESET	 	16.2.10 Shell Emulation
+NOKSHZEROSUBSCRIPT	 	16.2.10 Shell Emulation
+NOLISTAMBIGUOUS	 	16.2.2 Completion
+NOLISTBEEP	 	16.2.2 Completion
+NOLISTPACKED	 	16.2.2 Completion
+NOLISTROWSFIRST	 	16.2.2 Completion
+NOLISTTYPES	 	16.2.2 Completion
+NOLOCALLOOPS	 	16.2.9 Scripts and Functions
+NOLOCALOPTIONS	 	16.2.9 Scripts and Functions
+NOLOCALPATTERNS	 	16.2.9 Scripts and Functions
+NOLOCALTRAPS	 	16.2.9 Scripts and Functions
+NOLOG	 	16.3 Option Aliases
+NOLOGIN	 	16.2.11 Shell State
+NOLONGLISTJOBS	 	16.2.7 Job Control
+NOMAGICEQUALSUBST	 	16.2.3 Expansion and Globbing
+NOMAILWARN	 	16.3 Option Aliases
+NOMAILWARNING	 	16.2.6 Input/Output
+NOMARKDIRS	 	16.2.3 Expansion and Globbing
+NOMATCH	 	16.2.3 Expansion and Globbing
+NOMATCH, use of	 	14.8 Filename Generation
+NOMENUCOMPLETE	 	16.2.2 Completion
+NOMONITOR	 	16.2.7 Job Control
+NOMULTIBYTE	 	16.2.3 Expansion and Globbing
+NOMULTIFUNCDEF	 	16.2.9 Scripts and Functions
+NOMULTIOS	 	16.2.9 Scripts and Functions
+NONOMATCH	 	16.2.3 Expansion and Globbing
+NONOTIFY	 	16.2.7 Job Control
+NONULLGLOB	 	16.2.3 Expansion and Globbing
+NONUMERICGLOBSORT	 	16.2.3 Expansion and Globbing
+NOOCTALZEROES	 	16.2.9 Scripts and Functions
+NOONECMD	 	16.3 Option Aliases
+NOOVERSTRIKE	 	16.2.12 Zle
+NOPATHDIRS	 	16.2.6 Input/Output
+NOPATHSCRIPT	 	16.2.6 Input/Output
+NOPHYSICAL	 	16.3 Option Aliases
+NOPIPEFAIL	 	16.2.9 Scripts and Functions
+NOPOSIXALIASES	 	16.2.10 Shell Emulation
+NOPOSIXARGZERO	 	16.2.10 Shell Emulation
+NOPOSIXBUILTINS	 	16.2.10 Shell Emulation
+NOPOSIXCD	 	16.2.1 Changing Directories
+NOPOSIXIDENTIFIERS	 	16.2.10 Shell Emulation
+NOPOSIXJOBS	 	16.2.7 Job Control
+NOPOSIXSTRINGS	 	16.2.10 Shell Emulation
+NOPOSIXTRAPS	 	16.2.10 Shell Emulation
+NOPRINTEIGHTBIT	 	16.2.6 Input/Output
+NOPRINTEXITVALUE	 	16.2.6 Input/Output
+NOPRIVILEGED	 	16.2.11 Shell State
+NOPROMPTBANG	 	16.2.8 Prompting
+NOPROMPTCR	 	16.2.8 Prompting
+NOPROMPTPERCENT	 	16.2.8 Prompting
+NOPROMPTSP	 	16.2.8 Prompting
+NOPROMPTSUBST	 	16.2.8 Prompting
+NOPROMPTVARS	 	16.3 Option Aliases
+NOPUSHDIGNOREDUPS	 	16.2.1 Changing Directories
+NOPUSHDMINUS	 	16.2.1 Changing Directories
+NOPUSHDSILENT	 	16.2.1 Changing Directories
+NOPUSHDTOHOME	 	16.2.1 Changing Directories
+NORCEXPANDPARAM	 	16.2.3 Expansion and Globbing
+NORCQUOTES	 	16.2.6 Input/Output
+NORCS	 	16.2.5 Initialisation
+NORECEXACT	 	16.2.2 Completion
+NOREMATCHPCRE	 	16.2.3 Expansion and Globbing
+NORESTRICTED	 	16.2.11 Shell State
+NORMSTARSILENT	 	16.2.6 Input/Output
+NORMSTARWAIT	 	16.2.6 Input/Output
+NOSHAREHISTORY	 	16.2.4 History
+NOSHFILEEXPANSION	 	16.2.10 Shell Emulation
+NOSHGLOB	 	16.2.3 Expansion and Globbing
+NOSHINSTDIN	 	16.2.11 Shell State
+NOSHNULLCMD	 	16.2.10 Shell Emulation
+NOSHOPTIONLETTERS	 	16.2.10 Shell Emulation
+NOSHORTLOOPS	 	16.2.6 Input/Output
+NOSHORTREPEAT	 	16.2.6 Input/Output
+NOSHWORDSPLIT	 	16.2.10 Shell Emulation
+NOSINGLECOMMAND	 	16.2.11 Shell State
+NOSINGLELINEZLE	 	16.2.12 Zle
+NOSOURCETRACE	 	16.2.9 Scripts and Functions
+NOSTDIN	 	16.3 Option Aliases
+NOSUNKEYBOARDHACK	 	16.2.6 Input/Output
+NOTIFY	 	16.2.7 Job Control
+NOTIFY, use of	 	10.1 Jobs
+NOTRACKALL	 	16.3 Option Aliases
+NOTRANSIENTRPROMPT	 	16.2.8 Prompting
+NOTRAPSASYNC	 	16.2.10 Shell Emulation
+NOTYPESETSILENT	 	16.2.9 Scripts and Functions
+NOTYPESETTOUNSET	 	16.2.9 Scripts and Functions
+NOUNSET	 	16.2.3 Expansion and Globbing
+NOVERBOSE	 	16.2.9 Scripts and Functions
+NOVI	 	16.2.12 Zle
+NOWARNCREATEGLOBAL	 	16.2.3 Expansion and Globbing
+NOXTRACE	 	16.2.9 Scripts and Functions
+NOZLE	 	16.2.12 Zle
+NO_ALIASES	 	16.2.6 Input/Output
+NO_ALIAS_FUNC_DEF	 	16.2.9 Scripts and Functions
+NO_ALL_EXPORT	 	16.2.5 Initialisation
+NO_ALWAYS_LAST_PROMPT	 	16.2.2 Completion
+NO_ALWAYS_TO_END	 	16.2.2 Completion
+NO_APPEND_CREATE	 	16.2.10 Shell Emulation
+NO_APPEND_HISTORY	 	16.2.4 History
+NO_AUTO_CD	 	16.2.1 Changing Directories
+NO_AUTO_CONTINUE	 	16.2.7 Job Control
+NO_AUTO_LIST	 	16.2.2 Completion
+NO_AUTO_MENU	 	16.2.2 Completion
+NO_AUTO_NAME_DIRS	 	16.2.2 Completion
+NO_AUTO_PARAM_KEYS	 	16.2.2 Completion
+NO_AUTO_PARAM_SLASH	 	16.2.2 Completion
+NO_AUTO_PUSHD	 	16.2.1 Changing Directories
+NO_AUTO_REMOVE_SLASH	 	16.2.2 Completion
+NO_AUTO_RESUME	 	16.2.7 Job Control
+NO_BAD_PATTERN	 	16.2.3 Expansion and Globbing
+NO_BANG_HIST	 	16.2.4 History
+NO_BARE_GLOB_QUAL	 	16.2.3 Expansion and Globbing
+NO_BASH_AUTO_LIST	 	16.2.2 Completion
+NO_BASH_REMATCH	 	16.2.10 Shell Emulation
+NO_BEEP	 	16.2.12 Zle
+NO_BG_NICE	 	16.2.7 Job Control
+NO_BRACE_CCL	 	16.2.3 Expansion and Globbing
+NO_BRACE_EXPAND	 	16.3 Option Aliases
+NO_BSD_ECHO	 	16.2.10 Shell Emulation
+NO_CASE_GLOB	 	16.2.3 Expansion and Globbing
+NO_CASE_MATCH	 	16.2.3 Expansion and Globbing
+NO_CASE_MATCH	 	22.21 The zsh/pcre Module
+NO_CASE_PATHS	 	16.2.3 Expansion and Globbing
+NO_CDABLE_VARS	 	16.2.1 Changing Directories
+NO_CD_SILENT	 	16.2.1 Changing Directories
+NO_CHASE_DOTS	 	16.2.1 Changing Directories
+NO_CHASE_LINKS	 	16.2.1 Changing Directories
+NO_CHECK_JOBS	 	16.2.7 Job Control
+NO_CHECK_RUNNING_JOBS	 	16.2.7 Job Control
+NO_CLOBBER	 	16.2.6 Input/Output
+NO_CLOBBER_EMPTY	 	16.2.6 Input/Output
+NO_COMBINING_CHARS	 	16.2.12 Zle
+NO_COMPLETE_ALIASES	 	16.2.2 Completion
+NO_COMPLETE_IN_WORD	 	16.2.2 Completion
+NO_CONTINUE_ON_ERROR	 	16.2.10 Shell Emulation
+NO_CORRECT	 	16.2.6 Input/Output
+NO_CORRECT_ALL	 	16.2.6 Input/Output
+NO_CSH_JUNKIE_HISTORY	 	16.2.10 Shell Emulation
+NO_CSH_JUNKIE_LOOPS	 	16.2.10 Shell Emulation
+NO_CSH_JUNKIE_QUOTES	 	16.2.10 Shell Emulation
+NO_CSH_NULLCMD	 	16.2.10 Shell Emulation
+NO_CSH_NULL_GLOB	 	16.2.3 Expansion and Globbing
+NO_C_BASES	 	16.2.9 Scripts and Functions
+NO_C_PRECEDENCES	 	16.2.9 Scripts and Functions
+NO_DEBUG_BEFORE_CMD	 	16.2.9 Scripts and Functions
+NO_DOT_GLOB	 	16.3 Option Aliases
+NO_DVORAK	 	16.2.6 Input/Output
+NO_EMACS	 	16.2.12 Zle
+NO_EQUALS	 	16.2.3 Expansion and Globbing
+NO_ERR_EXIT	 	16.2.9 Scripts and Functions
+NO_ERR_RETURN	 	16.2.9 Scripts and Functions
+NO_EVAL_LINENO	 	16.2.9 Scripts and Functions
+NO_EXEC	 	16.2.9 Scripts and Functions
+NO_EXTENDED_GLOB	 	16.2.3 Expansion and Globbing
+NO_EXTENDED_HISTORY	 	16.2.4 History
+NO_FLOW_CONTROL	 	16.2.6 Input/Output
+NO_FORCE_FLOAT	 	16.2.3 Expansion and Globbing
+NO_FUNCTION_ARGZERO	 	16.2.9 Scripts and Functions
+NO_GLOB	 	16.2.3 Expansion and Globbing
+NO_GLOBAL_EXPORT	 	16.2.5 Initialisation
+NO_GLOBAL_RCS	 	16.2.5 Initialisation
+NO_GLOBAL_RCS, use of	 	5.1 Startup/Shutdown Files
+NO_GLOB_ASSIGN	 	16.2.3 Expansion and Globbing
+NO_GLOB_COMPLETE	 	16.2.2 Completion
+NO_GLOB_DOTS	 	16.2.3 Expansion and Globbing
+NO_GLOB_STAR_SHORT	 	16.2.3 Expansion and Globbing
+NO_GLOB_SUBST	 	16.2.3 Expansion and Globbing
+NO_HASH_ALL	 	16.3 Option Aliases
+NO_HASH_CMDS	 	16.2.6 Input/Output
+NO_HASH_DIRS	 	16.2.6 Input/Output
+NO_HASH_EXECUTABLES_ONLY	 	16.2.6 Input/Output
+NO_HASH_LIST_ALL	 	16.2.2 Completion
+NO_HIST_ALLOW_CLOBBER	 	16.2.4 History
+NO_HIST_APPEND	 	16.3 Option Aliases
+NO_HIST_BEEP	 	16.2.4 History
+NO_HIST_EXPAND	 	16.3 Option Aliases
+NO_HIST_EXPIRE_DUPS_FIRST	 	16.2.4 History
+NO_HIST_FCNTL_LOCK	 	16.2.4 History
+NO_HIST_FIND_NO_DUPS	 	16.2.4 History
+NO_HIST_IGNORE_ALL_DUPS	 	16.2.4 History
+NO_HIST_IGNORE_DUPS	 	16.2.4 History
+NO_HIST_IGNORE_SPACE	 	16.2.4 History
+NO_HIST_LEX_WORDS	 	16.2.4 History
+NO_HIST_NO_FUNCTIONS	 	16.2.4 History
+NO_HIST_NO_STORE	 	16.2.4 History
+NO_HIST_REDUCE_BLANKS	 	16.2.4 History
+NO_HIST_SAVE_BY_COPY	 	16.2.4 History
+NO_HIST_SAVE_NO_DUPS	 	16.2.4 History
+NO_HIST_SUBST_PATTERN	 	16.2.3 Expansion and Globbing
+NO_HIST_VERIFY	 	16.2.4 History
+NO_HUP	 	16.2.7 Job Control
+NO_IGNORE_BRACES	 	16.2.3 Expansion and Globbing
+NO_IGNORE_CLOSE_BRACES	 	16.2.3 Expansion and Globbing
+NO_IGNORE_EOF	 	16.2.6 Input/Output
+NO_INC_APPEND_HISTORY	 	16.2.4 History
+NO_INC_APPEND_HISTORY_TIME	 	16.2.4 History
+NO_INTERACTIVE	 	16.2.11 Shell State
+NO_INTERACTIVE_COMMENTS	 	16.2.6 Input/Output
+NO_KSH_ARRAYS	 	16.2.10 Shell Emulation
+NO_KSH_AUTOLOAD	 	16.2.10 Shell Emulation
+NO_KSH_GLOB	 	16.2.3 Expansion and Globbing
+NO_KSH_OPTION_PRINT	 	16.2.10 Shell Emulation
+NO_KSH_TYPESET	 	16.2.10 Shell Emulation
+NO_KSH_ZERO_SUBSCRIPT	 	16.2.10 Shell Emulation
+NO_LIST_AMBIGUOUS	 	16.2.2 Completion
+NO_LIST_BEEP	 	16.2.2 Completion
+NO_LIST_PACKED	 	16.2.2 Completion
+NO_LIST_ROWS_FIRST	 	16.2.2 Completion
+NO_LIST_TYPES	 	16.2.2 Completion
+NO_LOCAL_LOOPS	 	16.2.9 Scripts and Functions
+NO_LOCAL_OPTIONS	 	16.2.9 Scripts and Functions
+NO_LOCAL_PATTERNS	 	16.2.9 Scripts and Functions
+NO_LOCAL_TRAPS	 	16.2.9 Scripts and Functions
+NO_LOG	 	16.3 Option Aliases
+NO_LOGIN	 	16.2.11 Shell State
+NO_LONG_LIST_JOBS	 	16.2.7 Job Control
+NO_MAGIC_EQUAL_SUBST	 	16.2.3 Expansion and Globbing
+NO_MAIL_WARN	 	16.3 Option Aliases
+NO_MAIL_WARNING	 	16.2.6 Input/Output
+NO_MARK_DIRS	 	16.2.3 Expansion and Globbing
+NO_MENU_COMPLETE	 	16.2.2 Completion
+NO_MONITOR	 	16.2.7 Job Control
+NO_MULTIBYTE	 	16.2.3 Expansion and Globbing
+NO_MULTIOS	 	16.2.9 Scripts and Functions
+NO_MULTI_FUNC_DEF	 	16.2.9 Scripts and Functions
+NO_NOMATCH	 	16.2.3 Expansion and Globbing
+NO_NOTIFY	 	16.2.7 Job Control
+NO_NULL_GLOB	 	16.2.3 Expansion and Globbing
+NO_NUMERIC_GLOB_SORT	 	16.2.3 Expansion and Globbing
+NO_OCTAL_ZEROES	 	16.2.9 Scripts and Functions
+NO_ONE_CMD	 	16.3 Option Aliases
+NO_OVERSTRIKE	 	16.2.12 Zle
+NO_PATH_DIRS	 	16.2.6 Input/Output
+NO_PATH_SCRIPT	 	16.2.6 Input/Output
+NO_PHYSICAL	 	16.3 Option Aliases
+NO_PIPE_FAIL	 	16.2.9 Scripts and Functions
+NO_POSIX_ALIASES	 	16.2.10 Shell Emulation
+NO_POSIX_ARGZERO	 	16.2.10 Shell Emulation
+NO_POSIX_BUILTINS	 	16.2.10 Shell Emulation
+NO_POSIX_CD	 	16.2.1 Changing Directories
+NO_POSIX_IDENTIFIERS	 	16.2.10 Shell Emulation
+NO_POSIX_JOBS	 	16.2.7 Job Control
+NO_POSIX_STRINGS	 	16.2.10 Shell Emulation
+NO_POSIX_TRAPS	 	16.2.10 Shell Emulation
+NO_PRINT_EIGHT_BIT	 	16.2.6 Input/Output
+NO_PRINT_EXIT_VALUE	 	16.2.6 Input/Output
+NO_PRIVILEGED	 	16.2.11 Shell State
+NO_PROMPT_BANG	 	16.2.8 Prompting
+NO_PROMPT_CR	 	16.2.8 Prompting
+NO_PROMPT_PERCENT	 	16.2.8 Prompting
+NO_PROMPT_SP	 	16.2.8 Prompting
+NO_PROMPT_SUBST	 	16.2.8 Prompting
+NO_PROMPT_VARS	 	16.3 Option Aliases
+NO_PUSHD_IGNORE_DUPS	 	16.2.1 Changing Directories
+NO_PUSHD_MINUS	 	16.2.1 Changing Directories
+NO_PUSHD_SILENT	 	16.2.1 Changing Directories
+NO_PUSHD_TO_HOME	 	16.2.1 Changing Directories
+NO_RCS	 	16.2.5 Initialisation
+NO_RCS, use of	 	5.1 Startup/Shutdown Files
+NO_RC_EXPAND_PARAM	 	16.2.3 Expansion and Globbing
+NO_RC_QUOTES	 	16.2.6 Input/Output
+NO_REC_EXACT	 	16.2.2 Completion
+NO_REMATCH_PCRE	 	16.2.3 Expansion and Globbing
+NO_RESTRICTED	 	16.2.11 Shell State
+NO_RM_STAR_SILENT	 	16.2.6 Input/Output
+NO_RM_STAR_WAIT	 	16.2.6 Input/Output
+NO_SHARE_HISTORY	 	16.2.4 History
+NO_SHIN_STDIN	 	16.2.11 Shell State
+NO_SHORT_LOOPS	 	16.2.6 Input/Output
+NO_SHORT_REPEAT	 	16.2.6 Input/Output
+NO_SH_FILE_EXPANSION	 	16.2.10 Shell Emulation
+NO_SH_GLOB	 	16.2.3 Expansion and Globbing
+NO_SH_NULLCMD	 	16.2.10 Shell Emulation
+NO_SH_OPTION_LETTERS	 	16.2.10 Shell Emulation
+NO_SH_WORD_SPLIT	 	16.2.10 Shell Emulation
+NO_SINGLE_COMMAND	 	16.2.11 Shell State
+NO_SINGLE_LINE_ZLE	 	16.2.12 Zle
+NO_SOURCE_TRACE	 	16.2.9 Scripts and Functions
+NO_STDIN	 	16.3 Option Aliases
+NO_SUN_KEYBOARD_HACK	 	16.2.6 Input/Output
+NO_TRACK_ALL	 	16.3 Option Aliases
+NO_TRANSIENT_RPROMPT	 	16.2.8 Prompting
+NO_TRAPS_ASYNC	 	16.2.10 Shell Emulation
+NO_TYPESET_SILENT	 	16.2.9 Scripts and Functions
+NO_TYPESET_TO_UNSET	 	16.2.9 Scripts and Functions
+NO_UNSET	 	16.2.3 Expansion and Globbing
+NO_VERBOSE	 	16.2.9 Scripts and Functions
+NO_VI	 	16.2.12 Zle
+NO_WARNNESTEDVAR	 	16.2.3 Expansion and Globbing
+NO_WARN_CREATE_GLOBAL	 	16.2.3 Expansion and Globbing
+NO_WARN_NESTED_VAR	 	16.2.3 Expansion and Globbing
+NO_XTRACE	 	16.2.9 Scripts and Functions
+NO_ZLE	 	16.2.12 Zle
+NULLGLOB	 	16.2.3 Expansion and Globbing
+NULL_GLOB	 	16.2.3 Expansion and Globbing
+NULL_GLOB, setting in pattern	 	14.8.7 Glob Qualifiers
+NULL_GLOB, use of	 	14.8 Filename Generation
+NUMERICGLOBSORT	 	16.2.3 Expansion and Globbing
+NUMERIC_GLOB_SORT	 	16.2.3 Expansion and Globbing
+NUMERIC_GLOB_SORT, setting in pattern	 	14.8.7 Glob Qualifiers
+O
+OCTALZEROES	 	16.2.9 Scripts and Functions
+OCTAL_ZEROES	 	16.2.9 Scripts and Functions
+OCTAL_ZEROES, use of	 	11 Arithmetic Evaluation
+ONECMD	 	16.3 Option Aliases
+ONE_CMD	 	16.3 Option Aliases
+OVERSTRIKE	 	16.2.12 Zle
+P
+PATHDIRS	 	16.2.6 Input/Output
+PATHSCRIPT	 	16.2.6 Input/Output
+PATH_DIRS	 	16.2.6 Input/Output
+PATH_SCRIPT	 	16.2.6 Input/Output
+PHYSICAL	 	16.3 Option Aliases
+PIPEFAIL	 	16.2.9 Scripts and Functions
+PIPE_FAIL	 	16.2.9 Scripts and Functions
+POSIXALIASES	 	16.2.10 Shell Emulation
+POSIXARGZERO	 	16.2.10 Shell Emulation
+POSIXBUILTINS	 	16.2.10 Shell Emulation
+POSIXCD	 	16.2.1 Changing Directories
+POSIXIDENTIFIERS	 	16.2.10 Shell Emulation
+POSIXJOBS	 	16.2.7 Job Control
+POSIXSTRINGS	 	16.2.10 Shell Emulation
+POSIXTRAPS	 	16.2.10 Shell Emulation
+POSIX_ALIASES	 	16.2.10 Shell Emulation
+POSIX_ARGZERO	 	16.2.10 Shell Emulation
+POSIX_BUILTINS	 	16.2.10 Shell Emulation
+POSIX_CD	 	16.2.1 Changing Directories
+POSIX_IDENTIFIERS	 	16.2.10 Shell Emulation
+POSIX_JOBS	 	16.2.7 Job Control
+POSIX_STRINGS	 	16.2.10 Shell Emulation
+POSIX_TRAPS	 	16.2.10 Shell Emulation
+PRINTEIGHTBIT	 	16.2.6 Input/Output
+PRINTEXITVALUE	 	16.2.6 Input/Output
+PRINT_EIGHT_BIT	 	16.2.6 Input/Output
+PRINT_EXIT_VALUE	 	16.2.6 Input/Output
+PRIVILEGED	 	16.2.11 Shell State
+PROMPTBANG	 	16.2.8 Prompting
+PROMPTCR	 	16.2.8 Prompting
+PROMPTPERCENT	 	16.2.8 Prompting
+PROMPTSP	 	16.2.8 Prompting
+PROMPTSUBST	 	16.2.8 Prompting
+PROMPTVARS	 	16.3 Option Aliases
+PROMPT_BANG	 	16.2.8 Prompting
+PROMPT_BANG, use of	 	13.1 Expansion of Prompt Sequences
+PROMPT_CR	 	16.2.8 Prompting
+PROMPT_PERCENT	 	16.2.8 Prompting
+PROMPT_PERCENT, use of	 	13.1 Expansion of Prompt Sequences
+PROMPT_SP	 	16.2.8 Prompting
+PROMPT_SUBST	 	16.2.8 Prompting
+PROMPT_SUBST, use of	 	13.1 Expansion of Prompt Sequences
+PROMPT_VARS	 	16.3 Option Aliases
+PUSHDIGNOREDUPS	 	16.2.1 Changing Directories
+PUSHDMINUS	 	16.2.1 Changing Directories
+PUSHDSILENT	 	16.2.1 Changing Directories
+PUSHDTOHOME	 	16.2.1 Changing Directories
+PUSHD_IGNORE_DUPS	 	16.2.1 Changing Directories
+PUSHD_MINUS	 	16.2.1 Changing Directories
+PUSHD_MINUS, use of	 	14.7 Filename Expansion
+PUSHD_MINUS, use of	 	17 Shell Builtin Commands
+PUSHD_MINUS, use of	 	17 Shell Builtin Commands
+PUSHD_SILENT	 	16.2.1 Changing Directories
+PUSHD_SILENT, use of	 	17 Shell Builtin Commands
+PUSHD_TO_HOME	 	16.2.1 Changing Directories
+PUSHD_TO_HOME, use of	 	17 Shell Builtin Commands
+R
+RCEXPANDPARAM	 	16.2.3 Expansion and Globbing
+RCQUOTES	 	16.2.6 Input/Output
+RCS	 	16.2.5 Initialisation
+RCS, use of	 	5.1 Startup/Shutdown Files
+RC_EXPAND_PARAM	 	16.2.3 Expansion and Globbing
+RC_EXPAND_PARAM, toggle	 	14.3 Parameter Expansion
+RC_QUOTES	 	16.2.6 Input/Output
+RC_QUOTES, use of	 	6.9 Quoting
+RECEXACT	 	16.2.2 Completion
+REC_EXACT	 	16.2.2 Completion
+REMATCHPCRE	 	16.2.3 Expansion and Globbing
+REMATCH_PCRE	 	16.2.3 Expansion and Globbing
+REMATCH_PCRE	 	22.21 The zsh/pcre Module
+RESTRICTED	 	4.3 Restricted Shell
+RESTRICTED	 	16.2.11 Shell State
+RMSTARSILENT	 	16.2.6 Input/Output
+RMSTARWAIT	 	16.2.6 Input/Output
+RM_STAR_SILENT	 	16.2.6 Input/Output
+RM_STAR_WAIT	 	16.2.6 Input/Output
+S
+SHAREHISTORY	 	16.2.4 History
+SHARE_HISTORY	 	16.2.4 History
+SHFILEEXPANSION	 	16.2.10 Shell Emulation
+SHGLOB	 	16.2.3 Expansion and Globbing
+SHINSTDIN	 	16.2.11 Shell State
+SHIN_STDIN	 	16.2.11 Shell State
+SHNULLCMD	 	16.2.10 Shell Emulation
+SHOPTIONLETTERS	 	16.2.10 Shell Emulation
+SHORTLOOPS	 	16.2.6 Input/Output
+SHORTREPEAT	 	16.2.6 Input/Output
+SHORT_LOOPS	 	16.2.6 Input/Output
+SHORT_REPEAT	 	16.2.6 Input/Output
+SHWORDSPLIT	 	16.2.10 Shell Emulation
+SH_FILE_EXPANSION	 	16.2.10 Shell Emulation
+SH_GLOB	 	16.2.3 Expansion and Globbing
+SH_NULLCMD	 	16.2.10 Shell Emulation
+SH_NULLCMD, use of	 	7.3 Redirections with no command
+SH_OPTION_LETTERS	 	16.2.10 Shell Emulation
+SH_WORD_SPLIT	 	16.2.10 Shell Emulation
+SH_WORD_SPLIT, toggle	 	14.3 Parameter Expansion
+SH_WORD_SPLIT, use of	 	14.3.1 Parameter Expansion Flags
+SINGLECOMMAND	 	16.2.11 Shell State
+SINGLELINEZLE	 	16.2.12 Zle
+SINGLE_COMMAND	 	16.2.11 Shell State
+SINGLE_LINE_ZLE	 	16.2.12 Zle
+SINGLE_LINE_ZLE, use of	 	18.1 Description
+SOURCETRACE	 	16.2.9 Scripts and Functions
+SOURCE_TRACE	 	16.2.9 Scripts and Functions
+STDIN	 	16.3 Option Aliases
+SUNKEYBOARDHACK	 	16.2.6 Input/Output
+SUN_KEYBOARD_HACK	 	16.2.6 Input/Output
+T
+TRACKALL	 	16.3 Option Aliases
+TRACK_ALL	 	16.3 Option Aliases
+TRANSIENTRPROMPT	 	16.2.8 Prompting
+TRANSIENT_RPROMPT	 	16.2.8 Prompting
+TRAPSASYNC	 	16.2.10 Shell Emulation
+TRAPS_ASYNC	 	16.2.10 Shell Emulation
+TYPESETSILENT	 	16.2.9 Scripts and Functions
+TYPESETTOUNSET	 	16.2.9 Scripts and Functions
+TYPESET_SILENT	 	16.2.9 Scripts and Functions
+TYPESET_TO_UNSET	 	16.2.9 Scripts and Functions
+U
+UNSET	 	16.2.3 Expansion and Globbing
+V
+VERBOSE	 	16.2.9 Scripts and Functions
+VI	 	16.2.12 Zle
+W
+WARNCREATEGLOBAL	 	16.2.3 Expansion and Globbing
+WARNNESTEDVAR	 	16.2.3 Expansion and Globbing
+WARN_CREATE_GLOBAL	 	16.2.3 Expansion and Globbing
+WARN_NESTED_VAR	 	16.2.3 Expansion and Globbing
+X
+XTRACE	 	16.2.9 Scripts and Functions
+Z
+ZLE	 	16.2.12 Zle
+ZLE, use of	 	18.1 Description
