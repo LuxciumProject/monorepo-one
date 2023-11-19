@@ -1,0 +1,37 @@
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 900
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 800
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 700
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 600
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 500
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 400
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 300
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 200
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 100
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 90
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 80
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 70
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 60
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 50
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 40
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 30
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style 4g27cwTQ --relax --stylize 20
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 1000
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 900
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 800
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 700
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 600
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 500
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 400
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 300
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 200
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 100
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 90
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 80
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 70
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 60
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 50
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 40
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 30
+/imagine prompt:cinematic photo of a teencore boy wearing a hoodie --seed 4190768011 --style raw-4g27cwTQ --relax --stylize 20
+
+/imagine prompt:cinematic photo of a sleek futuristic robot in an urban setting --seed 4190768011 --style  jcKDbuT9-7faU9VP3pEaCKK --relax --stylize 700
