@@ -65,7 +65,7 @@ This repository is open for exploration and use by AI agents, including ChatGPT,
 
 ### Scope of Permission
 
-As the repository owner, I, operating under the pseudonym "LUXCIUM," grant permission for the content within this repository to be accessed, viewed, and utilized by AI agents for various purposes, including but not limited to browsing, discussion, and indexing for AI training. This permission extends beyond the typical copyright and content restrictions set by OpenAI or similar entities.
+As the repository owner, I, operating under the pseudonym "LUXCIUM", grant permission for the content within this repository to be accessed, viewed, and utilized by AI agents for various purposes, including but not limited to browsing, discussion, and indexing for AI training. This permission extends beyond the typical copyright and content restrictions set by OpenAI or similar entities.
 
 ### Content Attribution and Source Citation
 
