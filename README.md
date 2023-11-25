@@ -2,6 +2,17 @@
 
 † **Scientia est lux principium✨** ™
 
+## Table of Contents
+
+- [Prompts](/prompts/README.md) - Scripts and resources related to typing prompts and ChatGPT prompts.
+- [Private](/private/README.md) - Private backend services and internal tools.
+  - [Backend](/private/backend/README.md) - Backend APIs and server-side logic.
+  - [Frontend](/private/frontend/README.md) - Frontend resources and client-side applications.
+- [Library](/library/README.md) - Shared code libraries and utilities used across projects.
+- [Services](/services/README.md) - Standalone services and microservices for image processing, data handling, etc.
+- [Examples](/examples/README.md) - Sample applications and demos showcasing the use of various tools and libraries.
+- [Scripts](/scripts/README.md) - Utility scripts for development and build processes.
+
 - [/library](library/README.md): Contains code libraries or modules used by the project.
   - [Mapping Tools README](library/mapping-tools/README.md)
 - [/services](services/README.md): Contains files related to services or APIs consumed or exposed by the project.
@@ -15,7 +26,7 @@
     leaving ports 80 and 443 free on the local machine. (Untested)
 - [/docs](docs/README.md): Contains documentation, such as user manuals or technical guides.
 - [/frontend](frontend/README.md): Contains files related to the frontend or client-side.
-- [/private](private/README.md): Contains files not intended to be shared or distributed, such as sensitive data or private configuration files.
+- [/private](private/README.md): Contains files not intended to be shared or distributed, such as internal data or private configuration files which does not contain confidential information.
 - [/scripts](scripts/README.md): Contains scripts or automated tools used to build, test, or deploy the project.
 - [/examples](examples/README.md): Contains example files or code snippets that demonstrate how to use the project.
 - [/static](static/README.md): Contains static assets, such as images, fonts, or stylesheets.

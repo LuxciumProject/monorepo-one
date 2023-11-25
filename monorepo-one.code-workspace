@@ -1,11 +1,11 @@
 {
   "folders": [
     {
-      "name": "→🖥️✨ MONOREPO-ONE",
+      "name": "→ 🖥️✨ MONOREPO-ONE",
       "path": "."
     },
     {
-      "name": "    ✨🤖 PROMPTS",
+      "name": " ↓ ✨ 🤖 PROMPTS",
       "path": "prompts"
     },
     {
@@ -17,31 +17,31 @@
       "path": "prompts/chatgpt"
     },
     {
-      "name": "        💬💭 MORE PROMPTS",
+      "name": "      💬💭 MORE PROMPTS",
       "path": "prompts/chatgpt/more-prompts"
     },
     {
-      "name": "  ↓🔐💫 PRIVATE",
+      "name": " ↓ 🔐💫 PRIVATE",
       "path": "private"
     },
     {
-      "name": "  ↓🏦🗜️ BACKEND",
+      "name": " ↓ 🏦🗜️ BACKEND",
       "path": "backend"
     },
     {
-      "name": "          🏦💖 🗜️ api",
+      "name": "      🏦💖 🗜️ api",
       "path": "backend/api"
     },
     {
-      "name": "          🏫💘 🗜️ scratch",
+      "name": "      🏫💘 🗜️ scratch",
       "path": "backend/scratch"
     },
     {
-      "name": "  ↓💻👨‍💻 FRONTEND",
+      "name": " ↓ 💻👨‍💻 FRONTEND",
       "path": "frontend"
     },
     {
-      "name": "          💻👨‍💻 💅 home",
+      "name": "      💻👨‍💻 💅 home",
       "path": "frontend/home"
     },
     // {
@@ -73,119 +73,119 @@
     //   "path": "frontend/products"
     // },
     {
-      "name": "  ↓📚📓 📔 LIBRARY",
+      "name": " ↓ 📓 📚 LIBRARY",
       "path": "library"
     },
     {
-      "name": "          📚🧭 mapping-tools",
+      "name": " S *→ 📚🧭 mapping-tools",
       "path": "library/mapping-tools"
     },
     {
-      "name": "          📚❤ bigintString",
+      "name": "      📚❤ bigintString",
       "path": "library/bigintString"
     },
     {
-      "name": "          📚🧡 boxed-list",
+      "name": "      📚🧡 boxed-list",
       "path": "library/boxed-list"
     },
     {
-      "name": "          📚💛 colors-tools",
+      "name": "      📚💛 colors-tools",
       "path": "library/colors-tools"
     },
     {
-      "name": "          📚💚 human-size",
+      "name": "      📚💚 human-size",
       "path": "library/human-size"
     },
     {
-      "name": "          📚💙 object-with-expectations",
+      "name": "      📚💙 object-with-expectations",
       "path": "library/object-with-expectations"
     },
     {
-      "name": "          📚💜 parallel-mapper",
+      "name": "      📚💜 parallel-mapper",
       "path": "library/parallel-mapper"
     },
     {
-      "name": "          📚🧌 restraining-zalgo",
+      "name": "      📚🧌 restraining-zalgo",
       "path": "library/restraining-zalgo"
     },
     {
-      "name": "          📓 🛠️ Tools",
+      "name": "      📓🛠️ Tools",
       "path": "library/tools"
     },
     {
-      "name": "          📓 📘 Typescript",
+      "name": "      📘 Typescript",
       "path": "library/typescript"
     },
     {
-      "name": "  ↓💁🖥️ 📒 SERVICES",
+      "name": " ↓ 🖥️ 💁📒 SERVICES",
       "path": "services"
     },
     {
-      "name": "      →🛵🖥️ image-scout",
+      "name": " S *→ 💁🛵 image-scout",
       "path": "services/image-scout"
     },
+    // {
+    //   "name": " S *→ 📊🖥️ questrade-ts",
+    //   "path": "services/questrade-ts"
+    // },
     {
-      "name": "      →📊🖥️ questrade-ts",
-      "path": "services/questrade-ts"
-    },
-    {
-      "name": "      →💁💜 rpc-worker-pool",
+      "name": " S *→ 💁💜 rpc-worker-pool",
       "path": "services/rpc-worker-pool"
     },
     {
-      "name": "          💁📊 mongo-service",
+      "name": "      💁📊 mongo-service",
       "path": "services/mongo-service"
     },
     {
-      "name": "          💁❤ phash-compute",
+      "name": "      💁❤ phash-compute",
       "path": "services/phash-compute"
     },
     {
-      "name": "          💁🧡 redis-services",
+      "name": "      💁🧡 redis-services",
       "path": "services/redis-services"
     },
     {
-      "name": "          💁💛 scan-directories",
+      "name": "      💁💛 scan-directories",
       "path": "services/scan-directories"
     },
     {
-      "name": "          💁💚 service-one",
+      "name": "      💁💚 service-one",
       "path": "services/service-one"
     },
     {
-      "name": "          💁💙 service-two",
+      "name": "      💁💙 service-two",
       "path": "services/service-two"
     },
     {
-      "name": "  ↓🪄🎱 EXAMPLES",
+      "name": " ↓ 🪄 🎱 EXAMPLES",
       "path": "examples"
     },
     {
-      "name": "        🪄🎱 template",
+      "name": "      🎱🪄 template",
       "path": "examples/template"
     },
     {
-      "name": "        🪄🎱 open-ai",
+      "name": "      🎱🪄 open-ai",
       "path": "examples/open-ai"
     },
     {
-      "name": "        🪄🎱 gpu-stuff",
+      "name": "      🎱🪄 gpu-stuff",
       "path": "examples/gpu-stuff"
     },
     {
-      "name": "        🪄🎱 playground",
+      "name": "      🎱🪄 playground",
       "path": "examples/playground"
     },
     {
-      "name": "        🪄🎱 node-js",
+      "name": "      🎱🪄 node-js",
       "path": "examples/node-js"
     },
     {
-      "name": "        🪄🛵 phash-scout",
+      "name": "      🎱🛵 phash-scout",
       "path": "examples/phash-scout"
     },
     {
-      "name": "        🪄📘 typescript",
+      "name": "      📘 typescript",
       "path": "examples/typescript"
     },
     {
