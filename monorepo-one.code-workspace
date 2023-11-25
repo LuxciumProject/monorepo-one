@@ -1,191 +1,191 @@
 {
   "folders": [
     {
-      "name": "→ 🖥️✨ MONOREPO-ONE",
+      "name": "→🖥️ ✨ MONOREPO-ONE",
       "path": "."
     },
     {
-      "name": " ↓ ✨ 🤖 PROMPTS",
+      "name": "  ↓ ✨ 🤖 PROMPTS",
       "path": "prompts"
     },
     {
-      "name": "      🤖📣 TYPING PROMPTER",
+      "name": "       🤖📣 TYPING PROMPTER",
       "path": "prompts/typing_prompter"
     },
     {
-      "name": "      🤖💬 CHAT GPT",
+      "name": "       🤖💬 CHAT GPT",
       "path": "prompts/chatgpt"
     },
     {
-      "name": "      💬💭 MORE PROMPTS",
+      "name": "       💬💭 MORE PROMPTS",
       "path": "prompts/chatgpt/more-prompts"
     },
     {
-      "name": " ↓ 🔐💫 PRIVATE",
+      "name": "  ↓ 🔐 💫 PRIVATE",
       "path": "private"
     },
     {
-      "name": " ↓ 🏦🗜️ BACKEND",
+      "name": "  ↓ 🏦 🗜️ BACKEND",
       "path": "backend"
     },
     {
-      "name": "      🏦💖 🗜️ api",
+      "name": "       🏦🗜️ api",
       "path": "backend/api"
     },
     {
-      "name": "      🏫💘 🗜️ scratch",
+      "name": "       🏫🗜️ scratch",
       "path": "backend/scratch"
     },
     {
-      "name": " ↓ 💻👨‍💻 FRONTEND",
+      "name": "  ↓ 💻 👨‍💻 FRONTEND",
       "path": "frontend"
     },
     {
-      "name": "      💻👨‍💻 💅 home",
+      "name": "       👨‍💻💅 home",
       "path": "frontend/home"
     },
     // {
-    //   "name": "          💻👨‍💻 main-react",
+    //   "name": "           💻👨‍💻 main-react", // 💖 💘
     //   "path": "frontend/main-react"
     // },
     // {
-    //   "name": "          💻👨‍💻 my-next-js-app",
+    //   "name": "           💻👨‍💻 my-next-js-app",
     //   "path": "frontend/my-next-js-app"
     // },
     // {
-    //   "name": "          💻👨‍💻 home-bak",
+    //   "name": "           💻👨‍💻 home-bak",
     //   "path": "frontend/home-bak"
     // },
     // {
-    //   "name": "          💻👨‍💻 home-ejector",
+    //   "name": "           💻👨‍💻 home-ejector",
     //   "path": "frontend/home-ejector"
     // },
     // {
-    //   "name": "          💻🏫 cart",
+    //   "name": "           💻🏫 cart",
     //   "path": "frontend/cart"
     // },
     // {
-    //   "name": "          💻🏫 federal-container",
+    //   "name": "           💻🏫 federal-container",
     //   "path": "frontend/federal-container"
     // },
     // {
-    //   "name": "          💻🏫 products",
+    //   "name": "           💻🏫 products",
     //   "path": "frontend/products"
     // },
     {
-      "name": " ↓ 📓 📚 LIBRARY",
+      "name": "  ↓ 📓 📚 LIBRARY",
       "path": "library"
     },
     {
-      "name": " S *→ 📚🧭 mapping-tools",
+      "name": "  S *→ 📚🧭 mapping-tools",
       "path": "library/mapping-tools"
     },
     {
-      "name": "      📚❤ bigintString",
+      "name": "       📚❤ bigintString",
       "path": "library/bigintString"
     },
     {
-      "name": "      📚🧡 boxed-list",
+      "name": "       📚🧡 boxed-list",
       "path": "library/boxed-list"
     },
     {
-      "name": "      📚💛 colors-tools",
+      "name": "       📚💛 colors-tools",
       "path": "library/colors-tools"
     },
     {
-      "name": "      📚💚 human-size",
+      "name": "       📚💚 human-size",
       "path": "library/human-size"
     },
     {
-      "name": "      📚💙 object-with-expectations",
+      "name": "       📚💙 object-with-expectations",
       "path": "library/object-with-expectations"
     },
     {
-      "name": "      📚💜 parallel-mapper",
+      "name": "       📚💜 parallel-mapper",
       "path": "library/parallel-mapper"
     },
     {
-      "name": "      📚🧌 restraining-zalgo",
+      "name": "       📚🧌 restraining-zalgo",
       "path": "library/restraining-zalgo"
     },
     {
-      "name": "      📓🛠️ Tools",
+      "name": "       📓🛠️ Tools",
       "path": "library/tools"
     },
     {
-      "name": "      📘 Typescript",
+      "name": "       📘 Typescript",
       "path": "library/typescript"
     },
     {
-      "name": " ↓ 🖥️ 💁📒 SERVICES",
+      "name": "  ↓ 🖥️ 💁📒 SERVICES",
       "path": "services"
     },
     {
-      "name": " S *→ 💁🛵 image-scout",
+      "name": "  S *→ 💁🛵 image-scout",
       "path": "services/image-scout"
     },
     // {
-    //   "name": " S *→ 📊🖥️ questrade-ts",
+    //   "name": "  S *→ 📊🖥️ questrade-ts",
     //   "path": "services/questrade-ts"
     // },
     {
-      "name": " S *→ 💁💜 rpc-worker-pool",
+      "name": "  S *→ 💁💜 rpc-worker-pool",
       "path": "services/rpc-worker-pool"
     },
     {
-      "name": "      💁📊 mongo-service",
+      "name": "       💁📊 mongo-service",
       "path": "services/mongo-service"
     },
     {
-      "name": "      💁❤ phash-compute",
+      "name": "       💁❤ phash-compute",
       "path": "services/phash-compute"
     },
     {
-      "name": "      💁🧡 redis-services",
+      "name": "       💁🧡 redis-services",
       "path": "services/redis-services"
     },
     {
-      "name": "      💁💛 scan-directories",
+      "name": "       💁💛 scan-directories",
       "path": "services/scan-directories"
     },
     {
-      "name": "      💁💚 service-one",
+      "name": "       💁💚 service-one",
       "path": "services/service-one"
     },
     {
-      "name": "      💁💙 service-two",
+      "name": "       💁💙 service-two",
       "path": "services/service-two"
     },
     {
-      "name": " ↓ 🪄 🎱 EXAMPLES",
+      "name": "  ↓ 🪄 🎱 EXAMPLES",
       "path": "examples"
     },
     {
-      "name": "      🎱🪄 template",
+      "name": "       🎱🪄 template",
       "path": "examples/template"
     },
     {
-      "name": "      🎱🪄 open-ai",
+      "name": "       🎱🪄 open-ai",
       "path": "examples/open-ai"
     },
     {
-      "name": "      🎱🪄 gpu-stuff",
+      "name": "       🎱🪄 gpu-stuff",
       "path": "examples/gpu-stuff"
     },
     {
-      "name": "      🎱🪄 playground",
+      "name": "       🎱🪄 playground",
       "path": "examples/playground"
     },
     {
-      "name": "      🎱🪄 node-js",
+      "name": "       🎱🪄 node-js",
       "path": "examples/node-js"
     },
     {
-      "name": "      🎱🛵 phash-scout",
+      "name": "       🎱🛵 phash-scout",
       "path": "examples/phash-scout"
     },
     {
-      "name": "      📘 typescript",
+      "name": "       📘 typescript",
       "path": "examples/typescript"
     },
     {
@@ -1018,7 +1018,7 @@
     /*
   --------------------------------------------------------···-|
     */
-    // #region: excludes                                             !
+    // #region: excludes                                                    !
     "files.exclude": {
       ".directory": true,
       "**/*.build.log": true,
@@ -1052,11 +1052,11 @@
       "dist": true,
       "out": true
     },
-    // #endregion: excludes                                          !
+    // #endregion: excludes                                                 !
     /*
   |-····-----------------------------------------------------------··-|
   */
-    // #region: FORMAT BEHAVIOUR                                     !
+    // #region: FORMAT BEHAVIOUR                                           !
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
@@ -1068,7 +1068,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    //                                                                ――
+    //                                                                          ――
     // ―― CODEACTIONSONSAVE BEHAVIOUR:
     "editor.codeActionsOnSave": [
       "source.addMissingImports",
@@ -1081,11 +1081,11 @@
       "chatgpt": "cobol",
       "prompts": "log"
     },
-    // #endregion: FORMAT BEHAVIOUR                                  !
+    // #endregion: FORMAT BEHAVIOUR                                       !
     /*
   |-····-----------------------------------------------------------··-|
   */
-    // #region: PRETTIER                                             !
+    // #region: PRETTIER                                                    !
     "prettier.enable": true,
     "prettier.requireConfig": true,
     "prettier.trailingComma": "all",
@@ -1093,19 +1093,19 @@
     "prettier.printWidth": 80,
     "prettier.proseWrap": "preserve",
     "prettier.useTabs": false,
-    // #endregion: PRETTIER                                          !
+    // #endregion: PRETTIER                                                 !
     /*
   |-····-----------------------------------------------------------··-|
   */
-    // #region: ESLINT                                               !
+    // #region: ESLINT                                                      !
     "eslint.quiet": true,
     "eslint.format.enable": true,
     "eslint.lintTask.enable": false,
-    // #endregion: ESLINT                                            !
+    // #endregion: ESLINT                                                   !
     /*
   |-····-----------------------------------------------------------··-|
   */
-    // #region: JAVASCRIPT BEHAVIOUR                                 !
+    // #region: JAVASCRIPT BEHAVIOUR                                      !
     "javascript.format.enable": true,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
     "javascript.format.semicolons": "insert",
@@ -1118,11 +1118,11 @@
     "javascript.suggest.paths": true,
     "javascript.suggestionActions.enabled": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    // #endregion: JAVASCRIPT                                          !
+    // #endregion: JAVASCRIPT                                                 !
     /*
   |-····-----------------------------------------------------------――··-|
   */
-    // #region: TYPESCRIPT BEHAVIOUR                                   !
+    // #region: TYPESCRIPT BEHAVIOUR                                        !
     "typescript.check.npmIsInstalled": false,
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "typescript.format.enable": true,
@@ -1142,20 +1142,20 @@
     "typescript.tsserver.maxTsServerMemory": 4096,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.workspaceSymbols.scope": "currentProject",
-    // #endregion: TYPESCRIPT BEHAVIOUR                               !
+    // #endregion: TYPESCRIPT BEHAVIOUR                                    !
     /*
   |-····-----------------------------------------------------------··-|
   */
-    // #region: PATH-INTELLISENSE                                               !
+    // #region: PATH-INTELLISENSE                                                      !
     "path-intellisense.extensionOnImport": false,
     "path-intellisense.absolutePathToWorkspace": false,
     "path-intellisense.autoSlashAfterDirectory": false,
     "path-intellisense.showHiddenFiles": true,
-    // #endregion: PATH-INTELLISENSE                                            !
+    // #endregion: PATH-INTELLISENSE                                                   !
     /*
   |-····-----------------------------------------------------------――··-|
   */
-    // #region: editor.rulers                                                     !
+    // #region: editor.rulers                                                             !
     "editor.rulers": [
       {
         "column": 2,
@@ -1270,11 +1270,11 @@
         "color": "#93F8"
       }
     ],
-    // #endregion: editor.rulers                                                  !
+    // #endregion: editor.rulers                                                          !
     /*
   |-····-----------------------------------------------------------··-|
   */
-    // #region: BETTER COMMENTS                                                 !
+    // #region: BETTER COMMENTS                                                         !
     /*
      "problemsErrorIcon.foreground": "#ff3366",
      "problemsInfoIcon.foreground": "#ffcc55ee",
@@ -1377,7 +1377,7 @@
       // },
       /*
 <-------------------------------------------------------------------->
-      */
+       */
       // <=====
       // <<====
       // >=====
@@ -1390,7 +1390,7 @@
       // /=//=
       /*
 <====================================================================>
-      */
+       */
       {
         // /=//==//===//====//=====//======//=======//========//=====/
         "tag": "/=//=",
@@ -2234,11 +2234,11 @@
         "backgroundColor": "transparent"
       }
     ],
-    // #endregion: BETTER COMMENTS                                     !
+    // #endregion: BETTER COMMENTS                                           !
     /*
   |-····-----------------------------------------------------------··-|
   */
-    // #region: TODO TREE                                                       !
+    // #region: TODO TREE                                                                !
     "todo-tree.filtering.excludeGlobs": [
       "**/node_modules"
     ],
@@ -2326,7 +2326,7 @@
         "hideFromTree": true,
         "hideFromStatusBar": true
       },
-      // "REVIEW NEEDED:" search
+      // "REVIEW NEEDED:"  search
       // REVIEW NEEDED: ------------------------------------------------
       "REVIEW NEEDED:": {
         "foreground": "#FC9",
@@ -3003,7 +3003,7 @@
     // "todo-tree.tree.subTagClickUrl": "", // new items
     // "todo-tree.tree.tagsOnly": true,
     // "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
-    // #endregion: TODO TREE                                                   !
+    // #endregion: TODO TREE                                                           !
     /*
   |-····-----------------------------------------------------------··-|
     */
@@ -3085,7 +3085,7 @@
       "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "audioCues.taskCompleted": "off",
-    "typescript.tsdk": "      →💁💜 rpc-worker-pool/node_modules/typescript/lib",
+    "typescript.tsdk": "       →💁💜 rpc-worker-pool/node_modules/typescript/lib",
     "files.watcherExclude": {
       "**/build/**": true,
       "**/dist/**": true,
@@ -3093,7 +3093,7 @@
       "**/out/**": true
     },
     "[python]": {
-      "editor.defaultFormatter": "ms-python.autopep8"
+      // "editor.defaultFormatter": "ms-python.autopep8"
     },
     "redisXplorer.config": {
       "profiles": [],
