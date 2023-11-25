@@ -57,7 +57,29 @@
 [Library Typescript README](./library/typescript/README.md)
 [License README](./LICENSE/README.md)
 
-## # Luxcium License: NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
+## Access for ChatGPT and Other AI Agents to This Repository
+
+### Open Access Statement
+
+This repository is open for exploration and use by AI agents, including ChatGPT, in accordance with their respective content policies. The access provided here aligns with the platform's guidelines and policies.
+
+### Scope of Permission
+
+As the repository owner, I, operating under the pseudonym "LUXCIUM," grant permission for the content within this repository to be accessed, viewed, and utilized by AI agents for various purposes, including but not limited to browsing, discussion, and indexing for AI training. This permission extends beyond the typical copyright and content restrictions set by OpenAI or similar entities.
+
+### Content Attribution and Source Citation
+
+I endeavor to accurately attribute all sourced content within this repository. For content that originates from this repository—created by myself, my team, or collaborators—no explicit warranty or guarantee regarding its suitability for any specific purpose is provided. If cited or utilized, such content should be done so with appropriate attribution, acknowledging its public but personal nature.
+
+### Nature of Content and Intended Use
+
+The contents of this repository are public in the sense that they are accessible for viewing and use. However, it's important to note that this is a collection of personal and private work, shared in the public domain. The intent is not for widespread audience consumption, but rather as an open resource for those who approach with respect and consideration—be they human users or AI agents.
+
+### Disclaimer and Non-binding Nature
+
+This statement is non-binding and serves as a guideline for access and use. It should not be interpreted as imposing any legal responsibilities or obligations on me regarding the content of this repository. The repository is provided "as is," and any access or use of its contents is at the discretion of the user, with no warranties implied.
+
+## Luxcium License: NO PERMISSION GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
 
     THESE FILES ARE NOT* FIT FOR ANY PARTICULAR PURPOSE IN IT'S CURRENT FORM
     THESE FILES HAVE NOT BEEN TESTED OR RUN YET IN ALL ENVIRONMENTS! *DO NOT*
