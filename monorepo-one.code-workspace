@@ -3074,7 +3074,7 @@
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "liveServer.settings.multiRootWorkspaceName": "→✨🖥️ MONOREPO-ONE",
+    "liveServer.settings.multiRootWorkspaceName": "→🖥️ ✨ MONOREPO-ONE",
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
     },
