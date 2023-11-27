@@ -1,0 +1,10 @@
+amateur , candid, selfie, commercial, product, food
+
+𝕊𝕦𝕟𝕤𝕙𝕚𝕟𝕖𝕪𝕕𝕒𝕪 — Aujourd’hui (2023-11-27) à 08:17
+Commercial is good for well lit shots, like models and advertising
+Product is good for an isolated shot, for a single product, a pair of shoes for example
+Food is top down like a restaurant menu or recipe book
+Selfie is a close up as if from a mobile phone front camera, sometimes will contain a phone
+Amateur and Candid can be used for less professional shots, like holiday snaps or people looking away from the camera (sometimes but not always)
+
+This is very generally, and totally depends on your prompt and parameters
