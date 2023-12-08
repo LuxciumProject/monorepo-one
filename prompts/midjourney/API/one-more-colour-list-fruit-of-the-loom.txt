@@ -192,3 +192,37 @@ Striped Indigo
 Striped Red
 Striped Grey
 Striped Dark Blue
+
+
+Alice Blue
+Kelly Green
+Crimson Red
+Navy Blue
+Canary Yellow
+Scarlet Red
+Ivory White
+Charcoal Grey
+Lavender
+Ruby Red
+Sapphire Blue
+Emerald Green
+Peach
+Teal
+Mauve
+
+Victory Red
+Heritage Red
+Regal Red
+Patriot Red
+Legacy Red
+
+Cadet Red
+Harvard Red
+Spartan Red
+Racing Red
+Varsity Red
+Trophy Red
+Glory Red
+Imperial Red
+Majestic Red
+Rouge Red
