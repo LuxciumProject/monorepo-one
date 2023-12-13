@@ -2,7 +2,7 @@ Title: Introducing Modular Incremental Programming and Development (MIPAD): A Un
 
 Introduction
 
-In the realm of software development, methodologies and approaches play a crucial role in determining the efficiency, scalability, and maintainability of projects. Combining the strengths of the Hyper-Modular Black Box and the Incremental Development Pseudocode as Code (IDPAC) approaches, we introduce a powerful and innovative development methodology called Modular Incremental Programming and Development (MIPAD).
+In the realm of software development, methodologies and approaches play a crucial role in determining the efficiency, scalability, and maintainability of projects. Combining the strengths of the Hyper-Modular Black-Boxes Design (HMBBD) and the Incremental Development Pseudocode as Code (IDPAC) approaches, we introduce a powerful and innovative development methodology called Modular Incremental Programming and Development (MIPAD).
 
 Core Principles of MIPAD
 

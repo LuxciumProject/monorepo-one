@@ -14,14 +14,25 @@ candid photo
 webcam photo
 cinematic photo
 photo
-amateur photo
-selfie
-professional photo
 picture
+selfie
+snapshot
+
+professional photo
+
+amateur photo
 casual photo
-impromptu photo
 natural photo
 everyday photo
 standard photo
 unedited photo
-snapshot
+impromptu photo
+
+
+/imagine prompt:amateur photo of an elite teencore boy in a hoody
+/imagine prompt:casual photo of an elite teencore boy in a hoody
+/imagine prompt:natural photo of an elite teencore boy in a hoody
+/imagine prompt:everyday photo of an elite teencore boy in a hoody
+/imagine prompt:standard photo of an elite teencore boy in a hoody
+/imagine prompt:unedited photo of an elite teencore boy in a hoody
+/imagine prompt:impromptu photo of an elite teencore boy in a hoody

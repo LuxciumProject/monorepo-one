@@ -1,53 +1,182 @@
-Navy
-Brown
-Beige
-Maroon
-Olive
-Crimson
-Red
-Vermilion
-Orange
-Amber
-Yellow
-Lime
-Chartreuse
-Kelly Green
-Green
-Teal
-Jade
-Turquoise
-Cyan
-Cerulean
-Azure
-Sapphire
-Blue
-Indigo
-Purple
-Lavender
-Magenta
-Pink
-Fuchsia
-Burgundy
-Bronze
-Gold
-Silver
-Ivory
-Coral
-Peach
-Tan
-Mauve
-Aquamarine
-Periwinkle
-Khaki
-Sienna
-Salmon
-Rust
-Mustard
-Plum
-Emerald
-Mint
-Ochre
-Umber
-White
-Black
-Grey
+crimson and fuchsia
+red and pink
+vermilion and magenta
+orange and lavender
+amber and purple
+yellow and indigo
+lime and blue
+chartreuse and sapphire
+kelly-green and azure
+green and cerulean
+teal and cyan
+jade and turquoise
+
+turquoise and crimson
+cyan and red
+cerulean and vermilion
+azure and orange
+sapphire and amber
+blue and yellow
+indigo and lime
+purple and chartreuse
+lavender and kelly-green
+magenta and green
+pink and teal
+fuchsia and jade
+
+navy
+brown
+beige
+maroon
+olive
+burgundy
+bronze
+gold
+silver
+ivory
+coral
+peach
+tan
+mauve
+aquamarine
+periwinkle
+khaki
+sienna
+salmon
+rust
+mustard
+plum
+emerald
+mint
+ochre
+umber
+
+white
+black
+grey
+
+
+navy and black
+brown and black
+beige and black
+maroon and black
+olive and black
+burgundy and black
+bronze and black
+gold and black
+silver and black
+ivory and black
+coral and black
+peach and black
+tan and black
+mauve and black
+aquamarine and black
+periwinkle and black
+khaki and black
+sienna and black
+salmon and black
+rust and black
+mustard and black
+plum and black
+emerald and black
+mint and black
+ochre and black
+umber and black
+
+navy and white
+brown and white
+beige and white
+maroon and white
+olive and white
+burgundy and white
+bronze and white
+gold and white
+silver and white
+ivory and white
+coral and white
+peach and white
+tan and white
+mauve and white
+aquamarine and white
+periwinkle and white
+khaki and white
+sienna and white
+salmon and white
+rust and white
+mustard and white
+plum and white
+emerald and white
+mint and white
+ochre and white
+umber and white
+
+navy and graphite grey
+brown and graphite grey
+beige and graphite grey
+maroon and graphite grey
+olive and graphite grey
+burgundy and graphite grey
+bronze and graphite grey
+gold and graphite grey
+silver and graphite grey
+ivory and graphite grey
+coral and graphite grey
+peach and graphite grey
+tan and graphite grey
+mauve and graphite grey
+aquamarine and graphite grey
+periwinkle and graphite grey
+khaki and graphite grey
+sienna and graphite grey
+salmon and graphite grey
+rust and graphite grey
+mustard and graphite grey
+plum and graphite grey
+emerald and graphite grey
+mint and graphite grey
+ochre and graphite grey
+umber and graphite grey
+
+
+
+
+🎨 (Color Palette) - Represents art and a variety of colors.
+🌈 (Rainbow) - Symbolizes a spectrum of colors.
+🖌️ (Paintbrush) - Often used to depict painting or color application.
+🖍️ (Crayon) - Suggests coloring and creativity.
+🌸 (Cherry Blossom) - A natural representation of pink color.
+🌻 (Sunflower) - Represents a vibrant yellow color.
+🍀 (Four Leaf Clover) - A symbol for the color green.
+🔵 (Blue Circle) - Represents the color blue.
+🔴 (Red Circle) - Symbolizes the color red.
+⚫ (Black Circle) - Represents the color black.
+
+red:: vermilion:: scarlet:: carmine:: crimson::
+blue:: azure:: cerulean:: indigo:: navy::
+green:: lime:: emerald:: olive:: forest green::
+magenta:: fuchsia:: orchid:: berry:: lavender::
+cyan:: aqua:: teal:: turquoise:: electric blue::
+yellow:: lemon:: gold:: mustard:: sunflower::
+orange:: coral:: peach:: tangerine:: burnt orange::
+pink:: rose:: flamingo:: bubblegum:: salmon::
+grey:: slate:: silver:: ash:: gunmetal::
+purple:: mauve:: lavender:: violet:: amethyst::
+brown:: tan:: beige:: sienna:: umber::
+lime:: chartreuse:: pear:: olive:: avocado::
+black:: onyx:: charcoal:: obsidian:: jet::
+white:: ivory:: alabaster:: cream:: snow::
+
+red:: vermilion:: scarlet:: carmine:: crimson::
+blue:: azure:: cerulean:: indigo:: navy::
+green:: forest green:: lime:: emerald:: olive::
+magenta:: fuchsia:: orchid:: berry:: plum::
+cyan:: aqua:: teal:: turquoise:: electric blue::
+yellow:: lemon:: gold:: mustard:: sunflower::
+orange:: coral:: peach:: tangerine:: burnt orange::
+pink:: rose:: flamingo:: bubblegum:: salmon::
+grey:: slate:: silver:: ash:: gunmetal::
+purple:: mauve:: lavender:: violet:: amethyst::
+brown:: tan:: beige:: sienna:: umber::
+yellow-green:: chartreuse:: pear:: olive:: avocado::
+black:: onyx:: charcoal:: obsidian:: jet::
+white:: ivory:: alabaster:: cream:: snow::

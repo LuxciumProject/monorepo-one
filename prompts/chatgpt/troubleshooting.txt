@@ -69,7 +69,7 @@ Intel® Turbo Boost Max Technology 3.0 Frequency ‡ 4.70 GHz
 Processor Base Frequency 3.70 GHz
 Cache 19.25 MB Intel® Smart Cache
 Bus Speed 8 GT/s DMI3
-TDP 165 W
+TDP 165
 
 Advanced Technologies:
 Intel® Deep Learning Boost (Intel® DL Boost) Yes
@@ -94,6 +94,8 @@ Code Name Products formerly Cascade Lake
 Vertical Segmen tDesktop
 Processor Number i9-10900X
 Lithography 14 nm
+
+
 Thank you for providing the detailed information about your system. Now, please describe the specific problem you're experiencing so I can help you better.
 
 
