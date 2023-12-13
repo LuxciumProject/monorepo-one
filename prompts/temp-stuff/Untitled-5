@@ -1,0 +1,67 @@
+8L
+--style 2ubZkr3ozx
+8R
+--style 3UiytF41TJ
+10L
+--style mnFVpBch8f
+10R
+--style zaD1KDhZ3Z
+
+
+FOR 8L
+10L (8L+10L)
+--style lFCDPZbXt9
+10R (8L+10R)
+--style yszKb1hFoT
+
+FOR 8R
+10L (8R+10L)
+--style n5JcZdcANl
+10R (8R+10R)
+--style zSGjkfiiJ5
+
+
+
+8L
+--style 2ubZkr3ozx
+8R
+--style 3UiytF41TJ
+10L
+--style mnFVpBch8f
+10R
+--style zaD1KDhZ3Z
+
+·
+FOR 8L
+10L (8L+10L)
+--style lFCDPZbXt9
+10R (8L+10R)
+--style yszKb1hFoT
+
+FOR 8R
+10L (8R+10L)
+--style n5JcZdcANl
+10R (8R+10R)
+--style zSGjkfiiJ5
+
+
+
+
+
+So, when running a prompt with style codes that add up to
+8L+8R+10L
+it actually produces slightly different results than running a prompt based on
+10L
+alone. Essentially, the 8L and 8R, as I understand it, don’t really cancel each other out as they more act like a negative influence on the 10L drawing the style closer towards default, while leaving some 10L. Basically, adding two styles from the same line (both an L and R) dilutes whatever novel styles you have input. Demonstrated by attached seed locked grid results.
+
+
+/imagine prompt:cinematic photo of a 19 years old teencore man wearing a hoodie Photorealism Art 21st Century current period photo taken with provia Neon Light Installations, Futuristic and Sci-Fi --ar 16:9 --style 2ubZkr3ozx-3UiytF41TJ-mnFVpBch8f --s 20 --seed 1
+
+--style 3UiytF41TJ-zaD1KDhZ3Z VS. --style zSGjkfiiJ5
+
+/imagine prompt:cinematic photo of a 19 years old teencore man wearing a hoodie Photorealism Art 21st Century current period photo taken with provia Neon Light Installations, Futuristic and Sci-Fi --ar 16:9 --s 230
+
+
+/imagine prompt:cinematic photo of a 19 years old teencore man wearing a hoodie Photorealism Art 21st Century current period photo taken with provia Neon Light Installations, Futuristic and Sci-Fi --ar 16:9 --s 230 --style 3UiytF41TJ-zaD1KDhZ3Z
+
+/imagine prompt:cinematic photo of a 19 years old teencore man wearing a hoodie Photorealism Art 21st Century current period photo taken with provia Neon Light Installations, Futuristic and Sci-Fi --ar 16:9 --s 230 --style zSGjkfiiJ5

@@ -1,0 +1,32 @@
+
+
+Given the colour <COLOUR NAME> could you provide a comprehensive overview of that given colour? This should at least include its translation in French, a detailed description of the color, common items or scenarios typically associated with this color. Then please generate an image that depicts a scene incorporating various elements that are usually found in the specific colour. Please ensure the scene is rich and diverse, extending beyond the commonly listed items, to fully represent the essence and range of the color <COLOUR NAME>
+
+Given the colour Cerulean, could you provide a comprehensive overview of it? This should include its translation in French, a detailed description, and common items or scenarios typically associated with it. Then, please generate an image that depicts a scene incorporating various elements typically found in this hue. Ensure the scene is rich and diverse, extending beyond the commonly listed items, to fully represent the essence and range of Cerulean.
+
+
+
+a young man in a hoodie next to a brick wall, in the style of cildo meireles, skillful, slimepunk, grandparentcore, ahmed morsi, joão artur da silva, photo taken with provia
+
+https://s.mj.run/RB2QrABFVqA a young brazilian man in a hoodie in front of a brick wall behind him, in the style of cildo meireles, skillful, slimepunk, grandparentcore, ahmed morsi, joão artur da silva, candid photo taken with provia --fast --q 0.5 --seed 20231102 --s 250
+
+/imagine prompt:https://s.mj.run/RB2QrABFVqA a young brazilian man in a hoodie in front of a brick wall behind him, in the style of cildo meireles, skillful, slimepunk, grandparentcore, ahmed morsi, joão artur da silva, candid photo taken with provia --fast --q 0.25 --seed 20231102 --s 250
+
+https://s.mj.run/RB2QrABFVqA a young man in a hoodie next to a brick wall, in the style of cildo meireles, skillful, slimepunk, grandparentcore, ahmed morsi, joão artur da silva, photo taken with provia
+
+/imagine prompt:https://s.mj.run/RB2QrABFVqA a young man in a hoodie next to a brick wall, in the style of cildo meireles, skillful, slimepunk, grandparentcore, ahmed morsi, joão artur da silva, photo taken with provia --quick
+
+amateur , candid, selfie, commercial, product, food
+
+𝕊𝕦𝕟𝕤𝕙𝕚𝕟𝕖𝕪𝕕𝕒𝕪 — Aujourd’hui (2023-11-27) à 08:17
+Commercial is good for well lit shots, like models and advertising
+Product is good for an isolated shot, for a single product, a pair of shoes for example
+Food is top down like a restaurant menu or recipe book
+Selfie is a close up as if from a mobile phone front camera, sometimes will contain a phone
+Amateur and Candid can be used for less professional shots,
+like holiday snaps or people looking away from the camera (sometimes but not always)
+
+This is very generally, and totally depends on your prompt and parameters
+
+
+/imagine prompt:https://s.mj.run/RB2QrABFVqA --cnd a young brazilian man in a hoodie a brick wall behind him, in the style of cildo meireles, skillful, slimepunk, grandparentcore, ahmed morsi, joão artur da silva, photo taken with provia --quick
