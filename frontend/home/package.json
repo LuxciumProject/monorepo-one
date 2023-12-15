@@ -26,7 +26,7 @@
     "clsx": "^1.2.1",
     "csstype": "^3.0.10",
     "date-fns": "^2.30.0",
-    "eslint": "~8.44.0",
+    "eslint": "~8.55.0",
     "eslint-config-next": "~13.4.7",
     "framer-motion": "^10.12.20",
     "lodash": "^4.17.21",
@@ -57,12 +57,12 @@
     "@types/react-dom": "~18.0.11",
     "autoprefixer": "~10.4.14",
     "postcss": "~8.4.26",
-    "prettier": "~3.0.0",
+    "prettier": "~3.1.1",
     "prettier-plugin-tailwindcss": "^0.4.0",
     "tailwindcss": "~3.3.3",
     "tailwindcss-animate": "^1.0.6",
-    "typescript": "~5.1.6",
-    "@rushstack/heft": "~0.58.1",
-    "@rushstack/heft-jest-plugin": "~0.7.15"
+    "typescript": "~5.3.3",
+    "@rushstack/heft": "~0.63.4",
+    "@rushstack/heft-jest-plugin": "~0.10.6"
   }
 }

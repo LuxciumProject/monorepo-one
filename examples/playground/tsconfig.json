@@ -2,12 +2,13 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   // "extends": "../typescript/tsconfig.json",
   "compilerOptions": {
-    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "allowUnusedLabels": true,
     /* Emit Options */
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "NodeNext",
     "rootDir": "./src",
     "composite": true,
     "declarationDir": "./out/typings",
