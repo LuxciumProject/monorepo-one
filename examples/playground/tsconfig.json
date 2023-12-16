@@ -7,7 +7,7 @@
     "allowUnusedLabels": true,
     /* Emit Options */
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "rootDir": "./src",
     "composite": true,
