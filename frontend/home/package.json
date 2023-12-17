@@ -26,7 +26,7 @@
     "clsx": "^1.2.1",
     "csstype": "^3.0.10",
     "date-fns": "^2.30.0",
-    "eslint": "~8.55.0",
+    "eslint": "~8.56.0",
     "eslint-config-next": "~13.4.7",
     "framer-motion": "^10.12.20",
     "lodash": "^4.17.21",
@@ -48,7 +48,8 @@
     "tailwindcss-animatecss": "^3.0.4",
     "zod": "^3.21.4",
     "xterm": "~5.2.1",
-    "@monaco-editor/react": "~4.5.1"
+    "@monaco-editor/react": "~4.5.1",
+    "monaco-editor": "~0.45.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",

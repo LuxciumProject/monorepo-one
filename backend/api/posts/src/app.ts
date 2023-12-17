@@ -1,3 +1,4 @@
+import { randomBytes } from 'crypto';
 import express, { Request, Response } from 'express';
 
 const app = express();
@@ -5,14 +6,24 @@ const port = process.argv[2] || 3001;
 
 app.use(express.json());
 
-app.get('/', (_req: Request, res: Response) => {
-  res.send('Hello World');
-});
+const posts: any = {};
 
+app.get('/', (_req: Request, res: Response) => {
+  res.send(posts);
+  // res.send('Hello World');
+});
 app.post('/', (req: Request, res: Response) => {
   const { body } = req;
+  const id = randomBytes(4).toString('hex');
+  const { title } = req.body;
+
+  posts[id] = {
+    id,
+    title,
+  };
+
+  res.status(201).send(posts[id]);
   console.log('Hello World');
-  res.send(body);
 });
 
 app.listen(port, () => {
