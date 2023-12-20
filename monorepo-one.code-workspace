@@ -209,6 +209,42 @@
     },
     "tasks": [
       {
+        "label": "Start Posts Service",
+        "type": "shell",
+        "command": "npm start",
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": [],
+        "options": {
+          "cwd": "${workspaceFolder}/backend/api/posts"
+        }
+      },
+      {
+        "label": "Start Comments Service",
+        "type": "shell",
+        "command": "npm start",
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": [],
+        "options": {
+          "cwd": "${workspaceFolder}/backend/api/comments"
+        }
+      },
+      {
+        "label": "Start Toy Micro Services",
+        "dependsOn": [
+          "Start Posts Service",
+          "Start Comments Service"
+        ],
+        "dependsOrder": "parallel"
+      },
+      {
         "label": "build-all",
         "detail": "Build each subprojects using TSC and problemMatcher",
         "isBackground": false,
