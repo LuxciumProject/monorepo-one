@@ -20,17 +20,5 @@
       },
       "cwd": "${workspaceFolder}/frontend/home"
     }
-    // {
-    //   "type": "node",
-    //   "request": "launch",
-    //   "name": "Launch NextJS App",
-    //   "skipFiles": [
-    //     "<node_internals>/**"
-    //   ],
-    //   "program": "${workspaceFolder}/path/to/your/nextjs/app/server.js",
-    //   "env": {
-    //     "NODE_ENV": "development"
-    //   }
-    // }
   ]
 }
