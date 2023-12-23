@@ -1,3 +1,36 @@
+## Similar Colors
+
+{red, vermilion, scarlet, carmine, crimson, ruby, cherry, garnet, cardinal, brick}
+{blue, azure, cerulean, indigo, navy, sapphire, sky, steel, royal, powder}
+{green, lime, emerald, olive, forest green, jade, mint, pine, sea, mint}
+{magenta, fuchsia, orchid, berry, lavender, plum, lilac, thistle, lavender, orchid}
+{cyan, aqua, teal, turquoise, electric blue, cerulean, beryl, aquamarine, teal, turquoise}
+{yellow, lemon, gold, mustard, sunflower, amber, honey, goldenrod, saffron, mustard}
+{orange, coral, peach, tangerine, burnt orange, apricot, melon, carrot, pumpkin, apricot}
+{pink, rose, flamingo, bubblegum, salmon, watermelon, blush, rose, rose, rose}
+{grey, slate, silver, ash, gunmetal, pewter, stone, iron, charcoal, coal}
+{purple, mauve, lavender, violet, amethyst, plum, orchid, lavender, lilac, orchid}
+{brown, tan, beige, sienna, umber, khaki, camel, sand, bronze, oak}
+{lime, chartreuse, pear, olive, avocado, pistachio, fern, moss, olive, olive}
+{black, onyx, charcoal, obsidian, jet, ebony, raven, ink, coal, licorice}
+{white, ivory, alabaster, cream, snow, pearl, eggshell, seashell, linen, paper}
+
+## Color Wheel
+
+{red, blue, green, magenta, cyan, yellow, orange, pink, grey, purple, brown, lime, black, white}
+{vermilion, azure, lime, fuschia, teal, lemon, coral, rose, slate, lavender, mauve, tan, chartreuse, onyx, ivory}
+{scarlet, cerulean, emerald, orchid, turquoise, gold, peach, flamingo, silver, violet, beige, pear, charcoal, alabaster}
+{carmine, indigo, olive, berry, electric blue, mustard, tangerine, bubblegum, ash, amethyst, sienna, olive, obsidian, cream}
+{crimson, navy, forest green, lavender, sunflower, burnt orange, salmon, gunmetal, plum, umber, yellow-green, avocado, jet, snow}
+{ruby, sapphire, emerald, amethyst, turquoise, amber, apricot, watermelon, pewter, orchid, khaki, pistachio, ebony, pearl}
+{cherry, sky, pine, lilac, beryl, honey, melon, blush, stone, lavender, camel, fern, raven, eggshell}
+{garnet, steel, sea, thistle, aquamarine, goldenrod, carrot, rose, iron, lilac, sand, moss, ink, seashell}
+{cardinal, royal, mint, orchid, teal, saffron, pumpkin, rose, charcoal, orchid, bronze, olive, coal, linen}
+{brick, powder, mint, lavender, turquoise, mustard, apricot, rose, coal, lilac, oak, olive, licorice, paper}
+
+
+## Color Pairs 1
+
 crimson and fuchsia
 red and pink
 vermilion and magenta
@@ -11,6 +44,9 @@ green and cerulean
 teal and cyan
 jade and turquoise
 
+
+## Color Pairs 2
+
 turquoise and crimson
 cyan and red
 cerulean and vermilion
@@ -23,6 +59,59 @@ lavender and kelly-green
 magenta and green
 pink and teal
 fuchsia and jade
+
+## Color Triads
+
+red, blue, and green
+magenta, yellow, and cyan
+vermilion, azure, and emerald
+orange, cerulean, and orchid
+amber, sapphire, and turquoise
+yellow, indigo, and gold
+lime, blue, and teal
+chartreuse, cyan, and orchid
+kelly-green, azure, and peach
+green, cerulean, and flamingo
+teal, cyan, and silver
+jade, turquoise, and violet
+turquoise, crimson, and green
+cyan, red, and cerulean
+cerulean, vermilion, and orange
+azure, orange, and amber
+sapphire, amber, and yellow
+blue, yellow, and gold
+indigo, lime, and silver
+purple, chartreuse, and peach
+lavender, kelly-green, and flamingo
+pink, teal, and violet
+
+## Color Quads
+
+red, blue, green, and magenta
+magenta, yellow, cyan, and red
+vermilion, azure, emerald, and orange
+orange, cerulean, orchid, and amber
+amber, sapphire, turquoise, and yellow
+yellow, indigo, gold, and lime
+lime, blue, teal, and chartreuse
+chartreuse, cyan, orchid, and azure
+kelly-green, azure, peach, and green
+green, cerulean, flamingo, and teal
+teal, cyan, silver, and jade
+jade, turquoise, violet, and turquoise
+turquoise, crimson, green, and azure
+cyan, red, cerulean, and vermilion
+cerulean, vermilion, orange, and orange
+azure, orange, amber, and sapphire
+sapphire, amber, yellow, and blue
+blue, yellow, gold, and indigo
+indigo, lime, silver, and lime
+purple, chartreuse, peach, and chartreuse
+lavender, kelly-green, flamingo, and green
+pink, teal, violet, and teal
+
+
+## Color Names
 
 navy
 brown
@@ -137,9 +226,6 @@ mint and graphite grey
 ochre and graphite grey
 umber and graphite grey
 
-
-
-
 🎨 (Color Palette) - Represents art and a variety of colors.
 🌈 (Rainbow) - Symbolizes a spectrum of colors.
 🖌️ (Paintbrush) - Often used to depict painting or color application.
@@ -206,31 +292,3 @@ white:: ivory:: alabaster:: cream:: snow::
 {yellow-green, chartreuse, pear, olive, avocado}
 {black, onyx, charcoal, obsidian, jet}
 {white, ivory, alabaster, cream, snow}
-
-{red, vermilion, scarlet, carmine, crimson, ruby, cherry, garnet, cardinal, brick}
-{blue, azure, cerulean, indigo, navy, sapphire, sky, steel, royal, powder}
-{green, lime, emerald, olive, forest green, jade, mint, pine, sea, mint}
-{magenta, fuchsia, orchid, berry, lavender, plum, lilac, thistle, lavender, orchid}
-{cyan, aqua, teal, turquoise, electric blue, cerulean, beryl, aquamarine, teal, turquoise}
-{yellow, lemon, gold, mustard, sunflower, amber, honey, goldenrod, saffron, mustard}
-{orange, coral, peach, tangerine, burnt orange, apricot, melon, carrot, pumpkin, apricot}
-{pink, rose, flamingo, bubblegum, salmon, watermelon, blush, rose, rose, rose}
-{grey, slate, silver, ash, gunmetal, pewter, stone, iron, charcoal, coal}
-{purple, mauve, lavender, violet, amethyst, plum, orchid, lavender, lilac, orchid}
-{brown, tan, beige, sienna, umber, khaki, camel, sand, bronze, oak}
-{lime, chartreuse, pear, olive, avocado, pistachio, fern, moss, olive, olive}
-{black, onyx, charcoal, obsidian, jet, ebony, raven, ink, coal, licorice}
-{white, ivory, alabaster, cream, snow, pearl, eggshell, seashell, linen, paper}
-
-{red, blue, green, magenta, cyan, yellow, orange, pink, grey, purple, brown, lime, black, white}
-{vermilion, azure, lime, fuschia, teal, lemon, coral, rose, slate, lavender, mauve, tan, chartreuse, onyx, ivory}
-{scarlet, cerulean, emerald, orchid, turquoise, gold, peach, flamingo, silver, violet, beige, pear, charcoal, alabaster}
-{carmine, indigo, olive, berry, electric blue, mustard, tangerine, bubblegum, ash, amethyst, sienna, olive, obsidian, cream}
-{crimson, navy, forest green, lavender, sunflower, burnt orange, salmon, gunmetal, plum, umber, yellow-green, avocado, jet, snow}
-{ruby, sapphire, emerald, amethyst, turquoise, amber, apricot, watermelon, pewter, orchid, khaki, pistachio, ebony, pearl}
-{cherry, sky, pine, lilac, beryl, honey, melon, blush, stone, lavender, camel, fern, raven, eggshell}
-{garnet, steel, sea, thistle, aquamarine, goldenrod, carrot, rose, iron, lilac, sand, moss, ink, seashell}
-{cardinal, royal, mint, orchid, teal, saffron, pumpkin, rose, charcoal, orchid, bronze, olive, coal, linen}
-{brick, powder, mint, lavender, turquoise, mustard, apricot, rose, coal, lilac, oak, olive, licorice, paper}
-
-cherries, Intense chroma color, Vivid cerulean color, Sizzling red color, crystalloluminescence, Amethyst material, Emerald material, Unreal Engine, Macro Photography, Beautiful Lighting, High Angle
