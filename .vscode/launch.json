@@ -19,6 +19,27 @@
         "BROWSER": "none" // Prevents Next.js from opening the browser automatically
       },
       "cwd": "${workspaceFolder}/frontend/home"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    // {
+    //   "type": "edge",
+    //   "request": "launch",
+    //   "name": "Launch Edge against localhost",
+    //   "url": "http://localhost:3000",
+    //   "webRoot": "${workspaceFolder}"
+    // },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Launch Firefox against localhost",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

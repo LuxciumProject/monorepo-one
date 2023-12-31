@@ -28,6 +28,42 @@
 {cardinal, royal, mint, orchid, teal, saffron, pumpkin, rose, charcoal, orchid, bronze, olive, coal, linen}
 {brick, powder, mint, lavender, turquoise, mustard, apricot, rose, coal, lilac, oak, olive, licorice, paper}
 
+## Two words colours Names
+
+Indian Red
+Alice Blue
+Kelly Green
+Fuchsia Magenta
+Light Sea Green
+Lemon Chiffon
+Dark Orange
+Hot Pink
+Slate Gray
+Medium Purple
+Saddle Brown
+Lime Green
+Pitch Black
+Antique White
+Dark Gray
+Slate Blue
+Aqua Marine
+Light Salmon
+Olive Drab
+Dark Khaki
+
+
+
+
+
+
+
+Baby blue
+Baby pink
+Baby green
+Baby blue
+
+
+
 
 ## Color Pairs 1
 
