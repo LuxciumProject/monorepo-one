@@ -1,0 +1,38 @@
+Professional photo of Jeremy a 19-year-old Caucasian Latino, He is the iconic European teenager boy. Professional volumetric lighting on a young man's soulful face, capturing a cinematic night street scene. Candid photo with festive lights. He wearing a kidcore Hoodie, an "adidas" neon lime green grey and electric purple electric hoodie, with classic graphite gray cotton jogger sweatpants, and bright sports shoes. He in a festive street in Helsinki with, lit kid. He is illuminated by the white lights, the bright Orange lights glowing and bright purple neon sign casting a colourful hue on his face.
+Professional photo of Jeremy a 19-year-old Caucasian Latino, He is the iconic European teenager boy. Professional volumetric lighting on a young man's soulful face, capturing a cinematic night street scene. Candid photo with festive lights. He wearing a kidcore Hoodie, an "adidas" neon lime green grey and electric purple electric hoodie, with classic graphite gray cotton jogger sweatpants, and bright sports shoes. He in a festive street in Helsinki with, lit kid. He is illuminated by the white lights, the bright Orange lights glowing and bright purple neon sign casting a colourful hue on his face.
+
+
+
+now the skeleton you've made earlier is a great idea and I love that but... But this is not what we will be doing so we will keep the previous method in mind for when we will have concluded this aside remember this as the word «opening an aside» that is implied strongly here are anchor points such that when I will end this sidebar later it would close this aside and would let us resume with the analysis and comparaison of the method  use previously with the one I am about to describe below here LOOK:
+
+I want to make a hierarchical skeleton where each of those segmented section are the first level of segmentation... then I want to explain you only the second level such that you can focus only onto that stage and learn how it flow from the previous one... now into the sub section segmentation is the only thing you will do and later we will analyze what was the operation required to complete all steps of all stages...
+
+you have made a nuber of cuts in the prompts and you have (optionally) used parenthesis to exclude words that made it weird cuts (in this case it was clean cut but wen we will later list the operations in a formal manner before the end of the aside we would have to document it for every, any and all scenarios possible. Good in this case we have 13 or so section segments. for each such segments we will make more cut and list them under their section (parent) with each siblings on one line... now it is ok to drop punctuation (but not any other characters than , or . or : and ; with also ... ) it is imperative to never never never remove or change quoted text or cut inside of it (in this case only "adidas") and it must never never be possible to change the casing in this operation... each word now will be separated for each other and placed on a single line this is the sub section segmentation (section and subsection are probably not the best words ― in any case they mean what they are used to describe in this context) sub section is not a type of section it is a segment of a section where as sub segments are segments of a section sub segments and segments are interchangeable words at the sub level... section and sub sections are not...  (remember that later we will need to make a formal documentation of all step in this stage and it must generalize over any situations ― for now lets focus on doing it the perfect way as I am teaching you now)
+
+list each words making as few exception as possible when considering more than one word sub segmentation then use a separate line for any words line in, of, the, and all that such it is important to note that those word in any case MUST IMPERATIVELY BE INSIDE PARENTHESIS...
+
+ok you do that list one section segment at a time one after the other each of those steps will require you to indent and list each words (it should be one space one new word no space same word) strive to avoid any types of exception to the space rule but at the end of the day remain conscious that it will exist some exceptions in most cases use the hyphen rule  (would it make sense to put a dash to  unite the words instead of spaces if yes maybe (and this is still a maybe) you may consider keeping them on a same level (and example is 19 years old)...
+
+It is very important later when we will describe and document the procedure to stipulate clearly that at the first stage of segmentation (section segments) no error correction should occur it must be exactly the same  each character must remain the exact same (this have the only exception of the parenthesis around excluded words, and new lines between segments that is no rewording and no moving any thing or no reorder)...
+
+I mentioned that because now if a word is clearly misspelled and there is no ambiguity to that (it could have been made on purpose for any reasons but some typos are genuinely distinguishable) this is where it would be happening... as well as considering if it must effectively have those hyphens added or not (the hyphe rule do not imply to add no hyphens but some cases may require it that would be as part of the orthographic correction process only in any case other words can remain together without adding hyphens)...
+
+ouff this is a lot to say please outline what you must do and how to scrupulously follow the rules in the strictest possible manner as you see I have attempted to cover any situation that should strongly indicate that you must absolutely not deviate from the set of rules and instructions and not improvise on anything unless a very unique edge case that should not be happening very often...  explain what you will do then do that and stop doing nothing else after (you can have a conclude statement then return the prompt to me after you made the prefect 2 level segmentation)
+
+
+you did that as a pendulum would first time it  was under the threshold not it is above... I will be able to save time and give you clear example of missteps you will infer from that and the previous round what is the optimal way ok? (I will assume a yes so lets continue ok? ... cool)...
+
+[lit kid] Good this was a unit that is needless to mention but I wanted to start on a positive note...
+
+I would have split «Professional photo of» in 3 units but if it would have been two I would have accepted it also like that:
+
+Professional
+photo
+(of)
+
+similarly for «his face» :
+(his)
+face
+then in the case of «bright purple neon sign casting» I would think we can make more sub segmentation but at least the «casting» which is an action must have been separated (the later stages are analysis of each parts and then at that stage it must be possible to analyze 1) the nature and 2) function...  of each words...
+
+an other example (in no particular order)
