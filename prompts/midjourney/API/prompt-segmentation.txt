@@ -1,0 +1,72 @@
+# Documentation for Multi-Level Prompt Segmentation and Analysis
+
+## Introduction
+- **Purpose**: Guide for AI Agents on effective prompt segmentation and analysis.
+- **Objective**: Ensure precise and comprehensive understanding of prompts.
+
+## Process Overview
+1. **Initial Prompt Comprehension**:
+   - Comprehend the content and context of the prompt accurately.
+   - Misinterpretation can lead to incorrect segmentation and analysis.
+
+2. **Segmentation into Sections**:
+   - Divide the prompt into coherent sections based on natural linguistic breaks.
+   - Each section should retain its meaning independently.
+
+3. **Subsection Segmentation**:
+   - Further break down sections into individual words or cohesive phrases.
+   - Respect the integrity of phrases and quoted text.
+
+4. **Orthographic and Contextual Consideration**:
+   - Apply correct spelling, punctuation, and contextual hyphenation rules.
+   - Orthographic accuracy is crucial for maintaining the prompt's intended meaning.
+
+## Detailed Steps for Segmentation
+1. **First-Level Segmentation**:
+   - Identify and record larger, meaningful sections of the prompt.
+   - This foundational step influences all subsequent analyses.
+
+2. **Second-Level Segmentation**:
+   - Isolate individual words or phrases within each section.
+   - Enables detailed examination of each segment's nature and function.
+
+3. **Handling of Connective Words**:
+   - Enclose words like prepositions or conjunctions in parentheses.
+   - Highlights the supportive role of these words.
+
+4. **Preservation of Quoted Text**:
+   - Treat quoted text as a single, indivisible unit.
+   - Maintains the authenticity of the quoted material.
+
+## Incorporating Examples for Clarification
+- **Example 1**: "Professional photo of Jeremy a 19-year-old Caucasian Latino, He is the iconic European teenager boy."
+  - Segmentation: "Professional", "photo", "(of)", "Jeremy", "a", "19-year-old", "Caucasian Latino"
+  - Explanation: Each segment retains its meaning and contributes to the overall context.
+
+- **Example 2**: "Candid photo with festive lights."
+  - Segmentation: "Candid", "photo", "(with)", "festive", "lights"
+  - Explanation: Demonstrates inclusion of connective words and separation of descriptive words.
+
+## Preparing for Analysis
+- Review and adjust the segmented prompt for clarity and coherence.
+- Prepares the segmented prompt for detailed nature and function analysis.
+
+## Documentation and Consistency
+- Maintain a consistent approach in applying segmentation rules.
+- Ensures a standardized procedure for AI Agents.
+
+## Conclusion
+- Methodically apply the outlined process for prompt analysis.
+- Adherence to guidelines ensures accurate and efficient analysis by AI Agents.
+
+## Directives for AI Agents
+1. **Create**: Comprehensive segmentations of prompts.
+2. **Ensure**: Accuracy in understanding prompt content.
+3. **Focus**: Attention to linguistic nuances.
+4. **Emphasize**: Importance of orthographic accuracy.
+5. **Arrange**: Logical organization of segmentations.
+6. **Avoid**: Misinterpretation and maintenance of quoted text integrity.
+7. **Include**: Necessary contextual information.
+8. **Check**: Consistency in segmentations.
+9. **Proofread**: Elimination of errors.
+10. **Seek Feedback**: Perspectives for improvement.
