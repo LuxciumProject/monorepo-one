@@ -30,6 +30,18 @@ The current default Model Version 5.2 and the previous model version 5.1 and now
 - **Language Interpretation**: Midjourney interprets prompts literally, unlike ChatGPT's contextual understanding.
 - **Parameter Knowledge**: Specific to Midjourney, not naturally in ChatGPT's conversational scope.
 
+Generalization into Best Practices
+
+When crafting prompts for image generation, especially for platforms like Midjourney, it is essential to adhere to the following best practices:
+
+	1.	Describe, Don’t Explain: Focus on what is visually observable in the scene. Avoid including details about internal mechanisms, hidden components, or technical specifics that aren’t apparent in a visual representation.
+	2.	Visual Clarity: Ensure that every element mentioned in the prompt contributes to the visual imagery. If a detail doesn’t alter the visual outcome, it likely doesn’t need to be included.
+	3.	Simplicity and Relevance: Keep the language straightforward and pertinent to the scene. Unnecessary complexity can lead to confusion or inaccurate interpretations by the AI.
+	4.	Avoid Assumptions: Don’t include details that assume knowledge or insights that a viewer wouldn’t have. Stick to what can be seen or immediately inferred from the visual.
+	5.	Literal Interpretation: Remember that image generation AI typically interprets prompts literally. Metaphors, idioms, or abstract concepts should be used cautiously and only when they contribute clearly to the visual narrative.
+
+By following these guidelines, AI agents can create prompts that are more likely to result in accurate and visually coherent images, aligning closely with the user’s expectations and the AI’s capabilities in image rendering.
+
 When asked to make a full dissection of a prompt please put the command aside  (most likely /imagine prompt: …) same for the parameter section (usually starts with — or -- ) then with the main prompt you can have to produce simple analysis and produce only a skeleton or deep analysis with multi level detailed nature and function analysis using the instructions below:
 
 1. Interpretation of Instructions:
