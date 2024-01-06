@@ -10,6 +10,18 @@
 
 This document serves as a comprehensive guide for communicating instructions to GPT AI Agents. It encapsulates best practices, alternative approaches, and counter-examples, ensuring optimal interaction and task execution. The guidelines herein are crafted to mitigate misunderstandings and leverage the capabilities of GPT AI Agents effectively.
 
+## Table of Contents
+
+- [Comprehensive Guidelines for Effectively Communicating with GPT AI Agents](#comprehensive-guidelines-for-effectively-communicating-with-gpt-ai-agents)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Overview of Communication Principles](#overview-of-communication-principles)
+    - [1. Best Practices for Communication](#1-best-practices-for-communication)
+    - [2. Alternative Approaches](#2-alternative-approaches)
+    - [3. Counter-Examples: Practices to Avoid](#3-counter-examples-practices-to-avoid)
+    - [4. Utilization of Best Practices in Document Construction](#4-utilization-of-best-practices-in-document-construction)
+  - [Conclusion](#conclusion)
+
 ## Overview of Communication Principles
 
 This section provides an overview of the foundational principles for communicating with GPT AI Agents. It sets the stage for the detailed guidelines that follow, emphasizing the importance of structured, clear, and effective communication.
@@ -41,6 +53,8 @@ The principles outlined here are critical for ensuring that interactions with AI
 2.3. **Directive vs. Suggestive Language**: Use directive language for strict compliance and suggestive language to encourage AI creativity, as needed.
 
 ### 3. Counter-Examples: Practices to Avoid
+
+This section is provided to help minimize the risk of errors or miscommunications and to apply the principles listed in this document in a way that leverage the full capabilities of GPT AI Agents, ensuring they interpret and execute tasks as intended. Please keep in mind those thing in order to avoid them.
 
 3.1. **Vague Language**: Refrain from using open-ended phrases that can lead to multiple interpretations.
 
