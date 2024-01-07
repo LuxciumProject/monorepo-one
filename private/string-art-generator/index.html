@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -14,12 +14,12 @@
 
 <body>
   <div class="container">
-    <div class="jumbotron" style="padding-bottom: 20px !important;">
-      <div style="float: left; position: absolute; top: 20px;">
+    <div class="jumbotron" class="padding-bottom">
+      <div class="float-left">
         <a href="https://github.com/halfmonty/StringArtGenerator">Find on Github</a>
       </div>
       <h1>String Art Generator</h1>
-      <div style="float: right; margin-top: -40px;">
+      <div class="float-righ">
         Already have steps generated?
         <button class="btn btn-primary" onclick="onHasSteps();">Click Here</button>
       </div>
@@ -54,7 +54,7 @@
         </div>
       </div>
       <label class="btn btn-primary btn-file">
-        Click Here and select an Image to Start <input type="file" id="fileInput" style="display: none;">
+        Click Here and select an Image to Start <input type="file" id="fileInput" class="display-none">
       </label>
     </div>
 
@@ -74,20 +74,22 @@
           <canvas class="centerCanvasLarge" id="canvasOutput2"></canvas>
         </div>
         <div id="showPins" class="inputoutput center hidden">
-          <textarea id="pinsOutput" rows="10" cols="100"></textarea>
+          <label for="pinsOutput">Your Label Text Here</label>
+          <textarea id="pinsOutput" rows="10" cols="100" title="Your Title Here"
+            placeholder="Your Placeholder Text Here"></textarea>
           <div class="centerBorderless">
             <span>These examples will overwrite your generated output. Please copy your output first if you need to
               before clicking an example button.</span><br /><br />
-            <button style="float: left;" onclick="example1();">Example 1</button>
-            <button style="float: left;" onclick="example2();">Example 2</button>
-            <button style="float: left;" onclick="example3();">Example 3</button>
+            <button class="float-left" onclick="example1();">Example 1</button>
+            <button class="float-left" onclick="example2();">Example 2</button>
+            <button class="float-left" onclick="example3();">Example 3</button>
           </div><br /><br />
           <span>Copy these numbers to save for later so you don't have to generate them again.</span><br />
           <span>If you copied the numbers from a previous run, paste them above.</span><br />
           <span>These numbers are used to help walk you through creating this string art</span><br /><br />
-          <div style="height: 30px;">
-            <button style="float: left;" onclick="startCreating();">Start Creating</button>
-            <button style="float: right;" onclick="startDrawing();">Just Draw</button>
+          <div class="h30">
+            <button class="float-left" onclick="startCreating();">Start Creating</button>
+            <button class="float-right-only" onclick="startDrawing();">Just Draw</button>
           </div>
         </div>
         <div id="incrementalDrawing" class="inputoutput center hidden">
@@ -95,9 +97,9 @@
           <span id="incrementalCurrentStep"></span>
           <div id="drawStatus"></div>
           <canvas class="centerCanvasLarge" id="canvasOutput3"></canvas>
-          <div style="height: 30px;">
-            <button style="float: left;" onclick="lastStep();">Last Step</button>
-            <button style="float: right;" onclick="nextStep();">Next Step</button>
+          <div class="h30">
+            <button class="float-left" onclick="lastStep();">Last Step</button>
+            <button class="float-right-only" onclick="nextStep();">Next Step</button>
           </div>
         </div>
       </div>
@@ -107,7 +109,7 @@
 
 
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     let IMG_SIZE = 500;
     let MAX_LINES = 4000;// 4000;
     let N_PINS = 36 * 8;
@@ -708,7 +710,8 @@
         LINE_WEIGHT = parseInt(event.target.value);
       });
     }
-  </script>
+  </script> -->
+  <script src="main.js"></script>
   <script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -1175,7 +1175,6 @@
     "typescript.suggest.paths": true,
     "typescript.suggestionActions.enabled": true,
     "typescript.tsserver.experimental.enableProjectDiagnostics": true,
-    "typescript.tsserver.maxTsServerMemory": 4096,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.workspaceSymbols.scope": "currentProject",
     // #endregion: TYPESCRIPT BEHAVIOUR                                    !
