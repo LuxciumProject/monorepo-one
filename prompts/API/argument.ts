@@ -8,7 +8,7 @@ function negotiate(parameter: Argument) {
 
   return 'Josh Will need a better argument';
 }
-
+//@ts-ignore
 negotiate('This is a parameter?'); // 'Josh Will need a better argument'
 
 negotiate('This is an Argument!'); // 'Josh Will never Forget'
