@@ -1,0 +1,7 @@
+When constructing prompts for image generation, it is beneficial to adhere to a hierarchical structure to ensure clarity and context for the MJ Bot. The sequence and specificity of information can greatly influence the outcome. Here are generalized guidelines:
+
+Implement a hierarchical approach within your prompts, where information is organized according to its relative importance to the desired output.
+Clarify primary elements while avoiding potential conflicts. For example, if the focus is on an object like footwear, avoid pairing it with terms like "close-up," which typically implies facial detail, to prevent mixed signals.
+Be acquainted with the parameters such as "--style" and "--stylize". The "raw" option (indicated by "--style raw" or by its absence) and the "stylize" parameter (indicated by "--s" or "--stylize", ranging from 0 to 1000 with a default of 100) alter the image's stylistic rendering.
+The MJ Bot cannot self-experiment, but users are encouraged to modify prompts and parameters to explore the bot's interpretive patterns. Through this collaborative exploration, users can refine their understanding and enhance the communication with their AI assistant for improved outcomes.
+This approach leverages the pattern-matching abilities of GPTs, allowing for flexibility and adaptability in creating prompts that yield high-quality images aligned with user intent.
