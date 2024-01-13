@@ -1,12 +1,14 @@
-let IMG_SIZE = 500;
+const HOOP_DIAMETER = 0.625;
+const IMG_SIZE = 500;
+const MIN_DISTANCE = 20;
+const MIN_LOOP = 20;
+const SCALE = 20;
+
+let listenForKeys = false;
+let FILENAME = '';
+let LINE_WEIGHT = 20;
 let MAX_LINES = 4000; // 4000;
 let N_PINS = 36 * 8;
-let MIN_LOOP = 20;
-let MIN_DISTANCE = 20;
-let LINE_WEIGHT = 20;
-let FILENAME = '';
-let SCALE = 20;
-let HOOP_DIAMETER = 0.625;
 
 let img;
 
@@ -56,8 +58,6 @@ let line_sequence;
 let pin;
 let thread_length;
 let last_pins;
-
-let listenForKeys = false;
 
 //*******************************
 //      Line Generation
@@ -172,7 +172,6 @@ function NonBlockingCalculatePins(callback) {
   }
   setTimeout(codeBlock, 0);
 }
-
 /**
  * Non-blocking step 2: Precalculate the lines
  * @param {Array} pinCoords - Array of pin coordinates
@@ -350,12 +349,11 @@ function Finalize() {
   let dst = new cv.Mat();
   cv.resize(result, dst, dsize, 0, 0, cv.INTER_AREA);
 
-  console.log('complete');
+  console.log(MAX_LINES + ' Lines drawn | 100% complete');
   drawStatus.textContent = MAX_LINES + ' Lines drawn | 100% complete';
 
   cv.imshow('canvasOutput2', dst);
   console.log(line_sequence);
-  status.textContent = 'Complete';
   pinsOutput.value = line_sequence;
   showPins.classList.remove('hidden');
   dst.delete();
@@ -363,39 +361,44 @@ function Finalize() {
   window.scrollTo({ top: 5000, left: 0, behavior: 'smooth' });
 }
 
+// Potentially Unpure Function to get all numbers in array
 function getLineErr(arr, coords1, coords2) {
   let result = new Uint8Array(coords1.length);
-  for (i = 0; i < coords1.length; i++) {
+  for (let i = 0; i < coords1.length; i++) {
     result[i] = arr.get(coords1[i], coords2[i]);
   }
   return getSum(result);
 }
 
+// Potentially Unpure Function to set all numbers in array
 function setLine(arr, coords1, coords2, line) {
-  for (i = 0; i < coords1.length; i++) {
+  for (let i = 0; i < coords1.length; i++) {
     arr.set(coords1[i], coords2[i], line);
   }
   return arr;
 }
 
+// Pure Function to add all numbers in array
 function compareMul(arr1, arr2) {
   let result = new Uint8Array(arr1.length);
-  for (i = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {
     result[i] = (arr1[i] < arr2[i]) * 254 + 1;
   }
   return result;
 }
 
+// Pure Function to add all numbers in array
 function compareAbsdiff(arr1, arr2) {
   let rsult = new Uint8Array(arr1.length);
-  for (i = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {
     rsult[i] = arr1[i] * arr2[i];
   }
   return rsult;
 }
 
+// Non-Pure Function to subtract all numbers in array
 function subtractArrays(arr1, arr2) {
-  for (i = 0; i < arr1.selection.data.length; i++) {
+  for (let i = 0; i < arr1.selection.data.length; i++) {
     arr1.selection.data[i] = arr1.selection.data[i] - arr2.selection.data[i];
     if (arr1.selection.data[i] < 0) {
       arr1.selection.data[i] = 0;
@@ -406,21 +409,24 @@ function subtractArrays(arr1, arr2) {
   return arr1;
 }
 
+// Non-Pure Function to subtract all numbers in array
 function subtractArraysSimple(arr1, arr2) {
-  for (i = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {
     arr1[i] = arr1[i] - arr2[i];
   }
   return arr1;
 }
 
+// Pure Function to add all numbers in array
 function getSum(arr) {
   let v = 0;
-  for (i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     v = v + arr[i];
   }
   return v;
 }
 
+// Pure Function to make an array of numbers
 function makeArr(startValue, stopValue, cardinality) {
   var arr = [];
   var currValue = startValue;
@@ -431,14 +437,16 @@ function makeArr(startValue, stopValue, cardinality) {
   return arr;
 }
 
+// Non-Pure Function to add all numbers in array
 function AddRGB(arr1, arr2, arr3) {
-  for (i = 0; i < arr1.data.length; i++) {
+  for (let i = 0; i < arr1.data.length; i++) {
     var avg = arr1.data[i] + arr2.data[i] + arr3.data[i];
     arr1.data[i] = avg;
   }
   return arr1;
 }
 
+// Pure Function to make an array of numbers
 function linspace(a, b, n) {
   if (typeof n === 'undefined') n = Math.max(Math.round(b - a) + 1, 1);
   if (n < 2) {
@@ -447,7 +455,7 @@ function linspace(a, b, n) {
   var i,
     ret = Array(n);
   n--;
-  for (i = n; i >= 0; i--) {
+  for (let i = n; i >= 0; i--) {
     ret[i] = Math.floor((i * b + (n - i) * a) / n);
   }
   return ret;
@@ -620,7 +628,7 @@ function lastStep() {
     ' to ' +
     line_sequence[pointIndex + 1];
 
-  for (i = 0; i < pointIndex; i++) {
+  for (let i = 0; i < pointIndex; i++) {
     ctx3.beginPath();
     ctx3.moveTo(
       pin_coords[line_sequence[i]][0] * 2,
@@ -656,7 +664,7 @@ function CalculatePins() {
   center = IMG_SIZE / 2;
   radius = IMG_SIZE / 2 - 1 / 2;
 
-  for (i = 0; i < N_PINS; i++) {
+  for (let i = 0; i < N_PINS; i++) {
     angle = (2 * Math.PI * i) / N_PINS;
     pin_coords.push([
       Math.floor(center + radius * Math.cos(angle)),
