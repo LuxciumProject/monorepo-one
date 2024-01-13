@@ -1,0 +1,31 @@
+Basic Parameters
+- Aspect Ratios: Change the aspect ratio of a generation.
+- Chaos: Change how varied the results will be. Higher values produce more unusual and unexpected generations.
+- Fast: Override your current setting and run a single job using Fast Mode.
+- Image Weight: Sets image prompt weight relative to text weight.
+- No: Negative prompting (e.g., --no plants would try to remove plants from the image).
+- Quality: How much rendering quality time you want to spend.
+- Random: Add a random base styles Style Tuner code to your prompt.
+- Relax: Override your current setting and run a single job using Relax Mode.
+- Repeat: Create multiple Jobs from a single prompt.
+- Seed: The Midjourney bot uses a seed number to create a field of visual noise as a starting point to generate the initial image grids.
+- Stop: Use the --stop parameter to finish a Job partway through the process.
+- Style: Switch between versions of the Midjourney Model.
+- Stylize: Influences how strongly Midjourney's default aesthetic style is applied to Jobs.
+- Tile: Generates images that can be used as repeating tiles to create seamless patterns.
+- Turbo: Override your current setting and run a single job using Turbo Mode.
+- Weird: Explore unusual aesthetics with the experimental --weird parameter.
+
+Default Values (Model Version 5, 5.1, and 5.2)
+- Aspect Ratio, Chaos, Quality, Seed, Stop, Stylize: Default and range values provided.
+
+Default Values (Model Version 4)
+- Aspect Ratio, Chaos, Quality, Seed, Stop, Style, Stylize: Default and range values provided.
+
+Model Version Parameters
+- Different models excel at different types of images.
+- Niji: An alternative model focused on anime-style images.
+- Version: Use a different version of the Midjourney algorithm.
+
+Legacy Parameters
+- Some parameters only work with earlier Midjourney Models. Compatibility and effects on initial generation and variations/remix are listed.
