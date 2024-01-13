@@ -1,0 +1,16 @@
+Instruction Set for AI Agent:
+
+	1.	Identify Subjectivity: Locate phrases implying how an image “should feel” or hypothetical comparisons (e.g., “as though taken by”).
+	2.	Eliminate Conditionals: Remove modal verbs like “should” that suggest potential rather than actual visual attributes.
+	3.	Direct Description: Replace subjective or conditional phrases with direct descriptions of visual elements (e.g., instead of “should feel as though taken by a webcam,” use “features the up-close, candid quality of a webcam shot”).
+	4.	Factual Language: Utilize factual language that describes the physical characteristics of the scene or subject (e.g., “a high-angle, close-up view with soft lighting”).
+	5.	Consistent Perspective: Maintain a consistent narrative perspective that aligns with the visual description, avoiding shifts that could introduce ambiguity.
+	6.	Visual Elements Over Interpretation: Focus on concrete visual elements such as color, shape, and composition over interpretive language that suggests feeling or perception.
+	7.	Generalize for Similar Scenarios: Apply this process of simplification and direct description to any prompt, ensuring that all prompts avoid subjective language and conditionals, thus improving predictability in image generation.
+
+
+	1.	Identify any non-visual language and replace it with concrete terms.
+	2.	Simplify sentence structures to ensure they are concise and clear.
+	3.	Check for and maintain a consistent and appropriate tense throughout.
+	4.	Replace subjective or emotive descriptions with objective, visual details.
+	5.	Ensure all instructions directly relate to and influence the visual output.
