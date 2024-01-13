@@ -21,6 +21,18 @@
       "path": "prompts/chatgpt/more-prompts"
     },
     {
+      "name": "       🤖📙 APIs",
+      "path": "prompts/API/"
+    },
+    {
+      "name": "         📙⛵ midjourney",
+      "path": "prompts/API/midjourney/"
+    },
+    {
+      "name": "         📙🦾 GPTs",
+      "path": "prompts/API/GPTs/"
+    },
+    {
       "name": "  ↓ 🔐 💫 PRIVATE",
       "path": "private"
     },
