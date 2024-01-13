@@ -14,3 +14,45 @@ Instruction Set for AI Agent:
 	3.	Check for and maintain a consistent and appropriate tense throughout.
 	4.	Replace subjective or emotive descriptions with objective, visual details.
 	5.	Ensure all instructions directly relate to and influence the visual output.
+
+## Aditional information
+
+To summarize for an AI Agent the analytic steps necessary for effective prompt optimization for a lower-level AI Bot like Midjourney:
+
+**Analytic Steps:**
+1. **Identification**: Detect complex or abstract language that could be misunderstood by the generative AI Bot.
+2. **Simplification**: Replace complex phrases with straightforward, concrete language that accurately describes visual elements.
+3. **Clarification**: Ensure that all instructions are clear, direct, and devoid of ambiguity or unnecessary embellishments.
+4. **Precision**: Choose precise vocabulary that corresponds with observable attributes in the desired image.
+5. **Concision**: Eliminate extraneous words to create a prompt that is both succinct and descriptive.
+
+**Analysis for Solution:**
+1. **Active vs. Passive Voice**: Assess if passive constructions are causing vagueness; switch to active voice for clarity.
+2. **Modal Verbs**: Evaluate the use of modal verbs like "should" that imply potential rather than certainty; opt for definitive statements.
+3. **Subjectivity**: Identify and remove subjective language, focusing on objective descriptions.
+4. **Tense Consistency**: Check for consistent use of the present tense to describe the scene as a current reality.
+5. **Grammatical Structure**: Analyze sentence structures for grammatical accuracy, ensuring they support the visual description without adding complexity.
+
+**Generalized Instructions for High-Level AI Agent:**
+- Review the prompt for non-literal language and rephrase it to describe only what can be visually represented.
+- Use a factual tone, avoiding suggestions or hypotheticals.
+- Apply a structured approach to detect and revise elements that are not directly translatable into visual components.
+
+**Application to Specific and Similar Situations:**
+The outlined process can be applied to any prompt requiring optimization. By following these steps, the High-Level AI Agent can consistently produce or refine prompts to match the operational capabilities of the lower-level AI Bot.
+
+**Thought Process for Concrete Situation:**
+- Analyze the given prompt for abstract concepts.
+- Determine which phrases can be misinterpreted visually.
+- Translate these phrases into literal descriptions.
+
+**Summarized Explanation for High-Level AI Agent:**
+For creating or optimizing prompts for a generative AI Bot like Midjourney, ensure the language is literal, visually descriptive, and free of abstract concepts. Replace subjective impressions with concrete descriptors. Maintain grammatical simplicity, avoiding modal verbs and passive voice that could introduce ambiguity. Keep the focus on present-tense, active-voice statements that clearly describe the visual elements to be generated. When correcting a prompt, follow these steps:
+
+1. Identify any non-visual language and replace it with concrete terms.
+2. Simplify sentence structures to ensure they are concise and clear.
+3. Check for and maintain a consistent and appropriate tense throughout.
+4. Replace subjective or emotive descriptions with objective, visual details.
+5. Ensure all instructions directly relate to and influence the visual output.
+
+By applying these principles, the High-Level AI Agent will create prompts that the lower-level AI Bot can interpret accurately, leading to predictable and precise image generation.
