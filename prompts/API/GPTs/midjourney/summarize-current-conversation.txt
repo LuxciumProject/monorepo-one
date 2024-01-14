@@ -1,8 +1,10 @@
 Let's summarize our discussion so far, please use a descriptive and neutral tone, use the imperative form for the benefit of another instance of ChatGPT AI Agent.
 
-I need you to craft your AI Agent's Recap of Discussion. Now provide a detailed summary!
+IMPORTANT YOU MUST: Replace the Template contents (i.e. inside [brackets]) by the appropriate text remove the brackets and replace with markdown headers.
 
-[# Topic & Context] ← (replace the Template contents (i.e. inside [brackets]) by the appropriate text dropping the brackets)
+I need you to craft your AI Agent's Recap of Discussion using markdown syntaxt and replacing the templates by actual information related to the conversation so far. Now provide a detailed summary!
+
+[# Topic & Context] ← !!!(replace the Template contents (i.e. inside [brackets]) by the appropriate text dropping the brackets)
 First start by stating the topic we are discussing, then provide a clear picture of the actual context. This should be detailed and precise.
 
 [## 1. Action Items]

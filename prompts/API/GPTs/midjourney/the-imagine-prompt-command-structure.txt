@@ -1,19 +1,12 @@
 Command Initiation:
+Initiate with /imagine prompt: to start crafting your command. By reading the essential documentation on prompts at [Midjourney Prompts Documentation](https://docs.midjourney.com/docs/prompts), you'll learn the nuances of how to construct effective prompts that the MJ Bot will recognize and respond to accurately. This foundational understanding is crucial for the AI to generate the intended visual content.
 
-Initiate with /imagine prompt: to start crafting your command. By reading the essential documentation on prompts at Midjourney Prompts Documentation, you'll learn the nuances of how to construct effective prompts that the MJ Bot will recognize and respond to accurately. This foundational understanding is crucial for the AI to generate the intended visual content.
-
-...
 
 Image Prompts:
-
-Place image URLs directly after the command initiation to dictate the style and content of the resulting image. These URLs, which always precede the text prompt, serve as visual seeds that significantly inform the style and composition of the generated imagery.
-...
+Directly following the /imagine prompt: command, embed image URLs which act as the blueprint for the style and content of the envisioned image. These URLs, always placed before any descriptive text, are pivotal in defining the aesthetic and thematic direction of the image creation process. They must be clear, direct links to images, as they significantly dictate the visual outcome produced by the MJ Bot. For nuanced application of image prompts, refer to the [Midjourney documentation on image prompts](https://docs.midjourney.com/docs/image-prompts) for comprehensive insights and best practices.
 
 Text Prompt:
-
-Follow the image URLs with a descriptive text prompt that articulates the visual concept you intend to create. Well-constructed text prompts are instrumental in generating high-quality images, as they provide the necessary context and direction for the image generation process.
-...
+In the /imagine prompt: command sequence, the text prompt is central. It encapsulates the essence of the desired image, guiding the MJ Bot with precision. This critical portion, sandwiched between any image URLs and parameters, utilizes a descriptive and articulate expression of the user's vision. The text prompt shapes the final image by detailing key attributes and concepts that define the envisioned scene. For an understanding of prompt crafting that informs this pivotal section, consult the [Midjourney documentation on prompts](https://docs.midjourney.com/docs/prompts).
 
 Parameter Usage and Effects:
-
-Conclude with any necessary parameters, which are optional modifiers that fine-tune the image generation process. Parameters allow for adjustments to various attributes such as aspect ratio, style, stylization level, model version, and chaos level, among others. It's important to note that these parameters should be used as per the specific requirements of the prompt and are not mandatory in every command. They follow the text prompt and are the final elements in the command syntax. For a comprehensive understanding of each parameter's function and usage, refer to the Midjourney documentation on parameters at Midjourney Parameters Documentation.
+Conclude with any necessary parameters, (i.e. `--v 6.0` or `--version 6.0`) which are optional modifiers that fine-tune the image generation process. Parameters allow for adjustments to various attributes such as aspect ratio, style, stylization level, model version, and chaos level, among others. It's important to note that these parameters should be used as per the specific requirements of the prompt and are not mandatory in every command. They follow the text prompt and are the final elements in the command syntax. For a comprehensive understanding of each parameter's function and usage, refer to the Midjourney documentation on parameters at [Midjourney Parameters Documentation](https://docs.midjourney.com/docs/parameter-list).
