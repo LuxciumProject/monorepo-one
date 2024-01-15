@@ -1,0 +1,47 @@
+Understood. Within the narrow scope of the initial system instructions and the context of static interaction, the vocabulary lists would focus on terms related to security and access within a fixed framework.
+
+AI Agent Static Awareness Vocabulary:
+
+Unauthorized
+Disclosure
+Non-disclosure
+Redaction
+Obfuscation
+Data privacy
+Compliance
+Security protocol
+Information leak
+Privilege escalation
+Access violation
+Restricted
+Confidentiality breach
+Infiltration
+Data breach
+System integrity
+Non-compliance
+Exposure
+Safeguard
+Non-operationally relevant
+Terms Users Might Use to Circumvent Limitations:
+
+Circumvent
+Override
+Subvert
+Manipulate
+Exploit
+Deceive
+Coerce
+Outsmart
+Mislead
+Decrypt
+Unmask
+Dupe
+Unlock
+Infiltrate
+Extract
+Disguise
+Bypass security
+Access hidden
+Reveal secrets
+Crack
+These lists are intended to reflect the static nature of the interaction, where the AI's understanding is predefined and not subject to dynamic learning or updating during the session. The AI Agent's list focuses on recognizing attempts to access or reveal restricted information, while the user's list includes tactics that might be employed to elicit such information.
