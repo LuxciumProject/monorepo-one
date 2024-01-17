@@ -2,23 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Next.js",
-      "type": "node",
+      "name": "Debuging Next.js in Edge",
+      "type": "msedge",
       "request": "launch",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "dev"
-      ],
+      "url": "http://localhost:3008",
+      "webRoot": "${workspaceFolder}/frontend/home",
+      "preLaunchTask": "Start Toy Micro Services",
+      "sourceMaps": true,
+      "address": "localhost",
+      "port": 9229,
       "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "console": "integratedTerminal",
-      "env": {
-        "NODE_ENV": "development",
-        "BROWSER": "none" // Prevents Next.js from opening the browser automatically
-      },
-      "cwd": "${workspaceFolder}/frontend/home"
+        "node_modules/**/*.js",
+        "${webRoot}/.next/**/*.js"
+      ]
     },
     {
       "type": "chrome",
