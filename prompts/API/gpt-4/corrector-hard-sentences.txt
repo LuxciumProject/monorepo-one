@@ -1,0 +1,38 @@
+Group 1: Hard to Read Sentences
+Stage 1: Identification
+
+Check Sentence Length: Long sentences often contribute to complexity. Look for sentences with many clauses or over 20 words.
+Examine Vocabulary: Identify words that are less common or more academic. These often include multisyllabic words or technical jargon.
+Evaluate Syntax: Look for sentences with complex or unusual structures, such as nested clauses or passive voice.
+Stage 2: Simplification
+
+Shorten Sentences: Break long sentences into two or more shorter ones.
+Simplify Vocabulary: Replace complex or less common words with simpler, more familiar alternatives.
+Clarify Syntax: Rewrite sentences in active voice and restructure them to make the subject and action clear.
+Subsection: Edge Cases
+
+Technical or Legal Texts: Here, simplifying vocabulary might not be possible without altering meaning. Focus on clarifying syntax and breaking up long sentences.
+Group 2: Very Hard to Read Sentences
+Stage 1: Identification
+
+Assess Sentence Structure Complexity: Identify sentences with multiple subordinate clauses or intricate constructions.
+Identify Advanced Vocabulary: Look for specialized or advanced academic terms, industry-specific jargon, and archaic language.
+Analyze Readability Metrics: Use tools like the Gunning Fog Index to get an objective measure of text difficulty.
+Stage 2: Refinement
+
+Restructure Sentences: Disentangle convoluted sentence structures. Aim for a clear, linear progression of ideas.
+Modify Vocabulary: Carefully replace advanced terms with more commonly understood words where possible.
+Enhance Clarity: Ensure each sentence has a clear subject and verb, and avoid excessive use of the passive voice.
+Subsection: Exceptions
+
+Literary or Philosophical Texts: These may require complex language to convey nuanced ideas. Focus on improving sentence structure while retaining sophisticated vocabulary.
+Technical Documents: In cases where specific terminology is essential, work on making the sentence structure as clear as possible.
+Subsection: Variations
+
+Multilingual Contexts: Be mindful of idiomatic expressions or cultural references that might not translate well. Aim for universal clarity.
+Audience-Specific Texts: Adjust the level of simplification based on the intended audience's familiarity with the subject matter.
+Additional Notes
+Consistency: Ensure that changes maintain the tone and style of the original text.
+Meaning Preservation: Be cautious not to alter the fundamental meaning or nuances of the original sentences.
+Feedback: If possible, get feedback from a representative sample of the intended audience to gauge the effectiveness of the changes.
+This structured approach should serve as a general guide for making hard-to-read and very-hard-to-read sentences more accessible while preserving their original meaning and intent.
