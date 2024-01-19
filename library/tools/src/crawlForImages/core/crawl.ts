@@ -74,3 +74,12 @@ export async function readDirectory(path: string): Promise<string[]> {
 export function filterImageFiles(paths: string[]): string[] {
   return paths.filter(isImageFilePath);
 }
+
+export default {
+  ensureArray,
+  filterImageFiles,
+  imageExtensions,
+  isDirectory,
+  isImageFilePath,
+  readDirectory,
+} as const;

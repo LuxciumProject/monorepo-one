@@ -5,6 +5,7 @@
  */
 
 export {
+  default as crawl,
   ensureArray,
   filterImageFiles,
   imageExtensions,
@@ -12,3 +13,11 @@ export {
   isImageFilePath,
   readDirectory,
 } from './crawl';
+/*
+crawl.ensureArray;
+crawl.filterImageFiles;
+crawl.imageExtensions;
+crawl.isDirectory;
+crawl.isImageFilePath;
+crawl.readDirectory;
+ */

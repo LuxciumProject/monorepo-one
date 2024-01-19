@@ -15,7 +15,7 @@ import { ensureArray, isDirectory, readDirectory } from './core';
  * @param {string} path - The path of the directory to crawl.
  * @yields {Promise<string>} A promise that resolves to the path of an image file.
  */
-async function* crawlForImages(path: string): AsyncGenerator<string> {
+export async function* crawlForImages(path: string): AsyncGenerator<string> {
   const directoriesStack = [path];
 
   while (directoriesStack.length > 0) {
@@ -50,7 +50,7 @@ async function* crawlForImages(path: string): AsyncGenerator<string> {
   }
 }
 
-function isImageFile(filePath: string): boolean {
+export function isImageFile(filePath: string): boolean {
   // Define your image file extension check here
   const imageExtensions = new Set([
     '.jpg',
@@ -80,3 +80,5 @@ export async function* findImages(
     }
   }
 }
+
+export default { crawlForImages, isImageFile, findImages };
