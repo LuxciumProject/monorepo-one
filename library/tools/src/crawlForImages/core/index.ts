@@ -8,8 +8,9 @@ export {
   default as crawl,
   ensureArray,
   filterImageFiles,
-  imageExtensions,
+  getImageExtensionList,
   isDirectory,
+  isImageFile,
   isImageFilePath,
   readDirectory,
 } from './crawl';

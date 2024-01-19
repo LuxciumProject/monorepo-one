@@ -4,11 +4,12 @@
  */
 
 import { promises as fsPromises } from 'fs';
+import { extname } from 'path';
 
 /**
  * Set of image file extensions.
  */
-export const imageExtensions = new Set([
+export const imageExtensionSet = new Set([
   'jpg',
   'jpeg',
   'png',
@@ -16,6 +17,8 @@ export const imageExtensions = new Set([
   'bmp',
   'tiff',
 ]);
+export const getImageExtensionList: () => string[] = () =>
+  [...imageExtensionSet].map(ext => ext.toLowerCase());
 
 /**
  * Ensures that the input is an array. If the input is already an array, it is returned as is.
@@ -34,7 +37,7 @@ export function ensureArray(paths: string[] | string): string[] {
  */
 export function isImageFilePath(filePath: string): boolean {
   const extension = filePath.split('.').pop()?.toLowerCase();
-  return extension ? imageExtensions.has(extension) : false;
+  return extension ? imageExtensionSet.has(extension) : false;
 }
 
 /**
@@ -46,8 +49,7 @@ export async function isDirectory(path: string): Promise<boolean> {
   try {
     const stat = await fsPromises.stat(path);
     return stat.isDirectory();
-  } catch (error) {
-    console.error(`Error checking if path is a directory: ${error}`);
+  } catch {
     return false;
   }
 }
@@ -75,11 +77,25 @@ export function filterImageFiles(paths: string[]): string[] {
   return paths.filter(isImageFilePath);
 }
 
+export function isImageFile(filePath: string): boolean {
+  // Define your image file extension check here
+  const imageExtensions = new Set([
+    '.jpg',
+    '.jpeg',
+    '.png',
+    '.gif',
+    '.bmp',
+    '.tiff',
+  ]);
+  return imageExtensions.has(extname(filePath).toLowerCase());
+}
 export default {
   ensureArray,
   filterImageFiles,
-  imageExtensions,
+  getImageExtensionList,
   isDirectory,
   isImageFilePath,
   readDirectory,
+  isImageFile,
+  imageExtensionSet,
 } as const;

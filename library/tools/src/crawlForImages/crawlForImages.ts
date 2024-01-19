@@ -4,9 +4,9 @@
  * crawling a directory and its subdirectories to find image files.
  */
 
-import { extname, join } from 'path';
+import { join } from 'path';
 
-import { ensureArray, isDirectory, readDirectory } from './core';
+import { ensureArray, isDirectory, isImageFile, readDirectory } from './core';
 
 /**
  * Asynchronously crawls a directory and its subdirectories to find image files.
@@ -48,19 +48,6 @@ export async function* crawlForImages(path: string): AsyncGenerator<string> {
       }
     }
   }
-}
-
-export function isImageFile(filePath: string): boolean {
-  // Define your image file extension check here
-  const imageExtensions = new Set([
-    '.jpg',
-    '.jpeg',
-    '.png',
-    '.gif',
-    '.bmp',
-    '.tiff',
-  ]);
-  return imageExtensions.has(extname(filePath).toLowerCase());
 }
 
 /**
