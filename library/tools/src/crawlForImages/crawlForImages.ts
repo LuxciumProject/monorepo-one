@@ -4,54 +4,79 @@
  * crawling a directory and its subdirectories to find image files.
  */
 
-import { join } from 'path';
+import { extname, join } from 'path';
 
-import {
-  ensureArray,
-  filterImageFiles,
-  isDirectory,
-  readDirectory,
-} from './core';
-
-/**
- * Recursively crawls a directory and its subdirectories to find image files.
- * @param path - The path of the directory to crawl.
- * @returns A promise that resolves to an array of image file paths.
- */
-async function crawlForImages(path: string): Promise<string[]> {
-  let imageFiles: string[] = [];
-
-  if (await isDirectory(path)) {
-    const contents = await readDirectory(path);
-    for (const item of contents) {
-      const fullPath = join(path, item);
-      if (await isDirectory(fullPath)) {
-        imageFiles = imageFiles.concat(await crawlForImages(fullPath));
-      } else if (filterImageFiles([fullPath]).length > 0) {
-        imageFiles.push(fullPath);
-      }
-    }
-  }
-
-  return imageFiles;
-}
+import { ensureArray, isDirectory, readDirectory } from './core';
 
 /**
  * Asynchronously crawls a directory and its subdirectories to find image files.
  * This generator yields each image file path as it is found.
  *
- * @param {string} paths - The path of the directory to crawl.
+ * @param {string} path - The path of the directory to crawl.
  * @yields {Promise<string>} A promise that resolves to the path of an image file.
  */
+async function* crawlForImages(path: string): AsyncGenerator<string> {
+  const directoriesStack = [path];
 
-export async function findImages(paths: string[] | string): Promise<string[]> {
-  const pathsArray = ensureArray(paths);
-  let allImageFiles: string[] = [];
+  while (directoriesStack.length > 0) {
+    const currentDir = directoriesStack.pop();
+    let directoryContents;
 
-  for (const path of pathsArray) {
-    const imageFiles = await crawlForImages(path);
-    allImageFiles = allImageFiles.concat(imageFiles);
+    try {
+      if (currentDir) {
+        directoryContents = await readDirectory(currentDir);
+      }
+    } catch (error) {
+      console.error(`Error reading directory ${currentDir}:`, error);
+      continue; // Skip to the next directory
+    }
+
+    if (directoryContents) {
+      for (const entry of directoryContents) {
+        const entryPath = join(currentDir!, entry); // Add type assertion to ensure currentDir is not undefined
+
+        try {
+          if (await isDirectory(entryPath)) {
+            directoriesStack.push(entryPath);
+          } else if (isImageFile(entryPath)) {
+            yield entryPath; // Yield each image file path
+          }
+        } catch (error) {
+          console.error(`Error processing ${entryPath}:`, error);
+          // Continue processing other files/directories
+        }
+      }
+    }
   }
-  // TODO:  Implementation details will go here in the code output
-  return allImageFiles;
+}
+
+function isImageFile(filePath: string): boolean {
+  // Define your image file extension check here
+  const imageExtensions = new Set([
+    '.jpg',
+    '.jpeg',
+    '.png',
+    '.gif',
+    '.bmp',
+    '.tiff',
+  ]);
+  return imageExtensions.has(extname(filePath).toLowerCase());
+}
+
+/**
+ * Asynchronously crawls given paths and their subdirectories to find image files.
+ * This generator yields each image file path as it is found.
+ *
+ * @param {string | string[]} paths - The path or array of paths of the directories to crawl.
+ * @yields {Promise<string>} A promise that resolves to the path of an image file.
+ */
+export async function* findImages(
+  paths: string[] | string
+): AsyncGenerator<string> {
+  const pathsArray = ensureArray(paths);
+  for (const path of pathsArray) {
+    for await (const imagePath of crawlForImages(path)) {
+      yield imagePath;
+    }
+  }
 }
