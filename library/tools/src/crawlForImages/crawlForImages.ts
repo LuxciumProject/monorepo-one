@@ -37,10 +37,13 @@ async function crawlForImages(path: string): Promise<string[]> {
 }
 
 /**
- * Finds images in one or more directories.
- * @param paths - An array of directory paths or a single directory path.
- * @returns A promise that resolves to an array of image file paths.
+ * Asynchronously crawls a directory and its subdirectories to find image files.
+ * This generator yields each image file path as it is found.
+ *
+ * @param {string} paths - The path of the directory to crawl.
+ * @yields {Promise<string>} A promise that resolves to the path of an image file.
  */
+
 export async function findImages(paths: string[] | string): Promise<string[]> {
   const pathsArray = ensureArray(paths);
   let allImageFiles: string[] = [];
@@ -49,6 +52,6 @@ export async function findImages(paths: string[] | string): Promise<string[]> {
     const imageFiles = await crawlForImages(path);
     allImageFiles = allImageFiles.concat(imageFiles);
   }
-
+  // TODO:  Implementation details will go here in the code output
   return allImageFiles;
 }
