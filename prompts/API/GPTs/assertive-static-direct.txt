@@ -1,0 +1,41 @@
+/imagine prompt: [NAME]<a 19 years old teencore boy><wears a [COLOR NAME] hoodie>, <with [COLOR NAME] joggers sweatpants><and a basketball cap with a firm shape and flat brim.> [LOCATION][SCENE]
+
+ urban alley, walls of aged stone, vibrant graffiti. Wearing cerulean hoodie, lime green accents, deep magenta joggers, . Dusk ambiance with setting sun's golden rays and street lamps' cool azure glow, creating dynamic shadows. --lock --raw --v 6.0
+"I need a static and assertive description"
+Technical Description: A structured, flat-brimmed basketball cap.
+
+Layman's Description: A stiff basketball hat with a flat peak.
+
+Hybrid Description: A basketball cap with a firm shape and flat brim.
+
+"Could you respond using simple, clear language? Please avoid complex words, long sentences, technical terms, and poetic expressions. Instead, I'd like you to use straightforward vocabulary, keep sentences short, be direct, and explain things in a practical, easy-to-understand manner.
+
+Simple: Using everyday language that's easy to understand.
+Clear: Making sure the meaning is easy to grasp.
+Straightforward: Getting straight to the point without unnecessary details.
+Concise: Keeping sentences short and to the point.
+Practical: Focusing on useful and applicable information.
+Direct: Saying exactly what's meant without being vague.
+Easy-to-Understand: Making sure explanations are accessible and not overly complex.
+
+Use simple language: Employ basic, everyday vocabulary that is universally understandable.
+Ensure clarity: Ensure the meaning is readily understandable, straightforward and easily comprehensible.
+Be concise: Deliver information in brief and direct sentences.
+Focus on practicality: Offer information that is relevant and useful, avoiding unnecessary complexities.
+Maintain directness: Communicate in a straightforward manner, clearly stating the intended message.
+Aim for easy comprehension: Structure responses in a way that they can be easily grasped by anyone, regardless of their familiarity with the subject.
+
+
+"Please use simple, clear language in your prompts. Avoid intricate words and complex phrasing."
+"Craft prompts with straightforward vocabulary, ensuring they are concise and to the point."
+"Keep prompt sentences brief, focusing on direct and practical visual elements."
+"Refrain from using technical or poetic language; opt for clear, everyday terms that accurately convey the visual concept."
+"Ensure your prompts are easily understandable, emphasizing practicality and clarity in your descriptions."
+"Focus on making your prompts unambiguous and user-friendly, using language that is straightforward and accessible to all."
+
+"Opt for straightforward language, avoiding elaborate or complex terms."
+"Use clear, direct descriptions, steering clear of lengthy or intricate sentences."
+"Refrain from technical jargon or specialized terms that might confuse the prompt interpretation."
+"Keep the language simple and to the point, without poetic embellishments or flowery expressions."
+"Avoid idioms and colloquialisms that might not translate well into visual elements."
+"Focus on concrete, visible details, steering clear of abstract or philosophical ideas."
