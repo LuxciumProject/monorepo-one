@@ -1,4 +1,4 @@
-import { findImages } from '../crawlForImages';
+import { findImages } from '../crawlForImagesTools';
 
 const TEST_DIR_PATH = '/projects/monorepo-one/private/imgs/' as const;
 

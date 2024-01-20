@@ -6,16 +6,22 @@
 
 import { join } from 'path';
 
-import { ensureArray, isDirectory, isImageFile, readDirectory } from './core';
+import {
+  ensureArray,
+  isDirectory,
+  isImageFile,
+  readDirectory,
+} from './helpers';
 
 /**
- * Asynchronously crawls a directory and its subdirectories to find image files.
+ * Crawls asynchronously a directory and its subdirectories to
+ * find image files.
  * This generator yields each image file path as it is found.
  *
- * @param {string} path - The path of the directory to crawl.
- * @yields {Promise<string>} A promise that resolves to the path of an image file.
+ * @param path - The path of the directory to crawl.
+ * @yields A promise that resolves to the path of an image file.
  */
-export async function* crawlForImages(path: string): AsyncGenerator<string> {
+export async function* imageCrawler(path: string): AsyncGenerator<string> {
   const directoriesStack = [path];
 
   while (directoriesStack.length > 0) {
@@ -51,21 +57,22 @@ export async function* crawlForImages(path: string): AsyncGenerator<string> {
 }
 
 /**
- * Asynchronously crawls given paths and their subdirectories to find image files.
+ * findImages is an AsyncGenerator crawls given paths and
+ * their subdirectories to find image files.
  * This generator yields each image file path as it is found.
- *
- * @param {string | string[]} paths - The path or array of paths of the directories to crawl.
- * @yields {Promise<string>} A promise that resolves to the path of an image file.
+ * @param paths - The path or array of paths of the directories
+ *  to crawl.
+ * @yields A promise that resolves to the path of an image file.
  */
 export async function* findImages(
   paths: string[] | string
 ): AsyncGenerator<string> {
   const pathsArray = ensureArray(paths);
   for (const path of pathsArray) {
-    for await (const imagePath of crawlForImages(path)) {
+    for await (const imagePath of imageCrawler(path)) {
       yield imagePath;
     }
   }
 }
 
-export default { crawlForImages, isImageFile, findImages };
+export default { imageCrawler, isImageFile, findImages };

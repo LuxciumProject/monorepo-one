@@ -1,8 +1,8 @@
-import { crawlForImages } from '..';
+import { imageCrawler } from '..';
 
 describe('crawlForImages', () => {
   test('should throw an error when no URL is provided', () => {
-    expect(() => crawlForImages('')).toThrow('URL is required');
+    expect(() => imageCrawler('')).toThrow('URL is required');
   });
 
   test('should fail the TDD test with the same name as the file', () => {

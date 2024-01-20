@@ -1,3 +1,4 @@
+export { findImages, imageCrawler } from './crawlForImagesTools';
 export {
   crawl,
   crawl as default,
@@ -8,5 +9,4 @@ export {
   isImageFile,
   isImageFilePath,
   readDirectory,
-} from './core';
-export { crawlForImages, findImages } from './crawlForImages';
+} from './helpers';

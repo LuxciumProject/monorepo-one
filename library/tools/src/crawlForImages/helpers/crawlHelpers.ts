@@ -26,8 +26,11 @@ export const getImageExtensionList: () => string[] = () =>
  * @param paths - The input paths.
  * @returns An array of paths.
  */
-export function ensureArray(paths: string[] | string): string[] {
-  return Array.isArray(paths) ? paths : [paths];
+export function ensureArray(paths: string[] | string) {
+  if ('string' === typeof paths) {
+    return [paths];
+  }
+  return Array.isArray(paths) ? paths : ([] as string[]);
 }
 
 /**

@@ -13,7 +13,7 @@ export {
   isImageFile,
   isImageFilePath,
   readDirectory,
-} from './crawl';
+} from './crawlHelpers';
 /*
 crawl.ensureArray;
 crawl.filterImageFiles;

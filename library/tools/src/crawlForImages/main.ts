@@ -1,5 +1,5 @@
-import { crawl } from './core';
-import crawlForImages from './crawlForImages';
+import crawlForImagesTools from './crawlForImagesTools';
+import { crawl } from './helpers';
 
 /**
  * Ensures that the input is an array. If the input is already an array, it returns the input as is.
@@ -17,9 +17,15 @@ const ensureArray = crawl.ensureArray;
 const filterImageFiles = crawl.filterImageFiles;
 
 /**
- * An array of supported image file extensions.
+ * A set of supported image file extensions.
  */
-const imageExtensions = crawl.imageExtensions;
+const imageExtensionSet: Set<string> = crawl.imageExtensionSet;
+
+/**
+ * Gets the list of supported image file extensions.
+ * @returns An array of supported image file extensions.
+ */
+const getImageExtensionList = crawl.getImageExtensionList;
 
 /**
  * Checks if a given path is a directory.
@@ -44,7 +50,8 @@ const readDirectory = crawl.readDirectory;
 
 ensureArray;
 filterImageFiles;
-imageExtensions;
+getImageExtensionList;
+imageExtensionSet;
 isDirectory;
 isImageFilePath;
 readDirectory;
@@ -54,50 +61,33 @@ readDirectory;
  * @param directoryPath The path of the directory to crawl.
  * @returns An array of image file paths found in the directory and its subdirectories.
  */
-const crawlForImages_fn = crawlForImages.crawlForImages;
+const crawlForImages = crawlForImagesTools.imageCrawler;
 
 /**
  * Checks if a given file path points to an image file.
  * @param filePath The file path to check.
  * @returns A boolean indicating whether the file path points to an image file or not.
  */
-const isImageFile = crawlForImages.isImageFile;
+const isImageFile = crawlForImagesTools.isImageFile;
 
 /**
  * Finds images in an array of file paths.
  * @param filePaths An array of file paths to search for images.
  * @returns An array of image file paths found in the input array.
- declare const  */
-const findImages_fn = crawlForImages.findImages;
+ */
+const findImages = crawlForImagesTools.findImages;
 
-crawlForImages_fn;
+crawlForImages;
 isImageFile;
-findImages_fn;
+findImages;
 
-// (async function main() {
-//   const targetDirectory = '/path/to/target';
-
-//   // Check if the target is a directory
-//   if (!isDirectory(targetDirectory)) {
-//     throw new Error('The specified path is not a directory.');
-//   }
-
-//   // Read the directory contents
-//   const directoryContents = readDirectory(targetDirectory);
-
-//   // Ensure the contents are in an array format
-//   const fileList = ensureArray(directoryContents);
-
-//   // Use the findImages function to process each file path
-//   for await (const imagePath of findImages_fn(fileList)) {
-//     // Process each image path, e.g., log to console or add to an array
-//     console.log('Found image:', imagePath);
-//   }
-// }
-// )
-
-const dir_path = '/projects/monorepo-one/private/imgs/' as const;
-async function main(targetDirectory: string) {
+/**
+ * Crawls a directory and its subdirectories to find images.
+ * @param {string} targetDirectory The path of the directory to crawl.
+ * @returns {Promise<void>} A promise that resolves when the image crawling is completed.
+ * @throws {Error} If the specified path is not a directory.
+ */
+async function main(targetDirectory: string): Promise<void> {
   // Check if the target is a directory
   if (!(await isDirectory(targetDirectory))) {
     throw new Error('The specified path is not a directory.');
@@ -110,14 +100,14 @@ async function main(targetDirectory: string) {
   const fileList = ensureArray(directoryContents);
 
   // Use the findImages function to process each file path
-  for await (const imagePath of findImages_fn(fileList)) {
+  for await (const imagePath of findImages(fileList)) {
     // Process each image path, e.g., log to console or add to an array
     console.log('Found image:', imagePath);
   }
 }
 
 // Run the main function
-main(dir_path)
+main('/projects/monorepo-one/private/imgs/')
   .then(() => {
     console.log('Image crawling has been completed.');
   })
