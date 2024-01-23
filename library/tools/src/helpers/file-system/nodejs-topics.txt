@@ -1,0 +1,782 @@
+## File and Data Handling
+- File system
+- Zlib
+- Stream
+- String decoder
+- Query strings
+- UDP/datagram
+
+## Networking
+- HTTP
+- HTTP/2
+- HTTPS
+- Net
+- DNS
+- TLS/SSL
+
+## Process and Thread Management
+- Child processes
+- Cluster
+- Worker threads
+- Process
+- Timers
+
+## Module Systems
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Modules: Packages
+
+## Diagnostics and Testing
+- Assertion testing
+- Debugger
+- Diagnostics Channel
+- Errors
+- Test runner
+- Trace events
+- Report
+
+## Utilities and APIs
+- Console
+- Utilities
+- V8
+- VM
+- WASI
+- Web Crypto API
+- Web Streams API
+
+## Advanced Features
+- Async hooks
+- Asynchronous context tracking
+- Buffer
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Domain
+- Events
+- Internationalization
+- Performance hooks
+- Permissions
+## Core Topics
+- Punycode
+- REPL
+- Single executable applications
+- TTY
+- URL
+
+## Deprecated and Legacy
+- Deprecated APIs
+
+## Beginner
+- Globals
+- Command-line options
+- Console
+- Errors
+- File system
+- Modules: CommonJS modules
+- OS
+- Path
+- Query strings
+- Timers
+- URL
+- Utilities
+
+## Intermediate
+- Assertion testing
+- Buffer
+- Child processes
+- Cluster
+- Crypto
+- DNS
+- Events
+- HTTP
+- HTTPS
+- Inspector
+- Internationalization
+- Modules: ECMAScript modules
+- Net
+- Performance hooks
+- Process
+- Readline
+- REPL
+- Stream
+- String decoder
+- Test runner
+- TLS/SSL
+- UDP/datagram
+- V8
+- VM
+- Worker threads
+- Zlib
+
+## Advanced
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Debugger
+- Diagnostics Channel
+- Domain
+- HTTP/2
+- Modules: node:module API
+- Modules: Packages
+- Permissions
+- Report
+- Single executable applications
+- Trace events
+- TTY
+- WASI
+- Web Crypto API
+- Web Streams API
+
+## String Data
+- Query strings
+- String decoder
+- URL
+
+## Binary Data
+- Buffer
+- Crypto
+- Web Crypto API
+- Zlib
+
+## File and Directory Data
+- File system
+- Path
+
+## Network Data
+- DNS
+- HTTP
+- HTTP/2
+- HTTPS
+- Net
+- TLS/SSL
+- UDP/datagram
+
+## Process and Thread Data
+- Child processes
+- Cluster
+- Worker threads
+
+## Command and Control Data
+- Command-line options
+- Console
+- Debugger
+- REPL
+- Timers
+- Trace events
+
+## Module and Package Data
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Modules: Packages
+
+## System and OS Data
+- OS
+- Process
+- V8
+- VM
+
+## Advanced Data Types and APIs
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Errors
+- Events
+- Globals
+- Inspector
+- Internationalization
+- Performance hooks
+- Permissions
+- Punycode
+- Readline
+- Report
+- Single executable applications
+- Test runner
+- TTY
+- WASI
+- Web Streams API
+
+## Web Development
+- HTTP
+- HTTP/2
+- HTTPS
+- URL
+- Query strings
+- Web Crypto API
+- Web Streams API
+- TLS/SSL
+- Cookies
+
+## Data Processing
+- Buffer
+- Stream
+- String decoder
+- Zlib
+- Crypto
+
+## File and Directory Management
+- File system
+- Path
+
+## Networking
+- DNS
+- Net
+- UDP/datagram
+
+## Command Line Interface Development
+- Command-line options
+- Console
+- Readline
+- REPL
+
+## Testing and Debugging
+- Assertion testing
+- Debugger
+- Errors
+- Test runner
+- Trace events
+
+## Process and Thread Management
+- Child processes
+- Cluster
+- Worker threads
+- Process
+- Timers
+
+## Module and Package Management
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Modules: Packages
+
+## System Operations
+- OS
+- V8
+- VM
+
+## Advanced Use Cases
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Events
+- Globals
+- Inspector
+- Internationalization
+- Performance hooks
+- Permissions
+- Punycode
+- Report
+- Single executable applications
+- TTY
+- WASI
+- Utilities
+
+## Initialization
+- Command-line options
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Modules: Packages
+- Process
+
+## Runtime
+- Buffer
+- Console
+- Crypto
+- DNS
+- Events
+- File system
+- Globals
+- HTTP
+- HTTP/2
+- HTTPS
+- Inspector
+- Internationalization
+- Net
+- OS
+- Path
+- Query strings
+- Readline
+- REPL
+- Stream
+- String decoder
+- Timers
+- TLS/SSL
+- UDP/datagram
+- URL
+- Utilities
+- V8
+- VM
+- Web Crypto API
+- Web Streams API
+- Worker threads
+- Zlib
+
+## Error Handling
+- Errors
+- Debugger
+- Trace events
+
+## Cleanup
+- Child processes
+- Cluster
+- Domain
+- Performance hooks
+
+## Advanced Lifecycle Management
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Permissions
+- Punycode
+- Report
+- Single executable applications
+- Test runner
+- TTY
+- WASI
+
+## HTTP Protocol
+- HTTP
+- HTTP/2
+- HTTPS
+- URL
+- Query strings
+
+## File System Protocol
+- File system
+- Path
+
+## Network Protocols
+- DNS
+- Net
+- UDP/datagram
+- TLS/SSL
+
+## Command Line Protocol
+- Command-line options
+- Console
+- Readline
+- REPL
+
+## Stream Protocol
+- Stream
+- String decoder
+- Zlib
+
+## Buffer Protocol
+- Buffer
+
+## Crypto Protocol
+- Crypto
+- Web Crypto API
+
+## Module Protocol
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Modules: Packages
+
+## System Protocols
+- OS
+- Process
+- V8
+- VM
+
+## Advanced Protocols
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Errors
+- Events
+- Globals
+- Inspector
+- Internationalization
+- Performance hooks
+- Permissions
+- Punycode
+- Report
+- Single executable applications
+- Test runner
+- Timers
+- Trace events
+- TTY
+- WASI
+- Web Streams API
+- Worker threads
+- Utilities
+
+## File System APIs
+- File system
+- Path
+
+## Network APIs
+- DNS
+- HTTP
+- HTTP/2
+- HTTPS
+- Net
+- TLS/SSL
+- UDP/datagram
+
+## Process APIs
+- Child processes
+- Cluster
+- Process
+- Worker threads
+
+## Module APIs
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Modules: Packages
+
+## Command Line APIs
+- Command-line options
+- Console
+- Readline
+- REPL
+
+## Buffer and Stream APIs
+- Buffer
+- Stream
+- String decoder
+- Zlib
+
+## Crypto APIs
+- Crypto
+- Web Crypto API
+
+## Debugging and Testing APIs
+- Assertion testing
+- Debugger
+- Errors
+- Test runner
+- Trace events
+
+## Event APIs
+- Events
+
+## Internationalization APIs
+- Internationalization
+
+## Performance APIs
+- Performance hooks
+
+## Security and Permissions APIs
+- Permissions
+
+## Utility APIs
+- Utilities
+
+## Advanced APIs
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Globals
+- Inspector
+- Punycode
+- Query strings
+- Report
+- Single executable applications
+- Timers
+- TTY
+- URL
+- V8
+- VM
+- WASI
+- Web Streams API
+
+## Low-Level APIs
+- Buffer
+- Child processes
+- Cluster
+- Crypto
+- DNS
+- File system
+- HTTP
+- HTTP/2
+- HTTPS
+- Net
+- Process
+- Stream
+- TLS/SSL
+- UDP/datagram
+- V8
+- VM
+- Worker threads
+- Zlib
+
+## Mid-Level APIs
+- Async hooks
+- Command-line options
+- Console
+- Debugger
+- Events
+- Globals
+- Inspector
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- OS
+- Path
+- Performance hooks
+- Query strings
+- Readline
+- REPL
+- String decoder
+- Timers
+- Trace events
+- URL
+
+## High-Level APIs
+- Asynchronous context tracking
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Errors
+- Internationalization
+- Modules: Packages
+- Permissions
+- Punycode
+- Report
+- Single executable applications
+- Test runner
+- TTY
+- WASI
+- Web Crypto API
+- Web Streams API
+
+## Input/Output
+- File system
+- Stream
+- Readline
+- Console
+
+## Networking
+- HTTP
+- HTTP/2
+- HTTPS
+- DNS
+- Net
+- UDP/datagram
+- TLS/SSL
+
+## Data Manipulation
+- Buffer
+- String decoder
+- Query strings
+- Zlib
+
+## Cryptography
+- Crypto
+- Web Crypto API
+
+## Testing and Debugging
+- Assertion testing
+- Debugger
+- Errors
+- Trace events
+
+## Process and Thread Management
+- Child processes
+- Cluster
+- Worker threads
+- Process
+- Timers
+
+## Module and Package Management
+- Modules: CommonJS modules
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Modules: Packages
+
+## System Operations
+- OS
+- V8
+- VM
+
+## Advanced Use Cases
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Events
+- Globals
+- Inspector
+- Internationalization
+- Performance hooks
+- Permissions
+- Punycode
+- Report
+- Single executable applications
+- TTY
+- WASI
+- Utilities
+
+## Basic
+- Console
+- File system
+- HTTP
+- Modules: CommonJS modules
+- Path
+- Process
+- Stream
+- Timers
+- URL
+
+## Intermediate
+- Buffer
+- Child processes
+- Cluster
+- Crypto
+- DNS
+- Events
+- HTTP/2
+- HTTPS
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Net
+- Query strings
+- Readline
+- REPL
+- String decoder
+- TLS/SSL
+- UDP/datagram
+- Utilities
+- Worker threads
+- Zlib
+
+## Advanced
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Errors
+- Globals
+- Inspector
+- Internationalization
+- Modules: Packages
+- Performance hooks
+- Permissions
+- Punycode
+- Report
+- Single executable applications
+- Test runner
+- Trace events
+- TTY
+- V8
+- VM
+- WASI
+- Web Crypto API
+- Web Streams API
+
+## Most Commonly Used
+- File system
+- HTTP
+- Modules: CommonJS modules
+- Process
+- Stream
+- Timers
+- URL
+
+## Less Commonly Used
+- Buffer
+- Child processes
+- Cluster
+- Crypto
+- DNS
+- Events
+- HTTP/2
+- HTTPS
+- Modules: ECMAScript modules
+- Modules: node:module API
+- Net
+- Path
+- Query strings
+- Readline
+- REPL
+- String decoder
+- TLS/SSL
+- UDP/datagram
+- Utilities
+- Worker threads
+- Zlib
+
+## Rarely Used
+- Asynchronous context tracking
+- Async hooks
+- C++ addons
+- C/C++ addons with Node-API
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Errors
+- Globals
+- Inspector
+- Internationalization
+- Modules: Packages
+- Performance hooks
+- Permissions
+- Punycode
+- Report
+- Single executable applications
+- Test runner
+- Trace events
+- TTY
+- V8
+- VM
+
+## Very Rarely Used
+- Assertion testing
+- C++ embedder API
+- Corepack
+- Diagnostics Channel
+- Domain
+- Internationalization
+- Modules: Packages
+- Report
+- Single executable applications
+- WASI
+- Web Crypto API
+- Web Streams API

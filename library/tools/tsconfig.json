@@ -18,15 +18,29 @@
     "checkJs": false,
     "resolveJsonModule": true,
     /* Bundled library declaration files that describe the target runtime environment. */
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     /* Package names to be included without being referenced in a source file. */
-    "types": ["node", "heft-jest"],
-    "typeRoots": ["node_modules/@types", "node_modules/canvas"]
+    "types": [
+      "node",
+      "heft-jest"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/canvas"
+    ]
   },
-  "include": ["src", "src/**/*.json"],
-  "exclude": ["lib"]
+  "include": [
+    "src",
+    "src/**/*.json",
+    // ".eslintrc.cjs"
+  ],
+  "exclude": [
+    "lib"
+  ]
 }
-
 /*
 
 I am using linux nodejs typescript

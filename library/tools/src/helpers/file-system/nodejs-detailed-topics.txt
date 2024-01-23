@@ -1,0 +1,4133 @@
+About this documentation
+Contributing
+Stability index
+Stability overview
+JSON output
+System calls and man pages
+Usage and example
+Usage
+Example
+Assert
+Strict assertion mode
+Legacy assertion mode
+Class: assert.AssertionError
+new assert.AssertionError(options)
+Class: assert.CallTracker
+new assert.CallTracker()
+tracker.calls([fn][, exact])
+tracker.getCalls(fn)
+tracker.report()
+tracker.reset([fn])
+tracker.verify()
+assert(value[, message])
+assert.deepEqual(actual, expected[, message])
+Comparison details
+assert.deepStrictEqual(actual, expected[, message])
+Comparison details
+assert.doesNotMatch(string, regexp[, message])
+assert.doesNotReject(asyncFn[, error][, message])
+assert.doesNotThrow(fn[, error][, message])
+assert.equal(actual, expected[, message])
+assert.fail([message])
+assert.fail(actual, expected[, message[, operator[, stackStartFn]]])
+assert.ifError(value)
+assert.match(string, regexp[, message])
+assert.notDeepEqual(actual, expected[, message])
+assert.notDeepStrictEqual(actual, expected[, message])
+assert.notEqual(actual, expected[, message])
+assert.notStrictEqual(actual, expected[, message])
+assert.ok(value[, message])
+assert.rejects(asyncFn[, error][, message])
+assert.strictEqual(actual, expected[, message])
+assert.throws(fn[, error][, message])
+Asynchronous context tracking
+Introduction
+Class: AsyncLocalStorage
+new AsyncLocalStorage()
+Static method: AsyncLocalStorage.bind(fn)
+Static method: AsyncLocalStorage.snapshot()
+asyncLocalStorage.disable()
+asyncLocalStorage.getStore()
+asyncLocalStorage.enterWith(store)
+asyncLocalStorage.run(store, callback[, ...args])
+asyncLocalStorage.exit(callback[, ...args])
+Usage with async/await
+Troubleshooting: Context loss
+Class: AsyncResource
+new AsyncResource(type[, options])
+Static method: AsyncResource.bind(fn[, type[, thisArg]])
+asyncResource.bind(fn[, thisArg])
+asyncResource.runInAsyncScope(fn[, thisArg, ...args])
+asyncResource.emitDestroy()
+asyncResource.asyncId()
+asyncResource.triggerAsyncId()
+Using AsyncResource for a Worker thread pool
+Integrating AsyncResource with EventEmitter
+Async hooks
+Terminology
+Overview
+async_hooks.createHook(callbacks)
+Error handling
+Printing in AsyncHook callbacks
+Class: AsyncHook
+asyncHook.enable()
+asyncHook.disable()
+Hook callbacks
+init(asyncId, type, triggerAsyncId, resource)
+type
+triggerAsyncId
+resource
+Asynchronous context example
+before(asyncId)
+after(asyncId)
+destroy(asyncId)
+promiseResolve(asyncId)
+async_hooks.executionAsyncResource()
+async_hooks.executionAsyncId()
+async_hooks.triggerAsyncId()
+async_hooks.asyncWrapProviders
+Promise execution tracking
+JavaScript embedder API
+Class: AsyncResource
+Class: AsyncLocalStorage
+Buffer
+Buffers and character encodings
+Buffers and TypedArrays
+Buffers and iteration
+Class: Blob
+new buffer.Blob([sources[, options]])
+blob.arrayBuffer()
+blob.size
+blob.slice([start[, end[, type]]])
+blob.stream()
+blob.text()
+blob.type
+Blob objects and MessageChannel
+Class: Buffer
+Static method: Buffer.alloc(size[, fill[, encoding]])
+Static method: Buffer.allocUnsafe(size)
+Static method: Buffer.allocUnsafeSlow(size)
+Static method: Buffer.byteLength(string[, encoding])
+Static method: Buffer.compare(buf1, buf2)
+Static method: Buffer.concat(list[, totalLength])
+Static method: Buffer.copyBytesFrom(view[, offset[, length]])
+Static method: Buffer.from(array)
+Static method: Buffer.from(arrayBuffer[, byteOffset[, length]])
+Static method: Buffer.from(buffer)
+Static method: Buffer.from(object[, offsetOrEncoding[, length]])
+Static method: Buffer.from(string[, encoding])
+Static method: Buffer.isBuffer(obj)
+Static method: Buffer.isEncoding(encoding)
+Class property: Buffer.poolSize
+buf[index]
+buf.buffer
+buf.byteOffset
+buf.compare(target[, targetStart[, targetEnd[, sourceStart[, sourceEnd]]]])
+buf.copy(target[, targetStart[, sourceStart[, sourceEnd]]])
+buf.entries()
+buf.equals(otherBuffer)
+buf.fill(value[, offset[, end]][, encoding])
+buf.includes(value[, byteOffset][, encoding])
+buf.indexOf(value[, byteOffset][, encoding])
+buf.keys()
+buf.lastIndexOf(value[, byteOffset][, encoding])
+buf.length
+buf.parent
+buf.readBigInt64BE([offset])
+buf.readBigInt64LE([offset])
+buf.readBigUInt64BE([offset])
+buf.readBigUInt64LE([offset])
+buf.readDoubleBE([offset])
+buf.readDoubleLE([offset])
+buf.readFloatBE([offset])
+buf.readFloatLE([offset])
+buf.readInt8([offset])
+buf.readInt16BE([offset])
+buf.readInt16LE([offset])
+buf.readInt32BE([offset])
+buf.readInt32LE([offset])
+buf.readIntBE(offset, byteLength)
+buf.readIntLE(offset, byteLength)
+buf.readUInt8([offset])
+buf.readUInt16BE([offset])
+buf.readUInt16LE([offset])
+buf.readUInt32BE([offset])
+buf.readUInt32LE([offset])
+buf.readUIntBE(offset, byteLength)
+buf.readUIntLE(offset, byteLength)
+buf.subarray([start[, end]])
+buf.slice([start[, end]])
+buf.swap16()
+buf.swap32()
+buf.swap64()
+buf.toJSON()
+buf.toString([encoding[, start[, end]]])
+buf.values()
+buf.write(string[, offset[, length]][, encoding])
+buf.writeBigInt64BE(value[, offset])
+buf.writeBigInt64LE(value[, offset])
+buf.writeBigUInt64BE(value[, offset])
+buf.writeBigUInt64LE(value[, offset])
+buf.writeDoubleBE(value[, offset])
+buf.writeDoubleLE(value[, offset])
+buf.writeFloatBE(value[, offset])
+buf.writeFloatLE(value[, offset])
+buf.writeInt8(value[, offset])
+buf.writeInt16BE(value[, offset])
+buf.writeInt16LE(value[, offset])
+buf.writeInt32BE(value[, offset])
+buf.writeInt32LE(value[, offset])
+buf.writeIntBE(value, offset, byteLength)
+buf.writeIntLE(value, offset, byteLength)
+buf.writeUInt8(value[, offset])
+buf.writeUInt16BE(value[, offset])
+buf.writeUInt16LE(value[, offset])
+buf.writeUInt32BE(value[, offset])
+buf.writeUInt32LE(value[, offset])
+buf.writeUIntBE(value, offset, byteLength)
+buf.writeUIntLE(value, offset, byteLength)
+new Buffer(array)
+new Buffer(arrayBuffer[, byteOffset[, length]])
+new Buffer(buffer)
+new Buffer(size)
+new Buffer(string[, encoding])
+Class: File
+new buffer.File(sources, fileName[, options])
+file.name
+file.lastModified
+node:buffer module APIs
+buffer.atob(data)
+buffer.btoa(data)
+buffer.isAscii(input)
+buffer.isUtf8(input)
+buffer.INSPECT_MAX_BYTES
+buffer.kMaxLength
+buffer.kStringMaxLength
+buffer.resolveObjectURL(id)
+buffer.transcode(source, fromEnc, toEnc)
+Class: SlowBuffer
+new SlowBuffer(size)
+Buffer constants
+buffer.constants.MAX_LENGTH
+buffer.constants.MAX_STRING_LENGTH
+Buffer.from(), Buffer.alloc(), and Buffer.allocUnsafe()
+The --zero-fill-buffers command-line option
+What makes Buffer.allocUnsafe() and Buffer.allocUnsafeSlow() "unsafe"?
+C++ addons
+Hello world
+Context-aware addons
+Worker support
+Building
+Linking to libraries included with Node.js
+Loading addons using require()
+Native abstractions for Node.js
+Node-API
+Addon examples
+Function arguments
+Callbacks
+Object factory
+Function factory
+Wrapping C++ objects
+Factory of wrapped objects
+Passing wrapped objects around
+Node-API
+Implications of ABI stability
+Building
+Build tools
+node-gyp
+CMake.js
+Uploading precompiled binaries
+node-pre-gyp
+prebuild
+prebuildify
+Usage
+Node-API version matrix
+Environment life cycle APIs
+napi_set_instance_data
+napi_get_instance_data
+Basic Node-API data types
+napi_status
+napi_extended_error_info
+napi_env
+node_api_nogc_env
+napi_value
+napi_threadsafe_function
+napi_threadsafe_function_release_mode
+napi_threadsafe_function_call_mode
+Node-API memory management types
+napi_handle_scope
+napi_escapable_handle_scope
+napi_ref
+napi_type_tag
+napi_async_cleanup_hook_handle
+Node-API callback types
+napi_callback_info
+napi_callback
+node_api_nogc_finalize
+napi_finalize
+napi_async_execute_callback
+napi_async_complete_callback
+napi_threadsafe_function_call_js
+napi_cleanup_hook
+napi_async_cleanup_hook
+Error handling
+Return values
+napi_get_last_error_info
+Exceptions
+napi_throw
+napi_throw_error
+napi_throw_type_error
+napi_throw_range_error
+node_api_throw_syntax_error
+napi_is_error
+napi_create_error
+napi_create_type_error
+napi_create_range_error
+node_api_create_syntax_error
+napi_get_and_clear_last_exception
+napi_is_exception_pending
+napi_fatal_exception
+Fatal errors
+napi_fatal_error
+Object lifetime management
+Making handle lifespan shorter than that of the native method
+napi_open_handle_scope
+napi_close_handle_scope
+napi_open_escapable_handle_scope
+napi_close_escapable_handle_scope
+napi_escape_handle
+References to values with a lifespan longer than that of the native method
+napi_create_reference
+napi_delete_reference
+napi_reference_ref
+napi_reference_unref
+napi_get_reference_value
+Cleanup on exit of the current Node.js environment
+napi_add_env_cleanup_hook
+napi_remove_env_cleanup_hook
+napi_add_async_cleanup_hook
+napi_remove_async_cleanup_hook
+Finalization on the exit of the Node.js environment
+Module registration
+Working with JavaScript values
+Enum types
+napi_key_collection_mode
+napi_key_filter
+napi_key_conversion
+napi_valuetype
+napi_typedarray_type
+Object creation functions
+napi_create_array
+napi_create_array_with_length
+napi_create_arraybuffer
+napi_create_buffer
+napi_create_buffer_copy
+napi_create_date
+napi_create_external
+napi_create_external_arraybuffer
+napi_create_external_buffer
+napi_create_object
+napi_create_symbol
+node_api_symbol_for
+napi_create_typedarray
+napi_create_dataview
+Functions to convert from C types to Node-API
+napi_create_int32
+napi_create_uint32
+napi_create_int64
+napi_create_double
+napi_create_bigint_int64
+napi_create_bigint_uint64
+napi_create_bigint_words
+napi_create_string_latin1
+node_api_create_external_string_latin1
+napi_create_string_utf16
+node_api_create_external_string_utf16
+napi_create_string_utf8
+Functions to convert from Node-API to C types
+napi_get_array_length
+napi_get_arraybuffer_info
+napi_get_buffer_info
+napi_get_prototype
+napi_get_typedarray_info
+napi_get_dataview_info
+napi_get_date_value
+napi_get_value_bool
+napi_get_value_double
+napi_get_value_bigint_int64
+napi_get_value_bigint_uint64
+napi_get_value_bigint_words
+napi_get_value_external
+napi_get_value_int32
+napi_get_value_int64
+napi_get_value_string_latin1
+napi_get_value_string_utf8
+napi_get_value_string_utf16
+napi_get_value_uint32
+Functions to get global instances
+napi_get_boolean
+napi_get_global
+napi_get_null
+napi_get_undefined
+Working with JavaScript values and abstract operations
+napi_coerce_to_bool
+napi_coerce_to_number
+napi_coerce_to_object
+napi_coerce_to_string
+napi_typeof
+napi_instanceof
+napi_is_array
+napi_is_arraybuffer
+napi_is_buffer
+napi_is_date
+napi_is_error
+napi_is_typedarray
+napi_is_dataview
+napi_strict_equals
+napi_detach_arraybuffer
+napi_is_detached_arraybuffer
+Working with JavaScript properties
+Structures
+napi_property_attributes
+napi_property_descriptor
+Functions
+napi_get_property_names
+napi_get_all_property_names
+napi_set_property
+napi_get_property
+napi_has_property
+napi_delete_property
+napi_has_own_property
+napi_set_named_property
+napi_get_named_property
+napi_has_named_property
+napi_set_element
+napi_get_element
+napi_has_element
+napi_delete_element
+napi_define_properties
+napi_object_freeze
+napi_object_seal
+Working with JavaScript functions
+napi_call_function
+napi_create_function
+napi_get_cb_info
+napi_get_new_target
+napi_new_instance
+Object wrap
+napi_define_class
+napi_wrap
+napi_unwrap
+napi_remove_wrap
+napi_type_tag_object
+napi_check_object_type_tag
+napi_add_finalizer
+node_api_post_finalizer
+Simple asynchronous operations
+napi_create_async_work
+napi_delete_async_work
+napi_queue_async_work
+napi_cancel_async_work
+Custom asynchronous operations
+napi_async_init
+napi_async_destroy
+napi_make_callback
+napi_open_callback_scope
+napi_close_callback_scope
+Version management
+napi_get_node_version
+napi_get_version
+Memory management
+napi_adjust_external_memory
+Promises
+napi_create_promise
+napi_resolve_deferred
+napi_reject_deferred
+napi_is_promise
+Script execution
+napi_run_script
+libuv event loop
+napi_get_uv_event_loop
+Asynchronous thread-safe function calls
+Calling a thread-safe function
+Reference counting of thread-safe functions
+Deciding whether to keep the process running
+napi_create_threadsafe_function
+napi_get_threadsafe_function_context
+napi_call_threadsafe_function
+napi_acquire_threadsafe_function
+napi_release_threadsafe_function
+napi_ref_threadsafe_function
+napi_unref_threadsafe_function
+Miscellaneous utilities
+node_api_get_module_file_name
+C++ embedder API
+Example embedding application
+Setting up per-process state
+Per-instance state
+Child process
+Asynchronous process creation
+Spawning .bat and .cmd files on Windows
+child_process.exec(command[, options][, callback])
+child_process.execFile(file[, args][, options][, callback])
+child_process.fork(modulePath[, args][, options])
+child_process.spawn(command[, args][, options])
+options.detached
+options.stdio
+Synchronous process creation
+child_process.execFileSync(file[, args][, options])
+child_process.execSync(command[, options])
+child_process.spawnSync(command[, args][, options])
+Class: ChildProcess
+Event: 'close'
+Event: 'disconnect'
+Event: 'error'
+Event: 'exit'
+Event: 'message'
+Event: 'spawn'
+subprocess.channel
+subprocess.channel.ref()
+subprocess.channel.unref()
+subprocess.connected
+subprocess.disconnect()
+subprocess.exitCode
+subprocess.kill([signal])
+subprocess[Symbol.dispose]()
+subprocess.killed
+subprocess.pid
+subprocess.ref()
+subprocess.send(message[, sendHandle[, options]][, callback])
+Example: sending a server object
+Example: sending a socket object
+subprocess.signalCode
+subprocess.spawnargs
+subprocess.spawnfile
+subprocess.stderr
+subprocess.stdin
+subprocess.stdio
+subprocess.stdout
+subprocess.unref()
+maxBuffer and Unicode
+Shell requirements
+Default Windows shell
+Advanced serialization
+Cluster
+How it works
+Class: Worker
+Event: 'disconnect'
+Event: 'error'
+Event: 'exit'
+Event: 'listening'
+Event: 'message'
+Event: 'online'
+worker.disconnect()
+worker.exitedAfterDisconnect
+worker.id
+worker.isConnected()
+worker.isDead()
+worker.kill([signal])
+worker.process
+worker.send(message[, sendHandle[, options]][, callback])
+Event: 'disconnect'
+Event: 'exit'
+Event: 'fork'
+Event: 'listening'
+Event: 'message'
+Event: 'online'
+Event: 'setup'
+cluster.disconnect([callback])
+cluster.fork([env])
+cluster.isMaster
+cluster.isPrimary
+cluster.isWorker
+cluster.schedulingPolicy
+cluster.settings
+cluster.setupMaster([settings])
+cluster.setupPrimary([settings])
+cluster.worker
+cluster.workers
+Command-line API
+Synopsis
+Program entry point
+ECMAScript modules loader entry point caveat
+Options
+-
+--
+--abort-on-uncaught-exception
+--allow-addons
+--allow-child-process
+--allow-fs-read
+--allow-fs-write
+--allow-worker
+--build-snapshot
+--build-snapshot-config
+-c, --check
+--completion-bash
+-C condition, --conditions=condition
+--cpu-prof
+--cpu-prof-dir
+--cpu-prof-interval
+--cpu-prof-name
+--diagnostic-dir=directory
+--disable-warning=code-or-type
+--disable-proto=mode
+--disallow-code-generation-from-strings
+--dns-result-order=order
+--enable-fips
+--enable-network-family-autoselection
+--enable-source-maps
+--env-file=config
+-e, --eval "script"
+--experimental-default-type=type
+--experimental-detect-module
+--experimental-import-meta-resolve
+--experimental-loader=module
+--experimental-network-imports
+--experimental-permission
+--experimental-policy
+--experimental-sea-config
+--experimental-shadow-realm
+--experimental-test-coverage
+--experimental-vm-modules
+--experimental-wasi-unstable-preview1
+--experimental-wasm-modules
+--experimental-websocket
+--force-context-aware
+--force-fips
+--force-node-api-uncaught-exceptions-policy
+--frozen-intrinsics
+--heap-prof
+--heap-prof-dir
+--heap-prof-interval
+--heap-prof-name
+--heapsnapshot-near-heap-limit=max_count
+--heapsnapshot-signal=signal
+-h, --help
+--icu-data-dir=file
+--import=module
+--input-type=type
+--insecure-http-parser
+--inspect[=[host:]port]
+Warning: binding inspector to a public IP:port combination is insecure
+--inspect-brk[=[host:]port]
+--inspect-port=[host:]port
+--inspect-publish-uid=stderr,http
+-i, --interactive
+--jitless
+--max-http-header-size=size
+--napi-modules
+--no-addons
+--no-deprecation
+--no-experimental-fetch
+--no-experimental-global-customevent
+--no-experimental-global-navigator
+--no-experimental-global-webcrypto
+--no-experimental-repl-await
+--no-extra-info-on-fatal-exception
+--no-force-async-hooks-checks
+--no-global-search-paths
+--no-network-family-autoselection
+--no-warnings
+--node-memory-debug
+--openssl-config=file
+--openssl-legacy-provider
+--openssl-shared-config
+--pending-deprecation
+--policy-integrity=sri
+--preserve-symlinks
+--preserve-symlinks-main
+-p, --print "script"
+--prof
+--prof-process
+--redirect-warnings=file
+--report-compact
+--report-dir=directory, report-directory=directory
+--report-filename=filename
+--report-on-fatalerror
+--report-on-signal
+--report-signal=signal
+--report-uncaught-exception
+-r, --require module
+--secure-heap=n
+--secure-heap-min=n
+--snapshot-blob=path
+--test
+--test-concurrency
+--test-name-pattern
+--test-only
+--test-reporter
+--test-reporter-destination
+--test-shard
+--test-timeout
+--throw-deprecation
+--title=title
+--tls-cipher-list=list
+--tls-keylog=file
+--tls-max-v1.2
+--tls-max-v1.3
+--tls-min-v1.0
+--tls-min-v1.1
+--tls-min-v1.2
+--tls-min-v1.3
+--trace-atomics-wait
+--trace-deprecation
+--trace-event-categories
+--trace-event-file-pattern
+--trace-events-enabled
+--trace-exit
+--trace-sigint
+--trace-sync-io
+--trace-tls
+--trace-uncaught
+--trace-warnings
+--track-heap-objects
+--unhandled-rejections=mode
+--use-bundled-ca, --use-openssl-ca
+--use-largepages=mode
+--v8-options
+--v8-pool-size=num
+-v, --version
+--watch
+--watch-path
+--watch-preserve-output
+--zero-fill-buffers
+Environment variables
+FORCE_COLOR=[1, 2, 3]
+NO_COLOR=<any>
+NODE_DEBUG=module[,…]
+NODE_DEBUG_NATIVE=module[,…]
+NODE_DISABLE_COLORS=1
+NODE_EXTRA_CA_CERTS=file
+NODE_ICU_DATA=file
+NODE_NO_WARNINGS=1
+NODE_OPTIONS=options...
+NODE_PATH=path[:…]
+NODE_PENDING_DEPRECATION=1
+NODE_PENDING_PIPE_INSTANCES=instances
+NODE_PRESERVE_SYMLINKS=1
+NODE_REDIRECT_WARNINGS=file
+NODE_REPL_EXTERNAL_MODULE=file
+NODE_REPL_HISTORY=file
+NODE_SKIP_PLATFORM_CHECK=value
+NODE_TEST_CONTEXT=value
+NODE_TLS_REJECT_UNAUTHORIZED=value
+NODE_V8_COVERAGE=dir
+Coverage output
+Source map cache
+OPENSSL_CONF=file
+SSL_CERT_DIR=dir
+SSL_CERT_FILE=file
+TZ
+UV_THREADPOOL_SIZE=size
+Useful V8 options
+--max-old-space-size=SIZE (in megabytes)
+--max-semi-space-size=SIZE (in megabytes)
+Console
+Class: Console
+new Console(stdout[, stderr][, ignoreErrors])
+new Console(options)
+console.assert(value[, ...message])
+console.clear()
+console.count([label])
+console.countReset([label])
+console.debug(data[, ...args])
+console.dir(obj[, options])
+console.dirxml(...data)
+console.error([data][, ...args])
+console.group([...label])
+console.groupCollapsed()
+console.groupEnd()
+console.info([data][, ...args])
+console.log([data][, ...args])
+console.table(tabularData[, properties])
+console.time([label])
+console.timeEnd([label])
+console.timeLog([label][, ...data])
+console.trace([message][, ...args])
+console.warn([data][, ...args])
+Inspector only methods
+console.profile([label])
+console.profileEnd([label])
+console.timeStamp([label])
+Corepack
+Workflows
+Enabling the feature
+Configuring a package
+Upgrading the global versions
+Offline workflow
+Supported package managers
+Common questions
+How does Corepack interact with npm?
+Running npm install -g yarn doesn't work
+Crypto
+Determining if crypto support is unavailable
+Class: Certificate
+Static method: Certificate.exportChallenge(spkac[, encoding])
+Static method: Certificate.exportPublicKey(spkac[, encoding])
+Static method: Certificate.verifySpkac(spkac[, encoding])
+Legacy API
+new crypto.Certificate()
+certificate.exportChallenge(spkac[, encoding])
+certificate.exportPublicKey(spkac[, encoding])
+certificate.verifySpkac(spkac[, encoding])
+Class: Cipher
+cipher.final([outputEncoding])
+cipher.getAuthTag()
+cipher.setAAD(buffer[, options])
+cipher.setAutoPadding([autoPadding])
+cipher.update(data[, inputEncoding][, outputEncoding])
+Class: Decipher
+decipher.final([outputEncoding])
+decipher.setAAD(buffer[, options])
+decipher.setAuthTag(buffer[, encoding])
+decipher.setAutoPadding([autoPadding])
+decipher.update(data[, inputEncoding][, outputEncoding])
+Class: DiffieHellman
+diffieHellman.computeSecret(otherPublicKey[, inputEncoding][, outputEncoding])
+diffieHellman.generateKeys([encoding])
+diffieHellman.getGenerator([encoding])
+diffieHellman.getPrime([encoding])
+diffieHellman.getPrivateKey([encoding])
+diffieHellman.getPublicKey([encoding])
+diffieHellman.setPrivateKey(privateKey[, encoding])
+diffieHellman.setPublicKey(publicKey[, encoding])
+diffieHellman.verifyError
+Class: DiffieHellmanGroup
+Class: ECDH
+Static method: ECDH.convertKey(key, curve[, inputEncoding[, outputEncoding[, format]]])
+ecdh.computeSecret(otherPublicKey[, inputEncoding][, outputEncoding])
+ecdh.generateKeys([encoding[, format]])
+ecdh.getPrivateKey([encoding])
+ecdh.getPublicKey([encoding][, format])
+ecdh.setPrivateKey(privateKey[, encoding])
+ecdh.setPublicKey(publicKey[, encoding])
+Class: Hash
+hash.copy([options])
+hash.digest([encoding])
+hash.update(data[, inputEncoding])
+Class: Hmac
+hmac.digest([encoding])
+hmac.update(data[, inputEncoding])
+Class: KeyObject
+Static method: KeyObject.from(key)
+keyObject.asymmetricKeyDetails
+keyObject.asymmetricKeyType
+keyObject.export([options])
+keyObject.equals(otherKeyObject)
+keyObject.symmetricKeySize
+keyObject.type
+Class: Sign
+sign.sign(privateKey[, outputEncoding])
+sign.update(data[, inputEncoding])
+Class: Verify
+verify.update(data[, inputEncoding])
+verify.verify(object, signature[, signatureEncoding])
+Class: X509Certificate
+new X509Certificate(buffer)
+x509.ca
+x509.checkEmail(email[, options])
+x509.checkHost(name[, options])
+x509.checkIP(ip)
+x509.checkIssued(otherCert)
+x509.checkPrivateKey(privateKey)
+x509.fingerprint
+x509.fingerprint256
+x509.fingerprint512
+x509.infoAccess
+x509.issuer
+x509.issuerCertificate
+x509.extKeyUsage
+x509.publicKey
+x509.raw
+x509.serialNumber
+x509.subject
+x509.subjectAltName
+x509.toJSON()
+x509.toLegacyObject()
+x509.toString()
+x509.validFrom
+x509.validTo
+x509.verify(publicKey)
+node:crypto module methods and properties
+crypto.constants
+crypto.fips
+crypto.checkPrime(candidate[, options], callback)
+crypto.checkPrimeSync(candidate[, options])
+crypto.createCipher(algorithm, password[, options])
+crypto.createCipheriv(algorithm, key, iv[, options])
+crypto.createDecipher(algorithm, password[, options])
+crypto.createDecipheriv(algorithm, key, iv[, options])
+crypto.createDiffieHellman(prime[, primeEncoding][, generator][, generatorEncoding])
+crypto.createDiffieHellman(primeLength[, generator])
+crypto.createDiffieHellmanGroup(name)
+crypto.createECDH(curveName)
+crypto.createHash(algorithm[, options])
+crypto.createHmac(algorithm, key[, options])
+crypto.createPrivateKey(key)
+crypto.createPublicKey(key)
+crypto.createSecretKey(key[, encoding])
+crypto.createSign(algorithm[, options])
+crypto.createVerify(algorithm[, options])
+crypto.diffieHellman(options)
+crypto.generateKey(type, options, callback)
+crypto.generateKeyPair(type, options, callback)
+crypto.generateKeyPairSync(type, options)
+crypto.generateKeySync(type, options)
+crypto.generatePrime(size[, options[, callback]])
+crypto.generatePrimeSync(size[, options])
+crypto.getCipherInfo(nameOrNid[, options])
+crypto.getCiphers()
+crypto.getCurves()
+crypto.getDiffieHellman(groupName)
+crypto.getFips()
+crypto.getHashes()
+crypto.getRandomValues(typedArray)
+crypto.hkdf(digest, ikm, salt, info, keylen, callback)
+crypto.hkdfSync(digest, ikm, salt, info, keylen)
+crypto.pbkdf2(password, salt, iterations, keylen, digest, callback)
+crypto.pbkdf2Sync(password, salt, iterations, keylen, digest)
+crypto.privateDecrypt(privateKey, buffer)
+crypto.privateEncrypt(privateKey, buffer)
+crypto.publicDecrypt(key, buffer)
+crypto.publicEncrypt(key, buffer)
+crypto.randomBytes(size[, callback])
+crypto.randomFillSync(buffer[, offset][, size])
+crypto.randomFill(buffer[, offset][, size], callback)
+crypto.randomInt([min, ]max[, callback])
+crypto.randomUUID([options])
+crypto.scrypt(password, salt, keylen[, options], callback)
+crypto.scryptSync(password, salt, keylen[, options])
+crypto.secureHeapUsed()
+crypto.setEngine(engine[, flags])
+crypto.setFips(bool)
+crypto.sign(algorithm, data, key[, callback])
+crypto.subtle
+crypto.timingSafeEqual(a, b)
+crypto.verify(algorithm, data, key, signature[, callback])
+crypto.webcrypto
+Notes
+Using strings as inputs to cryptographic APIs
+Legacy streams API (prior to Node.js 0.10)
+Support for weak or compromised algorithms
+CCM mode
+FIPS mode
+Crypto constants
+OpenSSL options
+OpenSSL engine constants
+Other OpenSSL constants
+Node.js crypto constants
+Debugger
+Watchers
+Command reference
+Stepping
+Breakpoints
+Information
+Execution control
+Various
+Advanced usage
+V8 inspector integration for Node.js
+Deprecated APIs
+Revoking deprecations
+List of deprecated APIs
+DEP0001: http.OutgoingMessage.prototype.flush
+DEP0002: require('_linklist')
+DEP0003: _writableState.buffer
+DEP0004: CryptoStream.prototype.readyState
+DEP0005: Buffer() constructor
+DEP0006: child_process options.customFds
+DEP0007: Replace cluster worker.suicide with worker.exitedAfterDisconnect
+DEP0008: require('node:constants')
+DEP0009: crypto.pbkdf2 without digest
+DEP0010: crypto.createCredentials
+DEP0011: crypto.Credentials
+DEP0012: Domain.dispose
+DEP0013: fs asynchronous function without callback
+DEP0014: fs.read legacy String interface
+DEP0015: fs.readSync legacy String interface
+DEP0016: GLOBAL/root
+DEP0017: Intl.v8BreakIterator
+DEP0018: Unhandled promise rejections
+DEP0019: require('.') resolved outside directory
+DEP0020: Server.connections
+DEP0021: Server.listenFD
+DEP0022: os.tmpDir()
+DEP0023: os.getNetworkInterfaces()
+DEP0024: REPLServer.prototype.convertToContext()
+DEP0025: require('node:sys')
+DEP0026: util.print()
+DEP0027: util.puts()
+DEP0028: util.debug()
+DEP0029: util.error()
+DEP0030: SlowBuffer
+DEP0031: ecdh.setPublicKey()
+DEP0032: node:domain module
+DEP0033: EventEmitter.listenerCount()
+DEP0034: fs.exists(path, callback)
+DEP0035: fs.lchmod(path, mode, callback)
+DEP0036: fs.lchmodSync(path, mode)
+DEP0037: fs.lchown(path, uid, gid, callback)
+DEP0038: fs.lchownSync(path, uid, gid)
+DEP0039: require.extensions
+DEP0040: node:punycode module
+DEP0041: NODE_REPL_HISTORY_FILE environment variable
+DEP0042: tls.CryptoStream
+DEP0043: tls.SecurePair
+DEP0044: util.isArray()
+DEP0045: util.isBoolean()
+DEP0046: util.isBuffer()
+DEP0047: util.isDate()
+DEP0048: util.isError()
+DEP0049: util.isFunction()
+DEP0050: util.isNull()
+DEP0051: util.isNullOrUndefined()
+DEP0052: util.isNumber()
+DEP0053: util.isObject()
+DEP0054: util.isPrimitive()
+DEP0055: util.isRegExp()
+DEP0056: util.isString()
+DEP0057: util.isSymbol()
+DEP0058: util.isUndefined()
+DEP0059: util.log()
+DEP0060: util._extend()
+DEP0061: fs.SyncWriteStream
+DEP0062: node --debug
+DEP0063: ServerResponse.prototype.writeHeader()
+DEP0064: tls.createSecurePair()
+DEP0065: repl.REPL_MODE_MAGIC and NODE_REPL_MODE=magic
+DEP0066: OutgoingMessage.prototype._headers, OutgoingMessage.prototype._headerNames
+DEP0067: OutgoingMessage.prototype._renderHeaders
+DEP0068: node debug
+DEP0069: vm.runInDebugContext(string)
+DEP0070: async_hooks.currentId()
+DEP0071: async_hooks.triggerId()
+DEP0072: async_hooks.AsyncResource.triggerId()
+DEP0073: Several internal properties of net.Server
+DEP0074: REPLServer.bufferedCommand
+DEP0075: REPLServer.parseREPLKeyword()
+DEP0076: tls.parseCertString()
+DEP0077: Module._debug()
+DEP0078: REPLServer.turnOffEditorMode()
+DEP0079: Custom inspection function on objects via .inspect()
+DEP0080: path._makeLong()
+DEP0081: fs.truncate() using a file descriptor
+DEP0082: REPLServer.prototype.memory()
+DEP0083: Disabling ECDH by setting ecdhCurve to false
+DEP0084: requiring bundled internal dependencies
+DEP0085: AsyncHooks sensitive API
+DEP0086: Remove runInAsyncIdScope
+DEP0089: require('node:assert')
+DEP0090: Invalid GCM authentication tag lengths
+DEP0091: crypto.DEFAULT_ENCODING
+DEP0092: Top-level this bound to module.exports
+DEP0093: crypto.fips is deprecated and replaced
+DEP0094: Using assert.fail() with more than one argument
+DEP0095: timers.enroll()
+DEP0096: timers.unenroll()
+DEP0097: MakeCallback with domain property
+DEP0098: AsyncHooks embedder AsyncResource.emitBefore and AsyncResource.emitAfter APIs
+DEP0099: Async context-unaware node::MakeCallback C++ APIs
+DEP0100: process.assert()
+DEP0101: --with-lttng
+DEP0102: Using noAssert in Buffer#(read|write) operations
+DEP0103: process.binding('util').is[...] typechecks
+DEP0104: process.env string coercion
+DEP0105: decipher.finaltol
+DEP0106: crypto.createCipher and crypto.createDecipher
+DEP0107: tls.convertNPNProtocols()
+DEP0108: zlib.bytesRead
+DEP0109: http, https, and tls support for invalid URLs
+DEP0110: vm.Script cached data
+DEP0111: process.binding()
+DEP0112: dgram private APIs
+DEP0113: Cipher.setAuthTag(), Decipher.getAuthTag()
+DEP0114: crypto._toBuf()
+DEP0115: crypto.prng(), crypto.pseudoRandomBytes(), crypto.rng()
+DEP0116: Legacy URL API
+DEP0117: Native crypto handles
+DEP0118: dns.lookup() support for a falsy host name
+DEP0119: process.binding('uv').errname() private API
+DEP0120: Windows Performance Counter support
+DEP0121: net._setSimultaneousAccepts()
+DEP0122: tls Server.prototype.setOptions()
+DEP0123: setting the TLS ServerName to an IP address
+DEP0124: using REPLServer.rli
+DEP0125: require('node:_stream_wrap')
+DEP0126: timers.active()
+DEP0127: timers._unrefActive()
+DEP0128: modules with an invalid main entry and an index.js file
+DEP0129: ChildProcess._channel
+DEP0130: Module.createRequireFromPath()
+DEP0131: Legacy HTTP parser
+DEP0132: worker.terminate() with callback
+DEP0133: http connection
+DEP0134: process._tickCallback
+DEP0135: WriteStream.open() and ReadStream.open() are internal
+DEP0136: http finished
+DEP0137: Closing fs.FileHandle on garbage collection
+DEP0138: process.mainModule
+DEP0139: process.umask() with no arguments
+DEP0140: Use request.destroy() instead of request.abort()
+DEP0141: repl.inputStream and repl.outputStream
+DEP0142: repl._builtinLibs
+DEP0143: Transform._transformState
+DEP0144: module.parent
+DEP0145: socket.bufferSize
+DEP0146: new crypto.Certificate()
+DEP0147: fs.rmdir(path, { recursive: true })
+DEP0148: Folder mappings in "exports" (trailing "/")
+DEP0149: http.IncomingMessage#connection
+DEP0150: Changing the value of process.config
+DEP0151: Main index lookup and extension searching
+DEP0152: Extension PerformanceEntry properties
+DEP0153: dns.lookup and dnsPromises.lookup options type coercion
+DEP0154: RSA-PSS generate key pair options
+DEP0155: Trailing slashes in pattern specifier resolutions
+DEP0156: .aborted property and 'abort', 'aborted' event in http
+DEP0157: Thenable support in streams
+DEP0158: buffer.slice(start, end)
+DEP0159: ERR_INVALID_CALLBACK
+DEP0160: process.on('multipleResolves', handler)
+DEP0161: process._getActiveRequests() and process._getActiveHandles()
+DEP0162: fs.write(), fs.writeFileSync() coercion to string
+DEP0163: channel.subscribe(onMessage), channel.unsubscribe(onMessage)
+DEP0164: process.exit(code), process.exitCode coercion to integer
+DEP0165: --trace-atomics-wait
+DEP0166: Double slashes in imports and exports targets
+DEP0167: Weak DiffieHellmanGroup instances (modp1, modp2, modp5)
+DEP0168: Unhandled exception in Node-API callbacks
+DEP0169: Insecure url.parse()
+DEP0170: Invalid port when using url.parse()
+DEP0171: Setters for http.IncomingMessage headers and trailers
+DEP0172: The asyncResource property of AsyncResource bound functions
+DEP0173: the assert.CallTracker class
+DEP0174: calling promisify on a function that returns a Promise
+DEP0175: util.toUSVString
+DEP0176: fs.F_OK, fs.R_OK, fs.W_OK, fs.X_OK
+DEP0177: util.types.isWebAssemblyCompiledModule
+DEP0178: dirent.path
+DEP0179: Hash constructor
+Diagnostics Channel
+Public API
+Overview
+diagnostics_channel.hasSubscribers(name)
+diagnostics_channel.channel(name)
+diagnostics_channel.subscribe(name, onMessage)
+diagnostics_channel.unsubscribe(name, onMessage)
+diagnostics_channel.tracingChannel(nameOrChannels)
+Class: Channel
+channel.hasSubscribers
+channel.publish(message)
+channel.subscribe(onMessage)
+channel.unsubscribe(onMessage)
+channel.bindStore(store[, transform])
+channel.unbindStore(store)
+channel.runStores(context, fn[, thisArg[, ...args]])
+Class: TracingChannel
+tracingChannel.subscribe(subscribers)
+tracingChannel.unsubscribe(subscribers)
+tracingChannel.traceSync(fn[, context[, thisArg[, ...args]]])
+tracingChannel.tracePromise(fn[, context[, thisArg[, ...args]]])
+tracingChannel.traceCallback(fn, position, context, thisArg, ...args)
+TracingChannel Channels
+start(event)
+end(event)
+asyncStart(event)
+asyncEnd(event)
+error(event)
+Built-in Channels
+HTTP
+NET
+UDP
+Process
+Worker Thread
+DNS
+Class: dns.Resolver
+Resolver([options])
+resolver.cancel()
+resolver.setLocalAddress([ipv4][, ipv6])
+dns.getServers()
+dns.lookup(hostname[, options], callback)
+Supported getaddrinfo flags
+dns.lookupService(address, port, callback)
+dns.resolve(hostname[, rrtype], callback)
+dns.resolve4(hostname[, options], callback)
+dns.resolve6(hostname[, options], callback)
+dns.resolveAny(hostname, callback)
+dns.resolveCname(hostname, callback)
+dns.resolveCaa(hostname, callback)
+dns.resolveMx(hostname, callback)
+dns.resolveNaptr(hostname, callback)
+dns.resolveNs(hostname, callback)
+dns.resolvePtr(hostname, callback)
+dns.resolveSoa(hostname, callback)
+dns.resolveSrv(hostname, callback)
+dns.resolveTxt(hostname, callback)
+dns.reverse(ip, callback)
+dns.setDefaultResultOrder(order)
+dns.getDefaultResultOrder()
+dns.setServers(servers)
+DNS promises API
+Class: dnsPromises.Resolver
+resolver.cancel()
+dnsPromises.getServers()
+dnsPromises.lookup(hostname[, options])
+dnsPromises.lookupService(address, port)
+dnsPromises.resolve(hostname[, rrtype])
+dnsPromises.resolve4(hostname[, options])
+dnsPromises.resolve6(hostname[, options])
+dnsPromises.resolveAny(hostname)
+dnsPromises.resolveCaa(hostname)
+dnsPromises.resolveCname(hostname)
+dnsPromises.resolveMx(hostname)
+dnsPromises.resolveNaptr(hostname)
+dnsPromises.resolveNs(hostname)
+dnsPromises.resolvePtr(hostname)
+dnsPromises.resolveSoa(hostname)
+dnsPromises.resolveSrv(hostname)
+dnsPromises.resolveTxt(hostname)
+dnsPromises.reverse(ip)
+dnsPromises.setDefaultResultOrder(order)
+dnsPromises.getDefaultResultOrder()
+dnsPromises.setServers(servers)
+Error codes
+Implementation considerations
+dns.lookup()
+dns.resolve(), dns.resolve*(), and dns.reverse()
+Domain
+Warning: Don't ignore errors!
+Additions to Error objects
+Implicit binding
+Explicit binding
+domain.create()
+Class: Domain
+domain.members
+domain.add(emitter)
+domain.bind(callback)
+domain.enter()
+domain.exit()
+domain.intercept(callback)
+domain.remove(emitter)
+domain.run(fn[, ...args])
+Domains and promises
+Errors
+Error propagation and interception
+Class: Error
+new Error(message[, options])
+Error.captureStackTrace(targetObject[, constructorOpt])
+Error.stackTraceLimit
+error.cause
+error.code
+error.message
+error.stack
+Class: AssertionError
+Class: RangeError
+Class: ReferenceError
+Class: SyntaxError
+Class: SystemError
+error.address
+error.code
+error.dest
+error.errno
+error.info
+error.message
+error.path
+error.port
+error.syscall
+Common system errors
+Class: TypeError
+Exceptions vs. errors
+OpenSSL errors
+error.opensslErrorStack
+error.function
+error.library
+error.reason
+Node.js error codes
+ABORT_ERR
+ERR_ACCESS_DENIED
+ERR_AMBIGUOUS_ARGUMENT
+ERR_ARG_NOT_ITERABLE
+ERR_ASSERTION
+ERR_ASYNC_CALLBACK
+ERR_ASYNC_TYPE
+ERR_BROTLI_COMPRESSION_FAILED
+ERR_BROTLI_INVALID_PARAM
+ERR_BUFFER_CONTEXT_NOT_AVAILABLE
+ERR_BUFFER_OUT_OF_BOUNDS
+ERR_BUFFER_TOO_LARGE
+ERR_CANNOT_WATCH_SIGINT
+ERR_CHILD_CLOSED_BEFORE_REPLY
+ERR_CHILD_PROCESS_IPC_REQUIRED
+ERR_CHILD_PROCESS_STDIO_MAXBUFFER
+ERR_CLOSED_MESSAGE_PORT
+ERR_CONSOLE_WRITABLE_STREAM
+ERR_CONSTRUCT_CALL_INVALID
+ERR_CONSTRUCT_CALL_REQUIRED
+ERR_CONTEXT_NOT_INITIALIZED
+ERR_CRYPTO_CUSTOM_ENGINE_NOT_SUPPORTED
+ERR_CRYPTO_ECDH_INVALID_FORMAT
+ERR_CRYPTO_ECDH_INVALID_PUBLIC_KEY
+ERR_CRYPTO_ENGINE_UNKNOWN
+ERR_CRYPTO_FIPS_FORCED
+ERR_CRYPTO_FIPS_UNAVAILABLE
+ERR_CRYPTO_HASH_FINALIZED
+ERR_CRYPTO_HASH_UPDATE_FAILED
+ERR_CRYPTO_INCOMPATIBLE_KEY
+ERR_CRYPTO_INCOMPATIBLE_KEY_OPTIONS
+ERR_CRYPTO_INITIALIZATION_FAILED
+ERR_CRYPTO_INVALID_AUTH_TAG
+ERR_CRYPTO_INVALID_COUNTER
+ERR_CRYPTO_INVALID_CURVE
+ERR_CRYPTO_INVALID_DIGEST
+ERR_CRYPTO_INVALID_IV
+ERR_CRYPTO_INVALID_JWK
+ERR_CRYPTO_INVALID_KEY_OBJECT_TYPE
+ERR_CRYPTO_INVALID_KEYLEN
+ERR_CRYPTO_INVALID_KEYPAIR
+ERR_CRYPTO_INVALID_KEYTYPE
+ERR_CRYPTO_INVALID_MESSAGELEN
+ERR_CRYPTO_INVALID_SCRYPT_PARAMS
+ERR_CRYPTO_INVALID_STATE
+ERR_CRYPTO_INVALID_TAG_LENGTH
+ERR_CRYPTO_JOB_INIT_FAILED
+ERR_CRYPTO_JWK_UNSUPPORTED_CURVE
+ERR_CRYPTO_JWK_UNSUPPORTED_KEY_TYPE
+ERR_CRYPTO_OPERATION_FAILED
+ERR_CRYPTO_PBKDF2_ERROR
+ERR_CRYPTO_SCRYPT_INVALID_PARAMETER
+ERR_CRYPTO_SCRYPT_NOT_SUPPORTED
+ERR_CRYPTO_SIGN_KEY_REQUIRED
+ERR_CRYPTO_TIMING_SAFE_EQUAL_LENGTH
+ERR_CRYPTO_UNKNOWN_CIPHER
+ERR_CRYPTO_UNKNOWN_DH_GROUP
+ERR_CRYPTO_UNSUPPORTED_OPERATION
+ERR_DEBUGGER_ERROR
+ERR_DEBUGGER_STARTUP_ERROR
+ERR_DLOPEN_DISABLED
+ERR_DLOPEN_FAILED
+ERR_DIR_CLOSED
+ERR_DIR_CONCURRENT_OPERATION
+ERR_DNS_SET_SERVERS_FAILED
+ERR_DOMAIN_CALLBACK_NOT_AVAILABLE
+ERR_DOMAIN_CANNOT_SET_UNCAUGHT_EXCEPTION_CAPTURE
+ERR_DUPLICATE_STARTUP_SNAPSHOT_MAIN_FUNCTION
+ERR_ENCODING_INVALID_ENCODED_DATA
+ERR_ENCODING_NOT_SUPPORTED
+ERR_EVAL_ESM_CANNOT_PRINT
+ERR_EVENT_RECURSION
+ERR_EXECUTION_ENVIRONMENT_NOT_AVAILABLE
+ERR_FALSY_VALUE_REJECTION
+ERR_FEATURE_UNAVAILABLE_ON_PLATFORM
+ERR_FS_CP_DIR_TO_NON_DIR
+ERR_FS_CP_EEXIST
+ERR_FS_CP_EINVAL
+ERR_HTTP_BODY_NOT_ALLOWED
+ERR_HTTP_CONTENT_LENGTH_MISMATCH
+ERR_FS_CP_FIFO_PIPE
+ERR_FS_CP_NON_DIR_TO_DIR
+ERR_FS_CP_SOCKET
+ERR_FS_CP_SYMLINK_TO_SUBDIRECTORY
+ERR_FS_CP_UNKNOWN
+ERR_FS_EISDIR
+ERR_FS_FILE_TOO_LARGE
+ERR_FS_INVALID_SYMLINK_TYPE
+ERR_HTTP_HEADERS_SENT
+ERR_HTTP_INVALID_HEADER_VALUE
+ERR_HTTP_INVALID_STATUS_CODE
+ERR_HTTP_REQUEST_TIMEOUT
+ERR_HTTP_SOCKET_ASSIGNED
+ERR_HTTP_SOCKET_ENCODING
+ERR_HTTP_TRAILER_INVALID
+ERR_HTTP2_ALTSVC_INVALID_ORIGIN
+ERR_HTTP2_ALTSVC_LENGTH
+ERR_HTTP2_CONNECT_AUTHORITY
+ERR_HTTP2_CONNECT_PATH
+ERR_HTTP2_CONNECT_SCHEME
+ERR_HTTP2_ERROR
+ERR_HTTP2_GOAWAY_SESSION
+ERR_HTTP2_HEADER_SINGLE_VALUE
+ERR_HTTP2_HEADERS_AFTER_RESPOND
+ERR_HTTP2_HEADERS_SENT
+ERR_HTTP2_INFO_STATUS_NOT_ALLOWED
+ERR_HTTP2_INVALID_CONNECTION_HEADERS
+ERR_HTTP2_INVALID_HEADER_VALUE
+ERR_HTTP2_INVALID_INFO_STATUS
+ERR_HTTP2_INVALID_ORIGIN
+ERR_HTTP2_INVALID_PACKED_SETTINGS_LENGTH
+ERR_HTTP2_INVALID_PSEUDOHEADER
+ERR_HTTP2_INVALID_SESSION
+ERR_HTTP2_INVALID_SETTING_VALUE
+ERR_HTTP2_INVALID_STREAM
+ERR_HTTP2_MAX_PENDING_SETTINGS_ACK
+ERR_HTTP2_NESTED_PUSH
+ERR_HTTP2_NO_MEM
+ERR_HTTP2_NO_SOCKET_MANIPULATION
+ERR_HTTP2_ORIGIN_LENGTH
+ERR_HTTP2_OUT_OF_STREAMS
+ERR_HTTP2_PAYLOAD_FORBIDDEN
+ERR_HTTP2_PING_CANCEL
+ERR_HTTP2_PING_LENGTH
+ERR_HTTP2_PSEUDOHEADER_NOT_ALLOWED
+ERR_HTTP2_PUSH_DISABLED
+ERR_HTTP2_SEND_FILE
+ERR_HTTP2_SEND_FILE_NOSEEK
+ERR_HTTP2_SESSION_ERROR
+ERR_HTTP2_SETTINGS_CANCEL
+ERR_HTTP2_SOCKET_BOUND
+ERR_HTTP2_SOCKET_UNBOUND
+ERR_HTTP2_STATUS_101
+ERR_HTTP2_STATUS_INVALID
+ERR_HTTP2_STREAM_CANCEL
+ERR_HTTP2_STREAM_ERROR
+ERR_HTTP2_STREAM_SELF_DEPENDENCY
+ERR_HTTP2_TOO_MANY_CUSTOM_SETTINGS
+ERR_HTTP2_TOO_MANY_INVALID_FRAMES
+ERR_HTTP2_TRAILERS_ALREADY_SENT
+ERR_HTTP2_TRAILERS_NOT_READY
+ERR_HTTP2_UNSUPPORTED_PROTOCOL
+ERR_ILLEGAL_CONSTRUCTOR
+ERR_IMPORT_ATTRIBUTE_TYPE_INCOMPATIBLE
+ERR_IMPORT_ATTRIBUTE_MISSING
+ERR_IMPORT_ATTRIBUTE_UNSUPPORTED
+ERR_INCOMPATIBLE_OPTION_PAIR
+ERR_INPUT_TYPE_NOT_ALLOWED
+ERR_INSPECTOR_ALREADY_ACTIVATED
+ERR_INSPECTOR_ALREADY_CONNECTED
+ERR_INSPECTOR_CLOSED
+ERR_INSPECTOR_COMMAND
+ERR_INSPECTOR_NOT_ACTIVE
+ERR_INSPECTOR_NOT_AVAILABLE
+ERR_INSPECTOR_NOT_CONNECTED
+ERR_INSPECTOR_NOT_WORKER
+ERR_INTERNAL_ASSERTION
+ERR_INVALID_ADDRESS_FAMILY
+ERR_INVALID_ARG_TYPE
+ERR_INVALID_ARG_VALUE
+ERR_INVALID_ASYNC_ID
+ERR_INVALID_BUFFER_SIZE
+ERR_INVALID_CHAR
+ERR_INVALID_CURSOR_POS
+ERR_INVALID_FD
+ERR_INVALID_FD_TYPE
+ERR_INVALID_FILE_URL_HOST
+ERR_INVALID_FILE_URL_PATH
+ERR_INVALID_HANDLE_TYPE
+ERR_INVALID_HTTP_TOKEN
+ERR_INVALID_IP_ADDRESS
+ERR_INVALID_MIME_SYNTAX
+ERR_INVALID_MODULE
+ERR_INVALID_MODULE_SPECIFIER
+ERR_INVALID_OBJECT_DEFINE_PROPERTY
+ERR_INVALID_PACKAGE_CONFIG
+ERR_INVALID_PACKAGE_TARGET
+ERR_INVALID_PERFORMANCE_MARK
+ERR_INVALID_PROTOCOL
+ERR_INVALID_REPL_EVAL_CONFIG
+ERR_INVALID_REPL_INPUT
+ERR_INVALID_RETURN_PROPERTY
+ERR_INVALID_RETURN_PROPERTY_VALUE
+ERR_INVALID_RETURN_VALUE
+ERR_INVALID_STATE
+ERR_INVALID_SYNC_FORK_INPUT
+ERR_INVALID_THIS
+ERR_INVALID_TUPLE
+ERR_INVALID_URI
+ERR_INVALID_URL
+ERR_INVALID_URL_SCHEME
+ERR_IPC_CHANNEL_CLOSED
+ERR_IPC_DISCONNECTED
+ERR_IPC_ONE_PIPE
+ERR_IPC_SYNC_FORK
+ERR_LOADER_CHAIN_INCOMPLETE
+ERR_MANIFEST_ASSERT_INTEGRITY
+ERR_MANIFEST_DEPENDENCY_MISSING
+ERR_MANIFEST_INTEGRITY_MISMATCH
+ERR_MANIFEST_INVALID_RESOURCE_FIELD
+ERR_MANIFEST_INVALID_SPECIFIER
+ERR_MANIFEST_PARSE_POLICY
+ERR_MANIFEST_TDZ
+ERR_MANIFEST_UNKNOWN_ONERROR
+ERR_MEMORY_ALLOCATION_FAILED
+ERR_MESSAGE_TARGET_CONTEXT_UNAVAILABLE
+ERR_METHOD_NOT_IMPLEMENTED
+ERR_MISSING_ARGS
+ERR_MISSING_OPTION
+ERR_MISSING_PASSPHRASE
+ERR_MISSING_PLATFORM_FOR_WORKER
+ERR_MODULE_NOT_FOUND
+ERR_MULTIPLE_CALLBACK
+ERR_NAPI_CONS_FUNCTION
+ERR_NAPI_INVALID_DATAVIEW_ARGS
+ERR_NAPI_INVALID_TYPEDARRAY_ALIGNMENT
+ERR_NAPI_INVALID_TYPEDARRAY_LENGTH
+ERR_NAPI_TSFN_CALL_JS
+ERR_NAPI_TSFN_GET_UNDEFINED
+ERR_NAPI_TSFN_START_IDLE_LOOP
+ERR_NAPI_TSFN_STOP_IDLE_LOOP
+ERR_NOT_BUILDING_SNAPSHOT
+ERR_NOT_SUPPORTED_IN_SNAPSHOT
+ERR_NO_CRYPTO
+ERR_NO_ICU
+ERR_NON_CONTEXT_AWARE_DISABLED
+ERR_OUT_OF_RANGE
+ERR_PACKAGE_IMPORT_NOT_DEFINED
+ERR_PACKAGE_PATH_NOT_EXPORTED
+ERR_PARSE_ARGS_INVALID_OPTION_VALUE
+ERR_PARSE_ARGS_UNEXPECTED_POSITIONAL
+ERR_PARSE_ARGS_UNKNOWN_OPTION
+ERR_PERFORMANCE_INVALID_TIMESTAMP
+ERR_PERFORMANCE_MEASURE_INVALID_OPTIONS
+ERR_PROTO_ACCESS
+ERR_REQUIRE_ESM
+ERR_SCRIPT_EXECUTION_INTERRUPTED
+ERR_SCRIPT_EXECUTION_TIMEOUT
+ERR_SERVER_ALREADY_LISTEN
+ERR_SERVER_NOT_RUNNING
+ERR_SOCKET_ALREADY_BOUND
+ERR_SOCKET_BAD_BUFFER_SIZE
+ERR_SOCKET_BAD_PORT
+ERR_SOCKET_BAD_TYPE
+ERR_SOCKET_BUFFER_SIZE
+ERR_SOCKET_CLOSED
+ERR_SOCKET_CLOSED_BEFORE_CONNECTION
+ERR_SOCKET_CONNECTION_TIMEOUT
+ERR_SOCKET_DGRAM_IS_CONNECTED
+ERR_SOCKET_DGRAM_NOT_CONNECTED
+ERR_SOCKET_DGRAM_NOT_RUNNING
+ERR_SRI_PARSE
+ERR_STREAM_ALREADY_FINISHED
+ERR_STREAM_CANNOT_PIPE
+ERR_STREAM_DESTROYED
+ERR_STREAM_NULL_VALUES
+ERR_STREAM_PREMATURE_CLOSE
+ERR_STREAM_PUSH_AFTER_EOF
+ERR_STREAM_UNSHIFT_AFTER_END_EVENT
+ERR_STREAM_WRAP
+ERR_STREAM_WRITE_AFTER_END
+ERR_STRING_TOO_LONG
+ERR_SYNTHETIC
+ERR_SYSTEM_ERROR
+ERR_TAP_LEXER_ERROR
+ERR_TAP_PARSER_ERROR
+ERR_TAP_VALIDATION_ERROR
+ERR_TEST_FAILURE
+ERR_TLS_ALPN_CALLBACK_INVALID_RESULT
+ERR_TLS_ALPN_CALLBACK_WITH_PROTOCOLS
+ERR_TLS_CERT_ALTNAME_FORMAT
+ERR_TLS_CERT_ALTNAME_INVALID
+ERR_TLS_DH_PARAM_SIZE
+ERR_TLS_HANDSHAKE_TIMEOUT
+ERR_TLS_INVALID_CONTEXT
+ERR_TLS_INVALID_PROTOCOL_METHOD
+ERR_TLS_INVALID_PROTOCOL_VERSION
+ERR_TLS_INVALID_STATE
+ERR_TLS_PROTOCOL_VERSION_CONFLICT
+ERR_TLS_PSK_SET_IDENTIY_HINT_FAILED
+ERR_TLS_RENEGOTIATION_DISABLED
+ERR_TLS_REQUIRED_SERVER_NAME
+ERR_TLS_SESSION_ATTACK
+ERR_TLS_SNI_FROM_SERVER
+ERR_TRACE_EVENTS_CATEGORY_REQUIRED
+ERR_TRACE_EVENTS_UNAVAILABLE
+ERR_TRANSFORM_ALREADY_TRANSFORMING
+ERR_TRANSFORM_WITH_LENGTH_0
+ERR_TTY_INIT_FAILED
+ERR_UNAVAILABLE_DURING_EXIT
+ERR_UNCAUGHT_EXCEPTION_CAPTURE_ALREADY_SET
+ERR_UNESCAPED_CHARACTERS
+ERR_UNHANDLED_ERROR
+ERR_UNKNOWN_BUILTIN_MODULE
+ERR_UNKNOWN_CREDENTIAL
+ERR_UNKNOWN_ENCODING
+ERR_UNKNOWN_FILE_EXTENSION
+ERR_UNKNOWN_MODULE_FORMAT
+ERR_UNKNOWN_SIGNAL
+ERR_UNSUPPORTED_DIR_IMPORT
+ERR_UNSUPPORTED_ESM_URL_SCHEME
+ERR_USE_AFTER_CLOSE
+ERR_VALID_PERFORMANCE_ENTRY_TYPE
+ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING_FLAG
+ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING
+ERR_VM_MODULE_ALREADY_LINKED
+ERR_VM_MODULE_CACHED_DATA_REJECTED
+ERR_VM_MODULE_CANNOT_CREATE_CACHED_DATA
+ERR_VM_MODULE_DIFFERENT_CONTEXT
+ERR_VM_MODULE_LINK_FAILURE
+ERR_VM_MODULE_NOT_MODULE
+ERR_VM_MODULE_STATUS
+ERR_WASI_ALREADY_STARTED
+ERR_WASI_NOT_STARTED
+ERR_WEBASSEMBLY_RESPONSE
+ERR_WORKER_INIT_FAILED
+ERR_WORKER_INVALID_EXEC_ARGV
+ERR_WORKER_NOT_RUNNING
+ERR_WORKER_OUT_OF_MEMORY
+ERR_WORKER_PATH
+ERR_WORKER_UNSERIALIZABLE_ERROR
+ERR_WORKER_UNSUPPORTED_OPERATION
+ERR_ZLIB_INITIALIZATION_FAILED
+HPE_HEADER_OVERFLOW
+HPE_UNEXPECTED_CONTENT_LENGTH
+MODULE_NOT_FOUND
+Legacy Node.js error codes
+ERR_CANNOT_TRANSFER_OBJECT
+ERR_CRYPTO_HASH_DIGEST_NO_UTF16
+ERR_HTTP2_FRAME_ERROR
+ERR_HTTP2_HEADERS_OBJECT
+ERR_HTTP2_HEADER_REQUIRED
+ERR_HTTP2_INFO_HEADERS_AFTER_RESPOND
+ERR_HTTP2_STREAM_CLOSED
+ERR_HTTP_INVALID_CHAR
+ERR_INDEX_OUT_OF_RANGE
+ERR_INVALID_OPT_VALUE
+ERR_INVALID_OPT_VALUE_ENCODING
+ERR_INVALID_TRANSFER_OBJECT
+ERR_IMPORT_ASSERTION_TYPE_FAILED
+ERR_IMPORT_ASSERTION_TYPE_MISSING
+ERR_IMPORT_ASSERTION_TYPE_UNSUPPORTED
+ERR_MISSING_MESSAGE_PORT_IN_TRANSFER_LIST
+ERR_MISSING_TRANSFERABLE_IN_TRANSFER_LIST
+ERR_NAPI_CONS_PROTOTYPE_OBJECT
+ERR_NETWORK_IMPORT_BAD_RESPONSE
+ERR_NETWORK_IMPORT_DISALLOWED
+ERR_NO_LONGER_SUPPORTED
+ERR_OPERATION_FAILED
+ERR_OUTOFMEMORY
+ERR_PARSE_HISTORY_DATA
+ERR_SOCKET_CANNOT_SEND
+ERR_STDERR_CLOSE
+ERR_STDOUT_CLOSE
+ERR_STREAM_READ_NOT_IMPLEMENTED
+ERR_TLS_RENEGOTIATION_FAILED
+ERR_TRANSFERRING_EXTERNALIZED_SHAREDARRAYBUFFER
+ERR_UNKNOWN_STDIN_TYPE
+ERR_UNKNOWN_STREAM_TYPE
+ERR_V8BREAKITERATOR
+ERR_VALUE_OUT_OF_RANGE
+ERR_VM_MODULE_NOT_LINKED
+ERR_VM_MODULE_LINKING_ERRORED
+ERR_WORKER_UNSUPPORTED_EXTENSION
+ERR_ZLIB_BINDING_CLOSED
+ERR_CPU_USAGE
+Events
+Passing arguments and this to listeners
+Asynchronous vs. synchronous
+Handling events only once
+Error events
+Capture rejections of promises
+Class: EventEmitter
+Event: 'newListener'
+Event: 'removeListener'
+emitter.addListener(eventName, listener)
+emitter.emit(eventName[, ...args])
+emitter.eventNames()
+emitter.getMaxListeners()
+emitter.listenerCount(eventName[, listener])
+emitter.listeners(eventName)
+emitter.off(eventName, listener)
+emitter.on(eventName, listener)
+emitter.once(eventName, listener)
+emitter.prependListener(eventName, listener)
+emitter.prependOnceListener(eventName, listener)
+emitter.removeAllListeners([eventName])
+emitter.removeListener(eventName, listener)
+emitter.setMaxListeners(n)
+emitter.rawListeners(eventName)
+emitter[Symbol.for('nodejs.rejection')](err, eventName[, ...args])
+events.defaultMaxListeners
+events.errorMonitor
+events.getEventListeners(emitterOrTarget, eventName)
+events.getMaxListeners(emitterOrTarget)
+events.once(emitter, name[, options])
+Awaiting multiple events emitted on process.nextTick()
+events.captureRejections
+events.captureRejectionSymbol
+events.listenerCount(emitter, eventName)
+events.on(emitter, eventName[, options])
+events.setMaxListeners(n[, ...eventTargets])
+events.addAbortListener(signal, listener)
+Class: events.EventEmitterAsyncResource extends EventEmitter
+new events.EventEmitterAsyncResource([options])
+eventemitterasyncresource.asyncId
+eventemitterasyncresource.asyncResource
+eventemitterasyncresource.emitDestroy()
+eventemitterasyncresource.triggerAsyncId
+EventTarget and Event API
+Node.js EventTarget vs. DOM EventTarget
+NodeEventTarget vs. EventEmitter
+Event listener
+EventTarget error handling
+Class: Event
+event.bubbles
+event.cancelBubble
+event.cancelable
+event.composed
+event.composedPath()
+event.currentTarget
+event.defaultPrevented
+event.eventPhase
+event.initEvent(type[, bubbles[, cancelable]])
+event.isTrusted
+event.preventDefault()
+event.returnValue
+event.srcElement
+event.stopImmediatePropagation()
+event.stopPropagation()
+event.target
+event.timeStamp
+event.type
+Class: EventTarget
+eventTarget.addEventListener(type, listener[, options])
+eventTarget.dispatchEvent(event)
+eventTarget.removeEventListener(type, listener[, options])
+Class: CustomEvent
+event.detail
+Class: NodeEventTarget
+nodeEventTarget.addListener(type, listener)
+nodeEventTarget.emit(type, arg)
+nodeEventTarget.eventNames()
+nodeEventTarget.listenerCount(type)
+nodeEventTarget.setMaxListeners(n)
+nodeEventTarget.getMaxListeners()
+nodeEventTarget.off(type, listener[, options])
+nodeEventTarget.on(type, listener)
+nodeEventTarget.once(type, listener)
+nodeEventTarget.removeAllListeners([type])
+nodeEventTarget.removeListener(type, listener[, options])
+File system
+Promise example
+Callback example
+Synchronous example
+Promises API
+Class: FileHandle
+Event: 'close'
+filehandle.appendFile(data[, options])
+filehandle.chmod(mode)
+filehandle.chown(uid, gid)
+filehandle.close()
+filehandle.createReadStream([options])
+filehandle.createWriteStream([options])
+filehandle.datasync()
+filehandle.fd
+filehandle.read(buffer, offset, length, position)
+filehandle.read([options])
+filehandle.read(buffer[, options])
+filehandle.readableWebStream([options])
+filehandle.readFile(options)
+filehandle.readLines([options])
+filehandle.readv(buffers[, position])
+filehandle.stat([options])
+filehandle.sync()
+filehandle.truncate(len)
+filehandle.utimes(atime, mtime)
+filehandle.write(buffer, offset[, length[, position]])
+filehandle.write(buffer[, options])
+filehandle.write(string[, position[, encoding]])
+filehandle.writeFile(data, options)
+filehandle.writev(buffers[, position])
+filehandle[Symbol.asyncDispose]()
+fsPromises.access(path[, mode])
+fsPromises.appendFile(path, data[, options])
+fsPromises.chmod(path, mode)
+fsPromises.chown(path, uid, gid)
+fsPromises.copyFile(src, dest[, mode])
+fsPromises.cp(src, dest[, options])
+fsPromises.lchmod(path, mode)
+fsPromises.lchown(path, uid, gid)
+fsPromises.lutimes(path, atime, mtime)
+fsPromises.link(existingPath, newPath)
+fsPromises.lstat(path[, options])
+fsPromises.mkdir(path[, options])
+fsPromises.mkdtemp(prefix[, options])
+fsPromises.open(path, flags[, mode])
+fsPromises.opendir(path[, options])
+fsPromises.readdir(path[, options])
+fsPromises.readFile(path[, options])
+fsPromises.readlink(path[, options])
+fsPromises.realpath(path[, options])
+fsPromises.rename(oldPath, newPath)
+fsPromises.rmdir(path[, options])
+fsPromises.rm(path[, options])
+fsPromises.stat(path[, options])
+fsPromises.statfs(path[, options])
+fsPromises.symlink(target, path[, type])
+fsPromises.truncate(path[, len])
+fsPromises.unlink(path)
+fsPromises.utimes(path, atime, mtime)
+fsPromises.watch(filename[, options])
+fsPromises.writeFile(file, data[, options])
+fsPromises.constants
+Callback API
+fs.access(path[, mode], callback)
+fs.appendFile(path, data[, options], callback)
+fs.chmod(path, mode, callback)
+File modes
+fs.chown(path, uid, gid, callback)
+fs.close(fd[, callback])
+fs.copyFile(src, dest[, mode], callback)
+fs.cp(src, dest[, options], callback)
+fs.createReadStream(path[, options])
+fs.createWriteStream(path[, options])
+fs.exists(path, callback)
+fs.fchmod(fd, mode, callback)
+fs.fchown(fd, uid, gid, callback)
+fs.fdatasync(fd, callback)
+fs.fstat(fd[, options], callback)
+fs.fsync(fd, callback)
+fs.ftruncate(fd[, len], callback)
+fs.futimes(fd, atime, mtime, callback)
+fs.lchmod(path, mode, callback)
+fs.lchown(path, uid, gid, callback)
+fs.lutimes(path, atime, mtime, callback)
+fs.link(existingPath, newPath, callback)
+fs.lstat(path[, options], callback)
+fs.mkdir(path[, options], callback)
+fs.mkdtemp(prefix[, options], callback)
+fs.open(path[, flags[, mode]], callback)
+fs.openAsBlob(path[, options])
+fs.opendir(path[, options], callback)
+fs.read(fd, buffer, offset, length, position, callback)
+fs.read(fd[, options], callback)
+fs.read(fd, buffer[, options], callback)
+fs.readdir(path[, options], callback)
+fs.readFile(path[, options], callback)
+File descriptors
+Performance Considerations
+fs.readlink(path[, options], callback)
+fs.readv(fd, buffers[, position], callback)
+fs.realpath(path[, options], callback)
+fs.realpath.native(path[, options], callback)
+fs.rename(oldPath, newPath, callback)
+fs.rmdir(path[, options], callback)
+fs.rm(path[, options], callback)
+fs.stat(path[, options], callback)
+fs.statfs(path[, options], callback)
+fs.symlink(target, path[, type], callback)
+fs.truncate(path[, len], callback)
+fs.unlink(path, callback)
+fs.unwatchFile(filename[, listener])
+fs.utimes(path, atime, mtime, callback)
+fs.watch(filename[, options][, listener])
+Caveats
+Availability
+Inodes
+Filename argument
+fs.watchFile(filename[, options], listener)
+fs.write(fd, buffer, offset[, length[, position]], callback)
+fs.write(fd, buffer[, options], callback)
+fs.write(fd, string[, position[, encoding]], callback)
+fs.writeFile(file, data[, options], callback)
+Using fs.writeFile() with file descriptors
+fs.writev(fd, buffers[, position], callback)
+Synchronous API
+fs.accessSync(path[, mode])
+fs.appendFileSync(path, data[, options])
+fs.chmodSync(path, mode)
+fs.chownSync(path, uid, gid)
+fs.closeSync(fd)
+fs.copyFileSync(src, dest[, mode])
+fs.cpSync(src, dest[, options])
+fs.existsSync(path)
+fs.fchmodSync(fd, mode)
+fs.fchownSync(fd, uid, gid)
+fs.fdatasyncSync(fd)
+fs.fstatSync(fd[, options])
+fs.fsyncSync(fd)
+fs.ftruncateSync(fd[, len])
+fs.futimesSync(fd, atime, mtime)
+fs.lchmodSync(path, mode)
+fs.lchownSync(path, uid, gid)
+fs.lutimesSync(path, atime, mtime)
+fs.linkSync(existingPath, newPath)
+fs.lstatSync(path[, options])
+fs.mkdirSync(path[, options])
+fs.mkdtempSync(prefix[, options])
+fs.opendirSync(path[, options])
+fs.openSync(path[, flags[, mode]])
+fs.readdirSync(path[, options])
+fs.readFileSync(path[, options])
+fs.readlinkSync(path[, options])
+fs.readSync(fd, buffer, offset, length[, position])
+fs.readSync(fd, buffer[, options])
+fs.readvSync(fd, buffers[, position])
+fs.realpathSync(path[, options])
+fs.realpathSync.native(path[, options])
+fs.renameSync(oldPath, newPath)
+fs.rmdirSync(path[, options])
+fs.rmSync(path[, options])
+fs.statSync(path[, options])
+fs.statfsSync(path[, options])
+fs.symlinkSync(target, path[, type])
+fs.truncateSync(path[, len])
+fs.unlinkSync(path)
+fs.utimesSync(path, atime, mtime)
+fs.writeFileSync(file, data[, options])
+fs.writeSync(fd, buffer, offset[, length[, position]])
+fs.writeSync(fd, buffer[, options])
+fs.writeSync(fd, string[, position[, encoding]])
+fs.writevSync(fd, buffers[, position])
+Common Objects
+Class: fs.Dir
+dir.close()
+dir.close(callback)
+dir.closeSync()
+dir.path
+dir.read()
+dir.read(callback)
+dir.readSync()
+dir[Symbol.asyncIterator]()
+Class: fs.Dirent
+dirent.isBlockDevice()
+dirent.isCharacterDevice()
+dirent.isDirectory()
+dirent.isFIFO()
+dirent.isFile()
+dirent.isSocket()
+dirent.isSymbolicLink()
+dirent.name
+dirent.parentPath
+dirent.path
+Class: fs.FSWatcher
+Event: 'change'
+Event: 'close'
+Event: 'error'
+watcher.close()
+watcher.ref()
+watcher.unref()
+Class: fs.StatWatcher
+watcher.ref()
+watcher.unref()
+Class: fs.ReadStream
+Event: 'close'
+Event: 'open'
+Event: 'ready'
+readStream.bytesRead
+readStream.path
+readStream.pending
+Class: fs.Stats
+stats.isBlockDevice()
+stats.isCharacterDevice()
+stats.isDirectory()
+stats.isFIFO()
+stats.isFile()
+stats.isSocket()
+stats.isSymbolicLink()
+stats.dev
+stats.ino
+stats.mode
+stats.nlink
+stats.uid
+stats.gid
+stats.rdev
+stats.size
+stats.blksize
+stats.blocks
+stats.atimeMs
+stats.mtimeMs
+stats.ctimeMs
+stats.birthtimeMs
+stats.atimeNs
+stats.mtimeNs
+stats.ctimeNs
+stats.birthtimeNs
+stats.atime
+stats.mtime
+stats.ctime
+stats.birthtime
+Stat time values
+Class: fs.StatFs
+statfs.bavail
+statfs.bfree
+statfs.blocks
+statfs.bsize
+statfs.ffree
+statfs.files
+statfs.type
+Class: fs.WriteStream
+Event: 'close'
+Event: 'open'
+Event: 'ready'
+writeStream.bytesWritten
+writeStream.close([callback])
+writeStream.path
+writeStream.pending
+fs.constants
+FS constants
+File access constants
+File copy constants
+File open constants
+File type constants
+File mode constants
+Notes
+Ordering of callback and promise-based operations
+File paths
+String paths
+File URL paths
+Platform-specific considerations
+Buffer paths
+Per-drive working directories on Windows
+File descriptors
+Threadpool usage
+File system flags
+Global objects
+Class: AbortController
+abortController.abort([reason])
+abortController.signal
+Class: AbortSignal
+Static method: AbortSignal.abort([reason])
+Static method: AbortSignal.timeout(delay)
+Static method: AbortSignal.any(signals)
+Event: 'abort'
+abortSignal.aborted
+abortSignal.onabort
+abortSignal.reason
+abortSignal.throwIfAborted()
+Class: Blob
+Class: Buffer
+Class: ByteLengthQueuingStrategy
+__dirname
+__filename
+atob(data)
+BroadcastChannel
+btoa(data)
+clearImmediate(immediateObject)
+clearInterval(intervalObject)
+clearTimeout(timeoutObject)
+Class: CompressionStream
+console
+Class: CountQueuingStrategy
+Crypto
+crypto
+CryptoKey
+CustomEvent
+Class: DecompressionStream
+Event
+EventTarget
+exports
+fetch
+Class: File
+Class FormData
+global
+Class Headers
+MessageChannel
+MessageEvent
+MessagePort
+module
+Navigator
+navigator
+navigator.hardwareConcurrency
+navigator.language
+navigator.languages
+navigator.platform
+navigator.userAgent
+PerformanceEntry
+PerformanceMark
+PerformanceMeasure
+PerformanceObserver
+PerformanceObserverEntryList
+PerformanceResourceTiming
+performance
+process
+queueMicrotask(callback)
+Class: ReadableByteStreamController
+Class: ReadableStream
+Class: ReadableStreamBYOBReader
+Class: ReadableStreamBYOBRequest
+Class: ReadableStreamDefaultController
+Class: ReadableStreamDefaultReader
+require()
+Response
+Request
+setImmediate(callback[, ...args])
+setInterval(callback, delay[, ...args])
+setTimeout(callback, delay[, ...args])
+structuredClone(value[, options])
+SubtleCrypto
+DOMException
+TextDecoder
+Class: TextDecoderStream
+TextEncoder
+Class: TextEncoderStream
+Class: TransformStream
+Class: TransformStreamDefaultController
+URL
+URLSearchParams
+WebAssembly
+WebSocket
+Class: WritableStream
+Class: WritableStreamDefaultController
+Class: WritableStreamDefaultWriter
+HTTP
+Class: http.Agent
+new Agent([options])
+agent.createConnection(options[, callback])
+agent.keepSocketAlive(socket)
+agent.reuseSocket(socket, request)
+agent.destroy()
+agent.freeSockets
+agent.getName([options])
+agent.maxFreeSockets
+agent.maxSockets
+agent.maxTotalSockets
+agent.requests
+agent.sockets
+Class: http.ClientRequest
+Event: 'abort'
+Event: 'close'
+Event: 'connect'
+Event: 'continue'
+Event: 'finish'
+Event: 'information'
+Event: 'response'
+Event: 'socket'
+Event: 'timeout'
+Event: 'upgrade'
+request.abort()
+request.aborted
+request.connection
+request.cork()
+request.end([data[, encoding]][, callback])
+request.destroy([error])
+request.destroyed
+request.finished
+request.flushHeaders()
+request.getHeader(name)
+request.getHeaderNames()
+request.getHeaders()
+request.getRawHeaderNames()
+request.hasHeader(name)
+request.maxHeadersCount
+request.path
+request.method
+request.host
+request.protocol
+request.removeHeader(name)
+request.reusedSocket
+request.setHeader(name, value)
+request.setNoDelay([noDelay])
+request.setSocketKeepAlive([enable][, initialDelay])
+request.setTimeout(timeout[, callback])
+request.socket
+request.uncork()
+request.writableEnded
+request.writableFinished
+request.write(chunk[, encoding][, callback])
+Class: http.Server
+Event: 'checkContinue'
+Event: 'checkExpectation'
+Event: 'clientError'
+Event: 'close'
+Event: 'connect'
+Event: 'connection'
+Event: 'dropRequest'
+Event: 'request'
+Event: 'upgrade'
+server.close([callback])
+server.closeAllConnections()
+server.closeIdleConnections()
+server.headersTimeout
+server.listen()
+server.listening
+server.maxHeadersCount
+server.requestTimeout
+server.setTimeout([msecs][, callback])
+server.maxRequestsPerSocket
+server.timeout
+server.keepAliveTimeout
+server[Symbol.asyncDispose]()
+Class: http.ServerResponse
+Event: 'close'
+Event: 'finish'
+response.addTrailers(headers)
+response.connection
+response.cork()
+response.end([data[, encoding]][, callback])
+response.finished
+response.flushHeaders()
+response.getHeader(name)
+response.getHeaderNames()
+response.getHeaders()
+response.hasHeader(name)
+response.headersSent
+response.removeHeader(name)
+response.req
+response.sendDate
+response.setHeader(name, value)
+response.setTimeout(msecs[, callback])
+response.socket
+response.statusCode
+response.statusMessage
+response.strictContentLength
+response.uncork()
+response.writableEnded
+response.writableFinished
+response.write(chunk[, encoding][, callback])
+response.writeContinue()
+response.writeEarlyHints(hints[, callback])
+response.writeHead(statusCode[, statusMessage][, headers])
+response.writeProcessing()
+Class: http.IncomingMessage
+Event: 'aborted'
+Event: 'close'
+message.aborted
+message.complete
+message.connection
+message.destroy([error])
+message.headers
+message.headersDistinct
+message.httpVersion
+message.method
+message.rawHeaders
+message.rawTrailers
+message.setTimeout(msecs[, callback])
+message.socket
+message.statusCode
+message.statusMessage
+message.trailers
+message.trailersDistinct
+message.url
+Class: http.OutgoingMessage
+Event: 'drain'
+Event: 'finish'
+Event: 'prefinish'
+outgoingMessage.addTrailers(headers)
+outgoingMessage.appendHeader(name, value)
+outgoingMessage.connection
+outgoingMessage.cork()
+outgoingMessage.destroy([error])
+outgoingMessage.end(chunk[, encoding][, callback])
+outgoingMessage.flushHeaders()
+outgoingMessage.getHeader(name)
+outgoingMessage.getHeaderNames()
+outgoingMessage.getHeaders()
+outgoingMessage.hasHeader(name)
+outgoingMessage.headersSent
+outgoingMessage.pipe()
+outgoingMessage.removeHeader(name)
+outgoingMessage.setHeader(name, value)
+outgoingMessage.setHeaders(headers)
+outgoingMessage.setTimeout(msesc[, callback])
+outgoingMessage.socket
+outgoingMessage.uncork()
+outgoingMessage.writableCorked
+outgoingMessage.writableEnded
+outgoingMessage.writableFinished
+outgoingMessage.writableHighWaterMark
+outgoingMessage.writableLength
+outgoingMessage.writableObjectMode
+outgoingMessage.write(chunk[, encoding][, callback])
+http.METHODS
+http.STATUS_CODES
+http.createServer([options][, requestListener])
+http.get(options[, callback])
+http.get(url[, options][, callback])
+http.globalAgent
+http.maxHeaderSize
+http.request(options[, callback])
+http.request(url[, options][, callback])
+http.validateHeaderName(name[, label])
+http.validateHeaderValue(name, value)
+http.setMaxIdleHTTPParsers(max)
+HTTP/2
+Determining if crypto support is unavailable
+Core API
+Server-side example
+Client-side example
+Class: Http2Session
+Http2Session and sockets
+Event: 'close'
+Event: 'connect'
+Event: 'error'
+Event: 'frameError'
+Event: 'goaway'
+Event: 'localSettings'
+Event: 'ping'
+Event: 'remoteSettings'
+Event: 'stream'
+Event: 'timeout'
+http2session.alpnProtocol
+http2session.close([callback])
+http2session.closed
+http2session.connecting
+http2session.destroy([error][, code])
+http2session.destroyed
+http2session.encrypted
+http2session.goaway([code[, lastStreamID[, opaqueData]]])
+http2session.localSettings
+http2session.originSet
+http2session.pendingSettingsAck
+http2session.ping([payload, ]callback)
+http2session.ref()
+http2session.remoteSettings
+http2session.setLocalWindowSize(windowSize)
+http2session.setTimeout(msecs, callback)
+http2session.socket
+http2session.state
+http2session.settings([settings][, callback])
+http2session.type
+http2session.unref()
+Class: ServerHttp2Session
+serverhttp2session.altsvc(alt, originOrStream)
+Specifying alternative services
+serverhttp2session.origin(...origins)
+Class: ClientHttp2Session
+Event: 'altsvc'
+Event: 'origin'
+clienthttp2session.request(headers[, options])
+Class: Http2Stream
+Http2Stream Lifecycle
+Creation
+Destruction
+Event: 'aborted'
+Event: 'close'
+Event: 'error'
+Event: 'frameError'
+Event: 'ready'
+Event: 'timeout'
+Event: 'trailers'
+Event: 'wantTrailers'
+http2stream.aborted
+http2stream.bufferSize
+http2stream.close(code[, callback])
+http2stream.closed
+http2stream.destroyed
+http2stream.endAfterHeaders
+http2stream.id
+http2stream.pending
+http2stream.priority(options)
+http2stream.rstCode
+http2stream.sentHeaders
+http2stream.sentInfoHeaders
+http2stream.sentTrailers
+http2stream.session
+http2stream.setTimeout(msecs, callback)
+http2stream.state
+http2stream.sendTrailers(headers)
+Class: ClientHttp2Stream
+Event: 'continue'
+Event: 'headers'
+Event: 'push'
+Event: 'response'
+Class: ServerHttp2Stream
+http2stream.additionalHeaders(headers)
+http2stream.headersSent
+http2stream.pushAllowed
+http2stream.pushStream(headers[, options], callback)
+http2stream.respond([headers[, options]])
+http2stream.respondWithFD(fd[, headers[, options]])
+http2stream.respondWithFile(path[, headers[, options]])
+Class: Http2Server
+Event: 'checkContinue'
+Event: 'connection'
+Event: 'request'
+Event: 'session'
+Event: 'sessionError'
+Event: 'stream'
+Event: 'timeout'
+server.close([callback])
+server[Symbol.asyncDispose]()
+server.setTimeout([msecs][, callback])
+server.timeout
+server.updateSettings([settings])
+Class: Http2SecureServer
+Event: 'checkContinue'
+Event: 'connection'
+Event: 'request'
+Event: 'session'
+Event: 'sessionError'
+Event: 'stream'
+Event: 'timeout'
+Event: 'unknownProtocol'
+server.close([callback])
+server.setTimeout([msecs][, callback])
+server.timeout
+server.updateSettings([settings])
+http2.createServer([options][, onRequestHandler])
+http2.createSecureServer(options[, onRequestHandler])
+http2.connect(authority[, options][, listener])
+http2.constants
+Error codes for RST_STREAM and GOAWAY
+http2.getDefaultSettings()
+http2.getPackedSettings([settings])
+http2.getUnpackedSettings(buf)
+http2.sensitiveHeaders
+Headers object
+Sensitive headers
+Settings object
+Error handling
+Invalid character handling in header names and values
+Push streams on the client
+Supporting the CONNECT method
+The extended CONNECT protocol
+Compatibility API
+ALPN negotiation
+Class: http2.Http2ServerRequest
+Event: 'aborted'
+Event: 'close'
+request.aborted
+request.authority
+request.complete
+request.connection
+request.destroy([error])
+request.headers
+request.httpVersion
+request.method
+request.rawHeaders
+request.rawTrailers
+request.scheme
+request.setTimeout(msecs, callback)
+request.socket
+request.stream
+request.trailers
+request.url
+Class: http2.Http2ServerResponse
+Event: 'close'
+Event: 'finish'
+response.addTrailers(headers)
+response.connection
+response.createPushResponse(headers, callback)
+response.end([data[, encoding]][, callback])
+response.finished
+response.getHeader(name)
+response.getHeaderNames()
+response.getHeaders()
+response.hasHeader(name)
+response.headersSent
+response.removeHeader(name)
+response.req
+response.sendDate
+response.setHeader(name, value)
+response.setTimeout(msecs[, callback])
+response.socket
+response.statusCode
+response.statusMessage
+response.stream
+response.writableEnded
+response.write(chunk[, encoding][, callback])
+response.writeContinue()
+response.writeEarlyHints(hints)
+response.writeHead(statusCode[, statusMessage][, headers])
+Collecting HTTP/2 performance metrics
+Note on :authority and host
+HTTPS
+Determining if crypto support is unavailable
+Class: https.Agent
+new Agent([options])
+Event: 'keylog'
+Class: https.Server
+server.close([callback])
+server[Symbol.asyncDispose]()
+server.closeAllConnections()
+server.closeIdleConnections()
+server.headersTimeout
+server.listen()
+server.maxHeadersCount
+server.requestTimeout
+server.setTimeout([msecs][, callback])
+server.timeout
+server.keepAliveTimeout
+https.createServer([options][, requestListener])
+https.get(options[, callback])
+https.get(url[, options][, callback])
+https.globalAgent
+https.request(options[, callback])
+https.request(url[, options][, callback])
+Inspector
+Promises API
+Class: inspector.Session
+new inspector.Session()
+Event: 'inspectorNotification'
+Event: <inspector-protocol-method>;
+session.connect()
+session.connectToMainThread()
+session.disconnect()
+session.post(method[, params])
+Example usage
+CPU profiler
+Heap profiler
+Callback API
+Class: inspector.Session
+new inspector.Session()
+Event: 'inspectorNotification'
+Event: <inspector-protocol-method>;
+session.connect()
+session.connectToMainThread()
+session.disconnect()
+session.post(method[, params][, callback])
+Example usage
+CPU profiler
+Heap profiler
+Common Objects
+inspector.close()
+inspector.console
+inspector.open([port[, host[, wait]]])
+inspector.url()
+inspector.waitForDebugger()
+Internationalization support
+Options for building Node.js
+Disable all internationalization features (none)
+Build with a pre-installed ICU (system-icu)
+Embed a limited set of ICU data (small-icu)
+Providing ICU data at runtime
+Embed the entire ICU (full-icu)
+Detecting internationalization support
+Modules: CommonJS modules
+Enabling
+Accessing the main module
+Package manager tips
+The .mjs extension
+All together
+Caching
+Module caching caveats
+Core modules
+Cycles
+File modules
+Folders as modules
+Loading from node_modules folders
+Loading from the global folders
+The module wrapper
+The module scope
+__dirname
+__filename
+exports
+module
+require(id)
+require.cache
+require.extensions
+require.main
+require.resolve(request[, options])
+require.resolve.paths(request)
+The module object
+module.children
+module.exports
+exports shortcut
+module.filename
+module.id
+module.isPreloading
+module.loaded
+module.parent
+module.path
+module.paths
+module.require(id)
+The Module object
+Source map v3 support
+Modules: ECMAScript modules
+Introduction
+Enabling
+Packages
+import Specifiers
+Terminology
+Mandatory file extensions
+URLs
+file: URLs
+data: imports
+node: imports
+Import attributes
+Builtin modules
+import() expressions
+import.meta
+import.meta.dirname
+import.meta.filename
+import.meta.url
+import.meta.resolve(specifier)
+Interoperability with CommonJS
+import statements
+require
+CommonJS Namespaces
+Differences between ES modules and CommonJS
+No require, exports, or module.exports
+No __filename or __dirname
+No Addon Loading
+No require.resolve
+No NODE_PATH
+No require.extensions
+No require.cache
+JSON modules
+Wasm modules
+Top-level await
+HTTPS and HTTP imports
+Imports are limited to HTTP/1
+HTTP is limited to loopback addresses
+Authentication is never sent to the destination server.
+CORS is never checked on the destination server
+Cannot load non-network dependencies
+Network-based loading is not enabled by default
+Loaders
+Resolution and loading algorithm
+Features
+Resolution algorithm
+Resolution Algorithm Specification
+Customizing ESM specifier resolution algorithm
+Modules: node:module API
+The Module object
+module.builtinModules
+module.createRequire(filename)
+module.isBuiltin(moduleName)
+module.register(specifier[, parentURL][, options])
+module.syncBuiltinESMExports()
+Customization Hooks
+Enabling
+Chaining
+Communication with module customization hooks
+Hooks
+initialize()
+resolve(specifier, context, nextResolve)
+load(url, context, nextLoad)
+Examples
+Import from HTTPS
+Transpilation
+Import maps
+Source map v3 support
+module.findSourceMap(path)
+Class: module.SourceMap
+new SourceMap(payload[, { lineLengths }])
+sourceMap.payload
+sourceMap.findEntry(lineOffset, columnOffset)
+sourceMap.findOrigin(lineNumber, columnNumber)
+Modules: Packages
+Introduction
+Determining module system
+Introduction
+Modules loaders
+package.json and file extensions
+--input-type flag
+Determining package manager
+Package entry points
+Main entry point export
+Subpath exports
+Extensions in subpaths
+Exports sugar
+Subpath imports
+Subpath patterns
+Conditional exports
+Nested conditions
+Resolving user conditions
+Community Conditions Definitions
+Self-referencing a package using its name
+Dual CommonJS/ES module packages
+Dual package hazard
+Writing dual packages while avoiding or minimizing hazards
+Approach #1: Use an ES module wrapper
+Approach #2: Isolate state
+Node.js package.json field definitions
+"name"
+"main"
+"packageManager"
+"type"
+"exports"
+"imports"
+Net
+IPC support
+Identifying paths for IPC connections
+Class: net.BlockList
+blockList.addAddress(address[, type])
+blockList.addRange(start, end[, type])
+blockList.addSubnet(net, prefix[, type])
+blockList.check(address[, type])
+blockList.rules
+Class: net.SocketAddress
+new net.SocketAddress([options])
+socketaddress.address
+socketaddress.family
+socketaddress.flowlabel
+socketaddress.port
+Class: net.Server
+new net.Server([options][, connectionListener])
+Event: 'close'
+Event: 'connection'
+Event: 'error'
+Event: 'listening'
+Event: 'drop'
+server.address()
+server.close([callback])
+server[Symbol.asyncDispose]()
+server.getConnections(callback)
+server.listen()
+server.listen(handle[, backlog][, callback])
+server.listen(options[, callback])
+server.listen(path[, backlog][, callback])
+server.listen([port[, host[, backlog]]][, callback])
+server.listening
+server.maxConnections
+server.ref()
+server.unref()
+Class: net.Socket
+new net.Socket([options])
+Event: 'close'
+Event: 'connect'
+Event: 'connectionAttempt'
+Event: 'connectionAttemptFailed'
+Event: 'connectionAttemptTimeout'
+Event: 'data'
+Event: 'drain'
+Event: 'end'
+Event: 'error'
+Event: 'lookup'
+Event: 'ready'
+Event: 'timeout'
+socket.address()
+socket.autoSelectFamilyAttemptedAddresses
+socket.bufferSize
+socket.bytesRead
+socket.bytesWritten
+socket.connect()
+socket.connect(options[, connectListener])
+socket.connect(path[, connectListener])
+socket.connect(port[, host][, connectListener])
+socket.connecting
+socket.destroy([error])
+socket.destroyed
+socket.destroySoon()
+socket.end([data[, encoding]][, callback])
+socket.localAddress
+socket.localPort
+socket.localFamily
+socket.pause()
+socket.pending
+socket.ref()
+socket.remoteAddress
+socket.remoteFamily
+socket.remotePort
+socket.resetAndDestroy()
+socket.resume()
+socket.setEncoding([encoding])
+socket.setKeepAlive([enable][, initialDelay])
+socket.setNoDelay([noDelay])
+socket.setTimeout(timeout[, callback])
+socket.timeout
+socket.unref()
+socket.write(data[, encoding][, callback])
+socket.readyState
+net.connect()
+net.connect(options[, connectListener])
+net.connect(path[, connectListener])
+net.connect(port[, host][, connectListener])
+net.createConnection()
+net.createConnection(options[, connectListener])
+net.createConnection(path[, connectListener])
+net.createConnection(port[, host][, connectListener])
+net.createServer([options][, connectionListener])
+net.getDefaultAutoSelectFamily()
+net.setDefaultAutoSelectFamily(value)
+net.getDefaultAutoSelectFamilyAttemptTimeout()
+net.setDefaultAutoSelectFamilyAttemptTimeout(value)
+net.isIP(input)
+net.isIPv4(input)
+net.isIPv6(input)
+OS
+os.EOL
+os.availableParallelism()
+os.arch()
+os.constants
+os.cpus()
+os.devNull
+os.endianness()
+os.freemem()
+os.getPriority([pid])
+os.homedir()
+os.hostname()
+os.loadavg()
+os.machine()
+os.networkInterfaces()
+os.platform()
+os.release()
+os.setPriority([pid, ]priority)
+os.tmpdir()
+os.totalmem()
+os.type()
+os.uptime()
+os.userInfo([options])
+os.version()
+OS constants
+Signal constants
+Error constants
+POSIX error constants
+Windows-specific error constants
+dlopen constants
+Priority constants
+libuv constants
+Path
+Windows vs. POSIX
+path.basename(path[, suffix])
+path.delimiter
+path.dirname(path)
+path.extname(path)
+path.format(pathObject)
+path.isAbsolute(path)
+path.join([...paths])
+path.normalize(path)
+path.parse(path)
+path.posix
+path.relative(from, to)
+path.resolve([...paths])
+path.sep
+path.toNamespacedPath(path)
+path.win32
+Performance measurement APIs
+perf_hooks.performance
+performance.clearMarks([name])
+performance.clearMeasures([name])
+performance.clearResourceTimings([name])
+performance.eventLoopUtilization([utilization1[, utilization2]])
+performance.getEntries()
+performance.getEntriesByName(name[, type])
+performance.getEntriesByType(type)
+performance.mark(name[, options])
+performance.markResourceTiming(timingInfo, requestedUrl, initiatorType, global, cacheMode)
+performance.measure(name[, startMarkOrOptions[, endMark]])
+performance.nodeTiming
+performance.now()
+performance.setResourceTimingBufferSize(maxSize)
+performance.timeOrigin
+performance.timerify(fn[, options])
+performance.toJSON()
+Event: 'resourcetimingbufferfull'
+Class: PerformanceEntry
+performanceEntry.duration
+performanceEntry.entryType
+performanceEntry.name
+performanceEntry.startTime
+Class: PerformanceMark
+performanceMark.detail
+Class: PerformanceMeasure
+performanceMeasure.detail
+Class: PerformanceNodeEntry
+performanceNodeEntry.detail
+performanceNodeEntry.flags
+performanceNodeEntry.kind
+Garbage Collection ('gc') Details
+HTTP ('http') Details
+HTTP/2 ('http2') Details
+Timerify ('function') Details
+Net ('net') Details
+DNS ('dns') Details
+Class: PerformanceNodeTiming
+performanceNodeTiming.bootstrapComplete
+performanceNodeTiming.environment
+performanceNodeTiming.idleTime
+performanceNodeTiming.loopExit
+performanceNodeTiming.loopStart
+performanceNodeTiming.nodeStart
+performanceNodeTiming.v8Start
+Class: PerformanceResourceTiming
+performanceResourceTiming.workerStart
+performanceResourceTiming.redirectStart
+performanceResourceTiming.redirectEnd
+performanceResourceTiming.fetchStart
+performanceResourceTiming.domainLookupStart
+performanceResourceTiming.domainLookupEnd
+performanceResourceTiming.connectStart
+performanceResourceTiming.connectEnd
+performanceResourceTiming.secureConnectionStart
+performanceResourceTiming.requestStart
+performanceResourceTiming.responseEnd
+performanceResourceTiming.transferSize
+performanceResourceTiming.encodedBodySize
+performanceResourceTiming.decodedBodySize
+performanceResourceTiming.toJSON()
+Class: PerformanceObserver
+PerformanceObserver.supportedEntryTypes
+new PerformanceObserver(callback)
+performanceObserver.disconnect()
+performanceObserver.observe(options)
+Class: PerformanceObserverEntryList
+performanceObserverEntryList.getEntries()
+performanceObserverEntryList.getEntriesByName(name[, type])
+performanceObserverEntryList.getEntriesByType(type)
+perf_hooks.createHistogram([options])
+perf_hooks.monitorEventLoopDelay([options])
+Class: Histogram
+histogram.count
+histogram.countBigInt
+histogram.exceeds
+histogram.exceedsBigInt
+histogram.max
+histogram.maxBigInt
+histogram.mean
+histogram.min
+histogram.minBigInt
+histogram.percentile(percentile)
+histogram.percentileBigInt(percentile)
+histogram.percentiles
+histogram.percentilesBigInt
+histogram.reset()
+histogram.stddev
+Class: IntervalHistogram extends Histogram
+histogram.disable()
+histogram.enable()
+Cloning an IntervalHistogram
+Class: RecordableHistogram extends Histogram
+histogram.add(other)
+histogram.record(val)
+histogram.recordDelta()
+Examples
+Measuring the duration of async operations
+Measuring how long it takes to load dependencies
+Measuring how long one HTTP round-trip takes
+Measuring how long the net.connect (only for TCP) takes when the connection is successful
+Measuring how long the DNS takes when the request is successful
+Permissions
+Module-based permissions
+Policies
+Enabling
+Features
+Error behavior
+Integrity checks
+Dependency redirection
+Example: Patched dependency
+Scopes
+Example
+Integrity using scopes
+Dependency redirection using scopes
+Example: import maps emulation
+Guarantees
+Process-based permissions
+Permission Model
+Runtime API
+permission.has(scope[, reference])
+File System Permissions
+Permission Model constraints
+Limitations and Known Issues
+Process
+Process events
+Event: 'beforeExit'
+Event: 'disconnect'
+Event: 'exit'
+Event: 'message'
+Event: 'multipleResolves'
+Event: 'rejectionHandled'
+Event: 'uncaughtException'
+Warning: Using 'uncaughtException' correctly
+Event: 'uncaughtExceptionMonitor'
+Event: 'unhandledRejection'
+Event: 'warning'
+Event: 'worker'
+Emitting custom warnings
+Node.js warning names
+Signal events
+process.abort()
+process.allowedNodeEnvironmentFlags
+process.arch
+process.argv
+process.argv0
+process.channel
+process.channel.ref()
+process.channel.unref()
+process.chdir(directory)
+process.config
+process.connected
+process.constrainedMemory()
+process.cpuUsage([previousValue])
+process.cwd()
+process.debugPort
+process.disconnect()
+process.dlopen(module, filename[, flags])
+process.emitWarning(warning[, options])
+process.emitWarning(warning[, type[, code]][, ctor])
+Avoiding duplicate warnings
+process.env
+process.execArgv
+process.execPath
+process.exit([code])
+process.exitCode
+process.getActiveResourcesInfo()
+process.getegid()
+process.geteuid()
+process.getgid()
+process.getgroups()
+process.getuid()
+process.hasUncaughtExceptionCaptureCallback()
+process.hrtime([time])
+process.hrtime.bigint()
+process.initgroups(user, extraGroup)
+process.kill(pid[, signal])
+process.mainModule
+process.memoryUsage()
+process.memoryUsage.rss()
+process.nextTick(callback[, ...args])
+When to use queueMicrotask() vs. process.nextTick()
+process.noDeprecation
+process.permission
+process.permission.has(scope[, reference])
+process.pid
+process.platform
+process.ppid
+process.release
+process.report
+process.report.compact
+process.report.directory
+process.report.filename
+process.report.getReport([err])
+process.report.reportOnFatalError
+process.report.reportOnSignal
+process.report.reportOnUncaughtException
+process.report.signal
+process.report.writeReport([filename][, err])
+process.resourceUsage()
+process.send(message[, sendHandle[, options]][, callback])
+process.setegid(id)
+process.seteuid(id)
+process.setgid(id)
+process.setgroups(groups)
+process.setuid(id)
+process.setSourceMapsEnabled(val)
+process.setUncaughtExceptionCaptureCallback(fn)
+process.sourceMapsEnabled
+process.stderr
+process.stderr.fd
+process.stdin
+process.stdin.fd
+process.stdout
+process.stdout.fd
+A note on process I/O
+process.throwDeprecation
+process.title
+process.traceDeprecation
+process.umask()
+process.umask(mask)
+process.uptime()
+process.version
+process.versions
+Exit codes
+Punycode
+punycode.decode(string)
+punycode.encode(string)
+punycode.toASCII(domain)
+punycode.toUnicode(domain)
+punycode.ucs2
+punycode.ucs2.decode(string)
+punycode.ucs2.encode(codePoints)
+punycode.version
+Query string
+querystring.decode()
+querystring.encode()
+querystring.escape(str)
+querystring.parse(str[, sep[, eq[, options]]])
+querystring.stringify(obj[, sep[, eq[, options]]])
+querystring.unescape(str)
+Readline
+Class: InterfaceConstructor
+Event: 'close'
+Event: 'line'
+Event: 'history'
+Event: 'pause'
+Event: 'resume'
+Event: 'SIGCONT'
+Event: 'SIGINT'
+Event: 'SIGTSTP'
+rl.close()
+rl.pause()
+rl.prompt([preserveCursor])
+rl.resume()
+rl.setPrompt(prompt)
+rl.getPrompt()
+rl.write(data[, key])
+rl[Symbol.asyncIterator]()
+rl.line
+rl.cursor
+rl.getCursorPos()
+Promises API
+Class: readlinePromises.Interface
+rl.question(query[, options])
+Class: readlinePromises.Readline
+new readlinePromises.Readline(stream[, options])
+rl.clearLine(dir)
+rl.clearScreenDown()
+rl.commit()
+rl.cursorTo(x[, y])
+rl.moveCursor(dx, dy)
+rl.rollback()
+readlinePromises.createInterface(options)
+Use of the completer function
+Callback API
+Class: readline.Interface
+rl.question(query[, options], callback)
+readline.clearLine(stream, dir[, callback])
+readline.clearScreenDown(stream[, callback])
+readline.createInterface(options)
+Use of the completer function
+readline.cursorTo(stream, x[, y][, callback])
+readline.moveCursor(stream, dx, dy[, callback])
+readline.emitKeypressEvents(stream[, interface])
+Example: Tiny CLI
+Example: Read file stream line-by-Line
+TTY keybindings
+REPL
+Design and features
+Commands and special keys
+Default evaluation
+JavaScript expressions
+Global and local scope
+Accessing core Node.js modules
+Global uncaught exceptions
+Assignment of the _ (underscore) variable
+await keyword
+Reverse-i-search
+Custom evaluation functions
+Recoverable errors
+Customizing REPL output
+Class: REPLServer
+Event: 'exit'
+Event: 'reset'
+replServer.defineCommand(keyword, cmd)
+replServer.displayPrompt([preserveCursor])
+replServer.clearBufferedCommand()
+replServer.parseREPLKeyword(keyword[, rest])
+replServer.setupHistory(historyPath, callback)
+repl.builtinModules
+repl.start([options])
+The Node.js REPL
+Environment variable options
+Persistent history
+Using the Node.js REPL with advanced line-editors
+Starting multiple REPL instances against a single running instance
+Diagnostic report
+Usage
+Configuration
+Interaction with workers
+Single executable applications
+Generating single executable preparation blobs
+Startup snapshot support
+V8 code cache support
+Notes
+require(id) in the injected module is not file based
+__filename and module.filename in the injected module
+__dirname in the injected module
+Single executable application creation process
+Platform support
+Stream
+Organization of this document
+Types of streams
+Streams Promises API
+stream.pipeline(source[, ...transforms], destination[, options])
+stream.pipeline(streams[, options])
+stream.finished(stream[, options])
+Object mode
+Buffering
+API for stream consumers
+Writable streams
+Class: stream.Writable
+Event: 'close'
+Event: 'drain'
+Event: 'error'
+Event: 'finish'
+Event: 'pipe'
+Event: 'unpipe'
+writable.cork()
+writable.destroy([error])
+writable.closed
+writable.destroyed
+writable.end([chunk[, encoding]][, callback])
+writable.setDefaultEncoding(encoding)
+writable.uncork()
+writable.writable
+writable.writableAborted
+writable.writableEnded
+writable.writableCorked
+writable.errored
+writable.writableFinished
+writable.writableHighWaterMark
+writable.writableLength
+writable.writableNeedDrain
+writable.writableObjectMode
+writable.write(chunk[, encoding][, callback])
+Readable streams
+Two reading modes
+Three states
+Choose one API style
+Class: stream.Readable
+Event: 'close'
+Event: 'data'
+Event: 'end'
+Event: 'error'
+Event: 'pause'
+Event: 'readable'
+Event: 'resume'
+readable.destroy([error])
+readable.closed
+readable.destroyed
+readable.isPaused()
+readable.pause()
+readable.pipe(destination[, options])
+readable.read([size])
+readable.readable
+readable.readableAborted
+readable.readableDidRead
+readable.readableEncoding
+readable.readableEnded
+readable.errored
+readable.readableFlowing
+readable.readableHighWaterMark
+readable.readableLength
+readable.readableObjectMode
+readable.resume()
+readable.setEncoding(encoding)
+readable.unpipe([destination])
+readable.unshift(chunk[, encoding])
+readable.wrap(stream)
+readable[Symbol.asyncIterator]()
+readable[Symbol.asyncDispose]()
+readable.compose(stream[, options])
+readable.iterator([options])
+readable.map(fn[, options])
+readable.filter(fn[, options])
+readable.forEach(fn[, options])
+readable.toArray([options])
+readable.some(fn[, options])
+readable.find(fn[, options])
+readable.every(fn[, options])
+readable.flatMap(fn[, options])
+readable.drop(limit[, options])
+readable.take(limit[, options])
+readable.reduce(fn[, initial[, options]])
+Duplex and transform streams
+Class: stream.Duplex
+duplex.allowHalfOpen
+Class: stream.Transform
+transform.destroy([error])
+stream.finished(stream[, options], callback)
+stream.pipeline(source[, ...transforms], destination, callback)
+stream.pipeline(streams, callback)
+stream.compose(...streams)
+stream.Readable.from(iterable[, options])
+stream.Readable.fromWeb(readableStream[, options])
+stream.Readable.isDisturbed(stream)
+stream.isErrored(stream)
+stream.isReadable(stream)
+stream.Readable.toWeb(streamReadable[, options])
+stream.Writable.fromWeb(writableStream[, options])
+stream.Writable.toWeb(streamWritable)
+stream.Duplex.from(src)
+stream.Duplex.fromWeb(pair[, options])
+stream.Duplex.toWeb(streamDuplex)
+stream.addAbortSignal(signal, stream)
+stream.getDefaultHighWaterMark(objectMode)
+stream.setDefaultHighWaterMark(objectMode, value)
+API for stream implementers
+Simplified construction
+Implementing a writable stream
+new stream.Writable([options])
+writable._construct(callback)
+writable._write(chunk, encoding, callback)
+writable._writev(chunks, callback)
+writable._destroy(err, callback)
+writable._final(callback)
+Errors while writing
+An example writable stream
+Decoding buffers in a writable stream
+Implementing a readable stream
+new stream.Readable([options])
+readable._construct(callback)
+readable._read(size)
+readable._destroy(err, callback)
+readable.push(chunk[, encoding])
+Errors while reading
+An example counting stream
+Implementing a duplex stream
+new stream.Duplex(options)
+An example duplex stream
+Object mode duplex streams
+Implementing a transform stream
+new stream.Transform([options])
+Event: 'end'
+Event: 'finish'
+transform._flush(callback)
+transform._transform(chunk, encoding, callback)
+Class: stream.PassThrough
+Additional notes
+Streams compatibility with async generators and async iterators
+Consuming readable streams with async iterators
+Creating readable streams with async generators
+Piping to writable streams from async iterators
+Compatibility with older Node.js versions
+readable.read(0)
+readable.push('')
+highWaterMark discrepancy after calling readable.setEncoding()
+String decoder
+Class: StringDecoder
+new StringDecoder([encoding])
+stringDecoder.end([buffer])
+stringDecoder.write(buffer)
+Test runner
+Subtests
+Skipping tests
+describe/it syntax
+only tests
+Filtering tests by name
+Extraneous asynchronous activity
+Watch mode
+Running tests from the command line
+Test runner execution model
+Collecting code coverage
+Coverage reporters
+Limitations
+Mocking
+Timers
+Dates
+Test reporters
+Custom reporters
+Multiple reporters
+run([options])
+test([name][, options][, fn])
+test.skip([name][, options][, fn])
+test.todo([name][, options][, fn])
+test.only([name][, options][, fn])
+describe([name][, options][, fn])
+describe.skip([name][, options][, fn])
+describe.todo([name][, options][, fn])
+describe.only([name][, options][, fn])
+it([name][, options][, fn])
+it.skip([name][, options][, fn])
+it.todo([name][, options][, fn])
+it.only([name][, options][, fn])
+before([fn][, options])
+after([fn][, options])
+beforeEach([fn][, options])
+afterEach([fn][, options])
+Class: MockFunctionContext
+ctx.calls
+ctx.callCount()
+ctx.mockImplementation(implementation)
+ctx.mockImplementationOnce(implementation[, onCall])
+ctx.resetCalls()
+ctx.restore()
+Class: MockTracker
+mock.fn([original[, implementation]][, options])
+mock.getter(object, methodName[, implementation][, options])
+mock.method(object, methodName[, implementation][, options])
+mock.reset()
+mock.restoreAll()
+mock.setter(object, methodName[, implementation][, options])
+Class: MockTimers
+timers.enable([enableOptions])
+timers.reset()
+timers[Symbol.dispose]()
+timers.tick(milliseconds)
+Using clear functions
+Working with Node.js timers modules
+timers.runAll()
+timers.setTime(milliseconds)
+Dates and Timers working together
+Class: TestsStream
+Event: 'test:coverage'
+Event: 'test:dequeue'
+Event: 'test:diagnostic'
+Event: 'test:enqueue'
+Event: 'test:fail'
+Event: 'test:pass'
+Event: 'test:plan'
+Event: 'test:start'
+Event: 'test:stderr'
+Event: 'test:stdout'
+Event: 'test:watch:drained'
+Class: TestContext
+context.before([fn][, options])
+context.beforeEach([fn][, options])
+context.after([fn][, options])
+context.afterEach([fn][, options])
+context.diagnostic(message)
+context.name
+context.runOnly(shouldRunOnlyTests)
+context.signal
+context.skip([message])
+context.todo([message])
+context.test([name][, options][, fn])
+Class: SuiteContext
+context.name
+context.signal
+Timers
+Class: Immediate
+immediate.hasRef()
+immediate.ref()
+immediate.unref()
+immediate[Symbol.dispose]()
+Class: Timeout
+timeout.close()
+timeout.hasRef()
+timeout.ref()
+timeout.refresh()
+timeout.unref()
+timeout[Symbol.toPrimitive]()
+timeout[Symbol.dispose]()
+Scheduling timers
+setImmediate(callback[, ...args])
+setInterval(callback[, delay[, ...args]])
+setTimeout(callback[, delay[, ...args]])
+Cancelling timers
+clearImmediate(immediate)
+clearInterval(timeout)
+clearTimeout(timeout)
+Timers Promises API
+timersPromises.setTimeout([delay[, value[, options]]])
+timersPromises.setImmediate([value[, options]])
+timersPromises.setInterval([delay[, value[, options]]])
+timersPromises.scheduler.wait(delay[, options])
+timersPromises.scheduler.yield()
+TLS (SSL)
+Determining if crypto support is unavailable
+TLS/SSL concepts
+Perfect forward secrecy
+ALPN and SNI
+Pre-shared keys
+Client-initiated renegotiation attack mitigation
+Session resumption
+Session identifiers
+Session tickets
+Modifying the default TLS cipher suite
+X509 certificate error codes
+Class: tls.CryptoStream
+cryptoStream.bytesWritten
+Class: tls.SecurePair
+Event: 'secure'
+Class: tls.Server
+Event: 'connection'
+Event: 'keylog'
+Event: 'newSession'
+Event: 'OCSPRequest'
+Event: 'resumeSession'
+Event: 'secureConnection'
+Event: 'tlsClientError'
+server.addContext(hostname, context)
+server.address()
+server.close([callback])
+server.getTicketKeys()
+server.listen()
+server.setSecureContext(options)
+server.setTicketKeys(keys)
+Class: tls.TLSSocket
+new tls.TLSSocket(socket[, options])
+Event: 'keylog'
+Event: 'OCSPResponse'
+Event: 'secureConnect'
+Event: 'session'
+tlsSocket.address()
+tlsSocket.authorizationError
+tlsSocket.authorized
+tlsSocket.disableRenegotiation()
+tlsSocket.enableTrace()
+tlsSocket.encrypted
+tlsSocket.exportKeyingMaterial(length, label[, context])
+tlsSocket.getCertificate()
+tlsSocket.getCipher()
+tlsSocket.getEphemeralKeyInfo()
+tlsSocket.getFinished()
+tlsSocket.getPeerCertificate([detailed])
+Certificate object
+tlsSocket.getPeerFinished()
+tlsSocket.getPeerX509Certificate()
+tlsSocket.getProtocol()
+tlsSocket.getSession()
+tlsSocket.getSharedSigalgs()
+tlsSocket.getTLSTicket()
+tlsSocket.getX509Certificate()
+tlsSocket.isSessionReused()
+tlsSocket.localAddress
+tlsSocket.localPort
+tlsSocket.remoteAddress
+tlsSocket.remoteFamily
+tlsSocket.remotePort
+tlsSocket.renegotiate(options, callback)
+tlsSocket.setMaxSendFragment(size)
+tls.checkServerIdentity(hostname, cert)
+tls.connect(options[, callback])
+tls.connect(path[, options][, callback])
+tls.connect(port[, host][, options][, callback])
+tls.createSecureContext([options])
+tls.createSecurePair([context][, isServer][, requestCert][, rejectUnauthorized][, options])
+tls.createServer([options][, secureConnectionListener])
+tls.getCiphers()
+tls.rootCertificates
+tls.DEFAULT_ECDH_CURVE
+tls.DEFAULT_MAX_VERSION
+tls.DEFAULT_MIN_VERSION
+tls.DEFAULT_CIPHERS
+Trace events
+The node:trace_events module
+Tracing object
+tracing.categories
+tracing.disable()
+tracing.enable()
+tracing.enabled
+trace_events.createTracing(options)
+trace_events.getEnabledCategories()
+Examples
+Collect trace events data by inspector
+TTY
+Class: tty.ReadStream
+readStream.isRaw
+readStream.isTTY
+readStream.setRawMode(mode)
+Class: tty.WriteStream
+Event: 'resize'
+writeStream.clearLine(dir[, callback])
+writeStream.clearScreenDown([callback])
+writeStream.columns
+writeStream.cursorTo(x[, y][, callback])
+writeStream.getColorDepth([env])
+writeStream.getWindowSize()
+writeStream.hasColors([count][, env])
+writeStream.isTTY
+writeStream.moveCursor(dx, dy[, callback])
+writeStream.rows
+tty.isatty(fd)
+UDP/datagram sockets
+Class: dgram.Socket
+Event: 'close'
+Event: 'connect'
+Event: 'error'
+Event: 'listening'
+Event: 'message'
+socket.addMembership(multicastAddress[, multicastInterface])
+socket.addSourceSpecificMembership(sourceAddress, groupAddress[, multicastInterface])
+socket.address()
+socket.bind([port][, address][, callback])
+socket.bind(options[, callback])
+socket.close([callback])
+socket[Symbol.asyncDispose]()
+socket.connect(port[, address][, callback])
+socket.disconnect()
+socket.dropMembership(multicastAddress[, multicastInterface])
+socket.dropSourceSpecificMembership(sourceAddress, groupAddress[, multicastInterface])
+socket.getRecvBufferSize()
+socket.getSendBufferSize()
+socket.getSendQueueSize()
+socket.getSendQueueCount()
+socket.ref()
+socket.remoteAddress()
+socket.send(msg[, offset, length][, port][, address][, callback])
+Note about UDP datagram size
+socket.setBroadcast(flag)
+socket.setMulticastInterface(multicastInterface)
+Example: IPv6 outgoing multicast interface
+Example: IPv4 outgoing multicast interface
+Call results
+socket.setMulticastLoopback(flag)
+socket.setMulticastTTL(ttl)
+socket.setRecvBufferSize(size)
+socket.setSendBufferSize(size)
+socket.setTTL(ttl)
+socket.unref()
+node:dgram module functions
+dgram.createSocket(options[, callback])
+dgram.createSocket(type[, callback])
+URL
+URL strings and URL objects
+Constructing a URL from component parts and getting the constructed string
+The WHATWG URL API
+Class: URL
+new URL(input[, base])
+url.hash
+url.host
+url.hostname
+url.href
+url.origin
+url.password
+url.pathname
+url.port
+url.protocol
+Special schemes
+url.search
+url.searchParams
+url.username
+url.toString()
+url.toJSON()
+URL.createObjectURL(blob)
+URL.revokeObjectURL(id)
+URL.canParse(input[, base])
+Class: URLSearchParams
+new URLSearchParams()
+new URLSearchParams(string)
+new URLSearchParams(obj)
+new URLSearchParams(iterable)
+urlSearchParams.append(name, value)
+urlSearchParams.delete(name[, value])
+urlSearchParams.entries()
+urlSearchParams.forEach(fn[, thisArg])
+urlSearchParams.get(name)
+urlSearchParams.getAll(name)
+urlSearchParams.has(name[, value])
+urlSearchParams.keys()
+urlSearchParams.set(name, value)
+urlSearchParams.size
+urlSearchParams.sort()
+urlSearchParams.toString()
+urlSearchParams.values()
+urlSearchParams[Symbol.iterator]()
+url.domainToASCII(domain)
+url.domainToUnicode(domain)
+url.fileURLToPath(url)
+url.format(URL[, options])
+url.pathToFileURL(path)
+url.urlToHttpOptions(url)
+Legacy URL API
+Legacy urlObject
+urlObject.auth
+urlObject.hash
+urlObject.host
+urlObject.hostname
+urlObject.href
+urlObject.path
+urlObject.pathname
+urlObject.port
+urlObject.protocol
+urlObject.query
+urlObject.search
+urlObject.slashes
+url.format(urlObject)
+url.parse(urlString[, parseQueryString[, slashesDenoteHost]])
+url.resolve(from, to)
+Percent-encoding in URLs
+Legacy API
+WHATWG API
+Util
+util.callbackify(original)
+util.debuglog(section[, callback])
+debuglog().enabled
+util.debug(section)
+util.deprecate(fn, msg[, code])
+util.format(format[, ...args])
+util.formatWithOptions(inspectOptions, format[, ...args])
+util.getSystemErrorName(err)
+util.getSystemErrorMap()
+util.inherits(constructor, superConstructor)
+util.inspect(object[, options])
+util.inspect(object[, showHidden[, depth[, colors]]])
+Customizing util.inspect colors
+Modifiers
+Foreground colors
+Background colors
+Custom inspection functions on objects
+util.inspect.custom
+util.inspect.defaultOptions
+util.isDeepStrictEqual(val1, val2)
+Class: util.MIMEType
+Constructor: new MIMEType(input)
+mime.type
+mime.subtype
+mime.essence
+mime.params
+mime.toString()
+mime.toJSON()
+Class: util.MIMEParams
+Constructor: new MIMEParams()
+mimeParams.delete(name)
+mimeParams.entries()
+mimeParams.get(name)
+mimeParams.has(name)
+mimeParams.keys()
+mimeParams.set(name, value)
+mimeParams.values()
+mimeParams[@@iterator]()
+util.parseArgs([config])
+parseArgs tokens
+util.promisify(original)
+Custom promisified functions
+util.promisify.custom
+util.stripVTControlCharacters(str)
+Class: util.TextDecoder
+WHATWG supported encodings
+Encodings supported by default (with full ICU data)
+Encodings supported when Node.js is built with the small-icu option
+Encodings supported when ICU is disabled
+new TextDecoder([encoding[, options]])
+textDecoder.decode([input[, options]])
+textDecoder.encoding
+textDecoder.fatal
+textDecoder.ignoreBOM
+Class: util.TextEncoder
+textEncoder.encode([input])
+textEncoder.encodeInto(src, dest)
+textEncoder.encoding
+util.toUSVString(string)
+util.transferableAbortController()
+util.transferableAbortSignal(signal)
+util.aborted(signal, resource)
+util.types
+util.types.isAnyArrayBuffer(value)
+util.types.isArrayBufferView(value)
+util.types.isArgumentsObject(value)
+util.types.isArrayBuffer(value)
+util.types.isAsyncFunction(value)
+util.types.isBigInt64Array(value)
+util.types.isBigUint64Array(value)
+util.types.isBooleanObject(value)
+util.types.isBoxedPrimitive(value)
+util.types.isCryptoKey(value)
+util.types.isDataView(value)
+util.types.isDate(value)
+util.types.isExternal(value)
+util.types.isFloat32Array(value)
+util.types.isFloat64Array(value)
+util.types.isGeneratorFunction(value)
+util.types.isGeneratorObject(value)
+util.types.isInt8Array(value)
+util.types.isInt16Array(value)
+util.types.isInt32Array(value)
+util.types.isKeyObject(value)
+util.types.isMap(value)
+util.types.isMapIterator(value)
+util.types.isModuleNamespaceObject(value)
+util.types.isNativeError(value)
+util.types.isNumberObject(value)
+util.types.isPromise(value)
+util.types.isProxy(value)
+util.types.isRegExp(value)
+util.types.isSet(value)
+util.types.isSetIterator(value)
+util.types.isSharedArrayBuffer(value)
+util.types.isStringObject(value)
+util.types.isSymbolObject(value)
+util.types.isTypedArray(value)
+util.types.isUint8Array(value)
+util.types.isUint8ClampedArray(value)
+util.types.isUint16Array(value)
+util.types.isUint32Array(value)
+util.types.isWeakMap(value)
+util.types.isWeakSet(value)
+util.types.isWebAssemblyCompiledModule(value)
+Deprecated APIs
+util._extend(target, source)
+util.isArray(object)
+util.isBoolean(object)
+util.isBuffer(object)
+util.isDate(object)
+util.isError(object)
+util.isFunction(object)
+util.isNull(object)
+util.isNullOrUndefined(object)
+util.isNumber(object)
+util.isObject(object)
+util.isPrimitive(object)
+util.isRegExp(object)
+util.isString(object)
+util.isSymbol(object)
+util.isUndefined(object)
+util.log(string)
+V8
+v8.cachedDataVersionTag()
+v8.getHeapCodeStatistics()
+v8.getHeapSnapshot([options])
+v8.getHeapSpaceStatistics()
+v8.getHeapStatistics()
+v8.setFlagsFromString(flags)
+v8.stopCoverage()
+v8.takeCoverage()
+v8.writeHeapSnapshot([filename[,options]])
+v8.setHeapSnapshotNearHeapLimit(limit)
+Serialization API
+v8.serialize(value)
+v8.deserialize(buffer)
+Class: v8.Serializer
+new Serializer()
+serializer.writeHeader()
+serializer.writeValue(value)
+serializer.releaseBuffer()
+serializer.transferArrayBuffer(id, arrayBuffer)
+serializer.writeUint32(value)
+serializer.writeUint64(hi, lo)
+serializer.writeDouble(value)
+serializer.writeRawBytes(buffer)
+serializer._writeHostObject(object)
+serializer._getDataCloneError(message)
+serializer._getSharedArrayBufferId(sharedArrayBuffer)
+serializer._setTreatArrayBufferViewsAsHostObjects(flag)
+Class: v8.Deserializer
+new Deserializer(buffer)
+deserializer.readHeader()
+deserializer.readValue()
+deserializer.transferArrayBuffer(id, arrayBuffer)
+deserializer.getWireFormatVersion()
+deserializer.readUint32()
+deserializer.readUint64()
+deserializer.readDouble()
+deserializer.readRawBytes(length)
+deserializer._readHostObject()
+Class: v8.DefaultSerializer
+Class: v8.DefaultDeserializer
+Promise hooks
+promiseHooks.onInit(init)
+promiseHooks.onSettled(settled)
+promiseHooks.onBefore(before)
+promiseHooks.onAfter(after)
+promiseHooks.createHook(callbacks)
+Hook callbacks
+init(promise, parent)
+before(promise)
+after(promise)
+settled(promise)
+Startup Snapshot API
+v8.startupSnapshot.addSerializeCallback(callback[, data])
+v8.startupSnapshot.addDeserializeCallback(callback[, data])
+v8.startupSnapshot.setDeserializeMainFunction(callback[, data])
+v8.startupSnapshot.isBuildingSnapshot()
+Class: v8.GCProfiler
+new v8.GCProfiler()
+profiler.start()
+profiler.stop()
+VM (executing JavaScript)
+Class: vm.Script
+new vm.Script(code[, options])
+script.cachedDataRejected
+script.createCachedData()
+script.runInContext(contextifiedObject[, options])
+script.runInNewContext([contextObject[, options]])
+script.runInThisContext([options])
+script.sourceMapURL
+Class: vm.Module
+module.dependencySpecifiers
+module.error
+module.evaluate([options])
+module.identifier
+module.link(linker)
+module.namespace
+module.status
+Class: vm.SourceTextModule
+new vm.SourceTextModule(code[, options])
+sourceTextModule.createCachedData()
+Class: vm.SyntheticModule
+new vm.SyntheticModule(exportNames, evaluateCallback[, options])
+syntheticModule.setExport(name, value)
+vm.compileFunction(code[, params[, options]])
+vm.createContext([contextObject[, options]])
+vm.isContext(object)
+vm.measureMemory([options])
+vm.runInContext(code, contextifiedObject[, options])
+vm.runInNewContext(code[, contextObject[, options]])
+vm.runInThisContext(code[, options])
+Example: Running an HTTP server within a VM
+What does it mean to "contextify" an object?
+Timeout interactions with asynchronous tasks and Promises
+WebAssembly System Interface (WASI)
+Security
+Class: WASI
+new WASI([options])
+wasi.getImportObject()
+wasi.start(instance)
+wasi.initialize(instance)
+wasi.wasiImport
+Web Crypto API
+Examples
+Generating keys
+AES keys
+ECDSA key pairs
+Ed25519/Ed448/X25519/X448 key pairs
+HMAC keys
+RSA key pairs
+Encryption and decryption
+Exporting and importing keys
+Wrapping and unwrapping keys
+Sign and verify
+Deriving bits and keys
+Digest
+Algorithm matrix
+Class: Crypto
+crypto.subtle
+crypto.getRandomValues(typedArray)
+crypto.randomUUID()
+Class: CryptoKey
+cryptoKey.algorithm
+cryptoKey.extractable
+cryptoKey.type
+cryptoKey.usages
+Class: CryptoKeyPair
+cryptoKeyPair.privateKey
+cryptoKeyPair.publicKey
+Class: SubtleCrypto
+subtle.decrypt(algorithm, key, data)
+subtle.deriveBits(algorithm, baseKey, length)
+subtle.deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+subtle.digest(algorithm, data)
+subtle.encrypt(algorithm, key, data)
+subtle.exportKey(format, key)
+subtle.generateKey(algorithm, extractable, keyUsages)
+subtle.importKey(format, keyData, algorithm, extractable, keyUsages)
+subtle.sign(algorithm, key, data)
+subtle.unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extractable, keyUsages)
+subtle.verify(algorithm, key, signature, data)
+subtle.wrapKey(format, key, wrappingKey, wrapAlgo)
+Algorithm parameters
+Class: AlgorithmIdentifier
+algorithmIdentifier.name
+Class: AesCbcParams
+aesCbcParams.iv
+aesCbcParams.name
+Class: AesCtrParams
+aesCtrParams.counter
+aesCtrParams.length
+aesCtrParams.name
+Class: AesGcmParams
+aesGcmParams.additionalData
+aesGcmParams.iv
+aesGcmParams.name
+aesGcmParams.tagLength
+Class: AesKeyGenParams
+aesKeyGenParams.length
+aesKeyGenParams.name
+Class: EcdhKeyDeriveParams
+ecdhKeyDeriveParams.name
+ecdhKeyDeriveParams.public
+Class: EcdsaParams
+ecdsaParams.hash
+ecdsaParams.name
+Class: EcKeyGenParams
+ecKeyGenParams.name
+ecKeyGenParams.namedCurve
+Class: EcKeyImportParams
+ecKeyImportParams.name
+ecKeyImportParams.namedCurve
+Class: Ed448Params
+ed448Params.name
+ed448Params.context
+Class: HkdfParams
+hkdfParams.hash
+hkdfParams.info
+hkdfParams.name
+hkdfParams.salt
+Class: HmacImportParams
+hmacImportParams.hash
+hmacImportParams.length
+hmacImportParams.name
+Class: HmacKeyGenParams
+hmacKeyGenParams.hash
+hmacKeyGenParams.length
+hmacKeyGenParams.name
+Class: Pbkdf2Params
+pbkdb2Params.hash
+pbkdf2Params.iterations
+pbkdf2Params.name
+pbkdf2Params.salt
+Class: RsaHashedImportParams
+rsaHashedImportParams.hash
+rsaHashedImportParams.name
+Class: RsaHashedKeyGenParams
+rsaHashedKeyGenParams.hash
+rsaHashedKeyGenParams.modulusLength
+rsaHashedKeyGenParams.name
+rsaHashedKeyGenParams.publicExponent
+Class: RsaOaepParams
+rsaOaepParams.label
+rsaOaepParams.name
+Class: RsaPssParams
+rsaPssParams.name
+rsaPssParams.saltLength
+Web Streams API
+Overview
+Example ReadableStream
+API
+Class: ReadableStream
+new ReadableStream([underlyingSource [, strategy]])
+readableStream.locked
+readableStream.cancel([reason])
+readableStream.getReader([options])
+readableStream.pipeThrough(transform[, options])
+readableStream.pipeTo(destination[, options])
+readableStream.tee()
+readableStream.values([options])
+Async Iteration
+Transferring with postMessage()
+ReadableStream.from(iterable)
+Class: ReadableStreamDefaultReader
+new ReadableStreamDefaultReader(stream)
+readableStreamDefaultReader.cancel([reason])
+readableStreamDefaultReader.closed
+readableStreamDefaultReader.read()
+readableStreamDefaultReader.releaseLock()
+Class: ReadableStreamBYOBReader
+new ReadableStreamBYOBReader(stream)
+readableStreamBYOBReader.cancel([reason])
+readableStreamBYOBReader.closed
+readableStreamBYOBReader.read(view)
+readableStreamBYOBReader.releaseLock()
+Class: ReadableStreamDefaultController
+readableStreamDefaultController.close()
+readableStreamDefaultController.desiredSize
+readableStreamDefaultController.enqueue([chunk])
+readableStreamDefaultController.error([error])
+Class: ReadableByteStreamController
+readableByteStreamController.byobRequest
+readableByteStreamController.close()
+readableByteStreamController.desiredSize
+readableByteStreamController.enqueue(chunk)
+readableByteStreamController.error([error])
+Class: ReadableStreamBYOBRequest
+readableStreamBYOBRequest.respond(bytesWritten)
+readableStreamBYOBRequest.respondWithNewView(view)
+readableStreamBYOBRequest.view
+Class: WritableStream
+new WritableStream([underlyingSink[, strategy]])
+writableStream.abort([reason])
+writableStream.close()
+writableStream.getWriter()
+writableStream.locked
+Transferring with postMessage()
+Class: WritableStreamDefaultWriter
+new WritableStreamDefaultWriter(stream)
+writableStreamDefaultWriter.abort([reason])
+writableStreamDefaultWriter.close()
+writableStreamDefaultWriter.closed
+writableStreamDefaultWriter.desiredSize
+writableStreamDefaultWriter.ready
+writableStreamDefaultWriter.releaseLock()
+writableStreamDefaultWriter.write([chunk])
+Class: WritableStreamDefaultController
+writableStreamDefaultController.error([error])
+writableStreamDefaultController.signal
+Class: TransformStream
+new TransformStream([transformer[, writableStrategy[, readableStrategy]]])
+transformStream.readable
+transformStream.writable
+Transferring with postMessage()
+Class: TransformStreamDefaultController
+transformStreamDefaultController.desiredSize
+transformStreamDefaultController.enqueue([chunk])
+transformStreamDefaultController.error([reason])
+transformStreamDefaultController.terminate()
+Class: ByteLengthQueuingStrategy
+new ByteLengthQueuingStrategy(init)
+byteLengthQueuingStrategy.highWaterMark
+byteLengthQueuingStrategy.size
+Class: CountQueuingStrategy
+new CountQueuingStrategy(init)
+countQueuingStrategy.highWaterMark
+countQueuingStrategy.size
+Class: TextEncoderStream
+new TextEncoderStream()
+textEncoderStream.encoding
+textEncoderStream.readable
+textEncoderStream.writable
+Class: TextDecoderStream
+new TextDecoderStream([encoding[, options]])
+textDecoderStream.encoding
+textDecoderStream.fatal
+textDecoderStream.ignoreBOM
+textDecoderStream.readable
+textDecoderStream.writable
+Class: CompressionStream
+new CompressionStream(format)
+compressionStream.readable
+compressionStream.writable
+Class: DecompressionStream
+new DecompressionStream(format)
+decompressionStream.readable
+decompressionStream.writable
+Utility Consumers
+streamConsumers.arrayBuffer(stream)
+streamConsumers.blob(stream)
+streamConsumers.buffer(stream)
+streamConsumers.json(stream)
+streamConsumers.text(stream)
+Worker threads
+worker.getEnvironmentData(key)
+worker.isMainThread
+worker.markAsUntransferable(object)
+worker.isMarkedAsUntransferable(object)
+worker.moveMessagePortToContext(port, contextifiedSandbox)
+worker.parentPort
+worker.receiveMessageOnPort(port)
+worker.resourceLimits
+worker.SHARE_ENV
+worker.setEnvironmentData(key[, value])
+worker.threadId
+worker.workerData
+Class: BroadcastChannel extends EventTarget
+new BroadcastChannel(name)
+broadcastChannel.close()
+broadcastChannel.onmessage
+broadcastChannel.onmessageerror
+broadcastChannel.postMessage(message)
+broadcastChannel.ref()
+broadcastChannel.unref()
+Class: MessageChannel
+Class: MessagePort
+Event: 'close'
+Event: 'message'
+Event: 'messageerror'
+port.close()
+port.postMessage(value[, transferList])
+Considerations when transferring TypedArrays and Buffers
+Considerations when cloning objects with prototypes, classes, and accessors
+port.hasRef()
+port.ref()
+port.start()
+port.unref()
+Class: Worker
+new Worker(filename[, options])
+Event: 'error'
+Event: 'exit'
+Event: 'message'
+Event: 'messageerror'
+Event: 'online'
+worker.getHeapSnapshot([options])
+worker.performance
+performance.eventLoopUtilization([utilization1[, utilization2]])
+worker.postMessage(value[, transferList])
+worker.ref()
+worker.resourceLimits
+worker.stderr
+worker.stdin
+worker.stdout
+worker.terminate()
+worker.threadId
+worker.unref()
+Notes
+Synchronous blocking of stdio
+Launching worker threads from preload scripts
+Zlib
+Threadpool usage and performance considerations
+Compressing HTTP requests and responses
+Memory usage tuning
+For zlib-based streams
+For Brotli-based streams
+Flushing
+Constants
+zlib constants
+Brotli constants
+Flush operations
+Compressor options
+Decompressor options
+Class: Options
+Class: BrotliOptions
+Class: zlib.BrotliCompress
+Class: zlib.BrotliDecompress
+Class: zlib.Deflate
+Class: zlib.DeflateRaw
+Class: zlib.Gunzip
+Class: zlib.Gzip
+Class: zlib.Inflate
+Class: zlib.InflateRaw
+Class: zlib.Unzip
+Class: zlib.ZlibBase
+zlib.bytesRead
+zlib.bytesWritten
+zlib.close([callback])
+zlib.flush([kind, ]callback)
+zlib.params(level, strategy, callback)
+zlib.reset()
+zlib.constants
+zlib.createBrotliCompress([options])
+zlib.createBrotliDecompress([options])
+zlib.createDeflate([options])
+zlib.createDeflateRaw([options])
+zlib.createGunzip([options])
+zlib.createGzip([options])
+zlib.createInflate([options])
+zlib.createInflateRaw([options])
+zlib.createUnzip([options])
+Convenience methods
+zlib.brotliCompress(buffer[, options], callback)
+zlib.brotliCompressSync(buffer[, options])
+zlib.brotliDecompress(buffer[, options], callback)
+zlib.brotliDecompressSync(buffer[, options])
+zlib.deflate(buffer[, options], callback)
+zlib.deflateSync(buffer[, options])
+zlib.deflateRaw(buffer[, options], callback)
+zlib.deflateRawSync(buffer[, options])
+zlib.gunzip(buffer[, options], callback)
+zlib.gunzipSync(buffer[, options])
+zlib.gzip(buffer[, options], callback)
+zlib.gzipSync(buffer[, options])
+zlib.inflate(buffer[, options], callback)
+zlib.inflateSync(buffer[, options])
+zlib.inflateRaw(buffer[, options], callback)
+zlib.inflateRawSync(buffer[, options])
+zlib.unzip(buffer[, options], callback)
+zlib.unzipSync(buffer[, options])
