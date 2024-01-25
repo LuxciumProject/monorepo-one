@@ -17,7 +17,120 @@
 
 ## Color Wheel
 
-{red, blue, green, magenta, cyan, yellow, orange, pink, gray, purple, brown, lime, black, white}
+{red, blue, green, magenta, cyan, yellow, orange, pink, gray, purple, brown, black, white}
+
+white, black grey, red, green blue, magenta, yellow, cyan, orange, purple
+
+yellow and red makes orange
+magenta and blue makes magenta
+to make teal you can use cyan and green
+to make chartreuse you can use yellow and green
+
+# creating new color not yet named so far
+## We will be mixing two basic color names to get an new one
+## Tose already mention for this specific exercise are those bellow
+blac, white, gray.
+red, green, blue.
+yellow, magenta, cyan.
+
+teal
+chartreuse
+orange
+purple
+brown
+pink
+lime
+azure
+violet
+amber
+turquoise
+coral
+chartreuse
+vermilion
+lavender
+jade
+cerulean
+crimson
+gold
+fuchsia
+indigo
+scarlet
+plum
+silver
+sapphire
+rose
+olive
+orchid
+ruby
+emerald
+
+## now we will list colours based on multi colour properties:
+bold
+bright
+clear
+dark
+dull
+dusty
+earthy
+faded
+hard
+fluorescent
+gleaming
+glimmering
+glittering
+glossy
+glossy
+glowing
+grainy
+gritty
+iridescent
+light
+luminous
+lustrous
+matte
+metallic
+muddy
+neon
+opalescent
+opaque
+pale
+pearlescent
+phosphorescent
+polished
+rough
+sandy
+shimmering
+shiny
+sleek
+smooth
+sparkling
+textured
+translucent
+transparent
+vivid
+woody
+worn
+
+
+
+
+
+
+
+
+
+
+
+
+
+yellow and cyan makes lime
+yellow and magenta makes pink
+yelloy and red makes orange
+yellow and green makes chartreuse
+yellow and blue makes green
+
+
+
 {vermilion, azure, lime, fuschia, teal, lemon, coral, rose, slate, lavender, mauve, tan, chartreuse, onyx, ivory}
 {scarlet, cerulean, emerald, orchid, turquoise, gold, peach, flamingo, silver, violet, beige, pear, charcoal, alabaster}
 {carmine, indigo, olive, berry, electric blue, mustard, tangerine, bubblegum, ash, amethyst, sienna, olive, obsidian, cream}
