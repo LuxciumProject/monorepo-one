@@ -7,14 +7,6 @@ from PIL import Image
 import argparse
 import os
 
-# we will import the toolings to create a command line tool with the goal
-# to inget one png image as input and tranform it as a bmp for quick parsing.
-# The goal will be to make a shuffler taht will make squares of a given amout
-# of pixels (default to 10) and move them in a random way. then output the
-# image back to the same folder with a name slightly different than the source.
-# the output would be as a png again.
-
-
 # Function to parse command line arguments
 def parse_arguments():
   """
@@ -56,8 +48,6 @@ def shuffle_image(image, size):
 
   return shuffled_image
 
-
-
 # Function to save the shuffled image
 def save_image(image, output_path):
   """
@@ -85,8 +75,10 @@ def save_image(image, output_path):
     output_path = os.path.join(input_dir, f"{output_name}{output_ext}")
 
   # Save the shuffled image
-  image.save(output_path)
-
+  try:
+    image.save(output_path)
+  except Exception as e:
+    print(f"Error saving the image: {e}")
 
 # Main function
 def main():
@@ -97,7 +89,11 @@ def main():
   args = parse_arguments()
 
   # Load input image
-  input_image = Image.open(args.input_image)
+  try:
+    input_image = Image.open(args.input_image)
+  except Exception as e:
+    print(f"Error opening the input image: {e}")
+    return
 
   # Shuffle the image
   shuffled_image = shuffle_image(input_image, args.size)
