@@ -3147,10 +3147,10 @@
     */
     "github.copilot.editor.enableCodeActions": true,
     "github.copilot.advanced": {
-      "temperature": "0.8",
-      "debug.showScores": true,
+      // "temperature": "0.8",
+      // "debug.showScores": true,
       "inlineSuggestCount": 5,
-      "top_p": 1
+      // "top_p": 1
     },
     "conventionalCommits.scopes": [
       "backend",
@@ -3195,7 +3195,13 @@
       "**/.tmp/**": true,
       "**/.temp/**": true,
       "**/temp/**": true,
-    }
+    },
+    "github.copilot.enable": {
+      "plaintext": "true",
+      "markdown": "true",
+      "scminput": "true"
+    },
+    "gitHistory.hideCommitViewExplorer": false
     // "workbench.colorCustomizations": {
     //   "activityBar.activeBackground": "#6a2bd499",
     //   "activityBar.background": "#6a2bd499",
