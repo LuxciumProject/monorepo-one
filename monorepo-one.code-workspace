@@ -3165,7 +3165,8 @@
       "Storybook",
       "ChatGPT",
       "RpcWorkerPool",
-      "scripts"
+      "scripts",
+      "Midjourney"
     ],
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
