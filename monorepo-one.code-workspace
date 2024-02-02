@@ -3166,7 +3166,8 @@
       "ChatGPT",
       "RpcWorkerPool",
       "scripts",
-      "Midjourney"
+      "Midjourney",
+      "playground"
     ],
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
