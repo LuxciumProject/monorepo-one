@@ -10,207 +10,88 @@ The JavaScript reference serves as a repository of facts about the JavaScript la
 
 > The JavaScript language is intended to be used within some larger environment, be it a browser, server-side scripts, or similar. For the most part, this reference attempts to be environment-agnostic and does not target a web browser environment. For example, the JavaScript API for the DOM is not covered in this reference.
 
-    - [Fundamental objects](#fundamental_objects)
-      - [Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
-      - [Function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
-      - [Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-      - [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
-    - [Error objects](#error_objects)
-      - [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
-      - [AggregateError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError)
-      - [EvalError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError)
-      - [RangeError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-      - [ReferenceError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)
-      - [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
-      - [TypeError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-      - [URIError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError)
-      - [InternalError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError)
-    - [Numbers and dates](#numbers_and_dates)
-      - [Number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
-      - [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-      - [Math](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
-      - [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-    - [Text processing](#text_processing)
-      - [String](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-      - [RegExp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-    - [Indexed collections](#indexed_collections)
-      - [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-      - [Int8Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
-      - [Uint8Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-      - [Uint8ClampedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-      - [Int16Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
-      - [Uint16Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
-      - [Int32Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
-      - [Uint32Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
-      - [BigInt64Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
-      - [BigUint64Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
-      - [Float32Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
-      - [Float64Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
-    - [Keyed collections](#keyed_collections)
-      - [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
-      - [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
-      - [WeakMap](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
-      - [WeakSet](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
-    - [Structured data](#structured_data)
-      - [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-      - [SharedArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
-      - [DataView](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView)
-      - [Atomics](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
-      - [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-    - [Managing memory](#managing_memory)
-      - [WeakRef](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
-      - [FinalizationRegistry](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
-    - [Control abstraction objects](#control_abstraction_objects)
-      - [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)
-      - [AsyncIterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator)
-      - [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-      - [GeneratorFunction](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
-      - [AsyncGeneratorFunction](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
-      - [Generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
-      - [AsyncGenerator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)
-      - [AsyncFunction](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
-    - [Reflection](#reflection)
-      - [Reflect](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
-      - [Proxy](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
-    - [Internationalization](#internationalization)
-      - [Intl](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-      - [Intl.Collator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
-      - [Intl.DateTimeFormat](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-      - [Intl.DisplayNames](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
-      - [Intl.DurationFormat](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat)
-      - [Intl.ListFormat](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat)
-      - [Intl.Locale](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-      - [Intl.NumberFormat](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
-      - [Intl.PluralRules](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
-      - [Intl.RelativeTimeFormat](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
-      - [Intl.Segmenter](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
-
----
-
-abc
-
----
-
 ## Built-ins
 
 [JavaScript standard built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects), along with their methods and properties.
 
 ### Value properties
 
-- globalThis
-- Infinity
-- NaN
-- undefined
+- [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+- [`Infinity`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+- [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+- [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 ### Function properties
 
-- eval()
-- isFinite()
-- isNaN()
-- parseFloat()
-- parseInt()
-- decodeURI()
-- decodeURIComponent()
-- encodeURI()
-- encodeURIComponent()
-- escape() Deprecated
-- unescape() Deprecated
+- [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`isFinite()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
+- [`isNaN()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN)
+- [`parseFloat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+- [`parseInt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+- [`decodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
+- [`decodeURIComponent()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
+- [`encodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+- [`encodeURIComponent()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+- [`escape()` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape) 🗑️
+- [`unescape()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape) 🗑️
 
 ### Fundamental objects
 
-Object
-Function
-Boolean
-Symbol
-
-### Error objects
-
-Error
-AggregateError
-EvalError
-RangeError
-ReferenceError
-SyntaxError
-TypeError
-URIError
-InternalError Non-standard
-
-### Numbers and dates
-
-Number
-BigInt
-Math
-Date
-
-### Text processing
-
-String
-RegExp
-
-### Indexed collections
-
-Array
-Int8Array
-Uint8Array
-Uint8ClampedArray
-Int16Array
-Uint16Array
-Int32Array
-Uint32Array
-BigInt64Array
-BigUint64Array
-Float32Array
-Float64Array
-
-### Keyed collections
-
-Map
-Set
-WeakMap
-WeakSet
-
-### Structured data
-
-ArrayBuffer
-SharedArrayBuffer
-DataView
-Atomics
-JSON
-
-### Managing memory
-
-WeakRef
-FinalizationRegistry
+- [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`Boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 
 ### Control abstraction objects
 
-Iterator
-AsyncIterator
-Promise
-GeneratorFunction
-AsyncGeneratorFunction
-Generator
-AsyncGenerator
-AsyncFunction
+- [`Iterator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)
+- [`AsyncIterator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator)
+- [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [`GeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
+- [`AsyncGeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
+- [`Generator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+- [`AsyncGenerator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)
+- [`AsyncFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
 
 ### Reflection
 
-Reflect
-Proxy
+- [`Reflect`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
+- [`Proxy`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
 
 ### Internationalization
 
-Intl
-Intl.Collator
-Intl.DateTimeFormat
-Intl.DisplayNames
-Intl.DurationFormat
-Intl.ListFormat
-Intl.Locale
-Intl.NumberFormat
-Intl.PluralRules
-Intl.RelativeTimeFormat
-Intl.Segmenter
+- [`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+
+### Control abstraction objects
+
+- [`Iterator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)
+- [`AsyncIterator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator)
+- [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [`GeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
+- [`AsyncGeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
+- [`Generator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+- [`AsyncGenerator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)
+- [`AsyncFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+
+### Reflection
+
+- [`Reflect`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
+- [`Proxy`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+### Internationalization
+
+- [`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+- [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+- [`Intl.DisplayNames`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
+- [`Intl.DurationFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat)
+- [`Intl.ListFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat)
+- [`Intl.Locale`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
+- [`Intl.NumberFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+- [`Intl.PluralRules`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
+- [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
+- [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
 
 ## Statements
 
@@ -218,47 +99,47 @@ Intl.Segmenter
 
 ### Control flow
 
-return
-break
-continue
-throw
-if...else
-switch
-try...catch
+- [`return`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
+- [`break`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break)
+- [`continue`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue)
+- [`throw`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+- [`if...else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`switch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+- [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 
 ### Declaring variables
 
-var
-let
-const
+- [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
 ### Functions and classes
 
-function
-function*
-async function
-async function*
-class
+- [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`async function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [`async function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
+- [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)
 
 ### Iterations
 
-do...while
-for
-for...in
-for...of
-for await...of
-while
+- [`do...while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+- [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`for await...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_await...of)
+- [`while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 
 ### Others
 
-Empty
-Block
-Expression statement
-debugger
-export
-import
-label
-with Deprecated
+- [empty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/empty)
+- [Block](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
+- [Expression statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Expression)
+- [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+- [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+- [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [label](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [`with`](https:/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with) 🗑️
 
 ## Expressions and operators
 
@@ -307,105 +188,106 @@ with Deprecated
 
 ### Arithmetic operators
 
-- Exponentiation (`**`): [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- Multiplication (`*`): [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- Division (`/`): [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- Remainder (`%`): [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- Addition (`+`): [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- Subtraction (`-`): [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [`**` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) (Exponentiation)
+- [`*` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication) (Multiplication)
+- [`/` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division) (Division)
+- [`%` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder) (Remainder)
+- [`+` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (Addition)
+- [`-` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction) (Subtraction)
 
 ### Relational operators
 
-- [ `<` ](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) (Less than)
-- [ `>` ](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than) (Greater than)
-- [ `<=` ](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
-- [ `>=` ](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [ `instanceof` ](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [ `in` ](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [ `<` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) (Less than)
+- [ `>` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than) (Greater than)
+- [ `<=` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [ `>=` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [ `instanceof` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [ `in` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
 
-### # Equality operators
+### Equality operators
 
-# !=
-
-!==
+- [`==`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [`!=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [`===`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [`!==`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
 
 ### Bitwise shift operators
 
-<<
-
-> > >
+- [`<<`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift)
+- [`>>`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [`>>>`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
 
 ### Binary bitwise operators
 
-&
-|
-^
+- [`&`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+- [`|`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
+- [`^`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
 
 ### Binary logical operators
 
-&&
-||
-??
+- [`&&`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [`||`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [`??`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 
 ### Conditional (ternary) operator
 
-(condition ? ifTrue : ifFalse)
+- [`(condition ? ifTrue : ifFalse)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-### # Assignment operators
+### Assignment operators
 
-- `=`
-- `*=`
-- `/=`
-- `%=`
-- `+=`
-- `-=`
-- `<<=`
-- `>>=`
-- `>>>=`
-- `&=`
-- `^=`
-- `|=`
-- `**=`
-- `&&=`
-- `||=`
-- `??=`
-- `[a, b] = arr, { a, b } = obj`
+- [`=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)
+- [`*=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)
+- [`/=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment)
+- [`%=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)
+- [`+=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
+- [`-=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)
+- [`<<=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [`>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [`>>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
+- [`&=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [`^=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [`|=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- [`**=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)
+- [`&&=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+- [`||=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- [`??=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ### Yield operators
 
-- `yield`
-- `yield*`
+- [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+- [`yield*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*)
 
 ### Spread syntax
 
-- `...obj`
+- [`...obj`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ### Comma operator
 
-- `,`
+- [`,`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)
 
 ## Functions
 
 [JavaScript functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions).
 
-- Arrow Functions
-- Default parameters
-- Rest parameters
-- arguments
-- Method definitions
-- getter
-- setter
+- [Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Method definitions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
 ## Classes
 
 [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
-- constructor
-- extends
-- Private properties
-- Public class fields
-- static
-- Static initialization blocks
+- [`constructor`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+- [`extends`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
+- [Private properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Public class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [`static`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
+- [Static initialization blocks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
 
 ## Additional reference pages ― Additional JavaScript reference pages.
 
