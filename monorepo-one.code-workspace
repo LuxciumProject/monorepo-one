@@ -3072,7 +3072,7 @@
     "todo-tree.tree.hideTreeWhenEmpty": false,
     "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
     "todo-tree.tree.scanAtStartup": true,
-    "todo-tree.tree.scanMode": "workspace",
+    "todo-tree.tree.scanMode": "workspace only",
     "todo-tree.tree.showBadges": true,
     "todo-tree.tree.showCountsInTree": true,
     "todo-tree.tree.showCurrentScanMode": true,
@@ -3203,7 +3203,11 @@
       "markdown": "true",
       "scminput": "true"
     },
-    "gitHistory.hideCommitViewExplorer": false
+    "gitHistory.hideCommitViewExplorer": false,
+    "runme.cli.useIntegratedRunme": true,
+    "runme.terminal.cursorStyle": "underline",
+    "runme.actions.openViewInEditor": "toggle",
+    "runme.terminal.fontSize": 12
     // "workbench.colorCustomizations": {
     //   "activityBar.activeBackground": "#6a2bd499",
     //   "activityBar.background": "#6a2bd499",
