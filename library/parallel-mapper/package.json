@@ -105,7 +105,8 @@
     "@babel/plugin-syntax-flow": "~7.22.5",
     "@babel/plugin-transform-react-jsx": "~7.22.5",
     "tslib": "~2.6.0",
-    "@types/jest": "~29.5.2"
+    "@types/jest": "~29.5.2",
+    "@rushstack/eslint-plugin": "~0.14.0"
   },
   "dependencies": {
     "dotenv": "^16.0.0",

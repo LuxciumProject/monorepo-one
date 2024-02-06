@@ -54,6 +54,7 @@
     "tslib": "~2.6.0",
     "typescript": "~5.3.3",
     "@types/jest": "~29.5.2",
-    "@rushstack/heft": "~0.63.4"
+    "@rushstack/heft": "~0.63.4",
+    "@rushstack/eslint-plugin": "~0.14.0"
   }
 }
