@@ -48,13 +48,12 @@ rush add \
   -p eslint-plugin-simple-import-sort@latest \
   -p eslint-plugin-tsdoc@latest \
   -p eslint-plugin-unicorn@latest \
-  -p eslint-webpack-plugin@latest \
   -p eslint@latest \
   -p prettier@latest \
   --dev --make-consistent --all
 
 rush add -p tslib@latest --dev --make-consistent --all
-rush add -p eslint-config-prettier@latest -p @types/jest@latest -p @jest/globals@latest -p jest@latest -p @types/node@^18 -p ts-jest@latest -p ts-loader@latest -p ts-node@latest -p nodemon@latest -p tsconfig-paths@latest -p typescript@latest -p jest@latest --dev --make-consistent --all
+rush add -p eslint-config-prettier@latest -p @types/jest@latest -p @jest/globals@latest -p jest@latest -p @types/node@^20 -p ts-jest@latest -p ts-node@latest -p nodemon@latest -p tsconfig-paths@latest -p typescript@latest -p jest@latest --dev --make-consistent --all
 rush purge --unsafe
 rush update --full --recheck --network-concurrency 20
 rush rebuild --verbose --ignore-hooks --timeline

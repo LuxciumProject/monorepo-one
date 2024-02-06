@@ -11,12 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
-let AppController = exports.AppController = class AppController {
+let AppController = class AppController {
     getRootRoute() {
         return 'NestJS: The Complete Developer\'s Guide';
         ;
     }
 };
+exports.AppController = AppController;
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
