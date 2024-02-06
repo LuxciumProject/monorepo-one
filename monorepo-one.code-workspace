@@ -1139,6 +1139,9 @@
     ]
   },
   "settings": {
+    /*
+  |-···----------------------------------------------------------···-|
+    */
     // ~@-----------------------------------------------------------@~
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.activeIconPack": "nest",
@@ -1151,11 +1154,9 @@
     "files.associations": {
       "*.json": "jsonc"
     },
+    // ~@-----------------------------------------------------------@~
     /*
   |-···----------------------------------------------------------···-|
-  */
-    /*
-  --------------------------------------------------------···-|
     */
     // #region: excludes                                                    !
     "files.exclude": {
@@ -1193,8 +1194,8 @@
     },
     // #endregion: excludes                                                 !
     /*
-  |-····-----------------------------------------------------------··-|
-  */
+  |-···----------------------------------------------------------···-|
+    */
     // #region: FORMAT BEHAVIOUR                                           !
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
@@ -1207,13 +1208,14 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    //                                                                          ――
+    //                                                               ――
     // ―― CODEACTIONSONSAVE BEHAVIOUR:
     "editor.codeActionsOnSave": [
       "source.addMissingImports",
       "source.organizeImports",
-      // "source.fixAll",
-      "source.fixAll.eslint"
+      "source.autoFix",
+      "source.fixAll.eslint",
+      "source.fixAll.prettier"
     ],
     "material-icon-theme.folders.associations": {
       "eslint-plugin": "rules",
@@ -1222,8 +1224,8 @@
     },
     // #endregion: FORMAT BEHAVIOUR                                       !
     /*
-  |-····-----------------------------------------------------------··-|
-  */
+  |-···----------------------------------------------------------···-|
+    */
     // #region: PRETTIER                                                    !
     "prettier.enable": true,
     "prettier.requireConfig": true,
@@ -1280,20 +1282,33 @@
     "typescript.tsserver.experimental.enableProjectDiagnostics": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.workspaceSymbols.scope": "currentProject",
-    // #endregion: TYPESCRIPT BEHAVIOUR                                    !
+    // #endregion: TYPESCRIPT BEHAVIOUR                                        !
     /*
-  |-····-----------------------------------------------------------··-|
-  */
-    // #region: PATH-INTELLISENSE                                                      !
+  |-···----------------------------------------------------------···-|
+    */
+    // #region: PATH-INTELLISENSE                                              !
     "path-intellisense.extensionOnImport": false,
     "path-intellisense.absolutePathToWorkspace": false,
     "path-intellisense.autoSlashAfterDirectory": false,
     "path-intellisense.showHiddenFiles": true,
-    // #endregion: PATH-INTELLISENSE                                                   !
+    // #endregion: PATH-INTELLISENSE                                           !
     /*
   |-····-----------------------------------------------------------――··-|
-  */
-    // #region: editor.rulers                                                             !
+    */
+    // #region: editor.rulers                                                  !
+    "[scminput]": {
+      "editor.rulers": [
+        {
+          "column": 72,
+          "color": "#F368"
+        },
+        {
+          "column": 50,
+          "color": "#F838"
+        },
+      ],
+      "editor.wordWrap": "on"
+    },
     "editor.rulers": [
       {
         "column": 2,
@@ -1411,7 +1426,7 @@
     // #endregion: editor.rulers                                                          !
     /*
   |-····-----------------------------------------------------------··-|
-  */
+    */
     // #region: BETTER COMMENTS                                                         !
     /*
      "problemsErrorIcon.foreground": "#ff3366",
@@ -2375,7 +2390,7 @@
     // #endregion: BETTER COMMENTS                                           !
     /*
   |-····-----------------------------------------------------------··-|
-  */
+    */
     // #region: TODO TREE                                                                !
     "todo-tree.filtering.excludeGlobs": [
       "**/node_modules"
