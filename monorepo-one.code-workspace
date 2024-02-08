@@ -3222,7 +3222,10 @@
     "runme.cli.useIntegratedRunme": true,
     "runme.terminal.cursorStyle": "underline",
     "runme.actions.openViewInEditor": "toggle",
-    "runme.terminal.fontSize": 12
+    "runme.terminal.fontSize": 12,
+    "[plaintext]": {
+      "editor.defaultFormatter": "1nVitr0.blocksort"
+    }
     // "workbench.colorCustomizations": {
     //   "activityBar.activeBackground": "#6a2bd499",
     //   "activityBar.background": "#6a2bd499",
