@@ -6,15 +6,56 @@
  */
 
 export async function delay(
-  lowerBound: number = 500,
+  lowerBound = 500,
   upperBound: number = lowerBound
 ): Promise<DelayValue> {
   return measurePerformance(async (): Promise<number> => {
-    if (lowerBound === 0 && upperBound === 0) {
-      return Promise.resolve(NaN);
+    if (0 === lowerBound && 0 === upperBound) {
+      return Promise.resolve(Number.NaN);
     }
     const chosenDelay = calculateRandomNumber(lowerBound, upperBound);
     return new Promise(resolve => setTimeout(resolve, chosenDelay));
+  });
+}
+
+/**
+ * Function to execute a heavy CPU-bound task and measure its performance
+ * @param lowerBound - Lower limit for the task's complexity
+ * @param upperBound - Upper limit for the task's complexity
+ * @param timeLimit - Maximum execution time in milliseconds
+ * @returns PerformanceResult containing the computed result and execution time
+ */
+export async function heavyTaskSpecial(
+  lowerBound = 50,
+  upperBound: number = lowerBound,
+  timeLimit: number | `${number}` = '1000' // Default time limit is 1000 ms
+): Promise<TaskValue> {
+  return measurePerformance<{
+    steps: number;
+    result: number;
+  }>(async () => {
+    if (0 === lowerBound && 0 === upperBound) {
+      return Promise.resolve({ steps: Number.NaN, result: Number.NaN });
+    }
+    const steps = calculateRandomNumber(lowerBound, upperBound);
+    const startTime = Date.now(); // Get current time at the start of the loop
+    let i = 0;
+    let result = 0;
+    let p = 0;
+    for (; i < steps * 1e5; i++) {
+      const stringRepresentation = '1'.repeat(i);
+      const isPrime = !/^1?$|^(11+?)\1+$/.test(stringRepresentation);
+      if (isPrime) {
+        result += i;
+        p++;
+      }
+      const elapsedTime = Date.now() - startTime; // Calculate the elapsed time
+      if (elapsedTime > Number(timeLimit)) {
+        // Check if the elapsed time exceeds the time limit
+        break; // If it does, break out of the loop
+      }
+    }
+    return Promise.resolve({ steps: i, result, p });
   });
 }
 
@@ -31,9 +72,9 @@ export async function heavyTask(
   return measurePerformance<{
     steps: number;
     result: number;
-  }>(() => {
-    if (lowerBound === 0 && upperBound === 0) {
-      return Promise.resolve({ steps: NaN, result: NaN });
+  }>(async () => {
+    if (0 === lowerBound && 0 === upperBound) {
+      return Promise.resolve({ steps: Number.NaN, result: Number.NaN });
     }
     const steps = calculateRandomNumber(lowerBound, upperBound);
     let result = 0;
@@ -43,7 +84,6 @@ export async function heavyTask(
     return Promise.resolve({ steps, result });
   });
 }
-
 /**
  * Helper function to measure performance of a function
  * @param fn - Function whose performance is to be measured
@@ -85,7 +125,7 @@ export function calculateRandomNumber(
 }
 
 export function timeStamp(timeElapsed: number) {
-  return Math.round(timeElapsed * 1000000) / 1000000;
+  return Math.round(timeElapsed * 1_000_000) / 1_000_000;
 }
 
 // export type PerformanceResult<N> = Promise<IPerformanceResult<N>>;
@@ -102,5 +142,7 @@ export type DelayValue = PerformanceResult;
 export type TaskStepsResult = {
   steps: number;
   result: number;
+  i?: number;
+  p?: number;
 };
 export type TaskValue = PerformanceResult<TaskStepsResult>;
