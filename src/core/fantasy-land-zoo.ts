@@ -101,43 +101,6 @@ export class MyBifunctor<FirstType, SecondType> {
   }
 }
 
-// export class Either<LeftType, RightType> {
-//   constructor(
-//     private leftValue: LeftType | null,
-//     private rightValue: RightType | null,
-//   ) {}
-
-//   ["fantasy-land/map"]<NewRightType>(
-//     transform: (value: RightType) => NewRightType,
-//   ): Either<LeftType, NewRightType> {
-//     if (this.rightValue === null) {
-//       return new Either<LeftType, NewRightType>(this.leftValue, null);
-//     } else {
-//       return new Either<LeftType, NewRightType>(
-//         null,
-//         transform(this.rightValue),
-//       );
-//     }
-//   }
-
-//   ["fantasy-land/bimap"]<NewLeftType, NewRightType>(
-//     transformLeft: (value: LeftType) => NewLeftType,
-//     transformRight: (value: RightType) => NewRightType,
-//   ): Either<NewLeftType, NewRightType> {
-//     if (this.rightValue === null) {
-//       return new Either<NewLeftType, NewRightType>(
-//         transformLeft(this.leftValue),
-//         null,
-//       );
-//     } else {
-//       return new Either<NewLeftType, NewRightType>(
-//         null,
-//         transformRight(this.rightValue),
-//       );
-//     }
-//   }
-// }
-
 export class Either<LeftType, RightType> {
   constructor(
     private leftValue: LeftType | null,
