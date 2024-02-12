@@ -1,0 +1,17 @@
+{
+  "name": "boxing-tools",
+  "version": "1.0.0",
+  "description": "† Scientia es lux principium✨ ™",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luxcium✨ (Benjamin Vincent)",
+  "license": "mit",
+  "devDependencies": {
+    "@types/node": "^20",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
