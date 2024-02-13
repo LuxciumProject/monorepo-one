@@ -1,5 +1,5 @@
 import { Functor } from "../types";
-import Box from "./Box";
+import { Box } from "./Box";
 
 export interface SettledLeft extends PromiseRejectedResult {
   /**
