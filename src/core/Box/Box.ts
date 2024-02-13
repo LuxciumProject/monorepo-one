@@ -1,4 +1,4 @@
-import { ProtoBox } from "../ProtoBox";
+import { ProtoBox } from "./ProtoBox";
 import {
   Apply
   , Chain
