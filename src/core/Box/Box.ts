@@ -1,8 +1,14 @@
-import { ProtoBox } from "./ProtoBox";
+import { ProtoBox } from "../ProtoBox";
+import {
+  Apply
+  , Chain
+  , Extend
+  , Functor
+  , Unboxable
+} from "./types";
 export class Box<T>
   extends ProtoBox<T>
-  implements Unboxable<T>, Functor<T>, Apply<T>, Chain<T>, Extend<T>
-{
+  implements Unboxable<T>, Functor<T>, Apply<T>, Chain<T>, Extend<T> {
   static ["fantasy-land/of"] = Box.of;
 
   public ["fantasy-land/map"] = this.map;
@@ -47,23 +53,3 @@ export class Box<T>
 }
 
 export default Box;
-
-export interface Unboxable<T> {
-  unbox: () => T;
-}
-
-interface Functor<T> {
-  map: <R>(fun: (value: T) => R) => Functor<R>;
-}
-
-interface Chain<T> {
-  chain: <R>(fn: (value: T) => Box<R>) => Chain<R>;
-}
-
-interface Apply<T> {
-  ap: <R>(boxFn: Box<(value: T) => R>) => Apply<R>;
-}
-
-interface Extend<T> {
-  extend: <R>(f: (w: Extend<T>) => R) => Extend<R>;
-}
