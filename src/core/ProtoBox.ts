@@ -5,6 +5,7 @@ export abstract class ProtoBox<T> implements Unboxable<T> {
   protected constructor(value: T) {
     this._value = value;
   }
+  public ["fantasy-land/extract"] = this.unbox;
   public unbox(): T {
     return this._value;
   }

@@ -5,6 +5,7 @@
 !**/.*
 !typings
 
+Archive.zip
 ## Medias only in permited folders
 *.jfif
 *.jif
