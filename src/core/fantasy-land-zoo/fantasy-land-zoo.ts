@@ -1,3 +1,5 @@
+import { MyBaseAlt } from "./MyBaseAlt";
+
 export class Profunctor<Input, Output> {
   constructor(private transformation: (input: Input) => Output) {}
 
@@ -11,40 +13,59 @@ export class Profunctor<Input, Output> {
   }
 }
 
-export class MyAlt<T> {
-  constructor(private value: T) {}
+export abstract class MyPlus<T> extends MyBaseAlt<T> {
+  // Since MyBaseAlt extends MyAlt which implements the Alt specification,
+  // MyPlus needs to implement the zero method as per the Plus specification.
 
-  static ["fantasy-land/of"]<T>(value: T): MyAlt<T> {
-    return new MyAlt(value);
+  // Static fantasy-land/zero method as required by the Plus specification.
+  public static ["fantasy-land/zero"]<T>(): MyPlus<T> {
+    // The implementation here should return an instance of MyPlus that
+    // represents the identity element for the alt operation.
+    // This is an abstract class, so we might not implement it directly here,
+    // but ensure concrete subclasses provide their implementation.
+    throw new Error("Must be implemented by subclass.");
+  }
+  public static of<T>(value: T): MyPlus<T> {
+    void value;
+    throw new Error("Must be implemented by subclass.");
+  }
+  protected constructor(value: T) {
+    super(value);
+    return this;
   }
 
-  ["fantasy-land/map"]<U>(f: (value: T) => U): MyAlt<U> {
-    return new MyAlt(f(this.value));
-  }
+  // Implementing or ensuring implementation of abstract methods from MyBaseAlt
+  // and by extension from MyFunctor, as required by the Alt and Functor specs.
+  public abstract override map<R>(f: (value: T) => R): MyPlus<R>;
+  public abstract override alt(other: MyPlus<T>): MyPlus<T>;
 
-  ["fantasy-land/alt"](other: MyAlt<T>): MyAlt<T> {
-    // Here we implement a simple choice: if the original value is truthy, keep it, otherwise use the other value.
-    return this.value ? this : other;
+  // Implementations of unbox and value getter from MyBaseAlt or its ancestors.
+  public override unbox(): T {
+    return super.unbox();
+  }
+  public override get value(): T {
+    return super.value;
   }
 }
+// export abstract class MyPlus<T> extends MyBaseAlt<T>{
+//   protected constructor(value:T) {
+//     super
+//   }
 
-export class MyPlus<T> {
-  constructor(private value: T | null) {}
+//   static ["fantasy-land/zero"]<T>(): MyPlus<T | null> {
+//     return new MyPlus<T | null>(null);
+//   }
 
-  static ["fantasy-land/zero"]<T>(): MyPlus<T | null> {
-    return new MyPlus<T | null>(null);
-  }
+//   ["fantasy-land/map"]<U>(f: (value: T) => U): MyPlus<U | null> {
+//     return this.value !== null
+//       ? new MyPlus<U>(f(this.value))
+//       : MyPlus["fantasy-land/zero"]();
+//   }
 
-  ["fantasy-land/map"]<U>(f: (value: T) => U): MyPlus<U | null> {
-    return this.value !== null
-      ? new MyPlus<U>(f(this.value))
-      : MyPlus["fantasy-land/zero"]();
-  }
-
-  ["fantasy-land/alt"](other: MyPlus<T>): MyPlus<T> {
-    return this.value !== null ? this : other;
-  }
-}
+//   ["fantasy-land/alt"](other: MyPlus<T>): MyPlus<T> {
+//     return this.value !== null ? this : other;
+//   }
+// }
 
 export class MyAlternative<T> {
   constructor(private value: T | null) {}
