@@ -1,5 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
+  // at: /projects/monorepo-one/services/typescript/tsconfig.json
   "compilerOptions": {
     /* Module Resolution Interop Constraints */
     "target": "ESNext",

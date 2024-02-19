@@ -19,6 +19,10 @@
   - [restraining-zalgo](/library/restraining-zalgo/README.md)
   - [tools](/library/tools/README.md)
 
+```javascript
+console.log('Hello, World!');
+```
+
 ### SERVICES
 
 - [Image Scout (Submodule)](/services/image-scout/README.md): Service for image scouting operations.
