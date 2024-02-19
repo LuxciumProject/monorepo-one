@@ -1,0 +1,184 @@
+LEARN MORE ABOUT THE SAMSUNG MZ-V8P1T0B/AM
+Best Seller Ranking	#3 in Internal SSDs
+Model
+Brand	SAMSUNG
+Series	980 PRO
+Model	MZ-V8P1T0B/AM
+Device Type	Internal Solid State Drive (SSD)
+Used For	Consumer
+Details
+Form Factor 	M.2 2280
+Capacity	1TB
+Memory Components 	Samsung V-NAND 3-bit MLC
+Interface	PCI-Express Gen 4.0 x4, NVMe 1.3c
+Controller	Samsung
+Cache	1GB LPDDR4
+Encryption	AES 256-bit Full Disk Encryption, TCG/Opal V2.0, Encrypted Drive (IEEE1667)
+Performance
+Max Sequential Read	Up to 7000 MBps
+Max Sequential Write	Up to 5000 MBps
+4KB Random Read	QD1: Up to 22,000 IOPS
+QD32: Up to 1,000,000 IOPS
+4KB Random Write	QD1: Up to 60,000 IOPS
+QD32: Up to 1,000,000 IOPS
+Terabytes Written (TBW)	600TB
+MTBF 	1,500,000 hours
+Environmental
+Power Consumption (Idle)	35 mW
+Power Consumption (Active)	Read: 6.2W
+Write: 5.7W
+Operating Temperature	0°C ~ +70°C
+Storage Temperature	-40°C ~ +85°C
+Dimensions & Weight
+Height	2.38mm
+Width	22.15mm
+Depth	80.15mm
+Weight	9.00g
+Additional Information
+Date First Available	September 22, 2020
+
+LEARN MORE ABOUT THE SAMSUNG MZ-V6P512BW
+Model
+Brand	SAMSUNG
+Series	960 PRO
+Model	MZ-V6P512BW
+Device Type	Internal Solid State Drive (SSD)
+Used For	Consumer
+Details
+Form Factor 	M.2 2280
+Capacity	512GB
+Memory Components 	3D NAND
+Interface	PCIe 3.0 x4, NVMe 1.2
+Controller	Samsung Polaris controller
+Performance
+Max Sequential Read	Up to 3500 MBps
+Max Sequential Write	Up to 2100 MBps
+4KB Random Read	Up to 330,000 IOPS (4KB, QD32)
+Up to 14,000 IOPS (4KB, QD1)
+4KB Random Write	Up to 330,000 IOPS (4KB, QD32)
+Up to 50,000 IOPS (4KB, QD1)
+MTBF 	1,500,000 hours
+Features
+Features	NAND Flash: Yes
+
+Trim Support: Yes
+
+AES Encryption: AES 256-bit for User Data Encryption, TCG Opal
+
+S.M.A.R.T. Support: Yes
+
+GC (Garbage Collection): Auto Garbage Collection Algorithm
+
+Temperature proof: Yes
+
+Management SW: Magician Software for SSD management
+
+800TBW
+Environmental
+Power Consumption (Idle)	40 mW
+Power Consumption (Active)	5.1W
+Operating Temperature	0°C ~ +70°C
+Max Shock Resistance	1500G, duration 0.5m sec, 3 axis
+Dimensions & Weight
+Height	2.30mm
+Width	22.00mm
+Depth	80.00mm
+Weight	9.07g
+Additional Information
+Date First Available	September 21, 2016
+
+LEARN MORE ABOUT THE WESTERN DIGITAL WDS250G2B0B
+Model
+Brand	Western Digital
+Series	Blue
+Model	WDS250G2B0B
+Device Type	Internal Solid State Drive (SSD)
+Used For	Consumer
+Details
+Form Factor 	M.2 2280
+Capacity	250GB
+Memory Components 	3D NAND
+Interface	SATA III
+Performance
+Max Sequential Read	Up to 550 MBps
+Max Sequential Write	Up to 525 MBps
+4KB Random Read	Up to 95,000 IOPS
+4KB Random Write	Up to 81,000 IOPS
+MTTF	Up to 1.75M hours
+Features
+Features	3D NAND SATA SSD for capacities up to 4TB with enhanced reliability.
+
+Sequential read speeds up to 550 MB/s and sequential write speeds up to 525 MB/s.
+
+An industry-leading 1.75M hours mean time to failure (MTTF) and up to 100 terabytes written (TBW) for enhanced reliability.
+
+WD F.I.T. Lab certification for compatibility with a wide range of computers.
+
+Free downloadable software to monitor the status of your drive and clone a drive, or backup your data.
+Environmental
+Power Consumption (Idle)	56 mW (Slumber)
+5-7 mW (DEVSLP)
+Power Consumption (Active)	52 mW (Avg. Active Power)
+2,200 mW (Max Read Operating)
+2,250 mW (Max Write Operating)
+Operating Temperature	0°C ~ +70°C
+Storage Temperature	-55°C ~ +85°C
+Max Shock Resistance	1,500G @ 0.5 msec half sine
+Max Vibration Resistance	Operating: 5.0 gRMS, 10-2000 Hz
+Non-operating: 4.9 gRMS, 7-800 Hz
+Dimensions & Weight
+Height	2.38mm
+Width	22.00mm
+Depth	80.00mm
+Weight	7.00g
+Additional Information
+Date First Available	July 31, 2017
+
+LEARN MORE ABOUT THE WESTERN DIGITAL WD30EZRZ
+Model
+Brand	WD
+Series	Blue
+Model	WD30EZRZ
+Packaging	Bare Drive
+Performance
+Interface 	SATA 6.0Gb/s
+Capacity	3TB
+RPM 	5400 RPM
+Cache 	64MB
+Features
+Features	Tested For Compatibility
+We perform tests on hundreds of systems and a multitude of platforms in our F.I.T. Lab to give our customers confidence that our drives will work in their systems.
+
+Low Power Consumption
+State-of-the-art seeking algorithms and advanced power management features help ensure low power consumption.
+
+NoTouch Ramp Load Technology
+Safely positions the recording head off the disk surface to protect your data.
+
+Upgrading Your Drive is Easy
+Seamlessly migrate your current system to your new Western Digital drive using Acronis True Image WD Edition cloning software, available as a free download on the WD Support site. This software enables you to copy all your data to a new drive so you don't have to reinstall your operating system to get all the benefits of a new drive.
+Usage	For Daily Computing
+Dimensions
+Form Factor 	3.5"
+Height (maximum)	26.10mm
+Width (maximum)	101.60mm
+Length (maximum)	147.00mm
+Additional Information
+Date First Available	September 29, 2015
+
+LEARN MORE ABOUT THE SEAGATE ST2000DL001 (9VT156)
+Question about the product info?
+
+Model
+Brand	Seagate
+Model	ST2000DL001 (9VT156)
+Packaging	Retail
+Performance
+Interface 	SATA 3.0Gb/s
+Capacity	2TB
+RPM 	5900 RPM
+Cache 	32MB
+Dimensions
+Form Factor 	3.5"
+Additional Information
+Date First Available	June 01, 2011

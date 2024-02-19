@@ -1,0 +1,44 @@
+Suppression:
+ xmms2-freeworld                                     x86_64                                     0.8-37.fc39                                          @rpmfusion-free                                      48 k
+Suppression des dépendances inutilisées:
+dnfp bullet
+dnfp compat-ffmpeg4
+dnfp efl
+dnfp libdiscid
+dnfp libofa
+dnfp xmms2
+dnfp xmms2-avcodec
+dnfp xmms2-faad
+dnfp xmms2-mms
+dnfp xmms2-mp4
+
+ qmmp-plugins-freeworld                                         x86_64                                 2.1.4-1.fc39                                      @rpmfusion-free                                 331 k
+Suppression des dépendances inutilisées:
+dnfp bitstream-vera-sans-fonts
+dnfp bitstream-vera-sans-mono-fonts
+dnfp enca
+dnfp flac
+dnfp libcddb
+dnfp libmms
+dnfp libprojectM
+dnfp librcd
+dnfp libsidplayfp
+dnfp libxmp
+dnfp qmmp
+dnfp qmmp-plugin-pack
+dnfp qt6-qtmultimedia
+dnfp wildmidi-libs
+
+ faad2-libs                                                 x86_64                           1:2.11.1-1.fc39                                           @rpmfusion-free-updates                           593 k
+ libde265                                                   x86_64                           1.0.15-1.fc39                                             @rpmfusion-free-updates                           559 k
+ librtmp                                                    x86_64                           2.4-23.20210219.gitf1b83c1.fc39                           @rpmfusion-free                                   157 k
+ mjpegtools-libs                                            x86_64                           2.2.1-4.fc39                                              @rpmfusion-free                                   424 k
+ svt-hevc-libs                                        x86_64                           1.5.0-1.fc39                                              @rpmfusion-free-updates                           1.3 M
+
+dnfp faad2-libs
+dnfp libde265
+dnfp librtmp
+dnfp mjpegtools-libs
+dnfp svt-hevc-libs
+
+dnfp libva-utils

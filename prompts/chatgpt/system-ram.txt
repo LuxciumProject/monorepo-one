@@ -1,0 +1,27 @@
+LEARN MORE ABOUT THE G.SKILL F4-3600C18Q-128GTZR
+Model
+Brand	G.SKILL
+Series	TridentZ RGB Series
+Model	F4-3600C18Q-128GTZR
+Details
+Capacity	128GB (4 x 32GB)
+Type	288-Pin PC RAM
+Speed 	DDR4 3600 (PC4 28800)
+CAS Latency 	18
+Timing 	18-22-22-42
+Voltage 	1.35V
+ECC 	No
+Buffered/Registered 	Unbuffered
+Multi-channel Kit	Quad Channel Kit
+BIOS/Performance Profile 	Intel XMP 2.0
+Color	Black
+Heat Spreader	Yes
+Features	Sleek aluminum heatspreader design.
+
+Customizable RGB lighting support.
+
+Intel XMP 2.0 Support.
+Intel X299 (And others: Z590 / Z490 / Z390)
+LED Color	RGB
+
+Date First Available	April 09, 2020
