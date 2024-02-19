@@ -65,7 +65,9 @@
     "@babel/plugin-transform-react-jsx": "~7.22.5",
     "tslib": "~2.6.2",
     "@types/jest": "~29.5.12",
-    "@rushstack/eslint-plugin": "~0.14.0"
+    "@rushstack/eslint-plugin": "~0.14.0",
+    "@stylistic/eslint-plugin": "~1.6.1",
+    "@eslint-stylistic/metadata": "~1.6.1"
   },
   "dependencies": {
     "@luxcium/redis-services": "workspace:*",

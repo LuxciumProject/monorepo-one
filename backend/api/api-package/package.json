@@ -101,7 +101,9 @@
     "tsconfig-paths": "~4.2.0",
     "tslib": "~2.6.2",
     "typescript": "~5.3.3",
-    "webpack": "~5.88.1"
+    "webpack": "~5.88.1",
+    "@stylistic/eslint-plugin": "~1.6.1",
+    "@eslint-stylistic/metadata": "~1.6.1"
   },
   "jest": {
     "moduleFileExtensions": [

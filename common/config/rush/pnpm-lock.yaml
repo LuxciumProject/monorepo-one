@@ -56,6 +56,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -80,6 +83,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -225,12 +231,18 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
       '@rushstack/eslint-plugin':
         specifier: ~0.14.0
         version: 0.14.0(eslint@8.56.0)(typescript@5.3.3)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/eslint':
         specifier: ~8.56.2
         version: 8.56.2
@@ -343,6 +355,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -355,6 +370,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/eslint':
         specifier: ~8.56.2
         version: 8.56.2
@@ -485,6 +503,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -500,6 +521,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -648,6 +672,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -663,6 +690,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -798,6 +828,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -813,6 +846,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -955,6 +991,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -964,6 +1003,9 @@ importers:
       '@rushstack/heft':
         specifier: ~0.63.4
         version: 0.63.6(@types/node@20.11.16)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/eslint':
         specifier: ~8.56.2
         version: 8.56.2
@@ -1100,6 +1142,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -1115,6 +1160,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -1250,6 +1298,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -1265,6 +1316,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -1400,6 +1454,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -1415,6 +1472,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -1575,12 +1635,18 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
       '@rushstack/eslint-plugin':
         specifier: ~0.14.0
         version: 0.14.0(eslint@8.56.0)(typescript@5.3.3)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/eslint':
         specifier: ~8.56.2
         version: 8.56.2
@@ -1695,6 +1761,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -1710,6 +1779,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -1852,6 +1924,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -1867,6 +1942,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -2042,6 +2120,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -2057,6 +2138,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -2205,6 +2289,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -2220,6 +2307,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -2355,6 +2445,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -2382,6 +2475,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/cheerio':
         specifier: ~0.22.31
         version: 0.22.35
@@ -2556,6 +2652,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -2571,6 +2670,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -2719,6 +2821,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -2734,6 +2839,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -2882,6 +2990,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -2897,6 +3008,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -3051,6 +3165,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -3066,6 +3183,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -3208,6 +3328,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -3223,6 +3346,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -3386,6 +3512,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -3401,6 +3530,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -3549,6 +3681,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -3564,6 +3699,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -3718,6 +3856,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -3733,6 +3874,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -3872,6 +4016,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -3887,6 +4034,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -4029,6 +4179,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -4044,6 +4197,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -4183,6 +4339,9 @@ importers:
       '@babel/plugin-transform-typescript':
         specifier: ~7.23.6
         version: 7.23.6(@babel/core@7.23.9)
+      '@eslint-stylistic/metadata':
+        specifier: ~1.6.1
+        version: 1.6.1
       '@jest/globals':
         specifier: ~29.7.0
         version: 29.7.0
@@ -4198,6 +4357,9 @@ importers:
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
         version: 0.10.8(@rushstack/heft@0.63.6)(@types/node@20.11.16)(node-notifier@10.0.1)(ts-node@10.9.2)
+      '@stylistic/eslint-plugin':
+        specifier: ~1.6.1
+        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/chai':
         specifier: ~4.3.5
         version: 4.3.11
@@ -5841,6 +6003,10 @@ packages:
   /@eslint-community/regexpp@4.10.0:
     resolution: {integrity: sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+    dev: true
+
+  /@eslint-stylistic/metadata@1.6.1:
+    resolution: {integrity: sha512-WheHmHdo/WdCOT2G7Zxq8lT+bYFhJ/1ZQAvueNAslz6kjuCCj0hDdK1sY+fHedwXCz4F89mqKp2sre/IDpR81g==}
     dev: true
 
   /@eslint/eslintrc@2.1.4:
@@ -7746,6 +7912,73 @@ packages:
       tslib: 2.6.2
     dev: false
     optional: true
+
+  /@stylistic/eslint-plugin-js@1.6.1(eslint@8.56.0):
+    resolution: {integrity: sha512-gHRxkbA5p8S1fnChE7Yf5NFltRZCzbCuQOcoTe93PSKBC4GqVjZmlWUSLz9pJKHvDAUTjWkfttWHIOaFYPEhRQ==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: '>=8.40.0'
+    dependencies:
+      acorn: 8.11.3
+      escape-string-regexp: 4.0.0
+      eslint: 8.56.0
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+    dev: true
+
+  /@stylistic/eslint-plugin-jsx@1.6.1(eslint@8.56.0):
+    resolution: {integrity: sha512-uJQcg3iqrhm3EH15ZjxmZ1YmXXexkLKFEgxkWA3RYjgAVTx8k7xGJwClK/JnjKDGdbFRiDQPjxt964R1vsaFaQ==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: '>=8.40.0'
+    dependencies:
+      '@stylistic/eslint-plugin-js': 1.6.1(eslint@8.56.0)
+      eslint: 8.56.0
+      estraverse: 5.3.0
+      picomatch: 3.0.1
+    dev: true
+
+  /@stylistic/eslint-plugin-plus@1.6.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-nYIXfdYN+pBVmm0vPCKQFg/IK35tf3ZGz+0WENUL6ww1+jKM6/i36FalRFculiHzO+wOpJ3/yXWJC3PCbwGFZQ==}
+    peerDependencies:
+      eslint: '*'
+    dependencies:
+      '@typescript-eslint/utils': 6.21.0(eslint@8.56.0)(typescript@5.3.3)
+      eslint: 8.56.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
+  /@stylistic/eslint-plugin-ts@1.6.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-eZxrFaLhPJVUQmtsRXKiuzSou0nlHevKc1WsfhxUJ9p8juv3G3YlbbGeYg4AP1fNlEmWs/lZQAP2WfzQOdBNvQ==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: '>=8.40.0'
+    dependencies:
+      '@stylistic/eslint-plugin-js': 1.6.1(eslint@8.56.0)
+      '@typescript-eslint/utils': 6.21.0(eslint@8.56.0)(typescript@5.3.3)
+      eslint: 8.56.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
+  /@stylistic/eslint-plugin@1.6.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-De7Sw86OtIf7SsMgjLCf4bTeI3085Plyh4l0Rg1V42BTFo/Q6Pz7Cbu31rEk/UHFiEna/YO8Hxj80jFP3ObrQw==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: '>=8.40.0'
+    dependencies:
+      '@stylistic/eslint-plugin-js': 1.6.1(eslint@8.56.0)
+      '@stylistic/eslint-plugin-jsx': 1.6.1(eslint@8.56.0)
+      '@stylistic/eslint-plugin-plus': 1.6.1(eslint@8.56.0)(typescript@5.3.3)
+      '@stylistic/eslint-plugin-ts': 1.6.1(eslint@8.56.0)(typescript@5.3.3)
+      eslint: 8.56.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
 
   /@swc/helpers@0.5.2:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
@@ -14599,6 +14832,11 @@ packages:
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  /picomatch@3.0.1:
+    resolution: {integrity: sha512-I3EurrIQMlRc9IaAZnqRR044Phh2DXY+55o7uJ0V+hYZAcQYSuFWsc9q5PvyDHUSCe1Qxn/iBz+78s86zWnGag==}
+    engines: {node: '>=10'}
+    dev: true
 
   /pify@2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
