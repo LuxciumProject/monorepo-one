@@ -186,52 +186,106 @@ void res1;
 console.log('pip2', pipe2(...list2)('toto'));
 console.log('pip2', pipe2(...list2)('toto'));
 
-export function pipe_<T, R>(fnOrValue: ((arg: T) => R) | T): any {
-  if (typeof fnOrValue === 'function' && fnOrValue instanceof Function) {
-    console.log(`fnOrValue is a function "${fnOrValue}"`);
-    return <A = T, B = R>(fnOrValue_: A | ((arg: A) => B)) =>
-      fnOrValue(pipe_<A, B>(fnOrValue_));
-  }
+// export function pipe_<T, R>(fnOrValue: ((arg: T) => R) | T): any {
+//   if (typeof fnOrValue !== 'function') {
+//     console.log(`fnOrValue is a function "${fnOrValue}"`);
 
-  console.log(`fnOrValue is the value "${fnOrValue}"`);
-  return fnOrValue;
-}
-// ( |<A = T>(fnOrValue_: A)=>R)   R | ((val: T) => R) <T, R>
-// <A, B>(val: A) => fnOrValue(protoPipe<A, B>(val));
-export type FMap<T, R> = (val: T) => R;
+//     return <A = T, B = R>(fnOrValue_: A | ((arg: A) => B)) =>
+//       fnOrValue(pipe_<A, B>(fnOrValue_));
+//   }
 
+//   console.log(`fnOrValue is the value "${fnOrValue}"`);
+//   return fnOrValue;
+// }
+
+// export function pipe_<T, R>(fnOrValue: ((arg: T) => R) | T): any {
+//   if (typeof fnOrValue === 'function') {
+//     const fn: (arg: T) => R = fnOrValue as (arg: T) => R;
+//     console.log(`fnOrValue is a function "${fn}"`);
+//     return <A, B>(fnOrValue_: A | ((arg: A) => B)) =>
+//       fn(pipe_<A, B>(fnOrValue_));
+//   }
+//   const value: T = fnOrValue;
+//   console.log(`fnOrValue is the value "${value}"`);
+//   return value;
+// }
+// (((arg: T) => R)| (fn: (arg: T) => R))  =>R
+// (((arg: T) => R) |(fn: (arg: T) => R) ) =>R
+// ((fn: (arg: T) => R) => R) | ((arg: T) => R)
+// (fn: (arg: T) => R) => (arg: T) => R;
+
+export type PipeFunction<T, R> = (
+  fn: <U>(arg: U) => T
+) => R | ((value: T) => R);
+export type Type2 = (fnx: (fn: (arg: string) => number) => number) => boolean; // <T>(fn: (arg: T) =>number) => boolean; // (value: number): boolean
+//  (fn: (arg: T) => R)=> any PipeFunction<T, R>
+
+// export function pipe<T, R>(fn: (arg: T) => R): /* interim fix: */  (fn: (arg: any) => T)=> (arg: any) => (arg: any) => R; // this is where I need a type
+export type Func<A = any, R = any> = (arg: A) => R;
+
+export type ArgType<T> = T extends Func<infer A, any> ? A : T;
+export type ReturnType<T> = T extends Func<any, infer R> ? R : T;
+
+export function pipe<T, R>(fnOrValue: Func<T, R>): any;
+export function pipe<T, R>(value: T): R;
 export function pipe(fnOrValue: any) {
-  if (typeof fnOrValue === 'function' && fnOrValue instanceof Function) {
+  if (typeof fnOrValue === 'function') {
     console.log(`fnOrValue is a function "${fnOrValue}"`);
-    return (fnOrValue_: any) => {
-      if (typeof fnOrValue_ === 'function' && fnOrValue_ instanceof Function) {
-        console.log(`pipe called with another function "${fnOrValue_}"`);
-        return pipe((x: any) => {
-          const y = fnOrValue(x);
-          console.log(`pipe intermediate result "${y}" of type 'R'`);
-          return fnOrValue_(y);
-        });
-      }
-      console.log(`pipe called with value "${fnOrValue_}" of type 'T'`);
-      return fnOrValue(fnOrValue_);
-    };
+    function pipe_<A, B>(fn: (arg: A) => B): any;
+    function pipe_<A, B>(value: A): any;
+    function pipe_(fnOrValue_: any): any {
+      return fnOrValue(pipe(fnOrValue_));
+    }
+    return pipe_;
   }
-  console.log(`fnOrValue is the value "${fnOrValue}" of type 'T'`);
   return fnOrValue;
 }
 
-console.log(id_(len_(id_('TATA'))));
-const step1 = pipe(id_);
-const step2 = step1(len_);
-const step3 = step2(id_);
+const step1 = pipe(isOdd_);
+const step2 = step1(triple_);
+const step3 = step2(len_);
 const step4 = step3('TATA');
-console.log('pipe_x:', step4);
+
+const thePipeline = [isOdd_, triple_, len_, id_, 'TATA'].reduce(
+  (acc, fn: any) => fn(acc)
+) as (x: any) => any;
+// const step5 = functionReducer(thePipeline);
+void thePipeline;
+/*
+function isOdd_(value: number): boolean // T=number, R=boolean
+function double_(value: number): number // T=number, R=number
+function len_(value:   'TATA' ): number // T=string, R=number
+'TATA' // T=string
+
+const step1: (fn: (arg: any) => number) => boolean
+
+export function pipe(fnOrValue: any):any {
+  if (typeof fnOrValue === 'function') {
+    function pipe_(fnOrValue_: any): any {
+      return fnOrValue(pipe(fnOrValue_));
+    }
+    return pipe_;
+  }
+  return fnOrValue;
+}
+Looks like the someThis is the delegate of the SomeThing instance and the prototype is  the someThis instance where the someMethod receives someArg like it would be
+ */
+// string -> number -> number -> boolean
+// (arg:string) => boolean
+// (fn:(arg:string) =>number) => boolean
+// (fnx:(fn:(arg:string) =>number) =>number) => boolean
 export function id_<T>(value: T): T {
   return value;
 }
-export function len_(value: any): any {
+export function len_(value: any[] | string): number {
   return value.length;
 }
-export function double_(value: any): any {
-  return value * 2;
+export function triple_(value: number): number {
+  return value * 3;
 }
+export function isOdd_(value: number): boolean {
+  return value % 2 === 1;
+}
+
+console.log('TATA', id_(len_(id_('TATA'))));
+console.log('pipe_x:', step4);

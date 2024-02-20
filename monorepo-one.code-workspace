@@ -3225,6 +3225,9 @@
     "runme.terminal.fontSize": 12,
     "[plaintext]": {
       "editor.defaultFormatter": "1nVitr0.blocksort"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     }
     // "workbench.colorCustomizations": {
     //   "activityBar.activeBackground": "#6a2bd499",

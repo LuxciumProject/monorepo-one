@@ -19,10 +19,6 @@
   - [restraining-zalgo](/library/restraining-zalgo/README.md)
   - [tools](/library/tools/README.md)
 
-```javascript
-console.log('Hello, World!');
-```
-
 ### SERVICES
 
 - [Image Scout (Submodule)](/services/image-scout/README.md): Service for image scouting operations.
@@ -138,8 +134,6 @@ rush.json: Contains configuration information for the Rush monorepo manager.
 tempCodeRunnerFile.ts: Is a temporary file created by an editor or development tool.
 
 tests.sh: Contains a shell script that runs tests for the project.
-
-I hope this revised version of the information meets your needs. Let me know if you have any further questions or if there is anything else that I can do to help.
 
 <!--
 ./backend

@@ -35,6 +35,6 @@ console.log(humanSize(106168, 2, SPACED));
 
 Based on the work of Andrew Kelley (MIT © 2014-2022)
 
-##### MIT © 2022 Luxcium (Benjamin Vincent)
+## MIT © 2022-2024 Luxcium (Benjamin Vincent)
 
-###### † Scientia est lux principium✨ ™
+† Scientia est lux principium✨ ™

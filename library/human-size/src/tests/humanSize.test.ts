@@ -1,4 +1,4 @@
-import { default as humanSize } from '..';
+import humanSize, { mags } from '../humanSize';
 
 describe('Validate 1000B vs. 1024B', () => {
   it('Should be less than 1KB when it is 1000B', () => {
@@ -144,5 +144,41 @@ describe('With additional spacing betwen value and unit', () => {
     expect(humanSize(Math.pow(1024, 0) * 142.69, 1, SPACED)).toBe(
       '142.7 B'
     );
+  });
+});
+
+describe('magnitudes values in mags', () => {
+  describe('Should be in the expected order', () => {
+    mags;
+    it('Should have a length of 9', () => {
+      expect(mags).toHaveLength(9);
+    });
+    it('Should have a first value of ""', () => {
+      expect(mags[0]).toBe('');
+    });
+    it('Should have a second value of "K"', () => {
+      expect(mags[1]).toBe('K');
+    });
+    it('Should have a third value of "M"', () => {
+      expect(mags[2]).toBe('M');
+    });
+    it('Should have a fourth value of "G"', () => {
+      expect(mags[3]).toBe('G');
+    });
+    it('Should have a fifth value of "T"', () => {
+      expect(mags[4]).toBe('T');
+    });
+    it('Should have a sixth value of "P"', () => {
+      expect(mags[5]).toBe('P');
+    });
+    it('Should have a seventh value of "E"', () => {
+      expect(mags[6]).toBe('E');
+    });
+    it('Should have an eighth value of "Z"', () => {
+      expect(mags[7]).toBe('Z');
+    });
+    it('Should have a ninth value of "Y"', () => {
+      expect(mags[8]).toBe('Y');
+    });
   });
 });

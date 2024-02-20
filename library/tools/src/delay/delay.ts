@@ -28,7 +28,7 @@ export async function delay(
 export async function heavyTaskSpecial(
   lowerBound = 50,
   upperBound: number = lowerBound,
-  timeLimit: number | `${number}` = '1000' // Default time limit is 1000 ms
+  timeLimit: number | `${number}` = '1000'
 ): Promise<TaskValue> {
   return measurePerformance<{
     steps: number;

@@ -29,7 +29,17 @@
   https://github.com/andrewrk/node-human-size
 */
 
-var mags: `${Mags}`[] = ['', 'K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'];
+export const mags: `${Mags}`[] = [
+  '',
+  'K',
+  'M',
+  'G',
+  'T',
+  'P',
+  'E',
+  'Z',
+  'Y',
+];
 type Mags = '' | 'K' | 'M' | 'G' | 'T' | 'P' | 'E' | 'Z' | 'Y';
 
 export function humanSize(

@@ -1,6 +1,6 @@
 # @luxcium/bigintstring
 
-## MIT © 2022-2023 Luxcium (Benjamin Vincent)
+## MIT © 2022-2024 Luxcium (Benjamin Vincent)
 
 † Scientia est lux principium✨ ™
 

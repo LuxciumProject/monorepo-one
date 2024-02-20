@@ -1,14 +1,14 @@
 {
   "name": "@luxcium/human-size",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "human readable file size",
   "main": "lib/src/index.js",
   "types": "lib/typings/index.d.ts",
   "scripts": {
     "install": "pwd; yarn build || exit 13; pwd",
-    "build": "(npm test && bash scripts/build.sh) || exit 15",
-    "test:": "jest --config='config/jest.config.json'",
-    "test": "echo no test implemented; exit 0"
+    "build": "(npm run coverage && bash scripts/build.sh) || exit 15",
+    "coverage": "jest --coverage --all --config='jest.config.json'",
+    "test": "jest --all --coverage=false --config='jest.config.json'"
   },
   "author": "Benjamin Vincent",
   "license": "MIT",
@@ -71,9 +71,5 @@
     "@rushstack/eslint-plugin": "~0.14.0",
     "@stylistic/eslint-plugin": "~1.6.1",
     "@eslint-stylistic/metadata": "~1.6.1"
-  },
-  "dependencies": {
-    
-    "source-map-support": "~0.5.21"
   }
 }
