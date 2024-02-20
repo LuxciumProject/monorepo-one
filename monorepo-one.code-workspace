@@ -1299,7 +1299,7 @@
     "[scminput]": {
       "editor.rulers": [
         {
-          "column": 72,
+          "column": 70,
           "color": "#F368"
         },
         {
@@ -1307,12 +1307,13 @@
           "color": "#F838"
         },
       ],
-      "editor.wordWrap": "on"
+      "editor.wordWrap": "on",
+      "editor.wordWrapColumn": 70
     },
     "editor.rulers": [
       {
         "column": 2,
-        "color": "#FC30"
+        "color": "#FC33"
       },
       {
         "column": 70,
