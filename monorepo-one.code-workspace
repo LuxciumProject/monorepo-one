@@ -169,6 +169,15 @@
       "path": "services/service-two"
     },
     {
+      "name": "  ↓ 🗂️ 🎨 static",
+      "path": "static"
+    },
+    // static/stable-diffusion with painting emoji like 🎨🤖
+    {
+      "name": "       🎨🤖 STABLE DIFFUSION",
+      "path": "static/stable-diffusion"
+    },
+    {
       "name": "  ↓ 🪄 🎱 EXAMPLES",
       "path": "examples"
     },
