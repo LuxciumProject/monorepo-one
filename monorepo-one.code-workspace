@@ -3192,7 +3192,8 @@
       "RpcWorkerPool",
       "scripts",
       "Midjourney",
-      "playground"
+      "playground",
+      "SDXL"
     ],
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
