@@ -4,10 +4,16 @@ from analyses.face_detection import FaceDetection
 from analyses.image_quality_analyzer import ImageQualityAnalyzer
 # Import other analyses as needed
 
+from multiprocessing import Pool
+
+def analyze_image(args):
+  image_path, analysis = args
+  return analysis.analyze(image_path)
+
 def run_analyses(image_paths, analyses):
-    for image_path in image_paths:
-        for analysis in analyses:
-            analysis.analyze(image_path)
+  with Pool(10) as p:  # Create a pool of 10 processes
+    results = p.map(analyze_image, [(image_path, analysis) for image_path in image_paths for analysis in analyses])
+  return results
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Image Analysis Pipeline")
