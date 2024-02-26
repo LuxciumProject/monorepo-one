@@ -120,6 +120,7 @@ web_modules/
 # dist/
 # out/
 .tmp/
+tmp/
 temp/
 build/
 /*/*/lib/
