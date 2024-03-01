@@ -1,0 +1,66 @@
+const defaultMapperOptions = <T, R>(
+  mapperOptions: MapperOptions<T, R>
+): Required<MapperOptions<T, R>> => ({
+  transform: async value => value as any as R,
+  lookup: (value, index, array) => void [value, index, array],
+  validate: async (value, index, array) => void [value, index, array],
+  errLookup: (value, index, currentRejection) =>
+    void [value, index, currentRejection],
+  ...mapperOptions,
+});
+
+
+
+  status: 'rejected';
+  reason: E;
+  value: never;
+  rejected: E;
+  fulfilled: never;
+  transformStep: number;
+  currentRejection: false | true;
+  index: number;
+
+  status: 'fulfilled';
+  value: T;
+  reason: never;
+  fulfilled: T;
+  rejected: never;
+  transformStep: number;
+  currentRejection: null;
+  index: number;
+
+
+
+  currentRejection: null
+
+  transformStep: number;
+  index: number;
+
+  status: 'rejected';
+  reason: E;
+  rejected: E;
+
+  status: 'fulfilled'
+  value: T;
+  fulfilled: T;
+
+
+ const defaultMapperOptions = <T, R>(
+  mapperOptions: MapperOptions<T, R>
+): Required<MapperOptions<T, R>> => ({
+  transform: async value => value as any as R,
+  lookup: (value, index, array) => void [value, index, array],
+  validate: async (value, index, array) => void [value, index, array],
+  errLookup: (value, index, currentRejection) =>
+    void [value, index, currentRejection],
+  ...mapperOptions,
+});
+
+MapperOptions:
+  item: Base<T> | PromiseLike<Base<T>>;
+  index: number;
+  array: (Base<T> | PromiseLike<Base<T>>)[];
+  transform?: TransformFn<T, U>;
+  lookup?: LookupFn<T, U>;
+  validate?: ValidateFn<T, U>;
+  errLookup?: ErrLookupFn;
