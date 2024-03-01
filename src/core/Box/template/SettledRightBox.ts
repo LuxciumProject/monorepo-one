@@ -1,5 +1,5 @@
 import { Functor } from "../../../types";
-import { Box } from "..";
+import { Box } from ".";
 export interface SettledRight<T> extends PromiseFulfilledResult<T> {
   /**
    * The status of the settled value.
