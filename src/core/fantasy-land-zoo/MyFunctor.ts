@@ -1,4 +1,4 @@
-import { ProtoBox } from "../Box";
+import { ProtoBox } from "../Box/template";
 
 export class MyFunctor<T> extends ProtoBox<T> {
   public static of<TVal>(value: TVal): MyFunctor<TVal> {

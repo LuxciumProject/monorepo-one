@@ -1,10 +1,10 @@
-import { Functor } from '../types';
-import { Box } from './Box';
+import { Functor } from "../../../types";
+import { Box } from "..";
 export interface SettledRight<T> extends PromiseFulfilledResult<T> {
   /**
    * The status of the settled value.
    */
-  status: 'fulfilled';
+  status: "fulfilled";
 
   /**
    * The fulfilled value.
@@ -42,8 +42,11 @@ export interface SettledRight<T> extends PromiseFulfilledResult<T> {
   index: number;
 }
 
-export class SettledRightBox<T> extends Box<T> implements SettledRight<T>, Functor<T> {
-  private _status: 'fulfilled' = 'fulfilled';
+export class SettledRightBox<T>
+  extends Box<T>
+  implements SettledRight<T>, Functor<T>
+{
+  private _status: "fulfilled" = "fulfilled";
   private _reason: never = null as never;
   private _fulfilled: T;
   private _rejected: never = null as never;
@@ -53,11 +56,26 @@ export class SettledRightBox<T> extends Box<T> implements SettledRight<T>, Funct
   static of<TVal>(value: TVal): SettledRightBox<TVal> {
     return new SettledRightBox(value);
   }
-  protected static fromMap<TVal>(value: TVal, index: number, transformStep: number, currentRejection: null): SettledRightBox<TVal> {
-    return new SettledRightBox(value, index, transformStep + 1, currentRejection);
+  protected static fromMap<TVal>(
+    value: TVal,
+    index: number,
+    transformStep: number,
+    currentRejection: null,
+  ): SettledRightBox<TVal> {
+    return new SettledRightBox(
+      value,
+      index,
+      transformStep + 1,
+      currentRejection,
+    );
   }
 
-  protected constructor(value: T, index = -1, transformStep = -1, currentRejection: null = null) {
+  protected constructor(
+    value: T,
+    index = -1,
+    transformStep = -1,
+    currentRejection: null = null,
+  ) {
     super(value);
     this._fulfilled = value;
     this._index = index;
@@ -68,13 +86,18 @@ export class SettledRightBox<T> extends Box<T> implements SettledRight<T>, Funct
   }
   public map<R>(fn: (value: T, index: number) => R): SettledRightBox<R> {
     const result = fn(super.value, this._index);
-    return SettledRightBox.fromMap(result, this._index, this._transformStep, null);
+    return SettledRightBox.fromMap(
+      result,
+      this._index,
+      this._transformStep,
+      null,
+    );
   }
 
   unbox(): T {
     return super.value;
   }
-  get status(): 'fulfilled' {
+  get status(): "fulfilled" {
     return this._status;
   }
   get reason(): never {

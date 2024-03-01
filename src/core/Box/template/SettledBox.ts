@@ -1,16 +1,16 @@
-import Box from "./Box";
+import Box from "..";
 import { SettledLeft } from "./SettledLeftBox";
 import { SettledRight } from "./SettledRightBox";
 
 export type Settled<T> = SettledLeft | SettledRight<T>;
 export interface ISettled<L, R> {
   /**
-  * The status of the settled value.
-  */
-  status: 'fulfilled' | 'rejected';
+   * The status of the settled value.
+   */
+  status: "fulfilled" | "rejected";
   /**
-  * The fulfilled value.
-  */
+   * The fulfilled value.
+   */
   value: R;
 
   /**
@@ -93,12 +93,19 @@ export interface ISettled<L, R> {
 //   }
 // }
 
-export type SettledResult<L, R> = [reason: L, value: never] | [reason: never, value: R];
+export type SettledResult<L, R> =
+  | [reason: L, value: never]
+  | [reason: never, value: R];
 export class SettledBox<L, R> extends Box<SettledResult<L, R>> {
   private _transformStep: number;
   private _currentRejection: null | true | false;
   private _index: number;
-  protected constructor(result: SettledResult<L, R>, index = -1, transformStep = -1, currentRejection: null | true | false = null) {
+  protected constructor(
+    result: SettledResult<L, R>,
+    index = -1,
+    transformStep = -1,
+    currentRejection: null | true | false = null,
+  ) {
     super(result);
     this._index = index;
     this._transformStep = transformStep;
@@ -114,7 +121,6 @@ export class SettledBox<L, R> extends Box<SettledResult<L, R>> {
     return this._currentRejection;
   }
 }
-
 
 /*
 If I understand correctly, you're looking for a way to rename the [`currentRejection`](command:_github.copilot.openSymbolInFile?%5B%22src%2Fcore%2FSettledBox.ts%22%2C%22currentRejection%22%5D "src/core/SettledBox.ts") variable in your TypeScript code to better reflect its purpose and behavior. This variable can have three states: `null`, `true`, or `false`.
