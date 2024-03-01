@@ -1,4 +1,4 @@
-import Box from "..";
+import Box from ".";
 import { SettledLeft } from "./SettledLeftBox";
 import { SettledRight } from "./SettledRightBox";
 
