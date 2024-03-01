@@ -1,11 +1,11 @@
-import { Functor } from "../types";
-import { Box } from "./Box";
+import { Functor } from "../../../types";
+import { Box } from "..";
 
 export interface SettledLeft<E = any> extends PromiseRejectedResult {
   /**
    * The status of the promise, which is always set to `'rejected'`.
    */
-  status: 'rejected';
+  status: "rejected";
 
   /**
    * The reason for the rejection.
@@ -41,10 +41,13 @@ export interface SettledLeft<E = any> extends PromiseRejectedResult {
    * The index of the promise in the set of settled promises.
    */
   index: number;
-};
+}
 
-export class SettledLeftBox extends Box<any> implements SettledLeft, Functor<any> {
-  private _status: 'rejected' = 'rejected';
+export class SettledLeftBox
+  extends Box<any>
+  implements SettledLeft, Functor<any>
+{
+  private _status: "rejected" = "rejected";
   private _reason: unknown;
   private _fulfilled: never = null as never;
   private _rejected: unknown;
@@ -52,12 +55,27 @@ export class SettledLeftBox extends Box<any> implements SettledLeft, Functor<any
   private _currentRejection: false | true | undefined;
   private _index: number = -1;
   static of(reason: unknown): SettledLeftBox {
-    return new SettledLeftBox(reason,);
+    return new SettledLeftBox(reason, false);
   }
-  protected static fromMap(reason: unknown, index: number, transformStep: number, currentRejection: false | true): SettledLeftBox {
-    return new SettledLeftBox(reason, index, transformStep + 1, currentRejection);
+  protected static fromMap(
+    reason: unknown,
+    index: number,
+    transformStep: number,
+    currentRejection: false | true,
+  ): SettledLeftBox {
+    return new SettledLeftBox(
+      reason,
+      currentRejection,
+      index,
+      transformStep + 1,
+    );
   }
-  protected constructor(reason: unknown, index = -1, transformStep = -1, currentRejection?: false | true) {
+  protected constructor(
+    reason: unknown,
+    currentRejection: false | true,
+    index = -1,
+    transformStep = -1,
+  ) {
     super(reason);
     this._index = index;
     this._transformStep = transformStep;
@@ -71,13 +89,18 @@ export class SettledLeftBox extends Box<any> implements SettledLeft, Functor<any
     void fn;
     // const result = fn(super.value);
     const currentRejection = !this._currentRejection;
-    return SettledLeftBox.fromMap(this._reason, this._index, this._transformStep, currentRejection);
+    return SettledLeftBox.fromMap(
+      this._reason,
+      this._index,
+      this._transformStep,
+      currentRejection,
+    );
   }
 
   unbox(): any {
     return super.value;
   }
-  get status(): 'rejected' {
+  get status(): "rejected" {
     return this._status;
   }
   get reason(): unknown {
@@ -106,7 +129,4 @@ export class SettledLeftBox extends Box<any> implements SettledLeft, Functor<any
   get index(): number {
     return this._index;
   }
-
-
-
 }

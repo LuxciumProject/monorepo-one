@@ -1,14 +1,9 @@
 import { ProtoBox } from "./ProtoBox";
-import {
-  Apply
-  , Chain
-  , Extend
-  , Functor
-  , Unboxable
-} from "./types";
+import { Apply, Chain, Extend, Functor, Unboxable } from "../types";
 export class Box<T>
   extends ProtoBox<T>
-  implements Unboxable<T>, Functor<T>, Apply<T>, Chain<T>, Extend<T> {
+  implements Unboxable<T>, Functor<T>, Apply<T>, Chain<T>, Extend<T>
+{
   static ["fantasy-land/of"] = Box.of;
 
   public ["fantasy-land/map"] = this.map;
@@ -38,7 +33,6 @@ export class Box<T>
   }
 
   public extend<R>(f: (w: Box<T>) => R): Box<R> {
-    // Add this method
     const value = f(this);
     return Box.of(value);
   }
