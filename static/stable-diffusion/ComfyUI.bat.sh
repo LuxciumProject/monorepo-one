@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script is used to run the stable-diffusion experiment on a single machine.
-PORT=8181 # 8181 is the default port for my ComfyUI configuration.
+PORT=8082 # 8181 is the default port for my ComfyUI configuration.
 PYTHON_EXEC="/home/luxcium/anaconda3/envs/ai_lab/bin/python"
 MAIN_PY_PATH="/src/ComfyUI/main.py"
 export CUDA_VISIBLE_DEVICES=0,1
