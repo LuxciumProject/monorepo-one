@@ -1,7 +1,4 @@
-import type {
-  PerformanceResult,
-  PerformanceResultTupple,
-} from '../types/PerformanceResult';
+import type { PerformanceResult, PerformanceResultTupple } from '../types';
 import { timeStamp } from './timeStamp';
 
 /**
