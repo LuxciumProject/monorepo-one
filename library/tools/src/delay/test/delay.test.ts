@@ -1,4 +1,5 @@
-import { delay } from '../delay.old';
+import { delay } from '../delay';
+import type { PerformanceResult } from '../types';
 
 describe('delay', () => {
   beforeEach(() => {
@@ -14,15 +15,18 @@ describe('delay', () => {
     const lowerBound = 1000;
     const upperBound = 2000;
 
-    const delayPromise = delay(lowerBound, upperBound);
+    const delayPromise: Promise<PerformanceResult> = delay(
+      lowerBound,
+      upperBound
+    );
 
     // Resolve the delay promise by advancing timers
     jest.advanceTimersByTime(upperBound);
 
-    const [chosenDelay] = await delayPromise;
+    const chosenDelay = await delayPromise;
 
-    expect(chosenDelay).toBeGreaterThanOrEqual(lowerBound);
-    expect(chosenDelay).toBeLessThanOrEqual(upperBound);
+    expect(chosenDelay.timeElapsed).toBeGreaterThanOrEqual(lowerBound);
+    expect(chosenDelay.timeElapsed).toBeLessThanOrEqual(upperBound);
   });
   it('generates a random delay within default value (unspecified values using default) bounds', async () => {
     const lowerBound = 500;
@@ -33,10 +37,10 @@ describe('delay', () => {
     // Resolve the delay promise by advancing timers
     jest.advanceTimersByTime(upperBound);
 
-    const [chosenDelay] = await delayPromise;
+    const chosenDelay = await delayPromise;
 
-    expect(chosenDelay).toBeGreaterThanOrEqual(lowerBound);
-    expect(chosenDelay).toBeLessThanOrEqual(upperBound);
+    expect(chosenDelay.timeElapsed).toBeGreaterThanOrEqual(lowerBound);
+    expect(chosenDelay.timeElapsed).toBeLessThanOrEqual(upperBound);
   });
 
   it('handles lowerBound greater than upperBound', async () => {
@@ -48,10 +52,10 @@ describe('delay', () => {
     // Resolve the delay promise by advancing timers
     jest.advanceTimersByTime(lowerBound);
 
-    const [chosenDelay] = await delayPromise;
+    const chosenDelay = await delayPromise;
 
-    expect(chosenDelay).toBeGreaterThanOrEqual(upperBound);
-    expect(chosenDelay).toBeLessThanOrEqual(lowerBound);
+    expect(chosenDelay.timeElapsed).toBeGreaterThanOrEqual(upperBound);
+    expect(chosenDelay.timeElapsed).toBeLessThanOrEqual(lowerBound);
   });
   it('handles single argument as lowerBound and upperBound', async () => {
     const bound = 1500;
@@ -61,9 +65,9 @@ describe('delay', () => {
     // Resolve the delay promise by advancing timers
     jest.advanceTimersByTime(bound);
 
-    const [chosenDelay] = await delayPromise;
+    const chosenDelay = await delayPromise;
 
-    expect(chosenDelay).toBeGreaterThanOrEqual(bound);
-    expect(chosenDelay).toBeLessThanOrEqual(bound);
+    expect(chosenDelay.timeElapsed).toBeGreaterThanOrEqual(bound);
+    expect(chosenDelay.timeElapsed).toBeLessThanOrEqual(bound);
   });
 });
