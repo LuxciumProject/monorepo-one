@@ -5,9 +5,8 @@
  * @returns PerformanceResult containing the chosen delay and execution time
  */
 
-import { calculateRandomNumber } from './calculateRandomNumber';
-import { measurePerformance } from './measurePerformance';
 import type { DelayValue } from './types/DelayValue';
+import { calculateRandomNumber, measurePerformance } from './utils';
 
 export async function delay(
   lowerBound = 500,

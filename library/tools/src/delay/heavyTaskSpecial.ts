@@ -1,6 +1,5 @@
-import { calculateRandomNumber } from './calculateRandomNumber';
-import { measurePerformance } from './measurePerformance';
 import type { TaskValue } from './types/TaskValue';
+import { calculateRandomNumber, measurePerformance } from './utils';
 
 /**
  * Function to execute a heavy CPU-bound task and measure its performance
