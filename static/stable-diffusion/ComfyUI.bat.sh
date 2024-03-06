@@ -1,20 +1,39 @@
 #!/usr/bin/env bash
 
 # This script is used to run the stable-diffusion experiment on a single machine.
-PORT=8082 # 8181 is the default port for my ComfyUI configuration.
+PORT=${1:-8181} # 8182 is the secondary port for this ComfyUI configuration.
+# PORT=8181 # 8181 is the default port for this ComfyUI configuration.
+
 PYTHON_EXEC="/home/luxcium/anaconda3/envs/ai_lab/bin/python"
 MAIN_PY_PATH="/src/ComfyUI/main.py"
-export CUDA_VISIBLE_DEVICES=0,1
+export CUDA_VISIBLE_DEVICES="0, 1"
 source /home/luxcium/anaconda3/etc/profile.d/conda.sh
 conda activate ai_lab
 
-sudo nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=75" -a "[gpu:1]/GPUFanControlState=1" -a "[fan:1]/GPUTargetFanSpeed=55" -a "[GPU:1]/GPULogoBrightness=20" -a "[GPU:0]/GPULogoBrightness=100"
+sudo nvidia-settings -a \
+  "[gpu:0]/GPUFanControlState=1" -a \
+  "[fan:0]/GPUTargetFanSpeed=75" -a \
+  "[gpu:1]/GPUFanControlState=1" -a \
+  "[fan:1]/GPUTargetFanSpeed=55" -a \
+  "[GPU:1]/GPULogoBrightness=20" -a \
+  "[GPU:0]/GPULogoBrightness=100"
 
 echo "$PYTHON_EXEC $MAIN_PY_PATH --auto-launch --use-pytorch-cross-attention --port ${PORT} --cuda-device 1" "${@}"
-$PYTHON_EXEC $MAIN_PY_PATH --auto-launch --use-pytorch-cross-attention --port ${PORT} --cuda-device 1 "${@}"
+$PYTHON_EXEC $MAIN_PY_PATH --auto-launch --use-pytorch-cross-attention --port "${PORT}" --cuda-device 1 --force-fp16 "${@}"
 
-sudo nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=45" -a "[gpu:1]/GPUFanControlState=1" -a "[fan:1]/GPUTargetFanSpeed=35" -a "[GPU:0]/GPULogoBrightness=20" -a "[GPU:1]/GPULogoBrightness=40"
-sudo nvidia-settings -a "[gpu:0]/GPUFanControlState=0" -a "[fan:0]/GPUTargetFanSpeed=45" -a "[gpu:1]/GPUFanControlState=0" -a "[fan:1]/GPUTargetFanSpeed=35"
+sudo nvidia-settings -a \
+  "[gpu:0]/GPUFanControlState=1" -a \
+  "[fan:0]/GPUTargetFanSpeed=45" -a \
+  "[gpu:1]/GPUFanControlState=1" -a \
+  "[fan:1]/GPUTargetFanSpeed=35" -a \
+  "[GPU:0]/GPULogoBrightness=20" -a \
+  "[GPU:1]/GPULogoBrightness=40"
+
+sudo nvidia-settings -a \
+  "[gpu:0]/GPUFanControlState=0" -a \
+  "[fan:0]/GPUTargetFanSpeed=45" -a \
+  "[gpu:1]/GPUFanControlState=0" -a \
+  "[fan:1]/GPUTargetFanSpeed=35"
 
 #  --preview-method=auto
 ## ** ComfyUI startup time: 2024-02-22 09:41:30.148123
