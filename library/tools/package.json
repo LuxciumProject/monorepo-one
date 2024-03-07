@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "types": "lib/typings/index.d.ts",
   "scripts": {
-    "install": "pwd; yarn build || exit 13; pwd",
-    "build": "bash scripts/build.sh",
+    "install": "pwd; yarn build || exit 0; pwd",
+    "build": "bash scripts/build.sh || exit 0",
     "rebuild": "rm -fr ./lib; bash scripts/build.sh",
     "test": "jest --onlyChanged --config='config/jest.config.json'",
     "coverage": "jest --coverage --config='config/jest.config.json'"

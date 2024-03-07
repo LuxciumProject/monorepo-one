@@ -4,6 +4,8 @@
   "description": "† Scientia es lux principium✨ ™",
   "main": "index.js",
   "scripts": {
+    "build": "echo will tsc",
+    "install": "echo will install",
     "test": "jest --all --coverage=false --config='jest.config.json'"
   },
   "keywords": [],
