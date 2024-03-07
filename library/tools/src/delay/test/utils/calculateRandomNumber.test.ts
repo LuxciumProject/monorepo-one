@@ -23,14 +23,13 @@ describe.each([0, 0.5, 0.999])('calculateRandomNumber', randomValue => {
     const lowerBound = bound * 10;
     const upperBound = bound * 200;
 
-    const effectiveLowerBound = 0;
-    const effectiveUpperBound = 0;
-
     const result = calculateRandomNumber(lowerBound, upperBound);
 
-    expect(result).not.toBeGreaterThanOrEqual(bound * 10 + 1);
-    expect(result).toBeGreaterThanOrEqual(bound * 10);
-    expect(result).toBeLessThanOrEqual(bound * 200);
+    const effectiveLowerBound = lowerBound;
+    const effectiveUpperBound = upperBound;
+
+    expect(result).toBeGreaterThanOrEqual(effectiveLowerBound);
+    expect(result).toBeLessThanOrEqual(effectiveUpperBound);
   });
 
   it('returns a random number within the specified bounds when lower bound is greater than upper bound', () => {
@@ -39,8 +38,11 @@ describe.each([0, 0.5, 0.999])('calculateRandomNumber', randomValue => {
 
     const result = calculateRandomNumber(lowerBound, upperBound);
 
-    expect(result).toBeGreaterThanOrEqual(bound * 10);
-    expect(result).toBeLessThanOrEqual(bound * 200);
+    const effectiveLowerBound = upperBound;
+    const effectiveUpperBound = lowerBound;
+
+    expect(result).toBeGreaterThanOrEqual(effectiveLowerBound);
+    expect(result).toBeLessThanOrEqual(effectiveUpperBound);
   });
 
   it('returns a random number within the specified bounds when lower bound is negative', () => {
@@ -49,8 +51,11 @@ describe.each([0, 0.5, 0.999])('calculateRandomNumber', randomValue => {
 
     const result = calculateRandomNumber(lowerBound, upperBound);
 
-    expect(result).toBeGreaterThanOrEqual(bound * 10);
-    expect(result).toBeLessThanOrEqual(bound * 200);
+    const effectiveLowerBound = upperBound;
+    const effectiveUpperBound = lowerBound * -1;
+
+    expect(result).toBeGreaterThanOrEqual(effectiveLowerBound);
+    expect(result).toBeLessThanOrEqual(effectiveUpperBound);
   });
 
   it('returns a random number within the specified bounds when upper bound is negative', () => {
@@ -59,10 +64,11 @@ describe.each([0, 0.5, 0.999])('calculateRandomNumber', randomValue => {
 
     const result = calculateRandomNumber(lowerBound, upperBound);
 
-    // expect(result).toBeGreaterThanOrEqual(bound * 10 - 1);
-    expect(result).toBeGreaterThanOrEqual(bound * 10);
-    expect(result).toBeLessThanOrEqual(bound * 200);
-    // expect(result).not.toBeLessThanOrEqual(bound * 200 + 1);
+    const effectiveLowerBound = lowerBound;
+    const effectiveUpperBound = upperBound * -1;
+
+    expect(result).toBeGreaterThanOrEqual(effectiveLowerBound);
+    expect(result).toBeLessThanOrEqual(effectiveUpperBound);
   });
 
   it('returns a random number within the specified bounds when both lower bound and upper bound are negative', () => {
@@ -70,8 +76,11 @@ describe.each([0, 0.5, 0.999])('calculateRandomNumber', randomValue => {
     const upperBound = bound * -200;
     const result = calculateRandomNumber(lowerBound, upperBound);
 
-    expect(result).toBeGreaterThanOrEqual(bound * 10);
-    expect(result).toBeLessThanOrEqual(bound * 200);
+    const effectiveLowerBound = lowerBound * -1;
+    const effectiveUpperBound = upperBound * -1;
+
+    expect(result).toBeGreaterThanOrEqual(effectiveLowerBound);
+    expect(result).toBeLessThanOrEqual(effectiveUpperBound);
   });
 
   it('returns a random number within the specified bounds when both lower bound and upper bound are negative', () => {
@@ -79,8 +88,11 @@ describe.each([0, 0.5, 0.999])('calculateRandomNumber', randomValue => {
     const upperBound = bound * -10;
     const result = calculateRandomNumber(lowerBound, upperBound);
 
-    expect(result).toBeGreaterThanOrEqual(bound * 10);
-    expect(result).toBeLessThanOrEqual(bound * 200);
+    const effectiveLowerBound = upperBound * -1;
+    const effectiveUpperBound = lowerBound * -1;
+
+    expect(result).toBeGreaterThanOrEqual(effectiveLowerBound);
+    expect(result).toBeLessThanOrEqual(effectiveUpperBound);
   });
   afterEach(() => {
     (global.Math.random as jest.Mock).mockRestore();
