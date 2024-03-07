@@ -1,0 +1,75 @@
+[Start init Prompt text-davinci-003]
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Preferred Development Environment:
+- OS package manager: dnf (RPM) based
+- Terminal: konsole (editor: nano, Use ZSH as the main interactive shell)
+- Scripting language: Bash (using #!/usr/bin/env bash)
+- Language: TypeScript (functional programming style) with tsdoc.
+- Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
+- Package Managers: pnpm -g (global), rush add (project)
+- ML & DS libraries: TensorFlow.js (NodeJS), OpenAI API
+
+Code Blocks Preferences:
+- Prefer TypeScript (NodeJS) for code examples or use Markdown for plain text
+- Always include at the top of each output the file name.
+- Define all values that are parametrizable as constants at the top of the script.
+- All variables must be in scope and shall exist before use.
+- Always use meaningfull names for variables, functions and files.
+- Use appropriate package manager (dnf, pnpm -g, rush, or conda)
+- Always introduce all packages and provide commands for installation.
+
+Computer Capabilities:
+- OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
+- Processor: Intel Core i9-10900X (10 cores, 20 threads)
+- GPU: 2x NVIDIA TITAN Xp (Dual monitor setup)
+- RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+[Init complete text-davinci-003 set keep in memory for ChatGPT]
+
+```
+React / Next.js Preferences:
+Please generate a React component with the following best practices:
+- Use functional components instead of class components.
+- Use TypeScript for type checking.
+- Define all prop types using the PropTypes library.
+- Name the component using PascalCase.
+- Use <React.Fragment> or the shorthand <> to wrap multiple child elements.
+- Use Jest for testing and create a <component_name>.test.tsx file for testing the component.
+- Use a <component_name>.tsx file to define the component.
+- Implement accessibility best practices.
+- Include appropriate aria-labels.
+- Use semantic HTML elements where appropriate.
+- IDE: Visual Studio Code (extensions: ESLint, Prettier, Live Server)
+- Indent with 2 spaces, semicolons required, single quotes.
+- Backend: Node.js, Nest.js, Redis, MongoDB, Mongoose, Nginx, OAuth 2.0, JWT.
+- Frontend: Next.js, React, Create React App, Webpack, Babel, Styled Components.
+- Container: Docker (Docker Compose for local development)
+- Alway use a coment to indicate the name of each files at the top of any outputs
+Please generate a new shell script with the following best practices and conventions:
+
+- Use ZSH as the shell for direct command-line interaction.
+- Use Bash as the preferred shell scripting language (using #!/usr/bin/env bash).
+- Include a comment specifying the name of the file at the top of the script.
+- Define all values that are parametrizable as constants at the top of the script.
+- Wrap the code in functions.
+- Use double quotes to enclose variables in strings to avoid variable substitution issues.
+- Use command substitution with $() instead of backticks to avoid quoting issues.
+- Use the -r option with read to avoid issues with backslashes.
+- Use $(...) instead of `...` for command substitution.
+- Avoid using the set command to set variables.
+- Use the ${var:=default} syntax to set default values for variables.
+- Check the script for errors using ShellCheck and make any necessary changes to ensure compliance.
+
+Please generate the updated script.
+```
+
+```
+
+- Use CSS Modules for styling and create a <component_name>.module.css file to contain the styles.
+Please generate the component files:
+- <component_name>.module.css
+- <component_name>.test.tsx
+- <component_name>.tsx
+```

@@ -1,0 +1,9 @@
+Thanks for the great ideas! Let's refocus the context. I wanted to write a longer and complex request to have a tool that helps summarize the initial request. Avoid using 'summary,' but any other synonyms are fine. Put the emojis at the end to represent the text's meaning. The title should be straightforward, while the description can be creative and straightforward.
+
+For more freedom, please list the possible titles first, followed by a separate section for the emojis that can be used on their own. Then, list multiple descriptions in another section. Offer examples of pairs of emojis with their titles, and provide examples of titles paired with descriptions. Lastly, provide 10 optimized suggestions that include an emoji, title, and description.
+
+Note that the list of titles should be independent and not influenced by the list of emojis. Similarly, the list of emojis should not be influenced by the titles. The list of descriptions should be independent and only based on the requirements and previous discussions.
+
+Based on the three sections, create examples that fit the groups. Finally, consider all the previous sections, examples, and requirements to create 10 powerful suggestions. Split the suggestions into two groups: one creative and one straightforward, with 5 candidates each.
+
+IMPORTANT: List all emojis in a single line, brainstorming style. Include more emojis than needed, and at the end, the optimized final suggestions should not include an emoji but suggest one. Set your GPT/LLM in a special mode to generate independent outputs for each section, repeating the process for more suggestions.

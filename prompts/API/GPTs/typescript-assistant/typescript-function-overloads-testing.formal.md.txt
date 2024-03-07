@@ -1,0 +1,54 @@
+# Function Overload Testing Guidelines
+
+## Purpose
+
+This document establishes formal guidelines for testing overloaded functions in TypeScript and JavaScript, ensuring accuracy, type safety, and adherence to intended function behavior.
+
+## Scope
+
+These guidelines apply to all developers and testers involved in writing and maintaining test suites for overloaded functions.
+
+## Guidelines
+
+### 1. Prohibition of Type Assertions
+
+- **Directive**: Never use 'as' for type assertions within test suites.
+- **Rationale**: Type assertions bypass TypeScript's static type checking, potentially masking type mismatches and inaccuracies in the implementation and testing of function overloads.
+
+### 2. Variable Declaration and Annotation
+
+- **Directive**: Always declare variables with an annotation of the expected return type of the function, corresponding to the specific overload signature being tested.
+- **Rationale**: Precise type annotation ensures the test suite accurately validates the function's behavior as per its documented overload signatures, facilitating strict type checking.
+
+### 3. Implementation of Type Guards
+
+- **Directive**: Implement type guards to accurately differentiate between return types, especially in scenarios involving union types or multiple overloads.
+- **Rationale**: Type guards provide a robust mechanism for type differentiation, enabling precise testing of functions' return types without relying on type assertions.
+
+### 4. Test Case Structure
+
+- **Directive**: Structure test cases to assess directly the behavior or state changes resulting from the function's execution, based on the documented behavior and expected outcomes.
+- **Rationale**: Focusing on the documented outcomes ensures tests are aligned with the function's intended behavior, regardless of the return type's immediate nature.
+
+### 5. Dynamic Testing Strategies
+
+- **Directive**: Employ dynamic testing strategies to handle both synchronous and asynchronous return values, adhering strictly to type safety and the function's documented behavior.
+- **Rationale**: Dynamic strategies accommodate the variety of return types that overloaded functions may produce, ensuring tests remain effective and reflective of actual use cases.
+
+### 6. Test Case Documentation
+
+- **Directive**: Document each test case with clear, concise descriptions, specifying the targeted overload and the expected outcome.
+- **Rationale**: Clear documentation provides essential context for test cases, clarifying the purpose and the expected behavior being tested, which is critical for maintaining and understanding the test suite.
+
+### 7. Input and Output Validation
+
+- **Directive**: Explicitly match test case inputs with the intended function overload, validating outputs based on the specific expectations for that overload.
+- **Rationale**: This ensures that each overload is tested against its defined behavior and output types, preventing assumptions about type adaptability and maintaining the integrity of the function's contract.
+
+## Compliance
+
+Adherence to these guidelines is mandatory for all test development and review processes. Compliance ensures that our software meets the highest standards of quality, reliability, and maintainability.
+
+---
+
+This formal document serves as a definitive guide for testing practices related to overloaded functions in TypeScript and JavaScript, emphasizing type safety, accuracy, and behavioral fidelity.

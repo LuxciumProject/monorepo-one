@@ -1,0 +1,87 @@
+WITHOUT PERMISSION ― NOT UNDER MIT LICENSE ↓
+
+[…] not to release Zalgo, possibly by using synthetic deferrals (say what?) so that you don’t make your API’s users unhappy. In the world of “lean” and MEAN MVPs, who has time to learn about leaky abstractions […]
+― HissainMay 6, 2015 at 1:15 pm (https://blog.ometer.com/2011/07/24/callbacks-synchronous-and-asynchronous/)
+
+Copyright © 2020 Packt Publishing All rights reserved:
+
+Node.js Design Patterns [Third Edition]
+― Mario Casciaro
+― Luciano Mammino
+
+3. Callbacks and Events
+
+The continuation-passing style
+In JavaScript, a callback is a function that is passed as an argument to another function and is invoked with the result when the operation completes. In functional programming, this way of propagating the result is called continuation-passing style (CPS).
+
+It is a general concept, and it is not always associated with asynchronous operations. In fact, it simply indicates that a result is propagated by passing it to another function (the callback), instead of directly returning it to the caller.
+
+Synchronous CPS
+To clarify this concept, let's take a look at a simple synchronous function:
+
+function add (a, b) {
+  return a + b
+}
+If you are wondering, there is nothing special going on here. The result is passed back to the caller using the return instruction. This is also called direct style, and it represents the most common way of returning a result in synchronous programming.
+
+The equivalent CPS of the preceding function would be as follows:
+
+function addCps (a, b, callback) {
+  callback(a + b)
+}
+The addCps() function is a synchronous CPS function. It's synchronous because it will complete its execution only when the callback completes its execution too. The following code demonstrates this statement:
+
+console.log('before')
+addCps(1, 2, result => console.log(`Result: ${result}`))
+console.log('after')
+Since addCps() is synchronous, the previous code will trivially print the following:
+
+before
+Result: 3
+after
+Now, let's see how asynchronous CPS works.
+
+Asynchronous CPS
+Let's consider a case where the addCps() function is asynchronous:
+
+function additionAsync (a, b, callback) {
+  setTimeout(() => callback(a + b), 100)
+}
+In the previous code, we used setTimeout() to simulate an asynchronous invocation of the callback. setTimeout() adds a task to the event queue that is executed after the given number of milliseconds. This is clearly an asynchronous operation. Now, let's try to use additionAsync() and see how the order of the operations changes:
+
+console.log('before')
+additionAsync(1, 2, result => console.log(`Result: ${result}`))
+console.log('after')
+The preceding code will print the following:
+
+before
+after
+Result: 3
+Since setTimeout() triggers an asynchronous operation, it doesn't wait for the callback to be executed; instead, it returns immediately, giving the control back to additionAsync(), and then back again to its caller. This property in Node.js is crucial, as it gives control back to the event loop as soon as an asynchronous request is sent, thus allowing a new event from the queue to be processed.
+
+Figure 3.1 shows how this works:
+
+
+Figure 3.1: Control flow of an asynchronous function's invocation
+
+When the asynchronous operation completes, the execution is then resumed, starting from the callback provided to the asynchronous function that caused the unwinding. The execution starts from the event loop, so it has a fresh stack. This is where JavaScript comes in really handy. Thanks to closures, it is trivial to maintain the context of the caller of the asynchronous function, even if the callback is invoked at a different point in time and from a different location.
+
+To sum this up, a synchronous function blocks until it completes its operations. An asynchronous function returns immediately, and its result is passed to a handler (in our case, a callback) at a later cycle of the event loop.
+
+Non-CPS callbacks
+There are several circumstances in which the presence of a callback argument might make us think that a function is asynchronous or is using a CPS. That's not always true. Let's take, for example, the map() method of an Array object:
+
+const result = [1, 5, 7].map(element => element - 1)
+console.log(result) // [0, 4, 6]
+Clearly, the callback is used just to iterate over the elements of the array, and not to pass the result of the operation. In fact, the result is returned synchronously using a direct style. There's no syntactic difference between non-CPS callbacks and CPS ones. Therefore, the intent of a callback should be clearly stated in the documentation of the API.
+
+In the next section, we are going to discuss one of the most important pitfalls of callbacks that every Node.js developer should be aware of.
+
+
+Copyright © 2020 Packt Publishing All rights reserved:
+
+Node.js Design Patterns [Third Edition]
+― Mario Casciaro
+― Luciano Mammino
+
+WITHOUT PERMISSION ― NOT UNDER MIT LICENSE ↑

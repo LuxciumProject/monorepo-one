@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "../typescript/tsconfig.json",
+  "compilerOptions": {
+    /* Emit Options */
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "declarationDir": "./lib/typings",
+    "outDir": "./lib/",
+    "tsBuildInfoFile": "./lib/ts-out-info.lib",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": false,
+    /* Bundled library declaration files that describe the target runtime environment. */
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    /* Package names to be included without being referenced in a source file. */
+    "types": [
+      "node",
+      "heft-jest"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    // "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "lib",
+    "**/jest.*.js"
+  ]
+}

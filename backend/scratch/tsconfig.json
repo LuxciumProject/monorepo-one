@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ESNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts"]
+}
+/*
+
+
+
+
+Travis is not what it was before I think it is obvious from what we can read on their plan page and with some incongruencies like that:
+
+1. No credit card required for Free Plan!
+2. Credit Card authorization with $1.00 hold required for Free Trial.
+
+**I think they kind of betrayed the community when they said:**
+
+_Testing your open source
+projects will always be free!
+Seriously. Always. We like to think of it as our way of giving
+back to a community that connects so many people._
+*/

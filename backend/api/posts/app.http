@@ -1,0 +1,10 @@
+GET http://localhost:3001/
+ETag: "16-xAEp+WiSHPJvtO6+g7ggRHjbIJU"
+###
+
+POST http://localhost:3001/
+Content-Type: application/json
+
+{
+  "title": "Sample title"
+}

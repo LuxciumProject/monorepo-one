@@ -1,0 +1,16 @@
+{
+  "folderRoots": {
+    "data": {
+      "path": "./data",
+      "metadata": {
+        "description": "Folder containing data files"
+      }
+    },
+    "logs": {
+      "path": "./logs",
+      "metadata": {
+        "description": "Folder containing log files"
+      }
+    }
+  }
+}

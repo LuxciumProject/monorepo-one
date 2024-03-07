@@ -1,0 +1,19 @@
+.dockerignore
+.eslintrc.js
+.gitignore
+.prettierrc
+.rush
+api-server.build.log
+dist
+Dockerfile
+# nest-cli.json
+node_modules
+# package.json
+pnpm-lock.yaml
+README.md
+requests.http
+scripts
+# src
+test
+# tsconfig.build.json
+# tsconfig.json

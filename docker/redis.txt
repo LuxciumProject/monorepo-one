@@ -1,0 +1,9 @@
+# REDIS:
+docker pull redis
+docker pull redis:7.0-alpine3.16
+docker pull redislabs/rebloom
+docker pull redislabs/rebloom:2.4
+docker pull redislabs/rejson
+docker pull redislabs/rejson:2.4
+docker pull redislabs/redisearch
+docker pull redislabs/redisearch:2.4

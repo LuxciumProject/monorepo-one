@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "../typescript/tsconfig.json",
+  "compilerOptions": {
+    /* Emit Options */
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "composite": true,
+    "declarationDir": "lib/typings",
+    "outDir": "lib",
+    "tsBuildInfoFile": "lib/ts-out-info.lib",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    /* Bundled library declaration files that describe the target runtime environment. */
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    /* Package names to be included without being referenced in a source file. */
+    "types": [
+      "node",
+      "heft-jest"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/canvas"
+    ]
+  },
+  "include": [
+    "src",
+    "src/**/*.json",
+    // ".eslintrc.cjs"
+  ],
+  "exclude": [
+    "lib"
+  ]
+}
+/*
+
+I am using linux nodejs typescript
+I will take a screen capture of each screen (monitors) separately and have one (png) image of the corect size and change the size of teh other image and do a script with node js to change the sizes and put both in a resuting composit image
+I need a self contained script (nodejs typescript) and not using canvas that would receive the path of the left image (probably a .png) followed bit the right image path to the other .png image if both are valid images I would like to composite them into a resulting image I would like to get the resulting composit image to be saved to the disk
+I need a shebang please name it merge-two-screens.ts
+
+the config files will be in the /projects/monorepo-one/library/tools folder and the script would be in the /projects/monorepo-one/library/tools/src/create-composite-screenshot/merge-two-screens.ts file I am unsing import instead of require
+
+
+*/

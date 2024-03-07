@@ -1,0 +1,291 @@
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
+Built-ins
+JavaScript standard built-in objects, along with their methods and properties.
+
+    Built-ins
+    Statements
+    Expressions and operators
+    Functions
+    Classes
+    Additional reference pages
+
+    Value properties
+    Function properties
+    Fundamental objects
+    Error objects
+    Numbers and dates
+    Text processing
+    Indexed collections
+    Keyed collections
+    Structured data
+    Managing memory
+    Control abstraction objects
+    Reflection
+    Internationalization
+    Control flow
+    Declaring variables
+    Functions and classes
+    Iterations
+    Others
+    Primary expressions
+    Left-hand-side expressions
+    Increment and decrement
+    Unary operators
+    Arithmetic operators
+    Relational operators
+    Equality operators
+    Bitwise shift operators
+    Binary bitwise operators
+    Binary logical operators
+    Conditional (ternary) operator
+    Assignment operators
+    Yield operators
+    Spread syntax
+    Comma operator
+
+Built-ins ― JavaScript standard built-in objects, along with their methods and properties.
+- Value properties
+    globalThis
+    Infinity
+    NaN
+    undefined
+- Function properties
+    eval()
+    isFinite()
+    isNaN()
+    parseFloat()
+    parseInt()
+    decodeURI()
+    decodeURIComponent()
+    encodeURI()
+    encodeURIComponent()
+    escape() Deprecated
+    unescape() Deprecated
+- Fundamental objects
+    Object
+    Function
+    Boolean
+    Symbol
+- Error objects
+    Error
+    AggregateError
+    EvalError
+    RangeError
+    ReferenceError
+    SyntaxError
+    TypeError
+    URIError
+    InternalError Non-standard
+- Numbers and dates
+    Number
+    BigInt
+    Math
+    Date
+- Text processing
+    String
+    RegExp
+- Indexed collections
+    Array
+    Int8Array
+    Uint8Array
+    Uint8ClampedArray
+    Int16Array
+    Uint16Array
+    Int32Array
+    Uint32Array
+    BigInt64Array
+    BigUint64Array
+    Float32Array
+    Float64Array
+- Keyed collections
+    Map
+    Set
+    WeakMap
+    WeakSet
+- Structured data
+    ArrayBuffer
+    SharedArrayBuffer
+    DataView
+    Atomics
+    JSON
+- Managing memory
+    WeakRef
+    FinalizationRegistry
+- Control abstraction objects
+    Iterator
+    AsyncIterator
+    Promise
+    GeneratorFunction
+    AsyncGeneratorFunction
+    Generator
+    AsyncGenerator
+    AsyncFunction
+- Reflection
+    Reflect
+    Proxy
+- Internationalization
+    Intl
+    Intl.Collator
+    Intl.DateTimeFormat
+    Intl.DisplayNames
+    Intl.DurationFormat
+    Intl.ListFormat
+    Intl.Locale
+    Intl.NumberFormat
+    Intl.PluralRules
+    Intl.RelativeTimeFormat
+    Intl.Segmenter
+Statements ― JavaScript statements and declarations
+- Control flow
+    return
+    break
+    continue
+    throw
+    if...else
+    switch
+    try...catch
+- Declaring variables
+    var
+    let
+    const
+- Functions and classes
+    function
+    function*
+    async function
+    async function*
+    class
+- Iterations
+    do...while
+    for
+    for...in
+    for...of
+    for await...of
+    while
+- Others
+    Empty
+    Block
+    Expression statement
+    debugger
+    export
+    import
+    label
+    with Deprecated
+Expressions and operators ― JavaScript expressions and operators.
+- Primary expressions
+    this
+    Literals
+    []
+    {}
+    function
+    class
+    function*
+    async function
+    async function*
+    /ab+c/i
+    `string`
+    ( )
+- Left-hand-side expressions
+    Property accessors
+    ?.
+    new
+    new.target
+    import.meta
+    super
+    import()
+- Increment and decrement
+    A++
+    A--
+    ++A
+    --A
+- Unary operators
+    delete
+    void
+    typeof
+    +
+    -
+    ~
+    !
+    await
+- Arithmetic operators
+    **
+    *
+    /
+    %
+    + (Plus)
+    -
+- Relational operators
+    < (Less than)
+    > (Greater than)
+    <=
+    >=
+    instanceof
+    in
+- Equality operators
+    ==
+    !=
+    ===
+    !==
+- Bitwise shift operators
+    <<
+    >>
+    >>>
+- Binary bitwise operators
+    &
+    |
+    ^
+- Binary logical operators
+    &&
+    ||
+    ??
+- Conditional (ternary) operator
+    (condition ? ifTrue : ifFalse)
+- Assignment operators
+    =
+    *=
+    /=
+    %=
+    +=
+    -=
+    <<=
+    >>=
+    >>>=
+    &=
+    ^=
+    |=
+    **=
+    &&=
+    ||=
+    ??=
+    [a, b] = arr, { a, b } = obj
+- Yield operators
+    yield
+    yield*
+- Spread syntax
+    ...obj
+- Comma operator
+    ,
+Functions ― JavaScript functions.
+  Arrow Functions
+  Default parameters
+  Rest parameters
+  arguments
+  Method definitions
+  getter
+  setter
+Classes ― JavaScript classes.
+  constructor
+  extends
+  Private properties
+  Public class fields
+  static
+  Static initialization blocks
+
+- Additional reference pages ― Additional JavaScript reference pages.
+  Lexical grammar
+  Data types and data structures
+  Iteration protocols
+  Trailing commas
+  Errors
+  Strict mode
+  Deprecated features

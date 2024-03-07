@@ -1,0 +1,29 @@
+Topic: Naming and Understanding Concepts in Functional Programming
+
+Context: The user is working on functional programming in TypeScript and has created their own constructs that resemble classes or objects. They are looking for names and descriptions for these concepts and want to understand if similar concepts already exist in functional programming.
+
+Action items:
+
+Identify the concept of "inboxing," which involves placing a value inside a construct or container.
+Identify the concept of "mapping," which involves transforming the internal value of a construct.
+Identify the concept of "unboxing," which involves extracting the value from a construct.
+Key points:
+
+The user has created their own personal paradigms based on their needs.
+They are looking for existing or new names for their concepts.
+The user draws an analogy to eating, digestion, and excretion to explain the concepts.
+They mention the existence of functors for mapping, but their constructs do not have that capability yet.
+The user seeks to understand the nature of their constructs and find peace of mind.
+Contextual information:
+
+The user is using TypeScript for their functional programming tasks.
+They are focusing on functionality and usefulness rather than adhering to academic conventions.
+They want to comprehend the existing conventions and potentially create new ones.
+The user's constructs involve ingesting a value, mapping it, and then extracting the transformed value.
+Next steps:
+
+Provide descriptions and names for the concepts of inboxing, mapping, and unboxing.
+Explain whether similar concepts already exist in functional programming.
+Explore academic conventions and best practices related to the user's constructs.
+Extend existing ideas and propose new ones that align with the user's requirements.
+Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT so we can continue our conversation where we left off.

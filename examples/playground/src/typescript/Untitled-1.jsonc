@@ -1,0 +1,1041 @@
+[
+  {
+    "name": "Full Thirds ― NEW",
+    "padding": 0,
+    "zones": [
+      {
+        "name": "⅓ ⅓ - Top (L)",
+        "x": 0,
+        "y": 0,
+        "height": 33,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅓ - Top (R)",
+        "x": 33,
+        "y": 0,
+        "height": 33,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅔ - Top (L)",
+        "x": 0,
+        "y": 0,
+        "height": 50,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅔ - Top (R)",
+        "x": 33,
+        "y": 0,
+        "height": 50,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅓ - L",
+        "x": 0,
+        "y": 33,
+        "height": 33,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅓ - R",
+        "x": 33,
+        "y": 33,
+        "height": 33,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅔ - Bottom (L)",
+        "x": 0,
+        "y": 50,
+        "height": 50,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅔ - Bottom (R)",
+        "x": 33,
+        "y": 50,
+        "height": 50,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅓ - Bottom (L)",
+        "x": 0,
+        "y": 67,
+        "height": 33,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "⅓ ⅓ - Bottom (R)",
+        "x": 33,
+        "y": 67,
+        "height": 33,
+        "width": 67,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "9 Grid - TOP (L)",
+        "x": 0,
+        "y": 0,
+        "height": 33,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": -200,
+            "y": -200
+          }
+        }
+      },
+      {
+        "name": "9 Grid - TOP (C)",
+        "x": 33,
+        "y": 0,
+        "height": 33,
+        "width": 34,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": -200
+          }
+        }
+      },
+      {
+        "name": "9 Grid - TOP (R)",
+        "x": 67,
+        "y": 0,
+        "height": 33,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": 200,
+            "y": -200
+          }
+        }
+      },
+      {
+        "name": "9 Grid - CENTER (L)",
+        "x": 0,
+        "y": 33,
+        "height": 34,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": -200,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "9 Grid - CENTER (C)",
+        "x": 33,
+        "y": 33,
+        "height": 34,
+        "width": 34,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "9 Grid - CENTER (R)",
+        "x": 67,
+        "y": 33,
+        "height": 34,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": 200,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "9 Grid - BOTTOM (L)",
+        "x": 0,
+        "y": 67,
+        "height": 33,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": -200,
+            "y": 200
+          }
+        }
+      },
+      {
+        "name": "9 Grid - BOTTOM (C)",
+        "x": 33,
+        "y": 67,
+        "height": 33,
+        "width": 34,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 200
+          }
+        }
+      },
+      {
+        "name": "9 Grid - BOTTOM (R)",
+        "x": 67,
+        "y": 67,
+        "height": 33,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": 200,
+            "y": 200
+          }
+        }
+      },
+      {
+        "name": "6 Grid - TOP (L)",
+        "x": 0,
+        "y": 0,
+        "height": 50,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - TOP (C)",
+        "x": 33,
+        "y": 0,
+        "height": 50,
+        "width": 34,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - TOP (R)",
+        "x": 67,
+        "y": 0,
+        "height": 50,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - BOTTOM (L)",
+        "x": 0,
+        "y": 50,
+        "height": 50,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - BOTTOM (C)",
+        "x": 33,
+        "y": 50,
+        "height": 50,
+        "width": 34,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - BOTTOM (R)",
+        "x": 67,
+        "y": 50,
+        "height": 50,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - TOP (L)",
+        "x": 0,
+        "y": 0,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - TOP (R)",
+        "x": 50,
+        "y": 0,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - CENTER (L)",
+        "x": 0,
+        "y": 33,
+        "height": 34,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "6 Grid - CENTER (R)",
+        "x": 50,
+        "y": 33,
+        "height": 34,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "6 Grid - BOTTOM (L)",
+        "x": 0,
+        "y": 67,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "6 Grid - BOTTOM (R)",
+        "x": 50,
+        "y": 67,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "3 Grid - LEFT",
+        "x": 0,
+        "y": 0,
+        "height": 100,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "3 Grid - CENTER",
+        "x": 33,
+        "y": 0,
+        "height": 100,
+        "width": 34,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "3 Grid - RIGHT",
+        "x": 67,
+        "y": 0,
+        "height": 100,
+        "width": 33,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "3 Grid - TOP",
+        "x": 0,
+        "y": 0,
+        "height": 33,
+        "width": 100,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": 200
+          }
+        }
+      },
+      {
+        "name": "3 Grid - CENTER",
+        "x": 0,
+        "y": 33,
+        "height": 34,
+        "width": 100,
+        "indicator": {
+          "offset": {
+            "x": 100,
+            "y": 100
+          }
+        }
+      },
+      {
+        "name": "3 Grid - BOTTOM",
+        "x": 0,
+        "y": 67,
+        "height": 33,
+        "width": 100,
+        "indicator": {
+          "offset": {
+            "x": 0,
+            "y": -200
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Full Horizontal halfes",
+    "padding": 0,
+    "zones": [
+      {
+        "name": "⅓ ½ - Top (L)",
+        "x": 0,
+        "y": 0,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "⅓ ½ - Top (R)",
+        "x": 50,
+        "y": 0,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "⅓ ½ - Center (L)",
+        "x": 0,
+        "y": 33,
+        "height": 34,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "⅓ ½ - Center (R)",
+        "x": 50,
+        "y": 33,
+        "height": 34,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "⅓ ½ - Bottom (L)",
+        "x": 0,
+        "y": 67,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      },
+      {
+        "name": "⅓ ½ - Bottom (R)",
+        "x": 50,
+        "y": 67,
+        "height": 33,
+        "width": 50,
+        "indicator": {
+          "offset": {
+            "x": -100,
+            "y": -100
+          }
+        }
+      }
+    ]
+  }
+  //   {
+  //     "name": "⅓ ⅓ - Top (R)",
+  //     "x": 33,
+  //     "y": 0,
+  //     "height": 33,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": -100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅔ - Top (L)",
+  //     "x": 0,
+  //     "y": 0,
+  //     "height": 50,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅔ - Top (R)",
+  //     "x": 33,
+  //     "y": 0,
+  //     "height": 50,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅓ - L",
+  //     "x": 0,
+  //     "y": 33,
+  //     "height": 33,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅓ - R",
+  //     "x": 33,
+  //     "y": 33,
+  //     "height": 33,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅔ - Bottom (L)",
+  //     "x": 0,
+  //     "y": 50,
+  //     "height": 50,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅔ - Bottom (R)",
+  //     "x": 33,
+  //     "y": 50,
+  //     "height": 50,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅓ - Bottom (L)",
+  //     "x": 0,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "⅓ ⅓ - Bottom (R)",
+  //     "x": 33,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 67,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - TOP (L)",
+  //     "x": 0,
+  //     "y": 0,
+  //     "height": 33,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -200,
+  //         "y": -200
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - TOP (C)",
+  //     "x": 33,
+  //     "y": 0,
+  //     "height": 33,
+  //     "width": 34,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": -200
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - TOP (R)",
+  //     "x": 67,
+  //     "y": 0,
+  //     "height": 33,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 200,
+  //         "y": -200
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - CENTER (L)",
+  //     "x": 0,
+  //     "y": 33,
+  //     "height": 34,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -200,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - CENTER (C)",
+  //     "x": 33,
+  //     "y": 33,
+  //     "height": 34,
+  //     "width": 34,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - CENTER (R)",
+  //     "x": 67,
+  //     "y": 33,
+  //     "height": 34,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 200,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - BOTTOM (L)",
+  //     "x": 0,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -200,
+  //         "y": 200
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - BOTTOM (C)",
+  //     "x": 33,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 34,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 200
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "9 Grid - BOTTOM (R)",
+  //     "x": 67,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 200,
+  //         "y": 200
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - TOP (L)",
+  //     "x": 0,
+  //     "y": 0,
+  //     "height": 50,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": -100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - TOP (C)",
+  //     "x": 33,
+  //     "y": 0,
+  //     "height": 50,
+  //     "width": 34,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": -100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - TOP (R)",
+  //     "x": 67,
+  //     "y": 0,
+  //     "height": 50,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": -100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - BOTTOM (L)",
+  //     "x": 0,
+  //     "y": 50,
+  //     "height": 50,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - BOTTOM (C)",
+  //     "x": 33,
+  //     "y": 50,
+  //     "height": 50,
+  //     "width": 34,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - BOTTOM (R)",
+  //     "x": 67,
+  //     "y": 50,
+  //     "height": 50,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - TOP (L)",
+  //     "x": 0,
+  //     "y": 0,
+  //     "height": 33,
+  //     "width": 50,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - TOP (R)",
+  //     "x": 50,
+  //     "y": 0,
+  //     "height": 33,
+  //     "width": 50,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - CENTER (L)",
+  //     "x": 0,
+  //     "y": 33,
+  //     "height": 34,
+  //     "width": 50,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - CENTER (R)",
+  //     "x": 50,
+  //     "y": 33,
+  //     "height": 34,
+  //     "width": 50,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - BOTTOM (L)",
+  //     "x": 0,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 50,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": -100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "6 Grid - BOTTOM (R)",
+  //     "x": 50,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 50,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": -100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "3 Grid - LEFT",
+  //     "x": 0,
+  //     "y": 0,
+  //     "height": 100,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "3 Grid - CENTER",
+  //     "x": 33,
+  //     "y": 0,
+  //     "height": 100,
+  //     "width": 34,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": -100,
+  //         "y": -100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "3 Grid - RIGHT",
+  //     "x": 67,
+  //     "y": 0,
+  //     "height": 100,
+  //     "width": 33,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 0
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "3 Grid - TOP",
+  //     "x": 0,
+  //     "y": 0,
+  //     "height": 33,
+  //     "width": 100,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": 200
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "3 Grid - CENTER",
+  //     "x": 0,
+  //     "y": 33,
+  //     "height": 34,
+  //     "width": 100,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 100,
+  //         "y": 100
+  //       }
+  //     }
+  //   },
+  //   {
+  //     "name": "3 Grid - BOTTOM",
+  //     "x": 0,
+  //     "y": 67,
+  //     "height": 33,
+  //     "width": 100,
+  //     "indicator": {
+  //       "offset": {
+  //         "x": 0,
+  //         "y": -200
+  //       }
+  //     }
+  //   }
+]

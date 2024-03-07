@@ -1,0 +1,43 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "presentation": {
+    "clear": true,
+    "close": true,
+    "echo": false,
+    "focus": false,
+    "panel": "shared",
+    "reveal": "silent",
+    "revealProblems": "onProblem",
+    "showReuseMessage": false
+  },
+  "tasks": [
+    {
+      "label": "Start/frontend/home",
+      "detail": "Starts frontend/home",
+      "isBackground": false,
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "runOptions": {
+        "reevaluateOnRerun": true,
+        "instanceLimit": 1,
+        "runOn": "default"
+      },
+      "icon": {
+        "id": "home",
+        "color": "terminal.ansiMagenta"
+      },
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "command": "npm",
+      "args": [
+        "start"
+      ]
+    }
+  ]
+}

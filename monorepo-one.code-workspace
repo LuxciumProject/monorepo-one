@@ -1,0 +1,3293 @@
+{
+  "folders": [
+    {
+      "name": "→🖥️ ✨ MONOREPO-ONE",
+      "path": "."
+    },
+    {
+      "name": "  ↓ ✨ 🤖 PROMPTS",
+      "path": "prompts"
+    },
+    {
+      "name": "       🤖📣 TYPING PROMPTER",
+      "path": "prompts/typing_prompter"
+    },
+    {
+      "name": "       🤖💬 CHAT GPT",
+      "path": "prompts/chatgpt"
+    },
+    {
+      "name": "       💬💭 MORE PROMPTS",
+      "path": "prompts/chatgpt/more-prompts"
+    },
+    {
+      "name": "       🤖📙 APIs",
+      "path": "prompts/API/"
+    },
+    {
+      "name": "         📙⛵ midjourney",
+      "path": "prompts/API/midjourney/"
+    },
+    {
+      "name": "         📙🦾 GPTs",
+      "path": "prompts/API/GPTs/"
+    },
+    {
+      "name": "  ↓ 🔐 💫 PRIVATE",
+      "path": "private"
+    },
+    {
+      "name": "  ↓ 🏦 🗜️ BACKEND",
+      "path": "backend"
+    },
+    {
+      "name": "       🏦🗜️ api",
+      "path": "backend/api"
+    },
+    {
+      "name": "       🏫🗜️ scratch",
+      "path": "backend/scratch"
+    },
+    {
+      "name": "  ↓ 💻 👨‍💻 FRONTEND",
+      "path": "frontend"
+    },
+    {
+      "name": "       👨‍💻💅 home",
+      "path": "frontend/home"
+    },
+    // {
+    //   "name": "           💻👨‍💻 main-react", // 💖 💘
+    //   "path": "frontend/main-react"
+    // },
+    // {
+    //   "name": "           💻👨‍💻 my-next-js-app",
+    //   "path": "frontend/my-next-js-app"
+    // },
+    // {
+    //   "name": "           💻👨‍💻 home-bak",
+    //   "path": "frontend/home-bak"
+    // },
+    // {
+    //   "name": "           💻👨‍💻 home-ejector",
+    //   "path": "frontend/home-ejector"
+    // },
+    // {
+    //   "name": "           💻🏫 cart",
+    //   "path": "frontend/cart"
+    // },
+    // {
+    //   "name": "           💻🏫 federal-container",
+    //   "path": "frontend/federal-container"
+    // },
+    // {
+    //   "name": "           💻🏫 products",
+    //   "path": "frontend/products"
+    // },
+    {
+      "name": "  ↓ 📓 📚 LIBRARY",
+      "path": "library"
+    },
+    {
+      "name": "  S *→ 📚🧭 mapping-tools",
+      "path": "library/mapping-tools"
+    },
+    {
+      "name": "       📚❤ bigintString",
+      "path": "library/bigintString"
+    },
+    {
+      "name": "       📚🧡 boxed-list",
+      "path": "library/boxed-list"
+    },
+    {
+      "name": "       📚💛 colors-tools",
+      "path": "library/colors-tools"
+    },
+    {
+      "name": "       📚💚 human-size",
+      "path": "library/human-size"
+    },
+    {
+      "name": "       📚💙 object-with-expectations",
+      "path": "library/object-with-expectations"
+    },
+    {
+      "name": "       📚💜 parallel-mapper",
+      "path": "library/parallel-mapper"
+    },
+    {
+      "name": "       📚🧌 restraining-zalgo",
+      "path": "library/restraining-zalgo"
+    },
+    {
+      "name": "       📓🛠️ Tools",
+      "path": "library/tools"
+    },
+    {
+      "name": "       📘 Typescript",
+      "path": "library/typescript"
+    },
+    {
+      "name": "  ↓ 🖥️ 💁📒 SERVICES",
+      "path": "services"
+    },
+    {
+      "name": "  S *→ 💁🛵 image-scout",
+      "path": "services/image-scout"
+    },
+    // {
+    //   "name": "  S *→ 📊🖥️ questrade-ts",
+    //   "path": "services/questrade-ts"
+    // },
+    {
+      "name": "  S *→ 💁💜 rpc-worker-pool",
+      "path": "services/rpc-worker-pool"
+    },
+    {
+      "name": "       💁📊 mongo-service",
+      "path": "services/mongo-service"
+    },
+    {
+      "name": "       💁❤ phash-compute",
+      "path": "services/phash-compute"
+    },
+    {
+      "name": "       💁🧡 redis-services",
+      "path": "services/redis-services"
+    },
+    {
+      "name": "       💁💛 scan-directories",
+      "path": "services/scan-directories"
+    },
+    {
+      "name": "       💁💚 service-one",
+      "path": "services/service-one"
+    },
+    {
+      "name": "       💁💙 service-two",
+      "path": "services/service-two"
+    },
+    {
+      "name": "  ↓ 🗂️ 🎨 static",
+      "path": "static"
+    },
+    // static/stable-diffusion with painting emoji like 🎨🤖
+    {
+      "name": "       🎨🤖 STABLE DIFFUSION",
+      "path": "static/stable-diffusion"
+    },
+    {
+      "name": "  ↓ 🪄 🎱 EXAMPLES",
+      "path": "examples"
+    },
+    {
+      "name": "       🎱🪄 template",
+      "path": "examples/template"
+    },
+    {
+      "name": "       🎱🪄 open-ai",
+      "path": "examples/open-ai"
+    },
+    {
+      "name": "       🎱🪄 gpu-stuff",
+      "path": "examples/gpu-stuff"
+    },
+    {
+      "name": "       🎱🪄 playground",
+      "path": "examples/playground"
+    },
+    {
+      "name": "       🎱🪄 node-js",
+      "path": "examples/node-js"
+    },
+    {
+      "name": "       🎱🛵 phash-scout",
+      "path": "examples/phash-scout"
+    },
+    {
+      "name": "       📘 typescript",
+      "path": "examples/typescript"
+    },
+    {
+      "name": "📓📔Scripts",
+      "path": "scripts"
+    }
+  ],
+  "launch": {
+    "configurations": [
+      // {
+      //   "type": "pwa-msedge",
+      //   "name": "Launch Microsoft Edge",
+      //   "request": "launch",
+      //   "runtimeArgs": [
+      //     "--remote-debugging-port=9222"
+      //   ],
+      //   "url": "/home/luxcium/main-vscode/data/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.3/out/startpage/index.html",
+      //   "presentation": {
+      //     "hidden": true
+      //   }
+      // },
+      // {
+      //   "type": "pwa-msedge",
+      //   "name": "Launch Microsoft Edge in headless mode",
+      //   "request": "launch",
+      //   "runtimeArgs": [
+      //     "--headless",
+      //     "--remote-debugging-port=9222"
+      //   ],
+      //   "url": "/home/luxcium/main-vscode/data/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.3/out/startpage/index.html",
+      //   "presentation": {
+      //     "hidden": true
+      //   }
+      // },
+      {
+        "type": "vscode-edge-devtools.debug",
+        "name": "Open Edge DevTools",
+        "request": "attach",
+        "url": "/home/luxcium/main-vscode/data/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.3/out/startpage/index.html",
+        "presentation": {
+          "hidden": true
+        }
+      }
+    ] // ,
+    // "compounds": [
+    //   {
+    //     "name": "Launch Edge Headless and attach DevTools",
+    //     "configurations": [
+    //       "Launch Microsoft Edge in headless mode",
+    //       "Open Edge DevTools"
+    //     ]
+    //   },
+    //   {
+    //     "name": "Launch Edge and attach DevTools",
+    //     "configurations": [
+    //       "Launch Microsoft Edge",
+    //       "Open Edge DevTools"
+    //     ]
+    //   }
+    // ]
+  },
+  "tasks": {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "presentation": {
+      "echo": true,
+      "close": true,
+      "clear": true,
+      "focus": false,
+      "panel": "shared",
+      "reveal": "silent",
+      "revealProblems": "onProblem",
+      "showReuseMessage": false
+    },
+    "tasks": [
+      {
+        "label": "Start Toy Micro Services",
+        "isBackground": true,
+        "dependsOn": [
+          "Start Posts Service",
+          "Start Comments Service",
+          "Start Next.js Server"
+        ],
+        "dependsOrder": "parallel",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      },
+      {
+        "label": "Start Next.js Server",
+        "type": "shell",
+        "command": "yarn",
+        "args": [
+          "dev"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/home"
+        },
+        "isBackground": true,
+        "problemMatcher": {
+          "owner": "javascript",
+          "pattern": {
+            "regexp": "^\\s+✓ Ready in (\\d+(\\.\\d+)?s|\\d+ms)$",
+            "file": 0,
+            "location": 1,
+            "message": 2
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*Executing task in folder home: yarn dev.*$",
+            "endsPattern": "^\\s+✓ Ready in (\\d+(\\.\\d+)?s|\\d+ms)$"
+          }
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": false,
+          "close": false
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      },
+      {
+        "label": "Start Posts Service",
+        "type": "shell",
+        "command": "npm run start:dev",
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": false,
+          "close": false
+        },
+        "problemMatcher": [],
+        "options": {
+          "cwd": "${workspaceFolder}/backend/api/posts"
+        }
+      },
+      {
+        "label": "Start Comments Service",
+        "type": "shell",
+        "command": "npm run start:dev",
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": false,
+          "close": false
+        },
+        "problemMatcher": [],
+        "options": {
+          "cwd": "${workspaceFolder}/backend/api/comments"
+        }
+      },
+      {
+        "label": "build-all",
+        "detail": "Build each subprojects using TSC and problemMatcher",
+        "isBackground": false,
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "icon": {
+          "id": "server-process",
+          "color": "terminal.ansiYellow"
+        },
+        "group": "build",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "Build/all/library",
+          "Build/all/services",
+          "Build/all/examples"
+        ],
+        "problemMatcher": []
+      },
+      {
+        "label": "Build/all/services",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "dependsOrder": "parallel",
+        "dependsOn": [
+          "Build/services/phash-compute",
+          "Build/services/scan-directories",
+          "Build/services/questrade-ts",
+          "Build/services/redis-services",
+          "Build/services/service-one",
+          "Build/services/service-two"
+        ]
+      },
+      {
+        "label": "Build/services/phash-compute",
+        "detail": "Build task for phash-compute",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "services"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/services/phash-compute"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/services/scan-directories",
+        "detail": "Build task for scan-directories",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "services"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/services/scan-directories"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/services/questrade-ts",
+        "detail": "Build task for questrade-ts",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "services"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/services/questrade-ts"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/services/redis-services",
+        "detail": "Build task for redis-services",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "services"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/services/redis-services"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/services/service-one",
+        "detail": "Build task for service-one",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "services"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/services/service-one"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/services/service-two",
+        "detail": "Build task for service-two",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "services"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/services/service-two"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/all/library",
+        "isBackground": false,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "dependsOrder": "parallel",
+        "dependsOn": [
+          "Build/library/mapping-tools",
+          "Build/library/bigintString",
+          "Build/library/colors-tools",
+          "Build/library/boxed-list",
+          "Build/library/parallel-mapper",
+          "Build/library/human-size",
+          "Build/library/restraining-zalgo",
+          "Build/library/tools"
+        ]
+      },
+      {
+        "label": "Build/library/mapping-tools",
+        "detail": "Build task for mapping-tools",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/mapping-tools"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/bigintString",
+        "detail": "Build task for bigintString",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/bigintString"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/boxed-list",
+        "detail": "Build task for boxed-list",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/boxed-list"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/colors-tools",
+        "detail": "Build task for colors-tools",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/colors-tools"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/human-size",
+        "detail": "Build task for human-size",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/human-size"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/object-with-expectations",
+        "detail": "Build task for object-with-expectations",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/object-with-expectations"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/parallel-mapper",
+        "detail": "Build task for parallel-mapper",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/parallel-mapper"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/restraining-zalgo",
+        "detail": "Build task for restraining-zalgo",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/restraining-zalgo"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/library/tools",
+        "detail": "Build task for tools",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "library"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/library/tools"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/all/examples",
+        "dependsOrder": "parallel",
+        "isBackground": false,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "dependsOn": [
+          "Build/examples/phash-scout"
+        ]
+      },
+      {
+        "label": "Build/examples/phash-scout",
+        "detail": "Build task for phash-scout",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "group": "examples"
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/examples/phash-scout"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/all/frontend",
+        "detail": "Build task for all frontend",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "dependsOn": [
+          "Build/frontend/cart",
+          "Build/frontend/products",
+          "Build/frontend/federal-container"
+        ]
+      },
+      {
+        "label": "Build/frontend/federal-container",
+        "detail": "Build task for frontend (federal-container)",
+        "isBackground": false,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/federal-container"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/frontend/products",
+        "detail": "Build task for frontend (products)",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/products"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Build/frontend/cart",
+        "detail": "Build task for frontend (cart)",
+        "isBackground": false,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/cart"
+        },
+        "command": "npm",
+        "args": [
+          "run",
+          "build"
+        ]
+      },
+      {
+        "label": "Start/all/frontend",
+        "detail": "Start projects in frontend",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "icon": {
+          "id": "server-process",
+          "color": "terminal.ansiYellow"
+        },
+        "dependsOrder": "parallel",
+        "dependsOn": [
+          "Start/frontend/products",
+          "Start/frontend/cart"
+        ]
+      },
+      {
+        "label": "Start/frontend/home",
+        "detail": "Starts frontend/home",
+        "isBackground": false,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "icon": {
+          "id": "home",
+          "color": "terminal.ansiMagenta"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/home"
+        },
+        "command": "npm",
+        "args": [
+          "start"
+        ]
+      },
+      {
+        "label": "Start/frontend/products",
+        "detail": "Starts frontend/products",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/products"
+        },
+        "command": "npm",
+        "args": [
+          "start"
+        ]
+      },
+      {
+        "label": "Start/frontend/cart",
+        "detail": "Starts frontend/cart",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/cart"
+        },
+        "command": "npm",
+        "args": [
+          "start"
+        ]
+      },
+      {
+        "label": "Start/frontend/federal-container",
+        "detail": "Starts frontend/federal-container",
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1,
+          "runOn": "default"
+        },
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend/federal-container"
+        },
+        "command": "npm",
+        "args": [
+          "start"
+        ]
+      },
+      {
+        "label": "Start/redis-6383",
+        "type": "shell",
+        "detail": "Start REDIS container on port 6383 this project",
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/start_6383.sh"
+        ],
+        "isBackground": true,
+        "runOptions": {
+          "reevaluateOnRerun": true,
+          "instanceLimit": 1
+        },
+        "presentation": {
+          "revealProblems": "onProblem",
+          "panel": "dedicated",
+          "group": "redis-6383"
+        }
+      },
+      {
+        "label": "TASK Fail",
+        "detail": "Just to test the task processes.",
+        "isBackground": false,
+        "command": [
+          "false"
+        ],
+        "presentation": {
+          "close": false,
+          "echo": true,
+          "focus": true,
+          "panel": "dedicated",
+          "group": "TASK FORCE",
+          "reveal": "always",
+          "showReuseMessage": false
+        }
+      },
+      {
+        "label": "TASK Complete",
+        "detail": "Just to test the task processes.",
+        "isBackground": false,
+        "command": [
+          "true"
+        ],
+        "presentation": {
+          "close": false,
+          "echo": true,
+          "focus": true,
+          "panel": "dedicated",
+          "group": "TASK FORCE",
+          "reveal": "always",
+          "showReuseMessage": false
+        }
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "aaron-bond.better-comments",
+      "alefragnani.Bookmarks",
+      "christian-kohler.path-intellisense",
+      "dbaeumer.vscode-eslint",
+      "dlech.chmod",
+      "dplain.jest-test-language-support",
+      "esbenp.prettier-vscode",
+      "formulahendry.code-runner",
+      "ghmcadams.lintlens",
+      "gruntfuggly.todo-tree",
+      "joeberria.statusbarerror",
+      "Luxcium.pop-n-lock-theme-vscode",
+      "PKief.material-icon-theme",
+      "salbert.comment-ts",
+      "SophodorosLLC.codevalet-vscode",
+      "ue.alphabetical-sorter",
+      "usernamehw.errorlens",
+      "VisualStudioExptTeam.vscodeintellicode"
+    ]
+  },
+  "settings": {
+    /*
+  |-···----------------------------------------------------------···-|
+    */
+    // ~@-----------------------------------------------------------@~
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "nest",
+    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
+    "workbench.preferredDarkColorTheme": "Pop N' Lock Theme by Luxcium ✨",
+    "terminal.integrated.defaultProfile.linux": "MonoRepoOne",
+    "task.allowAutomaticTasks": "on",
+    "editor.fontFamily": "'FiraCode Nerd Font'",
+    "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+    "files.associations": {
+      "*.json": "jsonc"
+    },
+    // ~@-----------------------------------------------------------@~
+    /*
+  |-···----------------------------------------------------------···-|
+    */
+    // #region: excludes                                                    !
+    "files.exclude": {
+      ".directory": true,
+      "**/*.build.log": true,
+      ".editorconfig": false,
+      ".git/": true,
+      ".gitattributes": false,
+      ".gitignore": false,
+      ".gitmodules": false,
+      ".history/": true,
+      ".nvmrc": true,
+      ".prettierignore": true,
+      ".prettierrc.cjs": false,
+      ".vscode/": false,
+      "backend/": false,
+      "common/": false,
+      "dist": false,
+      "docs/": false,
+      "frontend/": false,
+      "library/": false,
+      "LICENSE": false,
+      "out": false,
+      "pnpm-workspace.yaml": true,
+      "public/": false,
+      "readme.md": false,
+      "rush.json": false,
+      "scripts/": false,
+      "services/": false
+    },
+    "search.exclude": {
+      "docs": true,
+      "dist": true,
+      "out": true
+    },
+    // #endregion: excludes                                                 !
+    /*
+  |-···----------------------------------------------------------···-|
+    */
+    // #region: FORMAT BEHAVIOUR                                           !
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnType": false,
+    "editor.suggest.showFiles": true,
+    "editor.suggest.showFolders": true,
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    //                                                               ――
+    // ―― CODEACTIONSONSAVE BEHAVIOUR:
+    "editor.codeActionsOnSave": [
+      "source.addMissingImports",
+      "source.organizeImports",
+      "source.autoFix",
+      "source.fixAll.eslint",
+      "source.fixAll.prettier"
+    ],
+    "material-icon-theme.folders.associations": {
+      "eslint-plugin": "rules",
+      "chatgpt": "cobol",
+      "prompts": "log"
+    },
+    // #endregion: FORMAT BEHAVIOUR                                       !
+    /*
+  |-···----------------------------------------------------------···-|
+    */
+    // #region: PRETTIER                                                    !
+    "prettier.enable": true,
+    "prettier.requireConfig": true,
+    "prettier.trailingComma": "all",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 80,
+    "prettier.proseWrap": "preserve",
+    "prettier.useTabs": false,
+    // #endregion: PRETTIER                                                 !
+    /*
+  |-····-----------------------------------------------------------··-|
+  */
+    // #region: ESLINT                                                      !
+    "eslint.quiet": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": false,
+    // #endregion: ESLINT                                                   !
+    /*
+  |-····-----------------------------------------------------------··-|
+  */
+    // #region: JAVASCRIPT BEHAVIOUR                                      !
+    "javascript.format.enable": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "javascript.format.semicolons": "insert",
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.preferences.useAliasesForRenames": false,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.suggest.enabled": true,
+    "javascript.suggest.paths": true,
+    "javascript.suggestionActions.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    // #endregion: JAVASCRIPT                                                 !
+    /*
+  |-····-----------------------------------------------------------――··-|
+  */
+    // #region: TYPESCRIPT BEHAVIOUR                                        !
+    "typescript.check.npmIsInstalled": false,
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.format.enable": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "typescript.format.semicolons": "insert",
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.locale": "en",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.preferences.useAliasesForRenames": false,
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.suggest.completeFunctionCalls": true,
+    "typescript.suggest.enabled": true,
+    "typescript.suggest.paths": true,
+    "typescript.suggestionActions.enabled": true,
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.workspaceSymbols.scope": "currentProject",
+    // #endregion: TYPESCRIPT BEHAVIOUR                                        !
+    /*
+  |-···----------------------------------------------------------···-|
+    */
+    // #region: PATH-INTELLISENSE                                              !
+    "path-intellisense.extensionOnImport": false,
+    "path-intellisense.absolutePathToWorkspace": false,
+    "path-intellisense.autoSlashAfterDirectory": false,
+    "path-intellisense.showHiddenFiles": true,
+    // #endregion: PATH-INTELLISENSE                                           !
+    /*
+  |-····-----------------------------------------------------------――··-|
+    */
+    // #region: editor.rulers                                                  !
+    "[scminput]": {
+      "editor.rulers": [
+        {
+          "column": 70,
+          "color": "#F368"
+        },
+        {
+          "column": 50,
+          "color": "#F838"
+        },
+      ],
+      "editor.wordWrap": "on",
+      "editor.wordWrapColumn": 70
+    },
+    "editor.rulers": [
+      {
+        "column": 2,
+        "color": "#FC33"
+      },
+      {
+        "column": 70,
+        "color": "#F83"
+      },
+      {
+        "column": 80,
+        "color": "#F36"
+      },
+      {
+        "column": 81,
+        "color": "#6C9FE844"
+      },
+      {
+        "column": 83,
+        "color": "#71A4E355"
+      },
+      {
+        "column": 85,
+        "color": "#90B9F166"
+      },
+      {
+        "column": 88,
+        "color": "#9CC1F366"
+      },
+      {
+        "column": 91,
+        "color": "#A8C9F466"
+      },
+      {
+        "column": 95,
+        "color": "#B5D1F666"
+      },
+      {
+        "column": 99,
+        "color": "#C1D8F766"
+      },
+      {
+        "column": 103,
+        "color": "#CEE0F955"
+      },
+      {
+        "column": 107,
+        "color": "#DAE8FA44"
+      },
+      {
+        "column": 111,
+        "color": "#E6F0FC44"
+      },
+      {
+        "column": 114,
+        "color": "#F3F7FD33"
+      },
+      {
+        "column": 117,
+        "color": "#F3F7FD22"
+      },
+      {
+        "column": 119,
+        "color": "#F3F7FD11"
+      },
+      {
+        "column": 120,
+        "color": "#F368"
+      },
+      {
+        "column": 121,
+        "color": "#F36A"
+      },
+      {
+        "column": 122,
+        "color": "#F80C"
+      },
+      {
+        "column": 123,
+        "color": "#F80F"
+      },
+      {
+        "column": 124,
+        "color": "#FF0D"
+      },
+      {
+        "column": 125,
+        "color": "#FF0F"
+      },
+      {
+        "column": 126,
+        "color": "#0F0F"
+      },
+      {
+        "column": 127,
+        "color": "#0F0D"
+      },
+      {
+        "column": 128,
+        "color": "#39FF"
+      },
+      {
+        "column": 129,
+        "color": "#39FC"
+      },
+      {
+        "column": 130,
+        "color": "#93FA"
+      },
+      {
+        "column": 131,
+        "color": "#93F8"
+      }
+    ],
+    // #endregion: editor.rulers                                                          !
+    /*
+  |-····-----------------------------------------------------------··-|
+    */
+    // #region: BETTER COMMENTS                                                         !
+    /*
+     "problemsErrorIcon.foreground": "#ff3366",
+     "problemsInfoIcon.foreground": "#ffcc55ee",
+     "problemsWarningIcon.foreground": "#ccff33",
+  */
+    // "#F36F"
+    // "#F80B"
+    // "#FF0B"
+    // "#0F0B"
+    // "#39FB"
+    // "#93FB"
+    // "#F36F",
+    // "#F364",
+    // "#CF3F",
+    // "#CF34",
+    // "#39CF",
+    // "#39C4",
+    // "#FB0F",
+    // "#FB04",
+    "better-comments.highlightPlainText": true,
+    "better-comments.multilineComments": true,
+    "better-comments.tags": [
+      {
+        // ~!·------------------------------------------------------!~
+        "tag": "~!",
+        "color": "#F36",
+        "strikethrough": false,
+        "backgroundColor": "#F365"
+      },
+      {
+        // ~$·------------------------------------------------------$~
+        "tag": "~$",
+        "color": "#F80",
+        "strikethrough": false,
+        "backgroundColor": "#F806"
+      },
+      // <~~---
+      // <-----
+      // <<----
+      // >-----
+      // >>----
+      // |-----
+      // ||----
+      // ------
+      {
+        // <~~-----------------------------------------------------~~>
+        "tag": "<~~",
+        "color": "#F83",
+        "strikethrough": false,
+        // "backgroundColor": "#F806"
+      },
+      {
+        // <--------------------------------------------------------->
+        "tag": "<-----",
+        "color": "#F83",
+        "strikethrough": false,
+        // "backgroundColor": "#F806"
+      },
+      {
+        // <<------------------------------------------------------->>
+        "tag": "<<----",
+        "color": "#F83",
+        "strikethrough": false,
+        // "backgroundColor": "#F806"
+      },
+      {
+        // >---------------------------------------------------------<
+        "tag": ">-----",
+        "color": "#F83",
+        "strikethrough": false,
+        // "backgroundColor": "#F806"
+      },
+      {
+        // >>-------------------------------------------------------<<
+        "tag": ">>----",
+        "color": "#F83",
+        "strikethrough": false,
+        // "backgroundColor": "#F806"
+      },
+      {
+        // |---------------------------------------------------------|
+        "tag": "|-----",
+        "color": "#F83",
+        "strikethrough": false,
+        // "backgroundColor": "#F806"
+      },
+      {
+        // ||-------------------------------------------------------||
+        "tag": "||----",
+        "color": "#F83",
+        "strikethrough": false,
+        // "backgroundColor": "#F806"
+      },
+      // {
+      //   // -----------------------------------------------------------
+      //   "tag": "------",
+      //   "color": "#F83",
+      //   "strikethrough": false,
+      //   "backgroundColor": "#F806"
+      // },
+      /*
+<-------------------------------------------------------------------->
+       */
+      // <=====
+      // <<====
+      // >=====
+      // >>====
+      // |=====
+      // ||====
+      // //====
+      // /=====
+      // ======
+      // /=//=
+      /*
+<====================================================================>
+       */
+      {
+        // /=//==//===//====//=====//======//=======//========//=====/
+        "tag": "/=//=",
+        "color": "#F36",
+        "strikethrough": false,
+        "backgroundColor": "#39C3"
+      },
+      {
+        // //=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//=//
+        "tag": "//=//=",
+        "color": "#F36",
+        "strikethrough": false,
+        "backgroundColor": "#39C3"
+      },
+      {
+        // <===================================================================>
+        "tag": "<===",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // <<=================================================================>>
+        "tag": "<<==",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // >===================================================================<
+        "tag": ">===",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // >>=================================================================<<
+        "tag": ">>==",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // |===================================================================|
+        "tag": "|===",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // ||=================================================================||
+        "tag": "||==",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // //=================================================================//
+        "tag": "//==",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // /===================================================================/
+        "tag": "/===",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      // {
+      //   // ==================================================================
+      //   "tag": "====",
+      //   "color": "#7C2F",
+      //   "strikethrough": false,
+      //   "backgroundColor": "#7C25"
+      // },
+      {
+        // ~+---------------------------------------------------------+~
+        "tag": "~+",
+        "color": "#7C2F",
+        "strikethrough": false,
+        "backgroundColor": "#7C25"
+      },
+      {
+        // ~*---------------------------------------------------------*~
+        "tag": "~*",
+        "color": "#FF0B",
+        "strikethrough": false,
+        "backgroundColor": "#FF05"
+      },
+      {
+        // ~#---------------------------------------------------------#~
+        "tag": "~#",
+        "color": "#39F",
+        "strikethrough": false,
+        "backgroundColor": "#39F5"
+      },
+      {
+        // ~&---------------------------------------------------------&~
+        "tag": "~&",
+        "color": "#93F",
+        "strikethrough": false,
+        "backgroundColor": "#93F5"
+      },
+      {
+        // ~@---------------------------------------------------------@~
+        "tag": "~@",
+        "color": "#F36",
+        "strikethrough": false,
+        "backgroundColor": "#39C3"
+      },
+      {
+        // ~%---------------------------------------------------------%~
+        "tag": "~%",
+        "color": "#4EF",
+        "strikethrough": false,
+        "backgroundColor": "#4EF5"
+      },
+      {
+        // ~?---------------------------------------------------------?~
+        "tag": "~?",
+        "color": "#5AF",
+        "strikethrough": false,
+        "backgroundColor": "#4EF3"
+      },
+      // SECTION
+      {
+        "tag": "SECTION",
+        "color": "#4EF",
+        "strikethrough": false
+      },
+      /*
+~ #F36F
+~ #F80B
+~ #FF0B
+~ #0F0B
+~ #39FB
+~ #93FB
+    */
+      // :!
+      {
+        "tag": ":!",
+        "color": "#F20",
+        "strikethrough": false,
+        "backgroundColor": "#F203"
+      },
+      // :~
+      {
+        "tag": ":~",
+        "color": "#FB3",
+        "strikethrough": false,
+        "backgroundColor": "#39C3"
+      },
+      // :@
+      {
+        "tag": ":@",
+        "color": "#F36",
+        "strikethrough": false,
+        "backgroundColor": "#39C6"
+      },
+      // :#
+      {
+        "tag": ":#",
+        "color": "#4AE",
+        "strikethrough": false,
+        "backgroundColor": "#4AE3"
+      },
+      // :$
+      {
+        "tag": ":$",
+        "color": "#F84",
+        "strikethrough": false,
+        "backgroundColor": "#F843"
+      },
+      // :%
+      {
+        "tag": ":%",
+        "color": "#4EF",
+        "strikethrough": false,
+        "backgroundColor": "#4EF3"
+      },
+      // :?
+      {
+        "tag": ":?",
+        "color": "#39F",
+        "strikethrough": false,
+        "backgroundColor": "#39F3"
+      },
+      // :&
+      {
+        "tag": ":&",
+        "color": "#93F",
+        "strikethrough": false,
+        "backgroundColor": "#93F3"
+      },
+      // :*
+      {
+        "tag": ":*",
+        "color": "#9C7",
+        "strikethrough": false,
+        "backgroundColor": "#9C73"
+      },
+      // :+
+      {
+        "tag": ":+",
+        "color": "#CF2",
+        "strikethrough": false,
+        "backgroundColor": "#CF23"
+      },
+      // !-
+      {
+        "tag": "!-",
+        "color": "#F20",
+        "strikethrough": false,
+        "backgroundColor": "#F203"
+      },
+      // @-
+      {
+        "tag": "@-",
+        "color": "#F36",
+        "strikethrough": false,
+        "backgroundColor": "#39C3"
+      },
+      // #-
+      {
+        "tag": "#-",
+        "color": "#4AE",
+        "strikethrough": false,
+        "backgroundColor": "#4AE3"
+      },
+      // $-
+      {
+        "tag": "$-",
+        "color": "#F84",
+        "strikethrough": false,
+        "backgroundColor": "#F843"
+      },
+      // %-
+      {
+        "tag": "%-",
+        "color": "#4EF",
+        "strikethrough": false,
+        "backgroundColor": "#4EF3"
+      },
+      // ?-
+      {
+        "tag": "?-",
+        "color": "#39F",
+        "strikethrough": false,
+        "backgroundColor": "#39F3"
+      },
+      // &-
+      {
+        "tag": "&-",
+        "color": "#93F",
+        "strikethrough": false,
+        "backgroundColor": "#93F3"
+      },
+      // *-
+      {
+        "tag": "*-",
+        "color": "#9C7",
+        "strikethrough": false,
+        "backgroundColor": "#9C73"
+      },
+      // ++
+      {
+        "tag": "++",
+        "color": "#CF2",
+        "strikethrough": false,
+        "backgroundColor": "#CF23"
+      },
+      // :-
+      {
+        "tag": ":-",
+        "color": "#9BE",
+        "strikethrough": false,
+        "backgroundColor": "#9BE3"
+      },
+      {
+        // constructor
+        "tag": "constructor",
+        "color": "#F15E",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // private
+        "tag": "private",
+        "color": "#E22E",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // protected
+        "tag": "protected",
+        "color": "#FD3E",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+  |-···-----------------------------------------------------------―――――――――···-|
+
+    */
+      {
+        // ――
+        "tag": "――",
+        "color": "#FA0C",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // |-···
+        "tag": "|-",
+        "color": "#FA0C",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // ‽
+        "tag": "‽",
+        "color": "#6CBC",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // TEST_MODULE
+        "tag": "TEST_MODULE",
+        "color": "#6CBC",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // public
+        "tag": "public",
+        "color": "#FFAA00CC", // "#FA0E",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // readonly
+        "tag": "readonly",
+        "color": "#FF6600AA",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // static
+        "tag": "static",
+        "color": "#FF6600",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // get
+        "tag": "get",
+        "color": "#6BFC",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // set
+        "tag": "set",
+        "color": "#85FE",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // async
+        "tag": "async",
+        "color": "#FB3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // https:
+        "tag": "https:",
+        "color": "#FB3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // https
+        "tag": "https:",
+        "color": "#FB3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // http
+        "tag": "http",
+        "color": "#FB3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // TODO:
+        "tag": "TODO:",
+        "color": "#FF8C00",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // iterator
+        "tag": "iterator",
+        "color": "#c54442",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+~~============================================================================== ~~
+*/
+      /*
+
+
+
+ ―1----------------------------------------------------------------------------- ~~
+    */
+      {
+        // ―1
+        "tag": "―1",
+        "color": "#F36F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 1―
+        "tag": "1―",
+        "color": "#F36F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // -1
+        "tag": "―1",
+        "color": "#F36F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 1-
+        "tag": "1-",
+        "color": "#F36F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // ―― END
+        "tag": "―― END",
+        "color": "#F36D",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // END
+        "tag": "END",
+        "color": "#F36D",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // ERROR
+        "tag": "ERROR",
+        "color": "#F36D",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      // "#F36"
+      // "#F80B"
+      // "#FF0B"
+      // "#0F0B"
+      // "#39FB"
+      // "#93FB"
+      /*
+ ―1============================================================================= ~~
+ ―2----------------------------------------------------------------------------- ~~
+    */
+      {
+        // ―2
+        "tag": "―2",
+        "color": "#CF3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 2―
+        "tag": "2―",
+        "color": "#CF3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // -2
+        "tag": "-2",
+        "color": "#CF3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 2-
+        "tag": "2-",
+        "color": "#CF3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // WARNING
+        "tag": "WARNING",
+        "color": "#CF3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // ―― START
+        "tag": "―― START",
+        "color": "#CF3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // START
+        "tag": "START",
+        "color": "#CF3F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+ ―2============================================================================= ~~
+ ―3----------------------------------------------------------------------------- ~~
+    */
+      {
+        // ―3
+        "tag": "―3",
+        "color": "#FB0F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // -3
+        "tag": "-3",
+        "color": "#FB0F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 3―
+        "tag": "3―",
+        "color": "#FB0F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 3-
+        "tag": "3-",
+        "color": "#FB0F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // INFO
+        "tag": "INFO",
+        "color": "#FB0F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+ ―3============================================================================= ~~
+ ―4----------------------------------------------------------------------------- ~~
+    */
+      {
+        // ―4
+        "tag": "―4",
+        "color": "#39CF",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 4―
+        "tag": "4―",
+        "color": "#39CF",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // -4
+        "tag": "-4",
+        "color": "#39CF",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 4-
+        "tag": "4-",
+        "color": "#39CF",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // HINT
+        "tag": "HINT",
+        "color": "#39CF",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+ ―4============================================================================= ~~
+ ―5----------------------------------------------------------------------------- ~~
+    */
+      {
+        // ―5
+        "tag": "―5",
+        "color": "#39FD",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+ ―5============================================================================= ~~
+ ―6----------------------------------------------------------------------------- ~~
+    */
+      {
+        // ―6
+        "tag": "―6",
+        "color": "#93FD",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+―6============================================================================== ~
+*/
+      /*
+―6============================================================================== ~
+―0------------------------------------------------------------------------------ ~
+*/
+      {
+        // ―0
+        "tag": "―0",
+        "color": "#FFFD",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // 0-
+        "tag": "0-",
+        "color": "#FFFD",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      /*
+―0============================================================================== ~
+*/
+      /*
+················································································
+================================================================================
+*/
+      // {
+      //   // ====
+      //   "tag": "====",
+      //   "color": "#FA0C",
+      //   "strikethrough": false,
+      //   "backgroundColor": "transparent"
+      // },
+      // ·········································································
+      {
+        // ···
+        "tag": "···",
+        "color": "#FA0C",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // !!
+        "tag": "!!",
+        "color": "#FF2D00",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // @
+        "tag": "-@",
+        "color": "#F36B",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // #
+        "tag": "#",
+        "color": "#4AE",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // $
+        "tag": "$",
+        "color": "#f48e41",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      //
+      {
+        // %
+        "tag": "%",
+        "color": "#41e2f4",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // ?
+        "tag": "?",
+        "color": "#39FB",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // &
+        "tag": "&",
+        "color": "#93FB",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // *
+        "tag": "*",
+        "color": "#98C379",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // _
+        "tag": "_",
+        "color": "#F80B",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      // {
+      //   // =
+      //   "tag": "=",
+      //   "color": "#F36B",
+      //   "strikethrough": false,
+      //   "backgroundColor": "transparent"
+      // },
+      {
+        // +
+        "tag": "+",
+        "color": "#c5f442",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // †
+        "tag": "†",
+        "color": "#c54442",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        // ¬
+        "tag": "¬",
+        "color": "#FF0B",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      // {
+      //   // ~
+      //   "tag": "~",
+      //   "color": "#FF6600DD",
+      //   "strikethrough": false,
+      //   "backgroundColor": "transparent"
+      // },
+      // {
+      //   // -
+      //   "tag": "-",
+      //   "color": "#9BEA",
+      //   "strikethrough": false,
+      //   "backgroundColor": "transparent"
+      // },
+      {
+        "tag": "BUG",
+        "color": "#F15",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "CONSOLE",
+        "color": "#FB3",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "ERROR",
+        "color": "#F36",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "FIXME",
+        "color": "#F80",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "HACK",
+        "color": "#93F",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "HINT",
+        "color": "#39C",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "INFO",
+        "color": "#FB0",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      // {
+      //   "tag": "LOG",
+      //   "color": "#ACF",
+      //   "strikethrough": false,
+      //   "backgroundColor": "transparent"
+      // },
+      // {
+      //   "tag": "TODO:",
+      //   "color": "#FB3",
+      //   "strikethrough": false,
+      //   "backgroundColor": "transparent"
+      // },
+      {
+        "tag": "WARNING",
+        "color": "#BF2",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "XXX",
+        "color": "#E22",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      }
+    ],
+    // #endregion: BETTER COMMENTS                                           !
+    /*
+  |-····-----------------------------------------------------------··-|
+    */
+    // #region: TODO TREE                                                                !
+    "todo-tree.filtering.excludeGlobs": [
+      "**/node_modules"
+    ],
+    "todo-tree.highlights.defaultHighlight": {
+      "background": "#FFF",
+      "borderRadius": "0px",
+      "fontWeight": "500",
+      "foreground": "#224",
+      "opacity": 50,
+      "gutterIcon": true,
+      "hideFromStatusBar": true,
+      "hideFromTree": false,
+      "icon": "alert",
+      "iconColour": "#37B",
+      // "rulerOpacity": 100,
+      // "rulerColour": "#FFF",
+      "rulerLane": "none",
+      "type": "line"
+    },
+    "todo-tree.highlights.customHighlight": {
+      // #region ------------------------------------------------------
+      "#region": {
+        "foreground": "#DF3",
+        "background": "#DF3",
+        "iconColour": "#DF3",
+        "opacity": 30,
+        "icon": "mirror",
+        "gutterIcon": true
+        // "type": "tag-and-comment",
+        // "borderRadius": "7px",
+      },
+      // #endregion ---------------------------------------------------
+      "#endregion": {
+        "foreground": "#F15",
+        "background": "#F15",
+        "iconColour": "#F15",
+        "opacity": 30,
+        "icon": "mirror",
+        "gutterIcon": true,
+        // "type": "tag-and-comment",
+        // "borderRadius": "7px",
+        "hideFromTree": true,
+        "hideFromStatusBar": true
+      },
+      // BUG: ----------------------------------------------------------
+      "BUG:": {
+        "foreground": "#F15",
+        "background": "#F15",
+        "iconColour": "#F15",
+        "fontWeight": "800",
+        "opacity": 10,
+        "icon": "bug",
+        "gutterIcon": true
+      },
+      // TODO: ---------------------------------------------------------
+      "TODO:": {
+        "foreground": "#F80",
+        "background": "#F80",
+        "iconColour": "#F80",
+        "fontWeight": "700",
+        "opacity": 20,
+        "icon": "bookmark",
+        "gutterIcon": true
+      },
+      // FIXME: --------------------------------------------------------
+      "FIXME:": {
+        "foreground": "#FB3",
+        "background": "#FB3",
+        "iconColour": "#FB3",
+        "fontWeight": "600",
+        "opacity": 30,
+        "icon": "tools",
+        "gutterIcon": true
+      },
+      // SECTION: ------------------------------------------------------
+      "SECTION:": {
+        "foreground": "#DF3",
+        "background": "#DF3",
+        "iconColour": "#DF3",
+        "icon": "mirror",
+        "gutterIcon": true,
+        "fontWeight": "500",
+        "opacity": 40,
+        // "type": "whole-line",
+        "hideFromTree": true,
+        "hideFromStatusBar": true
+      },
+      // "REVIEW NEEDED:"  search
+      // REVIEW NEEDED: ------------------------------------------------
+      "REVIEW NEEDED:": {
+        "foreground": "#FC9",
+        "background": "#05F",
+        "opacity": 50,
+        "fontWeight": "400",
+        "gutterIcon": true,
+        // "borderRadius": "7px",
+        "icon": "search",
+        "iconColour": "#93F"
+      },
+      // HACK: ---------------------------------------------------------
+      "HACK:": {
+        "background": "#74F",
+        "foreground": "#FC9",
+        "opacity": 60,
+        "fontWeight": "300",
+        "gutterIcon": true,
+        "icon": "squirrel",
+        "iconColour": "#93F"
+      },
+      // XXX: ----------------------------------------------------------
+      "XXX:": {
+        "foreground": "#E22",
+        "iconColour": "#E22",
+        "background": "#000",
+        "fontWeight": "200",
+        "opacity": 30,
+        "icon": "law",
+        "gutterIcon": true
+      },
+      // INFO: ---------------------------------------------------------
+      "INFO:": {
+        "foreground": "#FB7",
+        "background": "#05F",
+        "iconColour": "#05F",
+        "icon": "info",
+        "gutterIcon": true,
+        "fontWeight": "300",
+        "opacity": 30,
+        "rulerLane": "full",
+        "rulerColour": "#BBB",
+        "rulerOpacity": 50
+      },
+      // WARNING: ------------------------------------------------------
+      "WARNING:": {
+        "foreground": "#BF2",
+        "background": "#BF2",
+        "iconColour": "#BF2",
+        "fontWeight": "400",
+        "opacity": 30,
+        "icon": "alert",
+        "gutterIcon": true
+      },
+      // ERROR: --------------------------------------------------------
+      "ERROR:": {
+        "foreground": "#F36",
+        "background": "#F36",
+        "iconColour": "#F36",
+        "fontWeight": "500",
+        "opacity": 30,
+        "icon": "x-circle",
+        "gutterIcon": true
+      },
+      // UNIMPLEMENTED: ----------------------------------------------
+      "UNIMPLEMENTED:": {
+        "foreground": "#FC9",
+        "background": "#F35",
+        "fontWeight": "500",
+        "icon": "skip",
+        "iconColour": "#EE3366EE",
+        "opacity": 50
+      },
+      // UNSAFE: -----------------------------------------------------
+      "UNSAFE:": {
+        "background": "#900",
+        "foreground": "#FB3",
+        "iconColour": "#900",
+        "gutterIcon": true,
+        "fontWeight": "900",
+        "icon": "flame"
+      },
+      // FUNC DEF: (Special function xyz) ----------------------------
+      "FUNC DEF:": {
+        "foreground": "#FB7",
+        "background": "#07F",
+        "iconColour": "#55BBFFBB",
+        "icon": "package-dependencies",
+        "gutterIcon": true,
+        "opacity": 50,
+        "fontWeight": "700",
+        "rulerColour": "#FB7",
+        "hideFromStatusBar": true
+      },
+      // FUNC CALL:  (Special function xyz)  -------------------------
+      "FUNC CALL:": {
+        "foreground": "#07F",
+        "background": "#ADE",
+        "opacity": 100,
+        "fontWeight": "700",
+        "iconColour": "#ADE",
+        "icon": "package-dependents",
+        "gutterIcon": true,
+        "rulerColour": "#07F",
+        // "": "#FB7",
+        // "type": "tag",
+        "hideFromStatusBar": true
+      },
+      // RETURNS: ----------------------------------------------------
+      "RETURNS:": {
+        "foreground": "#224",
+        "background": "#CF2",
+        "iconColour": "#CF2",
+        "icon": "cross-reference",
+        // "borderRadius": "7px",
+        "gutterIcon": true
+      },
+      // CONSOLE: ----------------------------------------------------
+      "CONSOLE:": {
+        "foreground": "#224",
+        "background": "#4B9",
+        "iconColour": "#4B9",
+        "icon": "terminal",
+        "gutterIcon": true
+      },
+      // HARDCODE: ---------------------------------------------------
+      "HARDCODE:": {
+        "foreground": "#FC9",
+        "background": "#F35",
+        // "borderRadius": "7px",
+        "iconColour": "#F149",
+        "icon": "cpu",
+        "fontWeight": "400",
+        "gutterIcon": true
+        // "type": "tag-and-comment",
+        // "ERROR HANDLER:", -------------------------------------------
+      },
+      // ERROR HANDLER: ------------------------------------------------
+      "ERROR HANDLER:": {
+        "foreground": "#FC9",
+        "background": "#F35",
+        // "borderRadius": "7px",
+        "iconColour": "#F149",
+        "icon": "note",
+        "gutterIcon": true
+        // "type": "tag-and-comment",
+        // "ERROR HANDLER:", -------------------------------------------
+      },
+      // LOG: ----------------------------------------------------------
+      "LOG:": {
+        "foreground": "#9BE",
+        "background": "#9BE",
+        "iconColour": "#9BE",
+        "icon": "checklist",
+        "gutterIcon": true
+      },
+      // "TASK LIST:",
+      // TASK LIST: [TODO] (Review Documentation) ----------------------------
+      "TASK LIST:": {
+        "foreground": "#FB7",
+        "background": "#07F",
+        "iconColour": "#55BBFFBB",
+        "icon": "tasklist",
+        "gutterIcon": true,
+        "opacity": 50,
+        "fontWeight": "700",
+        "rulerColour": "#FB7",
+        "type": "tag-and-subTag",
+        "hideFromStatusBar": true
+      },
+      // !: ------------------------------------------------------------
+      "!:": {
+        "foreground": "#F20",
+        "background": "#F20",
+        "iconColour": "#F20",
+        "icon": "stop",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // @: ------------------------------------------------------------
+      "@:": {
+        "foreground": "#F36",
+        "background": "#F36",
+        "iconColour": "#F36",
+        "icon": "mention",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // #: ------------------------------------------------------------
+      "#:": {
+        "foreground": "#9BE",
+        "background": "#9BE",
+        "iconColour": "#9BE",
+        "icon": "file-binary",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // $: ------------------------------------------------------------
+      "$:": {
+        "foreground": "#F84",
+        "background": "#F84",
+        "iconColour": "#F84",
+        "icon": "star",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // %: ------------------------------------------------------------
+      "%:": {
+        "foreground": "#4EF",
+        "background": "#4EF",
+        "iconColour": "#4EF",
+        "icon": "file-code",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // ?: ------------------------------------------------------------
+      "?:": {
+        "foreground": "#39F",
+        "background": "#39F",
+        "iconColour": "#39F",
+        "icon": "unverified",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // &: ------------------------------------------------------------
+      "&:": {
+        "foreground": "#93F",
+        "background": "#93F",
+        "iconColour": "#93F",
+        "icon": "squirrel",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // *: ------------------------------------------------------------
+      "*:": {
+        "foreground": "#9C7",
+        "background": "#9C7",
+        "iconColour": "#9C7",
+        "icon": "north-star",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // -+ ------------------------------------------------------------
+      "-+": {
+        "foreground": "#DF3",
+        "background": "#DF3",
+        "opacity": 25,
+        // "type": "whole-line",
+        "gutterIcon": false,
+        // "borderRadius": "0px",
+        "hideFromTree": true,
+        "hideFromStatusBar": true
+      },
+      // -: ------------------------------------------------------------
+      "-:": {
+        "background": "#F15",
+        "foreground": "#F15",
+        "gutterIcon": false,
+        "hideFromStatusBar": true,
+        "hideFromTree": true,
+        // "borderRadius": "0px",
+        "opacity": 15
+        // "type": "whole-line",
+      },
+      // -> ------------------------------------------------------------
+      "->": {
+        "background": "#93F",
+        "foreground": "#5CF",
+        "gutterIcon": true,
+        "icon": "report",
+        "iconColour": "#FB0",
+        "opacity": 30,
+        // "borderRadius": "0px",
+        "rulerColour": "#5CF5"
+        // "type": "whole-line",
+      },
+      // -* ------------------------------------------------------------
+      "-*": {
+        "background": "#0BF",
+        "foreground": "#FB0",
+        "gutterIcon": false,
+        "hideFromStatusBar": true,
+        "hideFromTree": true,
+        "opacity": 20,
+        "iconColour": "#FB0",
+        // "borderRadius": "0px",
+        "rulerColour": "#FB05"
+        // "type": "whole-line",
+      },
+      // -? ------------------------------------------------------------
+      "-?": {
+        "foreground": "#FDB",
+        "background": "#F14",
+        "opacity": 30,
+        // "type": "whole-line",
+        "gutterIcon": false,
+        "hideFromTree": true,
+        "hideFromStatusBar": true
+        // "borderRadius": "0px",
+      },
+      // -& ------------------------------------------------------------
+      "-&": {
+        "background": "#93F",
+        "foreground": "#5CF",
+        "opacity": 25,
+        // "type": "whole-line",
+        "gutterIcon": false,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "rulerColour": "#F45"
+      },
+      // -% ------------------------------------------------------------
+      "-%": {
+        "foreground": "#FDB",
+        "background": "#BF2",
+        "opacity": 25,
+        // "type": "whole-line",
+        "gutterIcon": false,
+        "hideFromTree": true,
+        "hideFromStatusBar": true
+      },
+      // eslint-disable ------------------------------------------------
+      "eslint-disable": {
+        "foreground": "#5CF",
+        "background": "#93F",
+        // "type": "whole-line",
+        "opacity": 30,
+        "iconColour": "#FB0",
+        // "borderRadius": "0px",
+        "icon": "report",
+        "gutterIcon": true
+      },
+      // -! ------------------------------------------------------------
+      "-!": {
+        "background": "#9BF",
+        "foreground": "#BBB",
+        "gutterIcon": false,
+        "hideFromStatusBar": true,
+        "hideFromTree": true,
+        "opacity": 20,
+        // "borderRadius": "0px",
+        "rulerColour": "#FFF5"
+        // "type": "whole-line",
+      },
+      // #-| -----------------------------------------------------------
+      "#-|": {
+        "foreground": "#F36",
+        "background": "#F36",
+        "iconColour": "#F36",
+        "icon": "cpu",
+        "gutterIcon": true,
+        "opacity": 20
+        // "borderRadius": "0px",
+        // "type": "whole-line",
+      },
+      // → -------------------------------------------------------------
+      "→": {
+        "foreground": "#CF2",
+        "background": "#CF2",
+        "iconColour": "#CF2",
+        "opacity": 50,
+        // "type": "whole-line",
+        "icon": "cross-reference",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        // "borderRadius": "0px",
+        "hideFromStatusBar": true
+      },
+      // ← -------------------------------------------------------------
+      "←": {
+        "foreground": "#5CF",
+        "background": "#5CF",
+        "opacity": 30,
+        "gutterIcon": false,
+        // "type": "text-and-comment",
+        "hideFromTree": true,
+        "hideFromStatusBar": true
+      },
+      // -# ------------------------------------------------------------
+      "-#": {
+        "foreground": "#9BE",
+        "background": "#9BE",
+        "iconColour": "#9BE",
+        "icon": "star",
+        "opacity": 30,
+        "type": "line",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "rulerColour": "#9BE",
+        "rulerOpacity": 50,
+        "rulerLane": "center"
+      },
+      // -$ ------------------------------------------------------------
+      "-$": {
+        "foreground": "#F84",
+        "background": "#F84",
+        "iconColour": "#F84",
+        "icon": "star",
+        "opacity": 30,
+        "type": "line",
+        "gutterIcon": true,
+        "hideFromTree": true,
+        "hideFromStatusBar": true,
+        "rulerColour": "#F84",
+        "rulerOpacity": 50,
+        "rulerLane": "center"
+      },
+      // ::
+      "::": {
+        "foreground": "#9BE",
+        "background": "#9BE",
+        "iconColour": "#9BE",
+        "icon": "grabber",
+        "gutterIcon": true,
+        "opacity": 30,
+        "type": "whole-line",
+        "rulerColour": "#9BE",
+        "rulerOpacity": 50,
+        "rulerLane": "full"
+      },
+      // :::
+      ":::": {
+        "foreground": "#F84",
+        "background": "#F84",
+        "iconColour": "#F84",
+        "icon": "grabber",
+        "gutterIcon": true,
+        "opacity": 30,
+        "type": "whole-line",
+        "rulerColour": "#F84",
+        "rulerOpacity": 50,
+        "rulerLane": "full"
+      }
+    },
+    "todo-tree.general.tags": [
+      "-:",
+      "-!",
+      "-?",
+      "-@",
+      "-*",
+      "-&",
+      "-#",
+      "-%",
+      "-%0",
+      "-%1",
+      "-%2",
+      "-%3",
+      "-%4",
+      "-%5",
+      "-%6",
+      "-+",
+      "->",
+      "-$",
+      ":::",
+      "::",
+      "!:",
+      "?:",
+      "[ ]",
+      "[x]",
+      "@:",
+      "*:",
+      "&:",
+      "#-|",
+      "#:",
+      "#endregion",
+      "#region",
+      "%:",
+      "←:",
+      "→",
+      "+:",
+      "|-::",
+      "$:",
+      "BUG:",
+      "CONSOLE:",
+      "REVIEW NEEDED:",
+      "ERROR HANDLER:",
+      "ERROR:",
+      "eslint-disable",
+      "FIXME:",
+      "FUNC CALL:",
+      "FUNC DEF:",
+      "HACK:",
+      "HARDCODE:",
+      "TASK LIST:",
+      "HINT:",
+      "INFO:",
+      "LOG:",
+      "RETURNS:",
+      "SECTION:",
+      "SEND COMMAND:",
+      "SIDE EFFECTS:",
+      "TODO:",
+      "UNIMPLEMENTED:",
+      "UNSAFE:",
+      "WARNING:",
+      "XXX:",
+      ":→",
+      "→:",
+      ":←",
+      "←",
+      "::"
+    ],
+    // "todo-tree.highlights.foregroundColourScheme": [
+    //   "white",
+    //   "black",
+    //   "black",
+    //   "white",
+    //   "white",
+    //   "white",
+    //   "black"
+    // ],
+    // "todo-tree.highlights.backgroundColourScheme": [
+    //   "red",
+    //   "orange",
+    //   "yellow",
+    //   "green",
+    //   "blue",
+    //   "indigo",
+    //   "violet"
+    // ],
+    "todo-tree.filtering.excludedWorkspaces": [], // new items
+    "todo-tree.filtering.ignoreGitSubmodules": false,
+    "todo-tree.filtering.includedWorkspaces": [], // new items
+    "todo-tree.filtering.includeGlobs": [], // new items
+    "todo-tree.filtering.includeHiddenFiles": false,
+    "todo-tree.filtering.passGlobsToRipgrep": true,
+    "todo-tree.filtering.scopes": [], // new items
+    "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+    "todo-tree.general.debug": false,
+    "todo-tree.general.enableFileWatcher": true,
+    "todo-tree.general.exportPath": "~/todo-tree-%Y%m%d-%H%M.txt",
+    "todo-tree.general.fileWatcherGlob": "**/*",
+    "todo-tree.general.revealBehaviour": "end of todo",
+    "todo-tree.general.rootFolder": "",
+    "todo-tree.general.showActivityBarBadge": false, // new items
+    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": false, // new items
+    "todo-tree.general.statusBar": "current file",
+    "todo-tree.general.statusBarClickBehaviour": "cycle",
+    "todo-tree.general.tagGroups": {}, // new items
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.highlights.highlightDelay": 100,
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.regex.enableMultiLine": false, // new items
+    // "todo-tree.regex.subTagRegex": "^:\\s*",
+    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+    // "todo-tree.regex.regexCaseSensitive": true, // "todo-tree.regex.regex": "^\\s*(TASK LIST:)\\s*\\[(.+?)\\]\\s*"
+    "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)", //"^\\s*\\[(.*)\\]",
+    //\\[(TODO|priority):\\s*(.+?)\\]",
+    // "todo-tree.regex.subTagRegex": "\\[(.+?)\\]",
+    // "todo-tree.regex.subTagRegex": "^\\s*\\[(TODO|priority):\\s*(.+?)\\]\\s*", // "^\\s*\\((.*)\\)",
+    // "todo-tree.ripgrep.ripgrep": "",
+    "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",
+    "todo-tree.ripgrep.ripgrepMaxBuffer": 200,
+    "todo-tree.ripgrep.usePatternFile": true,
+    "todo-tree.tree.autoRefresh": true,
+    "todo-tree.tree.buttons.expand": true,
+    "todo-tree.tree.buttons.export": false,
+    "todo-tree.tree.buttons.filter": true,
+    "todo-tree.tree.buttons.groupBySubTag": false, // new items
+    "todo-tree.tree.buttons.groupByTag": true,
+    "todo-tree.tree.buttons.refresh": true,
+    "todo-tree.tree.buttons.reveal": true,
+    "todo-tree.tree.buttons.scanMode": false,
+    "todo-tree.tree.buttons.viewStyle": true,
+    "todo-tree.tree.disableCompactFolders": false,
+    "todo-tree.tree.expanded": true,
+    "todo-tree.tree.filterCaseSensitive": false,
+    "todo-tree.tree.flat": false,
+    "todo-tree.tree.groupedBySubTag": false, // new items
+    "todo-tree.tree.groupedByTag": false, // new items
+    "todo-tree.tree.hideIconsWhenGroupedByTag": false,
+    "todo-tree.tree.hideTreeWhenEmpty": false,
+    "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
+    "todo-tree.tree.scanAtStartup": true,
+    "todo-tree.tree.scanMode": "workspace only",
+    "todo-tree.tree.showBadges": true,
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.tree.showCurrentScanMode": true,
+    "todo-tree.tree.sort": true,
+    "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
+    "todo-tree.tree.subTagClickUrl": "", // new items
+    "todo-tree.tree.tagsOnly": true,
+    "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
+    "todo-tree.tree.trackFile": true,
+    // "todo-tree.filtering.excludedWorkspaces": [], // new items
+    // "todo-tree.filtering.ignoreGitSubmodules": false,
+    // "todo-tree.filtering.includedWorkspaces": [], // new items
+    // "todo-tree.filtering.includeGlobs": [], // new items
+    // "todo-tree.filtering.includeHiddenFiles": false,
+    // "todo-tree.filtering.passGlobsToRipgrep": true,
+    // "todo-tree.filtering.scopes": [], // new items
+    // "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+    // "todo-tree.general.debug": false,
+    // "todo-tree.general.enableFileWatcher": true,
+    // "todo-tree.general.exportPath": "~/todo-tree-%Y%m%d-%H%M.txt",
+    // "todo-tree.general.fileWatcherGlob": "**/*",
+    // "todo-tree.general.revealBehaviour": "end of todo",
+    // "todo-tree.general.rootFolder": "",
+    // "todo-tree.general.showActivityBarBadge": false, // new items
+    // "todo-tree.general.showIconsInsteadOfTagsInStatusBar": false, // new items
+    // "todo-tree.general.statusBar": "current file",
+    // "todo-tree.general.statusBarClickBehaviour": "cycle",
+    // "todo-tree.general.tagGroups": {}, // new items
+    // "todo-tree.highlights.enabled": true,
+    // "todo-tree.highlights.highlightDelay": 100,
+    // "todo-tree.highlights.useColourScheme": true,
+    // "todo-tree.regex.enableMultiLine": false, // new items
+    // "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+    // "todo-tree.regex.regexCaseSensitive": true,
+    // "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)",
+    // "todo-tree.ripgrep.ripgrep": "",
+    // "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",
+    // "todo-tree.ripgrep.ripgrepMaxBuffer": 200,
+    // "todo-tree.ripgrep.usePatternFile": true,
+    // "todo-tree.tree.autoRefresh": true,
+    // "todo-tree.tree.buttons.expand": true,
+    // "todo-tree.tree.buttons.export": false,
+    // "todo-tree.tree.buttons.filter": true,
+    // "todo-tree.tree.buttons.groupBySubTag": false, // new items
+    // "todo-tree.tree.buttons.groupByTag": true,
+    // "todo-tree.tree.buttons.refresh": true,
+    // "todo-tree.tree.buttons.reveal": true,
+    // "todo-tree.tree.buttons.scanMode": false,
+    // "todo-tree.tree.buttons.viewStyle": true,
+    // "todo-tree.tree.disableCompactFolders": false,
+    // "todo-tree.tree.expanded": true,
+    // "todo-tree.tree.filterCaseSensitive": false,
+    // "todo-tree.tree.flat": false,
+    // "todo-tree.tree.groupedBySubTag": false, // new items
+    // "todo-tree.tree.groupedByTag": false, // new items
+    // "todo-tree.tree.hideIconsWhenGroupedByTag": false,
+    // "todo-tree.tree.hideTreeWhenEmpty": false,
+    // "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
+    // "todo-tree.tree.scanAtStartup": true,
+    // "todo-tree.tree.scanMode": "workspace",
+    // "todo-tree.tree.showBadges": true,
+    // "todo-tree.tree.showCountsInTree": true,
+    // "todo-tree.tree.showCurrentScanMode": true,
+    // "todo-tree.tree.sort": true,
+    // "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
+    // "todo-tree.tree.subTagClickUrl": "", // new items
+    // "todo-tree.tree.tagsOnly": true,
+    // "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
+    // #endregion: TODO TREE                                                           !
+    /*
+  |-····-----------------------------------------------------------··-|
+    */
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.advanced": {
+      // "temperature": "0.8",
+      // "debug.showScores": true,
+      "inlineSuggestCount": 5,
+      // "top_p": 1
+    },
+    "conventionalCommits.scopes": [
+      "backend",
+      "common",
+      "frontend",
+      "library",
+      "tools",
+      "private",
+      "RushStack",
+      "services",
+      "examples",
+      "Storybook",
+      "ChatGPT",
+      "RpcWorkerPool",
+      "scripts",
+      "Midjourney",
+      "playground",
+      "SDXL"
+    ],
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[properties]": {
+      "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[dockerfile]": {
+      "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "audioCues.taskCompleted": "off",
+    "files.watcherExclude": {
+      "**/build/**": true,
+      "**/dist/**": true,
+      "**/lib/**": true,
+      "**/out/**": true,
+      "**/node_modules/**": true,
+      "**/.git/**": true,
+      "**/.svn/**": true,
+      "**/.hg/**": true,
+      "**/CVS/**": true,
+      "**/.DS_Store/**": true,
+      "**/tmp/**": true,
+      "**/.tmp/**": true,
+      "**/.temp/**": true,
+      "**/temp/**": true,
+    },
+    "github.copilot.enable": {
+      "plaintext": "true",
+      "markdown": "true",
+      "scminput": "true"
+    },
+    "gitHistory.hideCommitViewExplorer": false,
+    "runme.cli.useIntegratedRunme": true,
+    "runme.terminal.cursorStyle": "underline",
+    "runme.actions.openViewInEditor": "toggle",
+    "runme.terminal.fontSize": 12,
+    "[plaintext]": {
+      "editor.defaultFormatter": "1nVitr0.blocksort"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    }
+    // "workbench.colorCustomizations": {
+    //   "activityBar.activeBackground": "#6a2bd499",
+    //   "activityBar.background": "#6a2bd499",
+    //   "activityBar.foreground": "#e7e7e7",
+    //   "activityBar.inactiveForeground": "#e7e7e799",
+    //   "activityBarBadge.background": "#d46a2b",
+    //   "activityBarBadge.foreground": "#15202b",
+    //   "commandCenter.border": "#e7e7e799",
+    //   "panel.border": "#6a2bd499",
+    //   "sash.hoverBorder": "#6a2bd499",
+    //   "sideBar.border": "#6a2bd499",
+    //   "statusBar.background": "#5522aa99",
+    //   "statusBar.border": "#5522aa99",
+    //   "statusBar.foreground": "#e7e7e7",
+    //   "statusBarItem.hoverBackground": "#6a2bd499",
+    //   "statusBarItem.remoteBackground": "#5522aa99",
+    //   "statusBarItem.remoteForeground": "#e7e7e7",
+    //   "tab.activeBorder": "#6a2bd499",
+    //   "titleBar.activeBackground": "#5522aa99",
+    //   "titleBar.activeForeground": "#e7e7e7",
+    //   "titleBar.border": "#5522aa99",
+    //   "titleBar.inactiveBackground": "#5522aa99",
+    //   "titleBar.inactiveForeground": "#e7e7e799"
+    // },
+    // "peacock.color": "#5522aa99",
+    //   "activityBar.activeBackground": "#ff9933",
+    //   "activityBar.background": "#ff9933",
+    //   "activityBar.foreground": "#15202b",
+    //   "activityBar.inactiveForeground": "#15202b99",
+    //   "activityBarBadge.background": "#008040",
+    //   "activityBarBadge.foreground": "#e7e7e7",
+    //   "sideBar.border": "#ff9933",
+    //   "commandCenter.border": "#15202b99",
+    //   "titleBar.activeBackground": "#ff7f00",
+    //   "titleBar.activeForeground": "#15202b",
+    //   "titleBar.inactiveBackground": "#ff7f0099",
+    //   "titleBar.inactiveForeground": "#15202b99",
+    //   "statusBar.background": "#ff7f00",
+    //   "statusBar.foreground": "#15202b",
+    //   "statusBarItem.hoverBackground": "#cc6600",
+    //   "statusBarItem.remoteBackground": "#ff7f00",
+    //   "statusBarItem.remoteForeground": "#15202b",
+    //   "panel.border": "#ff9933",
+    //   "tab.activeBorder": "#ff9933",
+    //   "sash.hoverBorder": "#ff9933",
+    //   "statusBar.border": "#ff7f00",
+    //   "titleBar.border": "#ff7f00"
+    // },
+    // "peacock.color": "#ff7f00",
+  }
+}

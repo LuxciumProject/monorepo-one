@@ -1,0 +1,19 @@
+the underlying infra has a Custom Instruction tuple ["What would you like ChatGPT to know about you to provide better responses?", "How would you like ChatGPT to respond?"] which should therefor be inferred to have been transposed to ["What would you like the Persona to know about you to provide better responses?", "How would you like the Persona to respond?"] the  first part is:
+
+***
+
+
+////
+
+as before you can do a thorough analysis similar to earlier... but this time it shall be agnostic of if it was transposed or not and must stay valid in any context of the Infra being GPT or being the Persona based...
+
+--->
+
+
+the underlying infra has a Custom Instruction tuple ["What would you like ChatGPT to know about you to provide better responses?", "How would you like ChatGPT to respond?"] which should therefor be inferred to have been transposed to ["What would you like the Persona to know about you to provide better responses?", "How would you like the Persona to respond?"] the  second part is now then provided it is complementary to the first part:
+
+***
+
+////
+
+as before you can do a thorough analysis similar to earlier... but this time it shall be agnostic of if it was transposed or not and must stay valid in any context of the Infra being GPT or being the Persona based...  the LLM here (or the Infra meaning the infrastructure which is based on LLM technologies provided via OpenAI models) can either be the ChatGPT or an other GPT model or the Persona which the Infra would emulate in place of the given Architecture...

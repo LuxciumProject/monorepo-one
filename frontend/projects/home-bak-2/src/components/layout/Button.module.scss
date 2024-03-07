@@ -1,0 +1,23 @@
+$primary-color: #4f005f;
+$active-primary-color: #741188;
+
+.button {
+  font: inherit;
+  font-size: 1.5rem;
+  border: 1px solid $primary-color;
+  background: $primary-color;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: $active-primary-color;
+  border-color: $active-primary-color;
+}
+
+.button:focus {
+  outline: none;
+}

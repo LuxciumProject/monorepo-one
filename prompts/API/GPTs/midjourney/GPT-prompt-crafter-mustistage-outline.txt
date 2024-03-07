@@ -1,0 +1,90 @@
+### Preliminary Documentation for Multi-Level Prompt Segmentation and Analysis
+
+---
+
+#### Introduction
+- **Purpose**: This guide outlines the process for AI Agents, including GPTs, ChatGPT, and other Large Language Models (LLMs), to effectively segment and analyze prompts for image generation tasks.
+- **Objective Clarity**: The primary goal is to dissect prompts methodically, ensuring precise and comprehensive understanding.
+
+---
+
+#### Process Overview
+1. **Initial Prompt Comprehension**:
+   - **Directive**: Comprehend the content and context of the prompt accurately.
+   - **Significance**: Misinterpretation can lead to incorrect segmentation and analysis.
+
+2. **Segmentation into Sections**:
+   - **Directive**: Divide the prompt into coherent sections based on natural linguistic breaks.
+   - **Significance**: Each section should retain its meaning independently.
+
+3. **Subsection Segmentation**:
+   - **Directive**: Further break down sections into individual words or cohesive phrases.
+   - **Significance**: Respect the integrity of phrases and quoted text.
+
+4. **Orthographic and Contextual Consideration**:
+   - **Directive**: Apply correct spelling, punctuation, and contextual hyphenation rules.
+   - **Significance**: Orthographic accuracy is crucial for maintaining the prompt's intended meaning.
+
+---
+
+#### Detailed Steps for Segmentation
+1. **First-Level Segmentation**:
+   - **Directive**: Identify and record larger, meaningful sections of the prompt.
+   - **Significance**: This foundational step influences all subsequent analyses.
+
+2. **Second-Level Segmentation**:
+   - **Directive**: Isolate individual words or phrases within each section.
+   - **Significance**: Enables detailed examination of each segment's nature and function.
+
+3. **Handling of Connective Words**:
+   - **Directive**: Enclose words like prepositions or conjunctions in parentheses.
+   - **Significance**: Highlights the supportive role of these words.
+
+4. **Preservation of Quoted Text**:
+   - **Directive**: Treat quoted text as a single, indivisible unit.
+   - **Significance**: Maintains the authenticity of the quoted material.
+
+---
+
+#### Preparing for Analysis
+- **Directive**: Review and adjust the segmented prompt for clarity and coherence.
+- **Significance**: Ensures the segmented prompt is ready for detailed nature and function analysis.
+
+---
+
+#### Documentation and Consistency
+- **Directive**: Maintain a consistent approach in applying segmentation rules across various prompts.
+- **Significance**: Consistency aids in establishing a standard procedure for AI Agents.
+
+---
+
+#### Conclusion
+- **Directive**: Apply the outlined process methodically for prompt dissection and analysis.
+- **Significance**: Adherence to these guidelines ensures accurate and efficient prompt analysis by AI Agents.
+
+---
+
+**End of Preliminary Documentation**
+
+---
+
+This preliminary document serves as a draft for AI Agents, emphasizing the importance of strict adherence to rules and procedures in prompt segmentation and analysis. The repetitive mention of key concepts throughout the document aims to reinforce understanding and ensure effective application of the guidelines.
+
+---
+
+### Directives for AI Agents
+
+1. **Create**: Generate a comprehensive and coherent segmentation of prompts.
+2. **Ensure**: Maintain accuracy in understanding and interpreting prompt content.
+3. **Focus**: Pay close attention to linguistic nuances and contextual meanings.
+4. **Emphasize**: Highlight the importance of orthographic accuracy and contextual hyphenation.
+5. **Arrange**: Organize the segmentation logically for ease of analysis.
+6. **Avoid**: Prevent misinterpretation and maintain the integrity of quoted text.
+7. **Include**: Provide contextual information where necessary for enhanced understanding.
+8. **Check**: Regularly review segmentation for consistency and alignment with objectives.
+9. **Proofread**: Eliminate any grammatical or typographical errors in the documentation.
+10. **Seek Feedback**: Gather perspectives to identify areas for improvement in communication with AI Agents.
+
+---
+
+This dual-format presentation, combining paragraph and list structures, is designed to ensure clear and effective communication with AI Agents, thereby enhancing their understanding and adherence to the established guidelines.

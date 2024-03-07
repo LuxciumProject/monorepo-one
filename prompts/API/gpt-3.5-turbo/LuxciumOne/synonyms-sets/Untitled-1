@@ -1,0 +1,20 @@
+I now need to choose between downloading or streaming the image and I need to construct a  resilient path structure that I will explain you later how I want to do it but for the moment just for the image acquisition from the internet please list each and all methods to get the data please consider the 3 approaches given below and add to the requirements any othersuche methods that can be used to get an image from an http server
+
+
+Downloading, Streaming, Fetching the image data directly as a binary response.
+
+
+GIVE ME 3 typescript code examples that would do each of the 3 methods listed above please make it idiomatic of modern TypeScript and NodeJS using the modern package or libraries that would give the most efficient and rapid way to get the data please get as much elements of meta information as the server possibly can provide about the file, please do a head interrogation to see if the server is willing to provide metadata and list each possible metadata a server possibly can give be exhaustive in your demonstration segregate the logic in their own functions such that you would not repeat code (KEEPING IT DRY D.R.Y.)
+
+can you please make sure that you a) get the metadata as a head request (please use a demonstration that list all possible information a server can provide about an image even if in the real life scenario the data may be more limited)  b) get all the possible metadata that the server can give along with the image data in the 3 given methods (do it as a demonstration of all possible data/metadata a server can provide using each of the 3 approaches) c) please extract all possible metadata that can be obtained from an image in each of the 3 methods as we are getting the data or after all the data is received (please take account of the many type of image file the server will return it is already known that it will return webp, jpeg or jpg, png and gif image) please explain how to extract all metadata that can be possibly included in the image or with the image... at the end please use type script type alias notation to create an object that would include each, any and all metadata that you would have get from the server using head, using the 3 methods along with the image data, and extracting from the images for any given type  since it is a demonstration of the possibilities list any and all information that can come along a file or inside the header of the file in binary or other, all and any metadata that is available and include any and all metadata that can be inferred from any steps including when the image is fully downloaded please be verbose and exhaustive when creating the typescript type alias and please aggregate each, every, any and all information in the same objects type for demonstration purposes
+
+
+
+1) Summarize what was said, explain what you have to do
+2) Explain how you will achieve the task
+3) Then follow the important steps below and explain your thought process in a granular manner:
+IMPORTANT: THINK STEP BY STEP
+IMPORTANT:  JUSTIFY YOUR RESPONSE
+IMPORTANT: EXPLAIN WHY AN OTHER METHOD WAS NOT THE CHOSEN ONE AND WHY THE METHOD CHOSEN HAVE BEEN SELECTED AMONG OTHER
+4) Craft the best TypeScript Code that follow best practices use annotations to explain your code
+5) Give a summary of what the code is doing and the purpose of each sections

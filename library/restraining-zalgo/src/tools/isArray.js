@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isArray = void 0;
+const isArray = (item) => Array.isArray(item);
+exports.isArray = isArray;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXNBcnJheS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImlzQXJyYXkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQU8sTUFBTSxPQUFPLEdBQUcsQ0FBSSxJQUFhLEVBQWMsRUFBRSxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7QUFBaEUsUUFBQSxPQUFPLFdBQXlEIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IGlzQXJyYXkgPSA8VD4oaXRlbTogVCB8IFRbXSk6IGl0ZW0gaXMgW10gPT4gQXJyYXkuaXNBcnJheShpdGVtKTtcbiJdfQ==

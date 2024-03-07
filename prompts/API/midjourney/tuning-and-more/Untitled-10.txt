@@ -1,0 +1,44 @@
+Misty Morning
+Silver Lining
+Dove's Wing
+Urban Stream
+Clouded Vision
+Slate Whisper
+Steel Haze
+Raindrop Shadow
+Ghostly Veil
+Pebble Beach
+
+Tangerine Zest
+Neon Carrot
+Sunset Burst
+Mango Tango
+Citrus Peel
+Electric Pumpkin
+Coral Glow
+Lava Splash
+Apricot Energy
+Saffron Spark
+
+/imagine Candid photo of elite teencore snowboarder boys wearing Techno-Casual Contrast hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Vibrant Urban Coolness hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Modern Electric Pastel hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Sleek Neon Pop hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Lively Pastel Punch hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Contemporary Zest Blend hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Futuristic Hue Harmony hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Energetic Palette Fusion hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Bold Chill Vibe hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+/imagine Candid photo of elite teencore snowboarder boys wearing Retro-Modern Color Mix hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2
+
+
+/imagine prompt: a {red, green, yellow} bird
+
+
+
+/imagine Candid photo of elite teencore snowboarder boys wearing {Misty Morning, Silver Lining, Dove's Wing, Urban Stream, Clouded Vision, Slate Whisper, Steel Haze, Raindrop Shadow, Ghostly Veil, Pebble Beach  } hoodies in a resort --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 375 --v 5.2 --fast
+
+  Tangerine Zest, Neon Carrot, Sunset Burst, Mango Tango, Citrus Peel, Electric Pumpkin, Coral Glow, Lava Splash, Apricot Energy, Saffron Spark
+
+
+/imagine prompt:Candid photo of elite snowboarder wearing Vibrant Urban Coolness hoodies in a resort --seed 20231102 --style 1HvRuQan1TV-cmEX5159HmmlUrYi --stylize 1000 --v 5.2

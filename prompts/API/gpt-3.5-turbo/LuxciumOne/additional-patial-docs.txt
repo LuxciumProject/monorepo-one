@@ -1,0 +1,37 @@
+he package provides four main types of delegate functions that can be used as arguments to the main functions. The delegates are responsible for carrying out the mapping, validation, and lookup processes, and can take null or undefined values that are replaced by default values. The four types of delegates are:
+const transform: TransformFn<T, R> =
+  transformFn == null ? async value => value as any as R : transformFn;
+const lookup: LookupFn<T, R> = lookupFn == null ? v => void v : lookupFn;
+const validate: ValidateFn<T, R> =
+  validateFn == null ? async v => void v : validateFn;
+const errLookup: ErrLookupFn = errLookupFn == null ? v => void v : errLookupFn;
+TransformFn<T, U>: This function is used for the actual mapping process and expects that you will transform from input type T to returned type U. Proper type annotations are required if you return an unchanged value.
+export interface TransformFn<T, U = unknown> {
+  (
+    value: T,
+    index: number,
+    array: readonly (T | PromiseSettledResult<T>)[]
+  ): Promise<U>;
+}
+LookupFn<S, U>: This function is used to acknowledge the transformed value U in an asynchronous manner. The return value must be void and must not have any internal side effects within the function.
+export interface LookupFn<S, U = unknown> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | Settled<S> | PromiseSettledResult<S>)[]
+  ): OnlySideEffect;
+}
+ValidateFn<S, U>: This function is similar to the LookupFn<S, U> delegate but is awaited within the function where it is executed. The return value must be a Promise<void>, and the only way to communicate with the main function is to throw a value or exception, which will be caught in the function and returned as a SettledLeft.
+export interface ValidateFn<S, U = unknown> {
+  (
+    value: U,
+    index: number,
+    array: readonly (S | PromiseSettledResult<S>)[]
+  ): Promise<OnlySideEffect>;
+}
+ErrLookupFn: This function is used to handle errors and is similar to the LookupFn<S, U> delegate, but for rejections. It takes a currentRejection flag as its third argument, which indicates whether the error occurred during the current iteration or a previous iteration.
+export interface ErrLookupFn {
+  (reason: any, index: number, currentRejection: boolean): OnlySideEffect;
+}
+The delegates are linked via parameters that can be accessed from the outside by providing a function of a certain type as an argument. The package allows you to alter the workflow in five different areas inside the specific mapping operation over each element.
+Since everything is based only on functions this definition may be different than the usual concept in JavaScript which is related often related to Object composition and inheritance.

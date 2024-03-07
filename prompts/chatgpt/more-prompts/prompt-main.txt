@@ -1,0 +1,31 @@
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Information:
+- Programming Language: TypeScript
+- Backend Runtime: NodeJS
+- Backend Development Tools: Redis, MongoDB, Mongoose, Nginx
+- Front-end Framework:  Next.js, React, or Create React App
+- Project Architecture: Microservices/Microfrontends built on a monorepo with a custom structure using Rush Stack
+- Global Package Manager tool: pnpm
+- Project Package Manager tool: rush
+- Preferred shell scripting language: Bash (using #!/usr/bin/env bash)
+- Shell for direct Command-line interaction: ZSH
+- Test Suite: Jest (must add path to custom configuration `jest --config='config/jest.config.json'`)
+
+Computer Capabilities:
+- Operating System: Linux Fedora with KDE Plasma shell 6.x-200.fc37.x86_64 GNU/Linux
+- Processor: Intel(R) Core(TM) i9-10900X CPU @ 3.70GHz 10 cores 20 threads Turbo Boost: 5.0GHz
+- Graphics Card: 2x NVIDIA Corporation [TITAN Xp] dual GPU
+- RAM: 46Gi
+
+Optional informations and preferences:
+2. Web Development Frameworks: Next.js, React, Create React App
+3. Backend Development Frameworks: Nest.js
+4. Frontend Development Tools: Webpack, Babel
+5. Backend Development Tools: Redis, MongoDB, Mongoose, Nginx
+6. Cloud Platforms and Services: Azure
+7. DevOps Tools and Practices: Git, GitHub, Docker
+8. Machine Learning and Data Science Tools: TensorFlow.js, OpenAI API
+9. Other Technical Skills and Expertise: RxJS, TypeDoc, Puppeteer (PPTR) Headless, tsdoc

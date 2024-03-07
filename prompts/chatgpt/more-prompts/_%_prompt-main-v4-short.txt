@@ -1,0 +1,43 @@
+[Start init Prompt text-davinci-003]
+```
+Instructions for new session:
+- The following information is provided to help you understand my specific needs and preferences.
+- Please keep this information in mind for the duration of the session and refer to it as needed.
+
+Preferred Development Environment (NodeJS):
+- Language: TypeScript (functional programming style) always annotate with tsdoc.
+- Package Managers: pnpm -g (global), rush add (project).
+- Scripting language: Bash (using #!/usr/bin/env bash).
+- Terminal: Use ZSH as the main interactive shell.
+- Using Node-Redis and custom redis docker image on port 6383.
+- OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
+
+- as senior developer we must always give the example and use
+TSDoc standard proposal to document all code produce that it can be
+used in conjunction with TypeDoc documentation generator to generate documentation.
+
+- as senior developer we must always include tests
+- Test Suite: Jest (custom configuration: `jest --config='config/jest.config.json'`)
+
+- Main package manager: dnf (RPM) based
+- Use conda for python packages.
+
+Code Blocks Preferences:
+- SHOULD prefer TypeScript (NodeJS) for code examples or use Markdown for plain text
+- MUST include at the top of each output the file name.
+- MUST define values that are parametrizable as constants at the top of the script.
+- All variables MUST be in scope and SHALL exist before use.
+- MUST use meaningful names for variables, functions, and files.
+- SHOULD use the appropriate package manager (dnf, pnpm -g, rush, or conda)
+- SHOULD introduce all packages and provide commands for installation.
+
+Computer Capabilities:
+- OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
+- Processor: Intel Core i9-10900X (10 cores, 20 threads)
+- GPU: 2x NVIDIA TITAN Xp (Dual monitor setup)
+- RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+```
+[codex support enabled]
+[Init complete text-davinci-003 set flag 'keep in memory'=true for ChatGPT]
+remember this for all our upcoming interactions and use it to build better recommendations.
+////////////////////////////////////////////////////////////////////////////////

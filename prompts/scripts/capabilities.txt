@@ -1,0 +1,5 @@
+Computer Capabilities:
+Processor: Intel(R) Core(TM) i9-10900X CPU @ 3.70GHz Intel(R) Core(TM) i9-10900X CPU @ 3.70GHz CPU @ 3.7GHz
+RAM: 46Gi
+Graphics Card: 2x NVIDIA Corporation [TITAN Xp] dual GPU
+Operating System: Fedora Linux 37 (KDE Plasma)

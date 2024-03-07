@@ -1,0 +1,156 @@
+Amber orange
+Amber yellow
+Apricot orange
+Aqua cyan
+Aquamarine teal
+Ash grey
+Ballet pink
+Berry magenta
+Berry red
+Blush pink
+Brick red
+Bright cyan
+Bubblegum pink
+Burnt orange
+Butter yellow
+Canary yellow
+Caramel brown
+Cerise magenta
+Cerulean blue
+Charcoal grey
+Chartreuse green
+Cherry red
+Chestnut brown
+Chocolate brown
+Coffee brown
+Coral orange
+Coral pink
+Cotton candy pink
+Crimson red
+Crystal blue
+Crystal cyan
+Deep magenta
+Deep purple
+Deep teal
+Dove grey
+Dusty blue
+Electric cyan
+Electric magenta
+Electric purple
+Emerald green
+Fire engine red
+Flamingo pink
+Forest green
+Fuchsia magenta
+Fuchsia pink
+Garnet red
+Glacier cyan
+Glossy purple
+Goldenrod yellow
+Graphite grey
+Harbor teal
+Honey yellow
+Ice blue
+Icy cyan
+Iridescent purple
+Jade green
+Jade teal
+Lagoon teal
+Lemon yellow
+Lime green
+Luminous cyan
+Mahogany brown
+Marine cyan
+Matte purple
+Metallic purple
+Midnight blue
+Mint green
+Misty grey
+Misty teal
+Mocha brown
+Moss green
+Mustard yellow
+Muted purple
+Navy blue
+Ocean teal
+Olive green
+Orchid magenta
+Pastel purple
+Pastel yellow
+Peachy orange
+Peacock teal
+Peony pink
+Pewter grey
+Pine green
+Plum magenta
+Pumpkin orange
+Rose pink
+Rose red
+Roseate magenta
+Royal blue
+Ruby red
+Rust orange
+Saffron yellow
+Salmon pink
+Satin purple
+Scarlet red
+Seafoam green
+Sepia brown
+Sienna brown
+Silver grey
+Sky blue
+Sky cyan
+Slate grey
+Smoky grey
+Steel grey
+Sunflower yellow
+Sunset orange
+Tangerine orange
+Taupe brown
+Teal blue
+Terracotta orange
+Tropical cyan
+Tropical teal
+Turquoise blue
+Turquoise teal
+Vibrant purple
+Vivid magenta
+Walnut brown
+Wine magenta
+Wine red
+
+
+Crew Cut
+Quiff
+Fade Cut
+Spiky
+Tapered Fade
+Comb Over
+Undercut
+Pompadour
+Buzz Cut
+Side Part
+Side Swept
+Mohawk
+Slicked Back
+Messy Hairstyle
+Trendy
+Stylish
+Classic
+Modern
+Edgy
+Sleek
+Messy
+Neat
+Dapper
+Casual
+Sharp
+Textured
+Youthful
+Chic
+Versatile
+Polished
+Effortless
+Understated
+Bold
+Relaxed

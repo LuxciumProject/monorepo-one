@@ -1,0 +1,44 @@
+Topic: Developing a typing prompter application in bash
+
+Context:
+We are developing a typing prompter application in bash that will display a prompt on the terminal for the user to type. The application should be able to change the color of the recently typed characters using RGB ANSI escaping. The goal is to make the application portable and resilient, with the possibility to change the settings in the future. The project will be developed in an iterative fashion, with a modular approach.
+
+Action Items:
+
+Create a project folder and initial files:
+main.sh
+settings.sh
+Add the shebang and the filename as a commented line in each file.
+Set the executable flag for each file.
+Import the "settings.sh" file into the "main.sh" file.
+Add a placeholder text to the "main.sh" file.
+Key Points:
+
+The application should be developed in bash.
+The application should use RGB ANSI escaping to change the color of the recently typed characters.
+The project should be developed in a modular and iterative fashion.
+The main function should be developed in the "main.sh" file.
+Each file should have a commented line with the filename following the shebang.
+The "settings.sh" file should be imported into the "main.sh" file.
+Contextual Information:
+
+The application should be able to change the color of the recently typed characters using RGB ANSI escaping.
+The project should be developed in a modular and iterative fashion.
+The main function should be developed in the "main.sh" file.
+The project should have a placeholder text in the "main.sh" file.
+Next Steps:
+
+Work on the implementation of the main function in the "main.sh" file.
+Develop the logic for the RGB ANSI escaping.
+Test the implementation in the terminal.
+
+
+Also:
+Let's refocus on our task. We are working on creating a typing prompter, and our current next step is to write the code that will display the text in the terminal with a random delay between each character and word. To ensure that we do not exceed our kilotoken limit, I suggest we summarize and update our progress regularly, and I will assist you in making sure we stay focused on our goal.
+
+As a reminder, our goal is to create a typing prompter in the form of a script that outputs the text with a controlled typing animation. We have set up a project structure with a main script file main.sh that sources a settings file settings.sh. Our next step is to implement the code for the typing animation and test it in the terminal. Is there anything specific that you would like to add to the animation or any customization that you have in mind?
+
+I can provide a more detailed summary if you would like. The goal of the project is to create a typing prompter that outputs text with random delays between characters, words, and lines. The prompter's behavior can be configured using parameters such as min_word_delay, max_word_delay, min_char_delay, max_char_delay, min_line_delay, and max_line_delay. The code is written in bash and split into two main files: main.sh and settings.sh. The main.sh file serves as the entry point and sources the settings.sh file. The code will be written in a modular and portable fashion, and will be split into multiple files as needed. Conventions for commenting and organization will be followed to ensure that the code is easy to understand and navigate. The code will be executed in a terminal and will be tested after each iteration to ensure that it is functioning correctly.
+
+
+Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT so we can continue our conversation where we left off.

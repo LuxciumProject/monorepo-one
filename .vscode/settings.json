@@ -1,0 +1,1638 @@
+{
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  // #region: EDITOR & TERMINAL                                      !
+  // "workbench.iconTheme": "material-icon-theme",
+  // "editor.fontFamily": "'FiraCode Nerd Font'",
+  // "editor.fontWeight": "500",
+  // "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+  // // "editor.fontFamily": "'VictorMono Nerd Font',Victor Mono, Fira Code",
+  // // "editor.fontLigatures": true,
+  // // "editor.fontSize": 20,
+  // "terminal.integrated.fontFamily": "mono, 'TerminessTTF Nerd Font Mono', mono, 'Anonymice NF', '3270Narrow NF', mono",
+  // // "terminal.integrated.fontSize": 14,
+  // "terminal.integrated.fontWeight": "600",
+  // "terminal.integrated.fontWeightBold": "bold",
+  "[typescript]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
+    // // "editor.fontSize": 26,
+    // // "editor.fontWeight": "400",
+    // // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
+    // // "editor.fontSize": 22,
+    // // "editor.fontWeight": "500",
+    // // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    // "editor.defaultFormatter": "vscode.json-language-features",
+    // "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono"
+    // // "editor.fontSize": 22,
+    // // "editor.fontWeight": "500",
+    // // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  // #endregion: EDITOR & TERMINAL                                   !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: excludes                                               !
+  "files.exclude": {
+    ".directory": true,
+    "**/*.build.log": true,
+    ".editorconfig": false,
+    ".git/": true,
+    ".gitattributes": false,
+    ".gitignore": false,
+    ".gitmodules": false,
+    ".history/": true,
+    ".nvmrc": true,
+    ".prettierignore": true,
+    ".prettierrc.cjs": false,
+    ".vscode/": false,
+    "backend/": false,
+    "common/": false,
+    "dist": false,
+    "docs/": false,
+    "frontend/": false,
+    "library/": false,
+    "LICENSE": false,
+    "out": false,
+    "pnpm-workspace.yaml": true,
+    "public/": false,
+    "readme.md": false,
+    "rush.json": false,
+    "scripts/": false,
+    "services/": false
+  },
+  "search.exclude": {
+    "docs": true,
+    "dist": true,
+    "out": true
+  },
+  // #endregion: excludes                                            !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: FORMAT BEHAVIOUR                                       !
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": false,
+  "editor.suggest.showFiles": true,
+  "editor.suggest.showFolders": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  //                                                                  ――
+  // ―― CODEACTIONSONSAVE BEHAVIOUR:
+  // "editor.codeActionsOnSave": [
+  //   "source.addMissingImports",
+  //   "source.organizeImports",
+  //   "source.fixAll",
+  //   "source.fixAll.eslint"
+  // ],
+  "material-icon-theme.folders.associations": {
+    "eslint-plugin": "rules"
+  },
+  // #endregion: FORMAT BEHAVIOUR                                    !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: PRETTIER                                               !
+  "prettier.enable": true,
+  "prettier.requireConfig": true,
+  "prettier.trailingComma": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "prettier.printWidth": 80,
+  "prettier.proseWrap": "preserve",
+  // #endregion: PRETTIER                                            !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: ESLINT                                                 !
+  "eslint.quiet": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.packageManager": "yarn",
+  // #endregion: ESLINT                                              !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: JAVASCRIPT BEHAVIOUR                                   !
+  "javascript.format.enable": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "javascript.format.semicolons": "insert",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.preferences.useAliasesForRenames": false,
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.enabled": true,
+  "javascript.suggest.paths": true,
+  "javascript.suggestionActions.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // #endregion: JAVASCRIPT                                          !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: TYPESCRIPT BEHAVIOUR                                   !
+  "typescript.check.npmIsInstalled": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.format.enable": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.semicolons": "insert",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.locale": "en",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.useAliasesForRenames": false,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.enabled": true,
+  "typescript.suggest.paths": true,
+  "typescript.suggestionActions.enabled": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "typescript.tsserver.maxTsServerMemory": 4096,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.workspaceSymbols.scope": "currentProject",
+  // #endregion: TYPESCRIPT BEHAVIOUR                                !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: PATH-INTELLISENSE                                      !
+  "path-intellisense.extensionOnImport": false,
+  "path-intellisense.absolutePathToWorkspace": false,
+  "path-intellisense.autoSlashAfterDirectory": false,
+  "path-intellisense.showHiddenFiles": true,
+  // #endregion: PATH-INTELLISENSE                                   !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: BETTER COMMENTS                                        !
+  /*
+     "problemsErrorIcon.foreground": "#ff3366",
+     "problemsInfoIcon.foreground": "#ffcc55ee",
+     "problemsWarningIcon.foreground": "#ccff33",
+  */
+  // "#F36F"
+  // "#F80B"
+  // "#FF0B"
+  // "#0F0B"
+  // "#39FB"
+  // "#93FB"
+  // "#F36F",
+  // "#F364",
+  // "#CF3F",
+  // "#CF34",
+  // "#39CF",
+  // "#39C4",
+  // "#FB0F",
+  // "#FB04",
+  "better-comments.highlightPlainText": true,
+  "better-comments.multilineComments": true,
+  // #region: BETTER COMMENTS                                     !
+  "better-comments.tags": [
+    // #region
+    {
+      "tag": "#region",
+      "color": "#FF3",
+      "strikethrough": false,
+      "backgroundColor": "#FF34"
+    },
+    // #endregion
+    {
+      "tag": "#endregion",
+      "color": "#F15",
+      "strikethrough": false,
+      "backgroundColor": "#F154"
+    },
+    //:
+    {
+      // ~!-----------------------------------------------------------!~
+      "tag": "~!",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#F365"
+    },
+    {
+      // ~$-----------------------------------------------------------$~
+      "tag": "~$",
+      "color": "#F80",
+      "strikethrough": false,
+      "backgroundColor": "#F806"
+    },
+    {
+      // ~+-----------------------------------------------------------+~
+      "tag": "~+",
+      "color": "#7C2F",
+      "strikethrough": false,
+      "backgroundColor": "#7C25"
+    },
+    {
+      // ~*-----------------------------------------------------------*~
+      "tag": "~*",
+      "color": "#FF0B",
+      "strikethrough": false,
+      "backgroundColor": "#FF05"
+    },
+    {
+      // ~#-----------------------------------------------------------#~
+      "tag": "~#",
+      "color": "#39F",
+      "strikethrough": false,
+      "backgroundColor": "#39F5"
+    },
+    {
+      // ~&-----------------------------------------------------------&~
+      "tag": "~&",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "#93F5"
+    },
+    {
+      // ~@-----------------------------------------------------------@~
+      "tag": "~@",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#39C3"
+    },
+    {
+      // ~%-----------------------------------------------------------%~
+      "tag": "~%",
+      "color": "#4EF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF5"
+    },
+    {
+      // ~?-----------------------------------------------------------?~
+      "tag": "~?",
+      "color": "#5AF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF3"
+    },
+    // SECTION
+    {
+      "tag": "SECTION",
+      "color": "#4EF",
+      "strikethrough": false
+    },
+    /*
+~ #F36F
+~ #F80B
+~ #FF0B
+~ #0F0B
+~ #39FB
+~ #93FB
+    */
+    // :!
+    {
+      "tag": ":!",
+      "color": "#F20",
+      "strikethrough": false,
+      "backgroundColor": "#F203"
+    },
+    // :~
+    {
+      "tag": ":~",
+      "color": "#FB3",
+      "strikethrough": false,
+      "backgroundColor": "#39C3"
+    },
+    // :@
+    {
+      "tag": ":@",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#39C6"
+    },
+    // :#
+    {
+      "tag": ":#",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "#4AE3"
+    },
+    // :$
+    {
+      "tag": ":$",
+      "color": "#F84",
+      "strikethrough": false,
+      "backgroundColor": "#F843"
+    },
+    // :%
+    {
+      "tag": ":%",
+      "color": "#4EF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF3"
+    },
+    // :?
+    {
+      "tag": ":?",
+      "color": "#39F",
+      "strikethrough": false,
+      "backgroundColor": "#39F3"
+    },
+    // :&
+    {
+      "tag": ":&",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "#93F3"
+    },
+    // :*
+    {
+      "tag": ":*",
+      "color": "#9C7",
+      "strikethrough": false,
+      "backgroundColor": "#9C73"
+    },
+    // :+
+    {
+      "tag": ":+",
+      "color": "#CF2",
+      "strikethrough": false,
+      "backgroundColor": "#CF23"
+    },
+    // !-
+    {
+      "tag": "!-",
+      "color": "#F20",
+      "strikethrough": false,
+      "backgroundColor": "#F203"
+    },
+    // @-
+    {
+      "tag": "@-",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#39C3"
+    },
+    // #-
+    {
+      "tag": "#-",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "#4AE3"
+    },
+    // $-
+    {
+      "tag": "$-",
+      "color": "#F84",
+      "strikethrough": false,
+      "backgroundColor": "#F843"
+    },
+    // %-
+    {
+      "tag": "%-",
+      "color": "#4EF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF3"
+    },
+    // ?-
+    {
+      "tag": "?-",
+      "color": "#39F",
+      "strikethrough": false,
+      "backgroundColor": "#39F3"
+    },
+    // &-
+    {
+      "tag": "&-",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "#93F3"
+    },
+    // *-
+    {
+      "tag": "*-",
+      "color": "#9C7",
+      "strikethrough": false,
+      "backgroundColor": "#9C73"
+    },
+    // ++
+    {
+      "tag": "++",
+      "color": "#CF2",
+      "strikethrough": false,
+      "backgroundColor": "#CF23"
+    },
+    // :-
+    {
+      "tag": ":-",
+      "color": "#9BE",
+      "strikethrough": false,
+      "backgroundColor": "#9BE3"
+    },
+    {
+      // constructor
+      "tag": "constructor",
+      "color": "#F15E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // private
+      "tag": "private",
+      "color": "#E22E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // protected
+      "tag": "protected",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+
+    */
+    {
+      // ――
+      "tag": "――",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // |-···
+      "tag": "|-",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ‽
+      "tag": "‽",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // TEST_MODULE
+      "tag": "TEST_MODULE",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // public
+      "tag": "public",
+      "color": "#FFAA00CC", // "#FA0E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // readonly
+      "tag": "readonly",
+      "color": "#FF6600AA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // static
+      "tag": "static",
+      "color": "#FF6600",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // get
+      "tag": "get",
+      "color": "#6BFC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // set
+      "tag": "set",
+      "color": "#85FE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // async
+      "tag": "async",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // https:
+      "tag": "https:",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // https
+      "tag": "https:",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // http
+      "tag": "http",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // TODO:
+      "tag": "TODO:",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // iterator
+      "tag": "iterator",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+~~============================================================================== ~~
+*/
+    /*
+
+
+
+ ―1----------------------------------------------------------------------------- ~~
+    */
+    {
+      // ―1
+      "tag": "―1",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 1―
+      "tag": "1―",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -1
+      "tag": "―1",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 1-
+      "tag": "1-",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ―― END
+      "tag": "―― END",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // END
+      "tag": "END",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ERROR
+      "tag": "ERROR",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // "#F36"
+    // "#F80B"
+    // "#FF0B"
+    // "#0F0B"
+    // "#39FB"
+    // "#93FB"
+    /*
+ ―1============================================================================= ~~
+ ―2----------------------------------------------------------------------------- ~~
+    */
+    {
+      // ―2
+      "tag": "―2",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 2―
+      "tag": "2―",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -2
+      "tag": "-2",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 2-
+      "tag": "2-",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // WARNING
+      "tag": "WARNING",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ―― START
+      "tag": "―― START",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // START
+      "tag": "START",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+ ―2============================================================================= ~~
+ ―3----------------------------------------------------------------------------- ~~
+    */
+    {
+      // ―3
+      "tag": "―3",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -3
+      "tag": "-3",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 3―
+      "tag": "3―",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 3-
+      "tag": "3-",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // INFO
+      "tag": "INFO",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+ ―3============================================================================= ~~
+ ―4----------------------------------------------------------------------------- ~~
+    */
+    {
+      // ―4
+      "tag": "―4",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 4―
+      "tag": "4―",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -4
+      "tag": "-4",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 4-
+      "tag": "4-",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // HINT
+      "tag": "HINT",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+ ―4============================================================================= ~~
+ ―5----------------------------------------------------------------------------- ~~
+    */
+    {
+      // ―5
+      "tag": "―5",
+      "color": "#39FD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+ ―5============================================================================= ~~
+ ―6----------------------------------------------------------------------------- ~~
+    */
+    {
+      // ―6
+      "tag": "―6",
+      "color": "#93FD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―6============================================================================== ~
+*/
+    /*
+―6============================================================================== ~
+―0------------------------------------------------------------------------------ ~
+*/
+    {
+      // ―0
+      "tag": "―0",
+      "color": "#FFFD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 0-
+      "tag": "0-",
+      "color": "#FFFD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―0============================================================================== ~
+*/
+    /*
+················································································
+================================================================================
+*/
+    {
+      // ====
+      "tag": "====",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // ·········································································
+    {
+      // ···
+      "tag": "···",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // !!
+      "tag": "!!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // @
+      "tag": "-@",
+      "color": "#F36B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // #
+      "tag": "#",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // $
+      "tag": "$",
+      "color": "#f48e41",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    //
+    {
+      // %
+      "tag": "%",
+      "color": "#41e2f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ?
+      "tag": "?",
+      "color": "#39FB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // &
+      "tag": "&",
+      "color": "#93FB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // *
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // _
+      "tag": "_",
+      "color": "#F80B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // {
+    //   // =
+    //   "tag": "=",
+    //   "color": "#F36B",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    {
+      // +
+      "tag": "+",
+      "color": "#c5f442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // †
+      "tag": "†",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ¬
+      "tag": "¬",
+      "color": "#FF0B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // {
+    //   // ~
+    //   "tag": "~",
+    //   "color": "#FF6600DD",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   // -
+    //   "tag": "-",
+    //   "color": "#9BEA",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    {
+      "tag": "BUG",
+      "color": "#F15",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "CONSOLE",
+      "color": "#FB3",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "ERROR",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "FIXME",
+      "color": "#F80",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "HACK",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "HINT",
+      "color": "#39C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "INFO",
+      "color": "#FB0",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // {
+    //   "tag": "LOG",
+    //   "color": "#ACF",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   "tag": "TODO:",
+    //   "color": "#FB3",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    {
+      "tag": "WARNING",
+      "color": "#BF2",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "XXX",
+      "color": "#E22",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  // #endregion: BETTER COMMENTS                                     !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: CUSTOMS RULES                                          !
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "task.allowAutomaticTasks": "on",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // #endregion: CUSTOMS RULES                                       !
+  // #region: TODO TREE                                                         !
+  "todo-tree.highlights.defaultHighlight": {
+    "background": "#FFF",
+    "borderRadius": "10px",
+    "foreground": "#224",
+    "gutterIcon": true,
+    "hideFromStatusBar": true,
+    "hideFromTree": true,
+    "icon": "alert",
+    "iconColour": "#05F",
+    "rulerLane": "center",
+    "type": "tag",
+    "opacity": 80
+    // "rulerColour":   ,
+  },
+  // "todo-tree.highlights.schemes": [
+  //   "file",
+  //   "untitled",
+  //   "vscode-userdata",
+  //   "output",
+  // ],
+  "todo-tree.general.tags": [
+    "#region:",
+    "-+",
+    "#endregion:",
+    "-:",
+    "BUG:",
+    "CONSOLE:",
+    "ERROR:",
+    "ERROR HANDLER:",
+    "RETURNS:",
+    "HACK:",
+    "HINT:",
+    "→",
+    "->",
+    "FIXME:",
+    "eslint-disable",
+    "INFO:",
+    "←:",
+    "-!",
+    "SECTION:",
+    "-@",
+    "LOG:",
+    "-#",
+    "TODO:",
+    "-$",
+    "WARNING:",
+    "-%",
+    "XXX:",
+    "-?",
+    "FUNC DEF:",
+    "-&",
+    "FUNC CALL:",
+    "|-::",
+    "#-|",
+    "-*",
+    "!:",
+    "@:",
+    "$:",
+    "#:",
+    "%:",
+    "?:",
+    "&:",
+    "*:",
+    "+:",
+    "::"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    // #region: //-+
+    "#region:": {
+      "foreground": "#224",
+      "background": "#DF3",
+      "iconColour": "#DF3",
+      "icon": "mirror",
+      "gutterIcon": true,
+      "type": "tag-and-comment",
+      "borderRadius": "7px",
+      "rulerLane": "right"
+    },
+    // -+
+    "-+": {
+      "foreground": "#DF3",
+      "background": "#DF3",
+      "opacity": 25,
+      "type": "whole-line",
+      "gutterIcon": false,
+      "borderRadius": "0px",
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerLane": "full"
+    },
+    // #endregion: // -:
+    "#endregion:": {
+      "foreground": "#224",
+      "background": "#F15",
+      "iconColour": "#F15",
+      "icon": "mirror",
+      "gutterIcon": true,
+      "type": "tag-and-comment",
+      "rulerLane": "left",
+      "borderRadius": "7px",
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    // -:
+    "-:": {
+      "background": "#F15",
+      "foreground": "#F15",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "borderRadius": "0px",
+      "opacity": 15,
+      "rulerLane": "full",
+      "type": "whole-line"
+    },
+    // eslint-disable
+    "eslint-disable": {
+      "foreground": "#5CF",
+      "background": "#93F",
+      "type": "whole-line",
+      "opacity": 30,
+      "iconColour": "#FB0",
+      "borderRadius": "0px",
+      "icon": "report",
+      "gutterIcon": true,
+      "rulerLane": "full"
+    },
+    // INFO: //-!
+    "INFO:": {
+      "background": "#BBB",
+      "foreground": "#224",
+      "gutterIcon": true,
+      "hideFromStatusBar": false,
+      "hideFromTree": false,
+      "icon": "info",
+      "borderRadius": "7px",
+      "iconColour": "#BBB",
+      "rulerLane": "right",
+      "type": "tag",
+      "opacity": 90,
+      "rulerColour": "#FFF"
+    },
+    //-!
+    "-!": {
+      "background": "#9BF",
+      "foreground": "#BBB",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "opacity": 20,
+      "rulerLane": "full",
+      "borderRadius": "0px",
+      "rulerColour": "#FFF5",
+      "type": "whole-line"
+    },
+    // HINT: //->
+    "HINT:": {
+      "background": "#FB0",
+      "foreground": "#224",
+      "gutterIcon": true,
+      "icon": "report",
+      "borderRadius": "7px",
+      "iconColour": "#FB0",
+      "rulerLane": "center"
+    },
+    //->
+    "->": {
+      "background": "#93F",
+      "foreground": "#5CF",
+      "gutterIcon": true,
+      "icon": "report",
+      "iconColour": "#FB0",
+      "opacity": 30,
+      "rulerLane": "full",
+      "borderRadius": "0px",
+      "rulerColour": "#5CF5",
+      "type": "whole-line"
+    },
+    // HACK: //-*
+    "HACK:": {
+      "background": "#74F",
+      "foreground": "#DDD",
+      "gutterIcon": true,
+      "borderRadius": "7px",
+      "icon": "squirrel",
+      "iconColour": "#93F",
+      "rulerLane": "center"
+    },
+    //-*
+    "-*": {
+      "background": "#0BF",
+      "foreground": "#FB0",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "opacity": 20,
+      "iconColour": "#FB0",
+      "rulerLane": "full",
+      "borderRadius": "0px",
+      "rulerColour": "#FB05",
+      "type": "whole-line"
+    },
+    // RETURNS: //→
+    "RETURNS:": {
+      "foreground": "#224",
+      "background": "#CF2",
+      "iconColour": "#CF2",
+      "icon": "cross-reference",
+      "borderRadius": "7px",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    //→
+    "→": {
+      "foreground": "#CF2",
+      "background": "#CF2",
+      "iconColour": "#CF2",
+      "opacity": 50,
+      "type": "whole-line",
+      "icon": "cross-reference",
+      "gutterIcon": true,
+      "rulerLane": "full",
+      "hideFromTree": true,
+      "borderRadius": "0px",
+      "hideFromStatusBar": true
+    },
+    "←": {
+      "foreground": "#5CF",
+      "background": "#5CF",
+      "opacity": 30,
+      "gutterIcon": false,
+      "type": "text-and-comment",
+      "rulerLane": "center",
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "BUG:": {
+      "foreground": "#224",
+      "background": "#F15",
+      "iconColour": "#F15",
+      "icon": "bug",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    "CONSOLE:": {
+      "foreground": "#224",
+      "background": "#4B9",
+      "iconColour": "#4B9",
+      "icon": "terminal",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    "ERROR:": {
+      "foreground": "#224",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "icon": "x-circle",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    // ERROR HANDLER: //-?
+    "ERROR HANDLER:": {
+      "foreground": "#FC9",
+      "background": "#F359",
+      "borderRadius": "7px",
+      "iconColour": "#F149",
+      "icon": "note",
+      "gutterIcon": true,
+      "type": "tag-and-comment",
+      "rulerLane": "center"
+      // "ERROR HANDLER:",
+    },
+    "-?": {
+      "foreground": "#FDB",
+      "background": "#F14",
+      "opacity": 30,
+      "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerLane": "none",
+      "borderRadius": "0px"
+    },
+    "FIXME:": {
+      "foreground": "#224",
+      "background": "#F80",
+      "iconColour": "#F80",
+      "icon": "tools",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    "SECTION:": {
+      "foreground": "#224",
+      "background": "#FD7",
+      "iconColour": "#FD7",
+      "icon": "mirror",
+      "gutterIcon": true,
+      "rulerColour": "#FB0",
+      "rulerLane": "full",
+      "type": "whole-line",
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "LOG:": {
+      "foreground": "#224",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "checklist",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    "-#": {
+      "foreground": "#224",
+      "background": "#9BE",
+      "opacity": 25,
+      "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerLane": "none"
+    },
+    "TODO:": {
+      "foreground": "#224",
+      "background": "#FB3",
+      "iconColour": "#FB3",
+      "icon": "bookmark",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    "-$": {
+      "foreground": "#224",
+      "background": "#FB3",
+      "opacity": 25,
+      "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerLane": "none"
+    },
+    "WARNING:": {
+      "foreground": "#224",
+      "background": "#BF2",
+      "iconColour": "#BF2",
+      "icon": "alert",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    "-%": {
+      "foreground": "#224",
+      "background": "#BF2",
+      "opacity": 25,
+      "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerLane": "none"
+    },
+    "XXX:": {
+      "foreground": "#224",
+      "background": "#E22",
+      "iconColour": "#E22",
+      "icon": "law",
+      "gutterIcon": true,
+      "rulerLane": "center"
+    },
+    "FUNC DEF:": {
+      "foreground": "#07F",
+      "background": "#FB0",
+      "iconColour": "#FB7",
+      "icon": "package-dependents",
+      "gutterIcon": true,
+      "rulerColour": "#FB7",
+      "rulerLane": "left",
+      "type": "tag",
+      // "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "FUNC CALL:": {
+      "foreground": "#FB7",
+      "background": "#07F",
+      "iconColour": "#07F",
+      "icon": "package-dependencies",
+      "gutterIcon": true,
+      "rulerColour": "#07F",
+      "rulerLane": "right",
+      "type": "tag",
+      "hideFromStatusBar": true
+    },
+    "-&": {
+      "foreground": "#07F",
+      "background": "#07F",
+      "opacity": 25,
+      "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerColour": "#F45",
+      "rulerLane": "center"
+    },
+    // !:
+    "!:": {
+      "foreground": "#F20",
+      "background": "#F20",
+      "iconColour": "#F20",
+      "icon": "stop",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // @:
+    "@:": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "icon": "mention",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // #-|
+    "#-|": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "icon": "cpu",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // ::
+    "::": {
+      "foreground": "#F84",
+      "background": "#F84",
+      "iconColour": "#F84",
+      "icon": "gear",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // %:
+    "%:": {
+      "foreground": "#4EF",
+      "background": "#4EF",
+      "iconColour": "#4EF",
+      "icon": "gear",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // ?:
+    "?:": {
+      "foreground": "#39F",
+      "background": "#39F",
+      "iconColour": "#39F",
+      "icon": "unverified",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // &:
+    "&:": {
+      "foreground": "#93F",
+      "background": "#93F",
+      "iconColour": "#93F",
+      "icon": "squirrel",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // *:
+    "*:": {
+      "foreground": "#9C7",
+      "background": "#9C7",
+      "iconColour": "#9C7",
+      "icon": "north-star",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    },
+    // $:
+    "$:": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "grabber",
+      "gutterIcon": true,
+      "opacity": 20,
+      "rulerLane": "center",
+      "borderRadius": "0px",
+      "type": "whole-line"
+    }
+  },
+  "todo-tree.filtering.ignoreGitSubmodules": false,
+  "todo-tree.filtering.includeHiddenFiles": false,
+  "todo-tree.filtering.passGlobsToRipgrep": true,
+  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  "todo-tree.general.debug": false,
+  "todo-tree.general.enableFileWatcher": true,
+  "todo-tree.general.exportPath": "~/todo-tree-%Y%m%d-%H%M.txt",
+  "todo-tree.general.fileWatcherGlob": "**/*.{ts,tsx,js,jsx,mjs,mts,cts,cjs,sh,zsh,jsonc}",
+  "todo-tree.general.revealBehaviour": "end of todo",
+  "todo-tree.general.rootFolder": "",
+  "todo-tree.general.statusBar": "current file",
+  "todo-tree.general.statusBarClickBehaviour": "cycle",
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.highlights.highlightDelay": 100,
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.regex.regexCaseSensitive": true,
+  "todo-tree.ripgrep.ripgrep": "",
+  "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",
+  "todo-tree.ripgrep.ripgrepMaxBuffer": 200,
+  "todo-tree.ripgrep.usePatternFile": true,
+  "todo-tree.tree.autoRefresh": true,
+  "todo-tree.tree.buttons.expand": true,
+  "todo-tree.tree.buttons.export": false,
+  "todo-tree.tree.buttons.filter": true,
+  "todo-tree.tree.buttons.groupByTag": true,
+  "todo-tree.tree.buttons.refresh": true,
+  "todo-tree.tree.buttons.reveal": true,
+  "todo-tree.tree.buttons.scanMode": false,
+  "todo-tree.tree.buttons.viewStyle": true,
+  "todo-tree.tree.disableCompactFolders": false,
+  "todo-tree.tree.expanded": true,
+  "todo-tree.tree.filterCaseSensitive": false,
+  "todo-tree.tree.flat": false,
+  // "todo-tree.tree.grouped": true,
+  "todo-tree.tree.hideIconsWhenGroupedByTag": false,
+  "todo-tree.tree.hideTreeWhenEmpty": false,
+  "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
+  "todo-tree.tree.scanAtStartup": true,
+  "todo-tree.tree.scanMode": "workspace",
+  "todo-tree.tree.showBadges": true,
+  "todo-tree.tree.showCountsInTree": true,
+  "todo-tree.tree.showCurrentScanMode": true,
+  // "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.tree.sort": true,
+  "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
+  "todo-tree.tree.tagsOnly": true,
+  "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
+  "todo-tree.tree.trackFile": true,
+  "todo-tree.filtering.excludedWorkspaces": [],
+  "todo-tree.filtering.includedWorkspaces": [],
+  "todo-tree.filtering.includeGlobs": [],
+  "todo-tree.filtering.excludeGlobs": [],
+  "todo-tree.general.tagGroups": {},
+  "todo-tree.highlights.backgroundColourScheme": [],
+  "todo-tree.highlights.foregroundColourScheme": [],
+  // #endregion: TODO TREE                                                      !
+  "conventionalCommits.scopes": [
+    "backend",
+    "common",
+    "frontend",
+    "library",
+    "tools",
+    "private",
+    "RushStack",
+    "services",
+    "examples"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ff33334d",
+    "activityBar.background": "#ff33334d",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#00df00",
+    "activityBarBadge.foreground": "#15202b",
+    "sash.hoverBorder": "#ff33334d",
+    "sideBar.border": "#ff33334d",
+    "tab.activeBorder": "#ff33334d",
+    "commandCenter.border": "#e7e7e799",
+    "panel.border": "#ff33334d",
+    "statusBar.background": "#ff00004d",
+    "statusBar.border": "#ff00004d",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#ff33334d",
+    "statusBarItem.remoteBackground": "#ff00004d",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#ff00004d",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.border": "#ff00004d",
+    "titleBar.inactiveBackground": "#ff000099",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#FF00004D",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}

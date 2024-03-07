@@ -1,0 +1,26 @@
+Topic: Optimizing AI Prompt Engineering
+
+Context: We have been discussing how to optimize the prompts used when working with AI language models, and how to improve the efficiency of interactions with the AI. We have explored best practices for prompt engineering and discussed ways to minimize fallback mechanisms triggered by the AI.
+
+Action items:
+
+Use clear and specific language in prompts
+Provide relevant context and keywords to help the AI understand the intent of the question
+Vary the structure and phrasing of prompts to avoid repetition
+Address a modern AI like ChatGPT by using its name or common conversational phrases
+Key points:
+
+Best practices for prompt engineering include using clear and specific language, providing context and keywords, and varying prompt structure
+Fallback mechanisms can be triggered by overly complex or ambiguous language or the use of colloquialisms and slang
+Addressing a modern AI like ChatGPT can be done by using its name or common conversational phrases
+Contextual information:
+
+The prompts being engineered are intended to be saved and reused in a professional setting
+The focus is on optimizing interactions with the AI to minimize the time and tokens required
+Next steps:
+
+Continue to use best practices for prompt engineering, focusing on clear and concise language and providing relevant context
+Vary the structure and phrasing of prompts to encourage diverse responses from the AI
+Address ChatGPT by name or common conversational phrases
+Strive for efficient and effective interactions with the AI
+Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT so we can continue our conversation where we left off.

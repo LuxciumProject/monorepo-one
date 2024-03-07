@@ -1,0 +1,228 @@
+# Color list loosely based on fruit of the loom colour names
+
+These 2 lists are a translation of one an other made in some subjective manner.
+Based on general color perceptions and historical naming conventions.
+The lists could be expanded or altered with different interpretations.
+
+## Base list
+
+Admiral Blue
+Aqua Velvet Heather
+Aquatic Blue
+Ash
+Athletic Heather
+Azalea
+Black
+Black Heather
+Black Ink
+Black Ink Heather
+Blush Pink
+Brick Heather
+Burnt Orange
+California Blue
+Candy Hearts Heather
+Cardinal
+Caribbean Blue Heather
+Carolina Heather
+Charcoal Grey
+Charcoal Heather
+Chocolate
+Citrus Green
+Classic Pink
+Cloud Heather
+Clover
+Columbia Blue
+Cool Mint
+Crimson
+Cyber Pink
+Deep Purple
+Denim
+Fiery Red
+Fiery Red Heather
+Forest Green
+Gold
+Graphite Heather
+Heather Grape
+Heather Mauve
+Indigo Heather
+Irish Green Heather
+Island Yellow
+J. Navy
+Kelly
+Khaki
+Kiwi
+Lemon Ice
+Light Blue
+Maroon
+Military Green
+Military Green Heather
+Mint To Be Heather
+Mustard Heather
+Natural
+Neon Green
+Neon Pink
+Neon Yellow
+New Gold
+Oatmeal Heather
+Orange Sherbet
+Pacific Blue
+Peppered Red Heather
+Purple
+Raspberry Heather
+Retro Heather Coral
+Retro Heather Green
+Retro Heather Pink
+Retro Heather Purple
+Retro Heather Royal
+Rock
+Royal
+Safari
+Safety Green
+Safety Orange
+Sagestone
+Scuba Blue
+Silver
+Sunset Coral
+Sweet Cream Heather
+T Orange
+Tennessee Orange
+True Red
+Turquoise Heather
+Vintage Heather Navy
+White
+Wild Plum
+Yellow
+Maroon Stripe
+Navy Stripe
+Denim Stripe
+Firebrick Stripe
+Grey Stripe
+Midnight Stripe
+
+## Other naming convention for the previous list
+Navy Blue
+Light Aquamarine
+Cerulean
+Light Grey
+Grey Melange
+Bright Pink
+Jet Black
+Charcoal Grey
+Onyx Black
+Dark Grey
+Light Rose
+Rust
+Sienna
+Sky Blue
+Soft Pink
+Scarlet Red
+Turquoise
+Pale Blue
+Dark Grey
+Slate Grey
+Dark Brown
+Lime Green
+Rose Pink
+Light Grey
+Emerald Green
+Light Sky Blue
+Mint Green
+Deep Red
+Neon Pink
+Violet
+Indigo
+Bright Red
+Rich Red
+Hunter Green
+Golden Yellow
+Graphite Grey
+Mauve
+Soft Purple
+Dark Blue
+Kelly Green
+Canary Yellow
+Dark Navy
+Kelly Green
+Tan
+Chartreuse
+Pale Yellow
+Baby Blue
+Burgundy
+Olive Green
+Dark Olive
+Pale Mint
+Dark Mustard
+Beige
+Fluorescent Green
+Hot Pink
+Fluorescent Yellow
+Old Gold
+Light Beige
+Pale Orange
+Deep Sky Blue
+Heather Red
+Royal Purple
+Dark Raspberry
+Coral Pink
+Sea Green
+Soft Pink
+Lavender
+Royal Blue
+Grey
+Royal Blue
+Khaki
+High-Visibility Green
+High-Visibility Orange
+Sage Green
+Bright Blue
+Silver Grey
+Coral
+Cream
+Tangerine
+Pumpkin Orange
+Classic Red
+Light Turquoise
+Faded Navy
+Pure White
+Plum
+Canary Yellow
+Striped Burgundy
+Striped Navy
+Striped Indigo
+Striped Red
+Striped Grey
+Striped Dark Blue
+
+
+Alice Blue
+Kelly Green
+Crimson Red
+Navy Blue
+Canary Yellow
+Scarlet Red
+Ivory White
+Charcoal Grey
+Lavender
+Ruby Red
+Sapphire Blue
+Emerald Green
+Peach
+Teal
+Mauve
+
+Victory Red
+Heritage Red
+Regal Red
+Patriot Red
+Legacy Red
+
+Cadet Red
+Harvard Red
+Spartan Red
+Racing Red
+Varsity Red
+Trophy Red
+Glory Red
+Imperial Red
+Majestic Red
+Rouge Red

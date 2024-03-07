@@ -1,0 +1,66 @@
+https://tuner.midjourney.com/C6byHQZ?answer=3NhwmUQZaavFqr
+a black and white photo of a man with a bull in the water, in the style of jacob hashimoto, mysterious jungle, chesley bonestell, pixelated portraits, miwa komatsu, alien worlds, experimental formations https://s.mj.run/WejjJsB7yJY --ar 3:4
+
+2pIY3jgMPJhH4D-3NhwmUQZaavFqr-3NhwmUQZaavFqr
+41xC5w7lSUnF9p-3NhwmUQZaavFqr
+
+2pIY3jgMPJhH4D
+41xC5w7lSUnF9p
+3NhwmUQZaavFqr
+
+
+/imagine prompt:cinematic depiction of a person taht is very happy photo taken with provia, webcam photography, candid moment, HDR and ray tracing RTX --ar 16:9 --seed 20231107 --style 2pIY3jgMPJhH4D-2pIY3jgMPJhH4D
+/imagine prompt:cinematic depiction of a person taht is very happy photo taken with provia, webcam photography, candid moment, HDR and ray tracing RTX --ar 16:9 --seed 20231107 --style 41xC5w7lSUnF9p-2pIY3jgMPJhH4D
+/imagine prompt:cinematic depiction of a person taht is very happy photo taken with provia, webcam photography, candid moment, HDR and ray tracing RTX --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr-2pIY3jgMPJhH4D
+
+/imagine prompt:cinematic depiction of a person taht is very happy photo taken with provia, webcam photography, candid moment, HDR and ray tracing RTX --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr-2pIY3jgMPJhH4D-2pIY3jgMPJhH4D
+
+
+/imagine prompt:webcam photo of a man taht is very happy photo taken with provia HDR --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr-3NhwmUQZaavFqr-2pIY3jgMPJhH4D
+
+
+
+2pIY3jgMPJhH4D
+
+/imagine prompt:photo of teencore boy wearing a purple hoodie::1000 using the 23 LOW KEY 3NhwmUQZaavFqr::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr
+/imagine prompt:photo of teencore boy wearing a green hoodie::1000 using the 23 LOW KEY 3NhwmUQZaavFqr::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr
+/imagine prompt:photo of teencore girl wearing a purple hoodie::1000 using the 23 LOW KEY 3NhwmUQZaavFqr::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr
+/imagine prompt:photo of teencore girl wearing a green hoodie::1000 using the 23 LOW KEY 3NhwmUQZaavFqr::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr
+/imagine prompt:photo of teencore boy wearing a purple hoodie::1000 using the 23 HIGH KEY 2pIY3jgMPJhH4D::0.01 --ar 16:9 --seed 20231107 --style 2pIY3jgMPJhH4D
+/imagine prompt:photo of teencore boy wearing a green hoodie::1000 using the 23 HIGH KEY 2pIY3jgMPJhH4D::0.01 --ar 16:9 --seed 20231107 --style 2pIY3jgMPJhH4D
+/imagine prompt:photo of teencore girl wearing a purple hoodie::1000 using the 23 HIGH KEY 2pIY3jgMPJhH4D::0.01 --ar 16:9 --seed 20231107 --style 2pIY3jgMPJhH4D
+/imagine prompt:photo of teencore girl wearing a green hoodie::1000 using the 23 HIGH KEY 2pIY3jgMPJhH4D::0.01 --ar 16:9 --seed 20231107 --style 2pIY3jgMPJhH4D
+
+/imagine prompt:photo of teencore boy wearing a purple hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:photo of teencore boy wearing a green hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:photo of teencore boy wearing a purple hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+/imagine prompt:photo of teencore boy wearing a green hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+
+/imagine prompt:photo of teencore girl wearing a purple hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:photo of teencore girl wearing a green hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:photo of teencore girl wearing a purple hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+/imagine prompt:photo of teencore girl wearing a green hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+
+/imagine prompt:webcam photo of a woman wearing a purple hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:webcam photo of a woman wearing a green hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:webcam photo of a woman wearing a purple hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+/imagine prompt:webcam photo of a woman wearing a green hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+
+/imagine prompt:webcam photo of a man wearing a purple hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:webcam photo of a man wearing a green hoodie::1000 using the 24 LOW KEY bnQz6KyxMzW47L::0.01 --ar 16:9 --seed 20231107 --style bnQz6KyxMzW47L --fast
+/imagine prompt:webcam photo of a man wearing a purple hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+/imagine prompt:webcam photo of a man wearing a green hoodie::1000 using the 24 HIGH KEY 7faU9VNWNgg94l::0.01 --ar 16:9 --seed 20231107 --style 7faU9VNWNgg94l --fast
+
+
+/imagine prompt:webcam photo of a woman wearing a purple hoodie::1000 using the 24 LOW KEY and 23 LOW KEY::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr-bnQz6KyxMzW47L --fast
+/imagine prompt:webcam photo of a woman wearing a green hoodie::1000 using the 24 LOW KEY and 23 LOW KEY::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr-bnQz6KyxMzW47L --fast
+/imagine prompt:webcam photo of a woman wearing a purple hoodie::1000 using the 24 HIGH KEY and 23 LOW KEY::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr-7faU9VNWNgg94l --fast
+/imagine prompt:webcam photo of a woman wearing a green hoodie::1000 using the 24 HIGH KEY and 23 LOW KEY::0.01 --ar 16:9 --seed 20231107 --style 3NhwmUQZaavFqr-7faU9VNWNgg94l --fast
+
+bnQz6KyxMzW47L
+
+3NhwmUQZaavFqr
+2pIY3jgMPJhH4D
+
+1L2L3L4L5L6L
+1

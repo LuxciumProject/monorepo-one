@@ -1,0 +1,27 @@
+import laws from 'fantasy-laws';
+import jsc from 'jsverify';
+import show from 'sanctuary-show';
+import Z from 'sanctuary-type-classes';
+import { Box } from '..';
+
+const SumArb = jsc.fn(Box, box => box.value, show);
+const { identity, composition } = laws.Group(Z.map, Box);
+describe('Name of the group', () => {
+  test('Name of the test', () => {
+    const expected = Box.of('fantasy-land/map')
+      ['fantasy-land/map'](i => i.length)
+      .unbox();
+    expect(expected).toBe(16);
+  });
+});
+// laws;
+
+SumArb;
+identity;
+composition;
+jsc;
+show;
+Z;
+Box;
+
+// Box['fantasy-land/map'];

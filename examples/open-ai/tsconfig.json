@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "./typescript/tsconfig.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typedoc-plugin-group"
+      }
+    ],
+    /* Emit Options */
+    "target": "es5",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "outDir": "./build",
+    "declarationDir": "./build/typings",
+    "composite": true,
+    "useDefineForClassFields": false,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    // "typeRoots": [
+    //   "./src/functions",
+    //   "./src/helpers",
+    //   "./src/helpers/tools",
+    //   "./src/helpers/assertions",
+    //   "./src/constants",
+    //   "./src/types",
+    //   "./src/classes/chain",
+    //   "./src"
+    // ],
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    /* Completeness */
+    "importHelpers": false,
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": true,
+    "noResolve": false,
+    "noLib": false,
+    "moduleDetection": "force",
+    /* Bundled library declaration files that describe the target runtime environment. */
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    /* Package names to be included without being referenced in a source file. */
+    "types": [
+      "node",
+      "jest"
+    ],
+    /* Emit Options */
+    // "emitDecoratorMetadata": false,
+    // "experimentalDecorators": false,
+    /* JavaScript Support */
+    /* Module Resolution Interop Constraints */
+    // "target": "ESNext",
+    // "module": "CommonJS",
+    // "moduleResolution": "node",
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "preserveSymlinks": false,
+    // "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    /* JavaScript Support */
+    // "allowJs": true,
+    // "checkJs": false,
+    "maxNodeModuleJsDepth": 1,
+    "disableSizeLimit": false,
+    /* Emit Options */
+    "downlevelIteration": true,
+    "emitBOM": false,
+    "incremental": true,
+    "newLine": "lf",
+    "noEmit": false,
+    "noEmitHelpers": false,
+    "noEmitOnError": false,
+    "preserveConstEnums": true,
+    "preserveValueImports": false,
+    "pretty": true,
+    "removeComments": false,
+    "stripInternal": false,
+    "preserveWatchOutput": false,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "inlineSourceMap": false,
+    "emitDeclarationOnly": false,
+    /* Bundled library declaration files that describe the target runtime environment. */
+    // "lib": ["dom", "esnext"],
+    /* Package names to be included without being referenced in a source file. */
+    // "types": ["node", "heft-jest", ],
+    /* Projects */
+    // "composite": true,
+    "disableSourceOfProjectReferenceRedirect": false,
+    "disableSolutionSearching": false,
+    "disableReferencedProjectLoad": false,
+    /* Compilation Options */
+    "noErrorTruncation": true,
+    // "useDefineForClassFields": true,
+    "assumeChangesOnlyAffectDirectDependencies": false
+    /*
+      "exports": {
+    ".": "./lib/index.js",
+    "./functions": "./lib/functions/index.js",
+    "./helpers": "./lib/helpers/index.js",
+    "./tools": "./lib/helpers/tools/index.js",
+    "./assertions": "./lib/helpers/assertions/index.js",
+    "./helpers/tools": "./lib/helpers/tools/index.js",
+    "./helpers/assertions": "./lib/helpers/assertions/index.js",
+    "./constants": "./lib/constants.js",
+    "./types": "./lib/types/index.js",
+    "./chain": "./lib/classes/chain.js",
+    "./package.json": "./package.json"
+      "jquery": ["node_modules/jquery/dist/jquery"] // this mapping is relative to "baseUrl"
+
+              "app/*": ["app/*"],
+        "config/*": ["app/_config/*"],
+        "environment/*": ["environments/*"],
+        "shared/*": ["app/_shared/*"],
+        "helpers/*": ["helpers/*"],
+        "tests/*": ["tests/*"]
+  },
+    */
+    // "paths": {
+    //   "./functions": [
+    //     "./src/functions/index"
+    //   ],
+    //   "./helpers": [
+    //     "./src/helpers/index"
+    //   ],
+    //   "./tools": [
+    //     "./src/helpers/tools/index"
+    //   ],
+    //   "./assertions": [
+    //     "./src/helpers/assertions/index"
+    //   ],
+    //   "./helpers/tools": [
+    //     "./src/helpers/tools/index"
+    //   ],
+    //   "./helpers/assertions": [
+    //     "./src/helpers/assertions/index"
+    //   ],
+    //   "./constants": [
+    //     "./src/constants"
+    //   ],
+    //   "./types": [
+    //     "./src/types/index"
+    //   ],
+    //   "./chain": [
+    //     "./src/classes/chain"
+    //   ],
+    //   "./package.json": [
+    //     "./package.json"
+    //   ],
+    //   "*": [
+    //     "./src/index"
+    //   ]
+    // }
+  },
+  // "references": [
+  //   {
+  //     "path": "dts/rushstack-eslint.d.ts"
+  //   }
+  // ],
+  "include": [
+    "src/**/*",
+    "dts/**/*"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules",
+    "out",
+    "build",
+    "dist"
+  ]
+}

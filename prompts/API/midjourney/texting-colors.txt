@@ -1,0 +1,156 @@
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Sunflower yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Crimson red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Electric purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Charcoal grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Tangerine orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Fuchsia magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Ocean teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Bubblegum pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Chestnut brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Aqua cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Midnight blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Emerald green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Canary yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Ruby red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Pastel purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Ash grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Burnt orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Deep magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Peacock teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Blush pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Chocolate brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Electric cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Sky blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Moss green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Lemon yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Scarlet red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Deep purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Slate grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Coral orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Berry magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Turquoise teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Rose pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Mocha brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Sky cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Royal blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Jade green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Goldenrod yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Brick red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Vibrant purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Silver grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Apricot orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Orchid magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Deep teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Flamingo pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Sienna brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Bright cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Teal blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Lime green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Mustard yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Rose red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Matte purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Smoky grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Pumpkin orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Vivid magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Lagoon teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Cotton candy pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Caramel brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Tropical cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Ice blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Forest green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Butter yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Wine red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Iridescent purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Steel grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Amber orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Roseate magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Jade teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Salmon pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Walnut brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Marine cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Cerulean blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Mint green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Saffron yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Cherry red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Metallic purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Pewter grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Rust orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Electric magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Tropical teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Coral pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Mahogany brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Glacier cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Dusty blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Olive green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Amber yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Garnet red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Muted purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Misty grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Sunset orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Plum magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Aquamarine teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Ballet pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Taupe brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Luminous cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Turquoise blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Chartreuse green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Honey yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Berry red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Satin purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Dove grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Peachy orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Wine magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Misty teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Fuchsia pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Coffee brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Icy cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Navy blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Seafoam green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Pastel yellow --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Fire engine red --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Glossy purple --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Graphite grey --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Terracotta orange --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Cerise magenta --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Harbor teal --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Peony pink --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Sepia brown --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Crystal cyan --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Crystal blue --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+/imagine prompt:https://s.mj.run/7faz7ndHQd8 Pine green --seed 20231019 --w 0 --c 0 --v 5.2 --s 0 --raw
+
+
+Crew Cut
+Quiff
+Fade Cut
+Spiky
+Tapered Fade
+Comb Over
+Undercut
+Pompadour
+Buzz Cut
+Side Part
+Side Swept
+Mohawk
+Slicked Back
+Messy Hairstyle
+Trendy
+Stylish
+Classic
+Modern
+Edgy
+Sleek
+Messy
+Neat
+Dapper
+Casual
+Sharp
+Textured
+Youthful
+Chic
+Versatile
+Polished
+Effortless
+Understated
+Bold
+Relaxed

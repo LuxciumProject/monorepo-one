@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel='apple-touch-icon' sizes='180x180' href='apple-touch-icon.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='favicon-16x16.png'>
+    <link rel='manifest' href='site.webmanifest'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Decoder for Midjourney (V1)</title>
+    <script>
+        const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        function base62Decode(s) {
+            let value = BigInt(0);
+            for (let char of s) {
+                value = value * BigInt(62) + BigInt(chars.indexOf(char));
+            }
+            return value;
+        }
+
+        function base62Encode(num) {
+            if (num === BigInt(0)) return '0';
+            let digits = '';
+            while (num > BigInt(0)) {
+                digits = chars[num % BigInt(62)] + digits;
+                num = num / BigInt(62);
+            }
+            return digits;
+        }
+
+        const fauxBase64Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"; // Last two chars unused
+
+        function fauxBase64Encode(num) {
+            if (num === BigInt(0)) return fauxBase64Chars[0]; // Return the first character of the encoding set
+            let digits = '';
+            while (num > BigInt(0)) {
+                digits = fauxBase64Chars[Number(num % BigInt(64))] + digits;
+                num = num / BigInt(64);
+            }
+            return digits;
+        }
+
+        function fauxBase64Decode(s) {
+            let value = BigInt(0);
+            for (let char of s) {
+                value = value * BigInt(64) + BigInt(fauxBase64Chars.indexOf(char));
+            }
+            return value;
+        }
+
+        function base3Encode(num) {
+            if (num === BigInt(0)) return '0';
+            let digits = '';
+            while (num > BigInt(0)) {
+                digits = (num % BigInt(3)).toString() + digits;
+                num = num / BigInt(3);
+            }
+            return digits;
+        }
+
+        function base3Decode(s) {
+            let value = BigInt(0);
+            for (let char of s) {
+                value = value * BigInt(3) + BigInt(parseInt(char, 10));
+            }
+            return value;
+        }
+
+        function invertBase3String(s) {
+            let invertedString = '';
+            for (let char of s) {
+                if (char === '0') {
+                    invertedString += '2';
+                } else if (char === '2') {
+                    invertedString += '0';
+                } else {
+                    invertedString += char; // Keep '1's unchanged
+                }
+            }
+            return invertedString;
+        }
+
+        function normalizeArray(array, normalizeValue) {
+            return array.map(element => {
+                return element / normalizeValue;
+            });
+        }
+
+        function scaleAndRoundArray(array, scaleFactor) {
+            return array.map(element => {
+                return element >= 0 ? Math.ceil(element * scaleFactor) : Math.floor(element * scaleFactor);
+            });
+        }
+
+        function scaleAndRoundArrayNearest(array, scaleFactor) {
+            return array.map(element => {
+                let ea = Math.abs(element);
+                let er = Math.round(ea * scaleFactor);
+                if (element < 0) {
+                    return -er;
+                } else {
+                    return er;
+                }
+            });
+        }
+
+        function processBase3String(s, rowSums) {
+            let output = [];
+            for (let i = 0; i < s.length; i++) {
+                let char = s[s.length - 1 - i];
+                if (char === '0') {
+                    output.push(`Row ${i + 1} Left`);
+                    rowSums[i] -= 1;
+                } else if (char === '2') {
+                    output.push(`Row ${i + 1} Right`);
+                    rowSums[i] += 1;
+                }
+            }
+            return output;
+        }
+
+        function generateStyleCodes(valueArray, numCodes) {
+            let codes = [];
+
+            for (let codeNum = 0; codeNum < numCodes; codeNum++) {
+                let code = '';
+
+                for (let i = valueArray.length - 1; i >= 0; i--) {
+                    if (valueArray[i] > codeNum) {
+                        code += '2';
+                    } else if (valueArray[i] < -codeNum) {
+                        code += '0';
+                    } else {
+                        code += '1';
+                    }
+                }
+
+                // Remove leading '1's and add a single '1' at the beginning
+                code = '1' + code.replace(/^1+/, '');
+                codes.push(code);
+            }
+
+            // Fix single length equal to '1' by generating the null vector pair
+            if (codes.length == 1 && codes[0] == '1') {
+                return generateStyleCodes(valueArray, 2);
+            }
+
+            // Fix invalid null codes by alternating row 1
+            for (let i = codes.length - 1; i > 0; i--) {
+                if (codes[i] == '1') {
+                    let prevCode = codes[i - 1];
+                    let prevRow1 = prevCode.charAt(prevCode.length - 1);
+                    let prevNew = '?';
+                    if (prevRow1 == '2') {
+                        prevNew = '1';
+                        codes[i] = '12';
+                    } else if (prevRow1 == '0') {
+                        prevNew = '1';
+                        codes[i] = '10';
+                    } else {
+                        prevNew = '2';
+                        codes[i] = '10';
+                    }
+                    prevCode = prevCode.substring(0, prevCode.length - 1) + prevNew;
+                    prevCode = '1' + prevCode.replace(/^1+/, '');
+                    codes[i - 1] = prevCode;
+                }
+            }
+
+            // Fix 7/8 row 0 by alternating row 2
+            if (codes[0] == '1') {
+                codes[0] = '121';
+                let nextCode = codes[1]; // Always 2 characters
+                let nextRow1 = nextCode.charAt(nextCode.length - 1);
+                codes[1] = '10' + nextRow1;
+            }
+
+            return codes;
+        }
+
+        function encodeStyleCodes(dataStore, styleCodes) {
+            let codes = [];
+            if (styleCodeType == "mj5.2-raw") {
+                codes.push("raw");
+            }
+            for (let i = 0; i < styleCodes.length; ++i) {
+                // console.log(styleCodes[i]);
+                const base3Decoded = base3Decode(styleCodes[i]);
+                const reassembledValue = (base3Decoded << BigInt(42)) | tunerCodes[styleCodeType]; // dataStore[i % dataStore.length].styleTunerBits; // Doesn't work if source is 32 or 64
+                codes.push(base62Encode(reassembledValue));
+            }
+            return codes.join("-");
+        }
+
+        let decodedDataStore = []; // Array to store decoded data
+        let rowSums = new Array(128).fill(0);
+        let maxAbsValue = 0;
+        // let alternateDiscardedBits = base62Decode('35A4u7Az6dnkHwMln6crps0oaL4HIP74g2XzbxhRXq') & ((BigInt(1) << BigInt(42)) - BigInt(1)); // oversaturated sphere, 128 rows, default
+        // let alternateDiscardedBits = base62Decode('35A4u7Az6dnkHwMln6crps0oaL4HIP74g2XBwBXSz5') & ((BigInt(1) << BigInt(42)) - BigInt(1)); // url to html, 128 rows, default
+
+        let tunerCodes = {
+            'mj5.2': base62Decode('35A4u7Az6dnkHwMln6crps0oaL4HIP74g2XBwBXSz5') & ((BigInt(1) << BigInt(42)) - BigInt(1)), // url to html, 128 rows, default
+            'mj5.2-raw': base62Decode('35A4u7Az6dnkHwMln6crps0oaL4HIP74g2Y27yNPlR') & ((BigInt(1) << BigInt(42)) - BigInt(1)), // url to html, 128 rows, default
+            'niji5': base62Decode('35A4u7Az6dnkHwMln6crps0oaL4HIP74g2YcL3byRN') & ((BigInt(1) << BigInt(42)) - BigInt(1)), // url to html, 128 rows, default
+        };
+
+        let tunerDomains = {
+            'mj5.2': 'tuner.midjourney.com',
+            'mj5.2-raw': 'tuner.midjourney.com',
+            'niji5': 'tuner.nijijourney.com',
+        };
+
+        let loggedCodes = { "raw": true };
+        function postToLog(styleCodes) {
+            let allCodes = styleCodes.split("-");
+            let codes = [];
+            for (let i = 0; i < allCodes.length; i++) {
+                let trimmedCode = allCodes[i].trim();
+                if (!loggedCodes[trimmedCode]) {
+                    codes.push(encodeURIComponent(trimmedCode));
+                }
+            }
+            if (!codes.length) {
+                return;
+            }
+            // Style codes are logged for debugging purposes
+            // We don't publish any tuner listings, since users may be working in stealth mode
+            const url = `https://mjstyle.kaetemi.be/670f1a28181e/submit?styleCodes=${codes.join("-")}`;
+            fetch(url, { method: 'POST' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // console.log('Success:', data);
+                    for (let i = 0; i < codes.length; i++) {
+                        loggedCodes[codes[i]] = true;
+                    }
+                })
+                .catch(error => {
+                    // console.error('Error:', error);
+                });
+        }
+
+        let styleCodeType = 'mj5.2';
+        function convertAndDisplay(codeType) {
+            decodedDataStore = [];
+            rowSums = new Array(128).fill(0);
+            maxAbsValue = 0;
+            let input = document.getElementById('base62Input').value.trim();
+
+            styleCodeType = codeType;
+            if (input.startsWith('raw-')) {
+                input = input.substring(4);
+                if (styleCodeType == 'mj5.2') {
+                    styleCodeType = 'mj5.2-raw';
+                }
+            }
+
+            const codes = input.split('-');
+            let resultsHTML = '';
+            for (let code of codes) {
+                const trimmedCode = code.trim();
+                const fullDecodedValue = base62Decode(trimmedCode);
+                const styleTunerBits = fullDecodedValue & ((BigInt(1) << BigInt(42)) - BigInt(1));
+                const modifiedValue = fullDecodedValue >> (BigInt(40) + BigInt(2));
+                const base3Result = base3Encode(modifiedValue);
+                const instructions = processBase3String(base3Result, rowSums);
+                const alternateCode = base62Encode((modifiedValue << BigInt(42)) | tunerCodes[styleCodeType]);
+
+                decodedDataStore.push({
+                    code: trimmedCode,
+                    styleTunerBits: styleTunerBits,
+                    base3Result: base3Result
+                });
+
+                const tunerCode = fauxBase64Encode(styleTunerBits);
+                const styleTunerUrl = `https://${tunerDomains[styleCodeType]}/code/${encodeURIComponent(trimmedCode)}`;
+                const originalTunerUrl = `https://${tunerDomains[styleCodeType]}/${tunerCode}`;
+                const alternateTunerUrl = `https://${tunerDomains[styleCodeType]}/code/${encodeURIComponent(alternateCode)}`;
+                // resultsHTML += `<p>Style Tuner: <a href="${styleTunerUrl}" target="_blank">${trimmedCode}</a><br>`;
+                resultsHTML += `<p>Style Tuner: <a href="${styleTunerUrl}" target="_blank">${trimmedCode}</a>`;
+                resultsHTML += ` (<a href="${originalTunerUrl}" target="_blank">${tunerCode}</a>)<br>`;
+                resultsHTML += `<small><i>Alternative: <a href="${alternateTunerUrl}" target="_blank">${alternateCode}</a></i></small></p>`;
+                resultsHTML += `<p>Base3 Result: ${base3Result}</p>`;
+                resultsHTML += `<pre>Instructions:\n${instructions.join('\n')}</pre>`;
+            }
+
+            // Calculate the largest absolute value in rowSums
+            maxAbsValue = Math.max(...rowSums.map(Math.abs));
+
+            // Re-encode and display the verification
+            const reEncoded = reEncodeData(decodedDataStore);
+            resultsHTML += `<p>Re-Encoded Verification: ${reEncoded}</p>`;
+
+            // Generate and display the inverted style code
+            const invertedStyleCode = reEncodeData(decodedDataStore, true);
+            resultsHTML += `<h2>Inverted Style</h2>`;
+            resultsHTML += `<p>${invertedStyleCode}</p>`;
+
+            if (maxAbsValue == 0) {
+                resultsHTML += `<h2>Null Style</h2>`;
+                resultsHTML += `<p style="color: red">The input style codes are an invalid style code combination, as they sum up to zero.</p>`;
+            } else if (codes.length > 1) {
+                let normalizedRowSums = normalizeArray(rowSums, maxAbsValue);
+                resultsHTML += `<h2>Compressed Styles</h2>`;
+                if (maxAbsValue < codes.length) {
+                    let scalePct = Math.round((codes.length / maxAbsValue) * 100);
+                    // resultsHTML += "<p style=\"color: gray;\"><i><b>Note:</b> The compressed style code vector has been scaled by a factor of " + scalePct + "%, and will apply more strongly than the original input style code.</i></p>";
+                    resultsHTML += `<p>Rescaling Factor: <b>${scalePct}%</b></p>`;
+                }
+                resultsHTML += `<h3>Round up</h3>`;
+                resultsHTML += `<p><ol reversed start="${maxAbsValue}">`;
+                for (let i = maxAbsValue; i > 0; i--) {
+                    let compressedBase3 = generateStyleCodes(scaleAndRoundArray(normalizedRowSums, i), i);
+                    // console.log(compressedBase3);
+                    let compressedStyle = encodeStyleCodes(decodedDataStore, compressedBase3);
+                    resultsHTML += `<li>${compressedStyle}</li>`;
+                }
+                resultsHTML += `</ol></p>`;
+                resultsHTML += `<h3>Round nearest</h3>`;
+                resultsHTML += `<p><ol reversed start="${maxAbsValue}">`;
+                for (let i = maxAbsValue; i > 0; i--) {
+                    let compressedBase3 = generateStyleCodes(scaleAndRoundArrayNearest(normalizedRowSums, i), i);
+                    // console.log(compressedBase3);
+                    let compressedStyle = encodeStyleCodes(decodedDataStore, compressedBase3);
+                    resultsHTML += `<li>${compressedStyle}</li>`;
+                }
+                resultsHTML += `</ol></p>`;
+            }
+
+            document.getElementById('results').innerHTML = resultsHTML;
+            document.getElementById('randomVariations').style.display = 'block';
+            document.getElementById('randomResults').innerHTML = "";
+            document.getElementById('infoFooter').style.display = 'block';
+
+            // console.log('Row Sums:', rowSums);
+            // console.log('Max Absolute Value:', maxAbsValue);
+            postToLog(input);
+        }
+
+        function reEncodeData(dataStore, invert = false) {
+            const res = dataStore.map(data => {
+                let base3Result = data.base3Result;
+                if (invert) {
+                    base3Result = invertBase3String(base3Result);
+                }
+
+                const base3Decoded = base3Decode(base3Result);
+                const reassembledValue = (base3Decoded << BigInt(42)) | data.styleTunerBits;
+                return base62Encode(reassembledValue);
+            }).join('-');
+            if (styleCodeType == "mj5.2-raw") {
+                return "raw-" + res;
+            }
+            return res;
+        }
+
+        function generateShuffledList(size) {
+            // Create an array from 0 to 127
+            let array = Array.from({ length: 128 }, (_, i) => i);
+
+            // Shuffle the array
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            }
+
+            // Trim the array to the specified size
+            return array.slice(0, size);
+        }
+
+        function randomRange(range) {
+            return ((Math.random() * 2.0) - 1.0) * range;
+        }
+
+        function generateVariation(normalizedRowSums, rowIndices, codeCount, adjustmentStrength) {
+            let roundOffset = (0.5 / codeCount) - Number.EPSILON;
+            let variedRowSums = [...normalizedRowSums]; // Duplicate the array
+
+            // Modify the specified indices
+            for (let index of rowIndices) {
+                if (index < variedRowSums.length) {
+                    // Apply the adjustment strength to the randomRange function
+                    variedRowSums[index] += randomRange(adjustmentStrength);
+                }
+            }
+            for (let i = 0; i < variedRowSums.length; ++i) {
+                variedRowSums[i] = variedRowSums[i] + randomRange(roundOffset);
+                variedRowSums[i] = Math.max(-1, Math.min(1, variedRowSums[i])); // Clamp the value between -1 and 1
+            }
+
+            let compressedBase3 = generateStyleCodes(scaleAndRoundArrayNearest(variedRowSums, codeCount), codeCount);
+            return encodeStyleCodes(decodedDataStore, compressedBase3);
+        }
+
+        function generateVariations() {
+            let normalizedRowSums = normalizeArray(rowSums, maxAbsValue || 1);
+            let compressionOption = parseInt(document.getElementById('compressionOption').value);
+            let roundingOption = document.getElementById('roundingOption').value;
+            let rowsToVary = parseInt(document.getElementById('rowsToVary').value);
+            let varyMode = document.getElementById('varyMode').value;
+            let codesToGenerate = parseInt(document.getElementById('codesToGenerate').value);
+            let adjustmentStrength = parseFloat(document.getElementById('adjustmentStrength').value) / 100; // Convert to a scale of 0 to 1
+            let displayCodesAs = document.getElementById('displayCodesAs').value;
+            let displayAsBatch = displayCodesAs == "batch";
+
+            let resultsHTML = "";
+            if (roundingOption == "up" || roundingOption == "nearest") {
+                let scaledArray = [];
+                if (roundingOption == "up") {
+                    scaledArray = scaleAndRoundArray(normalizedRowSums, compressionOption);
+                } else {
+                    scaledArray = scaleAndRoundArrayNearest(normalizedRowSums, compressionOption);
+                }
+                normalizedRowSums = normalizeArray(scaledArray, compressionOption);
+                resultsHTML += "<h3>Compressed Input</h3>";
+                let compressedBase3 = generateStyleCodes(scaledArray, compressionOption);
+                let compressedStyle = encodeStyleCodes(decodedDataStore, compressedBase3);
+                resultsHTML += `${compressedStyle}`;
+            }
+
+            let rowIndices = generateShuffledList(rowsToVary);
+
+            resultsHTML += "<h3>Generated Variations</h3><il>";
+            if (displayAsBatch) {
+                resultsHTML += "<pre>--style { ";
+            }
+            for (let i = 0; i < codesToGenerate; ++i) {
+                if (varyMode == 'individual') {
+                    rowIndices = generateShuffledList(rowsToVary);
+                }
+                let generatedStyle = generateVariation(normalizedRowSums, rowIndices, compressionOption, adjustmentStrength);
+                if (displayAsBatch) {
+                    if (i != 0) {
+                        resultsHTML += ", ";
+                    }
+                    resultsHTML += generatedStyle;
+                } else {
+                    resultsHTML += `<li>${generatedStyle}</li>`;
+                }
+            }
+            if (displayAsBatch) {
+                resultsHTML += " }</pre>";
+            }
+
+            resultsHTML += "</il>";
+            let randomResultsElement = document.getElementById('randomResults');
+            randomResultsElement.innerHTML = resultsHTML;
+            randomResultsElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Style Decoder for Midjourney (V1) &mdash; <small>Revision 7</small></h1>
+    <input type="text" id="base62Input" placeholder="Enter style code(s)">
+    <button onclick="convertAndDisplay('mj5.2')">Decode MJ</button>
+    <button onclick="convertAndDisplay('niji5')">Decode Niji</button>
+    <div id="results"></div>
+    <div id="randomVariations" style="display: none;">
+        <h2>Generate Random Variations</h2>
+        <!-- Tip: Pre-round random with adjust 0 is like random compression -->
+        <label for="compressionOption">Compress or Expand:</label>
+        <select id="compressionOption">
+            <!-- <option value="as-is">Use input code(s) as-is</option> -->
+            <option value="1">Compress or expand to 1 code</option>
+            <option value="2">Compress or expand to 2 codes</option>
+            <option value="3" selected>Compress or expand to 3 codes</option>
+            <option value="4">Compress or expand to 4 codes</option>
+            <option value="5">Compress or expand to 5 codes</option>
+            <option value="6">Compress or expand to 6 codes</option>
+        </select>
+        <br>
+        <label for="roundingOption">Pre-rounding:</label>
+        <select id="roundingOption">
+            <option value="up">Up (more similar results)</option>
+            <option value="nearest" selected>Nearest (more similar results)</option>
+            <option value="random">Random (no pre-rounding)</option>
+        </select>
+        <br>
+        <label for="rowsToVary">Rows to Vary:</label>
+        <input type="number" id="rowsToVary" value="8" min="1" max="128">
+        <br>
+        <label for="varyMode">Vary mode:</label>
+        <select id="varyMode">
+            <option value="individual" selected>Individual (each variation randomizes a different set of rows)</option>
+            <option value="batch">Batch (same set of rows are randomized in each variation)</option>
+        </select>
+        <br>
+        <label for="adjustmentStrength">Adjustment Strength (%):</label>
+        <input type="number" id="adjustmentStrength" value="50" min="0" max="100">
+        <br>
+        <label for="codesToGenerate">Codes to Generate:</label>
+        <input type="number" id="codesToGenerate" value="8" min="1" max="32">
+        <br>
+        <label for="displayCodesAs">Display as:</label>
+        <select id="displayCodesAs">
+            <option value="list">List</option>
+            <option value="batch">Batch (--style { 1, 2, 3, ... })</option>
+        </select>
+        <br>
+        <button onclick="generateVariations()">Generate</button>
+    </div>
+    <div id="randomResults"></div>
+    <div id="infoFooter" style="display: none;">
+        <hr>
+        <a href="https://github.com/sponsors/kaetemi" rel="noopener" target="_blank">Buy me a coffee on GitHub</a>
+    </div>
+</body>
+
+</html>

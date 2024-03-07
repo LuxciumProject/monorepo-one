@@ -1,0 +1,11 @@
+mv luxcium_* lux_mj
+mv *.webp webp_
+mv *.png png_
+mv *.jpg jpg_
+mv *.PNG png_2
+mv *.JPG jpg_2
+mv *.jpeg jpeg_
+mv luxcium_* lux_mj
+mv midjourney_*11-23*.zip /home/luxcium/seagate/MJ-backups/2023/novembre/23
+
+sam-09-dec-2023-downloads

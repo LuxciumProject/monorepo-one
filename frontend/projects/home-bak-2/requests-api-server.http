@@ -1,0 +1,19 @@
+### List all the files in the current directory
+    GET http://localhost:3000/home
+
+
+### Create a new message
+    POST http://localhost:3000/home
+    Content-Type: application/json
+
+    {
+        "content": "null string"
+    }
+
+### Get by ID
+    GET http://localhost:3000/home/id=1234?abc=123&def=456
+    Content-Type: application/json
+
+    {
+        "content": "Hello World"
+    }

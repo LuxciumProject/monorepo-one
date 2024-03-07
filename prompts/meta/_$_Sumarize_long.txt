@@ -1,0 +1,26 @@
+1) Summarize for you and me such that when you will craft the procedure to the other AI you will be able to reorganize the instruction in a more linear manner one step then the other... as an example if the AI is ask to create summary one then summary 2 then an analysis and then a conclusion it would be requested in the linear order
+
+2) craft a bullet pont like procedure to an other AI using imperative verbal form, avoiding infinitive verbal form as much as you can, keeping each ideas that exist condensing them keeping the essence of each requests, merging each repetitive concepts into one or 2 points, adapt yourself each time the kind of request may be requiring a different structure. sometimes it may need to label the order of request using 1), 2), 3), other time it may be A), B) C)...
+
+3) request the next chunk of text reiterating the instruction to keep them in scope such that you can follow the same instruction after each interaction ready to take the next instruction set to be rephrased
+
+««««
+
+»»»»
+
+Summarize the text for our consumption you and me keeping all ideas:
+
+Extract the ideas from each message.
+Merge together repetitive text and concepts into one or 2 points.
+Condense the information into essential points.
+
+Craft a bullet-point procedure whet it is applicable or use short paragraphs or  use1), 2), 3), other time it may be A), B) C)...
+
+Use imperative verbals to provide clear instructions.
+Address the AI Assistant directly with the instructions.
+Merge similar instructions to avoid repetition.
+Request the text in a specific format:
+
+Ask for the text to be provided in a way that prompts the exact method to process it.
+Quote the process we're following before each chunk of text.
+Emphasize that the instructions are not tailored for me personally, but for another AI Assistant.

@@ -1,0 +1,245 @@
+Mastering JavaScript Functional Programming - Third Edition
+
+mastering-javascript-functional-programming-third-edition
+
+Federico Kereki
+
+Published by Packt Publishing
+JavaScript
+
+
+Chapter 1: Becoming Functional – Several Questions
+
+- What is functional programming?:
+Theory versus practice
+A different way of thinking
+FP and other programming paradigms
+What FP is not
+
+- Why use FP?:
+What we need
+What we get
+Not all is gold
+
+- Is TypeScript functional?:
+TypeScript as a tool
+Going functional with TypeScript
+Key features of TypeScript
+
+- How do we work with TypeScript?:
+Using transpilers
+Working online
+A step further – TypeScript
+Testing
+
+Chapter 2: Thinking Functionally – A First Example
+queue
+
+- Our problem – doing something only once:
+Solution 1 – hoping for the best!
+Solution 2 – using a global flag
+Solution 3 – removing the handler
+Solution 4 – changing the handler
+Solution 5 – disabling the button
+Solution 6 – redefining the handler
+Solution 7 – using a local flag
+
+- A functional solution to our problem:
+A higher-order solution
+Testing the solution manually
+Testing the solution automatically
+Producing an even better solution
+
+
+Chapter 3: Starting Out With Functions – A Core Concept
+queue
+
+- All about functions:
+Of lambdas and functions
+Arrow functions – the modern way
+Functions as objects
+
+- Using functions in FP ways:
+Injection – sorting it out
+Callbacks and promises
+Continuation-passing style
+Polyfills
+Stubbing
+Immediate invocation (IIFE)
+
+
+Chapter 4: Behaving Properly – Pure Functions
+
+- Pure functions:
+Referential transparency
+Side effects
+Advantages of pure functions
+
+- Impure functions:
+Avoiding impure functions
+Is your function pure?
+
+- Testing – pure versus impure:
+Testing pure functions
+Testing purified functions
+Testing impure functions
+
+
+Chapter 5: Programming Declaratively – A Better Style
+
+- Transformations:
+Reducing an array to a value
+Applying an operation – map()
+Dealing with arrays of arrays
+More general looping
+
+- Logical HOFs:
+Filtering an array
+Searching an array
+Higher-level predicates – every() and some()
+Checking negatives – none()
+
+- Working with async functions:
+Some strange behaviors
+Async-ready looping
+
+- Working with parallel functions:
+Unresponsive pages
+A frontend worker
+A backend worker
+Workers, FP style
+Long-living pooled workers
+
+
+Chapter 6: Producing Functions – Higher-Order Functions
+
+- Wrapping functions – keeping behavior:
+Logging
+Timing functions
+Memoizing functions
+
+- Altering a function’s behavior:
+Doing things once, revisited
+Logically negating a function
+Inverting the results
+Arity changing
+Throttling and debouncing
+
+- Changing functions in other ways:
+Turning operations into functions
+Turning functions into promises
+Getting a property from an object
+Demethodizing – turning methods into functions
+Methodizing – turning functions into methods
+Finding the optimum
+
+
+Chapter 7: Transforming Functions – Currying And Partial Application
+A bit of theory
+
+- Currying:
+Dealing with many parameters
+Currying by hand
+Currying with bind()
+
+- Partial application:
+Partial application with arrow functions
+Partial application with closures
+
+- Partial currying:
+Partial currying with bind()
+Partial currying with closures
+
+- Final thoughts:
+Variable number of parameters
+Parameter order
+Being functional
+
+
+Chapter 8: Connecting Functions – Pipelining, Composition, And More
+
+- Pipelining:
+Piping in Unix/Linux
+Revisiting an example
+Creating pipelines
+Debugging pipelines
+Pointfree style
+
+- Chaining and fluent interfaces:
+An example of fluent APIs
+Chaining method calls
+
+- Composing:
+Some examples of composition
+Composing with higher-order functions
+
+- Transducing:
+Composing reducers
+Generalizing for all reducers
+
+- Testing connected functions:
+Testing pipelined functions
+Testing composed functions
+Testing chained functions
+Testing transduced functions
+
+
+Chapter 9: Designing Functions – Recursion
+
+- Using recursion:
+Thinking recursively
+Higher-order functions revisited
+Searching and backtracking
+
+- Mutual recursion:
+Odds and evens
+Doing arithmetic
+
+- Recursion techniques:
+Tail call optimization
+Continuation-passing style
+Trampolines and thunks
+Recursion elimination
+
+
+Chapter 10: Ensuring Purity – Immutability
+
+- Going the straightforward TypeScript way:
+Mutator functions
+Constants
+Freezing
+Cloning and mutating
+Getters and setters
+Lenses
+Prisms
+
+- Creating persistent data structures:
+Working with lists
+Updating objects
+A final caveat
+
+
+Chapter 11: Implementing Design Patterns – The Functional Way
+queue
+Understanding design patterns
+Show More Items
+Object-oriented design patterns
+Show More Items
+Functional design patterns
+
+
+Chapter 12: Building Better Containers – Functional Data Types
+queue
+
+- Specifying data types:
+Signatures for functions
+Other data type options
+
+- Building containers:
+Extending current data types
+Containers and functors
+Monads
+
+- Functions as data structures:
+Binary trees in Haskell
+Functions as binary trees

@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "development"
+    ],
+    "ignoredUrls": [
+        {
+            "domain": ".*",
+            "rules": [
+                "no-inline-styles"
+            ]
+        }
+    ]
+}

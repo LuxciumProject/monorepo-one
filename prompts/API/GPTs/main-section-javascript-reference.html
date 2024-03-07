@@ -1,0 +1,643 @@
+<main id="content" class="main-content  ">
+  <article class="main-page-content" lang="en-US">
+    <header>
+      <h1>JavaScript reference</h1>
+    </header>
+    <div class="section-content">
+      <p>The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is
+        described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title
+        "JavaScript reference").</p>
+      <p>The JavaScript language is intended to be used within some larger environment, be it a browser, server-side
+        scripts, or similar. For the most part, this reference attempts to be environment-agnostic and does not target a
+        web browser environment.</p>
+      <p>If you are new to JavaScript, start with the <a href="/en-US/docs/Web/JavaScript/Guide">guide</a>. Once you
+        have a firm grasp of the fundamentals, you can use the reference to get more details on individual objects and
+        language constructs.</p>
+    </div>
+    <section aria-labelledby="built-ins">
+      <h2 id="built-ins"><a href="#built-ins">Built-ins</a></h2>
+      <div class="section-content">
+        <p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">JavaScript standard built-in objects</a>, along
+          with their methods and properties.</p>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="value_properties">
+      <h3 id="value_properties"><a href="#value_properties">Value properties</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis"><code>globalThis</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="function_properties">
+      <h3 id="function_properties"><a href="#function_properties">Function properties</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval"><code>eval()</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite"><code>isFinite()</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN"><code>isNaN()</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat"><code>parseFloat()</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"><code>parseInt()</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI"><code>decodeURI()</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent"><code>decodeURIComponent()</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI"><code>encodeURI()</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent"><code>encodeURIComponent()</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape"><code>escape()</code></a> <abbr
+              class="icon icon-deprecated" title="Deprecated. Not for use in new websites.">
+              <span class="visually-hidden">Deprecated</span>
+            </abbr></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape"><code>unescape()</code></a> <abbr
+              class="icon icon-deprecated" title="Deprecated. Not for use in new websites.">
+              <span class="visually-hidden">Deprecated</span>
+            </abbr></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="fundamental_objects">
+      <h3 id="fundamental_objects"><a href="#fundamental_objects">Fundamental objects</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="error_objects">
+      <h3 id="error_objects"><a href="#error_objects">Error objects</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"><code>Error</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError"><code>AggregateError</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError"><code>EvalError</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError"><code>RangeError</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError"><code>ReferenceError</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError"><code>URIError</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError"><code>InternalError</code></a>
+            <abbr class="icon icon-nonstandard" title="Non-standard. Check cross-browser support before using.">
+              <span class="visually-hidden">Non-standard</span>
+            </abbr>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="numbers_and_dates">
+      <h3 id="numbers_and_dates"><a href="#numbers_and_dates">Numbers and dates</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt"><code>BigInt</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="text_processing">
+      <h3 id="text_processing"><a href="#text_processing">Text processing</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="indexed_collections">
+      <h3 id="indexed_collections"><a href="#indexed_collections">Indexed collections</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array"><code>Int8Array</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray"><code>Uint8ClampedArray</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array"><code>Int16Array</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array"><code>Uint16Array</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array"><code>Uint32Array</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array"><code>BigInt64Array</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array"><code>BigUint64Array</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array"><code>Float32Array</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array"><code>Float64Array</code></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="keyed_collections">
+      <h3 id="keyed_collections"><a href="#keyed_collections">Keyed collections</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><code>Map</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><code>Set</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap"><code>WeakMap</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet"><code>WeakSet</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="structured_data">
+      <h3 id="structured_data"><a href="#structured_data">Structured data</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer"><code>SharedArrayBuffer</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView"><code>DataView</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics"><code>Atomics</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"><code>JSON</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="managing_memory">
+      <h3 id="managing_memory"><a href="#managing_memory">Managing memory</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef"><code>WeakRef</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry"><code>FinalizationRegistry</code></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="control_abstraction_objects">
+      <h3 id="control_abstraction_objects"><a href="#control_abstraction_objects">Control abstraction objects</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><code>Iterator</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator"><code>AsyncIterator</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction"><code>GeneratorFunction</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction"><code>AsyncGeneratorFunction</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator"><code>Generator</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator"><code>AsyncGenerator</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction"><code>AsyncFunction</code></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="reflection">
+      <h3 id="reflection"><a href="#reflection">Reflection</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect"><code>Reflect</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy"><code>Proxy</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="internationalization">
+      <h3 id="internationalization"><a href="#internationalization">Internationalization</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"><code>Intl</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator"><code>Intl.Collator</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"><code>Intl.DateTimeFormat</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames"><code>Intl.DisplayNames</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat"><code>Intl.DurationFormat</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat"><code>Intl.ListFormat</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale"><code>Intl.Locale</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat"><code>Intl.NumberFormat</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules"><code>Intl.PluralRules</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat"><code>Intl.RelativeTimeFormat</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter"><code>Intl.Segmenter</code></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section aria-labelledby="statements">
+      <h2 id="statements"><a href="#statements">Statements</a></h2>
+      <div class="section-content">
+        <p><a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements and declarations</a></p>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="control_flow">
+      <h3 id="control_flow"><a href="#control_flow">Control flow</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break"><code>break</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue"><code>continue</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/throw"><code>throw</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if...else</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>try...catch</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="declaring_variables">
+      <h3 id="declaring_variables"><a href="#declaring_variables">Declaring variables</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="functions_and_classes">
+      <h3 id="functions_and_classes"><a href="#functions_and_classes">Functions and classes</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*"><code>function*</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async function</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function*"><code>async function*</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="iterations">
+      <h3 id="iterations"><a href="#iterations">Iterations</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while"><code>do...while</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for"><code>for</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of"><code>for await...of</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while"><code>while</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="others">
+      <h3 id="others"><a href="#others">Others</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/Empty">Empty</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/block">Block</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement">Expression statement</a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger"><code>debugger</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export"><code>export</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import"><code>import</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">label</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with"><code>with</code></a> <abbr
+              class="icon icon-deprecated" title="Deprecated. Not for use in new websites.">
+              <span class="visually-hidden">Deprecated</span>
+            </abbr></li>
+        </ul>
+      </div>
+    </section>
+    <section aria-labelledby="expressions_and_operators">
+      <h2 id="expressions_and_operators"><a href="#expressions_and_operators">Expressions and operators</a></h2>
+      <div class="section-content">
+        <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators">JavaScript expressions and operators</a>.</p>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="primary_expressions">
+      <h3 id="primary_expressions"><a href="#primary_expressions">Primary expressions</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals">Literals</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>[]</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer"><code>{}</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/function"><code>function</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/function*"><code>function*</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function"><code>async function</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function*"><code>async function*</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><code>/ab+c/i</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals"><code>`string`</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Grouping"><code>( )</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="left-hand-side_expressions">
+      <h3 id="left-hand-side_expressions"><a href="#left-hand-side_expressions">Left-hand-side expressions</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors">Property accessors</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining"><code>?.</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target"><code>new.target</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/import.meta"><code>import.meta</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/import"><code>import()</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="increment_and_decrement">
+      <h3 id="increment_and_decrement"><a href="#increment_and_decrement">Increment and decrement</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment"><code>A++</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement"><code>A--</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment"><code>++A</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement"><code>--A</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="unary_operators">
+      <h3 id="unary_operators"><a href="#unary_operators">Unary operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus"><code>+</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation"><code>-</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT"><code>~</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT"><code>!</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await"><code>await</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="arithmetic_operators">
+      <h3 id="arithmetic_operators"><a href="#arithmetic_operators">Arithmetic operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation"><code>**</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication"><code>*</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division"><code>/</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder"><code>%</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition"><code>+</code></a> (Plus)</li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction"><code>-</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="relational_operators">
+      <h3 id="relational_operators"><a href="#relational_operators">Relational operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than"><code>&lt;</code></a> (Less than)</li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than"><code>&gt;</code></a> (Greater than)
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal"><code>&lt;=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal"><code>&gt;=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="equality_operators">
+      <h3 id="equality_operators"><a href="#equality_operators">Equality operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality"><code>==</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality"><code>!=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality"><code>===</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality"><code>!==</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="bitwise_shift_operators">
+      <h3 id="bitwise_shift_operators"><a href="#bitwise_shift_operators">Bitwise shift operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift"><code>&lt;&lt;</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift"><code>&gt;&gt;</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift"><code>&gt;&gt;&gt;</code></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="binary_bitwise_operators">
+      <h3 id="binary_bitwise_operators"><a href="#binary_bitwise_operators">Binary bitwise operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND"><code>&amp;</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR"><code>|</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR"><code>^</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="binary_logical_operators">
+      <h3 id="binary_logical_operators"><a href="#binary_logical_operators">Binary logical operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND"><code>&amp;&amp;</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR"><code>||</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"><code>??</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="conditional_ternary_operator">
+      <h3 id="conditional_ternary_operator"><a href="#conditional_ternary_operator">Conditional (ternary) operator</a>
+      </h3>
+      <div class="section-content">
+        <ul>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"><code>(condition ? ifTrue : ifFalse)</code></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="assignment_operators">
+      <h3 id="assignment_operators"><a href="#assignment_operators">Assignment operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment"><code>=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment"><code>*=</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment"><code>/=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment"><code>%=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment"><code>+=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment"><code>-=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment"><code>&lt;&lt;=</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment"><code>&gt;&gt;=</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment"><code>&gt;&gt;&gt;=</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment"><code>&amp;=</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment"><code>^=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment"><code>|=</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment"><code>**=</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment"><code>&amp;&amp;=</code></a>
+          </li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment"><code>||=</code></a></li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment"><code>??=</code></a>
+          </li>
+          <li><a
+              href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"><code>[a, b] = arr</code>,
+              <code>{ a, b } = obj</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="yield_operators">
+      <h3 id="yield_operators"><a href="#yield_operators">Yield operators</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield"><code>yield</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield*"><code>yield*</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="spread_syntax">
+      <h3 id="spread_syntax"><a href="#spread_syntax">Spread syntax</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"><code>...obj</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- :: -->
+    <section aria-labelledby="comma_operator">
+      <h3 id="comma_operator"><a href="#comma_operator">Comma operator</a></h3>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator"><code>,</code></a></li>
+        </ul>
+      </div>
+    </section>
+    <section aria-labelledby="functions">
+      <h2 id="functions"><a href="#functions">Functions</a></h2>
+      <div class="section-content">
+        <p><a href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript functions.</a></p>
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Functions</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default parameters</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest parameters</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">Method definitions</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a></li>
+        </ul>
+      </div>
+    </section>
+    <section aria-labelledby="classes">
+      <h2 id="classes"><a href="#classes">Classes</a></h2>
+      <div class="section-content">
+        <p><a href="/en-US/docs/Web/JavaScript/Reference/Classes">JavaScript classes.</a></p>
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor"><code>constructor</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends"><code>extends</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties">Private properties</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public class fields</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/static"><code>static</code></a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks">Static initialization
+              blocks</a></li>
+        </ul>
+      </div>
+    </section>
+    <section aria-labelledby="additional_reference_pages">
+      <h2 id="additional_reference_pages"><a href="#additional_reference_pages">Additional reference pages</a></h2>
+      <div class="section-content">
+        <ul>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Trailing_commas">Trailing commas</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors">Errors</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></li>
+          <li><a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">Deprecated features</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <aside class="metadata">
+      <div class="metadata-content-container">
+        <div id="on-github" class="on-github">
+          <h3>Found a content problem with this page?</h3>
+          <ul>
+            <li><a href="https://github.com/mdn/content/edit/main/files/en-us/web/javascript/reference/index.md"
+                title="This will take you to GitHub, where you'll need to sign in first." target="_blank"
+                rel="noopener noreferrer">Edit the page on GitHub</a>.</li>
+            <li><a
+                href="https://github.com/mdn/content/issues/new?template=page-report.yml&amp;mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference&amp;metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fjavascript%2Freference%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fjavascript%2Freference%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F41cddfdaeed4a73fb8234c332150df8e54df31e9%0A*+Document+last+modified%3A+2023-11-08T04%3A45%3A53.000Z%0A%0A%3C%2Fdetails%3E"
+                title="This will take you to GitHub to file a new issue." target="_blank"
+                rel="noopener noreferrer">Report the content issue</a>.</li>
+            <li><a href="https://github.com/mdn/content/blob/main/files/en-us/web/javascript/reference/index.md?plain=1"
+                title="Folder: en-us/web/javascript/reference (Opens in a new tab)" target="_blank"
+                rel="noopener noreferrer">View the source on GitHub</a>.</li>
+          </ul>Want to get more involved?<!-- --> <a href="https://github.com/mdn/content/blob/main/CONTRIBUTING.md"
+            title="This will take you to our contribution guidelines on GitHub." target="_blank"
+            rel="noopener noreferrer">Learn how to contribute</a>.
+        </div>
+        <p class="last-modified-date">This page was last modified on<!-- --> <time
+            datetime="2023-11-08T04:45:53.000Z">Nov 7, 2023</time> by<!-- --> <a
+            href="/en-US/docs/Web/JavaScript/Reference/contributors.txt">MDN contributors</a>.</p>
+      </div>
+    </aside>
+  </article>
+</main>

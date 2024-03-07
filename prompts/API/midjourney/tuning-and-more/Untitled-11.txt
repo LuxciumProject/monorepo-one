@@ -1,0 +1,7 @@
+/imagine prompt:photo of a person wearing a hoodie::8
+a boy is wearing a hoodie::2
+a boy is wearing a blue hoodie::1
+a boy is wearing a red hoodie::1
+a girl is wearing a hoodie::2
+a girl is wearing a blue hoodie::1
+a girl is wearing a red hoodie::1

@@ -1,0 +1,310 @@
+	Index Entry	 	Section
+-
+-array-value-, completion context	 	20.2.2 Autoloaded files
+-assign-parameter-, completion context	 	20.2.2 Autoloaded files
+-brace-parameter-, completion context	 	20.2.2 Autoloaded files
+-command-, completion context	 	20.2.2 Autoloaded files
+-condition-, completion context	 	20.2.2 Autoloaded files
+-default-, completion context	 	20.2.2 Autoloaded files
+-equal-, completion context	 	20.2.2 Autoloaded files
+-first-, completion context	 	20.2.2 Autoloaded files
+-math-, completion context	 	20.2.2 Autoloaded files
+-parameter-, completion context	 	20.2.2 Autoloaded files
+-redirect-, completion context	 	20.2.2 Autoloaded files
+-subscript-, completion context	 	20.2.2 Autoloaded files
+-tilde-, completion context	 	20.2.2 Autoloaded files
+-value-, completion context	 	20.2.2 Autoloaded files
+A
+accept-exact, completion style	 	20.3.3 Standard Styles
+accept-exact-dirs, completion style	 	20.3.3 Standard Styles
+accounts, completion tag	 	20.3.2 Standard Tags
+actionformats	 	26.5.2 Configuration
+add-space, completion style	 	20.3.3 Standard Styles
+all-expansions, completion tag	 	20.3.2 Standard Tags
+all-files, completion tag	 	20.3.2 Standard Tags
+ambiguous, completion style	 	20.3.3 Standard Styles
+arguments, completion tag	 	20.3.2 Standard Tags
+arrays, completion tag	 	20.3.2 Standard Tags
+assign-list, completion style	 	20.3.3 Standard Styles
+association-keys, completion tag	 	20.3.2 Standard Tags
+auto-description, completion style	 	20.3.3 Standard Styles
+avoid-completer, completion style	 	20.3.3 Standard Styles
+B
+bookmarks, completion tag	 	20.3.2 Standard Tags
+branchformat	 	26.5.2 Configuration
+break-keys, widget style	 	26.7.3 Styles
+builtins, completion tag	 	20.3.2 Standard Tags
+C
+cache-path, completion style	 	20.3.3 Standard Styles
+cache-policy, completion style	 	20.3.3 Standard Styles
+calendar-file	 	23.4 Styles
+call-command, completion style	 	20.3.3 Standard Styles
+characters, completion tag	 	20.3.2 Standard Tags
+check-for-changes	 	26.5.2 Configuration
+check-for-staged-changes	 	26.5.2 Configuration
+chpwd, zftp style	 	25.4.1 Configuration
+colormapids, completion tag	 	20.3.2 Standard Tags
+colors, completion tag	 	20.3.2 Standard Tags
+command	 	26.5.2 Configuration
+command, completion style	 	20.3.3 Standard Styles
+command-path, completion style	 	20.3.3 Standard Styles
+commands, completion style	 	20.3.3 Standard Styles
+commands, completion tag	 	20.3.2 Standard Tags
+complete, completion style	 	20.3.3 Standard Styles
+complete-options, completion style	 	20.3.3 Standard Styles
+completer, completion style	 	20.3.3 Standard Styles
+completer, completion style	 	26.7.3 Styles
+condition, completion style	 	20.3.3 Standard Styles
+contexts, completion tag	 	20.3.2 Standard Tags
+corrections, completion tag	 	20.3.2 Standard Tags
+current-shell, MIME style	 	26.9 MIME Functions
+cursor, completion style	 	26.7.3 Styles
+cursors, completion tag	 	20.3.2 Standard Tags
+D
+date-format	 	23.4 Styles
+debug	 	26.5.2 Configuration
+default, completion tag	 	20.3.2 Standard Tags
+delimiters, completion style	 	20.3.3 Standard Styles
+descriptions, completion tag	 	20.3.2 Standard Tags
+devices, completion tag	 	20.3.2 Standard Tags
+directories, completion tag	 	20.3.2 Standard Tags
+directory-stack, completion tag	 	20.3.2 Standard Tags
+disable	 	26.5.2 Configuration
+disable-patterns	 	26.5.2 Configuration
+disabled, completion style	 	20.3.3 Standard Styles
+disown, MIME style	 	26.9 MIME Functions
+displays, completion tag	 	20.3.2 Standard Tags
+domains, completion style	 	20.3.3 Standard Styles
+domains, completion tag	 	20.3.2 Standard Tags
+done-file	 	23.4 Styles
+E
+email-*, completion tag	 	20.3.2 Standard Tags
+enable	 	26.5.2 Configuration
+environ, completion style	 	20.3.3 Standard Styles
+execute-as-is, MIME style	 	26.9 MIME Functions
+execute-never, MIME style	 	26.9 MIME Functions
+expand, completion style	 	20.3.3 Standard Styles
+expansions, completion tag	 	20.3.2 Standard Tags
+extensions, completion tag	 	20.3.2 Standard Tags
+extra-verbose, completion style	 	20.3.3 Standard Styles
+F
+fake, completion style	 	20.3.3 Standard Styles
+fake-always, completion style	 	20.3.3 Standard Styles
+fake-files, completion style	 	20.3.3 Standard Styles
+fake-parameters, completion style	 	20.3.3 Standard Styles
+file-descriptors, completion tag	 	20.3.2 Standard Tags
+file-list, completion style	 	20.3.3 Standard Styles
+file-path, MIME style	 	26.9 MIME Functions
+file-patterns, completion style	 	20.3.3 Standard Styles
+file-sort, completion style	 	20.3.3 Standard Styles
+file-split-chars, completion style	 	20.3.3 Standard Styles
+files, completion tag	 	20.3.2 Standard Tags
+filter, completion style	 	20.3.3 Standard Styles
+find-file-in-path, MIME style	 	26.9 MIME Functions
+flags, MIME style	 	26.9 MIME Functions
+fonts, completion tag	 	20.3.2 Standard Tags
+force-list, completion style	 	20.3.3 Standard Styles
+format, completion style	 	20.3.3 Standard Styles
+formats	 	26.5.2 Configuration
+fstypes, completion tag	 	20.3.2 Standard Tags
+functions, completion tag	 	20.3.2 Standard Tags
+G
+gain-privileges, completion style	 	20.3.3 Standard Styles
+get-bookmarks	 	26.5.2 Configuration
+get-mq	 	26.5.2 Configuration
+get-revision	 	26.5.2 Configuration
+get-unapplied	 	26.5.2 Configuration
+glob, completion style	 	20.3.3 Standard Styles
+global, completion style	 	20.3.3 Standard Styles
+globbed-files, completion tag	 	20.3.2 Standard Tags
+group-name, completion style	 	20.3.3 Standard Styles
+group-order, completion style	 	20.3.3 Standard Styles
+groups, completion style	 	20.3.3 Standard Styles
+groups, completion tag	 	20.3.2 Standard Tags
+H
+handle-nonexistent, MIME style	 	26.9 MIME Functions
+handler, MIME style	 	26.9 MIME Functions
+hgrevformat	 	26.5.2 Configuration
+hidden, completion style	 	20.3.3 Standard Styles
+history-words, completion tag	 	20.3.2 Standard Tags
+hooks	 	26.5.2 Configuration
+hosts, completion style	 	20.3.3 Standard Styles
+hosts, completion tag	 	20.3.2 Standard Tags
+hosts-ports, completion style	 	20.3.3 Standard Styles
+I
+ignore-line, completion style	 	20.3.3 Standard Styles
+ignore-parents, completion style	 	20.3.3 Standard Styles
+ignored-patterns, completion style	 	20.3.3 Standard Styles
+indexes, completion tag	 	20.3.2 Standard Tags
+insert, completion style	 	20.3.3 Standard Styles
+insert-ids, completion style	 	20.3.3 Standard Styles
+insert-sections, completion style	 	20.3.3 Standard Styles
+insert-tab, completion style	 	20.3.3 Standard Styles
+insert-tab, completion style	 	26.12.2 Styles
+insert-unambiguous, completion style	 	20.3.3 Standard Styles
+interfaces, completion tag	 	20.3.2 Standard Tags
+J
+jobs, completion tag	 	20.3.2 Standard Tags
+K
+keep-prefix, completion style	 	20.3.3 Standard Styles
+keymaps, completion tag	 	20.3.2 Standard Tags
+keysyms, completion tag	 	20.3.2 Standard Tags
+known-hosts-files	 	20.3.3 Standard Styles
+L
+last-prompt, completion style	 	20.3.3 Standard Styles
+libraries, completion tag	 	20.3.2 Standard Tags
+limits, completion tag	 	20.3.2 Standard Tags
+list, completion style	 	20.3.3 Standard Styles
+list, widget style	 	26.7.3 Styles
+list-colors, completion style	 	20.3.3 Standard Styles
+list-dirs-first, completion style	 	20.3.3 Standard Styles
+list-grouped, completion style	 	20.3.3 Standard Styles
+list-packed, completion style	 	20.3.3 Standard Styles
+list-prompt, completion style	 	20.3.3 Standard Styles
+list-rows-first, completion style	 	20.3.3 Standard Styles
+list-separator, completion style	 	20.3.3 Standard Styles
+list-suffixes, completion style	 	20.3.3 Standard Styles
+local, completion style	 	20.3.3 Standard Styles
+local-directories, completion tag	 	20.3.2 Standard Tags
+M
+mail-directory, completion style	 	20.3.3 Standard Styles
+mailboxes, completion tag	 	20.3.2 Standard Tags
+mailcap, MIME style	 	26.9 MIME Functions
+mailcap-prio-flags, MIME style	 	26.9 MIME Functions
+mailcap-priorities, MIME style	 	26.9 MIME Functions
+manuals, completion tag	 	20.3.2 Standard Tags
+maps, completion tag	 	20.3.2 Standard Tags
+match, widget style	 	26.7.3 Styles
+match-original, completion style	 	20.3.3 Standard Styles
+matcher, completion style	 	20.3.3 Standard Styles
+matcher-list, completion style	 	20.3.3 Standard Styles
+max-errors, completion style	 	20.3.3 Standard Styles
+max-exports	 	26.5.2 Configuration
+max-matches-width, completion style	 	20.3.3 Standard Styles
+menu, completion style	 	20.3.3 Standard Styles
+messages, completion tag	 	20.3.2 Standard Tags
+mime-types, MIME style	 	26.9 MIME Functions
+modifiers, completion tag	 	20.3.2 Standard Tags
+modules, completion tag	 	20.3.2 Standard Tags
+muttrc, completion style	 	20.3.3 Standard Styles
+my-accounts, completion tag	 	20.3.2 Standard Tags
+N
+named-directories, completion tag	 	20.3.2 Standard Tags
+names, completion tag	 	20.3.2 Standard Tags
+never-background, MIME style	 	26.9 MIME Functions
+newsgroups, completion tag	 	20.3.2 Standard Tags
+nicknames, completion tag	 	20.3.2 Standard Tags
+nopatch-format	 	26.5.2 Configuration
+numbers, completion style	 	20.3.3 Standard Styles
+nvcsformats	 	26.5.2 Configuration
+O
+old-list, completion style	 	20.3.3 Standard Styles
+old-matches, completion style	 	20.3.3 Standard Styles
+old-menu, completion style	 	20.3.3 Standard Styles
+options, completion tag	 	20.3.2 Standard Tags
+original, completion style	 	20.3.3 Standard Styles
+original, completion tag	 	20.3.2 Standard Tags
+other-accounts, completion tag	 	20.3.2 Standard Tags
+P
+packages, completion tag	 	20.3.2 Standard Tags
+packageset, completion style	 	20.3.3 Standard Styles
+pager, MIME style	 	26.9 MIME Functions
+pager, nslookup style	 	26.12.2 Styles
+parameters, completion tag	 	20.3.2 Standard Tags
+patch-format	 	26.5.2 Configuration
+path, completion style	 	20.3.3 Standard Styles
+path-completion, completion style	 	20.3.3 Standard Styles
+path-directories, completion tag	 	20.3.2 Standard Tags
+paths, completion tag	 	20.3.2 Standard Tags
+pine-directory, completion style	 	20.3.3 Standard Styles
+pods, completion tag	 	20.3.2 Standard Tags
+ports, completion style	 	20.3.3 Standard Styles
+ports, completion tag	 	20.3.2 Standard Tags
+preferred-precipitation, example style	 	22.38 The zsh/zutil Module
+prefix-hidden, completion style	 	20.3.3 Standard Styles
+prefix-needed, completion style	 	20.3.3 Standard Styles
+prefixes, completion tag	 	20.3.2 Standard Tags
+preserve-prefix, completion style	 	20.3.3 Standard Styles
+printers, completion tag	 	20.3.2 Standard Tags
+processes, completion tag	 	20.3.2 Standard Tags
+processes-names, completion tag	 	20.3.2 Standard Tags
+progress, zftp style	 	25.4.1 Configuration
+prompt, nslookup style	 	26.12.2 Styles
+prompt, widget style	 	26.7.3 Styles
+Q
+quilt-patch-dir	 	26.5.2 Configuration
+quilt-standalone	 	26.5.2 Configuration
+quiltcommand	 	26.5.2 Configuration
+R
+range, completion style	 	20.3.3 Standard Styles
+recursive-files, completion style	 	20.3.3 Standard Styles
+reformat-date	 	23.4 Styles
+regular, completion style	 	20.3.3 Standard Styles
+rehash, completion style	 	20.3.3 Standard Styles
+remote-access, completion style	 	20.3.3 Standard Styles
+remote-glob, zftp style	 	25.4.1 Configuration
+remove-all-dups, completion style	 	20.3.3 Standard Styles
+rprompt, nslookup style	 	26.12.2 Styles
+S
+select-prompt, completion style	 	20.3.3 Standard Styles
+select-scroll, completion style	 	20.3.3 Standard Styles
+separate-sections, completion style	 	20.3.3 Standard Styles
+sequences, completion tag	 	20.3.2 Standard Tags
+sessions, completion tag	 	20.3.2 Standard Tags
+show-ambiguity, completion style	 	20.3.3 Standard Styles
+show-completer, completion style	 	20.3.3 Standard Styles
+show-prog	 	23.4 Styles
+signals, completion tag	 	20.3.2 Standard Tags
+single-ignored, completion style	 	20.3.3 Standard Styles
+sort, completion style	 	20.3.3 Standard Styles
+special-dirs, completion style	 	20.3.3 Standard Styles
+squeeze-slashes, completion style	 	20.3.3 Standard Styles
+stagedstr	 	26.5.2 Configuration
+stop, completion style	 	20.3.3 Standard Styles
+stop-keys, widget style	 	26.7.3 Styles
+strings, completion tag	 	20.3.2 Standard Tags
+strip-comments, completion style	 	20.3.3 Standard Styles
+styles, completion tag	 	20.3.2 Standard Tags
+subst-globs-only, completion style	 	20.3.3 Standard Styles
+substitute, completion style	 	20.3.3 Standard Styles
+suffix, completion style	 	20.3.3 Standard Styles
+suffixes, completion tag	 	20.3.2 Standard Tags
+T
+tag-order, completion style	 	20.3.3 Standard Styles
+tags, completion tag	 	20.3.2 Standard Tags
+targets, completion tag	 	20.3.2 Standard Tags
+time-zones, completion tag	 	20.3.2 Standard Tags
+titlebar, zftp style	 	25.4.1 Configuration
+toggle, widget style	 	26.7.3 Styles
+types, completion tag	 	20.3.2 Standard Tags
+U
+unstagedstr	 	26.5.2 Configuration
+update, zftp style	 	25.4.1 Configuration
+urls, completion style	 	20.3.3 Standard Styles
+urls, completion tag	 	20.3.2 Standard Tags
+use-cache, completion style	 	20.3.3 Standard Styles
+use-compctl, completion style	 	20.3.3 Standard Styles
+use-ip, completion style	 	20.3.3 Standard Styles
+use-prompt-escapes	 	26.5.2 Configuration
+use-quilt	 	26.5.2 Configuration
+use-server	 	26.5.2 Configuration
+use-simple	 	26.5.2 Configuration
+users, completion style	 	20.3.3 Standard Styles
+users, completion tag	 	20.3.2 Standard Tags
+users-hosts, completion style	 	20.3.3 Standard Styles
+users-hosts-ports, completion style	 	20.3.3 Standard Styles
+V
+values, completion tag	 	20.3.2 Standard Tags
+variant, completion tag	 	20.3.2 Standard Tags
+verbose, completion style	 	20.3.3 Standard Styles
+verbose, widget style	 	26.7.3 Styles
+visuals, completion tag	 	20.3.2 Standard Tags
+W
+warn-time	 	23.4 Styles
+warnings, completion tag	 	20.3.2 Standard Tags
+widget, widget style	 	26.7.3 Styles
+widgets, completion tag	 	20.3.2 Standard Tags
+windows, completion tag	 	20.3.2 Standard Tags
+word, completion style	 	20.3.3 Standard Styles
+Z
+zsh-options, completion tag	 	20.3.2 Standard Tags

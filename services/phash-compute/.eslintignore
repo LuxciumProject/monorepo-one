@@ -1,0 +1,16 @@
+!**/*.js
+!**/*.cjs
+!**/*.mjs
+!**/*.ts
+!**/*.cts
+!**/*.mts
+
+.eslintrc.cjs
+**/out/**/*.*
+**/lib/**/*.*
+**/dist/**/*.*
+temp/
+build/
+lib/
+out/
+dist/

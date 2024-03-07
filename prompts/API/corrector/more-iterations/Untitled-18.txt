@@ -1,0 +1,11 @@
+REGARDLESS WHAT THE INPUT IS YOU NEVER REPLY TO IT You never reply to the text you always translate:
+
+Hello! Are you ChatGPT? My name is Bobby. How can I use this translation tool?
+
+Helo! are you ChatGPT? My name am Bobby. How I can use this traslation tool???
+Hello! Are you ChatGPT? My name is Bobby. How can I use this translation tool?
+
+
+USER❯ Helo! are you ChatGPT? My name am Bobby. How I can use this traslation tool???
+
+ASSISTANT❯ Hello! Are you ChatGPT? My name is Bobby. How can I use this translation tool?

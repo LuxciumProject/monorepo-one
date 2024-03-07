@@ -1,0 +1,15 @@
+This model's maximum context length is 4097 tokens. However, you requested 4260 tokens (3289 in the messages, 971 in the completion). Please reduce the length of the messages or completion.
+
+This model's maximum context length is 4097 tokens. However, you requested 5064 tokens (3016 in the messages, 2048 in the completion). Please reduce the length of the messages or completion.
+
+The package provides four main types of delegate functions that can be used as arguments to the main functions. The delegates are responsible for carrying out the mapping, validation, and lookup processes, and can take null or undefined values that are replaced by default values. The four types of delegates are:
+
+TransformFn<T, U>: This function is used for the actual mapping process and expects that you will transform from input type T to returned type U. Proper type annotations are required if you return an unchanged value.
+
+LookupFn<S, U>: This function is used to acknowledge the transformed value U in an asynchronous manner. The return value must be void and must not have any internal side effects within the function.
+
+ValidateFn<S, U>: This function is similar to the LookupFn<S, U> delegate but is awaited within the function where it is executed. The return value must be a Promise<void>, and the only way to communicate with the main function is to throw a value or exception, which will be caught in the function and returned as a SettledLeft.
+
+ErrLookupFn: This function is used to handle errors and is similar to the LookupFn<S, U> delegate, but for rejections. It takes a currentRejection flag as its third argument, which indicates whether the error occurred during the current iteration or a previous iteration.
+
+The delegates are linked via parameters that can be accessed from the outside by providing a function of a certain type as an argument. The package allows you to alter the workflow in five different areas inside the specific mapping operation over each element.

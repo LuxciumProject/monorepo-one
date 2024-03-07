@@ -1,0 +1,40 @@
+Today we’re excited to announce the release of TypeScript <version of that release>!
+
+If you’re not yet familiar with TypeScript, it’s a language that builds on JavaScript by adding statically checked types. When you use static types, you can run the TypeScript compiler to check for bugs like typos and mismatches in the shapes of your data, and get handy suggestions. These types don’t change your program, and you can remove them to leave you with clean, readable JavaScript. Going beyond catching bugs in your code, TypeScript also assists you in writing code because types can power useful tooling like auto-complete, go-to-definition, and renaming in your editor! You can read more on our website.
+
+To get started using TypeScript <version of that release>, you can get it through NuGet, or use npm with the following command:
+
+npm install typescript
+You can also get editor support by
+
+Downloading for Visual Studio 2019/2017
+Trying Visual Studio Code Insiders or following directions for Visual Studio Code and Sublime Text 3.
+If you’ve already read our beta or RC blog posts, you can read up on what’s changed since.
+
+Some major highlights of TypeScript <version of that release> are:
+
+The Awaited Type and Promise Improvements
+Supporting lib from node_modules
+Template String Types as Discriminants
+--module es2022
+Tail-Recursion Elimination on Conditional Types
+Disabling Import Elision
+type Modifiers on Import Names
+Private Field Presence Checks
+Import Assertions
+Const Assertions and Default Type Arguments in JSDoc
+Faster Load Time with realPathSync.native
+New Snippet Completions
+Better Editor Support for Unresolved Types
+Experimental Nightly-Only ECMAScript Module Support in Node.js
+Breaking Changes
+What’s New Since the Beta and RC?
+Since our beta release post and RC release post, <version of that release> has gone through a few changes.
+
+The biggest change we’ve made since the beta is that ECMAScript module support for Node.js 12 has been deferred to a future release, and is now only available as an experimental flag in nightly releases. This was not an easy decision, but our team had a combination of concerns around ecosystem readiness and general guidance for how/when to use the feature. We felt it would be better to smooth out the user experience instead of releasing something that would ultimately be too frustrating for most people. In the meantime though, you can still use the new support for --module nodenext and --moduleResolution nodenext as experimental features in nightly builds of TypeScript. If you try to use these settings in TypeScript <version of that release>, you’ll receive an error message directing you to use a nightly build instead.
+
+Since our RC post, we’ve added notes about new JSDoc features. While these features actually were included in the RC, they didn’t make it into our previous release notes.
+
+From the language editing side, we’ve introduced more snippet completions since TypeScript <version of that release> beta – specifically, for method implementation and overrides.
+
+We’ve also addressed a performance regression in --build mode due to excessive realpath calls for package.json files. This change was made for TypeScript <version of that release>, but was also back-ported to TypeScript <version before that release>. If this regression blocked you from trying TypeScript <previous version before that release>, you should see comparable or better speed in --build mode compared to past versions.

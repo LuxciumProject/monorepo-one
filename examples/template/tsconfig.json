@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "../typescript/tsconfig.json",
+  "compilerOptions": {
+    /* Emit Options */
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "composite": true,
+    "declarationDir": "./out/typings",
+    "outDir": "./out",
+    "tsBuildInfoFile": "./out/ts-out-info.lib",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": false,
+    /* Bundled library declaration files that describe the target runtime environment. */
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    /* Package names to be included without being referenced in a source file. */
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "include": [
+    "./src/**/*.js",
+    "./src/**/*.ts",
+    "./src/**/*.json"
+  ],
+  "exclude": [
+    // "lib",
+    // "**/jest.*.js"
+  ]
+}

@@ -1,0 +1,28 @@
+Great! Here's a condensed version of the information you provided:
+
+## Package Overview
+Mapping Tools is an npm package that provides utility functions for working with data collections. It allows developers to apply transformations or validations to each item in a collection, either in serial or in parallel. The package supports advanced error handling and asynchronous code, making it suitable for a wide range of applications, including data processing and validation.
+
+## Installation
+To install Mapping Tools, use npm, yarn, or pnpm:
+
+```shell
+# npm
+npm install mapping-tools
+# yarn
+yarn add mapping-tools
+# pnpm
+pnpm add mapping-tools
+```
+
+## Main Functions
+Mapping Tools provides 5 main functions: `awaitedMapping`, `parallelMapping`, `serialMapping`, `generateMappingAsync`, and `generateMapping`. These functions work with both promises and non-promises and support advanced error handling. The output is based on the `Settled<TVal>` type, which allows users to distinguish between successful and unsuccessful results.
+
+## Delegate Functions
+Mapping Tools provides four main types of delegate functions that can be used as arguments to the main functions: `TransformFn`, `LookupFn`, `ValidateFn`, and `ErrLookupFn`. These delegates are responsible for carrying out the mapping, validation, and error handling processes.
+
+## Base Types
+Mapping Tools defines several base types, including `Base<T>`, `Settled<TVal>`, `SettledRight<TVal>`, `SettledLeft`, `PromiseFulfilledResult<TVal>`, `PromiseSettledResult<TVal>`, and `PromiseRejectedResult`. These types allow for robust error handling and tracking of the transformation process.
+
+## Benefits
+The package's adaptive ability to handle both promises and non-promises as input, which allows it to be easily integrated into a wide range of contexts and projects. The package has been designed with resilience in mind, including robust error handling. The output of the package is based on the `Settled<TVal>` type, which allows users to easily distinguish between successful and unsuccessful results.

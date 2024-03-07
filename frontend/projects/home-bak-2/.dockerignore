@@ -1,0 +1,20 @@
+.dockerignore
+.eslintrc*
+.gitignore
+# ## .npmrc
+.prettierrc
+.rush
+build
+coverage
+Dockerfile
+home-page.build.log
+jest.config.js
+npm-shrinkwrap.json
+# ## nginx.conf
+node_modules
+# ## package.json
+pnpm-lock.yaml
+# ## public
+README.md
+# ## src
+# ## tsconfig.json

@@ -1,0 +1,86 @@
+First, let me suggest a name also for this second concept: "Incremental Development Pseudocode as Code" (IDPAC). This concept focuses on highly incremental development and making the project always ready to work, even in its early stages.  we could use it to Pack Ideas (IDPAC)...
+
+hello I have a text that explain a complex procedure in a technical manner and I would like you to convert it in a very detailed numbered list. I would like you to make sure that someone who have read the text would be able, only by looking at the list, to remember each elements of the text. list all elements important or small in the exact same order they appear in the text. do not remove anything such that it will be the most detailed list one can imagine to capture the essence of the text and more:
+
+(got 17)
+
+hello I have a text that explain a complex procedure in a technical manner and I would like you to convert it in a very detailed bullet point list. Please list the 40 most important things to remember from the text. I would like you to make sure that someone who have already read the text would be able, only by looking at the 40 items in the list, to remember each elements of the text. list all elements important or small in any order, such that if as you go you realize that you should have mentioned an important element you would mention them even if they are out of the initial order they appear in the text. If you end up with more than 40 items it is perfect toot as I want to extract all that is important in the text. list each concepts and elements as you see fit and do not limit yourself if you think something of value is missing in the list mention it as you go. If the text contains more than 40 important elements please feel free to include them in any order as you see fit such that the list would have more than 40 items this is not a problem. Do not remove anything, no concepts or idea should be left behind, such that it will be the most detailed list one can imagine to capture the essence of the text and more I will take care of removing any repetition later do not limit your output only because you would worry of repeating yourself I want you to be able to create a list without limiting you AI or you Language Model:
+
+(got 44)
+
+first atempt just got categories:
+
+1. Development approach
+2. Emphasis on modularity
+3. Incremental development
+4. Starting approach
+5. Pseudo code
+6. Focus on manageable tasks
+7. Best practices
+8. Collaboration and adaptability
+
+
+After reviewing the list, I've organized the concepts into the following categories:
+
+Development approach
+Compatible with the first approach.
+Project should be highly modular.
+Second half of the approach is not primarily about testing.
+Pushes the concept of modularity.
+Incremental development and implementation of small pieces at a time.
+Black boxing each line of code.
+Hyper-modularization.
+Code is first written as pseudo code.
+Pseudo code is also valid TypeScript, Python, or other languages.
+Highly incremental or highly recursive approach.
+Start with no-ops and implement them gradually.
+Highly modular approach facilitates easy updates and testing.
+Functions start as no-ops and gradually gain functionality.
+Pseudo code that's valid in the target language provides a clear starting point.
+Focusing on small, manageable tasks reduces stress and improves collaboration.
+Embraces adaptability and flexibility in planning and execution.
+Encourages close collaboration between team members and stakeholders.
+Prioritizes rapid feedback and continuous improvement.
+
+Project readiness
+Always ready to work.
+Project is functional but may not accomplish the task yet.
+Project should be ready to work at any stage.
+
+Testing
+High emphasis on testing (using Jest for TypeScript and best practices for Python).
+Easy to implement 100% coverage at the beginning.
+Incremental development keeps the project functional and adaptable.
+Balances best practices in interface creation, documentation, and testing.
+
+Interface and documentation
+Emphasis on interface creation and documentation practices.
+Balances best practices in interface creation, documentation, and testing.
+
+Problem-solving
+Inspired by interactions with ChatGPT-3.5 and lower.
+Problems and questions arose with the initial code.
+Modify an image as an example task.
+Avoid complicated implementations.
+Less stressful approach.
+Nighttime driving analogy: Montréal to Toronto.
+Focus on what's immediately ahead instead of the entire path.
+No need for complete knowledge of the path.
+Rely on reading signs along the road.
+Overall idea of the destination is enough.
+Tired of complicated arguments with AI assistant.
+Avoids frustration and misunderstandings with AI assistants.
+
+Duplicates removed
+Highly modular approach facilitates easy updates and testing. (merged with "Project should be highly modular")
+Pseudo code that's valid in the target language provides a clear starting point. (merged with "Code is first written as pseudo code")
+Functions start as no-ops and gradually gain functionality. (merged with "Start with no-ops and implement them gradually")
+Incremental development keeps the project functional and adaptable. (merged with "High emphasis on testing" and "Highly incremental or highly recursive approach")
+Balances best practices in interface creation, documentation, and testing. (merged with "Emphasis on interface creation and documentation practices" and "Testing")
+Focusing on small, manageable tasks reduces stress and improves collaboration. (merged with "Incremental development and implementation of small pieces at a time" and "Easy to implement 100% coverage at the beginning")
+Result of a merge
+
+Highly modular approach facilitates easy updates and testing. (merged from "Project should be highly modular" and "Highly modular approach facilitates easy updates and testing.")
+Pseudo code that's valid in the target language provides a clear starting point. (merged from "Code is first written as pseudo code" and "Pseudo code that's valid in the target language provides a clear starting point.")
+Functions start as no-ops and gradually gain functionality. (merged from "Start with no-ops and implement them gradually" and "Functions start as no-ops and gradually gain functionality.")
+Incremental development keeps the project functional

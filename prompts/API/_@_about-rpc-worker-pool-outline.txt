@@ -1,0 +1,228 @@
+Use idiomatic TypeScript.
+Follow concepts of clean code.
+Make the code maintainable, robust, portable, and reusable.
+Use pure functions as much as possible.
+Encapsulate side effects.
+Split the logic into functions.
+Make the code readable and easy to understand.
+Use TSDoc to create Typedoc compliant annotations and descriptions.
+Decouple the error logging logic from the main logic.
+Create new functions as required when refacttoring code.
+
+Understand this:
+
+https://raw.githubusercontent.com
+  /Luxcium/rpc-worker-pool/rpc-worker-pool/src
+    /main.ts # points to /server/clients/_pool-instance.ts
+    /server/RpcWorkerPool.ts
+    /server/worker.ts
+    /commands/methods.ts
+    /types/specs/json-rpc-2.0/request-object.ts
+    /types/specs/json-rpc-2.0/response-object.ts
+    /API/RPC-serialise.ts
+    /API/RPC-errors.ts
+
+The project is in a monorepo named monorepo-one under the LuxciumProject GitHub account. This monorepo holds multiple projects. Some projects, like the rpc-worker-pool, have individual repositories under the Luxcium GitHub account.
+
+Focus on the main file in /projects/monorepo-one/services/rpc-worker-pool/src/server/_pool-instance.ts. Identify that src/server/RpcWorkerPool.ts, src/server/_pool-instance.ts, src/server/worker.ts, and src/commands/tools/commands.ts are the main files in the rpc-worker-pool project.
+
+Recognize that rush.json and monorepo-one.code-workspace files provide the structure of the monorepo. These files hold information on project names and project structure respectively.
+
+Know that the GitHub files have raw format versions accessible with this URL structure: ${https:}//${"raw.githubusercontent.com"}/${git_hub_user_name}/${repo_name}/${git_branch}/${path_to_filename}.
+
+Study these important files:
+
+_pool-instance.ts - The project's (main) entry point.
+RpcWorkerPool.ts - The primary (main) class.
+worker.ts - The worker instances' functionality.
+commands.ts - Lists methods that the worker file can call.
+rush.json - Overviews the monorepo structure.
+monorepo-one.code-workspace - Gives insight into the monorepo structure.
+.gitmodules - Contains details about the submodules in the monorepo.
+Prepare to ask for additional information or clarification. Some files, like .gitmodules, might be easier to browse directly.
+
+Plan for a pre-analysis of the RpcWorkerPool class and the rpc-worker-pool project. Understand the class structure, methods, and interactions with _pool-instance.ts, worker.ts, and commands.ts. Collect this information from the files and ask for clarifications as needed.
+
+To summarize, comprehend the rpc-worker-pool project within the monorepo-one repo. Analyze the RpcWorkerPool class and its interactions with the other main files. Refer to the rush.json and monorepo-one.code-workspace files to understand the monorepo structure. Access files from their GitHub links or in raw format using the provided URL structure. Seek input or directly browse files as necessary.
+
+# File structure:
+# / (file system root)
+# /projects (../)
+# ../monorepo-one (./) ― monorepo root:
+monorepo-one/ (./)
+├── ✦prompts
+│   ├── ✦typing_prompter
+│   ├── ✦chatgpt
+│   │   └── ✦more-prompts
+├── ✦private
+├── ✦⚑backend
+│   ├── ✦⚑api
+│   └── ✦⚑scratch
+├── common/
+├── .directory
+├── docker/
+├── docs/
+├── .editorconfig
+├── ✦⚑examples
+│   ├── ⚑template
+│   ├── ⚑open-ai
+│   ├── ⚑gpu-stuff
+│   ├── ⚑playground
+│   ├── ⚑node-js
+│   ├── ✦phash-scout
+│   └── ✦typescript
+├── ✦frontend
+├── .git/
+├── .gitattributes
+├── .github/
+├── .gitignore
+├── .gitmodules
+├── helpers/
+├── .ipynb_checkpoints/
+├── ✦⚑library
+│   ├── ✣✦⚑mapping-tools
+│   ├── ⚑bigintString
+│   ├── ⚑boxed-list
+│   ├── ⚑colors-tools
+│   ├── ✦human-size
+│   ├── ⚑object-with-expectations
+│   ├── ⚑parallel-mapper
+│   ├── ⚑restraining-zalgo
+│   ├── ⚑tools
+│   └── ✦typescript
+├── LICENSE
+├── listing-monorepo-000.txt
+├── monorepo-one.code-workspace
+├── .nvmrc
+├── pnpm-workspace.yaml
+├── .prettierignore
+├── .prettierrc.cjs
+├── .prettierrc.cjs-old
+├── ✦⚑services
+│   ├── ✣✦image-scout
+│   ├── ✣✦questrade-ts
+│   ├── ✣✦⚑rpc-worker-pool
+│   ├── ⚑mongo-service
+│   ├── ⚑phash-compute
+│   ├── ⚑redis-services
+│   ├── ⚑scan-directories
+│   ├── ⚑service-one
+│   └── ⚑service-two
+├── static/
+├── tests.sh
+├── Untitled.ipynb
+├── .vscode/
+└── ✦scripts
+
+
+
+# File structure:
+# / (file system root)
+# /projects (../)
+# ../monorepo-one (./) ― monorepo root:
+/projects/monorepo-one/ (./)
+·✦prompts
+··✦typing_prompter
+··✦chatgpt
+···✦more-prompts
+·✦private
+·✦⚑backend
+··✦⚑api
+··✦⚑scratch
+·common/
+·.directory
+·docker/
+·docs/
+·.editorconfig
+·✦⚑examples
+··⚑template
+··⚑open-ai
+··⚑gpu-stuff
+··⚑playground
+··⚑node-js
+··✦phash-scout
+··✦typescript
+·✦frontend
+·.git/
+·.gitattributes
+·.github/
+·.gitignore
+·.gitmodules
+·helpers/
+·.ipynb_checkpoints/
+·✦⚑library
+··✣✦⚑mapping-tools
+··⚑bigintString
+··⚑boxed-list
+··⚑colors-tools
+··✦human-size
+··⚑object-with-expectations
+··⚑parallel-mapper
+··⚑restraining-zalgo
+··⚑tools
+··✦typescript
+·LICENSE
+·listing-monorepo-000.txt
+·monorepo-one.code-workspace
+·.nvmrc
+·pnpm-workspace.yaml
+·.prettierignore
+·.prettierrc.cjs
+·.prettierrc.cjs-old
+·✦⚑services
+··✣✦image-scout
+··✣✦questrade-ts
+··✣✦⚑rpc-worker-pool
+··⚑mongo-service
+··⚑phash-compute
+··⚑redis-services
+··⚑scan-directories
+··⚑service-one
+··⚑service-two
+·static/
+·tests.sh
+·Untitled.ipynb
+·.vscode/
+·✦scripts
+
+# Legend:
+# ✦: present in the monorepo-one.code-workspace file
+# ⚑: present in the rush.json file
+# ✣: present in the .gitmodules file
+
+
+# Mono-repo: https://github.com/Luxcium/monorepo-one.git
+
+# Submodules:
+# ✣ services/image-scout: https://github.com/Luxcium/Redis-ImageScout.git
+# ✣ services/questrade-ts: https://github.com/Luxcium/questrade-ts.git
+# ✣ services/rpc-worker-pool: https://github.com/Luxcium/rpc-worker-pool.git
+# ✣ library/mapping-tools: https://github.com/LuxciumProject/mapping-tools.git
+
+# Source files:
+# ✦: https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/monorepo-one.code-workspace
+# (Based on the VSCode multi-root workspace as described at: https://code.visualstudio.com/docs/editor/multi-root-workspaces/)
+# ⚑: https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/rush.json
+# (Based on the rush stack monorepo workflow as described at: https://rushjs.io/pages/intro/welcome/)
+# ✣: https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/.gitmodules
+# (Based on the well-known git best practices as described at:  https://git-scm.com/docs/gitmodules/)
+
+I'm glad I was able to assist you in creating this detailed repository structure and legend. Here are some key takeaways from our interaction that could benefit future sessions:
+
+Clarifying Instructions: The more specific and detailed the instructions are, the easier it is for the AI to understand and carry out the request. If there's any ambiguity or if multiple tasks are bundled into one, it can lead to confusion or inaccuracies. Breaking down complex tasks into smaller, well-defined steps can be more manageable and effective.
+
+Iterative Process: It's completely okay (and often beneficial) to build the final result through an iterative process. This allows for adjustments and corrections to be made along the way.
+
+Understanding the Context: In this case, understanding the structure and configuration of a monorepo and how it works with submodules, rush, and VSCode workspaces was essential. Future tasks will benefit from the AI knowing the context and background of what it's working on. If the AI doesn't have this information, don't hesitate to provide it.
+
+Collaboration: The process is a collaboration between the user and the AI. The user's feedback and guidance are invaluable in achieving the desired outcome. Regular interaction can help rectify any misunderstandings or missteps quickly.
+
+!Error Handling: If an error occurs, it's important to diagnose what went wrong and then to decide whether to try again or adjust the approach. Sometimes, a different method might be more successful.
+
+Quoting and Referencing: When using the browser tool, making accurate quotes from search results or pages is crucial. This allows the AI to store and reference the information accurately in future responses.
+
+Summarization: After completing a task, summarizing the process and results can help solidify the understanding of the task and provide a convenient reference for future tasks. It's a good practice to make a summary at the end of a complex task.
+
+Learning from Each Other: Both the user and the AI can learn from each other during the interaction. The AI can better understand the user's preferences, work style, and objectives, while the user can gain a better understanding of how to effectively instruct and collaborate with the AI.
+
+I hope these insights will be useful for you in your future interactions with AI assistants!

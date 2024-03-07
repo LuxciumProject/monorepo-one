@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "presentation": {
+    "clear": true,
+    "close": true,
+    "echo": true,
+    "focus": false,
+    "panel": "dedicated",
+    "reveal": "silent",
+    "revealProblems": "onProblem",
+    "showReuseMessage": false
+  },
+  "tasks": [
+    {
+      "label": "Build/all/library",
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "runOptions": {
+        "reevaluateOnRerun": true,
+        "instanceLimit": 1,
+        "runOn": "default"
+      },
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "${workspaceFolder: /bigintString} Build/library/bigintString", // "          📚❤ bigintString"
+        "Build/library/boxed-list",
+        "Build/library/colors-tools",
+        "Build/library/human-size",
+        "Build/library/object-with-expectations",
+        "Build/library/parallel-mapper",
+        "Build/library/restraining-zalgo",
+        "Build/library/tools"
+      ]
+    },
+  ]
+}

@@ -1,0 +1,2865 @@
+//==== © 2021-2022 ==== Luxcium✨ ==== (Benjamin Vincent) ==== MIT License ====-|
+//------10--------20--------30--------40--------50--------60--------70--------80 //
+//---- 3840 × 2160 (UHDTV1) --- 16x9 -40--------50--------60--------70--------80 //
+//---- 3840 × 1920 (UHDTV1) --- 16x8 -40--------50--------60--------70--------80 //
+//---- 3840 × 1920 (UHDTV1) --- top -120 bottom -120 / ---60--------70--------80 //
+/*
+40960
+36408
+31857
+  "window.zoomLevel": -1,
+*/
+{
+  "editor.semanticHighlighting.enabled": false,
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
+  "editor.suggestFontSize": 16,
+  "editor.codeLensFontSize": 10,
+  "screencastMode.fontSize": 56,
+  // "terminal.integrated.fontSize": 16,
+  "markdown.preview.fontSize": 16,
+  //   // "editor.fontSize": 20,
+  //   // "editor.fontSize": 14,
+  "editor.fontFamily": "'VictorMono Nerd Font Mono', 'Fira Code iScript'",
+  "terminal.integrated.fontFamily": "'TerminessTTF Nerd Font'",
+  "terminal.integrated.fontWeight": "600",
+  "terminal.integrated.fontWeightBold": "bold",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "600",
+  //----10--------20--------30--------40--------50--------60--------70--------80 //
+  "window.commandCenter": true,
+  "window.titleBarStyle": "custom",
+  "workbench.editor.titleScrollbarSizing": "large",
+  "terminal.integrated.tabs.title": "${task}${process}", // † Scientia es lux principium✨ ™
+  "window.title": "${rootName}  ${dirty} ${activeEditorShort} ° † Scientia es lux principium✨ ™ ° ${activeFolderShort}",
+  "window.titleSeparator": " - ",
+  "workbench.editor.untitled.labelFormat": "name",
+  "code-runner.showRunIconInEditorTitleMenu": true,
+  "code-runner.showStopIconInEditorTitleMenu": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "eslint.quiet": true,
+  "npm.packageManager": "pnpm",
+  "prettier.semi": false,
+  "explorer.openEditors.sortOrder": "fullPath",
+  "explorer.openEditors.visible": 10,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.sharedViewState": true,
+  "workbench.editor.labelFormat": "medium",
+  "workbench.editor.wrapTabs": true,
+  "window.closeWhenEmpty": true,
+  "explorer.openEditors.minVisible": 10,
+  "files.participants.timeout": 7500,
+  "workbench.reduceMotion": "off",
+  "workbench.sash.size": 8,
+  "workbench.view.alwaysShowHeaderActions": true,
+  "terminal.integrated.bellDuration": 2000,
+  "terminal.integrated.scrollback": 9000,
+  "terminal.integrated.tabs.hideCondition": "singleGroup",
+  "terminal.integrated.customGlyphs": true,
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiYellow",
+  "terminal.integrated.tabs.defaultIcon": "console",
+  "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}${cwdFolder}",
+  "terminal.integrated.tabs.enableAnimation": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.tabs.focusMode": "doubleClick",
+  "terminal.integrated.tabs.location": "left",
+  "terminal.integrated.tabs.separator": " - ",
+  "terminal.integrated.tabs.showActions": "always",
+  "terminal.integrated.tabs.showActiveTerminal": "singleTerminalOrNarrow",
+  "scm.inputFontFamily": "'ProFontIIx Nerd Font Mono', 'Source Code Pro Black'",
+  "debug.console.fontFamily": "'VictorMono Nerd Font', Fira Code, LigaFantasqueSansMono",
+  "markdown.preview.fontFamily": "'Ubuntu', 'Droid Sans', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', sans-serif",
+  // "editor.fontFamily": "'VictorMono Nerd Font',Victor Mono,'Fira Code iScript', Fira Code",
+  // "terminal.integrated.fontFamily": "'TerminessTTF Nerd Font Mono', 'Anonymice NF', '3270Narrow NF', mono",
+  "window.newWindowDimensions": "offset",
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorWidth": 3,
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.environmentChangesIndicator": "on",
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.splitCwd": "workspaceRoot",
+  // "terminal.integrated.fontFamily": "'VictorMono Nerd Font'",
+  // "terminal.integrated.fontWeight": "400",
+  // "terminal.integrated.fontWeightBold": "900",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.letterSpacing": 0,
+  "terminal.integrated.lineHeight": 0,
+  "terminal.integrated.showExitAlert": true, // ~~>  ***
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingOvertype": "auto",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.autoIndent": "advanced",
+  "editor.autoSurround": "languageDefined",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.columnSelection": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.find.autoFindInSelection": "multiline",
+  "editor.folding": true,
+  "editor.foldingStrategy": "auto",
+  "editor.minimap.size": "fit",
+  "editor.showFoldingControls": "always",
+  "editor.suggest.insertMode": "insert",
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.wordSeparators": "`~!@$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.wordWrapColumn": 121,
+  "editor.wrappingIndent": "deepIndent",
+  "workbench.activityBar.iconClickBehavior": "focus",
+  "workbench.editor.decorations.colors": true,
+  "workbench.preferredDarkColorTheme": "Pop N' Lock Theme by Luxcium ✨",
+  "codeValet.tool.comment.wrap.column": 80,
+  "codeValet.tool.comment.wrap.prefixes": "*  # /// ",
+  "css.lint.fontFaceProperties": "warning",
+  "diffEditor.codeLens": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.onIgnoredFiles": "warn",
+  "explorer.incrementalNaming": "smart",
+  "explorer.sortOrder": "type",
+  "extensions.ignoreRecommendations": true,
+  "files.defaultLanguage": "txt",
+  "files.enableTrash": false,
+  "files.hotExit": "onExitAndWindowClose",
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.autoStash": true,
+  "git.detectSubmodules": true,
+  "git.ignoreLimitWarning": true,
+  "git.inputValidation": "warn",
+  "git.postCommitCommand": "sync",
+  "git.pruneOnFetch": true,
+  "git.showProgress": true,
+  "git.suggestSmartCommit": true,
+  "git.untrackedChanges": "separate",
+  "git.useCommitInputAsStashMessage": true,
+  "gitlens.hovers.annotations.changes": true,
+  "gitlens.hovers.annotations.details": true,
+  "gitlens.hovers.annotations.enabled": true,
+  "gitlens.hovers.annotations.over": "annotation",
+  "gitlens.hovers.avatars": true,
+  "gitlens.hovers.changesDiff": "hunk",
+  "gitlens.hovers.currentLine.changes": true,
+  "gitlens.hovers.currentLine.details": true,
+  "gitlens.hovers.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "annotation",
+  "gitlens.hovers.enabled": true,
+  "gitlens.statusBar.reduceFlicker": true,
+  "gitlens.views.repositories.files.layout": "list",
+  "html.autoClosingTags": false,
+  "html.format.wrapAttributes": "preserve",
+  "html.format.wrapLineLength": 120,
+  "html.suggest.html5": true,
+  "javascript.format.semicolons": "insert",
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.implicitProjectConfig.strictFunctionTypes": false,
+  "less.lint.fontFaceProperties": "error",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "markdown.links.openLocation": "beside",
+  "material-icon-theme.activeIconPack": "nest",
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "prettier.endOfLine": "lf",
+  "prettier.jsxSingleQuote": true,
+  "prettier.proseWrap": "preserve",
+  "prettier.requireConfig": true,
+  "prettier.singleQuote": true,
+  "problems.showCurrentInStatus": true,
+  "remote.restoreForwardedPorts": true,
+  "scm.diffDecorationsGutterWidth": 5,
+  "scss.lint.fontFaceProperties": "error",
+  "search.searchOnType": true,
+  "search.searchOnTypeDebouncePeriod": 500,
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "comments.openView": "file",
+  "editor.autoClosingBrackets": "never",
+  "editor.cursorBlinking": "expand",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.gotoLocation.alternativeDeclarationCommand": "editor.action.goToTypeDefinition",
+  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToTypeDefinition",
+  "editor.linkedEditing": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.parameterHints.cycle": true,
+  "editor.quickSuggestionsDelay": 100,
+  "editor.renderWhitespace": "boundary",
+  "editor.smoothScrolling": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "bounded",
+  "explorer.confirmDragAndDrop": false,
+  "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.providerCountBadge": "visible",
+  "screencastMode.mouseIndicatorColor": "#FF3366",
+  "search.quickOpen.includeSymbols": true,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+  "window.autoDetectColorScheme": true,
+  "window.restoreWindows": "folders",
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.openPositioning": "first",
+  "workbench.editor.revealIfOpen": true,
+  "workbench.layoutControl.enabled": true,
+  "workbench.list.defaultFindMode": "filter",
+  "workbench.list.smoothScrolling": true,
+  "workbench.quickOpen.preserveInput": true,
+  // "extensions.experimental.affinity": {
+  //   "pub.name": 1
+  // },
+  "workbench.welcomePage.experimental.videoTutorials": "on",
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "workbench.colorCustomizations": {
+    "errorLens.errorForeground": "#F36F",
+    "errorLens.errorMessageBackground": "#F366",
+    "errorLens.errorBackground": "#F363",
+    "errorLens.warningForeground": "#CF3F",
+    "errorLens.warningMessageBackground": "#CF36",
+    "errorLens.warningBackground": "#CF33",
+    "errorLens.hintForeground": "#39CF",
+    "errorLens.hintMessageBackground": "#39C6",
+    "errorLens.hintBackground": "#39C3",
+    "errorLens.infoForeground": "#FB0F",
+    "errorLens.infoMessageBackground": "#FB06",
+    "errorLens.infoBackground": "#FB03"
+  },
+  "errorLens.borderRadius": "10px",
+  "errorLens.enabled": true,
+  "errorLens.errorGutterIconColor": "#F36F",
+  "errorLens.exclude": [],
+  "errorLens.followCursor": "allLines",
+  "errorLens.followCursorMore": 0,
+  "errorLens.fontStyleItalic": true,
+  "errorLens.fontWeight": "bold",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSet": "defaultOutline",
+  "errorLens.gutterIconsFollowCursorOverride": true,
+  "errorLens.gutterIconSize": "75%",
+  "errorLens.infoGutterIconColor": "#4AEF",
+  "errorLens.margin": "0.75rem",
+  "errorLens.messageTemplate": "$severity $message [$source #$code] ($count)",
+  "errorLens.padding": "0rem 0.5rem",
+  "errorLens.statusBarColorsEnabled": true,
+  "errorLens.statusBarMessageEnabled": true,
+  "errorLens.statusBarMessageType": "closestProblem",
+  "errorLens.warningGutterIconColor": "#BF2",
+  "errorLens.fontSize": "1.1rem",
+  "errorLens.fontFamily": "'VictorMono Nerd Font', Victor Mono, Fira Code iScript, 'ProFontIIx Nerd Font Mono', 'MesloLGS NF', ",
+  "errorLens.severityText": [
+    "🍒 ~~> ", // ―1 error
+    "🧩 ==> ", // ―2 warning
+    "✨ -> ", // ―3 info
+    "🎯 +> " // ―4 hint
+  ],
+  "errorLens.enabledDiagnosticLevels": ["warning", "info", "hint"],
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "material-icon-theme.files.associations": {
+    "index.ts": "Raml",
+    "main.ts": "Contributing",
+    "index.js": "Json", // *.cpuprofile
+    "*.cpuprofile": "Auto" // *.cpuprofile
+  },
+  "files.exclude": {
+    "**/*.zwc": true,
+    ".history": true,
+    ".directory": true
+  },
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.customCommand": "echo Hello",
+  "code-runner.cwd": "",
+  "code-runner.defaultLanguage": "typescript",
+  "code-runner.enableAppInsights": true,
+  "code-runner.fileDirectoryAsCwd": false,
+  "code-runner.ignoreSelection": true,
+  "code-runner.preserveFocus": false,
+  "code-runner.respectShebang": false,
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.showExecutionMessage": true,
+  "code-runner.showRunCommandInEditorContextMenu": true,
+  "code-runner.showRunCommandInExplorerContextMenu": true,
+  "code-runner.temporaryFileName": "tempCodeRunnerFile",
+  "code-runner.terminalRoot": "",
+  "code-runner.languageIdToFileExtensionMap": {
+    "bat": ".bat",
+    "powershell": ".ps1",
+    "typescript": ".ts"
+  },
+  "code-runner.executorMapByGlob": {
+    "pom.xml": "cd $dir && mvn clean package",
+    "*.code-workspace": "code",
+    "tsconfig.json": "tsc -b",
+    "*.spec.?s": "jest",
+    "*.test.?s": "jest",
+    "*.spec.?sx": "jest",
+    "*.test.?sx": "jest",
+    "*.source.zsh": "source",
+    "*.src.zsh": "source",
+    "*.src.sh": "source",
+    "*.source.sh": "source",
+    "*.mp3": "play -v 0.5",
+    "*.wav": "play -v 0.5",
+    "*.wave": "play -v 0.5"
+  }, // test.tsx
+  "code-runner.executorMap": {
+    "ahk": "autohotkey",
+    "applescript": "osascript",
+    "autoit": "autoit3",
+    "bat": "cmd /c",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "clojure": "lein exec",
+    "coffeescript": "coffee",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "crystal": "crystal",
+    "csharp": "scriptcs",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "dart": "dart",
+    "fsharp": "fsi",
+    "go": "go run",
+    "groovy": "groovy",
+    "haskell": "runhaskell",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "julia": "julia",
+    "kit": "kitc --run",
+    "lisp": "sbcl --script",
+    "lua": "lua",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "ocaml": "ocaml",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "perl": "perl",
+    "perl6": "perl6",
+    "php": "php",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "python": "python -u",
+    "r": "Rscript",
+    "racket": "racket",
+    "ruby": "ruby",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "sass": "sass --style expanded",
+    "scala": "scala",
+    "scheme": "csi -script",
+    "scss": "scss --style expanded",
+    "shellscript": "zsh",
+    "swift": "swift",
+    "typescript": "ts-node",
+    "v": "v run",
+    "vbscript": "cscript Nologo"
+  },
+  "code-runner.executorMapByFileExtension": {
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".cr": "crystal",
+    ".csproj": "dotnet run --project",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".dart": "dart",
+    ".exs": "elixir",
+    ".fsproj": "dotnet run --project",
+    ".hs": "runhaskell",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".jl": "julia",
+    ".kit": "kitc --run",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".lisp": "sbcl --script",
+    ".ml": "ocaml",
+    ".mp3": "play -v 0.5",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".rkt": "racket",
+    ".sass": "sass --style expanded",
+    ".scala": "scala",
+    ".scm": "csi -script",
+    ".ts": "ts-node",
+    ".v": "v run",
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript Nologo",
+    ".vsh": "v run",
+    ".wav": "play -v 0.5",
+    ".wave": "play -v 0.5",
+    ".zsh": "zsh"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.codeAction.disableRuleComment": {
+    "location": "separateLine",
+    "enable": true
+  },
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json"
+  ],
+  // "[shellscript]": {
+  //   "editor.defaultFormatter": "foxundermoon.shell-format"
+  // },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "git.enableSmartCommit": true,
+  "git.fetchOnPull": true,
+  "git.followTagsWhenSync": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.alwaysSignOff": true,
+  "workbench.tree.indent": 16,
+  "search.collapseResults": "alwaysCollapse",
+  "search.quickOpen.history.filterSortOrder": "recency",
+  // "todo-tree.general.statusBar": "total",
+  "workbench.editor.limit.excludeDirty": true,
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: TODO TREE                                                         !
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules"],
+  "todo-tree.highlights.defaultHighlight": {
+    "background": "#FFF",
+    "borderRadius": "0px",
+    "fontWeight": "500",
+    "foreground": "#224",
+    "opacity": 50,
+    "gutterIcon": true,
+    "hideFromStatusBar": true,
+    "hideFromTree": false,
+    "icon": "alert",
+    "iconColour": "#37B",
+    // "rulerOpacity": 100,
+    // "rulerColour": "#FFF",
+    "rulerLane": "none",
+    "type": "line"
+  },
+  "todo-tree.highlights.customHighlight": {
+    // #region: ------------------------------------------------------
+    "#region:": {
+      "foreground": "#DF3",
+      "background": "#DF3",
+      "iconColour": "#DF3",
+      "opacity": 30,
+      "icon": "mirror",
+      "gutterIcon": true
+      // "type": "tag-and-comment",
+      // "borderRadius": "7px",
+    },
+    // #endregion: ---------------------------------------------------
+    "#endregion:": {
+      "foreground": "#F15",
+      "background": "#F15",
+      "iconColour": "#F15",
+      "opacity": 30,
+      "icon": "mirror",
+      "gutterIcon": true,
+      // "type": "tag-and-comment",
+      // "borderRadius": "7px",
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    // BUG: ----------------------------------------------------------
+    "BUG:": {
+      "foreground": "#F15",
+      "background": "#F15",
+      "iconColour": "#F15",
+      "fontWeight": "800",
+      "opacity": 10,
+      "icon": "bug",
+      "gutterIcon": true
+    },
+    // TODO: ---------------------------------------------------------
+    "TODO:": {
+      "foreground": "#F80",
+      "background": "#F80",
+      "iconColour": "#F80",
+      "fontWeight": "700",
+      "opacity": 20,
+      "icon": "bookmark",
+      "gutterIcon": true
+    },
+    // FIXME: --------------------------------------------------------
+    "FIXME:": {
+      "foreground": "#FB3",
+      "background": "#FB3",
+      "iconColour": "#FB3",
+      "fontWeight": "600",
+      "opacity": 30,
+      "icon": "tools",
+      "gutterIcon": true
+    },
+    // SECTION: ------------------------------------------------------
+    "SECTION:": {
+      "foreground": "#DF3",
+      "background": "#DF3",
+      "iconColour": "#DF3",
+      "icon": "mirror",
+      "gutterIcon": true,
+      "fontWeight": "500",
+      "opacity": 40,
+      // "type": "whole-line",
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    // "REVIEW NEEDED:" search
+    // REVIEW NEEDED: ------------------------------------------------
+    "REVIEW NEEDED:": {
+      "foreground": "#FC9",
+      "background": "#05F",
+      "opacity": 50,
+      "fontWeight": "400",
+      "gutterIcon": true,
+      // "borderRadius": "7px",
+      "icon": "search",
+      "iconColour": "#93F"
+    },
+    // HACK: ---------------------------------------------------------
+    "HACK:": {
+      "background": "#74F",
+      "foreground": "#FC9",
+      "opacity": 60,
+      "fontWeight": "300",
+      "gutterIcon": true,
+      "icon": "squirrel",
+      "iconColour": "#93F"
+    },
+    // XXX: ----------------------------------------------------------
+    "XXX:": {
+      "foreground": "#E22",
+      "iconColour": "#E22",
+      "background": "#000",
+      "fontWeight": "200",
+      "opacity": 30,
+      "icon": "law",
+      "gutterIcon": true
+    },
+    // INFO: ---------------------------------------------------------
+    "INFO:": {
+      "foreground": "#FB7",
+      "background": "#05F",
+      "iconColour": "#05F",
+      "icon": "info",
+      "gutterIcon": true,
+      "fontWeight": "300",
+      "opacity": 30,
+      "rulerLane": "full",
+      "rulerColour": "#BBB",
+      "rulerOpacity": 50
+    },
+    // WARNING: ------------------------------------------------------
+    "WARNING:": {
+      "foreground": "#BF2",
+      "background": "#BF2",
+      "iconColour": "#BF2",
+      "fontWeight": "400",
+      "opacity": 30,
+      "icon": "alert",
+      "gutterIcon": true
+    },
+    // ERROR: --------------------------------------------------------
+    "ERROR:": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "fontWeight": "500",
+      "opacity": 30,
+      "icon": "x-circle",
+      "gutterIcon": true
+    },
+    // UNIMPLEMENTED: ------------------------------------------------
+    "UNIMPLEMENTED:": {
+      "foreground": "#FC9",
+      "background": "#F35",
+      "fontWeight": "500",
+      "icon": "skip",
+      "iconColour": "#EE3366EE",
+      "opacity": 50
+    },
+    // UNSAFE: -------------------------------------------------------
+    "UNSAFE:": {
+      "background": "#900",
+      "foreground": "#FB3",
+      "iconColour": "#900",
+      "gutterIcon": true,
+      "fontWeight": "900",
+      "icon": "flame"
+    },
+    // FUNC DEF: (Special function xyz) ------------------------------
+    "FUNC DEF:": {
+      "foreground": "#FB7",
+      "background": "#07F",
+      "iconColour": "#55BBFFBB",
+      "icon": "package-dependencies",
+      "gutterIcon": true,
+      "opacity": 50,
+      "fontWeight": "700",
+      "rulerColour": "#FB7",
+      "hideFromStatusBar": true
+    },
+    // FUNC CALL:  (Special function xyz)  ---------------------------
+    "FUNC CALL:": {
+      "foreground": "#07F",
+      "background": "#ADE",
+      "opacity": 100,
+      "fontWeight": "700",
+      "iconColour": "#ADE",
+      "icon": "package-dependents",
+      "gutterIcon": true,
+      "rulerColour": "#07F",
+      // "": "#FB7",
+      // "type": "tag",
+      "hideFromStatusBar": true
+    },
+    // RETURNS: ------------------------------------------------------
+    "RETURNS:": {
+      "foreground": "#224",
+      "background": "#CF2",
+      "iconColour": "#CF2",
+      "icon": "cross-reference",
+      // "borderRadius": "7px",
+      "gutterIcon": true
+    },
+    // CONSOLE: ------------------------------------------------------
+    "CONSOLE:": {
+      "foreground": "#224",
+      "background": "#4B9",
+      "iconColour": "#4B9",
+      "icon": "terminal",
+      "gutterIcon": true
+    },
+    // HARDCODE: -----------------------------------------------------
+    "HARDCODE:": {
+      "foreground": "#FC9",
+      "background": "#F35",
+      // "borderRadius": "7px",
+      "iconColour": "#F149",
+      "icon": "cpu",
+      "fontWeight": "400",
+      "gutterIcon": true
+      // "type": "tag-and-comment",
+      // "ERROR HANDLER:", -------------------------------------------
+    },
+    // ERROR HANDLER: ------------------------------------------------
+    "ERROR HANDLER:": {
+      "foreground": "#FC9",
+      "background": "#F35",
+      // "borderRadius": "7px",
+      "iconColour": "#F149",
+      "icon": "note",
+      "gutterIcon": true
+      // "type": "tag-and-comment",
+      // "ERROR HANDLER:", -------------------------------------------
+    },
+    // LOG: ----------------------------------------------------------
+    "LOG:": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "checklist",
+      "gutterIcon": true
+    },
+    // !: ------------------------------------------------------------
+    "!:": {
+      "foreground": "#F20",
+      "background": "#F20",
+      "iconColour": "#F20",
+      "icon": "stop",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // @: ------------------------------------------------------------
+    "@:": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "icon": "mention",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // #: ------------------------------------------------------------
+    "#:": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "file-binary",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // $: ------------------------------------------------------------
+    "$:": {
+      "foreground": "#F84",
+      "background": "#F84",
+      "iconColour": "#F84",
+      "icon": "star",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // %: ------------------------------------------------------------
+    "%:": {
+      "foreground": "#4EF",
+      "background": "#4EF",
+      "iconColour": "#4EF",
+      "icon": "file-code",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // ?: ------------------------------------------------------------
+    "?:": {
+      "foreground": "#39F",
+      "background": "#39F",
+      "iconColour": "#39F",
+      "icon": "unverified",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // &: ------------------------------------------------------------
+    "&:": {
+      "foreground": "#93F",
+      "background": "#93F",
+      "iconColour": "#93F",
+      "icon": "squirrel",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // *: ------------------------------------------------------------
+    "*:": {
+      "foreground": "#9C7",
+      "background": "#9C7",
+      "iconColour": "#9C7",
+      "icon": "north-star",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // -+ ------------------------------------------------------------
+    "-+": {
+      "foreground": "#DF3",
+      "background": "#DF3",
+      "opacity": 25,
+      // "type": "whole-line",
+      "gutterIcon": false,
+      // "borderRadius": "0px",
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    // -: ------------------------------------------------------------
+    "-:": {
+      "background": "#F15",
+      "foreground": "#F15",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      // "borderRadius": "0px",
+      "opacity": 15
+      // "type": "whole-line",
+    },
+    // -> ------------------------------------------------------------
+    "->": {
+      "background": "#93F",
+      "foreground": "#5CF",
+      "gutterIcon": true,
+      "icon": "report",
+      "iconColour": "#FB0",
+      "opacity": 30,
+      // "borderRadius": "0px",
+      "rulerColour": "#5CF5"
+      // "type": "whole-line",
+    },
+    // -* ------------------------------------------------------------
+    "-*": {
+      "background": "#0BF",
+      "foreground": "#FB0",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "opacity": 20,
+      "iconColour": "#FB0",
+      // "borderRadius": "0px",
+      "rulerColour": "#FB05"
+      // "type": "whole-line",
+    },
+    // -? ------------------------------------------------------------
+    "-?": {
+      "foreground": "#FDB",
+      "background": "#F14",
+      "opacity": 30,
+      // "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+      // "borderRadius": "0px",
+    },
+    // -& ------------------------------------------------------------
+    "-&": {
+      "background": "#93F",
+      "foreground": "#5CF",
+      "opacity": 25,
+      // "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerColour": "#F45"
+    },
+    // -% ------------------------------------------------------------
+    "-%": {
+      "foreground": "#FDB",
+      "background": "#BF2",
+      "opacity": 25,
+      // "type": "whole-line",
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    // eslint-disable ------------------------------------------------
+    "eslint-disable": {
+      "foreground": "#5CF",
+      "background": "#93F",
+      // "type": "whole-line",
+      "opacity": 30,
+      "iconColour": "#FB0",
+      // "borderRadius": "0px",
+      "icon": "report",
+      "gutterIcon": true
+    },
+    // -! ------------------------------------------------------------
+    "-!": {
+      "background": "#9BF",
+      "foreground": "#BBB",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "opacity": 20,
+      // "borderRadius": "0px",
+      "rulerColour": "#FFF5"
+      // "type": "whole-line",
+    },
+    // #-| -----------------------------------------------------------
+    "#-|": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "icon": "cpu",
+      "gutterIcon": true,
+      "opacity": 20
+      // "borderRadius": "0px",
+      // "type": "whole-line",
+    },
+    // → -------------------------------------------------------------
+    "→": {
+      "foreground": "#CF2",
+      "background": "#CF2",
+      "iconColour": "#CF2",
+      "opacity": 50,
+      // "type": "whole-line",
+      "icon": "cross-reference",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      // "borderRadius": "0px",
+      "hideFromStatusBar": true
+    },
+    // ← -------------------------------------------------------------
+    "←": {
+      "foreground": "#5CF",
+      "background": "#5CF",
+      "opacity": 30,
+      "gutterIcon": false,
+      // "type": "text-and-comment",
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    // -# ------------------------------------------------------------
+    "-#": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "star",
+      "opacity": 30,
+      "type": "line",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerColour": "#9BE",
+      "rulerOpacity": 50,
+      "rulerLane": "center"
+    },
+    // -$ ------------------------------------------------------------
+    "-$": {
+      "foreground": "#F84",
+      "background": "#F84",
+      "iconColour": "#F84",
+      "icon": "star",
+      "opacity": 30,
+      "type": "line",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerColour": "#F84",
+      "rulerOpacity": 50,
+      "rulerLane": "center"
+    },
+    // ::
+    "::": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "grabber",
+      "gutterIcon": true,
+      "opacity": 30,
+      "type": "whole-line",
+      "rulerColour": "#9BE",
+      "rulerOpacity": 50,
+      "rulerLane": "full"
+    },
+    // :::
+    ":::": {
+      "foreground": "#F84",
+      "background": "#F84",
+      "iconColour": "#F84",
+      "icon": "grabber",
+      "gutterIcon": true,
+      "opacity": 30,
+      "type": "whole-line",
+      "rulerColour": "#F84",
+      "rulerOpacity": 50,
+      "rulerLane": "full"
+    }
+  },
+  "todo-tree.general.tags": [
+    "-:",
+    "-!",
+    "-?",
+    "-@",
+    "-*",
+    "-&",
+    "-#",
+    "-%",
+    "-%0",
+    "-%1",
+    "-%2",
+    "-%3",
+    "-%4",
+    "-%5",
+    "-%6",
+    "-+",
+    "->",
+    "-$",
+    ":::",
+    "::",
+    "!:",
+    "?:",
+    "[ ]",
+    "[x]",
+    "@:",
+    "*:",
+    "&:",
+    "#-|",
+    "#:",
+    "#endregion:",
+    "#region:",
+    "%:",
+    "←:",
+    "→",
+    "+:",
+    "|-::",
+    "$:",
+    "BUG:",
+    "CONSOLE:",
+    "REVIEW NEEDED:",
+    "ERROR HANDLER:",
+    "ERROR:",
+    "eslint-disable",
+    "FIXME:",
+    "FUNC CALL:",
+    "FUNC DEF:",
+    "HACK:",
+    "HARDCODE:",
+    "HINT:",
+    "INFO:",
+    "LOG:",
+    "RETURNS:",
+    "SECTION:",
+    "SEND COMMAND:",
+    "SIDE EFFECTS:",
+    "TODO:",
+    "UNIMPLEMENTED:",
+    "UNSAFE:",
+    "WARNING:",
+    "XXX:",
+    ":→",
+    "→:",
+    ":←",
+    "←",
+    "::"
+  ],
+  // "todo-tree.highlights.foregroundColourScheme": [
+  //   "white",
+  //   "black",
+  //   "black",
+  //   "white",
+  //   "white",
+  //   "white",
+  //   "black"
+  // ],
+  // "todo-tree.highlights.backgroundColourScheme": [
+  //   "red",
+  //   "orange",
+  //   "yellow",
+  //   "green",
+  //   "blue",
+  //   "indigo",
+  //   "violet"
+  // ],
+  "todo-tree.filtering.excludedWorkspaces": [], // new items
+  "todo-tree.filtering.ignoreGitSubmodules": false,
+  "todo-tree.filtering.includedWorkspaces": [], // new items
+  "todo-tree.filtering.includeGlobs": [], // new items
+  "todo-tree.filtering.includeHiddenFiles": false,
+  "todo-tree.filtering.passGlobsToRipgrep": true,
+  "todo-tree.filtering.scopes": [], // new items
+  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  "todo-tree.general.debug": false,
+  "todo-tree.general.enableFileWatcher": true,
+  "todo-tree.general.exportPath": "~/todo-tree-%Y%m%d-%H%M.txt",
+  "todo-tree.general.fileWatcherGlob": "**/*",
+  "todo-tree.general.revealBehaviour": "end of todo",
+  "todo-tree.general.rootFolder": "",
+  "todo-tree.general.showActivityBarBadge": false, // new items
+  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": false, // new items
+  "todo-tree.general.statusBar": "current file",
+  "todo-tree.general.statusBarClickBehaviour": "cycle",
+  "todo-tree.general.tagGroups": {}, // new items
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.highlights.highlightDelay": 100,
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.regex.enableMultiLine": false, // new items
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.regex.regexCaseSensitive": true,
+  "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)",
+  "todo-tree.ripgrep.ripgrep": "",
+  "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",
+  "todo-tree.ripgrep.ripgrepMaxBuffer": 200,
+  "todo-tree.ripgrep.usePatternFile": true,
+  "todo-tree.tree.autoRefresh": true,
+  "todo-tree.tree.buttons.expand": true,
+  "todo-tree.tree.buttons.export": false,
+  "todo-tree.tree.buttons.filter": true,
+  "todo-tree.tree.buttons.groupBySubTag": false, // new items
+  "todo-tree.tree.buttons.groupByTag": true,
+  "todo-tree.tree.buttons.refresh": true,
+  "todo-tree.tree.buttons.reveal": true,
+  "todo-tree.tree.buttons.scanMode": false,
+  "todo-tree.tree.buttons.viewStyle": true,
+  "todo-tree.tree.disableCompactFolders": false,
+  "todo-tree.tree.expanded": true,
+  "todo-tree.tree.filterCaseSensitive": false,
+  "todo-tree.tree.flat": false,
+  "todo-tree.tree.groupedBySubTag": false, // new items
+  "todo-tree.tree.groupedByTag": false, // new items
+  "todo-tree.tree.hideIconsWhenGroupedByTag": false,
+  "todo-tree.tree.hideTreeWhenEmpty": false,
+  "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
+  "todo-tree.tree.scanAtStartup": true,
+  "todo-tree.tree.scanMode": "workspace",
+  "todo-tree.tree.showBadges": true,
+  "todo-tree.tree.showCountsInTree": true,
+  "todo-tree.tree.showCurrentScanMode": true,
+  "todo-tree.tree.sort": true,
+  "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
+  "todo-tree.tree.subTagClickUrl": "", // new items
+  "todo-tree.tree.tagsOnly": true,
+  "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
+  "todo-tree.tree.trackFile": true,
+  // "todo-tree.filtering.excludedWorkspaces": [], // new items
+  // "todo-tree.filtering.ignoreGitSubmodules": false,
+  // "todo-tree.filtering.includedWorkspaces": [], // new items
+  // "todo-tree.filtering.includeGlobs": [], // new items
+  // "todo-tree.filtering.includeHiddenFiles": false,
+  // "todo-tree.filtering.passGlobsToRipgrep": true,
+  // "todo-tree.filtering.scopes": [], // new items
+  // "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  // "todo-tree.general.debug": false,
+  // "todo-tree.general.enableFileWatcher": true,
+  // "todo-tree.general.exportPath": "~/todo-tree-%Y%m%d-%H%M.txt",
+  // "todo-tree.general.fileWatcherGlob": "**/*",
+  // "todo-tree.general.revealBehaviour": "end of todo",
+  // "todo-tree.general.rootFolder": "",
+  // "todo-tree.general.showActivityBarBadge": false, // new items
+  // "todo-tree.general.showIconsInsteadOfTagsInStatusBar": false, // new items
+  // "todo-tree.general.statusBar": "current file",
+  // "todo-tree.general.statusBarClickBehaviour": "cycle",
+  // "todo-tree.general.tagGroups": {}, // new items
+  // "todo-tree.highlights.enabled": true,
+  // "todo-tree.highlights.highlightDelay": 100,
+  // "todo-tree.highlights.useColourScheme": true,
+  // "todo-tree.regex.enableMultiLine": false, // new items
+  // "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  // "todo-tree.regex.regexCaseSensitive": true,
+  // "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)",
+  // "todo-tree.ripgrep.ripgrep": "",
+  // "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",
+  // "todo-tree.ripgrep.ripgrepMaxBuffer": 200,
+  // "todo-tree.ripgrep.usePatternFile": true,
+  // "todo-tree.tree.autoRefresh": true,
+  // "todo-tree.tree.buttons.expand": true,
+  // "todo-tree.tree.buttons.export": false,
+  // "todo-tree.tree.buttons.filter": true,
+  // "todo-tree.tree.buttons.groupBySubTag": false, // new items
+  // "todo-tree.tree.buttons.groupByTag": true,
+  // "todo-tree.tree.buttons.refresh": true,
+  // "todo-tree.tree.buttons.reveal": true,
+  // "todo-tree.tree.buttons.scanMode": false,
+  // "todo-tree.tree.buttons.viewStyle": true,
+  // "todo-tree.tree.disableCompactFolders": false,
+  // "todo-tree.tree.expanded": true,
+  // "todo-tree.tree.filterCaseSensitive": false,
+  // "todo-tree.tree.flat": false,
+  // "todo-tree.tree.groupedBySubTag": false, // new items
+  // "todo-tree.tree.groupedByTag": false, // new items
+  // "todo-tree.tree.hideIconsWhenGroupedByTag": false,
+  // "todo-tree.tree.hideTreeWhenEmpty": false,
+  // "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
+  // "todo-tree.tree.scanAtStartup": true,
+  // "todo-tree.tree.scanMode": "workspace",
+  // "todo-tree.tree.showBadges": true,
+  // "todo-tree.tree.showCountsInTree": true,
+  // "todo-tree.tree.showCurrentScanMode": true,
+  // "todo-tree.tree.sort": true,
+  // "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
+  // "todo-tree.tree.subTagClickUrl": "", // new items
+  // "todo-tree.tree.tagsOnly": true,
+  // "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
+  // #endregion: TODO TREE                                                      !
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: BETTER COMMENTS                                        !
+  /*
+       "problemsErrorIcon.foreground": "#ff3366",
+       "problemsInfoIcon.foreground": "#ffcc55ee",
+       "problemsWarningIcon.foreground": "#ccff33",
+    */
+  // "#F36F"
+  // "#F80B"
+  // "#FF0B"
+  // "#0F0B"
+  // "#39FB"
+  // "#93FB"
+  // "#F36F",
+  // "#F364",
+  // "#CF3F",
+  // "#CF34",
+  // "#39CF",
+  // "#39C4",
+  // "#FB0F",
+  // "#FB04",
+  "better-comments.highlightPlainText": true,
+  "better-comments.multilineComments": true,
+  "better-comments.tags": [
+    // {
+    //   // !
+    //   "tag": "!",
+    //   "color": "#FF8C00",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   // !!
+    //   "tag": "!!",
+    //   "color": "#FF2D00",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   // =
+    //   "tag": "=",
+    //   "color": "#F36B",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   // ~
+    //   "tag": "~",
+    //   "color": "#FF6600DD",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   // -
+    //   "tag": "-",
+    //   "color": "#9BEA",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   "tag": "LOG",
+    //   "color": "#ACF",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // {
+    //   "tag": "TODO:",
+    //   "color": "#FB3",
+    //   "strikethrough": false,
+    //   "backgroundColor": "transparent"
+    // },
+    // #region
+    {
+      // WARNING
+      "tag": "WARNING:",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "WARNING",
+      "color": "#BF2",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ?
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ${
+      "tag": "${",
+      "color": "#D89",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // $
+      "tag": "$",
+      "color": "#f48e41",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // #
+      "tag": "#",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // IIFE
+      "tag": "IIFE",
+      "color": "#FF3",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // private
+      "tag": "private",
+      "color": "#F15",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // protected
+      "tag": "protected",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // TEST_MODULE
+      "tag": "TEST_MODULE",
+      "color": "#6EB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // public
+      "tag": "public",
+      "color": "#FC5D", // "#FA0E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // static
+      "tag": "static",
+      "color": "#F70E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // get
+      "tag": "get",
+      "color": "#6BFC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // set
+      "tag": "set",
+      "color": "#85FE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // %
+      "tag": "%",
+      "color": "#41e2f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // # -c-54442
+      // †
+      "tag": "†",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // +
+      "tag": "+",
+      "color": "#c5f442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // async
+      "tag": "async",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // +@
+      "tag": "+@",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // http
+      "tag": "http",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // &
+      "tag": "&",
+      "color": "#a041f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // todo
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // *
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ¬
+      "tag": "¬",
+      "color": "#ffa0a0",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // async function
+      "tag": "async function",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -
+      "tag": "-",
+      "color": "#9BEA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ====
+      "tag": "//",
+      "color": "#9BEA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ~!---------------------------------------------------------!~
+      "tag": "~!",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#F365"
+    },
+    {
+      // ~$---------------------------------------------------------$~
+      "tag": "~$",
+      "color": "#F80",
+      "strikethrough": false,
+      "backgroundColor": "#F806"
+    },
+    {
+      // ~+---------------------------------------------------------+~
+      "tag": "~+",
+      "color": "#7C2F",
+      "strikethrough": false,
+      "backgroundColor": "#7C25"
+    },
+    {
+      // ~*---------------------------------------------------------*~
+      "tag": "~*",
+      "color": "#FF0B",
+      "strikethrough": false,
+      "backgroundColor": "#FF05"
+    },
+    {
+      // ~#---------------------------------------------------------#~
+      "tag": "~#",
+      "color": "#39F",
+      "strikethrough": false,
+      "backgroundColor": "#39F5"
+    },
+    {
+      // ~&---------------------------------------------------------&~
+      "tag": "~&",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "#93F5"
+    },
+    {
+      // ~@---------------------------------------------------------@~
+      "tag": "~@",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#39C3"
+    },
+    {
+      // ~%---------------------------------------------------------%~
+      "tag": "~%",
+      "color": "#4EF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF5"
+    },
+    {
+      // ~?---------------------------------------------------------?~
+      "tag": "~?",
+      "color": "#5AF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF3"
+    },
+    // SECTION
+    {
+      "tag": "SECTION",
+      "color": "#4EF",
+      "strikethrough": false
+    },
+    /*
+  ~ #F36F
+  ~ #F80B
+  ~ #FF0B
+  ~ #0F0B
+  ~ #39FB
+  ~ #93FB
+      // :©
+      */
+    // :©
+    {
+      "tag": ":©",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#39C6"
+    },
+    // ©
+    {
+      "tag": "©",
+      "color": "#9BE",
+      "strikethrough": false,
+      "backgroundColor": "#9BE3"
+    },
+    // :!
+    {
+      "tag": ":!",
+      "color": "#F20",
+      "strikethrough": false,
+      "backgroundColor": "#F203"
+    },
+    // :~
+    {
+      "tag": ":~",
+      "color": "#FB3",
+      "strikethrough": false,
+      "backgroundColor": "#39C3"
+    },
+    // :@
+    {
+      "tag": ":@",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#39C6"
+    },
+    // :#
+    {
+      "tag": ":#",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "#4AE3"
+    },
+    // :$
+    {
+      "tag": ":$",
+      "color": "#F84",
+      "strikethrough": false,
+      "backgroundColor": "#F843"
+    },
+    // :%
+    {
+      "tag": ":%",
+      "color": "#4EF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF3"
+    },
+    // :?
+    {
+      "tag": ":?",
+      "color": "#39F",
+      "strikethrough": false,
+      "backgroundColor": "#39F3"
+    },
+    // :&
+    {
+      "tag": ":&",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "#93F3"
+    },
+    // :*
+    {
+      "tag": ":*",
+      "color": "#9C7",
+      "strikethrough": false,
+      "backgroundColor": "#9C73"
+    },
+    // :+
+    {
+      "tag": ":+",
+      "color": "#CF2",
+      "strikethrough": false,
+      "backgroundColor": "#CF23"
+    },
+    // !-
+    {
+      "tag": "!-",
+      "color": "#F20",
+      "strikethrough": false,
+      "backgroundColor": "#F203"
+    },
+    // @-
+    {
+      "tag": "@-",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "#39C3"
+    },
+    // #-
+    {
+      "tag": "#-",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "#4AE3"
+    },
+    // $-
+    {
+      "tag": "$-",
+      "color": "#F84",
+      "strikethrough": false,
+      "backgroundColor": "#F843"
+    },
+    // %-
+    {
+      "tag": "%-",
+      "color": "#4EF",
+      "strikethrough": false,
+      "backgroundColor": "#4EF3"
+    },
+    // ?-
+    {
+      "tag": "?-",
+      "color": "#39F",
+      "strikethrough": false,
+      "backgroundColor": "#39F3"
+    },
+    // &-
+    {
+      "tag": "&-",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "#93F3"
+    },
+    // *-
+    {
+      "tag": "*-",
+      "color": "#9C7",
+      "strikethrough": false,
+      "backgroundColor": "#9C73"
+    },
+    // +-
+    {
+      "tag": "+-",
+      "color": "#CF2",
+      "strikethrough": false,
+      "backgroundColor": "#CF23"
+    },
+    // ++
+    {
+      "tag": "++",
+      "color": "#CF2",
+      "strikethrough": false,
+      "backgroundColor": "#CF23"
+    },
+    // :-
+    {
+      "tag": ":-",
+      "color": "#9BE",
+      "strikethrough": false,
+      "backgroundColor": "#9BE3"
+    },
+    {
+      // constructor
+      "tag": "constructor",
+      "color": "#F15E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // private
+      "tag": "private",
+      "color": "#E22E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // protected
+      "tag": "protected",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+    |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+      */
+    {
+      // ――
+      "tag": "――",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // |-···
+      "tag": "|-",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ‽
+      "tag": "‽",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // TEST_MODULE
+      "tag": "TEST_MODULE",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // public
+      "tag": "public",
+      "color": "#FFAA00CC", // "#FA0E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // readonly
+      "tag": "readonly",
+      "color": "#FF6600AA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // static
+      "tag": "static",
+      "color": "#FF6600",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // get
+      "tag": "get",
+      "color": "#6BFC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // set
+      "tag": "set",
+      "color": "#85FE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // async
+      "tag": "async",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // https:
+      "tag": "https:",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // https
+      "tag": "https:",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // http
+      "tag": "http",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // TODO:
+      "tag": "TODO:",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // iterator
+      "tag": "iterator",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+  ~~============================================================================== ~~
+  */
+    /*
+   ―1--------------------------------------------------------------------------- ~~
+      */
+    {
+      // ―1
+      "tag": "―1",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 1―
+      "tag": "1―",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -1
+      "tag": "―1",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 1-
+      "tag": "1-",
+      "color": "#F36F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ―― END
+      "tag": "―― END",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // END
+      "tag": "END",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ERROR
+      "tag": "ERROR",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // "#F36"
+    // "#F80B"
+    // "#FF0B"
+    // "#0F0B"
+    // "#39FB"
+    // "#93FB"
+    /*
+   ―1============================================================================= ~~
+   ―2--------------------------------------------------------------------------- ~~
+      */
+    {
+      // ―2
+      "tag": "―2",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 2―
+      "tag": "2―",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -2
+      "tag": "-2",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 2-
+      "tag": "2-",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // WARNING
+      "tag": "WARNING",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ―― START
+      "tag": "―― START",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // START
+      "tag": "START",
+      "color": "#CF3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+   ―2============================================================================= ~~
+   ―3--------------------------------------------------------------------------- ~~
+      */
+    {
+      // ―3
+      "tag": "―3",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -3
+      "tag": "-3",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 3―
+      "tag": "3―",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 3-
+      "tag": "3-",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // INFO
+      "tag": "INFO",
+      "color": "#FB0F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+   ―3============================================================================= ~~
+   ―4--------------------------------------------------------------------------- ~~
+      */
+    {
+      // ―4
+      "tag": "―4",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 4―
+      "tag": "4―",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -4
+      "tag": "-4",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 4-
+      "tag": "4-",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // HINT
+      "tag": "HINT",
+      "color": "#39CF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+   ―4============================================================================= ~~
+   ―5--------------------------------------------------------------------------- ~~
+      */
+    {
+      // ―5
+      "tag": "―5",
+      "color": "#39FD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+   ―5============================================================================= ~~
+   ―6--------------------------------------------------------------------------- ~~
+      */
+    {
+      // ―6
+      "tag": "―6",
+      "color": "#93FD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+  ―6============================================================================== ~
+  */
+    /*
+  ―6============================================================================== ~
+  ―0---------------------------------------------------------------------------- ~
+  */
+    {
+      // ―0
+      "tag": "―0",
+      "color": "#FFFD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // 0-
+      "tag": "0-",
+      "color": "#FFFD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+  ―0============================================================================== ~
+  */
+    /*
+  ················································································
+  ================================================================================
+  */
+    {
+      // ====
+      "tag": "====",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // ·········································································
+    {
+      // ···
+      "tag": "···",
+      "color": "#FA0C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // !!
+      "tag": "!!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // @
+      "tag": "-@",
+      "color": "#F36B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // #
+      "tag": "#",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // %
+      "tag": "%",
+      "color": "#41e2f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ?
+      "tag": "?",
+      "color": "#39FB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // &
+      "tag": "&",
+      "color": "#93FB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // *
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // _
+      "tag": "_",
+      "color": "#F80B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // +
+      "tag": "+",
+      "color": "#c5f442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // †
+      "tag": "†",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ¬
+      "tag": "¬",
+      "color": "#FF0B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "BUG",
+      "color": "#F15",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "CONSOLE",
+      "color": "#FB3",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "ERROR",
+      "color": "#F36",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "FIXME",
+      "color": "#F80",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "HACK",
+      "color": "#93F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "HINT",
+      "color": "#39C",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "INFO",
+      "color": "#FB0",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "XXX",
+      "color": "#E22",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  // #endregion: BETTER COMMENTS                                               !
+  /*
+  |-····――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  // #region: editor.rulers                                                    !
+  "editor.rulers": [
+    {
+      "column": 2,
+      "color": "#9BE4"
+    },
+    {
+      "column": 70,
+      "color": "#FF8C00BB"
+    },
+    {
+      "column": 80,
+      "color": "#9BEA"
+    },
+    {
+      "column": 81,
+      "color": "#9BEA"
+    },
+    {
+      "column": 84,
+      "color": "#FFFFFF11"
+    },
+    {
+      "column": 89,
+      "color": "#DAF3FF33"
+    },
+    {
+      "column": 96,
+      "color": "#DAF3FF55"
+    },
+    {
+      "column": 104,
+      "color": "#90BCFF77"
+    },
+    {
+      "column": 114,
+      "color": "#90BCFF99"
+    },
+    {
+      "column": 120,
+      "color": "#F368"
+    },
+    {
+      "column": 121,
+      "color": "#F36A"
+    },
+    {
+      "column": 122,
+      "color": "#F80C"
+    },
+    {
+      "column": 123,
+      "color": "#F80F"
+    },
+    {
+      "column": 124,
+      "color": "#FF0D"
+    },
+    {
+      "column": 125,
+      "color": "#FF0F"
+    },
+    {
+      "column": 126,
+      "color": "#0F0F"
+    },
+    {
+      "column": 127,
+      "color": "#0F0D"
+    },
+    {
+      "column": 128,
+      "color": "#39FF"
+    },
+    {
+      "column": 129,
+      "color": "#39FC"
+    },
+    {
+      "column": 130,
+      "color": "#93FA"
+    },
+    {
+      "column": 131,
+      "color": "#93F8"
+    }
+  ],
+  // #endregion: editor.rulers                                                  !
+  "editor.stickyScroll.enabled": true,
+  "scm.diffDecorationsGutterPattern": {
+    "added": true
+  },
+  "editor.renderLineHighlight": "all",
+  "editor.lineNumbers": "on",
+  "editor.glyphMargin": true,
+  "breadcrumbs.enabled": true,
+  "workbench.statusBar.visible": true,
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.openFoldersInNewWindow": "on",
+  "window.openFilesInNewWindow": "default",
+  "terminal.integrated.allowMnemonics": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "peacock.affectTitleBar": false,
+  "peacock.affectSideBarBorder": true,
+  "peacock.affectStatusBar": false,
+  "peacock.affectTabActiveBorder": true,
+  "peacock.affectStatusAndTitleBorders": true,
+  "audioCues.taskCompleted": "on",
+  "audioCues.taskFailed": "on",
+  "typescript.tsc.autoDetect": "off",
+  "debug.confirmOnExit": "always",
+  "debug.toolBarLocation": "docked",
+  "debug.javascript.codelens.npmScripts": "never",
+  "intellicodeApiExamples.loggingLevel": "ALL",
+  "intellicodeApiExamples.python.enabled": true,
+  "intellicodeApiExamples.typescript.enabled": true,
+  "intellicodeCompletions.language.javascript": true,
+  "intellicodeCompletions.language.python": true,
+  "intellicodeCompletions.language.typescript": true,
+  "intellicodeCompletions.loggingLevel": "ALL",
+  "intellicodeCompletions.parseErrorFilter": true,
+  "vscodeintellicode-insiders.IntellicodeDatetimeByExampleEnabled": true,
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "vsintellicode.java.completionsEnabled": true,
+  "vsintellicode.modelDownloadPath": null,
+  "vsintellicode.python.completionsEnabled": true,
+  "vsintellicode.sql.completionsEnabled": true,
+  "vsintellicode.typescript.completionsEnabled": true,
+  "terminal.integrated.automationProfile.linux": {
+    "overrideName": true,
+    "path": "bash",
+    "color": "terminal.ansiGreen",
+    "icon": "server-process"
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "tmux": {
+      "path": "tmux",
+      "color": "terminal.ansiCyan",
+      "icon": "terminal-tmux"
+    },
+    "zsh": {
+      "path": "/bin/zsh",
+      "overrideName": false,
+      "color": "terminal.ansiYellow",
+      "icon": "terminal-linux"
+    },
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "fish": null,
+    "MonoRepoOne": {
+      "path": "zsh",
+      "overrideName": true,
+      "icon": "repo",
+      "color": "terminal.ansiMagenta",
+      "args": [],
+      "env": {}
+    },
+    "pwsh": null
+  },
+  "extensions.experimental.useUtilityProcess": true,
+  "editor.minimap.maxColumn": 70,
+  "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
+  "editor.unicodeHighlight.allowedCharacters": {
+    "α": true,
+    "σ": true
+  },
+  "window.zoomLevel": 2,
+  "typescript.tsserver.log": "off",
+  "workbench.activityBar.visible": true,
+  "workbench.editor.showTabs": true,
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.tsserver.trace": "verbose",
+  "typescript.tsserver.enableTracing": true,
+  "editor.largeFileOptimizations": false,
+  "scm.defaultViewMode": "tree",
+  "conventionalCommits.emojiFormat": "emoji",
+  "conventionalCommits.showEditor": true,
+  "conventionalCommits.lineBreak": "\\n",
+  "workbench.editor.limit.value": 5,
+  "git.statusLimit": 0,
+  "editor.foldingMaximumRegions": 10000,
+  "git.repositoryScanMaxDepth": 2,
+  "terminal.integrated.persistentSessionScrollback": 1000,
+  "gitlens.advanced.repositorySearchDepth": 10,
+  "zenMode.hideLineNumbers": false,
+  "codesnap-plus.boxShadow": "0.5em 1em 2em rgba(10, 5, 30, 0.7)",
+  "codesnap-plus.transparentBackground": true,
+  "codesnap-plus.containerPadding": "3.5em",
+  "javascript.autoClosingTags": false,
+  "typescript.autoClosingTags": false,
+  "problems.decorations.enabled": false,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "html.validate.styles": false,
+  "workbench.editor.closeEmptyGroups": false,
+  "css.validate": false,
+  "html.validate.scripts": false,
+  "less.validate": false,
+  "php.validate.enable": false,
+  "scss.validate": false,
+  "typescript.preferences.includePackageJsonAutoImports": "on"
+}
+//==== © 2021-2022 ==== Luxcium✨ ==== (Benjamin Vincent) ==== MIT License ====-|
+
+// "terminal.integrated.fontSize": 16,
+//   // "editor.fontSize": 20,
+//   // "editor.fontSize": 14,
+//----10--------20--------30--------40--------50--------60--------70--------80 //
+// † Scientia es lux principium✨ ™
+// "editor.fontFamily": "'VictorMono Nerd Font',Victor Mono,'Fira Code iScript', Fira Code",
+// "terminal.integrated.fontFamily": "'TerminessTTF Nerd Font Mono', 'Anonymice NF', '3270Narrow NF', mono",
+// "terminal.integrated.fontFamily": "'VictorMono Nerd Font'",
+// "terminal.integrated.fontWeight": "400",
+// "terminal.integrated.fontWeightBold": "900",
+// ~~>  ***
+/// ",
+// "extensions.experimental.affinity": {
+//   "pub.name": 1
+// },
+// ―1 error
+// ―2 warning
+// ―3 info
+// ―4 hint
+// *.cpuprofile
+// *.cpuprofile
+// test.tsx
+// "[shellscript]": {
+//   "editor.defaultFormatter": "foxundermoon.shell-format"
+// },
+// "todo-tree.general.statusBar": "total",
+// #region: TODO TREE                                                         !
+// "rulerOpacity": 100,
+// "rulerColour": "#FFF",
+// #region: ------------------------------------------------------
+// "type": "tag-and-comment",
+// "borderRadius": "7px",
+// #endregion: ---------------------------------------------------
+// "type": "tag-and-comment",
+// "borderRadius": "7px",
+// BUG: ----------------------------------------------------------
+// TODO: ---------------------------------------------------------
+// FIXME: --------------------------------------------------------
+// SECTION: ------------------------------------------------------
+// "type": "whole-line",
+// "REVIEW NEEDED:" search
+// REVIEW NEEDED: ------------------------------------------------
+// "borderRadius": "7px",
+// HACK: ---------------------------------------------------------
+// XXX: ----------------------------------------------------------
+// INFO: ---------------------------------------------------------
+// WARNING: ------------------------------------------------------
+// ERROR: --------------------------------------------------------
+// UNIMPLEMENTED: ------------------------------------------------
+// UNSAFE: -------------------------------------------------------
+// FUNC DEF: (Special function xyz) ------------------------------
+// FUNC CALL:  (Special function xyz)  ---------------------------
+// "": "#FB7",
+// "type": "tag",
+// RETURNS: ------------------------------------------------------
+// "borderRadius": "7px",
+// CONSOLE: ------------------------------------------------------
+// HARDCODE: -----------------------------------------------------
+// "borderRadius": "7px",
+// "type": "tag-and-comment",
+// "ERROR HANDLER:", -------------------------------------------
+// ERROR HANDLER: ------------------------------------------------
+// "borderRadius": "7px",
+// "type": "tag-and-comment",
+// "ERROR HANDLER:", -------------------------------------------
+// LOG: ----------------------------------------------------------
+// !: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// @: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// #: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// $: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// %: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// ?: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// &: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// *: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// -+ ------------------------------------------------------------
+// "type": "whole-line",
+// "borderRadius": "0px",
+// -: ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// -> ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// -* ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// -? ------------------------------------------------------------
+// "type": "whole-line",
+// "borderRadius": "0px",
+// -& ------------------------------------------------------------
+// "type": "whole-line",
+// -% ------------------------------------------------------------
+// "type": "whole-line",
+// eslint-disable ------------------------------------------------
+// "type": "whole-line",
+// "borderRadius": "0px",
+// -! ------------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// #-| -----------------------------------------------------------
+// "borderRadius": "0px",
+// "type": "whole-line",
+// → -------------------------------------------------------------
+// "type": "whole-line",
+// "borderRadius": "0px",
+// ← -------------------------------------------------------------
+// "type": "text-and-comment",
+// -# ------------------------------------------------------------
+// -$ ------------------------------------------------------------
+// ::
+// :::
+// "todo-tree.highlights.foregroundColourScheme": [
+//   "white",
+//   "black",
+//   "black",
+//   "white",
+//   "white",
+//   "white",
+//   "black"
+// ],
+// "todo-tree.highlights.backgroundColourScheme": [
+//   "red",
+//   "orange",
+//   "yellow",
+//   "green",
+//   "blue",
+//   "indigo",
+//   "violet"
+// ],
+// new items
+// new items
+// new items
+// new items
+// new items
+// new items
+// new items
+// new items
+//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+// new items
+// new items
+// new items
+// new items
+// "todo-tree.filtering.excludedWorkspaces": [], // new items
+// "todo-tree.filtering.ignoreGitSubmodules": false,
+// "todo-tree.filtering.includedWorkspaces": [], // new items
+// "todo-tree.filtering.includeGlobs": [], // new items
+// "todo-tree.filtering.includeHiddenFiles": false,
+// "todo-tree.filtering.passGlobsToRipgrep": true,
+// "todo-tree.filtering.scopes": [], // new items
+// "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+// "todo-tree.general.debug": false,
+// "todo-tree.general.enableFileWatcher": true,
+// "todo-tree.general.exportPath": "~/todo-tree-%Y%m%d-%H%M.txt",
+// "todo-tree.general.fileWatcherGlob": "**/*",
+// "todo-tree.general.revealBehaviour": "end of todo",
+// "todo-tree.general.rootFolder": "",
+// "todo-tree.general.showActivityBarBadge": false, // new items
+// "todo-tree.general.showIconsInsteadOfTagsInStatusBar": false, // new items
+// "todo-tree.general.statusBar": "current file",
+// "todo-tree.general.statusBarClickBehaviour": "cycle",
+// "todo-tree.general.tagGroups": {}, // new items
+// "todo-tree.highlights.enabled": true,
+// "todo-tree.highlights.highlightDelay": 100,
+// "todo-tree.highlights.useColourScheme": true,
+// "todo-tree.regex.enableMultiLine": false, // new items
+// "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+// "todo-tree.regex.regexCaseSensitive": true,
+// "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)",
+// "todo-tree.ripgrep.ripgrep": "",
+// "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",
+// "todo-tree.ripgrep.ripgrepMaxBuffer": 200,
+// "todo-tree.ripgrep.usePatternFile": true,
+// "todo-tree.tree.autoRefresh": true,
+// "todo-tree.tree.buttons.expand": true,
+// "todo-tree.tree.buttons.export": false,
+// "todo-tree.tree.buttons.filter": true,
+// "todo-tree.tree.buttons.groupBySubTag": false, // new items
+// "todo-tree.tree.buttons.groupByTag": true,
+// "todo-tree.tree.buttons.refresh": true,
+// "todo-tree.tree.buttons.reveal": true,
+// "todo-tree.tree.buttons.scanMode": false,
+// "todo-tree.tree.buttons.viewStyle": true,
+// "todo-tree.tree.disableCompactFolders": false,
+// "todo-tree.tree.expanded": true,
+// "todo-tree.tree.filterCaseSensitive": false,
+// "todo-tree.tree.flat": false,
+// "todo-tree.tree.groupedBySubTag": false, // new items
+// "todo-tree.tree.groupedByTag": false, // new items
+// "todo-tree.tree.hideIconsWhenGroupedByTag": false,
+// "todo-tree.tree.hideTreeWhenEmpty": false,
+// "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
+// "todo-tree.tree.scanAtStartup": true,
+// "todo-tree.tree.scanMode": "workspace",
+// "todo-tree.tree.showBadges": true,
+// "todo-tree.tree.showCountsInTree": true,
+// "todo-tree.tree.showCurrentScanMode": true,
+// "todo-tree.tree.sort": true,
+// "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
+// "todo-tree.tree.subTagClickUrl": "", // new items
+// "todo-tree.tree.tagsOnly": true,
+// "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
+// #endregion: TODO TREE                                                      !
+// #region: BETTER COMMENTS                                        !
+// "#F36F"
+// "#F80B"
+// "#FF0B"
+// "#0F0B"
+// "#39FB"
+// "#93FB"
+// "#F36F",
+// "#F364",
+// "#CF3F",
+// "#CF34",
+// "#39CF",
+// "#39C4",
+// "#FB0F",
+// "#FB04",
+// {
+//   // !
+//   "tag": "!",
+//   "color": "#FF8C00",
+//   "strikethrough": false,
+//   "backgroundColor": "transparent"
+// },
+// {
+//   // !!
+//   "tag": "!!",
+//   "color": "#FF2D00",
+//   "strikethrough": false,
+//   "backgroundColor": "transparent"
+// },
+// {
+//   // =
+//   "tag": "=",
+//   "color": "#F36B",
+//   "strikethrough": false,
+//   "backgroundColor": "transparent"
+// },
+// {
+//   // ~
+//   "tag": "~",
+//   "color": "#FF6600DD",
+//   "strikethrough": false,
+//   "backgroundColor": "transparent"
+// },
+// {
+//   // -
+//   "tag": "-",
+//   "color": "#9BEA",
+//   "strikethrough": false,
+//   "backgroundColor": "transparent"
+// },
+// {
+//   "tag": "LOG",
+//   "color": "#ACF",
+//   "strikethrough": false,
+//   "backgroundColor": "transparent"
+// },
+// {
+//   "tag": "TODO:",
+//   "color": "#FB3",
+//   "strikethrough": false,
+//   "backgroundColor": "transparent"
+// },
+// #region
+// WARNING
+// ?
+// ${
+// $
+// #
+// IIFE
+// private
+// protected
+// TEST_MODULE
+// public
+// "#FA0E",
+// static
+// get
+// set
+// %
+// # -c-54442
+// †
+// +
+// async
+// +@
+// http
+// &
+// todo
+// *
+// ¬
+// async function
+// -
+// ====
+//",
+// ~!---------------------------------------------------------!~
+// ~$---------------------------------------------------------$~
+// ~+---------------------------------------------------------+~
+// ~*---------------------------------------------------------*~
+// ~#---------------------------------------------------------#~
+// ~&---------------------------------------------------------&~
+// ~@---------------------------------------------------------@~
+// ~%---------------------------------------------------------%~
+// ~?---------------------------------------------------------?~
+// SECTION
+// :©
+// :©
+// ©
+// :!
+// :~
+// :@
+// :#
+// :$
+// :%
+// :?
+// :&
+// :*
+// :+
+// !-
+// @-
+// #-
+// $-
+// %-
+// ?-
+// &-
+// *-
+// +-
+// ++
+// :-
+// constructor
+// private
+// protected
+// ――
+// |-···
+// ‽
+// TEST_MODULE
+// public
+// "#FA0E",
+// readonly
+// static
+// get
+// set
+// async
+// https:
+// https
+// http
+// TODO:
+// iterator
+// ―1
+// 1―
+// -1
+// 1-
+// ―― END
+// END
+// ERROR
+// "#F36"
+// "#F80B"
+// "#FF0B"
+// "#0F0B"
+// "#39FB"
+// "#93FB"
+// ―2
+// 2―
+// -2
+// 2-
+// WARNING
+// ―― START
+// START
+// ―3
+// -3
+// 3―
+// 3-
+// INFO
+// ―4
+// 4―
+// -4
+// 4-
+// HINT
+// ―5
+// ―6
+// ―0
+// 0-
+// ====
+// ·········································································
+// ···
+// !!
+// @
+// #
+// %
+// ?
+// &
+// *
+// _
+// +
+// †
+// ¬
+// #endregion: BETTER COMMENTS                                               !
+// #region: editor.rulers                                                    !
+// #endregion: editor.rulers                                                  !
+//==== © 2021-2022 ==== Luxcium✨ ==== (Benjamin Vincent) ==== MIT License ====-|
+
+/*
+
+  "window.openFoldersInNewWindow": "on",
+  "window.openFilesInNewWindow": "default",
+  "terminal.integrated.allowMnemonics": true,
+
+
+
+*/

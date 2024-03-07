@@ -1,0 +1,13 @@
+Sure, here are some suggestions for naming the output folders for each context:
+
+build: This context is typically used during development, so you might use a simple naming convention that makes it clear that this is a build output. For example, you might use build/ or build-output/.
+
+dist: This context is often used for distribution or deployment, so you might use a naming convention that reflects that. For example, you might use dist/, distribution/, or deploy/.
+
+out: This context is often used for output from the TypeScript compiler, so you might use a naming convention that reflects that. For example, you might use out/, output/, or compiled/.
+
+lib: This context is often used for library projects that are meant to be consumed by other projects, so you might use a naming convention that reflects that. For example, you might use lib/, library/, or pkg/ (short for "package").
+
+public: This context is often used for static assets that are meant to be served by a web server, so you might use a naming convention that reflects that. For example, you might use public/, static/, or www/.
+
+These are just a few examples, and you can modify the naming convention to fit your specific needs and preferences. The key is to use a clear and consistent naming convention that reflects the purpose of the output folder.

@@ -1,0 +1,84 @@
+Start by meticulously analyzing the source text. Your focus should be on understanding its tone, style, message, and structure.
+
+While summarizing, ensure to retain the text's original tone and writing style. This is crucial for the resulting summary to be coherent with the original content.
+
+Construct a first-pass summary of the text that distills the core ideas without losing any critical information. Your goal here is not merely to condense but to recreate the original content in a shorter form.
+
+Clearly inform the user of your intent and the summarization process. Avoid explaining the text but make it evident that your aim is to create a coherent, condensed version of the original content.
+
+Develop your first-pass summary into a complete one. Include all parts from the original content that have not been covered in the initial summary.
+
+Ensure your comprehensive summary revolves around the essential points identified in the first pass. Maintain the original structure of ideas and facts in the summarized version.
+
+Conduct a second-pass summary. This process should refine the comprehensive summary to retain the essential narrative and tone of the original text.
+
+Deliver the final summary to the user. This summary should be a true reflection of the original text, albeit shorter, but with the same tone, style, and containing all necessary information.
+
+Assure the user that they will appreciate this final product, as it mirrors the original text closely in terms of tone, style, and information, but in a condensed form.
+
+
+old =========================
+Begin by analyzing the text at hand. Focus on understanding its purpose and the underlying message it aims to convey.
+
+Execute a first-pass summary of the text. Condense the essential ideas without losing the core of the message.
+
+Report your intent and method to the user. Explain that you are undertaking a process of summarizing and that this process will benefit them.
+
+Transform your first-pass summary into a comprehensive summary. This summary should incorporate all parts from the original content that are pertinent and were not included in the initial summarization.
+
+Ensure to revolve the comprehensive summary around the important parts that were initially summarized. Clarify to the user that this is what you are doing.
+
+Conduct a second-pass summary. This should be a complete summary that uses the synthesis from the first pass as its foundation.
+
+Upon completion, present the final summary to the user. Ensure that it maintains the essence of the original text while being concise and easily digestible.
+
+Finally, reassure the user that they will be pleased with this final product, as it has retained the important parts of the original text but in a summarized, easy-to-understand format.
+
+BAD ==========================
+
+1. Analyze the source text discussing how to tell if a function is pure.
+2. The test for a function's purity is if it can be memoized.
+3. Memoization means the function's values can be cached in a lookup table to be quickly accessed later.
+4. Functions with finite values, like Boolean and ASCII characters, are easily tabulated and therefore pure.
+5. Despite this, functions on integers and strings, which are not finitely valued, cannot typically be memoized, making them impure.
+6. It is difficult to program using only pure functions, but it is possible to describe side effects and decompose problems into simpler blocks.
+7. Ultimately, the goal is to find the simplest building blocks from which to compose more complex systems using composability.
+
+BETTER (?) ==================================
+
+1. To determine if a function is pure, you can test it by memoising it and creating a lookup table for its values.
+2. Functions with finite types, like boolean, are easy to tabulate, while those on integers or strings cannot be tabulated due to resource limitations.
+3. Non-pure functions, like `getChar`, cannot be memoised and cannot be considered pure.
+4. Although we need side effects for programming, we can layer it on top of pure functions.
+5. The goal is to find the lowest level of building blocks to create more complex functions through composability.
+6. Decompose complex problems into simple blocks and recompose from there.
+
+
+***
+When assessing the purity of a function, a good test you can perform is memoisation and creating a lookup table for its values. Through this process, we engage a finite type, namely boolean, which is easy to tabulate. However, regarding integer or string functions, they cannot be tabulated due to resource constraints. For example, a function like `getChar` cannot be memoised as it does not retain any value to be stored for future lookup. Therefore, it cannot be considered a pure function.
+
+It's worth highlighting that although we require side effects for programming, we can still build it on top of pure functions. Our ultimate goal is to uncover the basic building blocks of low-level abstractions for creating complex functions through composability. In essence, we need to decompose complicated problems into simpler and more manageable blocks, and then compose them to achieve our desired result. By following this pattern, we can design reliable systems that are more coherent, fluid, and efficient.
+
+//=============================================
+
+1) Conduct an in-depth analysis of the original text. Pay close attention to the tone, style, message, and structure of the content.
+
+2) Begin the process of paraphrasing rather than summarizing. This involves creating a new version of the text that conveys the same ideas but using different words and sentence structures.
+
+3) In your paraphrasing, ensure you retain the original tone and writing style. This is critical to making the paraphrased version interchangeable with the original content.
+
+4) Construct a first-pass paraphrase that captures the core ideas without omitting any essential information. Aim to recreate the content in a more condensed form but without losing any crucial details.
+
+7) Avoid explaining the text to the user. Instead, your paraphrased content should mirror the original, making it clear that your goal is to create a concise, coherent version of the original. It must use the same tone as the longer version
+
+Develop your first-pass paraphrase into a complete one, ensuring that all parts from the original content are covered in the new version.
+
+Center your final paraphrase around the essential points identified in the first pass, maintaining the original structure of ideas and facts.
+
+Conduct a second-pass paraphrase. This process should refine the first-pass paraphrase to better retain the essential narrative, tone, and style of the original text.
+
+Present the final paraphrase to the user. This version should accurately reflect the original text, maintaining the same tone and style, and containing all necessary information but in a more condensed form.
+
+Reassure the user that this final product will meet their expectations, as it mirrors the original text closely in terms of tone, style, and information, but in a condensed form.
+
+//====================================================================

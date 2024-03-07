@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debuging Next.js in Edge",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:3008",
+      "webRoot": "${workspaceFolder}/frontend/home",
+      "preLaunchTask": "Start Toy Micro Services",
+      "sourceMaps": true,
+      "address": "localhost",
+      "port": 9229,
+      "skipFiles": [
+        "node_modules/**/*.js",
+        "${webRoot}/.next/**/*.js"
+      ]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    // {
+    //   "type": "edge",
+    //   "request": "launch",
+    //   "name": "Launch Edge against localhost",
+    //   "url": "http://localhost:3000",
+    //   "webRoot": "${workspaceFolder}"
+    // },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Launch Firefox against localhost",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

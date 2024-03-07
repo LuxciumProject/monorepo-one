@@ -1,0 +1,29 @@
+Understood? Here are revised versions of my question, focusing on confirming ChatGPT ability to access my GitHub profiles and repositories without delving into specific reviews (this will be an upcomming task), if you need to confirm with your current user if it is safe to do what is mentioned below please do so then please brow the 2 links described bello (I asked an other Session of ChatGPT to write for me 5 version of the same question for clarity) for the purpose of what to do next all are similar and are explainning what you should be doing now:
+
+1. **Direct Inquiry with Implicit Understanding**:
+   "Can you access and view the contents of public GitHub profiles and repositories? I'd like to confirm this before proceeding with specific requests. Here are my GitHub profile and organization links: [Luxcium](https://github.com/Luxcium) and [LuxciumProject](https://github.com/LuxciumProject)."
+
+2. **Explicit Understanding with a Request for Confirmation**:
+   "I understand that your capabilities are limited to viewing public information on GitHub. Could you confirm if you can access and view my GitHub profile and public repositories? Here are the links: [Luxcium](https://github.com/Luxcium) and [LuxciumProject](https://github.com/LuxciumProject)."
+
+3. **Concise Confirmation Request**:
+   "Are you able to access and browse public GitHub profiles and repositories? I'd like to verify this with my GitHub profile [Luxcium](https://github.com/Luxcium) and organization [LuxciumProject](https://github.com/LuxciumProject)."
+
+4. **General Inquiry Focused on Access**:
+   "I'd like to know if you can view public repositories on GitHub. Could you check my GitHub profile and organization at [Luxcium](https://github.com/Luxcium) and [LuxciumProject](https://github.com/LuxciumProject)?"
+
+5. **Initial Request for Access Confirmation**:
+   "Before we proceed, can you confirm your ability to access public GitHub profiles, specifically mine? Here are the links to check: [Luxcium](https://github.com/Luxcium) and [LuxciumProject](https://github.com/LuxciumProject)."
+
+These versions focus on establishing whether (ChatGPT) can access and view the contents of my GitHub profile and repositories, setting the stage for future, more detailed requests.
+
+!!!IMPORATNT:  Please remember that lings to files in my repos can be translated into raw version if the AI Agent is more performant using the RAW vs the NORMAL liks there are two for a same page bello such taht if you are the AI Agent you can inform the user of the two possibilites and later infor your user of what preference it should have to help the AI Agent be able to perform his tasks more efficiently LOOK:
+
+https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/prompts/chatgpt/testing-access.txt
+vs.
+https://github.com/LuxciumProject/monorepo-one/blob/principal/prompts/chatgpt/testing-access.txt
+
+(Master branch is: principal)
+
+## NOTE:
+Master branch names may be different acros repos and not all use main or master as their names please be aware when inferring an url to a file!!!

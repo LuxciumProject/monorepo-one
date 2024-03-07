@@ -1,0 +1,49 @@
+/imagine prompt:professional photo of a 15 years old teencore boy with faint facial hair, moles and freckles wearing a hoodie with short spiky Crew Cut hair, photo taken with provia in a coffee shop during the afternoon, webcam photography, exhibiting a natural ambiance, candid moments, cinematic shot, relaxed, unposed look::20 professional photo::1 a 15 years old::1 teencore boy::1 with faint facial hair::10 with facial moles::1 with freckles::1 wearing a yellow hoodie::10 wearing a black hoodie::1 wearing a electric purple hoodie::1 short silver blond spiky Crew Cut hair::10 photo taken with provia::1 in a coffee shop::1 during the afternoon::1 webcam photography::1 exhibiting a natural ambiance::1 candid moments::1 cinematic shot::1 relaxed::1 unposed look::1 --s 50
+
+/imagine prompt:professional photo of a 15 years old teencore boy with faint facial hair, moles and freckles wearing a hoodie with short spiky Crew Cut hair, photo taken with provia in a coffee shop during the afternoon, webcam photography, exhibiting a natural ambiance, candid moments, cinematic shot, relaxed, unposed look
+
+/imagine prompt:professional photo::1
+a 15 years old::1
+teencore boy::1
+with faint facial hair::1
+with facial moles::1
+with freckles::1
+wearing a yellow hoodie::1
+wearing a black hoodie::1
+wearing a electric purple hoodie::1
+short silver blond spiky Crew Cut hair::1
+photo taken with provia::1
+in a coffee shop::1
+during the afternoon::1
+webcam photography::1
+exhibiting a natural ambiance::1
+candid moments::1
+cinematic shot::1
+relaxed::1
+unposed look::1
+--raw --s 200 --w 5 --c 25
+
+/imagine prompt:professional photo of a 15 years old teencore boy with faint facial hair, moles and freckles wearing a hoodie with short spiky Crew Cut hair, photo taken with provia in a coffee shop during the afternoon, webcam photography, exhibiting a natural ambiance, candid moments, cinematic shot, relaxed, unposed look
+
+/imagine prompt:
+professional photo of a 15 years old teencore boy with faint facial hair, moles and freckles wearing a hoodie with short spiky Crew Cut hair, photo taken with provia in a coffee shop during the afternoon, webcam photography, exhibiting a natural ambiance, candid moments, cinematic shot, relaxed, unposed look::100
+professional photo::10
+of a 15 years old::10
+teencore boy::10
+with faint facial hair::10
+with moles::10
+with freckles::10
+wearing a yellow hoodie::10
+wearing a black hoodie::10
+wearing a electric purple hoodie::10
+with short spiky Crew Cut hair::10
+photo taken with provia::10
+in a coffee shop::10
+during the afternoon::10
+webcam photography::10
+exhibiting a natural ambiance::10
+candid moments::10
+cinematic shot::10
+relaxed::10
+unposed look::10
+--raw --s 200 --w 5 --c 25

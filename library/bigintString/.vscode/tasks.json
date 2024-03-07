@@ -1,0 +1,38 @@
+// {
+//   "version": "2.0.0",
+//   "presentation": {
+//     "clear": true,
+//     "close": true,
+//     "echo": true,
+//     "focus": false,
+//     "panel": "dedicated",
+//     "reveal": "silent",
+//     "revealProblems": "onProblem",
+//     "showReuseMessage": false
+//   },
+//   "tasks": [
+//     {
+//       "label": "Build/library/bigintStringX",
+//       "detail": "Build task for bigintString",
+//       "isBackground": false,
+//       "group": {
+//         "kind": "build",
+//         "isDefault": false
+//       },
+//       "runOptions": {
+//         "reevaluateOnRerun": true,
+//         "instanceLimit": 1,
+//         "runOn": "default"
+//       },
+//       "type": "shell",
+//       "options": {
+//         "cwd": "${workspaceFolder}"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "run",
+//         "build"
+//       ]
+//     },
+//   ]
+// }

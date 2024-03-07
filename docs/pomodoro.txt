@@ -1,0 +1,36 @@
+
+&|  1.  & 20 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|  2.  & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+%|      % 15 minutes break |  2h 05             |                    |
+ |                         |                    |                    |
+&|  3.  & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|  4.  & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+$|      $ 30 minutes break | 4h 30              |                    |
+ |                         |                    |                    |
+&|  5.  & 20 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|  6.  & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+%|      % 15 minutes break | 6h 45              |                    |
+ |                         |                    |                    |
+&|  7.  & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|  8.  & 25 minutes       |                    |                    |
+*|      * 05 minutes break  |                    |                    |
+&|      & 25 minutes       |                    |                    |
+!!      !! END !!          | 8h 45              |                    |

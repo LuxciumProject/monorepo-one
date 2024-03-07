@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Path: net-dist-nodes.sh
+
+# Activate the Conda environment
+conda activate ai_lab
+
+# Navigate to the ComfyUI directory
+# Navigate to the ComfyUI directory
+cd /projects/sdxl-workspace/ComfyUI/ && (
+  # Create a new tmux session named 'comfyui_session'
+  tmux new-session -d -s comfyui_session -n 'ComfyUI'
+
+  # Start the first ComfyUI instance on GPU 0 in the first pane
+  tmux send-keys -t comfyui_session 'conda activate ai_lab' C-m
+  tmux send-keys -t comfyui_session 'cd /projects/sdxl-workspace/ComfyUI/' C-m
+  tmux send-keys -t comfyui_session 'python main.py --port 8089 --cuda-device 0' C-m
+
+  # Split the window into two panes
+  tmux split-window -h -t comfyui_session
+
+  # Start the second ComfyUI instance on GPU 1 in the second pane
+  tmux send-keys -t comfyui_session:0.1 'conda activate ai_lab' C-m
+  tmux send-keys -t comfyui_session:0.1 'cd /projects/sdxl-workspace/ComfyUI/' C-m
+  tmux send-keys -t comfyui_session:0.1 'python main.py --port 8189 --cuda-device 1' C-m
+
+  # Attach to the tmux session
+  tmux attach -t comfyui_session
+)

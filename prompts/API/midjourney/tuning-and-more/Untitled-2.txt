@@ -1,0 +1,36 @@
+
+I selected consecutive elements on the Right (Low Key is on the Right)
+https://tuner.midjourney.com/hWMYY3C
+space, nebula --style 7h8MLvUaGYqg (16 firsts Low Key)
+space, nebula --style 4giBp3meBe   (8 firsts Low Key)
+space, nebula --style 3fdD3baB6  (4 firsts Low Key)
+space, nebula --style lnHl5xhO   (2 firsts Low Key)
+space, nebula --style 6oxmA4b2 ((1) first Low Key)
+
+I selected consecutive elements on the Left (High Key is on the Left)
+https://tuner.midjourney.com/hWMYY3C
+space, nebula --style 3DzoosmrdBMw  (16 first High Key)
+space, nebula --style 28a06SyeS0  (8 first High Key)
+space, nebula --style 1DjdSsHRW (4 first High Key)
+space, nebula --style bog1pTdi (2 first High Key)
+space, nebula --style 3TG2a9EU  ((1) first High Key)
+
+
+space, nebula --style 3DzoosmrdBMw  (16 first High Key (selected on the Left))
+space, nebula --style 7h8MLvUaGYqg (16 first Low Key (selected on the right))
+
+space, nebula --style 28a06SyeS0  (8 first High Key (selected on the Left))
+space, nebula --style 4giBp3meBe   (8 first Low Key (selected on the right))
+
+space, nebula --style 1DjdSsHRW (4 first High Key (selected on the Left))
+space, nebula --style 3fdD3baB6  (4 first Low Key (selected on the right))
+
+space, nebula --style bog1pTdi (2 first High Key (selected on the Left))
+space, nebula --style lnHl5xhO   (2 first Low Key (selected on the right))
+
+space, nebula --style 3TG2a9EU  ((1) first High Key (selected on the Left))
+space, nebula --style 6oxmA4b2 ((1) first Low Key (selected on the right))
+
+
+
+https://tuner.midjourney.com/hWMYY3C

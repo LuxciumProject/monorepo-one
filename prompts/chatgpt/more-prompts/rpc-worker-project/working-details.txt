@@ -1,0 +1,79 @@
+I create from scratch a custom multimodal server to act as a dispatch.
+It's a complicated, powerfull service built with typescript (nodeJS).
+Clients communicate with this multimodal server over http connections.
+Clients uses curl to send commands to the server to perform tasks.
+The server uses its own custom "jsonrpc 2.0" messages to communicate.
+The server is a middle-point and dispatch client requests to actors.
+The actors are computational units connected via TCP to the server.
+The server communicate with the actors using custom "jsonrpc 2.0".
+The actors are entities that can be created locally by the server.
+But actors can be created also remotely and would use TCP to connect.
+Actors are used to abstract away complexity of concurrent programming.
+The server use a verry simple mechanism to send one way messages.
+Since each message have a send and forget nature they have ids.
+The diferents kinds of id in one message are use to identify various
+stakesholders and to send replies to the caller.
+To keep track of the caller javascript maps object are used.
+To keep track of actors in pool javascript set object are used.
+Actors are used to abstract away workers which are an other.
+The actors abstract away the workers that recive task via messages.
+server.ts manage the local actors and connections from remote actors.
+RpcWorkerPool.ts file contain RpcWorkerPool class that manges workers.
+
+
+
+Actors communicate asynchronously through message passing, without blocking
+
+ like on the same machine other actors providers can also connect via TCP to the server  and I need help to understand each part as an AI language model I want you to be a senior developer and act as a team leader.
+
+ Actors are independent computational units that communicate asynchronously through message passing, allowing for concurrent and fault-tolerant programming.
+
+ Actors are also an abstraction that hides the underlying complexity of concurrent programming by providing a simple and intuitive model where each actor maintains its own state and can only communicate with other actors through messages, making it easier to reason about and test complex systems.
+
+Actors are fault-tolerant because they operate independently
+Actors encapsulate their own state, errors or failures wouldn't spread
+Problems in one actor do not affect the rest of the system.
+
+Additionally, actors can handle errors by retrying or forwarding messages, supervising other actors, or even creating new actors to replace failed ones, which makes them a robust and resilient solution for building distributed systems.
+
+Actors communicate asynchronously through message passing, allowing them to operate independently without blocking or waiting for a response, which makes them suitable for building concurrent and distributed systems that require high scalability and fault-tolerance.
+
+In an actor system, communication between actors is asynchronous, meaning that actors can send messages to each other without blocking, waiting, or knowing the exact timing of the message processing by the receiver.
+
+When an actor receives a message, it puts the message in its mailbox and continues executing its own logic. The actor's mailbox acts as a buffer that stores messages until the actor is ready to process them.
+
+The message passing is one-way, and actors can communicate with multiple actors simultaneously by sending different messages to different mailboxes.
+
+Overall, asynchronous communication between actors allows for more efficient utilization of system resources, better scalability, and improved fault-tolerance, making it a popular paradigm for building distributed systems.
+
+09:05 am: Using TypeScript in a custom project I need your help to review my code.
+I have made the code it is working but is hard to maintain and very complex. This is a very complicated project using many simple tools with complex interactions the simplicity of each parts make it robust but the complexity of their interaction make it very difficult to maintain and it is not clear if the code will be resilient to small changes to its structure...
+
+I create from scratch a custom multimodal server to act as a dispatch.
+It's a complicated, powerfull service built with typescript (nodeJS).
+Clients communicate with this multimodal server over http connections.
+Clients uses curl to send commands to the server to perform tasks.
+The server uses its own custom "jsonrpc 2.0" messages to communicate.
+The server is a middle-point and dispatch client requests to actors.
+The actors are computational units connected via TCP to the server.
+The server communicate with the actors using custom "jsonrpc 2.0".
+The actors are entities that can be created locally by the server.
+But actors can be created also remotely and would use TCP to connect.
+Actors are used to abstract away complexity of concurrent programming.
+The server use a verry simple mechanism to send one way messages.
+Since each message have a send and forget nature they have ids.
+The diferents kinds of id in one message are use to identify various
+stakesholders and to send replies to the caller.
+To keep track of the caller javascript maps object are used.
+To keep track of actors in pool javascript set object are used.
+Actors are used to abstract away workers which are an other.
+The actors abstract away the workers that recive task via messages.
+server.ts manage the local actors and connections from remote actors.
+RpcWorkerPool.ts file contain RpcWorkerPool class that manges workers.
+A files actor.js is available to manage remote connections.
+the file servers.ts have 3 parts one to manage http to get job requests
+an other one is tcp server to get actors to request for job to do.
+a last part is an actor for local usage that do not require tcp connetcion
+actors play a role and they assign the job to a real worker from the worker pool.
+worker have a list of command they can do and it would be important to make sure remote workers have access to exactly the same implementation or if the implementation it must have a mechanism to strictly conform to some interface or other to make same inputs produce same outputs.
+it is permitted that those commands have side effects too so it shall be of the same nature or same outcome regardless if it was attributed to a local worker or remote worker the code that is already written shall be review by you as an assistant

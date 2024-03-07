@@ -1,0 +1,39 @@
+/imagine prompt:photo of a teencore boy with blue hair
+/imagine prompt:photo of a teencore boy with blue eyes
+/imagine prompt:photo of a teencore boy with blue hoodie
+/imagine prompt:photo of a teencore boy with green hair
+/imagine prompt:photo of a teencore boy with green eyes
+/imagine prompt:photo of a teencore boy with green hoodie
+/imagine prompt:photo of a teencore boy with red hair
+/imagine prompt:photo of a teencore boy with red eyes
+/imagine prompt:photo of a teencore boy with red hoodie
+/imagine prompt:photo of a teencore boy with yellow hair
+/imagine prompt:photo of a teencore boy with yellow eyes
+/imagine prompt:photo of a teencore boy with yellow hoodie
+/imagine prompt:photo of a teencore boy with cyan hair
+/imagine prompt:photo of a teencore boy with cyan eyes
+/imagine prompt:photo of a teencore boy with cyan hoodie
+/imagine prompt:photo of a teencore boy with magenta hair
+/imagine prompt:photo of a teencore boy with magenta eyes
+/imagine prompt:photo of a teencore boy with magenta hoodie
+/imagine prompt:photo of a teencore boy with purple hair
+/imagine prompt:photo of a teencore boy with purple eyes
+/imagine prompt:photo of a teencore boy with purple hoodie
+/imagine prompt:photo of a teencore boy with gray hair
+/imagine prompt:photo of a teencore boy with gray eyes
+/imagine prompt:photo of a teencore boy with gray hoodie
+/imagine prompt:photo of a teencore boy with orange hair
+/imagine prompt:photo of a teencore boy with orange eyes
+/imagine prompt:photo of a teencore boy with orange hoodie
+/imagine prompt:photo of a teencore boy with pink hair
+/imagine prompt:photo of a teencore boy with pink eyes
+/imagine prompt:photo of a teencore boy with pink hoodie
+/imagine prompt:
+
+ training data only goes up until April 2023.
+Luxcium — Aujourd’hui à 22:19
+but if instead I want to have a tuner for «photo of a teencore boy with green eyes» (https://tuner.midjourney.com/crXll1H)  it is good because this would not be the same and it would be ok to do a new one ? It would also be ok also to do one for «photo of a teencore boy with green hoodie» (https://tuner.midjourney.com/qE1T48O)  because it is not the same thing that has to be green but would be waistful to do something like «photo of a teencore boy wearing orange hoodie» (https://tuner.midjourney.com/aFPgN5y) because in my specific case Blue Red or Green is similar enough... but for red eyes (which is not a natural eye colour compare to green) it would then be more useful to get one (which I did not do as of the writing of this message)...
+Luxcium — Aujourd’hui à 22:22
+if you read my previous message it was obvious that I was about to make the red eyes tuner 😅  there it is: «photo of a teencore boy with red eyes» (https://tuner.midjourney.com/P4i81I1)
+
+so ok to recap... if I am interested in doing a tuner like «cinematic photo of a teencore boy wearing a hoodie» (https://tuner.midjourney.com/6maCqu6) and then also one like «candid photo of a teencore boy wearing a hoodie» (https://tuner.midjourney.com/X0Es2Tp) it would be because I do not really understand the thing and would be wasting my minutes but not as much as if I would have also made one for lets say something like «webcam photo of a teencore boy wearing a hoodie» (https://tuner.midjourney.com/OWnf9Iy) because **«these prompts are semantically similar»**

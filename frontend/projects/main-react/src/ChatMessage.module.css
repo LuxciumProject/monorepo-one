@@ -1,0 +1,12 @@
+/* ChatMessage.module.css */
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message .content {
+  font-size: 16px;
+  line-height: 1.5;
+}

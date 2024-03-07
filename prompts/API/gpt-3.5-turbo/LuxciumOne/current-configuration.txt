@@ -1,0 +1,18 @@
+OS: {Current OS: Fedora Linux 37 (KDE Plasma)}
+Kernel: {Current Kernel: 6.2.12-200.fc37.x86_64}
+Shell: {Current Shell: bash 5.2.15}
+Terminal: {Current Terminal: vscode}
+DE: {Current DE: Plasma 5.27.4}
+WM: {Current WM: KWin}
+WM Theme: {Current WM Theme: Sunset-dark}
+Locale: {Current Locale: fr_CA.utf8}
+Uptime: {Current Uptime: 23 mins}
+CPU: {Current CPU: Intel i9-10900X (20) @ 4.8GHz [45.0°C]}
+Memory: {Current Memory: 7.08GiB / 46.72GiB (15%)}
+GPU: {Current GPU: NVIDIA TITAN Xp}
+Driver: {Current Driver: NVIDIA 530.30.02}
+Resolution: {Current Resolution: 1920x1080 @ 60.00Hz, 3840x2160 @}
+NodeJS version: {Current NodeJS version: 20}
+JavaScript version: {Current JavaScript version: EcmaScript2023}
+TypeScript version: {Current TypeScript version: v5.1}
+Fedora version: {Current Fedora version: v38}

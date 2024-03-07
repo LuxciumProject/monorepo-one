@@ -1,0 +1,26 @@
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxSingleQuote": false,
+  "overrides": [
+    {
+      "files": [
+        "./*.test.ts"
+      ],
+      "options": {
+        "printWidth": 120,
+        "proseWrap": "never"
+      }
+    }
+  ],
+  "printWidth": 70,
+  "proseWrap": "never",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false
+}

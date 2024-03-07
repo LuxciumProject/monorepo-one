@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "../typescript/tsconfig.json",
+  "compilerOptions": {
+    /* Emit Options */
+    "target": "ES5",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "composite": true,
+    "declarationDir": "out/typings",
+    "useDefineForClassFields": false,
+    "outDir": "out",
+    "tsBuildInfoFile": "out/ts-out-info.lib",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    /* Bundled library declaration files that describe the target runtime environment. */
+    "lib": ["dom", "esnext"],
+    /* Package names to be included without being referenced in a source file. */
+    "types": ["node", "heft-jest"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["out"]
+}
+// ts, .tsx, and .d.ts by default, with .js and .jsx

@@ -1,0 +1,161 @@
+{
+  // "extends": "../tsconfig.json",
+  "exclude": [
+    "*"
+  ],
+  // "exclude": ["node_modules", "out", "*"],
+  "include": [],
+  "files": [
+    "./rpc-worker.js",
+    "./worker.js",
+    "./server.js",
+    "./actor.js"
+  ],
+  "compilerOptions": {
+    /* Module Resolution Interop Constraints */
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    /* JavaScript Support */
+    "allowJs": true,
+    "checkJs": false,
+    "maxNodeModuleJsDepth": 1,
+    "disableSizeLimit": false,
+    /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "lib": [
+      "esnext"
+    ],
+    /* Specify type package names to be included without being referenced in a source file. */
+    "types": [
+      "node",
+      "jest"
+    ],
+    /* Emit Options */
+    "emitBOM": false,
+    // "rootDir": ".",
+    "outDir": "../../../out/worker",
+    "declarationDir": "../../../out/worker/typings",
+    "tsBuildInfoFile": "../../../out/worker/ts-out-info.lib",
+    "generateCpuProfile": "../../../out/worker/performance/cpu-info.cpuprofile",
+    "importsNotUsedAsValues": "remove",
+    "newLine": "lf",
+    "noEmit": false,
+    "importHelpers": false,
+    "noEmitHelpers": false,
+    /* Source Map and declaration options */
+    "declaration": true,
+    "declarationMap": false,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "sourceMap": false,
+    "emitDeclarationOnly": false,
+    //     "declaration":"",
+    // "declarationDir":"",
+    // "declarationMap":"",
+    // "downlevelIteration":"",
+    // "emitBOM":"",
+    // "emitDeclarationOnly":"",
+    // "importHelpers":"",
+    // "importsNotUsedAsValues":"",
+    // "inlineSourceMap":"",
+    // "inlineSources":"",
+    // "newLine":"",
+    // "noEmit":"",
+    // "noEmitHelpers":"",
+    // "noEmitOnError":"",
+    // "outDir":"",
+    // "preserveConstEnums":"",
+    // "preserveValueImports":"",
+    // "removeComments":"",
+    // "sourceMap":"",
+    // "stripInternal":"",
+    "incremental": true,
+    "pretty": true,
+    /* Vebosity */
+    "diagnostics": true,
+    "extendedDiagnostics": true,
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "traceResolution": false,
+    //
+    "isolatedModules": true,
+    // "preserveSymlinks": false,
+    // "resolveJsonModule": true,
+    // "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    //
+    // "downlevelIteration": true,
+    // "emitDecoratorMetadata": true,
+    // "experimentalDecorators": true,
+    // "noEmitOnError": false,
+    // "preserveConstEnums": true,
+    // "preserveValueImports": false,
+    // "removeComments": false,
+    // "stripInternal": false,
+    // "preserveWatchOutput": false,
+    // "watch": true,
+    /* Projects */
+    // "composite": true,
+    // "disableSourceOfProjectReferenceRedirect": false,
+    // "disableSolutionSearching": false,
+    // "disableReferencedProjectLoad": false,
+    /* Compilation Options */
+    "noErrorTruncation": true,
+    // "useDefineForClassFields": true,
+    // "assumeChangesOnlyAffectDirectDependencies": false,
+    // /* Type Checking */
+    // /* ALWAYS FALSE NEVER ALLOW-UNUSED-LABELS & ALLOW-UNREACHABLE-CODE FALSE!  */
+    // /* ALWAYS FALSE                                               ALWAYS FALSE */
+    // /* ALWAYS FALSE */ "noImplicitUseStrict": false /*            ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "noStrictGenericChecks": false /*          ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "noUncheckedIndexedAccess": false /*       ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "allowUmdGlobalAccess": false /*           ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "allowUnreachableCode": false /*           ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "allowUnusedLabels": false /*              ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "suppressExcessPropertyErrors": false /*   ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "suppressImplicitAnyIndexErrors": false /* ALWAYS FALSE */,
+    // /* ALWAYS FALSE */ "keyofStringsOnly": false /*               ALWAYS FALSE */,
+    // /* ALWAYS FALSE                                               ALWAYS FALSE */
+    // /* ALWAYS FALSE NEVER ALLOW-UNUSED-LABELS & ALLOW-UNREACHABLE-CODE FALSE!  */
+    // /* ALWAYS TRUE STRICT TYPE-CHECKING ADDITIONAL CHECKS MUST ALWAYS BE TRUE! */
+    // /* ALWAYS TRUE                                                 ALWAYS TRUE */
+    // /* ALWAYS TRUE */ "strict": true /*                            ALWAYS TRUE */,
+    // /* ALWAYS TRUE                                                 ALWAYS TRUE */
+    // /* ALWAYS TRUE */ "alwaysStrict": true /*                      ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "exactOptionalPropertyTypes": true /*        ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noFallthroughCasesInSwitch": true /*        ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noImplicitAny": true /*                     ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noImplicitOverride": true /*                ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noImplicitReturns": true /*                 ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noImplicitThis": true /*                    ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noPropertyAccessFromIndexSignature": true /*ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noUnusedLocals": true /*                    ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "noUnusedParameters": true /*                ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "strictBindCallApply": true /*               ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "strictFunctionTypes": true /*               ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "strictNullChecks": true /*                  ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "strictPropertyInitialization": true /*      ALWAYS TRUE */,
+    // /* ALWAYS TRUE */ "useUnknownInCatchVariables": true /*        ALWAYS TRUE */
+    // /* ALWAYS TRUE                                                 ALWAYS TRUE */
+    // /* ALWAYS TRUE STRICT TYPE-CHECKING ADDITIONAL CHECKS MUST ALWAYS BE TRUE! */
+    // /*                                                                         */
+    // /* React Environment and jsx Language */
+    // "jsx": "preserve"
+    // "jsxFactory": "",
+    // "jsxFragmentFactory": "",
+    // "jsxImportSource": "",
+    // "reactNamespace": "",
+    /* Completeness */
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "noResolve": false
+  }
+  // "references": [],
+  // "buildOptions": {"verbose": false},
+  // "compileOnSave": false,
+  // "ts-node": {},
+  // "typeAcquisition": {},
+  // "watchOptions": {},
+  // "include": ["./**/*.*"]
+}

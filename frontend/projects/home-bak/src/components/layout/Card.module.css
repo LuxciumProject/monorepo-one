@@ -1,0 +1,26 @@
+
+.card {
+  /* Add shadows to create the "card" effect */
+  font: 1.5rem Helvetica, sans-serif;
+  background: rgba(0, 128, 128, 0.9);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  border: 1px solid  rgba(0, 25, 25, 1);
+  transition: 0.42s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  background: rgba(0, 128, 128, 0.85);
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.5);
+}
+
+.card:focus-within {
+  background: rgba(0, 128, 128, 0.85);
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.5);
+  border: 1px solid black;
+}
+/* Add some padding inside the card container */
+.container {
+  padding: 4px 32px;
+}

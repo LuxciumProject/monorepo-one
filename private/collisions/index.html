@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="application">
+    <canvas id="canvas"></canvas>
+  </div>
+
+
+
+  <ul class="tasks">
+    <li class="task" data-id="3">
+      <div class="task__content">
+        Go To Grocery
+      </div>
+      <div class="task__actions">
+        <i class="fa fa-eye"></i>
+        <i class="fa fa-edit"></i>
+        <i class="fa fa-times"></i>
+      </div>
+    </li>
+    <!-- more task items here... -->
+  </ul>
+
+  <nav class="context-menu">
+    <ul class="context-menu__items">
+      <li class="context-menu__item">
+        <a href="#View" class="context-menu__link">
+          <i class="fa fa-eye"></i> View Task
+        </a>
+      </li>
+      <li class="context-menu__item">
+        <a href="#Edit" class="context-menu__link">
+          <i class="fa fa-edit"></i> Edit Task
+        </a>
+      </li>
+      <li class="context-menu__item">
+        <a href="#Delete" class="context-menu__link">
+          <i class="fa fa-times"></i> Delete Task
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <script>main(window)</script>
+</body>
+
+
+</html>
