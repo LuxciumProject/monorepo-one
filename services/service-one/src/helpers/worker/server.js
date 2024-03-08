@@ -77,14 +77,21 @@ createHTTP_Server(async (req, res) => {
   const actor = randomActor();
 
   messages.set(message_id, res);
+  const sanitizedUrl = decodeURI(encodeURI(req.url));
+  let part1 = sanitizedUrl.split('/').slice(1, 2).pop();
+  let part2 = sanitizedUrl.split('/').slice(2, 3).pop();
+  let part3 = decodeURI(sanitizedUrl.split('/').slice(3).join('/'));
 
-  VERBOSE2 &&
-    console.log(
-      req.url.split('/').slice(1, 2).pop(),
-      req.url.split('/').slice(2, 3).pop(),
-      '\n',
-      decodeURI(req.url.split('/').slice(3).join('/'))
-    );
+  VERBOSE2 && console.log(util.format('%s %s \n %s', part1, part2, part3));
+
+  // js/tainted-format-string https://cwe.mitre.org/data/definitions/134.html
+  // VERBOSE2 &&
+  //   console.log(
+  //     req.url.split('/').slice(1, 2).pop(),
+  //     req.url.split('/').slice(2, 3).pop(),
+  //     '\n',
+  //     decodeURI(req.url.split('/').slice(3).join('/'))
+  //   );
 
   actor({
     id: message_id,
