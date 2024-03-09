@@ -84,6 +84,21 @@
     //   "name": "           💻🏫 products",
     //   "path": "frontend/products"
     // },
+    /*
+💗 Pink Heart
+🩷 New Pink Heart
+❤️ Red Heart
+🧡 Orange Heart
+💛 Yellow Heart
+💚 Green Heart
+💙 Blue Heart
+🩵 Light Blue Heart
+💜 Purple Heart
+🤎 Brown Heart
+🖤 Black Heart
+🤍 White Heart
+🩶 Grey Heart
+    */
     {
       "name": "  ↓ 📓 📚 LIBRARY",
       "path": "library"
@@ -93,16 +108,20 @@
       "path": "library/mapping-tools"
     },
     {
-      "name": "       📚❤ bigintString",
-      "path": "library/bigintString"
+      "name": "       📚💛 colors-tools",
+      "path": "library/colors-tools"
+    },
+    {
+      "name": "       📚💗 boxing-tools",
+      "path": "library/boxing-tools"
     },
     {
       "name": "       📚🧡 boxed-list",
       "path": "library/boxed-list"
     },
     {
-      "name": "       📚💛 colors-tools",
-      "path": "library/colors-tools"
+      "name": "       📚❤️ bigintString",
+      "path": "library/bigintString"
     },
     {
       "name": "       📚💚 human-size",
@@ -149,7 +168,7 @@
       "path": "services/mongo-service"
     },
     {
-      "name": "       💁❤ phash-compute",
+      "name": "       💁❤️ phash-compute",
       "path": "services/phash-compute"
     },
     {
