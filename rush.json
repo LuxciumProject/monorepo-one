@@ -452,6 +452,13 @@
       ]
     },
     {
+      "packageName": "@luxcium/boxing-tools",
+      "projectFolder": "library/boxing-tools",
+      "tags": [
+        "library"
+      ]
+    },
+    {
       "packageName": "@luxcium/boxed-list",
       "projectFolder": "library/boxed-list",
       "tags": [
