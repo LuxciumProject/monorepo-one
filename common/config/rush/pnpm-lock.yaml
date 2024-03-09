@@ -176,9 +176,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -611,9 +608,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -780,9 +774,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -936,9 +927,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -1069,9 +1057,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -1250,9 +1235,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -1406,9 +1388,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -1562,9 +1541,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -1869,9 +1845,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -2038,9 +2011,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       fantasy-laws:
         specifier: ^2.0.1
         version: 2.0.1(jsverify@0.8.4)
@@ -2182,9 +2152,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -2342,9 +2309,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       got:
         specifier: ^12.0.2
         version: 12.6.1
@@ -2501,9 +2465,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -2657,9 +2618,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       husky:
         specifier: ~9.0.6
         version: 9.0.11
@@ -2864,9 +2822,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -3193,9 +3148,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -3368,9 +3320,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -3531,9 +3480,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -3721,9 +3667,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -3884,9 +3827,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -4219,9 +4159,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -4382,9 +4319,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -4542,9 +4476,6 @@ importers:
       eslint-plugin-unicorn:
         specifier: ~51.0.0
         version: 51.0.1(eslint@8.56.0)
-      eslint-webpack-plugin:
-        specifier: ~4.0.1
-        version: 4.0.1(eslint@8.56.0)(webpack@5.88.2)
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.11.25)(node-notifier@10.0.1)(ts-node@10.9.2)
@@ -9230,15 +9161,6 @@ packages:
       ajv: 6.12.6
     dev: true
 
-  /ajv-keywords@5.1.0(ajv@8.12.0):
-    resolution: {integrity: sha512-YCS/JNFAUyr5vAuhk1DWm1CBxRHW9LbJ2ozWeemrIqpbsqKjHVxYPyi5GC0rjZIT5JxJ3virVTS8wk4i/Z+krw==}
-    peerDependencies:
-      ajv: ^8.8.2
-    dependencies:
-      ajv: 8.12.0
-      fast-deep-equal: 3.1.3
-    dev: true
-
   /ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
     dependencies:
@@ -11345,22 +11267,6 @@ packages:
   /eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
-  /eslint-webpack-plugin@4.0.1(eslint@8.56.0)(webpack@5.88.2):
-    resolution: {integrity: sha512-fUFcXpui/FftGx3NzvWgLZXlLbu+m74sUxGEgxgoxYcUtkIQbS6SdNNZkS99m5ycb23TfoNYrDpp1k/CK5j6Hw==}
-    engines: {node: '>= 14.15.0'}
-    peerDependencies:
-      eslint: ^8.0.0
-      webpack: ^5.0.0
-    dependencies:
-      '@types/eslint': 8.56.5
-      eslint: 8.56.0
-      jest-worker: 29.7.0
-      micromatch: 4.0.5
-      normalize-path: 3.0.0
-      schema-utils: 4.2.0
-      webpack: 5.88.2
     dev: true
 
   /eslint@8.56.0:
@@ -15838,16 +15744,6 @@ packages:
       '@types/json-schema': 7.0.15
       ajv: 6.12.6
       ajv-keywords: 3.5.2(ajv@6.12.6)
-    dev: true
-
-  /schema-utils@4.2.0:
-    resolution: {integrity: sha512-L0jRsrPpjdckP3oPug3/VxNKt2trR8TcabrM6FOAAlvC/9Phcmm+cuAgTlxBqdBR1WJx7Naj9WHw+aOmheSVbw==}
-    engines: {node: '>= 12.13.0'}
-    dependencies:
-      '@types/json-schema': 7.0.15
-      ajv: 8.12.0
-      ajv-formats: 2.1.1
-      ajv-keywords: 5.1.0(ajv@8.12.0)
     dev: true
 
   /seedrandom@3.0.5:
