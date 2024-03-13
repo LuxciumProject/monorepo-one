@@ -4,7 +4,7 @@
 
 (aka "Algebraic JavaScript Specification")
 
-<img src="logo.png" width="200" height="200" />
+![Logo](./logo.png){ width=200 height=200 }
 
 This project specifies interoperability of common algebraic
 structures:
@@ -34,7 +34,7 @@ structures:
 * [Bifunctor](#bifunctor)
 * [Profunctor](#profunctor)
 
-<img src="figures/dependencies.png" width="888" height="234" />
+![Dependencies](./dependencies.png)
 
 ## General
 
@@ -50,10 +50,10 @@ have dependencies on other algebras which must be implemented.
    structures defined below.
 2. "equivalent" is an appropriate definition of equivalence for the given value.
     The definition should ensure that the two values can be safely swapped out in a program that respects abstractions. For example:
-    - Two lists are equivalent if they are equivalent at all indices.
-    - Two plain old JavaScript objects, interpreted as dictionaries, are equivalent when they are equivalent for all keys.
-    - Two promises are equivalent when they yield equivalent values.
-    - Two functions are equivalent if they yield equivalent outputs for equivalent inputs.
+    * Two lists are equivalent if they are equivalent at all indices.
+    * Two plain old JavaScript objects, interpreted as dictionaries, are equivalent when they are equivalent for all keys.
+    * Two promises are equivalent when they yield equivalent values.
+    * Two functions are equivalent if they yield equivalent outputs for equivalent inputs.
 
 ## Type signature notation
 
@@ -61,54 +61,54 @@ The type signature notation used in this document is described below:<sup
 id="sanctuary-types-return">[1](#sanctuary-types)</sup>
 
 * `::` _"is a member of"._
-    - `e :: t` can be read as: "the expression `e` is a member of type `t`".
-    - `true :: Boolean` - "`true` is a member of type `Boolean`".
-    - `42 :: Integer, Number` - "`42` is a member of the `Integer` and
+  * `e :: t` can be read as: "the expression `e` is a member of type `t`".
+  * `true :: Boolean` - "`true` is a member of type `Boolean`".
+  * `42 :: Integer, Number` - "`42` is a member of the `Integer` and
       `Number` types".
 * _New types can be created via type constructors._
-    - Type constructors can take zero or more type arguments.
-    - `Array` is a type constructor which takes one type argument.
-    - `Array String` is the type of all arrays of strings. Each of the
+  * Type constructors can take zero or more type arguments.
+  * `Array` is a type constructor which takes one type argument.
+  * `Array String` is the type of all arrays of strings. Each of the
       following has type `Array String`: `[]`, `['foo', 'bar', 'baz']`.
-    - `Array (Array String)` is the type of all arrays of arrays of strings.
+  * `Array (Array String)` is the type of all arrays of arrays of strings.
       Each of the following has type `Array (Array String)`: `[]`, `[ [], []
       ]`, `[ [], ['foo'], ['bar', 'baz'] ]`.
 * _Lowercase letters stand for type variables._
-    - Type variables can take any type unless they have been restricted by
+  * Type variables can take any type unless they have been restricted by
       means of type constraints (see fat arrow below).
 * `->` (arrow) _Function type constructor._
-    - `->` is an _infix_ type constructor that takes two type arguments where
+  * `->` is an _infix_ type constructor that takes two type arguments where
       left argument is the input type and the right argument is the output type.
-    - `->`'s input type can be a grouping of types to create the type of a
+  * `->`'s input type can be a grouping of types to create the type of a
       function which accepts zero or more arguments. The syntax is:
       `(<input-types>) -> <output-type>`, where `<input-types>` comprises zero
-      or more comma–space (`, `)-separated type representations and parens
+      or more comma–space (`,`)-separated type representations and parens
       may be omitted for unary functions.
-    - `String -> Array String` is a type satisfied by functions which take a
+  * `String -> Array String` is a type satisfied by functions which take a
       `String` and return an `Array String`.
-    - `String -> Array String -> Array String` is a type satisfied by functions
+  * `String -> Array String -> Array String` is a type satisfied by functions
       which take a `String` and return a function which takes an `Array String`
       and returns an `Array String`.
-    - `(String, Array String) -> Array String` is a type satisfied by functions
+  * `(String, Array String) -> Array String` is a type satisfied by functions
       which take a `String` and an `Array String` as arguments and return an
       `Array String`.
-    - `() -> Number` is a type satisfied by functions
+  * `() -> Number` is a type satisfied by functions
       which do not take arguments and return a `Number`.
 * `~>` (squiggly arrow) _Method type constructor._
-    - When a function is a property of an Object, it is called a method. All
+  * When a function is a property of an Object, it is called a method. All
       methods have an implicit parameter type - the type of which they are a
       property.
-    - `a ~> a -> a` is a type satisfied by methods on Objects of type `a` which
+  * `a ~> a -> a` is a type satisfied by methods on Objects of type `a` which
       take a type `a` as an argument and return a value of type `a`.
 * `=>` (fat arrow) _Expresses constraints on type variables._
-    - In `a ~> a -> a` (see squiggly arrow above), `a` can be of any type.
+  * In `a ~> a -> a` (see squiggly arrow above), `a` can be of any type.
       `Semigroup a => a ~> a -> a` adds a constraint such that the type `a`
       must now satisfy the `Semigroup` typeclass. To satisfy a typeclass means
       to lawfully implement all functions/methods specified by that typeclass.
 
 For example:
 
-```
+```text
 fantasy-land/traverse :: Applicative f, Traversable t => t a ~> (TypeRep f, a -> f b) -> f (t b)
 '-------------------'    '--------------------------'    '-'    '-------------------'    '-----'
  '                        '                               '      '                        '
@@ -118,6 +118,7 @@ fantasy-land/traverse :: Applicative f, Traversable t => t a ~> (TypeRep f, a ->
 ```
 
 - - -
+
 1. <a name="sanctuary-types"></a>See the [Types](https://sanctuary.js.org/#types)
    section in Sanctuary's docs for more info. [↩](#sanctuary-types-return)
 
@@ -818,43 +819,43 @@ The `fantasy-land/promap` method takes two arguments:
 When creating data types which satisfy multiple algebras, authors may choose
 to implement certain methods then derive the remaining methods. Derivations:
 
-  - [`fantasy-land/equals`][] may be derived from [`fantasy-land/lte`][]:
+* [`fantasy-land/equals`][] may be derived from [`fantasy-land/lte`][]:
 
     ```js
     function equals(other) { return this['fantasy-land/lte'](other) && other['fantasy-land/lte'](this); }
     ```
 
-  - [`fantasy-land/map`][] may be derived from [`fantasy-land/ap`][] and [`fantasy-land/of`][]:
+* [`fantasy-land/map`][] may be derived from [`fantasy-land/ap`][] and [`fantasy-land/of`][]:
 
     ```js
     function map(f) { return this['fantasy-land/ap'](this.constructor['fantasy-land/of'](f)); }
     ```
 
-  - [`fantasy-land/map`][] may be derived from [`fantasy-land/chain`][] and [`fantasy-land/of`][]:
+* [`fantasy-land/map`][] may be derived from [`fantasy-land/chain`][] and [`fantasy-land/of`][]:
 
     ```js
     function map(f) { return this['fantasy-land/chain'](a => this.constructor['fantasy-land/of'](f(a))); }
     ```
 
-  - [`fantasy-land/map`][] may be derived from [`fantasy-land/bimap`][]:
+* [`fantasy-land/map`][] may be derived from [`fantasy-land/bimap`][]:
 
     ```js
     function map(f) { return this['fantasy-land/bimap'](a => a, f); }
     ```
 
-  - [`fantasy-land/map`][] may be derived from [`fantasy-land/promap`][]:
+* [`fantasy-land/map`][] may be derived from [`fantasy-land/promap`][]:
 
     ```js
     function map(f) { return this['fantasy-land/promap'](a => a, f); }
     ```
 
-  - [`fantasy-land/ap`][] may be derived from [`fantasy-land/chain`][]:
+* [`fantasy-land/ap`][] may be derived from [`fantasy-land/chain`][]:
 
     ```js
     function ap(m) { return m['fantasy-land/chain'](f => this['fantasy-land/map'](f)); }
     ```
 
-  - [`fantasy-land/reduce`][] may be derived as follows:
+* [`fantasy-land/reduce`][] may be derived as follows:
 
     ```js
     function reduce(f, acc) {
@@ -874,7 +875,7 @@ to implement certain methods then derive the remaining methods. Derivations:
     }
     ```
 
-  - [`fantasy-land/map`][] may be derived as follows:
+* [`fantasy-land/map`][] may be derived as follows:
 
     ```js
     function map(f) {
@@ -894,7 +895,7 @@ to implement certain methods then derive the remaining methods. Derivations:
     }
     ```
 
-  - [`fantasy-land/filter`][] may be derived from [`fantasy-land/of`][], [`fantasy-land/chain`][], and [`fantasy-land/zero`][]:
+* [`fantasy-land/filter`][] may be derived from [`fantasy-land/of`][], [`fantasy-land/chain`][], and [`fantasy-land/zero`][]:
 
     ```js
     function filter(pred) {
@@ -903,7 +904,7 @@ to implement certain methods then derive the remaining methods. Derivations:
     }
     ```
 
-  - [`fantasy-land/filter`][] may be derived from [`fantasy-land/concat`][], [`fantasy-land/of`][], [`fantasy-land/zero`][], and
+* [`fantasy-land/filter`][] may be derived from [`fantasy-land/concat`][], [`fantasy-land/of`][], [`fantasy-land/zero`][], and
     [`fantasy-land/reduce`][]:
 
     ```js
@@ -913,7 +914,7 @@ to implement certain methods then derive the remaining methods. Derivations:
     }
     ```
 
-If a data type provides a method which *could* be derived, its behaviour must
+If a data type provides a method which _could_ be derived, its behaviour must
 be equivalent to that of the derivation (or derivations).
 
 ## Notes
@@ -926,7 +927,6 @@ be equivalent to that of the derivation (or derivations).
 3. It is recommended to throw an exception on unspecified behaviour.
 4. An `Identity` container which implements many of the methods is provided by
    [sanctuary-identity](https://github.com/sanctuary-js/sanctuary-identity).
-
 
 [`fantasy-land/ap`]: #ap-method
 [`fantasy-land/bimap`]: #bimap-method

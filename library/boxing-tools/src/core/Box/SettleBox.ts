@@ -1,27 +1,27 @@
-import { Box } from "./Box";
-import { ISettled } from "./ISettled";
+import { MiniBox } from '../../classes/MiniBox';
+import { ISettled } from './ISettled';
 
-export class SettleBox<U> extends Box<U> implements ISettled {
+export class SettleBox<U> extends MiniBox<U> implements ISettled {
   protected constructor(
     boxedValue: U,
-    _status: "fulfilled",
+    _status: 'fulfilled',
     _currentRejection: null,
     _index: number,
-    _transformStep: number,
+    _transformStep: number
   );
   protected constructor(
     boxedValue: U,
-    _status: "rejected",
+    _status: 'rejected',
     _currentRejection: false | true,
     _index: number,
-    _transformStep: number,
+    _transformStep: number
   );
   protected constructor(
     boxedValue: U,
-    private _status: "fulfilled" | "rejected",
+    private _status: 'fulfilled' | 'rejected',
     private _currentRejection: false | true | null = null,
     private _index = -1,
-    private _transformStep = -1,
+    private _transformStep = -1
   ) {
     super(boxedValue);
   }
@@ -34,7 +34,7 @@ export class SettleBox<U> extends Box<U> implements ISettled {
   get currentRejection() {
     return this._currentRejection;
   }
-  get status(): "fulfilled" | "rejected" {
+  get status(): 'fulfilled' | 'rejected' {
     return this._status;
   }
 }

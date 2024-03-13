@@ -1,4 +1,4 @@
-import { Unboxable } from "../types";
+import { Unboxable } from '../../core/Box/types';
 
 export abstract class ProtoBox<T> implements Unboxable<T> {
   private readonly _value: T;
@@ -6,7 +6,7 @@ export abstract class ProtoBox<T> implements Unboxable<T> {
   protected constructor(value: T) {
     this._value = value;
   }
-  public ["fantasy-land/extract"] = this.unbox;
+  public ['fantasy-land/extract'] = this.unbox;
   public unbox(): T {
     return this._value;
   }
@@ -20,10 +20,10 @@ export const _valeure = (value: string) => value[2];
 
 // _valeure("test");
 
-console.log("s!");
+console.log('s!');
 
 export function test() {
-  console.log("test");
+  console.log('test');
 }
 
 test();

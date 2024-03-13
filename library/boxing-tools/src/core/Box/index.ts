@@ -1,4 +1,4 @@
-import { Box } from "./template/Box";
+import { Box } from './template/Box';
 export { Box };
 export default Box;
-export { ProtoBox } from "./template/ProtoBox";
+export { ProtoBox } from '../../classes/meta/ProtoBox';
