@@ -1,6 +1,6 @@
 import { IMap, IUnbox, IXMap, ReplaceInnerType, Unbox } from './types';
 
-export class MyBox<T> implements IXMap<T>, IMap<T>, IUnbox<T> {
+export class MyBox<T> implements IMap<T>, IUnbox<T>, IXMap<T> {
   public static of<TVal>(value: TVal): MyBox<TVal> {
     return new MyBox<TVal>(value);
   }
