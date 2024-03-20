@@ -22,15 +22,15 @@
     },
     {
       "name": "       🤖📙 APIs",
-      "path": "prompts/API/"
+      "path": "prompts/API"
     },
     {
       "name": "         📙⛵ midjourney",
-      "path": "prompts/API/midjourney/"
+      "path": "prompts/API/midjourney"
     },
     {
       "name": "         📙🦾 GPTs",
-      "path": "prompts/API/GPTs/"
+      "path": "prompts/API/GPTs"
     },
     {
       "name": "  ↓ 🔐 💫 PRIVATE",
@@ -56,49 +56,14 @@
       "name": "       👨‍💻💅 home",
       "path": "frontend/home"
     },
-    // {
-    //   "name": "           💻👨‍💻 main-react", // 💖 💘
-    //   "path": "frontend/main-react"
-    // },
-    // {
-    //   "name": "           💻👨‍💻 my-next-js-app",
-    //   "path": "frontend/my-next-js-app"
-    // },
-    // {
-    //   "name": "           💻👨‍💻 home-bak",
-    //   "path": "frontend/home-bak"
-    // },
-    // {
-    //   "name": "           💻👨‍💻 home-ejector",
-    //   "path": "frontend/home-ejector"
-    // },
-    // {
-    //   "name": "           💻🏫 cart",
-    //   "path": "frontend/cart"
-    // },
-    // {
-    //   "name": "           💻🏫 federal-container",
-    //   "path": "frontend/federal-container"
-    // },
-    // {
-    //   "name": "           💻🏫 products",
-    //   "path": "frontend/products"
-    // },
-    /*
-💗 Pink Heart
-🩷 New Pink Heart
-❤️ Red Heart
-🧡 Orange Heart
-💛 Yellow Heart
-💚 Green Heart
-💙 Blue Heart
-🩵 Light Blue Heart
-💜 Purple Heart
-🤎 Brown Heart
-🖤 Black Heart
-🤍 White Heart
-🩶 Grey Heart
-    */
+    {
+      "name": "  ↓ 📓 📙 APIs",
+      "path": "APIs"
+    },
+    {
+      "name": "       📙 anthropic",
+      "path": "APIs/anthropic"
+    },
     {
       "name": "  ↓ 📓 📚 LIBRARY",
       "path": "library"
@@ -155,10 +120,6 @@
       "name": "  S *→ 💁🛵 image-scout",
       "path": "services/image-scout"
     },
-    // {
-    //   "name": "  S *→ 📊🖥️ questrade-ts",
-    //   "path": "services/questrade-ts"
-    // },
     {
       "name": "  S *→ 💁💜 rpc-worker-pool",
       "path": "services/rpc-worker-pool"
@@ -191,7 +152,6 @@
       "name": "  ↓ 🗂️ 🎨 static",
       "path": "static"
     },
-    // static/stable-diffusion with painting emoji like 🎨🤖
     {
       "name": "       🎨🤖 STABLE DIFFUSION",
       "path": "static/stable-diffusion"
@@ -3226,7 +3186,6 @@
     "[dockerfile]": {
       "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "audioCues.taskCompleted": "off",
     "files.watcherExclude": {
       "**/build/**": true,
       "**/dist/**": true,
@@ -3258,6 +3217,12 @@
     },
     "[markdown]": {
       "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "accessibility.signals.taskCompleted": {
+      "sound": "off"
+    },
+    "[dotenv]": {
+      "editor.defaultFormatter": "foxundermoon.shell-format"
     }
     // "workbench.colorCustomizations": {
     //   "activityBar.activeBackground": "#6a2bd499",

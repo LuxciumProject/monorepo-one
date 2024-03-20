@@ -330,6 +330,7 @@
     "frontend",
     "library",
     "services",
+    "apis",
     "tools"
   ],
   /**
@@ -376,7 +377,15 @@
       "tags": [
         "frontend"
       ]
-    }, // main-react
+    },
+    {
+      "packageName": "@luxcium/api-anthropic",
+      "projectFolder": "APIs/anthropic",
+      "tags": [
+        "apis"
+      ]
+    },
+    // main-react
     // {
     //   "packageName": "main-react",
     //   "projectFolder": "frontend/main-react",
