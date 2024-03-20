@@ -2,9 +2,11 @@
   "name": "@luxcium/boxing-tools",
   "version": "1.0.0",
   "description": "† Scientia es lux principium✨ ™",
-  "main": "index.js",
+  "main": "/dist/index.js",
+  "module": "/dist/index.js",
+  "types": "/dist/typings/index.d.ts",
   "scripts": {
-    "build": "echo will tsc",
+    "build": "bash scripts/build.sh || exit",
     "install": "echo will install",
     "test": "jest --all --coverage=false --config='jest.config.json'"
   },

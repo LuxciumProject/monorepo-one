@@ -325,3 +325,4 @@ fabric.properties
 !project-listing.txt
 
 !dependencies.png
+/dist
