@@ -18,21 +18,24 @@ export class MyBox<T>
     return new MyBox<TVal>(value);
   }
 
+  public static from<TVal>(value: BaseBox<TVal>): MyBox<TVal> {
+    return MyBox.of<TVal>(value.boxedValue);
+  }
+
   public static isBox<TVal>(val: TVal | BaseBox<TVal>): val is MyBox<TVal> {
     return val instanceof BaseBox && val instanceof MyBox;
   }
 
-  public static from<TVal>(value: BaseBox<TVal>): MyBox<TVal> {
-    return MyBox.of<TVal>(value.boxedValue);
-  }
   protected constructor(boxedValue: T) {
     super(boxedValue);
   }
+
   ['fantasy-land/map'] = this.map;
 
   public map<R>(fn: (value: T) => R): MyBox<R> {
     return MyBox.of(fn(this.boxedValue));
   }
+
   public xmap<Rx>(fn: (value: Unbox<T>) => Rx): MyBox<ReplaceInnerType<T, Rx>> {
     const result = MyBox.of(this._xmap(fn));
     return result;
