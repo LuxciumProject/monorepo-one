@@ -1,4 +1,4 @@
-import { MyBox } from './MyBox';
+import { BaseBox } from './BaseBox';
 import { IUnbox } from './types/IUnbox';
 import { Unbox } from './types/Unbox';
 
@@ -12,8 +12,8 @@ void (async function MAIN() {
 
   const value: number = 42;
   const fn = (value: number) => value * 2;
-  const box: MyBox<number> = MyBox.of(value);
-  const mappedBox: MyBox<number> = box.map(fn);
+  const box: BaseBox<number> = BaseBox.of(value);
+  const mappedBox: BaseBox<number> = box.map(fn);
   console.log('value: →', value);
   console.log('fn over value: →', fn(value));
   console.log('box: →', box);
@@ -26,7 +26,7 @@ void (async function MAIN() {
 
   // again with a nested box
   console.log('AGAIN WITH A NESTED BOX:\n');
-  const boxedBox: MyBox<MyBox<number>> = MyBox.of(mappedBox.map(fn));
+  const boxedBox: BaseBox<BaseBox<number>> = BaseBox.of(mappedBox.map(fn));
   console.log('boxedBox: →', boxedBox);
   const boxedBoxValue = boxedBox.boxedValue;
   console.log('boxedBoxValue: →', boxedBoxValue);
@@ -42,9 +42,9 @@ void (async function MAIN() {
   const value: string = '42';
   const fn1 = (value: string) => value.length * 2;
   const fn2 = (value: number) => value * 2;
-  const box = MyBox.of(value);
+  const box = BaseBox.of(value);
   const mappedBox = box.map(fn1);
-  const nestedBox = MyBox.of(mappedBox.map(fn2));
+  const nestedBox = BaseBox.of(mappedBox.map(fn2));
   const xMappedBox = nestedBox.xmap(fn2);
 
   console.log('value: →', `'${value}'`);
