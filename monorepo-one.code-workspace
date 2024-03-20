@@ -3172,7 +3172,8 @@
       "scripts",
       "Midjourney",
       "playground",
-      "SDXL"
+      "SDXL",
+      "APIs"
     ],
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
