@@ -1,4 +1,5 @@
 export { FLExtractable } from './ExtractFL';
+export { FLMapppable } from './FunctorFL';
 export { IMap } from './IMap';
 export { IUnbox } from './IUnbox';
 export { IXMap } from './IXMap';

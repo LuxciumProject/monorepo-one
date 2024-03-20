@@ -1,10 +1,19 @@
 import { BaseBox } from './BaseBox';
-import { IMap, IUnbox, IXMap, ReplaceInnerType, Unbox } from './types';
+import {
+  FLExtractable,
+  FLMapppable,
+  IMap,
+  IUnbox,
+  IXMap,
+  ReplaceInnerType,
+  Unbox,
+} from './types';
 
 export class MyBox<T>
   extends BaseBox<T>
-  implements IMap<T>, IUnbox<T>, IXMap<T>
+  implements IMap<T>, IUnbox<T>, IXMap<T>, FLMapppable<T>, FLExtractable<T>
 {
+  ['fantasy-land/of'] = MyBox.of;
   public static of<TVal>(value: TVal): MyBox<TVal> {
     return new MyBox<TVal>(value);
   }
@@ -19,6 +28,8 @@ export class MyBox<T>
   protected constructor(boxedValue: T) {
     super(boxedValue);
   }
+  ['fantasy-land/map'] = this.map;
+
   public map<R>(fn: (value: T) => R): MyBox<R> {
     return MyBox.of(fn(this.boxedValue));
   }
@@ -26,8 +37,4 @@ export class MyBox<T>
     const result = MyBox.of(this._xmap(fn));
     return result;
   }
-}
-
-export interface FunctorFL<T> extends IMap<T> {
-  ['fantasy-land/map']<R>(fun: (value: T) => R): IMap<R>;
 }
