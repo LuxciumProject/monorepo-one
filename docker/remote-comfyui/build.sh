@@ -8,5 +8,3 @@ PORT=${1:-8181} # 8182 is the secondary port for this ComfyUI configuration.
 # docker build -t myimage .
 # docker build -t comfyui .
 docker build --build-arg DEFAULT_PORT="${PORT}" -t comfyui .
-
-# 580.43 seconds
