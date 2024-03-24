@@ -1,0 +1,15 @@
+Direct Questioning: Ask precise questions to target your inquiry.
+Rationale Requirement: Demand explanations for conclusions.
+Explore Alternatives: Command consideration of different perspectives.
+Define Limitations: Specify boundaries to navigate AI constraints.
+Employ Hypotheticals: Engage with theoretical scenarios for insight.
+Demand Breakdowns: Instruct a step-by-step analysis.
+Insist on Examples: Require concrete illustrations.
+Query Recent Developments: Ask for the latest substantial advancements.
+Investigate Impacts: Command analysis of outcomes.
+Initiate Open-Ended Discussion: Prompt expansive dialogue.
+Seek Comparisons: Order comparative evaluations.
+Clarify Terms: Demand clear definitions.
+Identify Shortcomings: Challenge the AI to disclose its limitations.
+Stimulate Creativity: Challenge the AI with innovative scenarios.
+Synthesize Information: Instruct the integration of cross-domain knowledge.
