@@ -1,32 +1,41 @@
 import Anthropic from '@anthropic-ai/sdk';
+import type {} from '@anthropic-ai/sdk/resources';
 import { config } from 'dotenv';
-import { createImageMessage } from './tools/createImageMessage';
+import { getStreamCaller } from './getStreamCaller';
+import { createImageMessage, createMessage } from './tools';
+import {} from './types';
 config();
 const key = {
   apiKey: process.env['monorepo-one_000x'],
 };
-// const anthropic = new Anthropic(key);
+const client = new Anthropic(key);
 
 const imagePath = '/projects/monorepo-one/private/imgs/Lenna.png';
-
 (async () => {
   // try {
   const imageCall = await createImageMessage(
     imagePath,
     'What is in this image? Describe the scene in detail. And what is the mood?'
   );
+  const messageCall = await createMessage('text');
+  const streamCaller = getStreamCaller(
+    'system string',
+    'claude-3-haiku-20240307'
+  );
 
-  const client = new Anthropic(key);
   let buffer = '';
   client.messages
-    .stream({
-      messages: [imageCall],
-      model: 'claude-3-haiku-20240307',
-      temperature: 0.95,
-      system:
-        'Explain what is inside the image. explain the tone, colours and other stylistic parameters. You are printing to the console you can add CSI codes to format the output. You can also add a new line character to separate the output. Inblude bold and underline text.',
-      max_tokens: 1024,
-    })
+    .stream(
+      streamCaller([messageCall, imageCall])
+      //   {
+      //   messages: [imageCall],
+      //   model: 'claude-3-haiku-20240307',
+      //   temperature: 0.95,
+      //   system:
+      //     'Explain what is inside the image. explain the tone, colours and other stylistic parameters. You are printing to the console you can add CSI codes to format the output. You can also add a new line character to separate the output. Inblude bold and underline text.',
+      //   max_tokens: 1024,
+      // }
+    )
     .on('text', text => {
       // Append the incoming text to the buffer
       buffer += text;
@@ -80,19 +89,19 @@ const imagePath = '/projects/monorepo-one/private/imgs/Lenna.png';
   // }
   //
   const result = null;
-  // anthropic.messages.create({
-  //   model: 'claude-3-haiku-20240307',
-  //   temperature: 0.95,
-  //   max_tokens: 1024,
-  //   messages: [imageCall],
-  //   system:
-  //     'Explain what is inside the image. explain the tone, colours and other stylistic parameters.',
-  //   metadata: { user_id: '123' },
-  //   // stream:false
-  //   // temperature:0
-  //   // top_k:0
-  //   // top_p:0
-  // });
+  client.messages.create({
+    model: 'claude-3-haiku-20240307',
+    temperature: 0.95,
+    max_tokens: 1024,
+    messages: [imageCall],
+    system:
+      'Explain what is inside the image. explain the tone, colours and other stylistic parameters.',
+    metadata: { user_id: '123' },
+    // stream:false
+    // temperature:0
+    // top_k:0
+    // top_p:0
+  });
   return result;
   // } catch (error) {
   // console.error(error.message);

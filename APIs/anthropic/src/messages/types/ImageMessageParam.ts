@@ -1,4 +1,4 @@
-import { ImageBlockParam, TextBlock } from '../some';
+import { ImageBlockParam, TextBlock } from '@anthropic-ai/sdk/resources';
 
 export type ImageMessageParam = {
   role: 'user';

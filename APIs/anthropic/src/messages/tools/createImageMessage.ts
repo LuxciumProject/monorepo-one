@@ -1,5 +1,5 @@
+import { ImageBlockParam, TextBlock } from '@anthropic-ai/sdk/resources';
 import { statSync } from 'node:fs';
-import { ImageMessageParam } from '../types';
 import { bufferToBase64, getMediaType, pathStringToBuffer } from '../utils';
 
 // lets create a new function that would conver a number from MB to bytes
@@ -19,7 +19,7 @@ export async function createImageMessage(
   imagePath: string,
   text: string,
   fileSizeLimit: number = 5
-): Promise<ImageMessageParam> {
+): Promise<{ role: 'user'; content: [ImageBlockParam, TextBlock] }> {
   const pathToBuffer = pathStringToBuffer(imagePath);
   const mediaType = getMediaType(imagePath);
   if (!mediaType) {

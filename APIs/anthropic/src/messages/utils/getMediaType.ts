@@ -1,3 +1,8 @@
+/**
+ * Retrieves the media type (MIME type) based on the file extension.
+ * @param file - The file path or name.
+ * @returns The corresponding media type or an empty string if the extension is not recognized.
+ */
 import { extname } from 'node:path';
 import type { ValidMimeType } from '../types';
 export function getMediaType(file: string): ValidMimeType | '' {

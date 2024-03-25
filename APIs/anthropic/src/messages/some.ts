@@ -1,15 +1,15 @@
 import * as MessagesAPI from './some';
 //
-export type MessageCreateParams =
+type MessageCreateParams =
   | MessageCreateParamsNonStreaming
   | MessageCreateParamsStreaming;
 
-export interface TextBlock {
+interface TextBlock {
   text: string;
 
   type?: 'text';
 }
-export interface ImageBlockParam {
+interface ImageBlockParam {
   source: ImageBlockParam.Source;
 
   type?: 'image';
@@ -25,12 +25,12 @@ export namespace ImageBlockParam {
   }
 }
 
-export interface MessageParam {
+interface MessageParam {
   content: string | Array<TextBlock | ImageBlockParam>;
 
   role: 'user' | 'assistant';
 }
-export interface MessageCreateParamsBase {
+interface MessageCreateParamsBase {
   max_tokens: number;
   messages: Array<MessageParam>;
   model:
@@ -48,6 +48,8 @@ export interface MessageCreateParamsBase {
   top_k?: number;
   top_p?: number;
 }
+
+// console.log(msg);
 // max_tokens: 1024
 // messages: [ { role: 'user', content: '' }, { role: 'assistant', content: [ { text:'', type:'text'}, { role: 'user', content: {source: {data:'string-base64', media_type:'mime/type' type:'base64'} }} ] }]
 // model: ...
@@ -123,40 +125,3 @@ export namespace MessageCreateParams {
   export type MessageCreateParamsStreaming =
     MessagesAPI.MessageCreateParamsStreaming;
 }
-
-// create(body: MessageCreateParamsNonStreaming, options?: Core.RequestOptions): APIPromise<Message>;
-// create(
-//   body: MessageCreateParamsStreaming,
-//   options?: Core.RequestOptions,
-// ): APIPromise<Stream<MessageStreamEvent>>;
-// create(
-//   body: MessageCreateParamsBase,
-//   options?: Core.RequestOptions,
-// ): APIPromise<Stream<MessageStreamEvent> | Message>;
-// create(
-//   body: MessageCreateParams,
-//   options?: Core.RequestOptions,
-// ): APIPromise<Message> | APIPromise<Stream<MessageStreamEvent>> {
-//   return this._client.post('/v1/messages', {
-//     body,
-//     timeout: 600000,
-//     ...options,
-//     stream: body.stream ?? false,
-//   }) as APIPromise<Message> | APIPromise<Stream<MessageStreamEvent>>;
-// }
-
-//   body: MessageCreateParams,
-//   body: MessageCreateParamsBase,
-//   body: MessageCreateParamsNonStreaming,
-//   body: MessageCreateParamsStreaming,
-
-// max_tokens:
-// messages:
-// model:
-// metadata:
-// stop_sequences:
-// stream:
-// system:
-// temperature:
-// top_k:
-// top_p:
