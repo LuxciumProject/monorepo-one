@@ -10,4 +10,6 @@ export type {
   UserTextMessage,
 } from './Message';
 export type { MessageFromAssistant } from './MessageFromAssistant';
+export type { MessageParams } from './MessageParams';
+export type { ModelReply } from './ModelReply';
 export type { ValidMimeType } from './ValidMimeType';
