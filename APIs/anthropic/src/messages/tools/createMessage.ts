@@ -1,42 +1,57 @@
-import { TextBlock } from '@anthropic-ai/sdk/resources';
-
-// lets create a new function that would conver a number from MB to bytes
-export function convertMBToBytes(mb: number): number {
-  return mb * 1024 * 1024;
+import {
+  AssistantTextMessage,
+  UserImageMessage,
+  UserTextMessage,
+} from '../types';
+import { bufferToBase64, getMediaType, pathStringToBuffer } from '../utils';
+import { isImageFileSizeValid } from './isImageFileSizeValid';
+export function createAssitantMessage<Text extends string>(
+  text: Text
+): AssistantTextMessage<Text> {
+  return {
+    role: 'assistant',
+    content: [{ type: 'text', text }],
+  };
 }
-
-export async function createMessage(text: string): Promise<{
-  content: [TextBlock];
-  role: 'user';
-}> {
+export function createUserMessage<Text extends string>(
+  text: Text
+): UserTextMessage<Text> {
   return {
     role: 'user',
     content: [{ type: 'text', text }],
   };
 }
-//  TextBlock
-// messages:content: string | Array<TextBlock | ImageBlockParam>;
+export function createImageMessage<Text extends string>(
+  text: Text,
+  imagePath: string,
+  fileSizeLimit: number = 5
+): UserImageMessage<Text> {
+  const pathToBuffer = pathStringToBuffer(imagePath);
+  const mediaType = getMediaType(imagePath);
+  if (!mediaType) {
+    throw new Error('Unsupported media type');
+  }
 
-// role: 'user' | 'assistant';
-// const msg = await anthropic.messages.create(
-const msg = {
-  role: 'user',
-  content: [
-    {
-      type: 'text',
-      text: '.../src/some-folder/tools/:\nPurpose: Contains scripts or utilities used during development or deployment but not part of the final application. Examples include build scripts, migration tools, or code generators.\n.../src/some-folder/utils/:\nPurpose: To provide utility functions or classes that are widely used across the "some-folder" module. These utilities are generic, solving common problems in a reusable way.\n.../src/some-folder/helpers/:\nPurpose: Similar to utils but often more specialized towards the needs of the "some-folder" module. Helpers may provide functions to simplify complex operations, format data, or any support task that makes the main code cleaner and more readable.',
-    },
-  ],
-};
-
-console.log(msg);
-// content: string | Array<TextBlock | ImageBlockParam>;
-
-// role: 'user' | 'assistant';
-// }
-
-type ErrorResponse = {
-  error: {
-    message: string;
+  if (!isImageFileSizeValid(imagePath, fileSizeLimit)) {
+    throw new Error('File size exceeds the limit');
+  }
+  return {
+    role: 'user',
+    content: [
+      {
+        type: 'image',
+        source: {
+          type: 'base64',
+          media_type: mediaType,
+          data: bufferToBase64(pathToBuffer),
+        },
+      },
+      { type: 'text', text },
+    ],
   };
+}
+export const create = {
+  assistantMessage: createAssitantMessage,
+  imageMessage: createImageMessage,
+  userMessage: createUserMessage,
 };

@@ -1,13 +1,13 @@
 import { UsageReturn } from './types';
 
 export function calculateTokenUsageFor(
-  pricingService: (tokens: number, input?: boolean) => number
+  pricingService: (tokens: number, input?: boolean) => [number, string]
 ) {
   return function calculateTokenUsage(
     tokens: number,
     input = true
   ): UsageReturn {
-    const price = pricingService(tokens, input);
+    const [price] = pricingService(tokens, input);
     if (typeof price === 'string') {
       throw new Error(price);
     }

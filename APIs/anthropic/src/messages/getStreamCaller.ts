@@ -1,33 +1,39 @@
 import { ImageBlockParam, TextBlock } from '@anthropic-ai/sdk/resources';
-import { Model } from '../constants/types';
+import { Models } from '../constants/types';
+import { ImageMessageParamExtended } from './types/';
 
-type ImageMessageParam<M extends Model> = (
-  messages: {
-    content: string | Array<TextBlock | ImageBlockParam>;
-    role: 'user' | 'assistant';
-  }[]
-) => {
-  messages: {
-    content: string | Array<TextBlock | ImageBlockParam>;
-    role: 'user' | 'assistant';
-  }[];
-  model: M;
-  temperature: number;
-  system: string;
-  max_tokens: number;
+type UserMessage =
+  | UserImageMessage
+  | UserTextMessage
+  | {
+      content: string | Array<TextBlock | ImageBlockParam>;
+      role: 'user';
+    };
+type UserImageMessage = {
+  content: Array<TextBlock | ImageBlockParam>;
+  role: 'user';
 };
-export function getStreamCaller<M extends Model>(
+type UserTextMessage = {
+  content: string | [TextBlock];
+  role: 'user';
+};
+
+type AssistantMessage = {
+  content: string | [TextBlock];
+  role: 'assistant';
+};
+
+type Message = UserMessage | AssistantMessage;
+
+type Messages = Message[];
+
+export function getStreamCaller<M extends Models>(
   system: string,
   model: M = 'claude-3-haiku-20240307' as M,
   temperature: number = 0.5,
   max_tokens: number = 1024
-): ImageMessageParam<M> {
-  const result = function streamCaller(
-    messages: {
-      content: string | Array<TextBlock | ImageBlockParam>;
-      role: 'user' | 'assistant';
-    }[]
-  ) {
+): ImageMessageParamExtended<M> {
+  const result = function streamCaller(messages: Messages) {
     return {
       messages,
       model,

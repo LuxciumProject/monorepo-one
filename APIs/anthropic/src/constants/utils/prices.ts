@@ -2,7 +2,7 @@
 // be updated but still treated as constants in the code.
 
 import { PRICES } from '../PRICES';
-import { Model, ModelPrice } from '../types';
+import { ModelPrice, Models } from '../types';
 
 // function transformModelName(modelName: string): string {
 //   // Regex to match models with dates and normalize versions
@@ -83,7 +83,7 @@ import { Model, ModelPrice } from '../types';
 
 // console.log(getModelPrice('claude-3-opus-20240229'));
 
-export function getModelPrice(modelName: Model): ModelPrice {
+export function getModelPrice(modelName: Models): ModelPrice {
   // if it starts with claude-3
   if (modelName.startsWith('claude-3')) {
     const model = modelName.split('-').slice(0, 3).join('-');
@@ -120,7 +120,7 @@ export function getModelPrice(modelName: Model): ModelPrice {
 }
 
 // Function to transform model names
-function transformModelName_(modelName: Model): string {
+function transformModelName_(modelName: Models): string {
   const datePattern = /-\d{8}$/;
   const versionPattern = /\b2\.([01])\b/;
 
@@ -134,7 +134,7 @@ function transformModelName_(modelName: Model): string {
 }
 
 // Function to calculate prices based on the transformed model name
-export function calculatePrice(modelName: Model): ModelPrice {
+export function calculatePrice(modelName: Models): ModelPrice {
   const transformedName = transformModelName_(modelName);
   switch (transformedName) {
     case 'claude-3-opus':

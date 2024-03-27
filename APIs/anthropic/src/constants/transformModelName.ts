@@ -1,4 +1,4 @@
-import { Model, ModelShortNames } from './types';
+import { Models, ModelShortNames } from './types';
 
 // Overloads for transformModelName
 export function transformModelName(
@@ -13,7 +13,7 @@ export function transformModelName(
 export function transformModelName(model: 'claude-2.1'): 'claude-21';
 export function transformModelName(model: 'claude-2.0'): 'claude-20';
 export function transformModelName(model: 'claude-instant'): 'claude-instant';
-export function transformModelName(model: Model): ModelShortNames;
+export function transformModelName(model: Models): ModelShortNames;
 export function transformModelName(model: string): ModelShortNames | null;
 export function transformModelName(model: string): ModelShortNames | null {
   const datePattern = /-\d{8}$/;

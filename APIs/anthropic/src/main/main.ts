@@ -1,28 +1,55 @@
 import Anthropic from '@anthropic-ai/sdk';
-import type {} from '@anthropic-ai/sdk/resources';
-import { config } from 'dotenv';
-import { getStreamCaller } from './getStreamCaller';
-import { createImageMessage, createMessage } from './tools';
-import {} from './types';
-config();
-const key = {
-  apiKey: process.env['monorepo-one_000x'],
-};
-const client = new Anthropic(key);
+// import { config } /from 'dotenv';
+// import { getStreamCaller } from '../messages/getStreamCaller';
+// import { createImageMessage, createUserMessage } from '../messages/tools';
+// /
 
-const imagePath = '/projects/monorepo-one/private/imgs/Lenna.png';
-(async () => {
-  // try {
-  const imageCall = await createImageMessage(
-    imagePath,
-    'What is in this image? Describe the scene in detail. And what is the mood?'
-  );
-  const messageCall = await createMessage('text');
-  const streamCaller = getStreamCaller(
-    'system string',
-    'claude-3-haiku-20240307'
-  );
+// const imagePath = '/projects/monorepo-one/private/imgs/Lenna.png';
+// (async () => {
+//   // try {
+//   const imageCall = createImageMessage(
+//     'What is in this image? Describe the scene in detail. And what is the mood?',
+//     imagePath
+//   );
+//   const messageCall = await createUserMessage('text');
+//   const streamCaller = getStreamCaller(
+//     'system string',
+//     'claude-3-haiku-20240307'
+//   );
 
+//   // await messageStream
+//   // async function processMessages(messageStream: AsyncIterable<MessageStreamEvent>) {
+//   //     for await (const message of messageStream) {
+//   //         // process message here
+//   //         message
+//   //         process.stdout.write(String(message));
+//   //     }
+//   // }
+//   //
+//   const result = await client.messages.create({
+//     model: 'claude-3-haiku-20240307',
+//     temperature: 0.95,
+//     max_tokens: 1024,
+//     messages: [imageCall],
+//     system:
+//       'Explain what is inside the image. explain the tone, colours and other stylistic parameters.',
+//     metadata: { user_id: '123' },
+//     // stream:false
+//     // temperature:0
+//     // top_k:0
+//     // top_p:0
+//   });
+//   return result;
+// })()
+//   .then()
+//   .catch(console.error);
+
+export async function fn_aa4202(
+  client: Anthropic,
+  messageCall: any,
+  imageCall: any,
+  streamCaller: any
+) {
   let buffer = '';
   client.messages
     .stream(
@@ -79,34 +106,5 @@ const imagePath = '/projects/monorepo-one/private/imgs/Lenna.png';
         buffer = ''; // Clear the buffer
       }
     });
-  // await messageStream
-  // async function processMessages(messageStream: AsyncIterable<MessageStreamEvent>) {
-  //     for await (const message of messageStream) {
-  //         // process message here
-  //         message
-  //         process.stdout.write(String(message));
-  //     }
-  // }
-  //
-  const result = null;
-  client.messages.create({
-    model: 'claude-3-haiku-20240307',
-    temperature: 0.95,
-    max_tokens: 1024,
-    messages: [imageCall],
-    system:
-      'Explain what is inside the image. explain the tone, colours and other stylistic parameters.',
-    metadata: { user_id: '123' },
-    // stream:false
-    // temperature:0
-    // top_k:0
-    // top_p:0
-  });
-  return result;
-  // } catch (error) {
-  // console.error(error.message);
-  // throw error;
-  // }
-})()
-  .then()
-  .catch(console.error);
+  return void 0;
+}

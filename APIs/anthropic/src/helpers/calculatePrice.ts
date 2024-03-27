@@ -1,21 +1,22 @@
 import { pricing } from './pricing';
 import { ServiceType } from './types';
 
-export function calculatePrice(
+export function calculatePrice<M extends string>(
   service: ServiceType,
   tokens: number,
+  model: M,
   input = true
-): number {
+): [number, M] {
   const servicePricing = pricing[service];
   if (!servicePricing) {
-    return NaN;
+    return [NaN, model];
   }
   if (tokens < 0) {
-    return NaN;
+    return [NaN, model];
   }
   if (input) {
-    return (servicePricing.input / 1000000) * tokens;
+    return [(servicePricing.input / 1000000) * tokens, model];
   } else {
-    return (servicePricing.output / 1000000) * tokens;
+    return [(servicePricing.output / 1000000) * tokens, model];
   }
 }
