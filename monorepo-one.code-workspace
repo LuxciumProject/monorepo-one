@@ -3151,29 +3151,31 @@
     */
     "github.copilot.editor.enableCodeActions": true,
     "github.copilot.advanced": {
-      // "temperature": "0.8",
+      "temperature": "0.5",
       // "debug.showScores": true,
       "inlineSuggestCount": 5,
       // "top_p": 1
     },
+    "github.copilot.chat.terminalChatLocation": "chatView",
+    "github.copilot.chat.welcomeMessage": "always",
     "conventionalCommits.scopes": [
+      "APIs",
       "backend",
+      "ChatGPT",
       "common",
+      "examples",
       "frontend",
       "library",
-      "tools",
-      "private",
-      "RushStack",
-      "services",
-      "examples",
-      "Storybook",
-      "ChatGPT",
-      "RpcWorkerPool",
-      "scripts",
       "Midjourney",
       "playground",
+      "private",
+      "RpcWorkerPool",
+      "RushStack",
+      "scripts",
       "SDXL",
-      "APIs"
+      "services",
+      "Storybook",
+      "tools",
     ],
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"

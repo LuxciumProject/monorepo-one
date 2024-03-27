@@ -19,6 +19,9 @@ importers:
       file-type:
         specifier: ~19.0.0
         version: 19.0.0
+      yargs:
+        specifier: ~17.7.2
+        version: 17.7.2
     devDependencies:
       '@babel/core':
         specifier: ~7.23.9
@@ -18139,7 +18142,6 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
-    dev: true
 
   /yauzl@2.10.0:
     resolution: {integrity: sha512-p4a9I6X6nu6IhoGmBqAcbJy1mlC4j27vEPZX9F4L4/vZT3Lyq1VkFHw/V/PUcB9Buo+DG3iHkT0x3Qya58zc3g==}
