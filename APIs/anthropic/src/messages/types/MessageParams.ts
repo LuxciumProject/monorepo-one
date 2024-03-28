@@ -14,6 +14,5 @@ export interface MessageParams {
   temperature?: number;
   top_k?: number;
   top_p?: number;
-
   previousMessages?: MessageItem[]; // Add a new parameter for the previous messages
 }

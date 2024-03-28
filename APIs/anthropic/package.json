@@ -1,6 +1,6 @@
 {
   "name": "@luxcium/api-anthropic",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "out/index.js",
   "types": "out/typings/index.d.ts",

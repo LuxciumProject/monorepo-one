@@ -61,10 +61,7 @@ process.on('SIGINT', () => {
 });
 
 // Function to send message to Anthropic and receive a response
-async function sendMessage(
-  user_text: string,
-  system_instruction: string = ''
-): Promise<void> {
+async function sendMessage(user_text: string, system_instruction: string = '') {
   try {
     const user_id: string | null = argv['user_id'] || null;
 
@@ -88,17 +85,19 @@ async function sendMessage(
 
     create.userMessage(user_text);
     console.log(`Claude: ${messages.content[0].text}`);
+    return messages.previousMessages;
   } catch (error) {
     console.error('Error communicating with Anthropic API:', error);
   }
 }
-
+let messages = [];
 // Main chat loop
 function main() {
   rl.prompt();
 
   rl.on('line', async line => {
-    await sendMessage(line.trim());
+    const previousMessages = await sendMessage(line.trim());
+    messages = [...previousMessages];
     rl.prompt();
   });
 }

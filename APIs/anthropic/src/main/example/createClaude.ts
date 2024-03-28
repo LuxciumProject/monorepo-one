@@ -30,7 +30,7 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
     const metadata: { user_id?: string | null } = { user_id };
     const userMessage: UserTextMessage<string> = create.userMessage(
       user_text.trim(),
-      user_prefix.trim()
+      user_prefix.trim() + ' '
     );
     const messages: MessageItem[] = [...previousMessages, userMessage];
     let assistantMessage: AssistantTextMessage<string> = null;
@@ -42,6 +42,7 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
       messages.push(assistantMessage);
     }
     try {
+      // %-=========================================================-%
       const {
         id,
         content: contentRaw,
@@ -51,7 +52,9 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
         stop_sequence,
         type: messageType,
         usage,
+        // &-=======================================================-&
       } = await client.messages.create({
+        // &-=======================================================-&
         model,
         max_tokens,
         temperature,
@@ -62,14 +65,13 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
         top_p,
         metadata,
       });
+      // %-=========================================================-%
       const [{ text: replyText, type: replyType }] = contentRaw;
       const { input_tokens, output_tokens } = usage;
       const replyMessage = assist_text + replyText;
-      const contentMessage = [{ text: replyMessage, type: replyType }];
+      const responseText = create.assistantMessage(replyMessage);
+      // previousMessages =;
       const request: MessageRequest<M> = {
-        userMessage,
-        assistantMessage,
-        messages,
         model,
         max_tokens,
         temperature,
@@ -78,7 +80,9 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
         top_k,
         top_p,
         metadata,
+        previousMessages,
       };
+      // %-=========================================================-%
       return {
         role,
         model,
@@ -86,7 +90,7 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
         replyType,
         replyText,
         replyMessage,
-        contentMessage,
+        responseText,
         content: contentRaw,
         stop_reason,
         stop_sequence,
@@ -96,8 +100,13 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
         input_tokens,
         output_tokens,
         request,
+        assistantMessage,
+        userMessage,
+        previousMessages: [...previousMessages, userMessage, responseText],
       };
-    } catch {
+      // %-=========================================================-%
+    } catch (error) {
+      console.error('Error AT: SendClaudeRequest with Anthropic API:', error);
       // Do nothing
       /*
       The addition of the try/catch block

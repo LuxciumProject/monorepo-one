@@ -12,19 +12,18 @@ export interface ModelReply<M extends string> {
   stop_reason: 'end_turn' | 'max_tokens' | 'stop_sequence' | null;
   stop_sequence: string | null;
   id: string;
-  contentMessage: Array<ContentBlock>;
+  responseText: AssistantTextMessage<string>;
   messageType: 'message';
   usage: Usage;
   input_tokens: number;
   output_tokens: number;
-
+  userMessage: UserTextMessage<string>;
+  assistantMessage: AssistantTextMessage<string>;
   request: MessageRequest<M>;
+  previousMessages: MessageItem[];
 }
 
 export interface MessageRequest<M extends string> {
-  userMessage: UserTextMessage<string>;
-  assistantMessage: AssistantTextMessage<string>;
-  messages: MessageItem[];
   model: M;
   max_tokens: number;
   temperature: number;
@@ -33,4 +32,5 @@ export interface MessageRequest<M extends string> {
   top_k: number;
   top_p: number;
   metadata: { user_id?: string | null };
+  previousMessages?: MessageItem[];
 }
