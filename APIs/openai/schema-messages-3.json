@@ -1,0 +1,289 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "title",
+      "create_time",
+      "update_time",
+      "mapping",
+      "moderation_results",
+      "current_node",
+      "plugin_ids",
+      "conversation_id",
+      "conversation_template_id",
+      "gizmo_id",
+      "is_archived",
+      "safe_urls",
+      "default_model_slug",
+      "id"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "create_time": {
+        "type": "number"
+      },
+      "update_time": {
+        "type": "number"
+      },
+      "mapping": {
+        "type": "object",
+        "properties": {
+          "common-key": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "message": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "author": {
+                    "type": "object",
+                    "properties": {
+                      "role": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "name": {
+                        "type": "object",
+                        "properties": {},
+                        "required": []
+                      },
+                      "metadata": {
+                        "type": "object",
+                        "properties": {},
+                        "required": []
+                      }
+                    },
+                    "required": [
+                      "role",
+                      "name",
+                      "metadata"
+                    ]
+                  },
+                  "create_time": {
+                    "type": "number"
+                  },
+                  "update_time": {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                  },
+                  "content": {
+                    "type": "object",
+                    "properties": {
+                      "content_type": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "parts": {
+                        "type": "array",
+                        "items": {
+                          "required": [],
+                          "properties": {}
+                        }
+                      }
+                    },
+                    "required": [
+                      "content_type",
+                      "parts"
+                    ]
+                  },
+                  "status": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "end_turn": {
+                    "type": "boolean"
+                  },
+                  "weight": {
+                    "type": "number"
+                  },
+                  "metadata": {
+                    "type": "object",
+                    "properties": {
+                      "finish_details": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "stop_tokens": {
+                            "type": "array",
+                            "items": {
+                              "required": [],
+                              "properties": {}
+                            }
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "stop_tokens"
+                        ]
+                      },
+                      "citations": {
+                        "type": "array",
+                        "items": {
+                          "required": [],
+                          "properties": {}
+                        }
+                      },
+                      "gizmo_id": {
+                        "type": "object",
+                        "properties": {},
+                        "required": []
+                      },
+                      "is_complete": {
+                        "type": "boolean"
+                      },
+                      "message_type": {
+                        "type": "object",
+                        "properties": {},
+                        "required": []
+                      },
+                      "model_slug": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "default_model_slug": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "pad": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "parent_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "request_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "timestamp_": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "finish_details",
+                      "citations",
+                      "gizmo_id",
+                      "is_complete",
+                      "message_type",
+                      "model_slug",
+                      "default_model_slug",
+                      "pad",
+                      "parent_id",
+                      "request_id",
+                      "timestamp_"
+                    ]
+                  },
+                  "recipient": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "author",
+                  "create_time",
+                  "update_time",
+                  "content",
+                  "status",
+                  "end_turn",
+                  "weight",
+                  "metadata",
+                  "recipient"
+                ]
+              },
+              "parent": {
+                "type": "string",
+                "minLength": 1
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "required": [],
+                  "properties": {}
+                }
+              }
+            },
+            "required": [
+              "id",
+              "message",
+              "parent",
+              "children"
+            ]
+          }
+        },
+        "required": [
+          "common-key"
+        ]
+      },
+      "moderation_results": {
+        "type": "array",
+        "items": {
+          "required": [],
+          "properties": {}
+        }
+      },
+      "current_node": {
+        "type": "string",
+        "minLength": 1
+      },
+      "plugin_ids": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "conversation_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "conversation_template_id": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "gizmo_id": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "is_archived": {
+        "type": "boolean"
+      },
+      "safe_urls": {
+        "type": "array",
+        "items": {
+          "required": [],
+          "properties": {}
+        }
+      },
+      "default_model_slug": {
+        "type": "string",
+        "minLength": 1
+      },
+      "id": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
