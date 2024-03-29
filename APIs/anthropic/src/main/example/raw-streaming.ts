@@ -28,7 +28,12 @@ async function main() {
   process.stdout.write('\n');
 }
 
-main();
+main()
+  .then(() => process.exit(0))
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
 /*
   MIT License

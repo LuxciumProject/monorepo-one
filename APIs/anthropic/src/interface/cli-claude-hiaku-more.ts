@@ -46,22 +46,8 @@ let ctrlCPressed = false;
         process.exit(10);
       })
       .on('line', async line => {
-        const system_text = `
-  /**
-  * System prompt.
-  *
-  * A system prompt is a way of providing context and instructions to Claude, such
-  * as specifying a particular goal or role. See our
-  * [guide to system prompts](https://docs.anthropic.com/claude/docs/system-prompts).
-  */
-  <SYSTEM_NOTIFICATION>
-    User may decide to cancell at any moment acknoowledging this is the last message in a conversation creating the illusion of a continus conversation before this message... <when the conversation interfac equits it will be displayed to the interface Exiting chat...to you and the user>
-  </SYSTEM_NOTIFICATION>
-`
-          .trim()
-          .split('\n')
-          .map(sysText => sysText.trim())
-          .join('\n');
+        const system_text = makeSystemBlock('');
+
         const previousMessages = await sendMessage(
           line.trim(),
           system_text,
@@ -93,4 +79,23 @@ let ctrlCPressed = false;
     rl.close();
     process.exit(0);
   });
+}
+
+function makeSystemBlock(systemText: string) {
+  return `
+/**
+* System prompt.
+*
+* A system prompt is a way of providing context and instructions to Claude, such
+* as specifying a particular goal or role. See our
+* [guide to system prompts](https://docs.anthropic.com/claude/docs/system-prompts).
+*/
+<SYSTEM>
+  ${systemText}
+</SYSTEM>
+`
+    .trim()
+    .split('\n')
+    .map(sysText => sysText.trim())
+    .join('\n');
 }
