@@ -4,6 +4,7 @@
     /* Emit Options */
     "target": "ESNext",
     "module": "CommonJS",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "rootDir": "./src",
     "composite": true,

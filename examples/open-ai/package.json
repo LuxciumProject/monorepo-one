@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "openai": "^3.1.0",
+    "openai": "~4.30.0",
     "dotenv": "^16.0.0"
   },
   "devDependencies": {

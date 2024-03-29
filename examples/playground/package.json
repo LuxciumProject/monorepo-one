@@ -6,7 +6,7 @@
   "types": "out/typings/index.d.ts",
   "scripts": {
     "build": "bash scripts/build.sh",
-    "install": "pwd; yarn build || exit 13; pwd",
+    "install": "pwd; # yarn build || exit 13; pwd",
     "path": "echo $PATH",
     "test": "jest"
   },
