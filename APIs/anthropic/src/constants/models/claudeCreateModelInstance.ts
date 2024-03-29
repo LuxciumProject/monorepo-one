@@ -1,4 +1,4 @@
-import { claudeCreateInstance } from '../../main/example/createClaude';
+import { claudeCreateInstance } from './createClaude';
 import { MODEL } from './models-names';
 import type {
   Claude2_0,

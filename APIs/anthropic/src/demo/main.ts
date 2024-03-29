@@ -1,12 +1,12 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { Usage } from '@anthropic-ai/sdk/resources';
 import { config } from 'dotenv';
-import { sendClaudeHaiku } from '../../constants/models/claudeCreateModelInstance';
+import { sendClaudeHaiku } from '../constants/models/claudeCreateModelInstance';
 import {
   haikuInputPrice,
   haikuOutputPrice,
   tokenUsageString,
-} from '../../helpers';
+} from '../helpers';
 import { UsageStrings } from './UsageStrings';
 config();
 const key = {
