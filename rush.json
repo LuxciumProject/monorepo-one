@@ -379,8 +379,15 @@
       ]
     },
     {
-      "packageName": "@luxcium/api-anthropic",
+      "packageName": "@luxcium/anthropic-api",
       "projectFolder": "APIs/anthropic",
+      "tags": [
+        "apis"
+      ]
+    },
+    {
+      "packageName": "@luxcium/openai-api",
+      "projectFolder": "APIs/openai",
       "tags": [
         "apis"
       ]

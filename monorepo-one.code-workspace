@@ -61,8 +61,12 @@
       "path": "APIs"
     },
     {
-      "name": "       📙 anthropic",
+      "name": "       📙 Anthropic",
       "path": "APIs/anthropic"
+    },
+    {
+      "name": "       📙 OpenAI",
+      "path": "APIs/openai"
     },
     {
       "name": "  ↓ 📓 📚 LIBRARY",
