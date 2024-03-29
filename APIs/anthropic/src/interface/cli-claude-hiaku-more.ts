@@ -12,16 +12,21 @@
 import { createInterface } from 'readline';
 import { sendMessage } from './sendMessage';
 
+const prompt = 'You: ';
+let ctrlCPressed = false;
 {
-  const prompt = 'You: ';
-  let ctrlCPressed = false;
-  {
-    const rl = createInterface({
-      input: process.stdin,
-      output: process.stdout,
-      prompt, // Display the prompt
-    });
-    process.on('SIGINT', () => {
+  const rl = createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    prompt, // Display the prompt
+  });
+
+  let messages = [];
+  // Start the application
+  main();
+  function main() {
+    rl.prompt();
+    rl.on('SIGINT', () => {
       if (!ctrlCPressed) {
         console.log('\nCTRL+C pressed. Press again to exit.');
         ctrlCPressed = true;
@@ -30,67 +35,62 @@ import { sendMessage } from './sendMessage';
         rl.close();
         process.exit();
       }
-      // Reset the flag after 1 second,
-      // so the user has to press CTRL+C twice quickly
+      // Set back the flag after 1.5 second
       setTimeout(() => {
         ctrlCPressed = false;
-      }, 1000);
-    });
-    process.on('SIGTSTP', () => {
-      console.log('\nExiting chat...');
-      rl.close();
-      process.exit(10);
-    });
-    void async function rlOnLine<L extends string = any>(line: L) {
-      // wiil need to parse the and extract the meta information from the line
-      // then send the message to the API via sendMessage function and then display the response.
-      const parsedLine = line.trim();
-
-      // in the line we will have the user message cointaining meta characters and meta commande to be parsed and extracted
-      // The list of which is as follows:
-
-      // 1. The user message
-      // 2. The user prefix
-      // 3. The system text will be inside the system_text variable with '' or "" or none [[<system_text=''>]]
-
-      const system_text =
-        parsedLine.match(/\[\[<system_text=(.*)>\]\]/)?.[1] || '';
-      const user_message = parsedLine
-        .replace(/\[\[<system_text=.*>\]\]/, '')
-        .trim();
-      await sendMessage(user_message, []);
-      rl.prompt();
-    };
-    let messages = [];
-    function main() {
-      rl.prompt();
-      rl.on('SIGINT', () => {
-        if (!ctrlCPressed) {
-          console.log('\nCTRL+C pressed. Press again to exit.');
-          ctrlCPressed = true;
-        } else {
-          console.log('\nCTRL+C pressed twice. Exiting.');
-          rl.close();
-          process.exit();
-        }
-        // Set back the flag after 1.5 second
-        setTimeout(() => {
-          ctrlCPressed = false;
-        }, 1500);
-      }).on('close', () => {
+      }, 1500);
+    })
+      .on('close', () => {
         console.log('\nExiting chat...');
         rl.close();
         process.exit(10);
-      });
-      rl.on('line', async line => {
-        const previousMessages = await sendMessage(line.trim(), messages);
+      })
+      .on('line', async line => {
+        const system_text = `
+  /**
+  * System prompt.
+  *
+  * A system prompt is a way of providing context and instructions to Claude, such
+  * as specifying a particular goal or role. See our
+  * [guide to system prompts](https://docs.anthropic.com/claude/docs/system-prompts).
+  */
+  <SYSTEM_NOTIFICATION>
+    User may decide to cancell at any moment acknoowledging this is the last message in a conversation creating the illusion of a continus conversation before this message... <when the conversation interfac equits it will be displayed to the interface Exiting chat...to you and the user>
+  </SYSTEM_NOTIFICATION>
+`
+          .trim()
+          .split('\n')
+          .map(sysText => sysText.trim())
+          .join('\n');
+        const previousMessages = await sendMessage(
+          line.trim(),
+          system_text,
+          messages
+        );
         messages = previousMessages;
         rl.prompt();
         // process.exit(10);
       });
-    }
-
-    // Start the application
-    main();
   }
+
+  process.on('SIGINT', () => {
+    if (!ctrlCPressed) {
+      console.log('\nCTRL+C pressed. Press again to exit.');
+      ctrlCPressed = true;
+    } else {
+      console.log('\nCTRL+C pressed twice. Exiting.');
+      rl.close();
+      process.exit();
+    }
+    // Reset the flag after 1 second,
+    // so the user has to press CTRL+C twice quickly
+    setTimeout(() => {
+      ctrlCPressed = false;
+    }, 1000);
+  });
+  process.on('SIGTSTP', () => {
+    console.log('\nExiting chat...');
+    rl.close();
+    process.exit(0);
+  });
 }

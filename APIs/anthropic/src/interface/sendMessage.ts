@@ -46,6 +46,7 @@ const argv = yargs(hideBin(process.argv))
  */
 export async function sendMessage(
   user_text: string,
+  system_text: string,
   previousMessages: MessageItem[]
 ) {
   config();
@@ -56,7 +57,7 @@ export async function sendMessage(
       await sendClaudeHaiku({
         client,
         previousMessages,
-        system: '',
+        system: system_text || '',
         user_text,
         user_prefix: '\nYou: ',
         assist_prefix: '\nClaude: ',
