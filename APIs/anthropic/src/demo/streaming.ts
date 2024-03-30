@@ -1,38 +1,69 @@
 #!/usr/bin/env -S npm run tsn -T
 
 import Anthropic from '@anthropic-ai/sdk';
+import { config } from 'dotenv';
+import { MODEL } from '../constants/models';
 
-const client = new Anthropic(); // gets API Key from environment variable ANTHROPIC_API_KEY
-
+// gets API Key from environment variable ANTHROPIC_API_KEY
+config();
+const client = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+const messageRecieved = {
+  type: 'message',
+  role: 'assistant',
+  content: [] as Anthropic.Messages.ContentBlock[],
+};
 async function main() {
+  const messages = [
+    {
+      role: 'user',
+      content: `Hey Claude! How can I recursively list all files in a directory in Rust?`,
+    } as const,
+  ];
+
   const stream = client.messages
     .stream({
-      messages: [
-        {
-          role: 'user',
-          content: `Hey Claude! How can I recursively list all files in a directory in Rust?`,
-        },
-      ],
-      model: 'claude-3-opus-20240229',
-      max_tokens: 1024,
+      messages,
+      model: MODEL.claudeHaiku,
+      max_tokens: 500,
     })
     // Once a content block is fully streamed, this event will fire
-    .on('contentBlock', content => console.log('contentBlock', content))
-    // Once a message is fully streamed, this event will fire
-    .on('message', message => console.log('message', message));
-
+    .on('contentBlock', (content: Anthropic.Messages.ContentBlock) => {
+      console.log('contentBlock', content);
+      messageRecieved.content = [content];
+    })
+    // Once a message is fully streamed, this  event will fire
+    .on('message', message => {
+      // console.log('message', message)
+      return message;
+    })
+    .on('streamEvent', (event: Anthropic.Messages.MessageStreamEvent) => {
+      // console.log('streamEvent', event)
+      return event;
+    });
+  stream;
   for await (const event of stream) {
-    console.log('event', event);
+    // console.log('event', event);
   }
 
+  const finalText = await stream.finalText();
   const message = await stream.finalMessage();
-  console.log('finalMessage', message);
+  // console.log('finalMessage', message);
+  // console.log('finalText', finalText);
 }
 
 main().catch(err => {
   console.error(err);
   process.exit(1);
 });
+
+// | MessageStartEvent
+// | MessageDeltaEvent
+// | MessageStopEvent
+// | ContentBlockStartEvent
+// | ContentBlockDeltaEvent
+// | ContentBlockStopEvent;
 
 /*
   MIT License

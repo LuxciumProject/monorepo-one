@@ -1,31 +1,32 @@
 #!/usr/bin/env -S npm run tsn -T
 
 import Anthropic from '@anthropic-ai/sdk';
+import { Stream } from '@anthropic-ai/sdk/streaming';
+import { config } from 'dotenv';
+import { MODEL } from '../constants/models';
 
-const client = new Anthropic(); // gets API Key from environment variable ANTHROPIC_API_KEY
+// gets API Key from environment variable ANTHROPIC_API_KEY
+config();
+const client = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
 
 async function main() {
+  const messages = [
+    {
+      role: 'user',
+      content: `Hey Claude! How can I recursively list all files in a directory in Rust?`,
+    } as const,
+  ];
+  const usage = { output_tokens: 0, input_tokens: 0 };
   const stream = await client.messages.create({
-    model: 'claude-3-opus-20240229',
+    model: MODEL.claudeHaiku,
     stream: true,
     max_tokens: 500,
-    messages: [
-      {
-        role: 'user',
-        content: 'Hey Claude!',
-      },
-    ],
+    messages,
   });
 
-  for await (const event of stream) {
-    if (
-      event.type === 'content_block_delta' &&
-      event.delta.type === 'text_delta'
-    ) {
-      process.stdout.write(event.delta.text);
-    }
-  }
-  process.stdout.write('\n');
+  console.log('Usage:', await streamer(stream, usage));
 }
 
 main()
@@ -35,6 +36,26 @@ main()
     process.exit(1);
   });
 
+async function streamer(
+  stream: Stream<Anthropic.Messages.MessageStreamEvent>,
+  usage: { output_tokens: number; input_tokens: number }
+) {
+  for await (const event of stream) {
+    if (
+      event.type === 'content_block_delta' &&
+      event.delta.type === 'text_delta'
+    ) {
+      process.stdout.write(event.delta.text);
+    } else if (event.type === 'message_delta') {
+      usage.output_tokens += event.usage.output_tokens;
+    } else if (event.type === 'message_start' && event.message.usage) {
+      usage.output_tokens += event.message.usage.output_tokens;
+    } else {
+      process.stdout.write('\n');
+    }
+  }
+  return usage;
+}
 /*
   MIT License
 

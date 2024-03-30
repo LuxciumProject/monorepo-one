@@ -1,24 +1,41 @@
 #!/usr/bin/env -S npm run tsn -T
 
 import Anthropic from '@anthropic-ai/sdk';
+import { config } from 'dotenv';
+import { MODEL } from '../constants/models';
 
-const client = new Anthropic(); // gets API Key from environment variable ANTHROPIC_API_KEY
-
+// gets API Key from environment variable ANTHROPIC_API_KEY
+config();
+const client = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+const messages = [
+  {
+    role: 'user',
+    content: 'Hey Claude!?',
+  } as const,
+];
 async function main() {
   const result = await client.messages.create({
-    messages: [
-      {
-        role: 'user',
-        content: 'Hey Claude!?',
-      },
-    ],
-    model: 'claude-3-opus-20240229',
+    messages,
+    model: MODEL.claudeHaiku,
     max_tokens: 1024,
   });
   console.dir(result);
 }
 
 main();
+// ❯ ts-node "/projects/monorepo-one/APIs/anthropic/src/demo/demo.ts"
+// {
+//   id: 'msg_01B3Jj1Ut4rzh1uZ8wBJFLhJ',
+//   type: 'message',
+//   role: 'assistant',
+//   content: [ { type: 'text', text: 'Hello! How can I assist you today?' } ],
+//   model: 'claude-3-opus-20240229',
+//   stop_reason: 'end_turn',
+//   stop_sequence: null,
+//   usage: { input_tokens: 11, output_tokens: 12 }
+// }
 
 /*
   MIT License

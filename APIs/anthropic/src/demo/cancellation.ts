@@ -1,7 +1,14 @@
 #!/usr/bin/env -S npm run tsn -T
 
 import Anthropic from '@anthropic-ai/sdk';
-const client = new Anthropic();
+import { config } from 'dotenv';
+import { MODEL } from '../constants/models';
+
+// gets API Key from environment variable ANTHROPIC_API_KEY
+config();
+const client = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
 
 /**
  * This script demonstrates two ways of cancelling a stream,
@@ -17,7 +24,7 @@ async function main() {
     'Hey Claude! How can I recursively list all files in a directory in Rust?';
 
   const stream = await client.messages.create({
-    model: 'claude-3-opus-20240229',
+    model: MODEL.claudeHaiku,
     stream: true,
     max_tokens: 500,
     messages: [{ role: 'user', content: question }],
@@ -26,9 +33,9 @@ async function main() {
   // If you need to, you can cancel a stream from outside the iterator
   // by calling "stream.controller.abort()"
   const timeout = setTimeout(() => {
-    console.log('\nCancelling after 1.5 seconds.');
+    console.log('\nCancelling after 1.25 seconds.');
     stream.controller.abort();
-  }, 1500);
+  }, 1250);
 
   for await (const event of stream) {
     if (
