@@ -1,3 +1,4 @@
+import { Message } from '@anthropic-ai/sdk/resources';
 import { create } from '../../messages';
 import type {
   AssistantTextMessage,
@@ -43,17 +44,7 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
     }
     try {
       // %-=========================================================-%
-      const {
-        id,
-        content: contentRaw,
-        model: replyModel,
-        role,
-        stop_reason,
-        stop_sequence,
-        type: messageType,
-        usage,
-        // &-=======================================================-&
-      } = await client.messages.create({
+      const result: Message = await client.messages.create({
         // &-=======================================================-&
         model,
         max_tokens,
@@ -64,13 +55,25 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
         top_k,
         top_p,
         metadata,
+        // &-=======================================================-&
       });
       // %-=========================================================-%
+      const {
+        id,
+        content: contentRaw,
+        model: replyModel,
+        role,
+        stop_reason,
+        stop_sequence,
+        type: messageType,
+        usage,
+      } = result;
+      // 2-=========================================================-2
       const [{ text: replyText, type: replyType }] = contentRaw;
       const { input_tokens, output_tokens } = usage;
       const replyMessage = assist_text + replyText;
       const responseText = create.assistantMessage(replyMessage);
-      // previousMessages =;
+      // 2-=========================================================-2
       const request: MessageRequest<M> = {
         model,
         max_tokens,
@@ -116,3 +119,53 @@ export const claudeCreateInstance = <M extends string>(model: M) => {
     }
   };
 };
+
+export interface MessageCreateParamsBase_TYPEMAP {
+  max_tokens: number;
+
+  // messages: Array<MessageParam>
+  messages: Array<{
+    // content: Array<TextBlock | ImageBlockParam>
+    content:
+      | Array<
+          | {
+              text: string;
+              type?: 'text';
+            }
+          // ImageBlockParam
+          | {
+              // source: ImageBlockParam.Source;
+              source: {
+                data: string;
+                media_type:
+                  | 'image/jpeg'
+                  | 'image/png'
+                  | 'image/gif'
+                  | 'image/webp';
+                type?: 'base64';
+              };
+              type?: 'image';
+            }
+        >
+      | string;
+    role: 'user' | 'assistant';
+  }>;
+  model:
+    | (string & {})
+    | 'claude-3-opus-20240229'
+    | 'claude-3-sonnet-20240229'
+    | 'claude-3-haiku-20240307'
+    | "claude-2.1'"
+    | 'claude-2.0'
+    | 'claude-instant-1.2';
+  // metadata?: MessageCreateParams.Metadata
+  metadata?: {
+    user_id?: string | null;
+  };
+  stop_sequences?: string[];
+  stream?: boolean;
+  system?: string;
+  temperature?: number;
+  top_k?: number;
+  top_p?: number;
+}
