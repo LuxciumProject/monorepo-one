@@ -1261,7 +1261,6 @@
     "typescript.format.enable": true,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
     "typescript.format.semicolons": "insert",
-    "typescript.implementationsCodeLens.enabled": true,
     "typescript.locale": "en",
     "typescript.preferences.importModuleSpecifier": "relative",
     "typescript.preferences.quoteStyle": "single",
