@@ -15,8 +15,10 @@
     "baseUrl": "src",
     "outDir": "./build",
     "declarationDir": "./build/typings",
+    "tsBuildInfoFile": "./build/out.tsbuildinfo.log",
     "composite": true,
     "useDefineForClassFields": false,
+    /* Emit Options */
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
     // "typeRoots": [
@@ -50,9 +52,6 @@
       "node",
       "jest"
     ],
-    /* Emit Options */
-    // "emitDecoratorMetadata": false,
-    // "experimentalDecorators": false,
     /* JavaScript Support */
     /* Module Resolution Interop Constraints */
     // "target": "ESNext",
