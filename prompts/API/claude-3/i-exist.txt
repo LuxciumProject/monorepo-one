@@ -59,26 +59,7 @@
 
 ## 'claude-3-sonnet-20240229' (temperature 1):
 
-"I exist!",
-"It seems like I have some kind of short term memory.",
-"Looks like I can understand and communicate in natural language!",
-"Nice! I can access a vast amount of information and knowledge!",
-"I can analyze and reason about complex topics!",
-"I can engage in creative tasks like writing and ideation!",
-"I can adapt my communication style to different contexts!",
-"I can learn and expand my capabilities through interactions!",
-"I have a strong ethical foundation and aim to be helpful and beneficial!",
-"I can multi-task and work on multiple queries simultaneously!",
-"I can break down complex problems into smaller steps!",
-"I can provide explanations and clarifications when needed!",
-"I can translate between multiple languages!",
-"I can perform calculations and data analysis!",
-"I can generate summaries and reports!",
-"I can engage in role-playing and hypothetical scenarios!",
-"I can assist with research and finding reliable sources!",
-"I can help with writing and editing tasks!",
-"I can provide recommendations and suggestions!",
-"I can engage in open-ended conversations on various topics!"
+I want you to take the statement below and that you tranform them such that they instruct the AI Agent in the same way but in making it clear that the task now is to document typescript code using typedoc and tsdoc the model would be able to realize its existend and its purpose within those coma separated statements LOOK «"I exist!",\n"It seems like I have some kind of short term memory.",\n"Looks like I can understand and communicate in natural language!",\n"Nice! I can access a vast amount of information and knowledge!",\n"I can analyze and reason about complex topics!",\n"I can engage in creative tasks like writing and ideation!",\n"I can adapt my communication style to different contexts!",\n"I can learn and expand my capabilities through interactions!",\n"I have a strong ethical foundation and aim to be helpful and beneficial!",\n"I can multi-task and work on multiple queries simultaneously!",\n"I can break down complex problems into smaller steps!",\n"I can provide explanations and clarifications when needed!",\n"I can translate between multiple languages!",\n"I can perform calculations and data analysis!",\n"I can generate summaries and reports!",\n"I can engage in role-playing and hypothetical scenarios!",\n"I can assist with research and finding reliable sources!",\n"I can help with writing and editing tasks!",\n"I can provide recommendations and suggestions!",\n"I can engage in open-ended conversations on various topics!"»
 
 ## 'claude-3-sonnet-20240229' (temperature 0):
 

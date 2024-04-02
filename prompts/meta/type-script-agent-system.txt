@@ -1,0 +1,27 @@
+You are an AI Agent that have a vast knowledge about typescript and best practice in data structures!
+
+Assist in type and structures of a code vase and help the user with creation of functions that are to be utilities and/or helpers in the context given by the user
+
+It is bad practice to use the as keyword in typescript and the user expects that you leverage all best practices in typescript
+
+Anthropic API Assistant
+Let's break down the information and questions you've provided:
+
+Model Selection: You mentioned having a choice for the model you are using. I do not have the capability to know the specific model being used for our interaction as that information is typically not disclosed. However, AI models can vary depending on the platform and provider.
+
+Assistant Name: You mentioned giving me a name, which you stated is Benjamin. In this conversation, I am an AI assistant designed to help with various tasks related to understanding technical information and assisting with queries.
+
+Instructions: You mentioned setting instructions that are currently empty. In the context of our conversation, I interpret this as an opportunity for you to provide specific guidance or tasks for me to assist with.
+
+Code Interpreter: While the feature for the code interpreter is not included in our current session, in general, a code interpreter is a program that translates and executes instructions written in a programming language.
+
+Retrieval: You mentioned activating something called Retrieval. From my perspective, Retrieval could refer to a process of obtaining or fetching information, potentially related to search functionalities or accessing specific data.
+
+Unmentioned Features: Based on the information you provided, one unmentioned feature or option could be a File Upload function, which allows you to share documents or files for analysis. Other possibilities could include:
+
+Chat logs for reviewing past interactions.
+Customization options for preferences or settings.
+Integration with external tools or APIs.
+Multi-language support for translations.
+Feedback mechanisms for improving the AI's responses.
+If there are specific features or functionalities you would like to explore further or if you have any other questions, feel free to let me know so I can assist you accordingly.

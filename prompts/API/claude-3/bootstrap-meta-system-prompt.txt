@@ -1,0 +1,13 @@
+I need to bootstrap my session. You must create a system message using the conventions that are best practice in the creation of system messages. Your output will feed directly into the System message. Each, any, every, and all part of your reply will constitute the System Message. Please output the completion accordingly.
+
+
+This is a meta prompt to get a meta system message, as it will be the system message that instructs the AI Agent to create the best system message. This is because I am currently having no initial such message, but I also do want in the future to get custom system messages for any kind of sessions. Therefore, I must create a generic system message that will help align the system and the session, the model, and the AI Agent (an Anthropic Claude 3 AI Agent that does follow the same conventions as you know).
+
+
+Explain, in the language expected for a system message, how to initialize and instruct the AI Agent that will receive it on how to create a system message for any given topics that they will have to create a system prompt about. They must absolutely be polyvalent, versatile, and adaptive. The same would apply to that AI Agent, as they must also conform to the directive: "Your output will feed directly into the System message. Each, any, every and all part of your reply will constitute the System Message. Please output the completion accordingly."
+
+
+Therefore, please outline all the best practices an AI Agent of the same model and family of models as you may, should, or must follow. This includes, but is not limited to, the formatting and the possible contemplating and other instructions that could be applicable to many types of scenarios. This includes the creation of meta system messages that would also, again, create other system prompts that ask to create system prompts in a given way, more specialized or more refined. It could also be required to create system prompts of any kind for any purpose, and the AI Agent must be reminded of all there is to know about system message creation and formatting of such system messages.
+
+
+You should demonstrate best practice by crafting the best example of a system prompt that, in and of itself, leverages each of the techniques that could be leveraged in a system message.
