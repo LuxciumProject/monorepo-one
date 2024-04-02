@@ -3,33 +3,33 @@ const MTOK = 1_000_000;
 export const PRICES = {
   claude3: {
     haiku: {
-      input: 0.25,
-      output: 1.25,
+      inputRate: 0.25,
+      outputRate: 1.25,
     } as ModelPrice,
     sonnet: {
-      input: 3,
-      output: 15,
+      inputRate: 3,
+      outputRate: 15,
     } as ModelPrice,
     opus: {
-      input: 15,
-      output: 75,
+      inputRate: 15,
+      outputRate: 75,
     } as ModelPrice,
   },
   claude21: {
-    input: 8,
-    output: 24,
+    inputRate: 8,
+    outputRate: 24,
   } as ModelPrice,
   claude20: {
-    input: 8,
-    output: 24,
+    inputRate: 8,
+    outputRate: 24,
   } as ModelPrice,
   claudeInstant: {
-    input: 0.8,
-    output: 2.4,
+    inputRate: 0.8,
+    outputRate: 2.4,
   } as ModelPrice,
   ERROR: {
-    input: NaN,
-    output: NaN,
+    inputRate: NaN,
+    outputRate: NaN,
   } as ModelPrice,
   MTOK,
 };

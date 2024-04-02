@@ -211,6 +211,55 @@ export interface MessageCreateParamsBase_TYPEMAP {
   top_p?: number;
 }
 
+export interface MyMessageCreateParamsBase {
+  max_tokens: number;
+  // messages: Array<MessageParam>
+  messages: Array<{
+    // content: Array<TextBlock | ImageBlockParam>
+    content:
+      | Array<
+          | {
+              text: string;
+              type?: 'text';
+            }
+          // ImageBlockParam
+          | {
+              // source: ImageBlockParam.Source;
+              source: {
+                data: string;
+                media_type:
+                  | 'image/jpeg'
+                  | 'image/png'
+                  | 'image/gif'
+                  | 'image/webp';
+                type?: 'base64';
+              };
+              type?: 'image';
+            }
+        >
+      | string;
+    role: 'user' | 'assistant';
+  }>;
+  model:
+    | (string & {})
+    | 'claude-3-opus-20240229'
+    | 'claude-3-sonnet-20240229'
+    | 'claude-3-haiku-20240307'
+    | "claude-2.1'"
+    | 'claude-2.0'
+    | 'claude-instant-1.2';
+  // metadata?: MessageCreateParams.Metadata
+  metadata?: {
+    user_id?: string | null;
+  };
+  stop_sequences?: string[];
+  stream?: boolean;
+  system?: string;
+  temperature?: number;
+  top_k?: number;
+  top_p?: number;
+}
+
 export interface MessageCreateParamsBase {
   /**
    * The maximum number of tokens to generate before stopping.

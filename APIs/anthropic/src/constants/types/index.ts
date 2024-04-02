@@ -1,3 +1,4 @@
-export type { Models } from '../models/types/Models';
+export type { Models } from '../models/types';
 export type { ModelPrice } from './ModelPrice';
-export type { ModelShortNames } from './ModelShortNames';
+export type { Model3, ModelShortNames } from './ModelShortNames';
+export type { Usage } from './Usage';

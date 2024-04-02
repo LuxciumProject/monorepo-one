@@ -5,3 +5,5 @@ export type ModelShortNames =
   | 'claude-21'
   | 'claude-20'
   | 'claude-instant';
+
+export type Model3 = 'haiku' | 'sonnet' | 'opus';

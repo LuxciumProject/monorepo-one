@@ -1,7 +1,7 @@
 #!/usr/bin/env -S npm run tsn -T
 
 import Anthropic from '@anthropic-ai/sdk';
-import { Stream } from '@anthropic-ai/sdk/streaming';
+import type { Stream } from '@anthropic-ai/sdk/streaming';
 import { config } from 'dotenv';
 import { MODEL } from '../constants/models';
 
