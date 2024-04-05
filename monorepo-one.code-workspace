@@ -2458,7 +2458,7 @@
         "icon": "tools",
         "gutterIcon": true
       },
-      // SECTION: ------------------------------------------------------
+      // SECTION: ----------------------------------------------------
       "SECTION:": {
         "foreground": "#DF3",
         "background": "#DF3",
@@ -2471,8 +2471,20 @@
         "hideFromTree": true,
         "hideFromStatusBar": true
       },
-      // "REVIEW NEEDED:"  search
-      // REVIEW NEEDED: ------------------------------------------------
+      // SIDE EFFECT: ------------------------------------------------
+      "SIDE EFFECT:": {
+        "foreground": "#FC9",
+        "background": "#F35",
+        "iconColour": "#DF3",
+        "icon": "mirror",
+        "gutterIcon": true,
+        "fontWeight": "500",
+        "opacity": 40,
+        "type": "text-and-comment",
+        "hideFromTree": true,
+        "hideFromStatusBar": true
+      },
+      // REVIEW NEEDED: ----------------------------------------------
       "REVIEW NEEDED:": {
         "foreground": "#FC9",
         "background": "#05F",
@@ -2483,7 +2495,7 @@
         "icon": "search",
         "iconColour": "#93F"
       },
-      // HACK: ---------------------------------------------------------
+      // HACK: -------------------------------------------------------
       "HACK:": {
         "background": "#74F",
         "foreground": "#FC9",
@@ -2493,7 +2505,7 @@
         "icon": "squirrel",
         "iconColour": "#93F"
       },
-      // XXX: ----------------------------------------------------------
+      // XXX: --------------------------------------------------------
       "XXX:": {
         "foreground": "#E22",
         "iconColour": "#E22",
@@ -2979,6 +2991,7 @@
       "$:",
       "BUG:",
       "CONSOLE:",
+      "SIDE EFFECT:",
       "REVIEW NEEDED:",
       "ERROR HANDLER:",
       "ERROR:",

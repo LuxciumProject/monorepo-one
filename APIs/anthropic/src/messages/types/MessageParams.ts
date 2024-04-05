@@ -16,3 +16,9 @@ export interface MessageParams {
   top_p?: number;
   previousMessages?: MessageItem[]; // Add a new parameter for the previous messages
 }
+
+// const nothing: MessageParams = null as MessageCreateParamsBase;
+// const something: MessageCreateParamsBase = null as MessageParams;
+// void nothing;
+// void something;
+// // MessageCreateParamsBase; 'client' or 'model'

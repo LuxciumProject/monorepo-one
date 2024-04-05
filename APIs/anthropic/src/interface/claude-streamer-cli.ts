@@ -1,9 +1,19 @@
 // /projects/monorepo-one/APIs/anthropic/src/interface/claude-cli.ts
 import Anthropic from '@anthropic-ai/sdk';
+import {
+  ContentBlockDeltaEvent,
+  ContentBlockStartEvent,
+  ContentBlockStopEvent,
+  MessageCreateParams,
+  MessageDeltaEvent,
+  MessageParam,
+  MessageStartEvent,
+  MessageStopEvent,
+} from '@anthropic-ai/sdk/resources';
 import type { Stream } from '@anthropic-ai/sdk/streaming';
 import { config } from 'dotenv';
 import readline, { Interface } from 'readline';
-import { MODEL, sendClaudeHaiku } from '../constants/models';
+import { MODEL } from '../constants/models';
 import type { MessageItem } from '../messages/types';
 import { processArgv } from './processArgv';
 
@@ -28,12 +38,14 @@ async function streamer(
       event.type === 'content_block_delta' &&
       event.delta.type === 'text_delta'
     ) {
+      // SIDE EFFECT: Write the delta text to the stdout -------------
       process.stdout.write(event.delta.text);
     } else if (event.type === 'message_delta') {
       usage.output_tokens += event.usage.output_tokens;
     } else if (event.type === 'message_start' && event.message.usage) {
       usage.output_tokens += event.message.usage.output_tokens;
     } else {
+      // SIDE EFFECT: Write new line to the stdout -------------------
       process.stdout.write('\n');
     }
   }
@@ -48,7 +60,11 @@ async function sendMessageToStreamer(
 ): Promise<MessageItem[]> {
   const resolvedArgv = await argv;
   try {
-    const messages = await sendClaudeHaiku({
+    // INFO: here I a messages: ModelReply
+    // INFO: but I instead need a messages: Array<MessageParam>;
+    // const modelReply: ModelReply<'claude-3-haiku-20240307'> =
+    // await sendClaudeHaiku(
+    const someRequest = {
       client,
       previousMessages,
       system: system_text,
@@ -60,13 +76,19 @@ async function sendMessageToStreamer(
       temperature: resolvedArgv.temperature,
       top_k: resolvedArgv.top_k,
       top_p: resolvedArgv.top_p,
-    });
-    const stream = await client.messages.create({
-      model: MODEL.claudeHaiku,
-      stream: true,
-      max_tokens: 500,
-      messages,
-    });
+    };
+    // );
+    // void modelReply;
+    void someRequest;
+    const messages: any = null;
+    const stream: Stream<Anthropic.Messages.MessageStreamEvent> =
+      await client.messages.create({
+        model: MODEL.claudeHaiku,
+        stream: true,
+        max_tokens: 500,
+        messages,
+      });
+    stream;
     const usage = { output_tokens: 0, input_tokens: 0 };
 
     await streamer(stream, usage);
@@ -120,3 +142,33 @@ function handleSignal(signal: string) {
 
 // Initialize chat
 chatLoop(rl);
+
+export type MessageStreamEvent =
+  | MessageStartEvent
+  | MessageDeltaEvent
+  | MessageStopEvent
+  | ContentBlockStartEvent
+  | ContentBlockDeltaEvent
+  | ContentBlockStopEvent;
+export type MessageCreateParamsNonStreaming =
+  Anthropic.Messages.MessageCreateParamsNonStreaming;
+
+export interface MessageCreateParamsBase {
+  max_tokens: number;
+  messages: Array<MessageParam>;
+  model:
+    | (string & {})
+    | 'claude-3-opus-20240229'
+    | 'claude-3-sonnet-20240229'
+    | 'claude-3-haiku-20240307'
+    | "claude-2.1'"
+    | 'claude-2.0'
+    | 'claude-instant-1.2';
+  metadata?: MessageCreateParams.Metadata;
+  stop_sequences?: Array<string>;
+  stream?: boolean;
+  system?: string;
+  temperature?: number;
+  top_k?: number;
+  top_p?: number;
+}
