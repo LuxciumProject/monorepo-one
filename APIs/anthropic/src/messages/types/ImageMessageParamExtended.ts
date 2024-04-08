@@ -1,5 +1,5 @@
 import { ImageBlockParam, TextBlock } from '@anthropic-ai/sdk/resources';
-import { Models } from '../../constants/types';
+import { Models } from '../../models/types';
 
 export type ImageMessageParamExtended<M extends Models> = (
   messages: {

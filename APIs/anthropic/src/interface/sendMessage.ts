@@ -1,8 +1,8 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { config } from 'dotenv';
 import { hideBin } from 'yargs/helpers';
-import { sendClaudeHaiku } from '../constants/models';
 import { MessageItem, ModelReply } from '../messages/types';
+import { sendClaudeHaiku } from '../models';
 import yargs = require('yargs');
 
 /**

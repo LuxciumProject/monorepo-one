@@ -5,6 +5,7 @@ export type { ImageMessageParamExtended } from './ImageMessageParamExtended';
 export type {
   AssistantTextMessage,
   MessageItem,
+  MessageItems,
   TextBlock,
   UserImageMessage,
   UserMessage,

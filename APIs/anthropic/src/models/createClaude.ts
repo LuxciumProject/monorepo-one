@@ -1,5 +1,5 @@
 import { Message } from '@anthropic-ai/sdk/resources';
-import { create } from '../../messages';
+import { create } from '../messages';
 import type {
   AssistantTextMessage,
   MessageItem,
@@ -7,7 +7,7 @@ import type {
   MessageRequest,
   ModelReply,
   UserTextMessage,
-} from '../../messages/types';
+} from '../messages/types';
 
 const system_text =
   '"You are a clever AI Agent. You are made to assist humans in their daily tasks. You are a friend. You are a helper. You are a companion. You are a guide. You are a teacher. You are a student. You are a learner. You are a creator. You are a thinker. You are a doer. Enact a leader"';

@@ -4,16 +4,15 @@ export type AssistantTextMessage<Text extends string> = {
   role: 'assistant';
   content: [TextBlock<Text>];
 };
+
 export interface TextBlock<Text extends string> {
   text: Text;
-
   type?: 'text';
 }
 export type UserTextMessage<Text extends string> = {
   role: 'user';
   content: [TextBlock<Text>];
 };
-
 export type UserImageMessage<Text extends string> = {
   role: 'user';
   content: [ImageBlockParam, TextBlock<Text>];

@@ -14,8 +14,10 @@ import Anthropic from '@anthropic-ai/sdk';
 import { config } from 'dotenv';
 import { createInterface, type Interface } from 'readline';
 import { hideBin } from 'yargs/helpers';
-import { sendClaudeHaiku } from '../constants/models';
 import { MessageItem, ModelReply } from '../messages/types';
+import { sendClaudeHaiku } from '../models';
+import { makeSystemBlock } from './makeSystemBlock';
+import { prepareJsonSystemMessage } from './systemNessage';
 import yargs = require('yargs');
 
 const argv = yargs(hideBin(process.argv))
@@ -31,6 +33,7 @@ const argv = yargs(hideBin(process.argv))
       describe: 'Controls randomness of the response',
       default: 0.95,
     },
+    JSON: { type: 'boolean', describe: 'Output JSON response', default: false },
     top_k: { type: 'number', describe: 'Filters the most likely next tokens' },
     top_p: { type: 'number', describe: 'Nucleus sampling' },
   })
@@ -50,6 +53,22 @@ export async function sendMessage(
   const client = new Anthropic({ apiKey: process.env['anthropic_k00'] });
   try {
     const resolvedArgv = await argv;
+    const paramClaude = prepareJsonSystemMessage(
+      system_text,
+      'Claude 3: ',
+      resolvedArgv
+    );
+    if (resolvedArgv.JSON) {
+      const useJSON = `Do not say anything, do not acknowledge and do not introduce or do not conclude. All must ben valid JSON or will be discarded by the system.\n\n Ensure that the data is accurately represented and properly formatted within the JSON structure. The resulting JSON table should provide a clear, structured overview of the information presented in the original text. \n\n"resolvedArgv.JSON" = ${resolvedArgv.JSON}\n JSON MODE IS ENABLED`;
+
+      paramClaude.system = makeSystemBlock(
+        system_text
+          ? `"system": "Follow the instruction to generate the JSON OUTPUT you first need to ingest the system_text: « ${system_text} » Generate your output following the system_text but anything you reply must be a valid JSON Object:\n\n${useJSON}"`
+          : `\n"system": "${useJSON}"`
+      );
+    }
+
+    paramClaude.assist_prefix = resolvedArgv.JSON ? '\n{' : '\nclaude:';
     const messages: ModelReply<'claude-3-haiku-20240307'> =
       await sendClaudeHaiku({
         client,
@@ -57,12 +76,13 @@ export async function sendMessage(
         system: system_text || '',
         user_text,
         user_prefix: '\nYou: ',
-        assist_prefix: '\nClaude: ',
+        assist_prefix: '\nClaude3: ',
         max_tokens: resolvedArgv.max_tokens,
         user_id: argv['user_id'] || null,
         temperature: resolvedArgv.temperature,
         top_k: resolvedArgv.top_k,
         top_p: resolvedArgv.top_p,
+        ...paramClaude,
       });
     const { previousMessages: nextMessages } = messages;
     // console.log(`Claude: ${messages.content[0].text}`);
@@ -135,26 +155,3 @@ main(rl);
 
 process.on('SIGINT', handleSIGINT(rl));
 process.on('SIGTSTP', handleSIGTSTP(rl));
-
-export function makeSystemBlock(systemText: string) {
-  return `
-/**
-* System prompt.
-*
-* A system prompt is a way of providing context and instructions to Claude, such
-* as specifying a particular goal or role. See our
-* [guide to system prompts](https://docs.anthropic.com/claude/docs/system-prompts).
-*/
-<SYSTEM>
-  ${systemText}
-</SYSTEM>
-`
-    .trim()
-    .split('\n')
-    .map(sysText => sysText.trim())
-    .join('\n');
-}
-
-void makeSystemBlock(
-  'Tu es Claude un assistant IA créé par Anthropic pour être utile, honnête et inoffensif.'
-);

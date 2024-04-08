@@ -1,6 +1,7 @@
-import { PRICES } from '../PRICES';
-import { transformModelName } from '../transformModelName';
-import { ModelPrice, Models } from '../types';
+import { PRICES } from '../constants/PRICES';
+import { transformModelName } from '../constants/transformModelName';
+import { ModelPrice } from '../constants/types';
+import { Models } from '../models/types';
 
 // Function to calculate prices based on the transformed model name
 

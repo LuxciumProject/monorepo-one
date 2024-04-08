@@ -1,5 +1,6 @@
-import { PRICES } from '../PRICES';
-import { ModelPrice, Models } from '../types';
+import { PRICES } from '../constants/PRICES';
+import { ModelPrice } from '../constants/types';
+import { Models } from '../models/types';
 
 // function transformModelName(modelName: string): string {
 //   // Regex to match models with dates and normalize versions

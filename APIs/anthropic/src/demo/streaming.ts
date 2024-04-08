@@ -2,7 +2,7 @@
 
 import Anthropic from '@anthropic-ai/sdk';
 import { config } from 'dotenv';
-import { MODEL } from '../constants/models';
+import { MODEL } from '../models';
 
 // gets API Key from environment variable ANTHROPIC_API_KEY
 config();

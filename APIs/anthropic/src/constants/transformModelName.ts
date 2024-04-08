@@ -1,4 +1,5 @@
-import { Models, ModelShortNames } from './types';
+import { Models } from '../models/types';
+import type { ModelShortNames } from './types';
 
 // Overloads for transformModelName
 export function transformModelName(

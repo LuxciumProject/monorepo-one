@@ -4,15 +4,26 @@
   "description": "",
   "main": "out/index.js",
   "types": "out/typings/index.d.ts",
-  "scripts": {
-    "build": "bash scripts/build.sh",
-    "install": "#pwd; yarn build || exit 13; pwd",
-    "path": "echo $PATH",
-    "test": "jest"
-  },
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "install": "pwd; # yarn build || exit 13; pwd",
+    "path": "echo $PATH",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "~0.18.0",
+    "@types/inquirer": "~9.0.7",
+    "dotenv": "^16.0.0",
+    "file-type": "~19.0.0",
+    "groq-sdk": "~0.3.2",
+    "inquirer": "^8.0.0",
+    "sharp": "~0.31.1",
+    "yargs": "~17.7.2",
+    "yauzl": "~3.1.2"
+  },
   "devDependencies": {
     "@babel/core": "~7.23.9",
     "@babel/plugin-transform-react-jsx": "~7.22.5",
@@ -35,6 +46,7 @@
     "@types/jest": "~29.5.12",
     "@types/mime-types": "~2.1.1",
     "@types/node": "^20",
+    "@types/sharp": "^0.30.0",
     "@typescript-eslint/eslint-plugin": "~6.21.0",
     "@typescript-eslint/parser": "~6.21.0",
     "chai": "~4.3.7",
@@ -63,17 +75,6 @@
     "tsconfig-paths": "~4.2.0",
     "tslib": "~2.6.2",
     "typescript": "~5.3.3",
-    "webpack": "~5.88.1",
-    "@types/sharp": "^0.30.0"
-  },
-  "dependencies": {
-    "@anthropic-ai/sdk": "~0.18.0",
-    "dotenv": "^16.0.0",
-    "file-type": "~19.0.0",
-    "yargs": "~17.7.2",
-    "yauzl": "~3.1.2",
-    "inquirer": "^8.0.0",
-    "@types/inquirer": "~9.0.7",
-    "sharp": "~0.31.1"
+    "webpack": "~5.88.1"
   }
 }

@@ -2,14 +2,16 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { config } from 'dotenv';
 import readline, { Interface } from 'readline';
-import { sendClaudeHaiku } from '../constants/models';
 import { MessageItem, ModelReply } from '../messages/types';
+import { sendClaudeHaiku } from '../models';
 import { processArgv } from './processArgv';
 
 // Setup readline interface for interactive CLI
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
+
+  terminal: true,
   prompt: 'You: ',
 });
 // Load environment variables
@@ -18,7 +20,6 @@ config();
 const argv = processArgv(process.argv);
 // Initialize Anthropic client
 const client = new Anthropic({ apiKey: process.env['anthropic_k00'] });
-
 // Main chat function
 async function sendMessage(
   client: Anthropic,

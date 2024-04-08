@@ -5,8 +5,8 @@ import { config } from 'dotenv';
 import { createInterface } from 'readline';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-import { sendClaudeHaiku } from '../constants/models';
 import { create } from '../messages';
+import { sendClaudeHaiku } from '../models';
 
 // Load environment variables
 config();

@@ -1,5 +1,5 @@
 import { createInterface } from 'readline';
-import { makeSystemBlock } from './cli-claude-hiaku-more';
+import { makeSystemBlock } from './makeSystemBlock';
 import { sendMessage } from './sendMessage';
 
 void (async () => {

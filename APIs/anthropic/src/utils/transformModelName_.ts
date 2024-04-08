@@ -1,7 +1,6 @@
-import { Models } from '../types';
+import { Models } from '../models/types';
 
 // Function to transform model names
-
 export function transformModelName_(modelName: Models): string {
   const datePattern = /-\d{8}$/;
   const versionPattern = /\b2\.([01])\b/;

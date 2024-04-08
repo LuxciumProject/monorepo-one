@@ -13,8 +13,8 @@ import {
 import type { Stream } from '@anthropic-ai/sdk/streaming';
 import { config } from 'dotenv';
 import readline, { Interface } from 'readline';
-import { MODEL } from '../constants/models';
 import type { MessageItem } from '../messages/types';
+import { MODEL } from '../models';
 import { processArgv } from './processArgv';
 
 // Setup readline interface for interactive CLI
