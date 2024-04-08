@@ -1,0 +1,3827 @@
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/core.ts→
+
+import { VERSION } from './version';
+import { Stream } from './streaming';
+import {
+  AnthropicError,
+  APIError,
+  APIConnectionError,
+  APIConnectionTimeoutError,
+  APIUserAbortError,
+} from './error';
+import {
+  kind as shimsKind,
+  type Readable,
+  getDefaultAgent,
+  type Agent,
+  fetch,
+  type RequestInfo,
+  type RequestInit,
+  type Response,
+  type HeadersInit,
+} from './_shims/index';
+export { type Response };
+import { isMultipartBody } from './uploads';
+export {
+  maybeMultipartFormRequestOptions,
+  multipartFormRequestOptions,
+  createForm,
+  type Uploadable,
+} from './uploads';
+
+export type Fetch = (url: RequestInfo, init?: RequestInit) => Promise<Response>;
+
+type PromiseOrValue<T> = T | Promise<T>;
+
+type APIResponseProps = {
+  response: Response;
+  options: FinalRequestOptions;
+  controller: AbortController;
+};
+
+async function defaultParseResponse<T>(props: APIResponseProps): Promise<T> {
+  const { response } = props;
+  if (props.options.stream) {
+    debug('response', response.status, response.url, response.headers, response.body);
+
+    // Note: there is an invariant here that isn't represented in the type system
+    // that if you set `stream: true` the response type must also be `Stream<T>`
+
+    if (props.options.__streamClass) {
+      return props.options.__streamClass.fromSSEResponse(response, props.controller) as any;
+    }
+
+    return Stream.fromSSEResponse(response, props.controller) as any;
+  }
+
+  // fetch refuses to read the body when the status code is 204.
+  if (response.status === 204) {
+    return null as T;
+  }
+
+  if (props.options.__binaryResponse) {
+    return response as unknown as T;
+  }
+
+  const contentType = response.headers.get('content-type');
+  const isJSON =
+    contentType?.includes('application/json') || contentType?.includes('application/vnd.api+json');
+  if (isJSON) {
+    const json = await response.json();
+
+    debug('response', response.status, response.url, response.headers, json);
+
+    return json as T;
+  }
+
+  const text = await response.text();
+  debug('response', response.status, response.url, response.headers, text);
+
+  // TODO handle blob, arraybuffer, other content types, etc.
+  return text as unknown as T;
+}
+
+/**
+ * A subclass of `Promise` providing additional helper methods
+ * for interacting with the SDK.
+ */
+export class APIPromise<T> extends Promise<T> {
+  private parsedPromise: Promise<T> | undefined;
+
+  constructor(
+    private responsePromise: Promise<APIResponseProps>,
+    private parseResponse: (props: APIResponseProps) => PromiseOrValue<T> = defaultParseResponse,
+  ) {
+    super((resolve) => {
+      // this is maybe a bit weird but this has to be a no-op to not implicitly
+      // parse the response body; instead .then, .catch, .finally are overridden
+      // to parse the response
+      resolve(null as any);
+    });
+  }
+
+  _thenUnwrap<U>(transform: (data: T) => U): APIPromise<U> {
+    return new APIPromise(this.responsePromise, async (props) => transform(await this.parseResponse(props)));
+  }
+
+  /**
+   * Gets the raw `Response` instance instead of parsing the response
+   * data.
+   *
+   * If you want to parse the response body but still get the `Response`
+   * instance, you can use {@link withResponse()}.
+   *
+   * 👋 Getting the wrong TypeScript type for `Response`?
+   * Try setting `"moduleResolution": "NodeNext"` if you can,
+   * or add one of these imports before your first `import … from '@anthropic-ai/sdk'`:
+   * - `import '@anthropic-ai/sdk/shims/node'` (if you're running on Node)
+   * - `import '@anthropic-ai/sdk/shims/web'` (otherwise)
+   */
+  asResponse(): Promise<Response> {
+    return this.responsePromise.then((p) => p.response);
+  }
+  /**
+   * Gets the parsed response data and the raw `Response` instance.
+   *
+   * If you just want to get the raw `Response` instance without parsing it,
+   * you can use {@link asResponse()}.
+   *
+   *
+   * 👋 Getting the wrong TypeScript type for `Response`?
+   * Try setting `"moduleResolution": "NodeNext"` if you can,
+   * or add one of these imports before your first `import … from '@anthropic-ai/sdk'`:
+   * - `import '@anthropic-ai/sdk/shims/node'` (if you're running on Node)
+   * - `import '@anthropic-ai/sdk/shims/web'` (otherwise)
+   */
+  async withResponse(): Promise<{ data: T; response: Response }> {
+    const [data, response] = await Promise.all([this.parse(), this.asResponse()]);
+    return { data, response };
+  }
+
+  private parse(): Promise<T> {
+    if (!this.parsedPromise) {
+      this.parsedPromise = this.responsePromise.then(this.parseResponse);
+    }
+    return this.parsedPromise;
+  }
+
+  override then<TResult1 = T, TResult2 = never>(
+    onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null,
+    onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null,
+  ): Promise<TResult1 | TResult2> {
+    return this.parse().then(onfulfilled, onrejected);
+  }
+
+  override catch<TResult = never>(
+    onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null,
+  ): Promise<T | TResult> {
+    return this.parse().catch(onrejected);
+  }
+
+  override finally(onfinally?: (() => void) | undefined | null): Promise<T> {
+    return this.parse().finally(onfinally);
+  }
+}
+
+export abstract class APIClient {
+  baseURL: string;
+  maxRetries: number;
+  timeout: number;
+  httpAgent: Agent | undefined;
+
+  private fetch: Fetch;
+  protected idempotencyHeader?: string;
+
+  constructor({
+    baseURL,
+    maxRetries = 2,
+    timeout = 600000, // 10 minutes
+    httpAgent,
+    fetch: overridenFetch,
+  }: {
+    baseURL: string;
+    maxRetries?: number | undefined;
+    timeout: number | undefined;
+    httpAgent: Agent | undefined;
+    fetch: Fetch | undefined;
+  }) {
+    this.baseURL = baseURL;
+    this.maxRetries = validatePositiveInteger('maxRetries', maxRetries);
+    this.timeout = validatePositiveInteger('timeout', timeout);
+    this.httpAgent = httpAgent;
+
+    this.fetch = overridenFetch ?? fetch;
+  }
+
+  protected authHeaders(opts: FinalRequestOptions): Headers {
+    return {};
+  }
+
+  /**
+   * Override this to add your own default headers, for example:
+   *
+   *  {
+   *    ...super.defaultHeaders(),
+   *    Authorization: 'Bearer 123',
+   *  }
+   */
+  protected defaultHeaders(opts: FinalRequestOptions): Headers {
+    return {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'User-Agent': this.getUserAgent(),
+      ...getPlatformHeaders(),
+      ...this.authHeaders(opts),
+    };
+  }
+
+  protected abstract defaultQuery(): DefaultQuery | undefined;
+
+  /**
+   * Override this to add your own headers validation:
+   */
+  protected validateHeaders(headers: Headers, customHeaders: Headers) {}
+
+  protected defaultIdempotencyKey(): string {
+    return `stainless-node-retry-${uuid4()}`;
+  }
+
+  get<Req, Rsp>(path: string, opts?: PromiseOrValue<RequestOptions<Req>>): APIPromise<Rsp> {
+    return this.methodRequest('get', path, opts);
+  }
+
+  post<Req, Rsp>(path: string, opts?: PromiseOrValue<RequestOptions<Req>>): APIPromise<Rsp> {
+    return this.methodRequest('post', path, opts);
+  }
+
+  patch<Req, Rsp>(path: string, opts?: PromiseOrValue<RequestOptions<Req>>): APIPromise<Rsp> {
+    return this.methodRequest('patch', path, opts);
+  }
+
+  put<Req, Rsp>(path: string, opts?: PromiseOrValue<RequestOptions<Req>>): APIPromise<Rsp> {
+    return this.methodRequest('put', path, opts);
+  }
+
+  delete<Req, Rsp>(path: string, opts?: PromiseOrValue<RequestOptions<Req>>): APIPromise<Rsp> {
+    return this.methodRequest('delete', path, opts);
+  }
+
+  private methodRequest<Req, Rsp>(
+    method: HTTPMethod,
+    path: string,
+    opts?: PromiseOrValue<RequestOptions<Req>>,
+  ): APIPromise<Rsp> {
+    return this.request(Promise.resolve(opts).then((opts) => ({ method, path, ...opts })));
+  }
+
+  getAPIList<Item, PageClass extends AbstractPage<Item> = AbstractPage<Item>>(
+    path: string,
+    Page: new (...args: any[]) => PageClass,
+    opts?: RequestOptions<any>,
+  ): PagePromise<PageClass, Item> {
+    return this.requestAPIList(Page, { method: 'get', path, ...opts });
+  }
+
+  private calculateContentLength(body: unknown): string | null {
+    if (typeof body === 'string') {
+      if (typeof Buffer !== 'undefined') {
+        return Buffer.byteLength(body, 'utf8').toString();
+      }
+
+      if (typeof TextEncoder !== 'undefined') {
+        const encoder = new TextEncoder();
+        const encoded = encoder.encode(body);
+        return encoded.length.toString();
+      }
+    }
+
+    return null;
+  }
+
+  buildRequest<Req>(options: FinalRequestOptions<Req>): { req: RequestInit; url: string; timeout: number } {
+    const { method, path, query, headers: headers = {} } = options;
+
+    const body =
+      isMultipartBody(options.body) ? options.body.body
+      : options.body ? JSON.stringify(options.body, null, 2)
+      : null;
+    const contentLength = this.calculateContentLength(body);
+
+    const url = this.buildURL(path!, query);
+    if ('timeout' in options) validatePositiveInteger('timeout', options.timeout);
+    const timeout = options.timeout ?? this.timeout;
+    const httpAgent = options.httpAgent ?? this.httpAgent ?? getDefaultAgent(url);
+    const minAgentTimeout = timeout + 1000;
+    if (
+      typeof (httpAgent as any)?.options?.timeout === 'number' &&
+      minAgentTimeout > ((httpAgent as any).options.timeout ?? 0)
+    ) {
+      // Allow any given request to bump our agent active socket timeout.
+      // This may seem strange, but leaking active sockets should be rare and not particularly problematic,
+      // and without mutating agent we would need to create more of them.
+      // This tradeoff optimizes for performance.
+      (httpAgent as any).options.timeout = minAgentTimeout;
+    }
+
+    if (this.idempotencyHeader && method !== 'get') {
+      if (!options.idempotencyKey) options.idempotencyKey = this.defaultIdempotencyKey();
+      headers[this.idempotencyHeader] = options.idempotencyKey;
+    }
+
+    const reqHeaders = this.buildHeaders({ options, headers, contentLength });
+
+    const req: RequestInit = {
+      method,
+      ...(body && { body: body as any }),
+      headers: reqHeaders,
+      ...(httpAgent && { agent: httpAgent }),
+      // @ts-ignore node-fetch uses a custom AbortSignal type that is
+      // not compatible with standard web types
+      signal: options.signal ?? null,
+    };
+
+    return { req, url, timeout };
+  }
+
+  private buildHeaders({
+    options,
+    headers,
+    contentLength,
+  }: {
+    options: FinalRequestOptions;
+    headers: Record<string, string | null | undefined>;
+    contentLength: string | null | undefined;
+  }): Record<string, string> {
+    const reqHeaders: Record<string, string> = {};
+    if (contentLength) {
+      reqHeaders['content-length'] = contentLength;
+    }
+
+    const defaultHeaders = this.defaultHeaders(options);
+    applyHeadersMut(reqHeaders, defaultHeaders);
+    applyHeadersMut(reqHeaders, headers);
+
+    // let builtin fetch set the Content-Type for multipart bodies
+    if (isMultipartBody(options.body) && shimsKind !== 'node') {
+      delete reqHeaders['content-type'];
+    }
+
+    this.validateHeaders(reqHeaders, headers);
+
+    return reqHeaders;
+  }
+
+  /**
+   * Used as a callback for mutating the given `FinalRequestOptions` object.
+   */
+  protected async prepareOptions(options: FinalRequestOptions): Promise<void> {}
+
+  /**
+   * Used as a callback for mutating the given `RequestInit` object.
+   *
+   * This is useful for cases where you want to add certain headers based off of
+   * the request properties, e.g. `method` or `url`.
+   */
+  protected async prepareRequest(
+    request: RequestInit,
+    { url, options }: { url: string; options: FinalRequestOptions },
+  ): Promise<void> {}
+
+  protected parseHeaders(headers: HeadersInit | null | undefined): Record<string, string> {
+    return (
+      !headers ? {}
+      : Symbol.iterator in headers ?
+        Object.fromEntries(Array.from(headers as Iterable<string[]>).map((header) => [...header]))
+      : { ...headers }
+    );
+  }
+
+  protected makeStatusError(
+    status: number | undefined,
+    error: Object | undefined,
+    message: string | undefined,
+    headers: Headers | undefined,
+  ) {
+    return APIError.generate(status, error, message, headers);
+  }
+
+  request<Req, Rsp>(
+    options: PromiseOrValue<FinalRequestOptions<Req>>,
+    remainingRetries: number | null = null,
+  ): APIPromise<Rsp> {
+    return new APIPromise(this.makeRequest(options, remainingRetries));
+  }
+
+  private async makeRequest<Req>(
+    optionsInput: PromiseOrValue<FinalRequestOptions<Req>>,
+    retriesRemaining: number | null,
+  ): Promise<APIResponseProps> {
+    const options = await optionsInput;
+    if (retriesRemaining == null) {
+      retriesRemaining = options.maxRetries ?? this.maxRetries;
+    }
+
+    await this.prepareOptions(options);
+
+    const { req, url, timeout } = this.buildRequest(options);
+
+    await this.prepareRequest(req, { url, options });
+
+    debug('request', url, options, req.headers);
+
+    if (options.signal?.aborted) {
+      throw new APIUserAbortError();
+    }
+
+    const controller = new AbortController();
+    const response = await this.fetchWithTimeout(url, req, timeout, controller).catch(castToError);
+
+    if (response instanceof Error) {
+      if (options.signal?.aborted) {
+        throw new APIUserAbortError();
+      }
+      if (retriesRemaining) {
+        return this.retryRequest(options, retriesRemaining);
+      }
+      if (response.name === 'AbortError') {
+        throw new APIConnectionTimeoutError();
+      }
+      throw new APIConnectionError({ cause: response });
+    }
+
+    const responseHeaders = createResponseHeaders(response.headers);
+
+    if (!response.ok) {
+      if (retriesRemaining && this.shouldRetry(response)) {
+        const retryMessage = `retrying, ${retriesRemaining} attempts remaining`;
+        debug(`response (error; ${retryMessage})`, response.status, url, responseHeaders);
+        return this.retryRequest(options, retriesRemaining, responseHeaders);
+      }
+
+      const errText = await response.text().catch((e) => castToError(e).message);
+      const errJSON = safeJSON(errText);
+      const errMessage = errJSON ? undefined : errText;
+      const retryMessage = retriesRemaining ? `(error; no more retries left)` : `(error; not retryable)`;
+
+      debug(`response (error; ${retryMessage})`, response.status, url, responseHeaders, errMessage);
+
+      const err = this.makeStatusError(response.status, errJSON, errMessage, responseHeaders);
+      throw err;
+    }
+
+    return { response, options, controller };
+  }
+
+  requestAPIList<Item = unknown, PageClass extends AbstractPage<Item> = AbstractPage<Item>>(
+    Page: new (...args: ConstructorParameters<typeof AbstractPage>) => PageClass,
+    options: FinalRequestOptions,
+  ): PagePromise<PageClass, Item> {
+    const request = this.makeRequest(options, null);
+    return new PagePromise<PageClass, Item>(this, request, Page);
+  }
+
+  buildURL<Req>(path: string, query: Req | null | undefined): string {
+    const url =
+      isAbsoluteURL(path) ?
+        new URL(path)
+      : new URL(this.baseURL + (this.baseURL.endsWith('/') && path.startsWith('/') ? path.slice(1) : path));
+
+    const defaultQuery = this.defaultQuery();
+    if (!isEmptyObj(defaultQuery)) {
+      query = { ...defaultQuery, ...query } as Req;
+    }
+
+    if (typeof query === 'object' && query && !Array.isArray(query)) {
+      url.search = this.stringifyQuery(query as Record<string, unknown>);
+    }
+
+    return url.toString();
+  }
+
+  protected stringifyQuery(query: Record<string, unknown>): string {
+    return Object.entries(query)
+      .filter(([_, value]) => typeof value !== 'undefined')
+      .map(([key, value]) => {
+        if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+          return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+        }
+        if (value === null) {
+          return `${encodeURIComponent(key)}=`;
+        }
+        throw new AnthropicError(
+          `Cannot stringify type ${typeof value}; Expected string, number, boolean, or null. If you need to pass nested query parameters, you can manually encode them, e.g. { query: { 'foo[key1]': value1, 'foo[key2]': value2 } }, and please open a GitHub issue requesting better support for your use case.`,
+        );
+      })
+      .join('&');
+  }
+
+  async fetchWithTimeout(
+    url: RequestInfo,
+    init: RequestInit | undefined,
+    ms: number,
+    controller: AbortController,
+  ): Promise<Response> {
+    const { signal, ...options } = init || {};
+    if (signal) signal.addEventListener('abort', () => controller.abort());
+
+    const timeout = setTimeout(() => controller.abort(), ms);
+
+    return (
+      this.getRequestClient()
+        // use undefined this binding; fetch errors if bound to something else in browser/cloudflare
+        .fetch.call(undefined, url, { signal: controller.signal as any, ...options })
+        .finally(() => {
+          clearTimeout(timeout);
+        })
+    );
+  }
+
+  protected getRequestClient(): RequestClient {
+    return { fetch: this.fetch };
+  }
+
+  private shouldRetry(response: Response): boolean {
+    // Note this is not a standard header.
+    const shouldRetryHeader = response.headers.get('x-should-retry');
+
+    // If the server explicitly says whether or not to retry, obey.
+    if (shouldRetryHeader === 'true') return true;
+    if (shouldRetryHeader === 'false') return false;
+
+    // Retry on request timeouts.
+    if (response.status === 408) return true;
+
+    // Retry on lock timeouts.
+    if (response.status === 409) return true;
+
+    // Retry on rate limits.
+    if (response.status === 429) return true;
+
+    // Retry internal errors.
+    if (response.status >= 500) return true;
+
+    return false;
+  }
+
+  private async retryRequest(
+    options: FinalRequestOptions,
+    retriesRemaining: number,
+    responseHeaders?: Headers | undefined,
+  ): Promise<APIResponseProps> {
+    let timeoutMillis: number | undefined;
+
+    // Note the `retry-after-ms` header may not be standard, but is a good idea and we'd like proactive support for it.
+    const retryAfterMillisHeader = responseHeaders?.['retry-after-ms'];
+    if (retryAfterMillisHeader) {
+      const timeoutMs = parseFloat(retryAfterMillisHeader);
+      if (!Number.isNaN(timeoutMs)) {
+        timeoutMillis = timeoutMs;
+      }
+    }
+
+    // About the Retry-After header: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After
+    const retryAfterHeader = responseHeaders?.['retry-after'];
+    if (retryAfterHeader && !timeoutMillis) {
+      const timeoutSeconds = parseFloat(retryAfterHeader);
+      if (!Number.isNaN(timeoutSeconds)) {
+        timeoutMillis = timeoutSeconds * 1000;
+      } else {
+        timeoutMillis = Date.parse(retryAfterHeader) - Date.now();
+      }
+    }
+
+    // If the API asks us to wait a certain amount of time (and it's a reasonable amount),
+    // just do what it says, but otherwise calculate a default
+    if (!(timeoutMillis && 0 <= timeoutMillis && timeoutMillis < 60 * 1000)) {
+      const maxRetries = options.maxRetries ?? this.maxRetries;
+      timeoutMillis = this.calculateDefaultRetryTimeoutMillis(retriesRemaining, maxRetries);
+    }
+    await sleep(timeoutMillis);
+
+    return this.makeRequest(options, retriesRemaining - 1);
+  }
+
+  private calculateDefaultRetryTimeoutMillis(retriesRemaining: number, maxRetries: number): number {
+    const initialRetryDelay = 0.5;
+    const maxRetryDelay = 8.0;
+
+    const numRetries = maxRetries - retriesRemaining;
+
+    // Apply exponential backoff, but not more than the max.
+    const sleepSeconds = Math.min(initialRetryDelay * Math.pow(2, numRetries), maxRetryDelay);
+
+    // Apply some jitter, take up to at most 25 percent of the retry time.
+    const jitter = 1 - Math.random() * 0.25;
+
+    return sleepSeconds * jitter * 1000;
+  }
+
+  private getUserAgent(): string {
+    return `${this.constructor.name}/JS ${VERSION}`;
+  }
+}
+
+export type PageInfo = { url: URL } | { params: Record<string, unknown> | null };
+
+export abstract class AbstractPage<Item> implements AsyncIterable<Item> {
+  #client: APIClient;
+  protected options: FinalRequestOptions;
+
+  protected response: Response;
+  protected body: unknown;
+
+  constructor(client: APIClient, response: Response, body: unknown, options: FinalRequestOptions) {
+    this.#client = client;
+    this.options = options;
+    this.response = response;
+    this.body = body;
+  }
+
+  /**
+   * @deprecated Use nextPageInfo instead
+   */
+  abstract nextPageParams(): Partial<Record<string, unknown>> | null;
+  abstract nextPageInfo(): PageInfo | null;
+
+  abstract getPaginatedItems(): Item[];
+
+  hasNextPage(): boolean {
+    const items = this.getPaginatedItems();
+    if (!items.length) return false;
+    return this.nextPageInfo() != null;
+  }
+
+  async getNextPage(): Promise<this> {
+    const nextInfo = this.nextPageInfo();
+    if (!nextInfo) {
+      throw new AnthropicError(
+        'No next page expected; please check `.hasNextPage()` before calling `.getNextPage()`.',
+      );
+    }
+    const nextOptions = { ...this.options };
+    if ('params' in nextInfo && typeof nextOptions.query === 'object') {
+      nextOptions.query = { ...nextOptions.query, ...nextInfo.params };
+    } else if ('url' in nextInfo) {
+      const params = [...Object.entries(nextOptions.query || {}), ...nextInfo.url.searchParams.entries()];
+      for (const [key, value] of params) {
+        nextInfo.url.searchParams.set(key, value as any);
+      }
+      nextOptions.query = undefined;
+      nextOptions.path = nextInfo.url.toString();
+    }
+    return await this.#client.requestAPIList(this.constructor as any, nextOptions);
+  }
+
+  async *iterPages() {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    let page: AbstractPage<Item> = this;
+    yield page;
+    while (page.hasNextPage()) {
+      page = await page.getNextPage();
+      yield page;
+    }
+  }
+
+  async *[Symbol.asyncIterator]() {
+    for await (const page of this.iterPages()) {
+      for (const item of page.getPaginatedItems()) {
+        yield item;
+      }
+    }
+  }
+}
+
+/**
+ * This subclass of Promise will resolve to an instantiated Page once the request completes.
+ *
+ * It also implements AsyncIterable to allow auto-paginating iteration on an unawaited list call, eg:
+ *
+ *    for await (const item of client.items.list()) {
+ *      console.log(item)
+ *    }
+ */
+export class PagePromise<
+    PageClass extends AbstractPage<Item>,
+    Item = ReturnType<PageClass['getPaginatedItems']>[number],
+  >
+  extends APIPromise<PageClass>
+  implements AsyncIterable<Item>
+{
+  constructor(
+    client: APIClient,
+    request: Promise<APIResponseProps>,
+    Page: new (...args: ConstructorParameters<typeof AbstractPage>) => PageClass,
+  ) {
+    super(
+      request,
+      async (props) => new Page(client, props.response, await defaultParseResponse(props), props.options),
+    );
+  }
+
+  /**
+   * Allow auto-paginating iteration on an unawaited list call, eg:
+   *
+   *    for await (const item of client.items.list()) {
+   *      console.log(item)
+   *    }
+   */
+  async *[Symbol.asyncIterator]() {
+    const page = await this;
+    for await (const item of page) {
+      yield item;
+    }
+  }
+}
+
+export const createResponseHeaders = (
+  headers: Awaited<ReturnType<Fetch>>['headers'],
+): Record<string, string> => {
+  return new Proxy(
+    Object.fromEntries(
+      // @ts-ignore
+      headers.entries(),
+    ),
+    {
+      get(target, name) {
+        const key = name.toString();
+        return target[key.toLowerCase()] || target[key];
+      },
+    },
+  );
+};
+
+type HTTPMethod = 'get' | 'post' | 'put' | 'patch' | 'delete';
+
+export type RequestClient = { fetch: Fetch };
+export type Headers = Record<string, string | null | undefined>;
+export type DefaultQuery = Record<string, string | undefined>;
+export type KeysEnum<T> = { [P in keyof Required<T>]: true };
+
+export type RequestOptions<Req = unknown | Record<string, unknown> | Readable> = {
+  method?: HTTPMethod;
+  path?: string;
+  query?: Req | undefined;
+  body?: Req | null | undefined;
+  headers?: Headers | undefined;
+
+  maxRetries?: number;
+  stream?: boolean | undefined;
+  timeout?: number;
+  httpAgent?: Agent;
+  signal?: AbortSignal | undefined | null;
+  idempotencyKey?: string;
+
+  __binaryResponse?: boolean | undefined;
+  __streamClass?: typeof Stream;
+};
+
+// This is required so that we can determine if a given object matches the RequestOptions
+// type at runtime. While this requires duplication, it is enforced by the TypeScript
+// compiler such that any missing / extraneous keys will cause an error.
+const requestOptionsKeys: KeysEnum<RequestOptions> = {
+  method: true,
+  path: true,
+  query: true,
+  body: true,
+  headers: true,
+
+  maxRetries: true,
+  stream: true,
+  timeout: true,
+  httpAgent: true,
+  signal: true,
+  idempotencyKey: true,
+
+  __binaryResponse: true,
+  __streamClass: true,
+};
+
+export const isRequestOptions = (obj: unknown): obj is RequestOptions => {
+  return (
+    typeof obj === 'object' &&
+    obj !== null &&
+    !isEmptyObj(obj) &&
+    Object.keys(obj).every((k) => hasOwn(requestOptionsKeys, k))
+  );
+};
+
+export type FinalRequestOptions<Req = unknown | Record<string, unknown> | Readable> = RequestOptions<Req> & {
+  method: HTTPMethod;
+  path: string;
+};
+
+declare const Deno: any;
+declare const EdgeRuntime: any;
+type Arch = 'x32' | 'x64' | 'arm' | 'arm64' | `other:${string}` | 'unknown';
+type PlatformName =
+  | 'MacOS'
+  | 'Linux'
+  | 'Windows'
+  | 'FreeBSD'
+  | 'OpenBSD'
+  | 'iOS'
+  | 'Android'
+  | `Other:${string}`
+  | 'Unknown';
+type Browser = 'ie' | 'edge' | 'chrome' | 'firefox' | 'safari';
+type PlatformProperties = {
+  'X-Stainless-Lang': 'js';
+  'X-Stainless-Package-Version': string;
+  'X-Stainless-OS': PlatformName;
+  'X-Stainless-Arch': Arch;
+  'X-Stainless-Runtime': 'node' | 'deno' | 'edge' | `browser:${Browser}` | 'unknown';
+  'X-Stainless-Runtime-Version': string;
+};
+const getPlatformProperties = (): PlatformProperties => {
+  if (typeof Deno !== 'undefined' && Deno.build != null) {
+    return {
+      'X-Stainless-Lang': 'js',
+      'X-Stainless-Package-Version': VERSION,
+      'X-Stainless-OS': normalizePlatform(Deno.build.os),
+      'X-Stainless-Arch': normalizeArch(Deno.build.arch),
+      'X-Stainless-Runtime': 'deno',
+      'X-Stainless-Runtime-Version': Deno.version,
+    };
+  }
+  if (typeof EdgeRuntime !== 'undefined') {
+    return {
+      'X-Stainless-Lang': 'js',
+      'X-Stainless-Package-Version': VERSION,
+      'X-Stainless-OS': 'Unknown',
+      'X-Stainless-Arch': `other:${EdgeRuntime}`,
+      'X-Stainless-Runtime': 'edge',
+      'X-Stainless-Runtime-Version': process.version,
+    };
+  }
+  // Check if Node.js
+  if (Object.prototype.toString.call(typeof process !== 'undefined' ? process : 0) === '[object process]') {
+    return {
+      'X-Stainless-Lang': 'js',
+      'X-Stainless-Package-Version': VERSION,
+      'X-Stainless-OS': normalizePlatform(process.platform),
+      'X-Stainless-Arch': normalizeArch(process.arch),
+      'X-Stainless-Runtime': 'node',
+      'X-Stainless-Runtime-Version': process.version,
+    };
+  }
+
+  const browserInfo = getBrowserInfo();
+  if (browserInfo) {
+    return {
+      'X-Stainless-Lang': 'js',
+      'X-Stainless-Package-Version': VERSION,
+      'X-Stainless-OS': 'Unknown',
+      'X-Stainless-Arch': 'unknown',
+      'X-Stainless-Runtime': `browser:${browserInfo.browser}`,
+      'X-Stainless-Runtime-Version': browserInfo.version,
+    };
+  }
+
+  // TODO add support for Cloudflare workers, etc.
+  return {
+    'X-Stainless-Lang': 'js',
+    'X-Stainless-Package-Version': VERSION,
+    'X-Stainless-OS': 'Unknown',
+    'X-Stainless-Arch': 'unknown',
+    'X-Stainless-Runtime': 'unknown',
+    'X-Stainless-Runtime-Version': 'unknown',
+  };
+};
+
+type BrowserInfo = {
+  browser: Browser;
+  version: string;
+};
+
+declare const navigator: { userAgent: string } | undefined;
+
+// Note: modified from https://github.com/JS-DevTools/host-environment/blob/b1ab79ecde37db5d6e163c050e54fe7d287d7c92/src/isomorphic.browser.ts
+function getBrowserInfo(): BrowserInfo | null {
+  if (typeof navigator === 'undefined' || !navigator) {
+    return null;
+  }
+
+  // NOTE: The order matters here!
+  const browserPatterns = [
+    { key: 'edge' as const, pattern: /Edge(?:\W+(\d+)\.(\d+)(?:\.(\d+))?)?/ },
+    { key: 'ie' as const, pattern: /MSIE(?:\W+(\d+)\.(\d+)(?:\.(\d+))?)?/ },
+    { key: 'ie' as const, pattern: /Trident(?:.*rv\:(\d+)\.(\d+)(?:\.(\d+))?)?/ },
+    { key: 'chrome' as const, pattern: /Chrome(?:\W+(\d+)\.(\d+)(?:\.(\d+))?)?/ },
+    { key: 'firefox' as const, pattern: /Firefox(?:\W+(\d+)\.(\d+)(?:\.(\d+))?)?/ },
+    { key: 'safari' as const, pattern: /(?:Version\W+(\d+)\.(\d+)(?:\.(\d+))?)?(?:\W+Mobile\S*)?\W+Safari/ },
+  ];
+
+  // Find the FIRST matching browser
+  for (const { key, pattern } of browserPatterns) {
+    const match = pattern.exec(navigator.userAgent);
+    if (match) {
+      const major = match[1] || 0;
+      const minor = match[2] || 0;
+      const patch = match[3] || 0;
+
+      return { browser: key, version: `${major}.${minor}.${patch}` };
+    }
+  }
+
+  return null;
+}
+
+const normalizeArch = (arch: string): Arch => {
+  // Node docs:
+  // - https://nodejs.org/api/process.html#processarch
+  // Deno docs:
+  // - https://doc.deno.land/deno/stable/~/Deno.build
+  if (arch === 'x32') return 'x32';
+  if (arch === 'x86_64' || arch === 'x64') return 'x64';
+  if (arch === 'arm') return 'arm';
+  if (arch === 'aarch64' || arch === 'arm64') return 'arm64';
+  if (arch) return `other:${arch}`;
+  return 'unknown';
+};
+
+const normalizePlatform = (platform: string): PlatformName => {
+  // Node platforms:
+  // - https://nodejs.org/api/process.html#processplatform
+  // Deno platforms:
+  // - https://doc.deno.land/deno/stable/~/Deno.build
+  // - https://github.com/denoland/deno/issues/14799
+
+  platform = platform.toLowerCase();
+
+  // NOTE: this iOS check is untested and may not work
+  // Node does not work natively on IOS, there is a fork at
+  // https://github.com/nodejs-mobile/nodejs-mobile
+  // however it is unknown at the time of writing how to detect if it is running
+  if (platform.includes('ios')) return 'iOS';
+  if (platform === 'android') return 'Android';
+  if (platform === 'darwin') return 'MacOS';
+  if (platform === 'win32') return 'Windows';
+  if (platform === 'freebsd') return 'FreeBSD';
+  if (platform === 'openbsd') return 'OpenBSD';
+  if (platform === 'linux') return 'Linux';
+  if (platform) return `Other:${platform}`;
+  return 'Unknown';
+};
+
+let _platformHeaders: PlatformProperties;
+const getPlatformHeaders = () => {
+  return (_platformHeaders ??= getPlatformProperties());
+};
+
+export const safeJSON = (text: string) => {
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    return undefined;
+  }
+};
+
+// https://stackoverflow.com/a/19709846
+const startsWithSchemeRegexp = new RegExp('^(?:[a-z]+:)?//', 'i');
+const isAbsoluteURL = (url: string): boolean => {
+  return startsWithSchemeRegexp.test(url);
+};
+
+export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const validatePositiveInteger = (name: string, n: unknown): number => {
+  if (typeof n !== 'number' || !Number.isInteger(n)) {
+    throw new AnthropicError(`${name} must be an integer`);
+  }
+  if (n < 0) {
+    throw new AnthropicError(`${name} must be a positive integer`);
+  }
+  return n;
+};
+
+export const castToError = (err: any): Error => {
+  if (err instanceof Error) return err;
+  return new Error(err);
+};
+
+export const ensurePresent = <T>(value: T | null | undefined): T => {
+  if (value == null) throw new AnthropicError(`Expected a value to be given but received ${value} instead.`);
+  return value;
+};
+
+/**
+ * Read an environment variable.
+ *
+ * Trims beginning and trailing whitespace.
+ *
+ * Will return undefined if the environment variable doesn't exist or cannot be accessed.
+ */
+export const readEnv = (env: string): string | undefined => {
+  if (typeof process !== 'undefined') {
+    return process.env?.[env]?.trim() ?? undefined;
+  }
+  if (typeof Deno !== 'undefined') {
+    return Deno.env?.get?.(env)?.trim();
+  }
+  return undefined;
+};
+
+export const coerceInteger = (value: unknown): number => {
+  if (typeof value === 'number') return Math.round(value);
+  if (typeof value === 'string') return parseInt(value, 10);
+
+  throw new AnthropicError(`Could not coerce ${value} (type: ${typeof value}) into a number`);
+};
+
+export const coerceFloat = (value: unknown): number => {
+  if (typeof value === 'number') return value;
+  if (typeof value === 'string') return parseFloat(value);
+
+  throw new AnthropicError(`Could not coerce ${value} (type: ${typeof value}) into a number`);
+};
+
+export const coerceBoolean = (value: unknown): boolean => {
+  if (typeof value === 'boolean') return value;
+  if (typeof value === 'string') return value === 'true';
+  return Boolean(value);
+};
+
+export const maybeCoerceInteger = (value: unknown): number | undefined => {
+  if (value === undefined) {
+    return undefined;
+  }
+  return coerceInteger(value);
+};
+
+export const maybeCoerceFloat = (value: unknown): number | undefined => {
+  if (value === undefined) {
+    return undefined;
+  }
+  return coerceFloat(value);
+};
+
+export const maybeCoerceBoolean = (value: unknown): boolean | undefined => {
+  if (value === undefined) {
+    return undefined;
+  }
+  return coerceBoolean(value);
+};
+
+// https://stackoverflow.com/a/34491287
+export function isEmptyObj(obj: Object | null | undefined): boolean {
+  if (!obj) return true;
+  for (const _k in obj) return false;
+  return true;
+}
+
+// https://eslint.org/docs/latest/rules/no-prototype-builtins
+export function hasOwn(obj: Object, key: string): boolean {
+  return Object.prototype.hasOwnProperty.call(obj, key);
+}
+
+/**
+ * Copies headers from "newHeaders" onto "targetHeaders",
+ * using lower-case for all properties,
+ * ignoring any keys with undefined values,
+ * and deleting any keys with null values.
+ */
+function applyHeadersMut(targetHeaders: Headers, newHeaders: Headers): void {
+  for (const k in newHeaders) {
+    if (!hasOwn(newHeaders, k)) continue;
+    const lowerKey = k.toLowerCase();
+    if (!lowerKey) continue;
+
+    const val = newHeaders[k];
+
+    if (val === null) {
+      delete targetHeaders[lowerKey];
+    } else if (val !== undefined) {
+      targetHeaders[lowerKey] = val;
+    }
+  }
+}
+
+export function debug(action: string, ...args: any[]) {
+  if (typeof process !== 'undefined' && process.env['DEBUG'] === 'true') {
+    console.log(`Anthropic:DEBUG:${action}`, ...args);
+  }
+}
+
+/**
+ * https://stackoverflow.com/a/2117523
+ */
+const uuid4 = () => {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = (Math.random() * 16) | 0;
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+};
+
+export const isRunningInBrowser = () => {
+  return (
+    // @ts-ignore
+    typeof window !== 'undefined' &&
+    // @ts-ignore
+    typeof window.document !== 'undefined' &&
+    // @ts-ignore
+    typeof navigator !== 'undefined'
+  );
+};
+
+export interface HeadersProtocol {
+  get: (header: string) => string | null | undefined;
+}
+export type HeadersLike = Record<string, string | string[] | undefined> | HeadersProtocol;
+
+export const isHeadersProtocol = (headers: any): headers is HeadersProtocol => {
+  return typeof headers?.get === 'function';
+};
+
+export const getRequiredHeader = (headers: HeadersLike, header: string): string => {
+  const lowerCasedHeader = header.toLowerCase();
+  if (isHeadersProtocol(headers)) {
+    // to deal with the case where the header looks like Stainless-Event-Id
+    const intercapsHeader =
+      header[0]?.toUpperCase() +
+      header.substring(1).replace(/([^\w])(\w)/g, (_m, g1, g2) => g1 + g2.toUpperCase());
+    for (const key of [header, lowerCasedHeader, header.toUpperCase(), intercapsHeader]) {
+      const value = headers.get(key);
+      if (value) {
+        return value;
+      }
+    }
+  }
+
+  for (const [key, value] of Object.entries(headers)) {
+    if (key.toLowerCase() === lowerCasedHeader) {
+      if (Array.isArray(value)) {
+        if (value.length <= 1) return value[0];
+        console.warn(`Received ${value.length} entries for the ${header} header, using the first entry.`);
+        return value[0];
+      }
+      return value;
+    }
+  }
+
+  throw new Error(`Could not find ${header} header`);
+};
+
+/**
+ * Encodes a string to Base64 format.
+ */
+export const toBase64 = (str: string | null | undefined): string => {
+  if (!str) return '';
+  if (typeof Buffer !== 'undefined') {
+    return Buffer.from(str).toString('base64');
+  }
+
+  if (typeof btoa !== 'undefined') {
+    return btoa(str);
+  }
+
+  throw new AnthropicError('Cannot generate b64 string; Expected `Buffer` or `btoa` to be defined');
+};
+
+export function isObj(obj: unknown): obj is Record<string, unknown> {
+  return obj != null && typeof obj === 'object' && !Array.isArray(obj);
+}
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/error.ts→
+
+// File generated from our OpenAPI spec by Stainless.
+
+import { castToError, Headers } from './core';
+
+export class AnthropicError extends Error {}
+
+export class APIError extends AnthropicError {
+  readonly status: number | undefined;
+  readonly headers: Headers | undefined;
+  readonly error: Object | undefined;
+
+  constructor(
+    status: number | undefined,
+    error: Object | undefined,
+    message: string | undefined,
+    headers: Headers | undefined,
+  ) {
+    super(`${APIError.makeMessage(status, error, message)}`);
+    this.status = status;
+    this.headers = headers;
+    this.error = error;
+  }
+
+  private static makeMessage(status: number | undefined, error: any, message: string | undefined) {
+    const msg =
+      error?.message ?
+        typeof error.message === 'string' ?
+          error.message
+        : JSON.stringify(error.message)
+      : error ? JSON.stringify(error)
+      : message;
+
+    if (status && msg) {
+      return `${status} ${msg}`;
+    }
+    if (status) {
+      return `${status} status code (no body)`;
+    }
+    if (msg) {
+      return msg;
+    }
+    return '(no status code or body)';
+  }
+
+  static generate(
+    status: number | undefined,
+    errorResponse: Object | undefined,
+    message: string | undefined,
+    headers: Headers | undefined,
+  ) {
+    if (!status) {
+      return new APIConnectionError({ cause: castToError(errorResponse) });
+    }
+
+    const error = errorResponse as Record<string, any>;
+
+    if (status === 400) {
+      return new BadRequestError(status, error, message, headers);
+    }
+
+    if (status === 401) {
+      return new AuthenticationError(status, error, message, headers);
+    }
+
+    if (status === 403) {
+      return new PermissionDeniedError(status, error, message, headers);
+    }
+
+    if (status === 404) {
+      return new NotFoundError(status, error, message, headers);
+    }
+
+    if (status === 409) {
+      return new ConflictError(status, error, message, headers);
+    }
+
+    if (status === 422) {
+      return new UnprocessableEntityError(status, error, message, headers);
+    }
+
+    if (status === 429) {
+      return new RateLimitError(status, error, message, headers);
+    }
+
+    if (status >= 500) {
+      return new InternalServerError(status, error, message, headers);
+    }
+
+    return new APIError(status, error, message, headers);
+  }
+}
+
+export class APIUserAbortError extends APIError {
+  override readonly status: undefined = undefined;
+
+  constructor({ message }: { message?: string } = {}) {
+    super(undefined, undefined, message || 'Request was aborted.', undefined);
+  }
+}
+
+export class APIConnectionError extends APIError {
+  override readonly status: undefined = undefined;
+
+  constructor({ message, cause }: { message?: string; cause?: Error | undefined }) {
+    super(undefined, undefined, message || 'Connection error.', undefined);
+    // in some environments the 'cause' property is already declared
+    // @ts-ignore
+    if (cause) this.cause = cause;
+  }
+}
+
+export class APIConnectionTimeoutError extends APIConnectionError {
+  constructor({ message }: { message?: string } = {}) {
+    super({ message: message ?? 'Request timed out.' });
+  }
+}
+
+export class BadRequestError extends APIError {
+  override readonly status: 400 = 400;
+}
+
+export class AuthenticationError extends APIError {
+  override readonly status: 401 = 401;
+}
+
+export class PermissionDeniedError extends APIError {
+  override readonly status: 403 = 403;
+}
+
+export class NotFoundError extends APIError {
+  override readonly status: 404 = 404;
+}
+
+export class ConflictError extends APIError {
+  override readonly status: 409 = 409;
+}
+
+export class UnprocessableEntityError extends APIError {
+  override readonly status: 422 = 422;
+}
+
+export class RateLimitError extends APIError {
+  override readonly status: 429 = 429;
+}
+
+export class InternalServerError extends APIError {}
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/index.ts→
+
+// File generated from our OpenAPI spec by Stainless.
+
+import * as Core from './core';
+import * as Errors from './error';
+import { type Agent } from './_shims/index';
+import * as Uploads from './uploads';
+import * as API from "./resources/index";
+
+export interface ClientOptions {
+  /**
+   * Defaults to process.env['ANTHROPIC_API_KEY'].
+   */
+  apiKey?: string | null | undefined;
+
+  /**
+   * Defaults to process.env['ANTHROPIC_AUTH_TOKEN'].
+   */
+  authToken?: string | null | undefined;
+
+  /**
+   * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
+   *
+   * Defaults to process.env['ANTHROPIC_BASE_URL'].
+   */
+  baseURL?: string | null | undefined;
+
+  /**
+   * The maximum amount of time (in milliseconds) that the client should wait for a response
+   * from the server before timing out a single request.
+   *
+   * Note that request timeouts are retried by default, so in a worst-case scenario you may wait
+   * much longer than this timeout before the promise succeeds or fails.
+   */
+  timeout?: number;
+
+  /**
+   * An HTTP agent used to manage HTTP(S) connections.
+   *
+   * If not provided, an agent will be constructed by default in the Node.js environment,
+   * otherwise no agent is used.
+   */
+  httpAgent?: Agent;
+
+  /**
+   * Specify a custom `fetch` function implementation.
+   *
+   * If not provided, we use `node-fetch` on Node.js and otherwise expect that `fetch` is
+   * defined globally.
+   */
+  fetch?: Core.Fetch | undefined;
+
+  /**
+   * The maximum number of times that the client will retry a request in case of a
+   * temporary failure, like a network error or a 5XX error from the server.
+   *
+   * @default 2
+   */
+  maxRetries?: number;
+
+  /**
+   * Default headers to include with every request to the API.
+   *
+   * These can be removed in individual requests by explicitly setting the
+   * header to `undefined` or `null` in request options.
+   */
+  defaultHeaders?: Core.Headers;
+
+  /**
+   * Default query parameters to include with every request to the API.
+   *
+   * These can be removed in individual requests by explicitly setting the
+   * param to `undefined` in request options.
+   */
+  defaultQuery?: Core.DefaultQuery;
+}
+
+/** API Client for interfacing with the Anthropic API. */
+export class Anthropic extends Core.APIClient {
+  apiKey: string | null;
+  authToken: string | null;
+
+  private _options: ClientOptions;
+
+  /**
+   * API Client for interfacing with the Anthropic API.
+   *
+   * @param {string | null | undefined} [opts.apiKey=process.env['ANTHROPIC_API_KEY'] ?? null]
+   * @param {string | null | undefined} [opts.authToken=process.env['ANTHROPIC_AUTH_TOKEN'] ?? null]
+   * @param {string} [opts.baseURL=process.env['ANTHROPIC_BASE_URL'] ?? https://api.anthropic.com] - Override the default base URL for the API.
+   * @param {number} [opts.timeout=10 minutes] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
+   * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
+   * @param {Core.Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
+   * @param {number} [opts.maxRetries=2] - The maximum number of times the client will retry a request.
+   * @param {Core.Headers} opts.defaultHeaders - Default headers to include with every request to the API.
+   * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
+   */
+  constructor({
+    baseURL = Core.readEnv('ANTHROPIC_BASE_URL'),
+    apiKey = Core.readEnv('ANTHROPIC_API_KEY') ?? null,
+    authToken = Core.readEnv('ANTHROPIC_AUTH_TOKEN') ?? null,
+    ...opts
+  }: ClientOptions = {}) {
+    const options: ClientOptions = {
+      apiKey,
+      authToken,
+      ...opts,
+      baseURL: baseURL || `https://api.anthropic.com`,
+    };
+
+    super({
+      baseURL: options.baseURL!,
+      timeout: options.timeout ?? 600000 /* 10 minutes */,
+      httpAgent: options.httpAgent,
+      maxRetries: options.maxRetries,
+      fetch: options.fetch,
+    });
+    this._options = options;
+
+    this.apiKey = apiKey;
+    this.authToken = authToken;
+  }
+
+  completions: API.Completions = new API.Completions(this);
+  messages: API.Messages = new API.Messages(this);
+
+  protected override defaultQuery(): Core.DefaultQuery | undefined {
+    return this._options.defaultQuery;
+  }
+
+  protected override defaultHeaders(opts: Core.FinalRequestOptions): Core.Headers {
+    return {
+      ...super.defaultHeaders(opts),
+      'anthropic-version': '2023-06-01',
+      ...this._options.defaultHeaders,
+    };
+  }
+
+  protected override validateHeaders(headers: Core.Headers, customHeaders: Core.Headers) {
+    if (this.apiKey && headers['x-api-key']) {
+      return;
+    }
+    if (customHeaders['x-api-key'] === null) {
+      return;
+    }
+
+    if (this.authToken && headers['authorization']) {
+      return;
+    }
+    if (customHeaders['authorization'] === null) {
+      return;
+    }
+
+    throw new Error(
+      'Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted',
+    );
+  }
+
+  protected override authHeaders(opts: Core.FinalRequestOptions): Core.Headers {
+    const apiKeyAuth = this.apiKeyAuth(opts);
+    const bearerAuth = this.bearerAuth(opts);
+
+    if (apiKeyAuth != null && !Core.isEmptyObj(apiKeyAuth)) {
+      return apiKeyAuth;
+    }
+
+    if (bearerAuth != null && !Core.isEmptyObj(bearerAuth)) {
+      return bearerAuth;
+    }
+    return {};
+  }
+
+  protected apiKeyAuth(opts: Core.FinalRequestOptions): Core.Headers {
+    if (this.apiKey == null) {
+      return {};
+    }
+    return { 'X-Api-Key': this.apiKey };
+  }
+
+  protected bearerAuth(opts: Core.FinalRequestOptions): Core.Headers {
+    if (this.authToken == null) {
+      return {};
+    }
+    return { Authorization: `Bearer ${this.authToken}` };
+  }
+
+  static Anthropic = this;
+  static HUMAN_PROMPT = '\n\nHuman:';
+  static AI_PROMPT = '\n\nAssistant:';
+
+  static AnthropicError = Errors.AnthropicError;
+  static APIError = Errors.APIError;
+  static APIConnectionError = Errors.APIConnectionError;
+  static APIConnectionTimeoutError = Errors.APIConnectionTimeoutError;
+  static APIUserAbortError = Errors.APIUserAbortError;
+  static NotFoundError = Errors.NotFoundError;
+  static ConflictError = Errors.ConflictError;
+  static RateLimitError = Errors.RateLimitError;
+  static BadRequestError = Errors.BadRequestError;
+  static AuthenticationError = Errors.AuthenticationError;
+  static InternalServerError = Errors.InternalServerError;
+  static PermissionDeniedError = Errors.PermissionDeniedError;
+  static UnprocessableEntityError = Errors.UnprocessableEntityError;
+}
+
+export const { HUMAN_PROMPT, AI_PROMPT } = Anthropic;
+
+export const {
+  AnthropicError,
+  APIError,
+  APIConnectionError,
+  APIConnectionTimeoutError,
+  APIUserAbortError,
+  NotFoundError,
+  ConflictError,
+  RateLimitError,
+  BadRequestError,
+  AuthenticationError,
+  InternalServerError,
+  PermissionDeniedError,
+  UnprocessableEntityError,
+} = Errors;
+
+export import toFile = Uploads.toFile;
+export import fileFromPath = Uploads.fileFromPath;
+
+export namespace Anthropic {
+  // Helper functions
+  export import toFile = Uploads.toFile;
+  export import fileFromPath = Uploads.fileFromPath;
+
+  export import RequestOptions = Core.RequestOptions;
+
+  export import Completions = API.Completions;
+  export import Completion = API.Completion;
+  export import CompletionCreateParams = API.CompletionCreateParams;
+  export import CompletionCreateParamsNonStreaming = API.CompletionCreateParamsNonStreaming;
+  export import CompletionCreateParamsStreaming = API.CompletionCreateParamsStreaming;
+
+  export import Messages = API.Messages;
+  export import ContentBlock = API.ContentBlock;
+  export import ContentBlockDeltaEvent = API.ContentBlockDeltaEvent;
+  export import ContentBlockStartEvent = API.ContentBlockStartEvent;
+  export import ContentBlockStopEvent = API.ContentBlockStopEvent;
+  export import ImageBlockParam = API.ImageBlockParam;
+  export import Message = API.Message;
+  export import MessageDeltaEvent = API.MessageDeltaEvent;
+  export import MessageDeltaUsage = API.MessageDeltaUsage;
+  export import MessageParam = API.MessageParam;
+  export import MessageStartEvent = API.MessageStartEvent;
+  export import MessageStopEvent = API.MessageStopEvent;
+  export import MessageStreamEvent = API.MessageStreamEvent;
+  export import TextBlock = API.TextBlock;
+  export import TextDelta = API.TextDelta;
+  export import Usage = API.Usage;
+  export import MessageCreateParams = API.MessageCreateParams;
+  export import MessageCreateParamsNonStreaming = API.MessageCreateParamsNonStreaming;
+  export import MessageCreateParamsStreaming = API.MessageCreateParamsStreaming;
+  export import MessageStreamParams = API.MessageStreamParams;
+}
+
+export default Anthropic;
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/lib↓
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/lib/MessageStream.ts→
+
+import * as Core from "../core";
+import { AnthropicError, APIUserAbortError } from "../error";
+import {
+  ContentBlock,
+  Messages,
+  Message,
+  MessageStreamEvent,
+  MessageParam,
+  MessageCreateParams,
+  MessageStreamParams,
+} from "../resources/messages";
+import { type ReadableStream } from "../_shims/index";
+import { Stream } from "../streaming";
+
+export interface MessageStreamEvents {
+  connect: () => void;
+  streamEvent: (event: MessageStreamEvent, snapshot: Message) => void;
+  text: (textDelta: string, textSnapshot: string) => void;
+  message: (message: Message) => void;
+  contentBlock: (content: ContentBlock) => void;
+  finalMessage: (message: Message) => void;
+  error: (error: AnthropicError) => void;
+  abort: (error: APIUserAbortError) => void;
+  end: () => void;
+}
+
+type MessageStreamEventListeners<Event extends keyof MessageStreamEvents> = {
+  listener: MessageStreamEvents[Event];
+  once?: boolean;
+}[];
+
+export class MessageStream implements AsyncIterable<MessageStreamEvent> {
+  messages: MessageParam[] = [];
+  receivedMessages: Message[] = [];
+  #currentMessageSnapshot: Message | undefined;
+
+  controller: AbortController = new AbortController();
+
+  #connectedPromise: Promise<void>;
+  #resolveConnectedPromise: () => void = () => {};
+  #rejectConnectedPromise: (error: AnthropicError) => void = () => {};
+
+  #endPromise: Promise<void>;
+  #resolveEndPromise: () => void = () => {};
+  #rejectEndPromise: (error: AnthropicError) => void = () => {};
+
+  #listeners: { [Event in keyof MessageStreamEvents]?: MessageStreamEventListeners<Event> } = {};
+
+  #ended = false;
+  #errored = false;
+  #aborted = false;
+  #catchingPromiseCreated = false;
+
+  constructor() {
+    this.#connectedPromise = new Promise<void>((resolve, reject) => {
+      this.#resolveConnectedPromise = resolve;
+      this.#rejectConnectedPromise = reject;
+    });
+
+    this.#endPromise = new Promise<void>((resolve, reject) => {
+      this.#resolveEndPromise = resolve;
+      this.#rejectEndPromise = reject;
+    });
+
+    // Don't let these promises cause unhandled rejection errors.
+    // we will manually cause an unhandled rejection error later
+    // if the user hasn't registered any error listener or called
+    // any promise-returning method.
+    this.#connectedPromise.catch(() => {});
+    this.#endPromise.catch(() => {});
+  }
+
+  /**
+   * Intended for use on the frontend, consuming a stream produced with
+   * `.toReadableStream()` on the backend.
+   *
+   * Note that messages sent to the model do not appear in `.on('message')`
+   * in this context.
+   */
+  static fromReadableStream(stream: ReadableStream): MessageStream {
+    const runner = new MessageStream();
+    runner._run(() => runner._fromReadableStream(stream));
+    return runner;
+  }
+
+  static createMessage(
+    messages: Messages,
+    params: MessageStreamParams,
+    options?: Core.RequestOptions,
+  ): MessageStream {
+    const runner = new MessageStream();
+    for (const message of params.messages) {
+      runner._addMessageParam(message);
+    }
+    runner._run(() =>
+      runner._createMessage(
+        messages,
+        { ...params, stream: true },
+        { ...options, headers: { ...options?.headers, 'X-Stainless-Helper-Method': 'stream' } },
+      ),
+    );
+    return runner;
+  }
+
+  protected _run(executor: () => Promise<any>) {
+    executor().then(() => {
+      this._emitFinal();
+      this._emit('end');
+    }, this.#handleError);
+  }
+
+  protected _addMessageParam(message: MessageParam) {
+    this.messages.push(message);
+  }
+
+  protected _addMessage(message: Message, emit = true) {
+    this.receivedMessages.push(message);
+    if (emit) {
+      this._emit('message', message);
+    }
+  }
+
+  protected async _createMessage(
+    messages: Messages,
+    params: MessageCreateParams,
+    options?: Core.RequestOptions,
+  ): Promise<void> {
+    const signal = options?.signal;
+    if (signal) {
+      if (signal.aborted) this.controller.abort();
+      signal.addEventListener('abort', () => this.controller.abort());
+    }
+    this.#beginRequest();
+    const stream = await messages.create(
+      { ...params, stream: true },
+      { ...options, signal: this.controller.signal },
+    );
+    this._connected();
+    for await (const event of stream) {
+      this.#addStreamEvent(event);
+    }
+    if (stream.controller.signal?.aborted) {
+      throw new APIUserAbortError();
+    }
+    this.#endRequest();
+  }
+
+  protected _connected() {
+    if (this.ended) return;
+    this.#resolveConnectedPromise();
+    this._emit('connect');
+  }
+
+  get ended(): boolean {
+    return this.#ended;
+  }
+
+  get errored(): boolean {
+    return this.#errored;
+  }
+
+  get aborted(): boolean {
+    return this.#aborted;
+  }
+
+  abort() {
+    this.controller.abort();
+  }
+
+  /**
+   * Adds the listener function to the end of the listeners array for the event.
+   * No checks are made to see if the listener has already been added. Multiple calls passing
+   * the same combination of event and listener will result in the listener being added, and
+   * called, multiple times.
+   * @returns this MessageStream, so that calls can be chained
+   */
+  on<Event extends keyof MessageStreamEvents>(event: Event, listener: MessageStreamEvents[Event]): this {
+    const listeners: MessageStreamEventListeners<Event> =
+      this.#listeners[event] || (this.#listeners[event] = []);
+    listeners.push({ listener });
+    return this;
+  }
+
+  /**
+   * Removes the specified listener from the listener array for the event.
+   * off() will remove, at most, one instance of a listener from the listener array. If any single
+   * listener has been added multiple times to the listener array for the specified event, then
+   * off() must be called multiple times to remove each instance.
+   * @returns this MessageStream, so that calls can be chained
+   */
+  off<Event extends keyof MessageStreamEvents>(event: Event, listener: MessageStreamEvents[Event]): this {
+    const listeners = this.#listeners[event];
+    if (!listeners) return this;
+    const index = listeners.findIndex((l) => l.listener === listener);
+    if (index >= 0) listeners.splice(index, 1);
+    return this;
+  }
+
+  /**
+   * Adds a one-time listener function for the event. The next time the event is triggered,
+   * this listener is removed and then invoked.
+   * @returns this MessageStream, so that calls can be chained
+   */
+  once<Event extends keyof MessageStreamEvents>(event: Event, listener: MessageStreamEvents[Event]): this {
+    const listeners: MessageStreamEventListeners<Event> =
+      this.#listeners[event] || (this.#listeners[event] = []);
+    listeners.push({ listener, once: true });
+    return this;
+  }
+
+  /**
+   * This is similar to `.once()`, but returns a Promise that resolves the next time
+   * the event is triggered, instead of calling a listener callback.
+   * @returns a Promise that resolves the next time given event is triggered,
+   * or rejects if an error is emitted.  (If you request the 'error' event,
+   * returns a promise that resolves with the error).
+   *
+   * Example:
+   *
+   *   const message = await stream.emitted('message') // rejects if the stream errors
+   */
+  emitted<Event extends keyof MessageStreamEvents>(
+    event: Event,
+  ): Promise<
+    Parameters<MessageStreamEvents[Event]> extends [infer Param] ? Param
+    : Parameters<MessageStreamEvents[Event]> extends [] ? void
+    : Parameters<MessageStreamEvents[Event]>
+  > {
+    return new Promise((resolve, reject) => {
+      this.#catchingPromiseCreated = true;
+      if (event !== 'error') this.once('error', reject);
+      this.once(event, resolve as any);
+    });
+  }
+
+  async done(): Promise<void> {
+    this.#catchingPromiseCreated = true;
+    await this.#endPromise;
+  }
+
+  get currentMessage(): Message | undefined {
+    return this.#currentMessageSnapshot;
+  }
+
+  #getFinalMessage(): Message {
+    if (this.receivedMessages.length === 0) {
+      throw new AnthropicError('stream ended without producing a Message with role=assistant');
+    }
+    return this.receivedMessages.at(-1)!;
+  }
+
+  /**
+   * @returns a promise that resolves with the the final assistant Message response,
+   * or rejects if an error occurred or the stream ended prematurely without producing a Message.
+   */
+  async finalMessage(): Promise<Message> {
+    await this.done();
+    return this.#getFinalMessage();
+  }
+
+  #getFinalText(): string {
+    if (this.receivedMessages.length === 0) {
+      throw new AnthropicError('stream ended without producing a Message with role=assistant');
+    }
+    const textBlocks = this.receivedMessages
+      .at(-1)!
+      .content.filter((block) => block.type === 'text')
+      .map((block) => block.text);
+    if (textBlocks.length === 0) {
+      throw new AnthropicError('stream ended without producing a content block with type=text');
+    }
+    return textBlocks.join(' ');
+  }
+
+  /**
+   * @returns a promise that resolves with the the final assistant Message's text response, concatenated
+   * together if there are more than one text blocks.
+   * Rejects if an error occurred or the stream ended prematurely without producing a Message.
+   */
+  async finalText(): Promise<string> {
+    await this.done();
+    return this.#getFinalText();
+  }
+
+  #handleError = (error: unknown) => {
+    this.#errored = true;
+    if (error instanceof Error && error.name === 'AbortError') {
+      error = new APIUserAbortError();
+    }
+    if (error instanceof APIUserAbortError) {
+      this.#aborted = true;
+      return this._emit('abort', error);
+    }
+    if (error instanceof AnthropicError) {
+      return this._emit('error', error);
+    }
+    if (error instanceof Error) {
+      const anthropicError: AnthropicError = new AnthropicError(error.message);
+      // @ts-ignore
+      anthropicError.cause = error;
+      return this._emit('error', anthropicError);
+    }
+    return this._emit('error', new AnthropicError(String(error)));
+  };
+
+  protected _emit<Event extends keyof MessageStreamEvents>(
+    event: Event,
+    ...args: Parameters<MessageStreamEvents[Event]>
+  ) {
+    // make sure we don't emit any MessageStreamEvents after end
+    if (this.#ended) return;
+
+    if (event === 'end') {
+      this.#ended = true;
+      this.#resolveEndPromise();
+    }
+
+    const listeners: MessageStreamEventListeners<Event> | undefined = this.#listeners[event];
+    if (listeners) {
+      this.#listeners[event] = listeners.filter((l) => !l.once) as any;
+      listeners.forEach(({ listener }: any) => listener(...args));
+    }
+
+    if (event === 'abort') {
+      const error = args[0] as APIUserAbortError;
+      if (!this.#catchingPromiseCreated && !listeners?.length) {
+        Promise.reject(error);
+      }
+      this.#rejectConnectedPromise(error);
+      this.#rejectEndPromise(error);
+      this._emit('end');
+      return;
+    }
+
+    if (event === 'error') {
+      // NOTE: _emit('error', error) should only be called from #handleError().
+
+      const error = args[0] as AnthropicError;
+      if (!this.#catchingPromiseCreated && !listeners?.length) {
+        // Trigger an unhandled rejection if the user hasn't registered any error handlers.
+        // If you are seeing stack traces here, make sure to handle errors via either:
+        // - runner.on('error', () => ...)
+        // - await runner.done()
+        // - await runner.final...()
+        // - etc.
+        Promise.reject(error);
+      }
+      this.#rejectConnectedPromise(error);
+      this.#rejectEndPromise(error);
+      this._emit('end');
+    }
+  }
+
+  protected _emitFinal() {
+    const finalMessage = this.receivedMessages.at(-1);
+    if (finalMessage) {
+      this._emit('finalMessage', this.#getFinalMessage());
+    }
+  }
+
+  #beginRequest() {
+    if (this.ended) return;
+    this.#currentMessageSnapshot = undefined;
+  }
+  #addStreamEvent(event: MessageStreamEvent) {
+    if (this.ended) return;
+    const messageSnapshot = this.#accumulateMessage(event);
+    this._emit('streamEvent', event, messageSnapshot);
+
+    switch (event.type) {
+      case 'content_block_delta': {
+        if (event.delta.type === 'text_delta') {
+          this._emit('text', event.delta.text, messageSnapshot.content.at(-1)!.text || '');
+        }
+        break;
+      }
+      case 'message_stop': {
+        this._addMessageParam(messageSnapshot);
+        this._addMessage(messageSnapshot, true);
+        break;
+      }
+      case 'content_block_stop': {
+        this._emit('contentBlock', messageSnapshot.content.at(-1)!);
+        break;
+      }
+      case 'message_start': {
+        this.#currentMessageSnapshot = messageSnapshot;
+        break;
+      }
+      case 'content_block_start':
+      case 'message_delta':
+        break;
+    }
+  }
+  #endRequest(): Message {
+    if (this.ended) {
+      throw new AnthropicError(`stream has ended, this shouldn't happen`);
+    }
+    const snapshot = this.#currentMessageSnapshot;
+    if (!snapshot) {
+      throw new AnthropicError(`request ended without sending any chunks`);
+    }
+    this.#currentMessageSnapshot = undefined;
+    return snapshot;
+  }
+
+  protected async _fromReadableStream(
+    readableStream: ReadableStream,
+    options?: Core.RequestOptions,
+  ): Promise<void> {
+    const signal = options?.signal;
+    if (signal) {
+      if (signal.aborted) this.controller.abort();
+      signal.addEventListener('abort', () => this.controller.abort());
+    }
+    this.#beginRequest();
+    this._connected();
+    const stream = Stream.fromReadableStream<MessageStreamEvent>(readableStream, this.controller);
+    for await (const event of stream) {
+      this.#addStreamEvent(event);
+    }
+    if (stream.controller.signal?.aborted) {
+      throw new APIUserAbortError();
+    }
+    this.#endRequest();
+  }
+
+  /**
+   * Mutates this.#currentMessage with the current event. Handling the accumulation of multiple messages
+   * will be needed to be handled by the caller, this method will throw if you try to accumulate for multiple
+   * messages.
+   */
+  #accumulateMessage(event: MessageStreamEvent): Message {
+    let snapshot = this.#currentMessageSnapshot;
+
+    if (event.type === 'message_start') {
+      if (snapshot) {
+        throw new AnthropicError(`Unexpected event order, got ${event.type} before receiving "message_stop"`);
+      }
+      return event.message;
+    }
+
+    if (!snapshot) {
+      throw new AnthropicError(`Unexpected event order, got ${event.type} before "message_start"`);
+    }
+
+    switch (event.type) {
+      case 'message_stop':
+        return snapshot;
+      case 'message_delta':
+        snapshot.stop_reason = event.delta.stop_reason;
+        snapshot.stop_sequence = event.delta.stop_sequence;
+        return snapshot;
+      case 'content_block_start':
+        snapshot.content.push(event.content_block);
+        return snapshot;
+      case 'content_block_delta': {
+        const snapshotContent = snapshot.content.at(event.index);
+        if (snapshotContent?.type === 'text' && event.delta.type === 'text_delta') {
+          snapshotContent.text += event.delta.text;
+        }
+        return snapshot;
+      }
+      case 'content_block_stop':
+        return snapshot;
+    }
+  }
+
+  [Symbol.asyncIterator](): AsyncIterator<MessageStreamEvent> {
+    const pushQueue: MessageStreamEvent[] = [];
+    const readQueue: {
+      resolve: (chunk: MessageStreamEvent | undefined) => void;
+      reject: (error: unknown) => void;
+    }[] = [];
+    let done = false;
+
+    this.on('streamEvent', (event) => {
+      const reader = readQueue.shift();
+      if (reader) {
+        reader.resolve(event);
+      } else {
+        pushQueue.push(event);
+      }
+    });
+
+    this.on('end', () => {
+      done = true;
+      for (const reader of readQueue) {
+        reader.resolve(undefined);
+      }
+      readQueue.length = 0;
+    });
+
+    this.on('abort', (err) => {
+      done = true;
+      for (const reader of readQueue) {
+        reader.reject(err);
+      }
+      readQueue.length = 0;
+    });
+
+    this.on('error', (err) => {
+      done = true;
+      for (const reader of readQueue) {
+        reader.reject(err);
+      }
+      readQueue.length = 0;
+    });
+
+    return {
+      next: async (): Promise<IteratorResult<MessageStreamEvent>> => {
+        if (!pushQueue.length) {
+          if (done) {
+            return { value: undefined, done: true };
+          }
+          return new Promise<MessageStreamEvent | undefined>((resolve, reject) =>
+            readQueue.push({ resolve, reject }),
+          ).then((chunk) => (chunk ? { value: chunk, done: false } : { value: undefined, done: true }));
+        }
+        const chunk = pushQueue.shift()!;
+        return { value: chunk, done: false };
+      },
+      return: async () => {
+        this.abort();
+        return { value: undefined, done: true };
+      },
+    };
+  }
+
+  toReadableStream(): ReadableStream {
+    const stream = new Stream(this[Symbol.asyncIterator].bind(this), this.controller);
+    return stream.toReadableStream();
+  }
+}
+
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/resource.ts→
+
+// File generated from our OpenAPI spec by Stainless.
+
+import * as Core from "./core";
+
+export class APIResource {
+  protected _client: Core.APIClient;
+
+  constructor(client: Core.APIClient) {
+    this._client = client;
+  }
+}
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/resources↓
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/resources/completions.ts→
+
+// File generated from our OpenAPI spec by Stainless.
+
+import * as Core from "../core";
+import { APIPromise } from "../core";
+import { APIResource } from "../resource";
+import * as CompletionsAPI from "./completions";
+import { Stream } from "../streaming";
+
+export class Completions extends APIResource {
+  /**
+   * [Legacy] Create a Text Completion.
+   *
+   * The Text Completions API is a legacy API. We recommend using the
+   * [Messages API](https://docs.anthropic.com/claude/reference/messages_post) going
+   * forward.
+   *
+   * Future models and features will not be compatible with Text Completions. See our
+   * [migration guide](https://docs.anthropic.com/claude/reference/migrating-from-text-completions-to-messages)
+   * for guidance in migrating from Text Completions to Messages.
+   */
+  create(body: CompletionCreateParamsNonStreaming, options?: Core.RequestOptions): APIPromise<Completion>;
+  create(
+    body: CompletionCreateParamsStreaming,
+    options?: Core.RequestOptions,
+  ): APIPromise<Stream<Completion>>;
+  create(
+    body: CompletionCreateParamsBase,
+    options?: Core.RequestOptions,
+  ): APIPromise<Stream<Completion> | Completion>;
+  create(
+    body: CompletionCreateParams,
+    options?: Core.RequestOptions,
+  ): APIPromise<Completion> | APIPromise<Stream<Completion>> {
+    return this._client.post('/v1/complete', {
+      body,
+      timeout: 600000,
+      ...options,
+      stream: body.stream ?? false,
+    }) as APIPromise<Completion> | APIPromise<Stream<Completion>>;
+  }
+}
+
+export interface Completion {
+  /**
+   * Unique object identifier.
+   *
+   * The format and length of IDs may change over time.
+   */
+  id: string;
+
+  /**
+   * The resulting completion up to and excluding the stop sequences.
+   */
+  completion: string;
+
+  /**
+   * The model that handled the request.
+   */
+  model: string;
+
+  /**
+   * The reason that we stopped.
+   *
+   * This may be one the following values:
+   *
+   * - `"stop_sequence"`: we reached a stop sequence — either provided by you via the
+   *   `stop_sequences` parameter, or a stop sequence built into the model
+   * - `"max_tokens"`: we exceeded `max_tokens_to_sample` or the model's maximum
+   */
+  stop_reason: string | null;
+
+  /**
+   * Object type.
+   *
+   * For Text Completions, this is always `"completion"`.
+   */
+  type: 'completion';
+}
+
+export type CompletionCreateParams = CompletionCreateParamsNonStreaming | CompletionCreateParamsStreaming;
+
+export interface CompletionCreateParamsBase {
+  /**
+   * The maximum number of tokens to generate before stopping.
+   *
+   * Note that our models may stop _before_ reaching this maximum. This parameter
+   * only specifies the absolute maximum number of tokens to generate.
+   */
+  max_tokens_to_sample: number;
+
+  /**
+   * The model that will complete your prompt.
+   *
+   * See [models](https://docs.anthropic.com/claude/docs/models-overview) for
+   * additional details and options.
+   */
+  model: (string & {}) | 'claude-2.0' | 'claude-2.1' | 'claude-instant-1.2';
+
+  /**
+   * The prompt that you want Claude to complete.
+   *
+   * For proper response generation you will need to format your prompt using
+   * alternating `\n\nHuman:` and `\n\nAssistant:` conversational turns. For example:
+   *
+   * ```
+   * "\n\nHuman: {userQuestion}\n\nAssistant:"
+   * ```
+   *
+   * See
+   * [prompt validation](https://anthropic.readme.io/claude/reference/prompt-validation)
+   * and our guide to
+   * [prompt design](https://docs.anthropic.com/claude/docs/introduction-to-prompt-design)
+   * for more details.
+   */
+  prompt: string;
+
+  /**
+   * An object describing metadata about the request.
+   */
+  metadata?: CompletionCreateParams.Metadata;
+
+  /**
+   * Sequences that will cause the model to stop generating.
+   *
+   * Our models stop on `"\n\nHuman:"`, and may include additional built-in stop
+   * sequences in the future. By providing the stop_sequences parameter, you may
+   * include additional strings that will cause the model to stop generating.
+   */
+  stop_sequences?: Array<string>;
+
+  /**
+   * Whether to incrementally stream the response using server-sent events.
+   *
+   * See
+   * [streaming](https://docs.anthropic.com/claude/reference/text-completions-streaming)
+   * for details.
+   */
+  stream?: boolean;
+
+  /**
+   * Amount of randomness injected into the response.
+   *
+   * Defaults to `1.0`. Ranges from `0.0` to `1.0`. Use `temperature` closer to `0.0`
+   * for analytical / multiple choice, and closer to `1.0` for creative and
+   * generative tasks.
+   *
+   * Note that even with `temperature` of `0.0`, the results will not be fully
+   * deterministic.
+   */
+  temperature?: number;
+
+  /**
+   * Only sample from the top K options for each subsequent token.
+   *
+   * Used to remove "long tail" low probability responses.
+   * [Learn more technical details here](https://towardsdatascience.com/how-to-sample-from-language-models-682bceb97277).
+   *
+   * Recommended for advanced use cases only. You usually only need to use
+   * `temperature`.
+   */
+  top_k?: number;
+
+  /**
+   * Use nucleus sampling.
+   *
+   * In nucleus sampling, we compute the cumulative distribution over all the options
+   * for each subsequent token in decreasing probability order and cut it off once it
+   * reaches a particular probability specified by `top_p`. You should either alter
+   * `temperature` or `top_p`, but not both.
+   *
+   * Recommended for advanced use cases only. You usually only need to use
+   * `temperature`.
+   */
+  top_p?: number;
+}
+
+export namespace CompletionCreateParams {
+  /**
+   * An object describing metadata about the request.
+   */
+  export interface Metadata {
+    /**
+     * An external identifier for the user who is associated with the request.
+     *
+     * This should be a uuid, hash value, or other opaque identifier. Anthropic may use
+     * this id to help detect abuse. Do not include any identifying information such as
+     * name, email address, or phone number.
+     */
+    user_id?: string | null;
+  }
+
+  export type CompletionCreateParamsNonStreaming = CompletionsAPI.CompletionCreateParamsNonStreaming;
+  export type CompletionCreateParamsStreaming = CompletionsAPI.CompletionCreateParamsStreaming;
+}
+
+export interface CompletionCreateParamsNonStreaming extends CompletionCreateParamsBase {
+  /**
+   * Whether to incrementally stream the response using server-sent events.
+   *
+   * See
+   * [streaming](https://docs.anthropic.com/claude/reference/text-completions-streaming)
+   * for details.
+   */
+  stream?: false;
+}
+
+export interface CompletionCreateParamsStreaming extends CompletionCreateParamsBase {
+  /**
+   * Whether to incrementally stream the response using server-sent events.
+   *
+   * See
+   * [streaming](https://docs.anthropic.com/claude/reference/text-completions-streaming)
+   * for details.
+   */
+  stream: true;
+}
+
+export namespace Completions {
+  export import Completion = CompletionsAPI.Completion;
+  export import CompletionCreateParams = CompletionsAPI.CompletionCreateParams;
+  export import CompletionCreateParamsNonStreaming = CompletionsAPI.CompletionCreateParamsNonStreaming;
+  export import CompletionCreateParamsStreaming = CompletionsAPI.CompletionCreateParamsStreaming;
+}
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/resources/index.ts→
+
+// File generated from our OpenAPI spec by Stainless.
+
+export {
+  Completion,
+  CompletionCreateParams,
+  CompletionCreateParamsNonStreaming,
+  CompletionCreateParamsStreaming,
+  Completions,
+} from './completions';
+export {
+  ContentBlock,
+  ContentBlockDeltaEvent,
+  ContentBlockStartEvent,
+  ContentBlockStopEvent,
+  ImageBlockParam,
+  Message,
+  MessageDeltaEvent,
+  MessageDeltaUsage,
+  MessageParam,
+  MessageStartEvent,
+  MessageStopEvent,
+  MessageStreamEvent,
+  TextBlock,
+  TextDelta,
+  Usage,
+  MessageCreateParams,
+  MessageCreateParamsNonStreaming,
+  MessageCreateParamsStreaming,
+  MessageStreamParams,
+  Messages,
+} from './messages';
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/resources/messages.ts→
+
+// File generated from our OpenAPI spec by Stainless.
+
+import * as Core from "../core";
+import { APIPromise } from "../core";
+import { APIResource } from "../resource";
+import { MessageStream } from "../lib/MessageStream";
+export { MessageStream } from "../lib/MessageStream";
+import * as MessagesAPI from "./messages";
+import { Stream } from "../streaming";
+
+export class Messages extends APIResource {
+  /**
+   * Create a Message.
+   *
+   * Send a structured list of input messages with text and/or image content, and the
+   * model will generate the next message in the conversation.
+   *
+   * The Messages API can be used for for either single queries or stateless
+   * multi-turn conversations.
+   */
+  create(body: MessageCreateParamsNonStreaming, options?: Core.RequestOptions): APIPromise<Message>;
+  create(
+    body: MessageCreateParamsStreaming,
+    options?: Core.RequestOptions,
+  ): APIPromise<Stream<MessageStreamEvent>>;
+  create(
+    body: MessageCreateParamsBase,
+    options?: Core.RequestOptions,
+  ): APIPromise<Stream<MessageStreamEvent> | Message>;
+  create(
+    body: MessageCreateParams,
+    options?: Core.RequestOptions,
+  ): APIPromise<Message> | APIPromise<Stream<MessageStreamEvent>> {
+    return this._client.post('/v1/messages', {
+      body,
+      timeout: 600000,
+      ...options,
+      stream: body.stream ?? false,
+    }) as APIPromise<Message> | APIPromise<Stream<MessageStreamEvent>>;
+  }
+
+  /**
+   * Create a Message stream
+   */
+  stream(body: MessageStreamParams, options?: Core.RequestOptions): MessageStream {
+    return MessageStream.createMessage(this, body, options);
+  }
+}
+
+export interface ContentBlock {
+  text: string;
+
+  type: 'text';
+}
+
+export interface ContentBlockDeltaEvent {
+  delta: TextDelta;
+
+  index: number;
+
+  type: 'content_block_delta';
+}
+
+export interface ContentBlockStartEvent {
+  content_block: ContentBlock;
+
+  index: number;
+
+  type: 'content_block_start';
+}
+
+export interface ContentBlockStopEvent {
+  index: number;
+
+  type: 'content_block_stop';
+}
+
+export interface ImageBlockParam {
+  source: ImageBlockParam.Source;
+
+  type?: 'image';
+}
+
+export namespace ImageBlockParam {
+  export interface Source {
+    data: string;
+
+    media_type: 'image/jpeg' | 'image/png' | 'image/gif' | 'image/webp';
+
+    type?: 'base64';
+  }
+}
+
+export interface Message {
+  /**
+   * Unique object identifier.
+   *
+   * The format and length of IDs may change over time.
+   */
+  id: string;
+
+  /**
+   * Content generated by the model.
+   *
+   * This is an array of content blocks, each of which has a `type` that determines
+   * its shape. Currently, the only `type` in responses is `"text"`.
+   *
+   * Example:
+   *
+   * ```json
+   * [{ "type": "text", "text": "Hi, I'm Claude." }]
+   * ```
+   *
+   * If the request input `messages` ended with an `assistant` turn, then the
+   * response `content` will continue directly from that last turn. You can use this
+   * to constrain the model's output.
+   *
+   * For example, if the input `messages` were:
+   *
+   * ```json
+   * [
+   *   {
+   *     "role": "user",
+   *     "content": "What's the Greek name for Sun? (A) Sol (B) Helios (C) Sun"
+   *   },
+   *   { "role": "assistant", "content": "The best answer is (" }
+   * ]
+   * ```
+   *
+   * Then the response `content` might be:
+   *
+   * ```json
+   * [{ "type": "text", "text": "B)" }]
+   * ```
+   */
+  content: Array<ContentBlock>;
+
+  /**
+   * The model that handled the request.
+   */
+  model: string;
+
+  /**
+   * Conversational role of the generated message.
+   *
+   * This will always be `"assistant"`.
+   */
+  role: 'assistant';
+
+  /**
+   * The reason that we stopped.
+   *
+   * This may be one the following values:
+   *
+   * - `"end_turn"`: the model reached a natural stopping point
+   * - `"max_tokens"`: we exceeded the requested `max_tokens` or the model's maximum
+   * - `"stop_sequence"`: one of your provided custom `stop_sequences` was generated
+   *
+   * Note that these values are different than those in `/v1/complete`, where
+   * `end_turn` and `stop_sequence` were not differentiated.
+   *
+   * In non-streaming mode this value is always non-null. In streaming mode, it is
+   * null in the `message_start` event and non-null otherwise.
+   */
+  stop_reason: 'end_turn' | 'max_tokens' | 'stop_sequence' | null;
+
+  /**
+   * Which custom stop sequence was generated, if any.
+   *
+   * This value will be a non-null string if one of your custom stop sequences was
+   * generated.
+   */
+  stop_sequence: string | null;
+
+  /**
+   * Object type.
+   *
+   * For Messages, this is always `"message"`.
+   */
+  type: 'message';
+
+  /**
+   * Billing and rate-limit usage.
+   *
+   * Anthropic's API bills and rate-limits by token counts, as tokens represent the
+   * underlying cost to our systems.
+   *
+   * Under the hood, the API transforms requests into a format suitable for the
+   * model. The model's output then goes through a parsing stage before becoming an
+   * API response. As a result, the token counts in `usage` will not match one-to-one
+   * with the exact visible content of an API request or response.
+   *
+   * For example, `output_tokens` will be non-zero, even for an empty string response
+   * from Claude.
+   */
+  usage: Usage;
+}
+
+export interface MessageDeltaEvent {
+  delta: MessageDeltaEvent.Delta;
+
+  type: 'message_delta';
+
+  /**
+   * Billing and rate-limit usage.
+   *
+   * Anthropic's API bills and rate-limits by token counts, as tokens represent the
+   * underlying cost to our systems.
+   *
+   * Under the hood, the API transforms requests into a format suitable for the
+   * model. The model's output then goes through a parsing stage before becoming an
+   * API response. As a result, the token counts in `usage` will not match one-to-one
+   * with the exact visible content of an API request or response.
+   *
+   * For example, `output_tokens` will be non-zero, even for an empty string response
+   * from Claude.
+   */
+  usage: MessageDeltaUsage;
+}
+
+export namespace MessageDeltaEvent {
+  export interface Delta {
+    stop_reason: 'end_turn' | 'max_tokens' | 'stop_sequence' | null;
+
+    stop_sequence: string | null;
+  }
+}
+
+export interface MessageDeltaUsage {
+  /**
+   * The cumulative number of output tokens which were used.
+   */
+  output_tokens: number;
+}
+
+export interface MessageParam {
+  content: string | Array<TextBlock | ImageBlockParam>;
+
+  role: 'user' | 'assistant';
+}
+
+export interface MessageStartEvent {
+  message: Message;
+
+  type: 'message_start';
+}
+
+export interface MessageStopEvent {
+  type: 'message_stop';
+}
+
+export type MessageStreamEvent =
+  | MessageStartEvent
+  | MessageDeltaEvent
+  | MessageStopEvent
+  | ContentBlockStartEvent
+  | ContentBlockDeltaEvent
+  | ContentBlockStopEvent;
+
+export interface TextBlock {
+  text: string;
+
+  type?: 'text';
+}
+
+export interface TextDelta {
+  text: string;
+
+  type: 'text_delta';
+}
+
+export interface Usage {
+  /**
+   * The number of input tokens which were used.
+   */
+  input_tokens: number;
+
+  /**
+   * The number of output tokens which were used.
+   */
+  output_tokens: number;
+}
+
+export type MessageCreateParams = MessageCreateParamsNonStreaming | MessageCreateParamsStreaming;
+
+export interface MessageCreateParamsBase {
+  /**
+   * The maximum number of tokens to generate before stopping.
+   *
+   * Note that our models may stop _before_ reaching this maximum. This parameter
+   * only specifies the absolute maximum number of tokens to generate.
+   *
+   * Different models have different maximum values for this parameter. See
+   * [models](https://docs.anthropic.com/claude/docs/models-overview) for details.
+   */
+  max_tokens: number;
+
+  /**
+   * Input messages.
+   *
+   * Our models are trained to operate on alternating `user` and `assistant`
+   * conversational turns. When creating a new `Message`, you specify the prior
+   * conversational turns with the `messages` parameter, and the model then generates
+   * the next `Message` in the conversation.
+   *
+   * Each input message must be an object with a `role` and `content`. You can
+   * specify a single `user`-role message, or you can include multiple `user` and
+   * `assistant` messages. The first message must always use the `user` role.
+   *
+   * If the final message uses the `assistant` role, the response content will
+   * continue immediately from the content in that message. This can be used to
+   * constrain part of the model's response.
+   *
+   * Example with a single `user` message:
+   *
+   * ```json
+   * [{ "role": "user", "content": "Hello, Claude" }]
+   * ```
+   *
+   * Example with multiple conversational turns:
+   *
+   * ```json
+   * [
+   *   { "role": "user", "content": "Hello there." },
+   *   { "role": "assistant", "content": "Hi, I'm Claude. How can I help you?" },
+   *   { "role": "user", "content": "Can you explain LLMs in plain English?" }
+   * ]
+   * ```
+   *
+   * Example with a partially-filled response from Claude:
+   *
+   * ```json
+   * [
+   *   {
+   *     "role": "user",
+   *     "content": "What's the Greek name for Sun? (A) Sol (B) Helios (C) Sun"
+   *   },
+   *   { "role": "assistant", "content": "The best answer is (" }
+   * ]
+   * ```
+   *
+   * Each input message `content` may be either a single `string` or an array of
+   * content blocks, where each block has a specific `type`. Using a `string` for
+   * `content` is shorthand for an array of one content block of type `"text"`. The
+   * following input messages are equivalent:
+   *
+   * ```json
+   * { "role": "user", "content": "Hello, Claude" }
+   * ```
+   *
+   * ```json
+   * { "role": "user", "content": [{ "type": "text", "text": "Hello, Claude" }] }
+   * ```
+   *
+   * Starting with Claude 3 models, you can also send image content blocks:
+   *
+   * ```json
+   * {
+   *   "role": "user",
+   *   "content": [
+   *     {
+   *       "type": "image",
+   *       "source": {
+   *         "type": "base64",
+   *         "media_type": "image/jpeg",
+   *         "data": "/9j/4AAQSkZJRg..."
+   *       }
+   *     },
+   *     { "type": "text", "text": "What is in this image?" }
+   *   ]
+   * }
+   * ```
+   *
+   * We currently support the `base64` source type for images, and the `image/jpeg`,
+   * `image/png`, `image/gif`, and `image/webp` media types.
+   *
+   * See [examples](https://docs.anthropic.com/claude/reference/messages-examples)
+   * for more input examples.
+   *
+   * Note that if you want to include a
+   * [system prompt](https://docs.anthropic.com/claude/docs/system-prompts), you can
+   * use the top-level `system` parameter — there is no `"system"` role for input
+   * messages in the Messages API.
+   */
+  messages: Array<MessageParam>;
+
+  /**
+   * The model that will complete your prompt.
+   *
+   * See [models](https://docs.anthropic.com/claude/docs/models-overview) for
+   * additional details and options.
+   */
+  model:
+    | (string & {})
+    | 'claude-3-opus-20240229'
+    | 'claude-3-sonnet-20240229'
+    | 'claude-3-haiku-20240307'
+    | "claude-2.1'"
+    | 'claude-2.0'
+    | 'claude-instant-1.2';
+
+  /**
+   * An object describing metadata about the request.
+   */
+  metadata?: MessageCreateParams.Metadata;
+
+  /**
+   * Custom text sequences that will cause the model to stop generating.
+   *
+   * Our models will normally stop when they have naturally completed their turn,
+   * which will result in a response `stop_reason` of `"end_turn"`.
+   *
+   * If you want the model to stop generating when it encounters custom strings of
+   * text, you can use the `stop_sequences` parameter. If the model encounters one of
+   * the custom sequences, the response `stop_reason` value will be `"stop_sequence"`
+   * and the response `stop_sequence` value will contain the matched stop sequence.
+   */
+  stop_sequences?: Array<string>;
+
+  /**
+   * Whether to incrementally stream the response using server-sent events.
+   *
+   * See [streaming](https://docs.anthropic.com/claude/reference/messages-streaming)
+   * for details.
+   */
+  stream?: boolean;
+
+  /**
+   * System prompt.
+   *
+   * A system prompt is a way of providing context and instructions to Claude, such
+   * as specifying a particular goal or role. See our
+   * [guide to system prompts](https://docs.anthropic.com/claude/docs/system-prompts).
+   */
+  system?: string;
+
+  /**
+   * Amount of randomness injected into the response.
+   *
+   * Defaults to `1.0`. Ranges from `0.0` to `1.0`. Use `temperature` closer to `0.0`
+   * for analytical / multiple choice, and closer to `1.0` for creative and
+   * generative tasks.
+   *
+   * Note that even with `temperature` of `0.0`, the results will not be fully
+   * deterministic.
+   */
+  temperature?: number;
+
+  /**
+   * Only sample from the top K options for each subsequent token.
+   *
+   * Used to remove "long tail" low probability responses.
+   * [Learn more technical details here](https://towardsdatascience.com/how-to-sample-from-language-models-682bceb97277).
+   *
+   * Recommended for advanced use cases only. You usually only need to use
+   * `temperature`.
+   */
+  top_k?: number;
+
+  /**
+   * Use nucleus sampling.
+   *
+   * In nucleus sampling, we compute the cumulative distribution over all the options
+   * for each subsequent token in decreasing probability order and cut it off once it
+   * reaches a particular probability specified by `top_p`. You should either alter
+   * `temperature` or `top_p`, but not both.
+   *
+   * Recommended for advanced use cases only. You usually only need to use
+   * `temperature`.
+   */
+  top_p?: number;
+}
+
+export namespace MessageCreateParams {
+  /**
+   * An object describing metadata about the request.
+   */
+  export interface Metadata {
+    /**
+     * An external identifier for the user who is associated with the request.
+     *
+     * This should be a uuid, hash value, or other opaque identifier. Anthropic may use
+     * this id to help detect abuse. Do not include any identifying information such as
+     * name, email address, or phone number.
+     */
+    user_id?: string | null;
+  }
+
+  export type MessageCreateParamsNonStreaming = MessagesAPI.MessageCreateParamsNonStreaming;
+  export type MessageCreateParamsStreaming = MessagesAPI.MessageCreateParamsStreaming;
+}
+
+export interface MessageCreateParamsNonStreaming extends MessageCreateParamsBase {
+  /**
+   * Whether to incrementally stream the response using server-sent events.
+   *
+   * See [streaming](https://docs.anthropic.com/claude/reference/messages-streaming)
+   * for details.
+   */
+  stream?: false;
+}
+
+export interface MessageCreateParamsStreaming extends MessageCreateParamsBase {
+  /**
+   * Whether to incrementally stream the response using server-sent events.
+   *
+   * See [streaming](https://docs.anthropic.com/claude/reference/messages-streaming)
+   * for details.
+   */
+  stream: true;
+}
+
+export interface MessageStreamParams {
+  /**
+   * The maximum number of tokens to generate before stopping.
+   *
+   * Note that our models may stop _before_ reaching this maximum. This parameter
+   * only specifies the absolute maximum number of tokens to generate.
+   *
+   * Different models have different maximum values for this parameter. See
+   * [models](https://docs.anthropic.com/claude/docs/models-overview) for details.
+   */
+  max_tokens: number;
+
+  /**
+   * Input messages.
+   *
+   * Our models are trained to operate on alternating `user` and `assistant`
+   * conversational turns. When creating a new `Message`, you specify the prior
+   * conversational turns with the `messages` parameter, and the model then generates
+   * the next `Message` in the conversation.
+   *
+   * Each input message must be an object with a `role` and `content`. You can
+   * specify a single `user`-role message, or you can include multiple `user` and
+   * `assistant` messages. The first message must always use the `user` role.
+   *
+   * If the final message uses the `assistant` role, the response content will
+   * continue immediately from the content in that message. This can be used to
+   * constrain part of the model's response.
+   *
+   * Example with a single `user` message:
+   *
+   * ```json
+   * [{ "role": "user", "content": "Hello, Claude" }]
+   * ```
+   *
+   * Example with multiple conversational turns:
+   *
+   * ```json
+   * [
+   *   { "role": "user", "content": "Hello there." },
+   *   { "role": "assistant", "content": "Hi, I'm Claude. How can I help you?" },
+   *   { "role": "user", "content": "Can you explain LLMs in plain English?" }
+   * ]
+   * ```
+   *
+   * Example with a partially-filled response from Claude:
+   *
+   * ```json
+   * [
+   *   {
+   *     "role": "user",
+   *     "content": "What's the Greek name for Sun? (A) Sol (B) Helios (C) Sun"
+   *   },
+   *   { "role": "assistant", "content": "The best answer is (" }
+   * ]
+   * ```
+   *
+   * Each input message `content` may be either a single `string` or an array of
+   * content blocks, where each block has a specific `type`. Using a `string` for
+   * `content` is shorthand for an array of one content block of type `"text"`. The
+   * following input messages are equivalent:
+   *
+   * ```json
+   * { "role": "user", "content": "Hello, Claude" }
+   * ```
+   *
+   * ```json
+   * { "role": "user", "content": [{ "type": "text", "text": "Hello, Claude" }] }
+   * ```
+   *
+   * Starting with Claude 3 models, you can also send image content blocks:
+   *
+   * ```json
+   * {
+   *   "role": "user",
+   *   "content": [
+   *     {
+   *       "type": "image",
+   *       "source": {
+   *         "type": "base64",
+   *         "media_type": "image/jpeg",
+   *         "data": "/9j/4AAQSkZJRg..."
+   *       }
+   *     },
+   *     { "type": "text", "text": "What is in this image?" }
+   *   ]
+   * }
+   * ```
+   *
+   * We currently support the `base64` source type for images, and the `image/jpeg`,
+   * `image/png`, `image/gif`, and `image/webp` media types.
+   *
+   * See [examples](https://docs.anthropic.com/claude/reference/messages-examples)
+   * for more input examples.
+   *
+   * Note that if you want to include a
+   * [system prompt](https://docs.anthropic.com/claude/docs/system-prompts), you can
+   * use the top-level `system` parameter — there is no `"system"` role for input
+   * messages in the Messages API.
+   */
+  messages: Array<MessageParam>;
+
+  /**
+   * The model that will complete your prompt.
+   *
+   * See [models](https://docs.anthropic.com/claude/docs/models-overview) for
+   * additional details and options.
+   */
+  model:
+    | (string & {})
+    | 'claude-3-opus-20240229'
+    | 'claude-3-sonnet-20240229'
+    | 'claude-3-haiku-20240307'
+    | "claude-2.1'"
+    | 'claude-2.0'
+    | 'claude-instant-1.2';
+
+  /**
+   * An object describing metadata about the request.
+   */
+  metadata?: MessageStreamParams.Metadata;
+
+  /**
+   * Custom text sequences that will cause the model to stop generating.
+   *
+   * Our models will normally stop when they have naturally completed their turn,
+   * which will result in a response `stop_reason` of `"end_turn"`.
+   *
+   * If you want the model to stop generating when it encounters custom strings of
+   * text, you can use the `stop_sequences` parameter. If the model encounters one of
+   * the custom sequences, the response `stop_reason` value will be `"stop_sequence"`
+   * and the response `stop_sequence` value will contain the matched stop sequence.
+   */
+  stop_sequences?: Array<string>;
+
+  /**
+   * System prompt.
+   *
+   * A system prompt is a way of providing context and instructions to Claude, such
+   * as specifying a particular goal or role. See our
+   * [guide to system prompts](https://docs.anthropic.com/claude/docs/system-prompts).
+   */
+  system?: string;
+
+  /**
+   * Amount of randomness injected into the response.
+   *
+   * Defaults to `1.0`. Ranges from `0.0` to `1.0`. Use `temperature` closer to `0.0`
+   * for analytical / multiple choice, and closer to `1.0` for creative and
+   * generative tasks.
+   *
+   * Note that even with `temperature` of `0.0`, the results will not be fully
+   * deterministic.
+   */
+  temperature?: number;
+
+  /**
+   * Only sample from the top K options for each subsequent token.
+   *
+   * Used to remove "long tail" low probability responses.
+   * [Learn more technical details here](https://towardsdatascience.com/how-to-sample-from-language-models-682bceb97277).
+   *
+   * Recommended for advanced use cases only. You usually only need to use
+   * `temperature`.
+   */
+  top_k?: number;
+
+  /**
+   * Use nucleus sampling.
+   *
+   * In nucleus sampling, we compute the cumulative distribution over all the options
+   * for each subsequent token in decreasing probability order and cut it off once it
+   * reaches a particular probability specified by `top_p`. You should either alter
+   * `temperature` or `top_p`, but not both.
+   *
+   * Recommended for advanced use cases only. You usually only need to use
+   * `temperature`.
+   */
+  top_p?: number;
+}
+
+export namespace MessageStreamParams {
+  /**
+   * An object describing metadata about the request.
+   */
+  export interface Metadata {
+    /**
+     * An external identifier for the user who is associated with the request.
+     *
+     * This should be a uuid, hash value, or other opaque identifier. Anthropic may use
+     * this id to help detect abuse. Do not include any identifying information such as
+     * name, email address, or phone number.
+     */
+    user_id?: string | null;
+  }
+}
+
+export namespace Messages {
+  export import ContentBlock = MessagesAPI.ContentBlock;
+  export import ContentBlockDeltaEvent = MessagesAPI.ContentBlockDeltaEvent;
+  export import ContentBlockStartEvent = MessagesAPI.ContentBlockStartEvent;
+  export import ContentBlockStopEvent = MessagesAPI.ContentBlockStopEvent;
+  export import ImageBlockParam = MessagesAPI.ImageBlockParam;
+  export import Message = MessagesAPI.Message;
+  export import MessageDeltaEvent = MessagesAPI.MessageDeltaEvent;
+  export import MessageDeltaUsage = MessagesAPI.MessageDeltaUsage;
+  export import MessageParam = MessagesAPI.MessageParam;
+  export import MessageStartEvent = MessagesAPI.MessageStartEvent;
+  export import MessageStopEvent = MessagesAPI.MessageStopEvent;
+  export import MessageStreamEvent = MessagesAPI.MessageStreamEvent;
+  export import TextBlock = MessagesAPI.TextBlock;
+  export import TextDelta = MessagesAPI.TextDelta;
+  export import Usage = MessagesAPI.Usage;
+  export import MessageCreateParams = MessagesAPI.MessageCreateParams;
+  export import MessageCreateParamsNonStreaming = MessagesAPI.MessageCreateParamsNonStreaming;
+  export import MessageCreateParamsStreaming = MessagesAPI.MessageCreateParamsStreaming;
+  export import MessageStreamParams = MessagesAPI.MessageStreamParams;
+}
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/resources/top-level.ts→
+
+// File generated from our OpenAPI spec by Stainless.
+
+export {};
+
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/streaming.ts→
+
+import { ReadableStream, type Response } from './_shims/index';
+import { AnthropicError } from './error';
+
+import { safeJSON, createResponseHeaders } from "./core";
+import { APIError } from "./error";
+
+type Bytes = string | ArrayBuffer | Uint8Array | Buffer | null | undefined;
+
+export type ServerSentEvent = {
+  event: string | null;
+  data: string;
+  raw: string[];
+};
+
+export class Stream<Item> implements AsyncIterable<Item> {
+  controller: AbortController;
+
+  constructor(
+    private iterator: () => AsyncIterator<Item>,
+    controller: AbortController,
+  ) {
+    this.controller = controller;
+  }
+
+  static fromSSEResponse<Item>(response: Response, controller: AbortController) {
+    let consumed = false;
+    const decoder = new SSEDecoder();
+
+    async function* iterMessages(): AsyncGenerator<ServerSentEvent, void, unknown> {
+      if (!response.body) {
+        controller.abort();
+        throw new AnthropicError(`Attempted to iterate over a response with no body`);
+      }
+
+      const lineDecoder = new LineDecoder();
+
+      const iter = readableStreamAsyncIterable<Bytes>(response.body);
+      for await (const chunk of iter) {
+        for (const line of lineDecoder.decode(chunk)) {
+          const sse = decoder.decode(line);
+          if (sse) yield sse;
+        }
+      }
+
+      for (const line of lineDecoder.flush()) {
+        const sse = decoder.decode(line);
+        if (sse) yield sse;
+      }
+    }
+
+    async function* iterator(): AsyncIterator<Item, any, undefined> {
+      if (consumed) {
+        throw new Error('Cannot iterate over a consumed stream, use `.tee()` to split the stream.');
+      }
+      consumed = true;
+      let done = false;
+      try {
+        for await (const sse of iterMessages()) {
+          if (sse.event === 'completion') {
+            try {
+              yield JSON.parse(sse.data);
+            } catch (e) {
+              console.error(`Could not parse message into JSON:`, sse.data);
+              console.error(`From chunk:`, sse.raw);
+              throw e;
+            }
+          }
+
+          if (
+            sse.event === 'message_start' ||
+            sse.event === 'message_delta' ||
+            sse.event === 'message_stop' ||
+            sse.event === 'content_block_start' ||
+            sse.event === 'content_block_delta' ||
+            sse.event === 'content_block_stop'
+          ) {
+            try {
+              yield JSON.parse(sse.data);
+            } catch (e) {
+              console.error(`Could not parse message into JSON:`, sse.data);
+              console.error(`From chunk:`, sse.raw);
+              throw e;
+            }
+          }
+
+          if (sse.event === 'ping') {
+            continue;
+          }
+
+          if (sse.event === 'error') {
+            const errText = sse.data;
+            const errJSON = safeJSON(errText);
+            const errMessage = errJSON ? undefined : errText;
+
+            throw APIError.generate(undefined, errJSON, errMessage, createResponseHeaders(response.headers));
+          }
+        }
+        done = true;
+      } catch (e) {
+        // If the user calls `stream.controller.abort()`, we should exit without throwing.
+        if (e instanceof Error && e.name === 'AbortError') return;
+        throw e;
+      } finally {
+        // If the user `break`s, abort the ongoing request.
+        if (!done) controller.abort();
+      }
+    }
+
+    return new Stream(iterator, controller);
+  }
+
+  /**
+   * Generates a Stream from a newline-separated ReadableStream
+   * where each item is a JSON value.
+   */
+  static fromReadableStream<Item>(readableStream: ReadableStream, controller: AbortController) {
+    let consumed = false;
+
+    async function* iterLines(): AsyncGenerator<string, void, unknown> {
+      const lineDecoder = new LineDecoder();
+
+      const iter = readableStreamAsyncIterable<Bytes>(readableStream);
+      for await (const chunk of iter) {
+        for (const line of lineDecoder.decode(chunk)) {
+          yield line;
+        }
+      }
+
+      for (const line of lineDecoder.flush()) {
+        yield line;
+      }
+    }
+
+    async function* iterator(): AsyncIterator<Item, any, undefined> {
+      if (consumed) {
+        throw new Error('Cannot iterate over a consumed stream, use `.tee()` to split the stream.');
+      }
+      consumed = true;
+      let done = false;
+      try {
+        for await (const line of iterLines()) {
+          if (done) continue;
+          if (line) yield JSON.parse(line);
+        }
+        done = true;
+      } catch (e) {
+        // If the user calls `stream.controller.abort()`, we should exit without throwing.
+        if (e instanceof Error && e.name === 'AbortError') return;
+        throw e;
+      } finally {
+        // If the user `break`s, abort the ongoing request.
+        if (!done) controller.abort();
+      }
+    }
+
+    return new Stream(iterator, controller);
+  }
+
+  [Symbol.asyncIterator](): AsyncIterator<Item> {
+    return this.iterator();
+  }
+
+  /**
+   * Splits the stream into two streams which can be
+   * independently read from at different speeds.
+   */
+  tee(): [Stream<Item>, Stream<Item>] {
+    const left: Array<Promise<IteratorResult<Item>>> = [];
+    const right: Array<Promise<IteratorResult<Item>>> = [];
+    const iterator = this.iterator();
+
+    const teeIterator = (queue: Array<Promise<IteratorResult<Item>>>): AsyncIterator<Item> => {
+      return {
+        next: () => {
+          if (queue.length === 0) {
+            const result = iterator.next();
+            left.push(result);
+            right.push(result);
+          }
+          return queue.shift()!;
+        },
+      };
+    };
+
+    return [
+      new Stream(() => teeIterator(left), this.controller),
+      new Stream(() => teeIterator(right), this.controller),
+    ];
+  }
+
+  /**
+   * Converts this stream to a newline-separated ReadableStream of
+   * JSON stringified values in the stream
+   * which can be turned back into a Stream with `Stream.fromReadableStream()`.
+   */
+  toReadableStream(): ReadableStream {
+    const self = this;
+    let iter: AsyncIterator<Item>;
+    const encoder = new TextEncoder();
+
+    return new ReadableStream({
+      async start() {
+        iter = self[Symbol.asyncIterator]();
+      },
+      async pull(ctrl) {
+        try {
+          const { value, done } = await iter.next();
+          if (done) return ctrl.close();
+
+          const bytes = encoder.encode(JSON.stringify(value) + '\n');
+
+          ctrl.enqueue(bytes);
+        } catch (err) {
+          ctrl.error(err);
+        }
+      },
+      async cancel() {
+        await iter.return?.();
+      },
+    });
+  }
+}
+
+class SSEDecoder {
+  private data: string[];
+  private event: string | null;
+  private chunks: string[];
+
+  constructor() {
+    this.event = null;
+    this.data = [];
+    this.chunks = [];
+  }
+
+  decode(line: string) {
+    if (line.endsWith('\r')) {
+      line = line.substring(0, line.length - 1);
+    }
+
+    if (!line) {
+      // empty line and we didn't previously encounter any messages
+      if (!this.event && !this.data.length) return null;
+
+      const sse: ServerSentEvent = {
+        event: this.event,
+        data: this.data.join('\n'),
+        raw: this.chunks,
+      };
+
+      this.event = null;
+      this.data = [];
+      this.chunks = [];
+
+      return sse;
+    }
+
+    this.chunks.push(line);
+
+    if (line.startsWith(':')) {
+      return null;
+    }
+
+    let [fieldname, _, value] = partition(line, ':');
+
+    if (value.startsWith(' ')) {
+      value = value.substring(1);
+    }
+
+    if (fieldname === 'event') {
+      this.event = value;
+    } else if (fieldname === 'data') {
+      this.data.push(value);
+    }
+
+    return null;
+  }
+}
+
+/**
+ * A re-implementation of httpx's `LineDecoder` in Python that handles incrementally
+ * reading lines from text.
+ *
+ * https://github.com/encode/httpx/blob/920333ea98118e9cf617f246905d7b202510941c/httpx/_decoders.py#L258
+ */
+class LineDecoder {
+  // prettier-ignore
+  static NEWLINE_CHARS = new Set(['\n', '\r', '\x0b', '\x0c', '\x1c', '\x1d', '\x1e', '\x85', '\u2028', '\u2029']);
+  static NEWLINE_REGEXP = /\r\n|[\n\r\x0b\x0c\x1c\x1d\x1e\x85\u2028\u2029]/g;
+
+  buffer: string[];
+  trailingCR: boolean;
+  textDecoder: any; // TextDecoder found in browsers; not typed to avoid pulling in either "dom" or "node" types.
+
+  constructor() {
+    this.buffer = [];
+    this.trailingCR = false;
+  }
+
+  decode(chunk: Bytes): string[] {
+    let text = this.decodeText(chunk);
+
+    if (this.trailingCR) {
+      text = '\r' + text;
+      this.trailingCR = false;
+    }
+    if (text.endsWith('\r')) {
+      this.trailingCR = true;
+      text = text.slice(0, -1);
+    }
+
+    if (!text) {
+      return [];
+    }
+
+    const trailingNewline = LineDecoder.NEWLINE_CHARS.has(text[text.length - 1] || '');
+    let lines = text.split(LineDecoder.NEWLINE_REGEXP);
+
+    // if there is a trailing new line then the last entry will be an empty
+    // string which we don't care about
+    if (trailingNewline) {
+      lines.pop();
+    }
+
+    if (lines.length === 1 && !trailingNewline) {
+      this.buffer.push(lines[0]!);
+      return [];
+    }
+
+    if (this.buffer.length > 0) {
+      lines = [this.buffer.join('') + lines[0], ...lines.slice(1)];
+      this.buffer = [];
+    }
+
+    if (!trailingNewline) {
+      this.buffer = [lines.pop() || ''];
+    }
+
+    return lines;
+  }
+
+  decodeText(bytes: Bytes): string {
+    if (bytes == null) return '';
+    if (typeof bytes === 'string') return bytes;
+
+    // Node:
+    if (typeof Buffer !== 'undefined') {
+      if (bytes instanceof Buffer) {
+        return bytes.toString();
+      }
+      if (bytes instanceof Uint8Array) {
+        return Buffer.from(bytes).toString();
+      }
+
+      throw new AnthropicError(
+        `Unexpected: received non-Uint8Array (${bytes.constructor.name}) stream chunk in an environment with a global "Buffer" defined, which this library assumes to be Node. Please report this error.`,
+      );
+    }
+
+    // Browser
+    if (typeof TextDecoder !== 'undefined') {
+      if (bytes instanceof Uint8Array || bytes instanceof ArrayBuffer) {
+        this.textDecoder ??= new TextDecoder('utf8');
+        return this.textDecoder.decode(bytes);
+      }
+
+      throw new AnthropicError(
+        `Unexpected: received non-Uint8Array/ArrayBuffer (${
+          (bytes as any).constructor.name
+        }) in a web platform. Please report this error.`,
+      );
+    }
+
+    throw new AnthropicError(
+      `Unexpected: neither Buffer nor TextDecoder are available as globals. Please report this error.`,
+    );
+  }
+
+  flush(): string[] {
+    if (!this.buffer.length && !this.trailingCR) {
+      return [];
+    }
+
+    const lines = [this.buffer.join('')];
+    this.buffer = [];
+    this.trailingCR = false;
+    return lines;
+  }
+}
+
+/** This is an internal helper function that's just used for testing */
+export function _decodeChunks(chunks: string[]): string[] {
+  const decoder = new LineDecoder();
+  const lines: string[] = [];
+  for (const chunk of chunks) {
+    lines.push(...decoder.decode(chunk));
+  }
+
+  return lines;
+}
+
+function partition(str: string, delimiter: string): [string, string, string] {
+  const index = str.indexOf(delimiter);
+  if (index !== -1) {
+    return [str.substring(0, index), delimiter, str.substring(index + delimiter.length)];
+  }
+
+  return [str, '', ''];
+}
+
+/**
+ * Most browsers don't yet have async iterable support for ReadableStream,
+ * and Node has a very different way of reading bytes from its "ReadableStream".
+ *
+ * This polyfill was pulled from https://github.com/MattiasBuelens/web-streams-polyfill/pull/122#issuecomment-1627354490
+ */
+export function readableStreamAsyncIterable<T>(stream: any): AsyncIterableIterator<T> {
+  if (stream[Symbol.asyncIterator]) return stream;
+
+  const reader = stream.getReader();
+  return {
+    async next() {
+      try {
+        const result = await reader.read();
+        if (result?.done) reader.releaseLock(); // release lock when stream becomes closed
+        return result;
+      } catch (e) {
+        reader.releaseLock(); // release lock when stream becomes errored
+        throw e;
+      }
+    },
+    async return() {
+      const cancelPromise = reader.cancel();
+      reader.releaseLock();
+      await cancelPromise;
+      return { done: true, value: undefined };
+    },
+    [Symbol.asyncIterator]() {
+      return this;
+    },
+  };
+}
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/uploads.ts→
+
+import { type RequestOptions } from './core';
+import {
+  FormData,
+  File,
+  type Blob,
+  type FilePropertyBag,
+  getMultipartRequestOptions,
+  type FsReadStream,
+  isFsReadStream,
+} from './_shims/index';
+import { MultipartBody } from './_shims/MultipartBody';
+export { fileFromPath } from './_shims/index';
+
+type BlobLikePart = string | ArrayBuffer | ArrayBufferView | BlobLike | Uint8Array | DataView;
+export type BlobPart = string | ArrayBuffer | ArrayBufferView | Blob | Uint8Array | DataView;
+
+/**
+ * Typically, this is a native "File" class.
+ *
+ * We provide the {@link toFile} utility to convert a variety of objects
+ * into the File class.
+ *
+ * For convenience, you can also pass a fetch Response, or in Node,
+ * the result of fs.createReadStream().
+ */
+export type Uploadable = FileLike | ResponseLike | FsReadStream;
+
+/**
+ * Intended to match web.Blob, node.Blob, node-fetch.Blob, etc.
+ */
+export interface BlobLike {
+  /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Blob/size) */
+  readonly size: number;
+  /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Blob/type) */
+  readonly type: string;
+  /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Blob/text) */
+  text(): Promise<string>;
+  /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Blob/slice) */
+  slice(start?: number, end?: number): BlobLike;
+  // unfortunately @types/node-fetch@^2.6.4 doesn't type the arrayBuffer method
+}
+
+/**
+ * Intended to match web.File, node.File, node-fetch.File, etc.
+ */
+export interface FileLike extends BlobLike {
+  /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/File/lastModified) */
+  readonly lastModified: number;
+  /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/File/name) */
+  readonly name: string;
+}
+
+/**
+ * Intended to match web.Response, node.Response, node-fetch.Response, etc.
+ */
+export interface ResponseLike {
+  url: string;
+  blob(): Promise<BlobLike>;
+}
+
+export const isResponseLike = (value: any): value is ResponseLike =>
+  value != null &&
+  typeof value === 'object' &&
+  typeof value.url === 'string' &&
+  typeof value.blob === 'function';
+
+export const isFileLike = (value: any): value is FileLike =>
+  value != null &&
+  typeof value === 'object' &&
+  typeof value.name === 'string' &&
+  typeof value.lastModified === 'number' &&
+  isBlobLike(value);
+
+/**
+ * The BlobLike type omits arrayBuffer() because @types/node-fetch@^2.6.4 lacks it; but this check
+ * adds the arrayBuffer() method type because it is available and used at runtime
+ */
+export const isBlobLike = (value: any): value is BlobLike & { arrayBuffer(): Promise<ArrayBuffer> } =>
+  value != null &&
+  typeof value === 'object' &&
+  typeof value.size === 'number' &&
+  typeof value.type === 'string' &&
+  typeof value.text === 'function' &&
+  typeof value.slice === 'function' &&
+  typeof value.arrayBuffer === 'function';
+
+export const isUploadable = (value: any): value is Uploadable => {
+  return isFileLike(value) || isResponseLike(value) || isFsReadStream(value);
+};
+
+export type ToFileInput = Uploadable | Exclude<BlobLikePart, string> | AsyncIterable<BlobLikePart>;
+
+/**
+ * Helper for creating a {@link File} to pass to an SDK upload method from a variety of different data formats
+ * @param value the raw content of the file.  Can be an {@link Uploadable}, {@link BlobLikePart}, or {@link AsyncIterable} of {@link BlobLikePart}s
+ * @param {string=} name the name of the file. If omitted, toFile will try to determine a file name from bits if possible
+ * @param {Object=} options additional properties
+ * @param {string=} options.type the MIME type of the content
+ * @param {number=} options.lastModified the last modified timestamp
+ * @returns a {@link File} with the given properties
+ */
+export async function toFile(
+  value: ToFileInput | PromiseLike<ToFileInput>,
+  name?: string | null | undefined,
+  options: FilePropertyBag | undefined = {},
+): Promise<FileLike> {
+  // If it's a promise, resolve it.
+  value = await value;
+
+  if (isResponseLike(value)) {
+    const blob = await value.blob();
+    name ||= new URL(value.url).pathname.split(/[\\/]/).pop() ?? 'unknown_file';
+
+    return new File([blob as any], name, options);
+  }
+
+  const bits = await getBytes(value);
+
+  name ||= getName(value) ?? 'unknown_file';
+
+  if (!options.type) {
+    const type = (bits[0] as any)?.type;
+    if (typeof type === 'string') {
+      options = { ...options, type };
+    }
+  }
+
+  return new File(bits, name, options);
+}
+
+async function getBytes(value: ToFileInput): Promise<Array<BlobPart>> {
+  let parts: Array<BlobPart> = [];
+  if (
+    typeof value === 'string' ||
+    ArrayBuffer.isView(value) || // includes Uint8Array, Buffer, etc.
+    value instanceof ArrayBuffer
+  ) {
+    parts.push(value);
+  } else if (isBlobLike(value)) {
+    parts.push(await value.arrayBuffer());
+  } else if (
+    isAsyncIterableIterator(value) // includes Readable, ReadableStream, etc.
+  ) {
+    for await (const chunk of value) {
+      parts.push(chunk as BlobPart); // TODO, consider validating?
+    }
+  } else {
+    throw new Error(
+      `Unexpected data type: ${typeof value}; constructor: ${value?.constructor
+        ?.name}; props: ${propsForError(value)}`,
+    );
+  }
+
+  return parts;
+}
+
+function propsForError(value: any): string {
+  const props = Object.getOwnPropertyNames(value);
+  return `[${props.map((p) => `"${p}"`).join(', ')}]`;
+}
+
+function getName(value: any): string | undefined {
+  return (
+    getStringFromMaybeBuffer(value.name) ||
+    getStringFromMaybeBuffer(value.filename) ||
+    // For fs.ReadStream
+    getStringFromMaybeBuffer(value.path)?.split(/[\\/]/).pop()
+  );
+}
+
+const getStringFromMaybeBuffer = (x: string | Buffer | unknown): string | undefined => {
+  if (typeof x === 'string') return x;
+  if (typeof Buffer !== 'undefined' && x instanceof Buffer) return String(x);
+  return undefined;
+};
+
+const isAsyncIterableIterator = (value: any): value is AsyncIterableIterator<unknown> =>
+  value != null && typeof value === 'object' && typeof value[Symbol.asyncIterator] === 'function';
+
+export const isMultipartBody = (body: any): body is MultipartBody =>
+  body && typeof body === 'object' && body.body && body[Symbol.toStringTag] === 'MultipartBody';
+
+/**
+ * Returns a multipart/form-data request if any part of the given request body contains a File / Blob value.
+ * Otherwise returns the request as is.
+ */
+export const maybeMultipartFormRequestOptions = async <T = Record<string, unknown>>(
+  opts: RequestOptions<T>,
+): Promise<RequestOptions<T | MultipartBody>> => {
+  if (!hasUploadableValue(opts.body)) return opts;
+
+  const form = await createForm(opts.body);
+  return getMultipartRequestOptions(form, opts);
+};
+
+export const multipartFormRequestOptions = async <T = Record<string, unknown>>(
+  opts: RequestOptions<T>,
+): Promise<RequestOptions<T | MultipartBody>> => {
+  const form = await createForm(opts.body);
+  return getMultipartRequestOptions(form, opts);
+};
+
+export const createForm = async <T = Record<string, unknown>>(body: T | undefined): Promise<FormData> => {
+  const form = new FormData();
+  await Promise.all(Object.entries(body || {}).map(([key, value]) => addFormValue(form, key, value)));
+  return form;
+};
+
+const hasUploadableValue = (value: unknown): boolean => {
+  if (isUploadable(value)) return true;
+  if (Array.isArray(value)) return value.some(hasUploadableValue);
+  if (value && typeof value === 'object') {
+    for (const k in value) {
+      if (hasUploadableValue((value as any)[k])) return true;
+    }
+  }
+  return false;
+};
+
+const addFormValue = async (form: FormData, key: string, value: unknown): Promise<void> => {
+  if (value === undefined) return;
+  if (value == null) {
+    throw new TypeError(
+      `Received null for "${key}"; to pass null in FormData, you must use the string 'null'`,
+    );
+  }
+
+  // TODO: make nested formats configurable
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+    form.append(key, String(value));
+  } else if (isUploadable(value)) {
+    const file = await toFile(value);
+    form.append(key, file as File);
+  } else if (Array.isArray(value)) {
+    await Promise.all(value.map((entry) => addFormValue(form, key + '[]', entry)));
+  } else if (typeof value === 'object') {
+    await Promise.all(
+      Object.entries(value).map(([name, prop]) => addFormValue(form, `${key}[${name}]`, prop)),
+    );
+  } else {
+    throw new TypeError(
+      `Invalid value given to form, expected a string, number, boolean, object, Array, File or Blob but got ${value} instead`,
+    );
+  }
+};
+
+at: /projects/monorepo-one/common/temp/node_modules/.pnpm/@anthropic-ai+sdk@0.18.0/node_modules/@anthropic-ai/sdk/src/version.ts→
+
+export const VERSION = '0.18.0'; // x-release-please-version
+
+
