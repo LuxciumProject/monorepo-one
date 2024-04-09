@@ -22,7 +22,9 @@
     "inquirer": "^8.0.0",
     "sharp": "~0.31.1",
     "yargs": "~17.7.2",
-    "yauzl": "~3.1.2"
+    "yauzl": "~3.1.2",
+    "@langchain/groq": "~0.0.6",
+    "@langchain/core": "~0.1.54"
   },
   "devDependencies": {
     "@babel/core": "~7.23.9",

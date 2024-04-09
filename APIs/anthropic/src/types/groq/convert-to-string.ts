@@ -58,7 +58,10 @@ export async function convertFileStructureToString(
     }
   }
 
-  return output;
+  return output
+    .split('\n')
+    .filter(l => Boolean(l.trim()))
+    .join('\n');
 }
 
 convertFileStructureToString(dirPath, extensions)

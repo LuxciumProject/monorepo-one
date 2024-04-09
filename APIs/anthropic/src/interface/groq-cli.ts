@@ -10,6 +10,80 @@ export type GroqMessage = {
 
 // role: 'system' | 'user' | 'assistant' | 'tool';
 // CreateMessage for role 'system' | 'user' | 'assistant' | 'tool';
+
+export interface Usage {
+  completion_time?: number;
+  completion_tokens?: number;
+  prompt_time?: number;
+  prompt_tokens?: number;
+  queue_time?: number;
+  total_time?: number;
+  total_tokens?: number;
+}
+
+type Tool_Call = {
+  id?: string;
+  function?: ToolCall_Function;
+  type?: string;
+};
+type ToolCall_Function = {
+  arguments?: string;
+  name?: string;
+};
+
+type CompletionCreateParams_<Role extends 'user' | 'system' | 'assistant'> = {
+  content: string;
+  role: Role;
+  name?: string;
+  /**
+   * ToolMessage Fields
+   */
+  tool_call_id?: string;
+  /**
+   * AssistantMessage Fields
+   */
+  tool_calls?: Tool_Call[];
+};
+type CompletionCreateParams_Message = CompletionCreateParams_<
+  'user' | 'system' | 'assistant'
+>;
+type CompletionCreateStrictParams_Message = CompletionCreateParams_<
+  'user' | 'assistant'
+>;
+type CompletionCreateParams_UserMessage = CompletionCreateParams_<'user'>;
+type CompletionCreateParams_SystemMessage = CompletionCreateParams_<'system'>;
+type CompletionCreateParams_AssistantMessage =
+  CompletionCreateParams_<'assistant'>;
+
+// one that would convert system messages to the correct type
+// in one case it is a property along withj messages in the other
+// case it is the first elemenent of the messages array in the shape of
+// a single element
+export interface ChatCompletionCreateParamsBase {
+  messages: CompletionCreateParams_<'user' | 'system' | 'assistant'>[];
+  model: string;
+  frequency_penalty?: number;
+  logit_bias?: Record<string, number>;
+  logprobs?: boolean;
+  max_tokens?: number;
+  n?: number;
+  presence_penalty?: number;
+  response_format?: Groq.ResponseFormat;
+  seed?: number;
+  /**
+   * Up to 4 sequences where the API will stop generating further tokens. The
+   * returned text will not contain the stop sequence.
+   */
+  stop?: string | null | Array<string>;
+  stream?: boolean;
+  temperature?: number;
+  tool_choice?: CompletionCreateParams.ToolChoice;
+  tools?: Array<CompletionCreateParams.Tool>;
+  top_logprobs?: number;
+  top_p?: number;
+  user?: string;
+}
+
 export function createMessage(
   role: 'system' | 'user' | 'assistant' | 'tool',
   content: string
