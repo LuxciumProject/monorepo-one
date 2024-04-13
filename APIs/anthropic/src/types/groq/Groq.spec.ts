@@ -5,6 +5,11 @@ import {
   createContentBlock,
   createMessage,
   createTextBlock,
+  defaultSystemMessage,
+  EmptyAssistantMessage,
+  EmptyMessage,
+  EmptySystemMessage,
+  EmptyUserMessage,
   messagesHasSystemMessage,
   SystemMessage,
   UserMessage,
@@ -73,3 +78,80 @@ describe('Groq.ts', () => {
     });
   });
 });
+
+// ... existing tests ...
+
+// describe('ChatMessage Error Handling', () => {
+//   it('should handle null content correctly', () => {
+//     expect(() => new ChatMessage('user', null)).toThrowError();
+//   });
+
+//   it('should handle null role correctly', () => {
+//     expect(() => new ChatMessage(null, 'Hello')).toThrowError();
+//   });
+// });
+
+describe('SystemMessage', () => {
+  it('should create a system message with default values', () => {
+    const systemMessage = new SystemMessage();
+    expect(systemMessage.role).toBe('system');
+    expect(systemMessage.content).toBe(''); // Replace with the actual default content if different
+    expect(systemMessage.system).toBe(systemMessage.content);
+  });
+
+  // Test for custom message content
+  it('should create a system message with custom content', () => {
+    const content = 'System maintenance starts at 2 AM';
+    const systemMessage = new SystemMessage('system', content);
+    expect(systemMessage.content).toBe(content);
+  });
+
+  // Additional tests to cover any other methods or properties
+});
+
+describe('EmptySystemMessage', () => {
+  it('should have the correct default system message', () => {
+    const emptySystemMessage = new EmptySystemMessage();
+    expect(emptySystemMessage.system).toBe(defaultSystemMessage); // Assuming defaultSystemMessage is a predefined constant
+  });
+});
+
+// Test for UserMessage including prefix handling
+describe('UserMessage', () => {
+  it('should prepend a prefix to the user message content', () => {
+    const prefix = 'User:';
+    const content = 'Hello, world!';
+    const userMessage = new UserMessage(content, prefix);
+    expect(userMessage.content).toBe(`${prefix}${content}`);
+  });
+});
+
+// Test for AssistantMessage including additional fields like _id and _model
+describe('AssistantMessage', () => {
+  it('should include id, model, and other properties if provided', () => {
+    const id = 'msg_123';
+    const model = 'gen_ai_model';
+    const prefix = 'Assistant:';
+    const content = 'How can I help you today?';
+    const assistantMessage = new AssistantMessage(content, prefix, id, model);
+    expect(assistantMessage.id).toBe(id);
+    expect(assistantMessage.model).toBe(model);
+    expect(assistantMessage.content).toBe(`${prefix}${content}`);
+  });
+});
+
+// Test for EmptyMessages to validate correct object creation based on role
+describe('EmptyMessage Factory', () => {
+  it('should create the correct type of EmptyMessage based on role', () => {
+    const emptyAssistant = EmptyMessage.create('assistant');
+    expect(emptyAssistant).toBeInstanceOf(EmptyAssistantMessage);
+
+    const emptyUser = EmptyMessage.create('user');
+    expect(emptyUser).toBeInstanceOf(EmptyUserMessage);
+
+    const emptySystem = EmptyMessage.create('system');
+    expect(emptySystem).toBeInstanceOf(EmptySystemMessage);
+  });
+});
+
+// ... Additional tests for any other custom behavior or methods...
