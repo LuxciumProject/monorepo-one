@@ -40,8 +40,33 @@ export class Messages extends APIResource {
   }
 }
 
-export interface ContentBlock {
-  text: string;
+class ContentBlockClass<Text extends string> implements ContentBlock {
+  private _text: Text;
+  static of<Text extends string>(text: Text): ContentBlock<Text> {
+    return new ContentBlockClass(text);
+  }
+
+  protected constructor(text: Text) {
+    this._text = text;
+  }
+
+  public get text(): Text {
+    return this._text;
+  }
+
+  public get type(): 'text' {
+    return 'text';
+  }
+
+  unbond(): ContentBlock<Text> {
+    return {
+      text: this._text,
+      type: 'text',
+    };
+  }
+}
+export interface ContentBlock<Text extends string = string> {
+  text: Text;
   type: 'text';
 }
 
@@ -75,11 +100,22 @@ export namespace ImageBlockParam {
   }
 }
 
-export interface Message {
+function claudeMessage(message: Message) {
+  const { role, content: contentList, usage } = message;
+  const content = contentList
+    .filter(content => content.type === 'text')
+    .map(content => content.text)
+    .join(' ');
+  return { role, content, usage };
+}
+
+export type Message = MessageRecived;
+
+export interface MessageRecived<Text extends string = 'assistant'> {
   id: string;
   content: Array<ContentBlock>;
   model: string;
-  role: 'assistant';
+  role: Text;
   stop_reason: 'end_turn' | 'max_tokens' | 'stop_sequence' | null;
   stop_sequence: string | null;
   type: 'message';
@@ -103,9 +139,12 @@ export interface MessageDeltaUsage {
   output_tokens: number;
 }
 
-export interface MessageParam {
+export type UserTextMessage = MessageParam<'user'>;
+export type AssistantTextMessage = MessageParam<'assistant'>;
+
+export interface MessageParam<Role extends 'user' | 'assistant' = 'assistant'> {
   content: string | Array<TextBlock | ImageBlockParam>;
-  role: 'user' | 'assistant';
+  role: Role;
 }
 
 export interface MessageStartEvent {

@@ -7,7 +7,10 @@ export type GroqMessage = {
   role: 'system' | 'user' | 'assistant' | 'tool';
   content: string;
 };
-
+export type AnthropicMessage = {
+  role: 'system' | 'user' | 'assistant' | 'tool';
+  content: string;
+};
 // role: 'system' | 'user' | 'assistant' | 'tool';
 // CreateMessage for role 'system' | 'user' | 'assistant' | 'tool';
 
@@ -68,7 +71,7 @@ export interface ChatCompletionCreateParamsBase {
   max_tokens?: number;
   n?: number;
   presence_penalty?: number;
-  response_format?: Groq.ResponseFormat;
+  // response_format?: Groq.ResponseFormat;
   seed?: number;
   /**
    * Up to 4 sequences where the API will stop generating further tokens. The
@@ -77,8 +80,8 @@ export interface ChatCompletionCreateParamsBase {
   stop?: string | null | Array<string>;
   stream?: boolean;
   temperature?: number;
-  tool_choice?: CompletionCreateParams.ToolChoice;
-  tools?: Array<CompletionCreateParams.Tool>;
+  // tool_choice?: CompletionCreateParams.ToolChoice;
+  // tools?: Array<CompletionCreateParams.Tool>;
   top_logprobs?: number;
   top_p?: number;
   user?: string;
@@ -92,7 +95,7 @@ export function createMessage(
 }
 function extractSystemMessageObject(
   messages: GroqMessage[]
-): SystemMessage | null {
+): SystemMessageObject | null {
   if (messages.length > 0 && messages[0].role === 'system') {
     const [, ...restMessages] = messages;
     return { system: messages[0].content, messages: restMessages };
@@ -100,9 +103,10 @@ function extractSystemMessageObject(
   return null;
 }
 
-type SystemMessage = { system: string; messages: GroqMessage[] };
+type SystemMessageObject = { system: string; messages: GroqMessage[] };
+type GroqSystemMessage = { system: string; messages: GroqMessage[] };
 
-function extractSystemMessageList(system: SystemMessage): GroqMessage[] {
+function extractSystemMessageList(system: SystemMessageObject): GroqMessage[] {
   return [{ role: 'system', content: system.system }, ...system.messages];
 }
 
@@ -124,23 +128,91 @@ const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
 });
 async function main() {
-  const chatCompletion = await getGroqChatCompletion();
+  const chatCompletion = await getGroqChatCompletion(
+    'Explain the importance of low latency LLMs in the context of AI systems. What are the benefits of low latency Multi Agentic systems?'
+  );
   // Print the completion returned by the LLM.
   process.stdout.write(chatCompletion.choices[0]?.message?.content || '');
+  // console.dir(
+
+  // );
 }
 main();
+
+class SystemMessage {
+  private _messages: GroqMessage[];
+  private _system: string;
+
+  protected constructor(params: { system: string; messages: GroqMessage[] }) {
+    this._system = params.system;
+    this._messages = params.messages;
+  }
+
+  get systemMessage() {
+    return this._messages;
+  }
+
+  get system() {
+    return this._system;
+  }
+
+  get role() {
+    return 'system';
+  }
+}
+
 // role: 'system' | 'user' | 'assistant' | 'tool';
 
+// function typeOfMembers(obj: any) {
+//   const keys = Object.keys(obj);
+//   return keys.map(key => {
+//     return key === 'choices'
+//       ? { choices: typeOfMembers(obj.choices) }
+//       : key == '0'
+//         ? { '0': typeOfMembers(obj[0]) }
+//         : key === 'logprobs'
+//           ? { logprobs: typeOfMembers(obj.logprobs) }
+//           : key === 'message'
+//             ? { message: typeOfMembers(obj.message) }
+//             : key === 'x_groq'
+//               ? { x_groq: typeOfMembers(obj.x_groq) }
+//               : key === 'usage'
+//                 ? { usage: typeOfMembers(obj.usage) }
+//                 : { [key]: typeof obj[key] };
+//   });
+//   // : key === 'choices'
+//   //   ?  key === 'logprobs' ?
+//   //   { logprobs: typeOfMembers(obj.logprobs) } :
+//   //    key === 'message' ?
+//   //   { choices: typeOfMembers(obj.choices) }
+//   //   : key === 'x_groq'
+//   //     ? { x_groq: typeOfMembers(obj.x_groq) }
+//   //     : key === '0'
+//   //       ? { '0': typeOfMembers(obj[0]) }
+//   //       : key === 'message'
+//   //         ? { message: typeOfMembers(obj.message) }
+//   //         : key === 'logprobs'
+//   //           ? { logprobs: typeOfMembers(obj['logprobs']) }
+//   //           : key === 'message'
+//   //             ? { message: typeOfMembers(obj.message) }
+//   //             : { [key]: typeof obj[key] };
+//   // });
+// }
+// messages: [
+//   {
+//     role: 'user',
+//     content: 'Explain the importance of low latency LLMs',
+//   },
+// ],
 /**
  * Get a chat completion from the Groq API.
  */
-
-async function getGroqChatCompletion() {
+async function getGroqChatCompletion<Content extends string>(content: Content) {
   const createOptions = {
     messages: [
       {
         role: 'user',
-        content: 'Explain the importance of low latency LLMs',
+        content,
       },
     ],
     model: 'mixtral-8x7b-32768',
@@ -150,6 +222,7 @@ async function getGroqChatCompletion() {
   return result;
 }
 
+// type ChatRoleTuple = ['system', ...('assistant' | 'user')[]];
 // The combined body type for a non-streaming chat completion request
 export interface ChatCompletionCreateParamsNonStreaming {
   messages: Array<{

@@ -1,10 +1,16 @@
 import Anthropic from '@anthropic-ai/sdk';
+import Groq from 'groq-sdk';
 import { MessageItem } from './Message';
 
-export interface MessageParams {
-  client: Anthropic;
+export interface MessageParams<
+  APIProvider extends Anthropic | Groq = Anthropic,
+> {
+  client: APIProvider;
   system: string;
+
+  systemContent?: string;
   messages?: MessageItem[];
+  groq?: {};
   user_text?: string;
   user_prefix?: string;
   assist_text?: string;

@@ -3,6 +3,7 @@ import {
   UserImageMessage,
   UserTextMessage,
 } from '../types';
+import { SystemTextMessage } from '../types/Message';
 import { bufferToBase64, getMediaType, pathStringToBuffer } from '../utils';
 import { isImageFileSizeValid } from './isImageFileSizeValid';
 
@@ -75,6 +76,17 @@ export function createUserMessage<Text extends string, Prefix extends string>(
     content: [{ type: 'text', text: `${prefix || ''}${text}` }],
   };
 }
+
+export function createSystemMessage<Text extends string>(
+  text: Text
+): SystemTextMessage<Text> {
+  return {
+    role: 'system',
+    content: [{ type: 'text', text: `${text}` }],
+  };
+}
+
+// content[0].text
 export function createImageMessage<Text extends string>(
   text: Text,
   imagePath: string,
@@ -108,4 +120,5 @@ export const create = {
   assistantMessage: createAssitantMessage,
   imageMessage: createImageMessage,
   userMessage: createUserMessage,
+  systemMessage: createUserMessage,
 };

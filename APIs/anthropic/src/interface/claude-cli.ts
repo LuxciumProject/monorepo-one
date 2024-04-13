@@ -10,7 +10,6 @@ import { processArgv } from './processArgv';
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-
   terminal: true,
   prompt: 'You: ',
 });
