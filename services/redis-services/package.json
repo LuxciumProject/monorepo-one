@@ -37,7 +37,7 @@
     "nodemon": "~3.0.3",
     "prettier": "~3.2.5",
     "ts-node": "~10.9.2",
-    "typescript": "~5.3.3",
+    "typescript": "~5.4.5",
     "@babel/core": "~7.23.9",
     "@babel/plugin-transform-typescript": "~7.23.6",
     "@rushstack/eslint-config": "~3.3.2",

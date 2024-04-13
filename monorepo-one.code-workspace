@@ -29,6 +29,10 @@
       "path": "prompts/API/midjourney"
     },
     {
+      "name": "         📙⛵ Anthropic Claude",
+      "path": "prompts/API/claude-3/"
+    },
+    {
       "name": "         📙🦾 GPTs",
       "path": "prompts/API/GPTs"
     },

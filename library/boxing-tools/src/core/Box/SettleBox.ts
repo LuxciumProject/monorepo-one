@@ -1,4 +1,4 @@
-import { MiniBox } from '../../classes/MiniBox.1';
+import { MiniBox } from '../../classes/MiniBox';
 import { ISettled } from './ISettled';
 
 export class SettleBox<U> extends MiniBox<U> implements ISettled {

@@ -1,73 +1,109 @@
+import type { ExtractFL, FunctorFL, IUnbox, Unbox } from '../core/Box/types';
+import { ExtractInnermost } from './ExtractInnermost';
 import { ExtractableBox } from './ExtractableBox';
-import { MiniBox } from './MiniBox.1';
 
-type ElementType<T> = T extends (infer U)[] ? U : T;
+export class MiniBox<U> implements IUnbox<U>, ExtractFL<U>, FunctorFL<U> {
+  static get Value() {
+    return Symbol.for('value');
+  } // get static ======================================| Value |=====
+  get Value() {
+    return MiniBox.Value;
+  } // get =============================================| Value |=====
 
-// const Z: ElementType<number[]> = 5;
-// void Z;
-//   ^?
-// export { MiniBox };
-void (async function MAIN() {
-  console.log(`at: MAIN from ${__filename}`);
-  const box = MiniBox.of<number>(15);
-  const box1 = MiniBox.of(box);
-  const box2: MiniBox<MiniBox<MiniBox<number>>> = MiniBox.of(box1);
+  static ['fantasy-land/of'] = MiniBox.of;
+  // static =============================================| of() |=====
+  static of<UVal>(value: UVal): MiniBox<UVal> {
+    // No parts of the `value` parameter should be checked here.
+    // No parts of return value of that function should be checked.
+    return new MiniBox<UVal>(value);
+  }
+  public static ['isMiniBox']<U>(box: IUnbox<U> | U): box is MiniBox<U> {
+    return box instanceof MiniBox ? MiniBox.isUnboxable(box) : false;
+  } // static =====================================| isMiniBox() |====
+  static from<UxVal>(value: UxVal | MiniBox<UxVal>) {
+    // No parts of the `value` parameter should be checked here.
+    const result = MiniBox.of(
+      MiniBox.isMiniBox(value) ? value.boxedValue : value
+    );
 
-  // console.log(box2.unbox());
-  // @ts-ignore
-  console.log(box2.xmap(_ => _ * 2));
-  // ❯ ts-node "boxing-tools/src/classes/MiniBox.ts"
-  // at: MAIN from boxing-tools/src/classes/MiniBox.ts
-  // MiniBox {
-  //   _boxedValue: MiniBox { _boxedValue: MiniBox { _boxedValue: 30 } }
-  // }
-  // But the error was :
-  // The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.ts(2362)
-  // Type 'number' is not assignable to type 'Rx'.
-  //   'Rx' could be instantiated with an arbitrary type which could be unrelated to 'number'.ts(2322)
-  // MiniBox.ts(76, 19): The expected type comes from the return type of this signature.
-  return void 0;
-})();
+    // No parts of return value of that function should be checked.
+    return result;
+  } // static ==================================| isUnboxable() |=====
 
-void (async function MAIN() {
-  console.log(`at: MAIN from ${__filename}`);
-  // Utility types
-  type NestedBox<T> = T extends MiniBox<infer U> ? NestedBox<U> : never;
-  type InnermostType<T> = T extends { content: infer U } ? InnermostType<U> : T;
-  type InnermostContent<T> =
-    T extends MiniBox<infer U> ? InnermostContent<U> : T;
+  [key: (typeof MiniBox<U>)['Value']]: U;
+  // static ====================================| isUnboxable() |=====
+  static isUnboxable<UVal>(val: UVal | IUnbox<UVal>): val is IUnbox<UVal> {
+    return (
+      typeof val === 'object' &&
+      val !== null &&
+      'unbox' in val &&
+      typeof val.unbox === 'function'
+    );
+  } // constructor protected =======================| MiniBox() |=====
+  protected constructor(private _boxedValue: U) {
+    Symbol.for('value');
+    Object.defineProperty(this, 'fantasy-land/map', {
+      value: this.map,
+      writable: false,
+      enumerable: false,
+      configurable: false,
+    });
+    Object.defineProperty(this, 'fantasy-land/extract', {
+      value: this.unbox,
+      writable: false,
+      enumerable: false,
+      configurable: false,
+    });
+    return this;
+  }
+  private static isExtractableBox<T>(
+    value: T | ExtractableBox<T>
+  ): value is ExtractableBox<T> {
+    return (
+      typeof value === 'object' &&
+      value !== null &&
+      'xmap' in value &&
+      'unbox' in value
+    );
+  }
 
-  // Create nested MiniBox instances
-  const box = MiniBox.of<number>(15);
-  const box1 = MiniBox.of(box);
-  const box2: MiniBox<MiniBox<MiniBox<number>>> = MiniBox.of(box1);
+  public ['fantasy-land/extract'] = this.unbox;
+  // public unbox ====================================| unbox() |=====
+  unbox(): Unbox<U> | U {
+    return MiniBox.isUnboxable(this._boxedValue)
+      ? this._boxedValue.unbox()
+      : this._boxedValue;
+  }
+  // protected get =====================| [Symbol.for('value')] |=====
+  protected get [Symbol.for('value')](): U {
+    return this._boxedValue;
+  }
 
-  // Use utility types
-  type MyNestedBox = NestedBox<typeof box2>; // MiniBox<MiniBox<MiniBox<never>>>
-  type MyContent = InnermostContent<typeof box2>; // number
+  // get ==========================================| boxedValue |=====
+  get boxedValue(): U {
+    return this._boxedValue;
+  }
+  public ['fantasy-land/map'] = this.map;
+  // public map ========================================| map() |=====
+  map<R>(fn: (value: U) => R): MiniBox<R> {
+    const result = fn(this._boxedValue);
+    return MiniBox.of(result);
+  }
 
-  // Use utility types
-  // type MyNestedBox = NestedBox<typeof box2>;  // MiniBox<MiniBox<MiniBox<never>>>
-  // type MyContent = InnermostContent<typeof box2>;  // number
+  // public xmap ======================================| xmap() |=====
+  public xmap<Rx>(fn: (value: U | ExtractInnermost<U>) => Rx): MiniBox<any> {
+    const newValue = MiniBox.isExtractableBox(this._boxedValue)
+      ? this._boxedValue.xmap(fn)
+      : null;
+    const result = MiniBox.isExtractableBox(this._boxedValue)
+      ? this.map(fn)
+      : null;
 
-  // Use the types in a function
-
-  return void 0;
-})();
-type ContainerType<T> =
-  T extends ExtractableBox<infer U> ? ExtractableBox<any> : never;
-type ContentType<T> = T extends ExtractableBox<infer U> ? U : never;
-// type ExtractInnermost<T> =
-//   T extends ExtractableBox<infer U> ? ExtractInnermost<U> : T;
-
-// Utility type to infer the boxing structure of the result
-type BoxStructure<T, Rx> =
-  T extends ExtractableBox<infer U> ? ExtractableBox<U> : Rx;
-
-// class MiniBox<U> implements ExtractableBox<U> {
-//   // ... (other methods omitted for brevity)
-
-//   public unbox(): Unbox<U> {
-//     // ... (implementation omitted)
-//   }
-// }
+    if (MiniBox.isExtractableBox(this._boxedValue)) {
+      const newValue = this._boxedValue.xmap(fn);
+      return MiniBox.of(newValue);
+    } else {
+      return this.map(fn);
+    }
+  }
+}

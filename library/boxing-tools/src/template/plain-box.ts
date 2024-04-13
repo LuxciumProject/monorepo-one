@@ -78,3 +78,8 @@ export interface IUnbox<U> {
 export interface IUnbox2<U> {
   unbox: () => Unbox<U> | U;
 }
+
+let obj2: IUnbox<number> = {
+  unbox: () => 42,
+};
+obj2.unbox = () => 24; // No error
