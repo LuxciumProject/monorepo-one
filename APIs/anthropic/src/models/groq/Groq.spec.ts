@@ -1,19 +1,17 @@
-import {
-  AssistantMessage,
-  ChatMessage,
-  convertMessage,
-  createContentBlock,
-  createMessage,
-  createTextBlock,
-  defaultSystemMessage,
-  EmptyAssistantMessage,
-  EmptyMessage,
-  EmptySystemMessage,
-  EmptyUserMessage,
-  messagesHasSystemMessage,
-  SystemMessage,
-  UserMessage,
-} from './Groq';
+import { AssistantMessage } from './AssistantMessage';
+import { ChatMessage } from './ChatMessage';
+import { convertMessage } from './convertMessage';
+import { createContentBlock } from './createContentBlock';
+import { createMessage } from './createMessage';
+import { createTextBlock } from './createTextBlock';
+import { defaultSystemMessage } from './defaultSystemMessage';
+import { EmptyAssistantMessage } from './EmptyAssistantMessage';
+import { EmptyMessage } from './EmptyMessage';
+import { EmptySystemMessage } from './EmptySystemMessage';
+import { EmptyUserMessage } from './EmptyUserMessage';
+import { messagesHasSystemMessage } from './messagesHasSystemMessage';
+import { SystemMessage } from './SystemMessage';
+import { UserMessage } from './UserMessage';
 
 describe('Groq.ts', () => {
   describe('createMessage', () => {
