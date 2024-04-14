@@ -1,8 +1,8 @@
-import type { ExtractFL, FunctorFL, IUnbox, Unbox } from '../core/Box/types';
+import { FunctorFL, IUnbox, Unbox } from './Box/types';
 import { ExtractInnermost } from './ExtractInnermost';
 import { ExtractableBox } from './ExtractableBox';
 
-export class MiniBox<U> implements IUnbox<U>, ExtractFL<U>, FunctorFL<U> {
+export class MiniBox<U> implements IUnbox<U>, FunctorFL<U> {
   static get Value() {
     return Symbol.for('value');
   } // get static ======================================| Value |=====
@@ -67,7 +67,7 @@ export class MiniBox<U> implements IUnbox<U>, ExtractFL<U>, FunctorFL<U> {
     );
   }
 
-  public ['fantasy-land/extract'] = this.unbox;
+  // public ['fantasy-land/extract'] = this.unbox;
   // public unbox ====================================| unbox() |=====
   unbox(): Unbox<U> | U {
     return MiniBox.isUnboxable(this._boxedValue)

@@ -1,4 +1,4 @@
-import { ProtoBox } from "../Box/template";
+import { ProtoBox } from '../classes/Box';
 
 export class MyFunctor<T> extends ProtoBox<T> {
   public static of<TVal>(value: TVal): MyFunctor<TVal> {
@@ -10,7 +10,7 @@ export class MyFunctor<T> extends ProtoBox<T> {
     return this;
   }
 
-  ["fantasy-land/map"] = this.map;
+  ['fantasy-land/map'] = this.map;
   map<R>(f: (value: T) => R): MyFunctor<R> {
     return new MyFunctor(f(this.value));
   }

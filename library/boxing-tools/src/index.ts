@@ -1,1 +1,1 @@
-export {};
+export { PlainBox } from './core';

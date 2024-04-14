@@ -1,6 +1,6 @@
-import type { Unbox } from '../core/Box/types';
 import { ExtractBoxStructure } from './ExtractBoxStructure';
 import { ExtractInnermost } from './ExtractInnermost';
+import { Unbox } from './types';
 
 // Interface for boxes with extractable values
 // interface ExtractableBox<T> {

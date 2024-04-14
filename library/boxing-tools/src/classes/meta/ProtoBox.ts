@@ -1,4 +1,4 @@
-import { Unboxable } from '../../core/Box/types';
+import { Unboxable } from '../../types';
 
 export abstract class ProtoBox<T> implements Unboxable<T> {
   private readonly _value: T;
