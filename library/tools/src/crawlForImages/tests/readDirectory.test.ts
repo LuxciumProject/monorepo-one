@@ -12,7 +12,7 @@ test('readDirectory should return an array of file names', async () => {
     'Lenna.jpg',
     'Lenna.png',
     'unsplash-Jakub Jacobsky.jpg',
-    'unsplash-Ryan Johnston.jpg',
+    'unsplash-ryan-johnston.jpg',
     'unsplash-Toby Wong.jpg',
     'unsplash-Tony Reid.jpg',
     'unsplash-anthony_delanoix.jpg',
