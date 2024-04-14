@@ -1,4 +1,4 @@
-import { ChatMessage } from './ChatMessage';
+import { ChatMessage } from '../ChatMessage';
 
 export class EmptyAssistantMessage extends ChatMessage<'assistant'> {
   constructor() {

@@ -1,4 +1,4 @@
-import { ChatMessage } from './ChatMessage';
+import { ChatMessage } from '../ChatMessage';
 import { EmptyAssistantMessage } from './EmptyAssistantMessage';
 import { EmptySystemMessage } from './EmptySystemMessage';
 import { EmptyUserMessage } from './EmptyUserMessage';

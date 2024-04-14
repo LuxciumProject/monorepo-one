@@ -1,6 +1,4 @@
-import { ChatMessage } from './ChatMessage';
-
-//#region EmptyMessages
+import { ChatMessage } from '../ChatMessage';
 
 export class EmptyUserMessage extends ChatMessage<'user'> {
   constructor() {

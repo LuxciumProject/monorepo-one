@@ -1,5 +1,5 @@
-import { ChatMessage } from './ChatMessage';
 import { ChatParticipant } from './ChatParticipant';
+import { ChatMessage } from './messages/ChatMessage';
 
 // function Person(name: string, age: number) {
 //   if (this instanceof Person) {

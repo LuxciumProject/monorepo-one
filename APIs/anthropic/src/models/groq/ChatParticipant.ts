@@ -1,4 +1,4 @@
-import { AssistantMessage } from './AssistantMessage';
-import { UserMessage } from './UserMessage';
+import { AssistantMessage } from './messages/AssistantMessage';
+import { UserMessage } from './messages/UserMessage';
 
 export type ChatParticipant = UserMessage | AssistantMessage;
