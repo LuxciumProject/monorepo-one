@@ -19,6 +19,9 @@ importers:
       '@langchain/groq':
         specifier: ~0.0.6
         version: 0.0.6
+      '@luxcium/boxing-tools':
+        specifier: workspace:*
+        version: link:../../library/boxing-tools
       '@types/inquirer':
         specifier: ~9.0.7
         version: 9.0.7
@@ -17961,7 +17964,7 @@ packages:
       typedoc: ^0.25.4
     dependencies:
       typedoc: 0.25.12(typescript@5.4.5)
-      typescript: 5.3.3
+      typescript: 5.4.5
     dev: true
 
   /typedoc-plugin-clarity@1.6.0(typedoc@0.25.12):
@@ -17970,7 +17973,7 @@ packages:
       typedoc: ^0.25.4
     dependencies:
       typedoc: 0.25.12(typescript@5.4.5)
-      typescript: 5.3.3
+      typescript: 5.4.5
     dev: true
 
   /typedoc-plugin-coverage@2.2.0(typedoc@0.25.12):
@@ -18013,7 +18016,7 @@ packages:
       typedoc: ^0.25.4
     dependencies:
       typedoc: 0.25.12(typescript@5.4.5)
-      typescript: 5.3.3
+      typescript: 5.4.5
     dev: true
 
   /typedoc-plugin-markdown@3.15.4(typedoc@0.25.12):
@@ -18047,7 +18050,7 @@ packages:
       typedoc: ^0.25.4
     dependencies:
       typedoc: 0.25.12(typescript@5.4.5)
-      typescript: 5.3.3
+      typescript: 5.4.5
     dev: true
 
   /typedoc-plugin-rename-defaults@0.6.7(typedoc@0.25.12):

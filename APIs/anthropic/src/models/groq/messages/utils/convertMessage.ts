@@ -1,5 +1,5 @@
-import { TextBlock } from '../../messages/types';
-import { CompletionCreateParams } from './CompletionCreateParams';
+import { TextBlock } from '../../../../messages/types';
+import { CompletionCreateParams } from '../../types/CompletionCreateParams';
 import { createContentBlock } from './createContentBlock';
 
 export function convertMessage(message: CompletionCreateParams.Message): {

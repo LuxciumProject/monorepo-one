@@ -1,8 +1,4 @@
-import { convertMessage } from './convertMessage';
-import { createContentBlock } from './createContentBlock';
-import { createMessage } from './createMessage';
-import { createTextBlock } from './createTextBlock';
-import { defaultSystemMessage } from './defaultSystemMessage';
+import { defaultSystemMessage } from '../../constants/defaultSystemMessage';
 import { AssistantMessage } from './messages/AssistantMessage';
 import { ChatMessage } from './messages/ChatMessage';
 import { EmptyAssistantMessage } from './messages/empty/EmptyAssistantMessage';
@@ -11,7 +7,11 @@ import { EmptySystemMessage } from './messages/empty/EmptySystemMessage';
 import { EmptyUserMessage } from './messages/empty/EmptyUserMessage';
 import { SystemMessage } from './messages/SystemMessage';
 import { UserMessage } from './messages/UserMessage';
-import { messagesHasSystemMessage } from './messagesHasSystemMessage';
+import { convertMessage } from './messages/utils/convertMessage';
+import { createContentBlock } from './messages/utils/createContentBlock';
+import { createMessage } from './messages/utils/createMessage';
+import { createTextBlock } from './messages/utils/createTextBlock';
+import { messagesHasSystemMessage } from './messages/utils/messagesHasSystemMessage';
 
 describe('Groq.ts', () => {
   describe('createMessage', () => {

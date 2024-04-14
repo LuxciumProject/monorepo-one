@@ -1,4 +1,4 @@
-import { CompletionCreateParams } from './CompletionCreateParams';
+import { CompletionCreateParams } from '../../types/CompletionCreateParams';
 
 export function createMessage(
   role: string,

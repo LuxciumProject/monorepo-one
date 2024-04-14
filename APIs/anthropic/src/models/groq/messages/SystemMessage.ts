@@ -1,4 +1,4 @@
-import { GroqMessage } from '../GroqMessage';
+import { GroqMessage } from '../types/GroqMessage';
 import { ChatMessage } from './ChatMessage';
 
 export class SystemMessage<Type extends 'system' = 'system'>
