@@ -1,4 +1,4 @@
-import { TextBlock } from '../../../../messages/types';
+import { TextBlock } from '../../types';
 import { createTextBlock } from './createTextBlock';
 
 export function createContentBlock(message: {

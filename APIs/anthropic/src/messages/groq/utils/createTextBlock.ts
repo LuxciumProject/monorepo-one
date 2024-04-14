@@ -1,4 +1,4 @@
-import { TextBlock } from '../../../../messages/types';
+import { TextBlock } from '../../types';
 
 export function createTextBlock<Text extends string>(
   text: Text

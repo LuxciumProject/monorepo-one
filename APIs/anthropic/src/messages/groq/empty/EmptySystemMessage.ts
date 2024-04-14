@@ -1,6 +1,6 @@
-import { defaultSystemMessage } from '../../../../constants/defaultSystemMessage';
-import { GroqMessage } from '../../types/GroqMessage';
+import { defaultSystemMessage } from '../../../constants/defaultSystemMessage';
 import { SystemMessage } from '../SystemMessage';
+import { GroqMessage } from '../types';
 
 export class EmptySystemMessage
   extends SystemMessage<'system'>

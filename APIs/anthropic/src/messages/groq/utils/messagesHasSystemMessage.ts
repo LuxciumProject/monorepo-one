@@ -1,5 +1,5 @@
-import { ChatParticipant } from '../../types/ChatParticipant';
 import { ChatMessage } from '../ChatMessage';
+import { ChatParticipant } from '../types';
 export function messagesHasSystemMessage(
   messages: ChatMessage[]
 ): messages is ChatParticipant[] {
