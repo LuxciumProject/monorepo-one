@@ -1,17 +1,16 @@
-import { defaultSystemMessage } from '../../constants/defaultSystemMessage';
-import { AssistantMessage } from './messages/AssistantMessage';
-import { ChatMessage } from './messages/ChatMessage';
-import { EmptyAssistantMessage } from './messages/empty/EmptyAssistantMessage';
-import { EmptyMessage } from './messages/empty/EmptyMessage';
-import { EmptySystemMessage } from './messages/empty/EmptySystemMessage';
-import { EmptyUserMessage } from './messages/empty/EmptyUserMessage';
-import { SystemMessage } from './messages/SystemMessage';
-import { UserMessage } from './messages/UserMessage';
-import { convertMessage } from './messages/utils/convertMessage';
-import { createContentBlock } from './messages/utils/createContentBlock';
-import { createMessage } from './messages/utils/createMessage';
-import { createTextBlock } from './messages/utils/createTextBlock';
-import { messagesHasSystemMessage } from './messages/utils/messagesHasSystemMessage';
+import { AssistantMessage, EmptyMessage, SystemMessage, UserMessage } from '..';
+import { defaultSystemMessage } from '../../../constants/defaultSystemMessage';
+import { createMessage } from '../../../interface/groq-cli';
+import { ChatMessage } from '../ChatMessage';
+import { EmptyAssistantMessage } from '../empty/EmptyAssistantMessage';
+import { EmptySystemMessage } from '../empty/EmptySystemMessage';
+import { EmptyUserMessage } from '../empty/EmptyUserMessage';
+import {
+  convertMessage,
+  createContentBlock,
+  createTextBlock,
+  messagesHasSystemMessage,
+} from '../utils';
 
 describe('Groq.ts', () => {
   describe('createMessage', () => {
