@@ -6,7 +6,7 @@
   "module": "/dist/index.js",
   "types": "/dist/typings/index.d.ts",
   "scripts": {
-    "build": "bash scripts/build.sh || exit",
+    "build": "bash scripts/build.sh",
     "install": "echo will install",
     "test": "jest --all --coverage=false --config='jest.config.json'"
   },
