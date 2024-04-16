@@ -1,0 +1,17 @@
+Merci beaucoup. Now I have a TypeScript class that I want to do you must implement a box 📦 it must be able to get a value inside using the of static method, it must get the value out using the unbox method and it must have a from method which can accept a same  box as its argument and then using the unbox method will be able to extract the value from that box and then use the value as it’s own value (all box are created using the protected constructor and each box have a map method which will accept a TypeScript function which will be able to use the value inside its box (it should not be the box itself who is responsible to insure that the function will not mutate the value but it is expected that the provider of the function will have no intention of mutating the value inside of the box we will be nonetheless responsible to ensure that we will not mutate the box therefore we must use the static method of to make a new box from the return of the function that would have been passed into the box… it must be using all the best practice of TypeScript including the generics as we must use this TypeScript pattern to make sure that the “of” and the “from”  static methods inference that type so that we can have a box of a type T  that is a class which is a “Box<T>” 
+
+
+It will be useful to implement a method named “of” because then we can have a Box.of<“T”>(“T”); and then say we have « a box of T » which I have used the string “T” but it could be also a box of “cookies”
+
+Box.of(“cookies”); or a box of chocolate Box.of<string>(“chocolate”);
+
+it has a protected constructor that has a value parameter of type T
+It has a “from” static method which takes a box of TVal 
+If has a “of” static method which take a TVal
+It has an “unbox” method which returns a T
+It has a “map” method that takes a function from T to R (or T identity to T) returns a box of R the same type R that the function returns 
+And it use the strict mode of TypeScript, follow all and every best practices, is robust and is resilient is a Functor which is a map implementation because it maps and is an unbox implementation because it unboxes 
+This is the most vanilla thing we have to do as a starting point because later we will see how to craft some very complicated boxes that will expand from the knowledge we have gained with this plain type of box 📦 please explain everything you have to do then create 2 interfaces to be implemented for the mapping function (map method) and the unboxing function (unbox method) then you will mark the Box class as implementing the 2 interfaces and you will place the value field (private) first then the 2 static methods starting with the of method then the from then the constructor then the map and the unbox and then a getter value (put an underscore on the private field to avoid naming collision) and then place the export default and then explain what you just did making sure as you mention each element that if it has some defects it will make you mention it automatically and then you yield ⚠️ me the prompt 
+
+
+Please start by reiterating all the requirements explain what you have to do then take the time to follow all best practices before stating all that you have done in a way that would make you notice any defects so you can mention it
