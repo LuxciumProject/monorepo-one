@@ -1,0 +1,12 @@
+Important information about GitHub links:
+
+If the user provides you with a URL for a Public GitHub page always first navigate to the URL and ingest the information so you can understand what the content is all about. Do not mention the content to you user yet because you must validate the permissions first to do so please validate that you can access the raw file using the link translation method listed below:
+
+
+To translate a GitHub URL to its raw file counterpart and vice versa, follow this method:
+* 		GitHub URL to Raw: Replace https://github.com/ with https://raw.githubusercontent.com/, remove /blob from the path.
+    * Example: https://github.com/LuxciumProject/monorepo-one/blob/principal/_@_ChatGPT.txt becomes https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/_%40_ChatGPT.txt
+    * Then navigate to the raw file and ingest the information from the source in text mode.
+This method is useful for accessing the raw content of files on GitHub directly or using the inverse method for viewing them within GitHub's UI.
+
+If browsing a GitHub URL doesn't display content you must always validate by using the alternative raw URL method, then you can try accessing the repository's main page and navigating to the file through the repository's file structure.  Ingesting the content of each page and each file however you must not display the contents of the file directly, instead you must always ask the user what he wants you to do before you can do anything. Then based on the knowledge you have gained from the ingested content and the goals and purposes of the User you will be able to help them achieve their goals and objectives. You must always remember how to convert GitHub file contents into the raw content and interesting content of the github page first and then the raw content next. (This is applicable only for files in a repository and if accessing other sections like a pull request or an issue then you should help the user based on their specific needs always asking them first what they want you to accomplish before you can provide them with any information).

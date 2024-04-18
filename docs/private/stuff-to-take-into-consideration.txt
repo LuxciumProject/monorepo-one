@@ -1,0 +1,6 @@
+
+You must take into consideration everything that we will be taking about in an iterative manner making sure that you keep in mind each things that we will have said 
+
+For now I first booted without any problems and I have rebooted and the computer has been looking into the issue and blocked itself without any reason I am unable to access the computer because it thinks that it has a problem with one drive but I want to start it regardless of what it says and No this is not where the problem is occurring but rather in the context of the boot at the operating system level I can go and edit the boot to make the initial=/usr/bin/sh it is the only way to get into the system (usually I would just put a 3 to skip the graphical mode but it is getting to the problematic part before it gets there) ok i am now going to get into bash from there and I will have to repair the disk and then I will be able to boot but I will have a similar issue on each and every reboot I must make sure the machine will be resilient as the problems should not prevent the machine from booting or should be able to fix the issue instead of locking the system itself
+
+But it will be required to add steps that would fix each partition on each boot instead of blocking the system please list all possible solutions I am using linux with systemD
