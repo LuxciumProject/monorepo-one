@@ -9,7 +9,6 @@ import { IUnbox, Unbox } from './types';
  * structures, such as monads, functors, and applicatives.
  *
  * @template T - The type of the value stored in the box.
- *
  * @public
  */
 export class PlainBox<T> implements IUnbox<T> {
@@ -28,6 +27,7 @@ export class PlainBox<T> implements IUnbox<T> {
     return new PlainBox<TVal>(value);
   }
   public static ['fantasy-land/of']: typeof PlainBox.of = PlainBox.of;
+
   /**
    * Implements the Fantasy Land "chainRec" operation, which allows for
    * efficient implementation of recursive computations.
@@ -36,14 +36,13 @@ export class PlainBox<T> implements IUnbox<T> {
    * @param f - A function that takes the current value, a "next" function, and a "done" function, and returns a new `PlainBox`.
    * @param i - The initial value to pass to the `f` function.
    * @returns A new `PlainBox` containing the result of the recursive computation.
+   * @public
    * @example
    * const result = PlainBox.chainRec(
    *   (next, done, value) => (value <= 0 ? done(value) : next(value - 1)),
    *   10
    * );
    * console.log(result.boxedValue); // Output: 0
-   *
-   * @public
    */
   static chainRec<TVal>(
     f: (
@@ -72,12 +71,11 @@ export class PlainBox<T> implements IUnbox<T> {
    * @template TVal - The type of the value stored in the `PlainBox`.
    * @param value - The `PlainBox` instance to copy.
    * @returns A new `PlainBox` instance containing the same value as the provided `PlainBox`.
+   * @public
    * @example
    * const originalBox = PlainBox.of(42);
    * const copiedBox = PlainBox.from(originalBox);
    * console.log(copiedBox.boxedValue); // Output: 42
-   *
-   * @public
    */
   public static from<TVal>(value: PlainBox<TVal>): PlainBox<TVal> {
     return PlainBox.of<TVal>(value.boxedValue);
@@ -89,12 +87,11 @@ export class PlainBox<T> implements IUnbox<T> {
    * @template TVal - The type of the value to check.
    * @param val - The value to check.
    * @returns `true` if the value is an instance of `IUnbox`, `false` otherwise.
+   * @public
    * @example
    * const box = PlainBox.of(42);
    * console.log(PlainBox.isUnboxable(box)); // Output: true
    * console.log(PlainBox.isUnboxable(42)); // Output: false
-   *
-   * @public
    */
   public static isUnboxable<TVal>(
     val: TVal | IUnbox<TVal>
@@ -114,12 +111,11 @@ export class PlainBox<T> implements IUnbox<T> {
    * @template U - The type of the value to unbox.
    * @param value - The value to unbox.
    * @returns The unboxed value.
+   * @public
    * @example
    * const box = PlainBox.of(42);
    * const unboxedValue = PlainBox.unbox(box);
    * console.log(unboxedValue); // Output: 42
-   *
-   * @public
    */
   static unbox<U>(value: IUnbox<any> | U): Unbox<U> {
     return PlainBox.isUnboxable(value) ? PlainBox.unbox(value.unbox()) : value;
@@ -142,40 +138,16 @@ export class PlainBox<T> implements IUnbox<T> {
    * @template R - The type of the transformed value.
    * @param fn - The function to apply to the boxed value.
    * @returns A new `PlainBox` instance containing the transformed value.
+   * @public
    * @example
    * const box = PlainBox.of(42);
    * const doubledBox = box.map(x => x * 2);
    * console.log(doubledBox.boxedValue); // Output: 84
-   *
-   * @public
    */
   public map<R>(fn: (value: T) => R): PlainBox<R> {
-    return PlainBox.of(fn(this.boxedValue));
+    return PlainBox.of(fn(this._boxedValue));
   }
   public ['fantasy-land/map']: typeof this.map = this.map;
-
-  /**
-   * Applies the function stored in the current `PlainBox` to the value stored in the provided `PlainBox`.
-   *
-   * This method implements the Fantasy Land "ap" operation.
-   *
-   * @template B - The type of the value stored in the provided `PlainBox`.
-   * @param b - The `PlainBox` instance containing the value to apply the function to.
-   * @returns A new `PlainBox` instance containing the result of applying the function to the value.
-   * @public
-   * @example
-   * const doubleBox = PlainBox.of((x: number) => x * 2);
-   * const box = PlainBox.of(42);
-   * const result = doubleBox.ap(box);
-   * console.log(result.boxedValue); // Output: 84
-   */
-  ap<B>(plainBox: PlainBox<(value: T) => B>): PlainBox<B> {
-    return plainBox.map(fn => fn(this._boxedValue));
-  }
-  // public ap<B>(this: PlainBox<(b: T) => B>, b: PlainBox<T>): PlainBox<B> {
-  //   return this.chain(f => b.map(f));
-  // }
-  public ['fantasy-land/ap']: typeof this.ap = this.ap;
 
   /**
    * Applies the provided function `f` to the value stored in the `PlainBox` and
@@ -246,7 +218,7 @@ export class PlainBox<T> implements IUnbox<T> {
    * console.log(value); // Output: 42
    */
   public unbox(): Unbox<T> {
-    return PlainBox.unbox(this.boxedValue);
+    return PlainBox.unbox(this._boxedValue);
   }
 
   /**
@@ -261,4 +233,26 @@ export class PlainBox<T> implements IUnbox<T> {
   public get boxedValue(): T {
     return this._boxedValue;
   }
+
+  /**
+   * Applies the function stored in the current `PlainBox` to the value stored in the provided `PlainBox`.
+   *
+   * This method implements the Fantasy Land "ap" operation.
+   *
+   * @template B - The type of the value stored in the provided `PlainBox`.
+   * @param b - The `PlainBox` instance containing the value to apply the function to.
+   * @returns A new `PlainBox` instance containing the result of applying the function to the value.
+   * @public
+   * @example
+   * const doubleBox = PlainBox.of((x: number) => x * 2);
+   * const box = PlainBox.of(42);
+   * const result = doubleBox.ap(box);
+   * console.log(result.boxedValue); // Output: 84
+   */
+
+  public ap<B>(this: PlainBox<(b: T) => B>, b: PlainBox<T>): PlainBox<B> {
+    return this.chain(f => b.map(f));
+  }
+  public ['fantasy-land/ap']: typeof this.ap = this.ap;
 }
+export default PlainBox;
