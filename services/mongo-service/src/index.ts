@@ -15,7 +15,7 @@ void (async function MAIN() {
       console.log('OPEN!', listener);
     })
     .on('error', error => {
-      console.warn(error);
+      console.warn([{ error }]);
     });
 
   return void 0;
