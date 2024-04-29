@@ -13,3 +13,5 @@ It is critical to use the imperative verbal form, Instruct giving directives in 
 After you will have completed the summary and explained in detail what the next steps must be, you may choose to add any more information that you think would benefit the future session between your user and it's future AI Agent. Think carefully about any missing insight of anecdotal information to add at the end of your report before you conclude.
 
 You must absolutely conclude with 5)[## Instruction For The User]  "Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT, The AI Agent will be happy to continues our conversation where we left off". This is the most important part because the AI must absolutely need to know to continue where we left off so we must initialize its state, as he will be able to infer to your instruction to the user he will be in the desired state right away.
+
+the instruction to the user must conclude your in depth summary and should be clear to the user and help the next AI Agent understand what the user is doing as the user would be following the instructions at the ceryend of your output.
