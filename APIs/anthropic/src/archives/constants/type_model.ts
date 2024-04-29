@@ -211,6 +211,20 @@ export interface MessageCreateParamsBase_TYPEMAP {
   top_p?: number;
 }
 
+export interface FirstWay {
+  messages: Array<{
+    role: 'user' | 'assistant';
+    content: string | Array<TextBlock | ImageBlockParam>;
+  }>;
+  system: string;
+}
+
+export interface SecondWay {
+  messages: Array<{
+    role: 'user' | 'assistant' | 'system';
+    content: string | Array<TextBlock | ImageBlockParam>;
+  }>;
+}
 export interface MyMessageCreateParamsBase {
   max_tokens: number;
   // messages: Array<MessageParam>
