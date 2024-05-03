@@ -49,4 +49,4 @@ function isFunctor<T>(value: IFunctor<T> | T): value is IFunctor<T> {
   return true;
 }
 
-export { IFunctor, areEquivalent, hasMap, isFunctor };
+export { areEquivalent, hasMap, isFunctor, type IFunctor };

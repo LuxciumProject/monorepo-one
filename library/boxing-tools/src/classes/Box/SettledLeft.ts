@@ -1,6 +1,6 @@
-import { ISettledLeft } from "../../types";
-import { IUnbox } from "./types/IUnbox";
-import { SettleBox } from "./SettleBox";
+import { ISettledLeft } from '../../types';
+import { SettleBox } from './SettleBox';
+import { IUnbox } from './types/IUnbox';
 
 export class SettledLeft<E = any>
   extends SettleBox<E>
@@ -11,28 +11,28 @@ export class SettledLeft<E = any>
     reason: E,
     currentRejection: boolean = false,
     transformStep = -1,
-    index = -1,
+    index = -1
   ) {
-    super(reason, "rejected", currentRejection, index, transformStep);
+    super(reason, 'rejected', currentRejection, index, transformStep);
     this._reason = reason;
   }
-  public unbox(): E {
+  public override unbox(): E {
     return this._reason;
   }
-  get currentRejection(): true | false {
+  override get currentRejection(): true | false {
     if (super.currentRejection === true || super.currentRejection === false) {
       return super.currentRejection;
     }
     throw new Error(
-      'NEVER: class SettledLeft currentRejection property must be as "true" or "false"',
+      'NEVER: class SettledLeft currentRejection property must be as "true" or "false"'
     );
   }
-  get status(): "rejected" {
-    if (super.status === "rejected") {
+  override get status(): 'rejected' {
+    if (super.status === 'rejected') {
       return super.status;
     }
     throw new Error(
-      'NEVER: class SettledLeft status property must be as "rejected"',
+      'NEVER: class SettledLeft status property must be as "rejected"'
     );
   }
   get reason(): E {

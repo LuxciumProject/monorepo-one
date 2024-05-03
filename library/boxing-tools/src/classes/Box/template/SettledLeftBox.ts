@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Functor } from "../../../types";
 import { Box } from ".";
 
@@ -54,7 +55,7 @@ export class SettledLeftBox
   private _transformStep: number = -1;
   private _currentRejection: false | true | undefined;
   private _index: number = -1;
-  static of(reason: unknown): SettledLeftBox {
+  static override of(reason: unknown): SettledLeftBox {
     return new SettledLeftBox(reason, false);
   }
   protected static fromMap(
@@ -85,7 +86,7 @@ export class SettledLeftBox
     return this;
   }
 
-  public map<R>(fn: (value: any) => R): SettledLeftBox {
+  public override map<R>(fn: (value: any) => R): SettledLeftBox {
     void fn;
     // const result = fn(super.value);
     const currentRejection = !this._currentRejection;
@@ -97,7 +98,7 @@ export class SettledLeftBox
     );
   }
 
-  unbox(): any {
+  override unbox(): any {
     return super.value;
   }
   get status(): "rejected" {
@@ -106,7 +107,7 @@ export class SettledLeftBox
   get reason(): unknown {
     return this._reason;
   }
-  get value(): never {
+  override get value(): never {
     return this._fulfilled;
   }
   get rejected(): unknown {

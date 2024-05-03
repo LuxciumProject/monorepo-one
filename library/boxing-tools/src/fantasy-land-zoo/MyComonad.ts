@@ -1,7 +1,7 @@
-import { MyExtend } from "./MyExtend";
+import { MyExtend } from './MyExtend';
 
 export class MyComonad<T> extends MyExtend<T> {
-  public static of<TVal>(value: TVal): MyComonad<TVal> {
+  public static override of<TVal>(value: TVal): MyComonad<TVal> {
     return new MyComonad<TVal>(value);
   }
   protected constructor(value: T) {
@@ -9,16 +9,16 @@ export class MyComonad<T> extends MyExtend<T> {
     return this;
   }
 
-  ["fantasy-land/map"] = this.map;
+  override ['fantasy-land/map'] = this.map;
   public override map<R>(f: (value: T) => R): MyComonad<R> {
     return new MyComonad(f(this.value));
   }
-  public ["fantasy-land/extend"] = this.extend;
+  public override ['fantasy-land/extend'] = this.extend;
   public override extend<U>(f: (w: MyComonad<T>) => U): MyComonad<U> {
     const value = f(this);
     return MyComonad.of(value);
   }
-  public ["fantasy-land/extract"] = this.unbox;
+  public override ['fantasy-land/extract'] = this.unbox;
 
   public override unbox(): T {
     return super.value;

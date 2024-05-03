@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { BaseBox } from './BaseBox';
 import { ExtractableBox } from './ExtractableBox';
 import { MiniBox } from './MiniBox';

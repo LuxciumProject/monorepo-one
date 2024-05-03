@@ -1,3 +1,12 @@
+import {
+  Applicative,
+  Apply,
+  ChainRec,
+  Comonad,
+  Extend,
+  Functor,
+  Monad,
+} from '../decorators';
 import { IUnbox, Unbox } from './types';
 
 /**
@@ -13,6 +22,8 @@ import { IUnbox, Unbox } from './types';
  * @public
  */
 export class PlainBox<T> implements IUnbox<T> {
+  // Index signature
+  [key: string]: any;
   /**
    * Creates a new `PlainBox` instance with the given value.
    *
@@ -24,10 +35,19 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @public
    */
+  @Apply()
   public static of<TVal>(value: TVal): PlainBox<TVal> {
     return new PlainBox<TVal>(value);
   }
-  public static ['fantasy-land/of']: typeof PlainBox.of = PlainBox.of;
+
+  /**
+   * Constructs a new `PlainBox` instance with the provided value.
+   *
+   * @param _boxedValue - The value to be stored in the box.
+   * @internal
+   */
+  protected constructor(private _boxedValue: T) {}
+
   /**
    * Implements the Fantasy Land "chainRec" operation, which allows for
    * efficient implementation of recursive computations.
@@ -45,6 +65,7 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @public
    */
+  @ChainRec()
   static chainRec<TVal>(
     f: (
       next: (v: TVal) => PlainBox<TVal>,
@@ -63,8 +84,6 @@ export class PlainBox<T> implements IUnbox<T> {
 
     return step(i);
   }
-  public static ['fantasy-land/chainRec']: typeof PlainBox.chainRec =
-    PlainBox.chainRec;
 
   /**
    * Creates a new `PlainBox` instance with the same value as the provided `PlainBox`.
@@ -126,14 +145,6 @@ export class PlainBox<T> implements IUnbox<T> {
   }
 
   /**
-   * Constructs a new `PlainBox` instance with the provided value.
-   *
-   * @param _boxedValue - The value to be stored in the box.
-   * @internal
-   */
-  protected constructor(private _boxedValue: T) {}
-
-  /**
    * Applies the provided function `fn` to the value stored in the `PlainBox` and
    * returns a new `PlainBox` instance with the transformed value.
    *
@@ -149,10 +160,10 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @public
    */
+  @Functor()
   public map<R>(fn: (value: T) => R): PlainBox<R> {
     return PlainBox.of(fn(this.boxedValue));
   }
-  public ['fantasy-land/map']: typeof this.map = this.map;
 
   /**
    * Applies the function stored in the current `PlainBox` to the value stored in the provided `PlainBox`.
@@ -169,13 +180,13 @@ export class PlainBox<T> implements IUnbox<T> {
    * const result = doubleBox.ap(box);
    * console.log(result.boxedValue); // Output: 84
    */
+  @Applicative()
   ap<B>(plainBox: PlainBox<(value: T) => B>): PlainBox<B> {
     return plainBox.map(fn => fn(this._boxedValue));
   }
   // public ap<B>(this: PlainBox<(b: T) => B>, b: PlainBox<T>): PlainBox<B> {
   //   return this.chain(f => b.map(f));
   // }
-  public ['fantasy-land/ap']: typeof this.ap = this.ap;
 
   /**
    * Applies the provided function `f` to the value stored in the `PlainBox` and
@@ -193,10 +204,10 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @public
    */
+  @Monad()
   public chain<B>(f: (value: T) => PlainBox<B>): PlainBox<B> {
     return f(this.boxedValue);
   }
-  public ['fantasy-land/chain']: typeof this.chain = this.chain;
 
   /**
    * Extracts the value stored in the `PlainBox` instance.
@@ -211,10 +222,10 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @public
    */
+  @Comonad()
   public extract(): T {
     return this.boxedValue;
   }
-  public ['fantasy-land/extract']: typeof this.extract = this.extract;
   /**
    * Applies the provided function `f` to the current `PlainBox` instance and
    * returns a new `PlainBox` instance with the result.
@@ -230,10 +241,11 @@ export class PlainBox<T> implements IUnbox<T> {
    * const result = box.extend(mb => mb.boxedValue * 2);
    * console.log(result.boxedValue); // Output: 84
    */
+  @Extend()
   public extend<R>(f: (mb: PlainBox<T>) => R): PlainBox<R> {
     return new PlainBox(f(this));
   }
-  public ['fantasy-land/extend']: typeof this.extend = this.extend;
+  // public ['fantasy-land/extend']: typeof this.extend = this.extend;
 
   /**
    * Extracts the value stored in the `PlainBox` instance, unboxing it if necessary.

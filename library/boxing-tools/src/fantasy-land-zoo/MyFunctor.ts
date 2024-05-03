@@ -18,7 +18,7 @@ export class MyFunctor<T> extends ProtoBox<T> {
     return super.value;
   }
 
-  get value(): T {
+  override get value(): T {
     return super.value;
   }
 }

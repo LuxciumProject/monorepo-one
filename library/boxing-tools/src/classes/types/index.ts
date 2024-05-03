@@ -1,8 +1,8 @@
-export { FLExtractable } from './ExtractFL';
-export { FLMapppable } from './FunctorFL';
-export { IMap } from './IMap';
-export { IUnbox } from './IUnbox';
-export { IXMap } from './IXMap';
-export { ReplaceInnerType } from './ReplaceInnerType';
-export { Unbox } from './Unbox';
+export type { FLExtractable } from './ExtractFL';
+export type { FLMapppable } from './FunctorFL';
+export type { IMap } from './IMap';
+export type { IUnbox } from './IUnbox';
+export type { IXMap } from './IXMap';
+export type { ReplaceInnerType } from './ReplaceInnerType';
+export type { Unbox } from './Unbox';
 // Path: library/boxing-tools/src/classes/types/index.ts

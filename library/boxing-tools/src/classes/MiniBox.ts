@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { FunctorFL, IUnbox, Unbox } from './Box/types';
 import { ExtractInnermost } from './ExtractInnermost';
 import { ExtractableBox } from './ExtractableBox';

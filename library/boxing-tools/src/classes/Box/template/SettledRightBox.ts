@@ -1,10 +1,10 @@
-import { Functor } from "../../../types";
-import { Box } from ".";
+import { Box } from '.';
+import { Functor } from '../../../types';
 export interface SettledRight<T> extends PromiseFulfilledResult<T> {
   /**
    * The status of the settled value.
    */
-  status: "fulfilled";
+  status: 'fulfilled';
 
   /**
    * The fulfilled value.
@@ -46,27 +46,27 @@ export class SettledRightBox<T>
   extends Box<T>
   implements SettledRight<T>, Functor<T>
 {
-  private _status: "fulfilled" = "fulfilled";
+  private _status: 'fulfilled' = 'fulfilled';
   private _reason: never = null as never;
   private _fulfilled: T;
   private _rejected: never = null as never;
   private _transformStep: number = -1;
   private _currentRejection: null = null;
   private _index: number = -1;
-  static of<TVal>(value: TVal): SettledRightBox<TVal> {
+  static override of<TVal>(value: TVal): SettledRightBox<TVal> {
     return new SettledRightBox(value);
   }
   protected static fromMap<TVal>(
     value: TVal,
     index: number,
     transformStep: number,
-    currentRejection: null,
+    currentRejection: null
   ): SettledRightBox<TVal> {
     return new SettledRightBox(
       value,
       index,
       transformStep + 1,
-      currentRejection,
+      currentRejection
     );
   }
 
@@ -74,30 +74,32 @@ export class SettledRightBox<T>
     value: T,
     index = -1,
     transformStep = -1,
-    currentRejection: null = null,
+    currentRejection: null = null
   ) {
     super(value);
     this._fulfilled = value;
     this._index = index;
     this._transformStep = transformStep;
     this._currentRejection = currentRejection;
-    super["fantasy-land/map"] = this.map;
+    super['fantasy-land/map'] = this.map;
     return this;
   }
-  public map<R>(fn: (value: T, index: number) => R): SettledRightBox<R> {
+  public override map<R>(
+    fn: (value: T, index: number) => R
+  ): SettledRightBox<R> {
     const result = fn(super.value, this._index);
     return SettledRightBox.fromMap(
       result,
       this._index,
       this._transformStep,
-      null,
+      null
     );
   }
 
-  unbox(): T {
+  override unbox(): T {
     return super.value;
   }
-  get status(): "fulfilled" {
+  get status(): 'fulfilled' {
     return this._status;
   }
   get reason(): never {
@@ -118,7 +120,7 @@ export class SettledRightBox<T>
   get index(): number {
     return this._index;
   }
-  get value(): T {
+  override get value(): T {
     return super.value;
   }
 }

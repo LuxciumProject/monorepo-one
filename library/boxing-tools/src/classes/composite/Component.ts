@@ -19,7 +19,7 @@ export class ItemBox<T extends string> extends Component<T> {
   ) {
     super(_name);
   }
-  getDetails(): void {
+  override getDetails(): void {
     console.log(
       `${this._name} :: ${this._color} color, priced at INR ${this._cost}`
     );
@@ -32,7 +32,7 @@ export class CollectionBox<T extends string> extends Component<T> {
   constructor(_name: T) {
     super(_name);
   }
-  getDetails() {
+  override getDetails() {
     console.log(`\n${this._name}`);
     this.items.forEach(item => item.getDetails());
   }

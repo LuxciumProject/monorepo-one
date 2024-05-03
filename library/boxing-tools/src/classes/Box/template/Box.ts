@@ -10,7 +10,7 @@ export class Box<T>
   public ['fantasy-land/ap'] = this.ap;
   public ['fantasy-land/chain'] = this.chain;
   public ['fantasy-land/extend'] = this.extend;
-  public ['fantasy-land/extract'] = this.unbox;
+  public override ['fantasy-land/extract'] = this.unbox;
 
   public static of<TVal>(value: TVal): Box<TVal> {
     return new Box<TVal>(value);
@@ -37,11 +37,11 @@ export class Box<T>
     return Box.of(value);
   }
 
-  public unbox(): T {
+  public override unbox(): T {
     return super.value;
   }
 
-  get value(): T {
+  override get value(): T {
     return super.value;
   }
 }
