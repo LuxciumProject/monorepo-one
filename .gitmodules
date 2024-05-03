@@ -10,3 +10,6 @@ url = https://github.com/Luxcium/rpc-worker-pool.git
 [submodule "library/mapping-tools"]
 path = library/mapping-tools
 url = https://github.com/LuxciumProject/mapping-tools.git
+[submodule "docker/nvidia/ComfyUI"]
+	path = docker/nvidia/ComfyUI
+	url = https://github.com/Luxcium/ComfyUI.git
