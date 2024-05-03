@@ -73,3 +73,6 @@
 5. Requires flexible SLI bridge (included).
 
 background-image: url(&quot;/content/dam/en-zz/Solutions/geforce/titan-xp-collectors-edition/galactic-empire/v1/nvidia-titan-xp-ce-star-wars-galactic-empire-gallery-02.jpg&quot;);
+
+
+conda install python3-virtualenv python3-pip

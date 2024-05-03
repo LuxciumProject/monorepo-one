@@ -1,0 +1,15 @@
+Step 1: Define the Goal
+What exactly do you want your code to do? Describe the main function or purpose of your project.
+Step 2: Identify the Inputs and Outputs
+What information will your code need to take in? These are your inputs.
+What should your code produce or result in? These are your outputs.
+Step 3: Consider Any Constraints
+Are there any limitations or requirements you need to keep in mind? This could include technology stacks, time constraints, or external systems to integrate with.
+Step 4: Outline the Process
+What steps should the code take from receiving the input to producing the output? This helps in understanding the flow and logic needed.
+Step 5: Determine the Resources
+What tools, frameworks, or libraries might you need? Identifying these can help structure your development environment early on.
+Step 6: Plan for Edge Cases and Errors
+What could possibly go wrong, and how should your code handle it? Planning for error handling is crucial for robust software.
+Step 7: Think About Maintenance and Scalability
+How can you design your code to be maintainable and scalable in the future? Consider aspects like code modularity, readability, and documentation.

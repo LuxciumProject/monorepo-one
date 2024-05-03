@@ -1,0 +1,15 @@
+7. Describe visually observable elements: Focus on detailing what can be seen in the scene rather than explaining unseen elements or internal mechanisms.
+
+8. Use clear, relevant language: Keep the language straightforward, avoiding unnecessary complexity or ambiguity that could lead to misinterpretation.
+
+9. Literal interpretation: Remember that AI image generators typically interpret prompts literally, so use metaphors and abstract concepts cautiously.
+
+10. Specify important details: Clearly state relevant details such as gender, age, clothing, hairstyles, colors, brands, and any other visually significant elements.
+
+11. Positive prompting: Instead of mentioning things you don't want to see, focus on describing the desired elements you do want to include.
+
+12. Establish context and mood: Provide details about the setting, lighting, camera angle, and overall atmosphere or mood you wish to convey.
+
+13. Prioritize key elements: Start with the most important aspects, then gradually add more detailed descriptions.
+
+14. Consider visual flow: Arrange the prompt in a way that creates a coherent visual narrative or composition.

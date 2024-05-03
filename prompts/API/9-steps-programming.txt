@@ -1,0 +1,27 @@
+1. Define the Problem Clearly
+What is the problem? Specify the issue you are facing.
+What is the expected outcome? Describe what the solution should accomplish.
+2. Detail the Constraints and Requirements
+Are there any specific conditions that must be met? For example, performance constraints, compatibility issues, or specific technologies to be used.
+What are the non-negotiable aspects of the solution? Identify any parameters that cannot be altered.
+3. Identify the Inputs and Outputs
+What inputs will your solution require? Outline the data or resources needed.
+What should the output look like? Describe the expected format and result of the solution.
+4. Outline Any Preliminary Ideas or Attempts
+Have you tried any solutions? Explain what approaches you’ve already attempted and their outcomes.
+Do you have a particular approach in mind? Mention any specific strategies or technologies you believe should be part of the solution.
+5. Specify the Tools and Technologies
+Which languages or frameworks are you using? For instance, TypeScript, React, Node.js.
+Are there specific libraries or tools involved? Such as Express for Node.js, or particular TypeScript configurations.
+6. Consider Scalability and Maintainability
+How should the solution scale? Consider both the short-term and long-term requirements.
+How easy should it be to maintain? Think about who will maintain it and what knowledge they need.
+7. Set the Timeline and Priority
+How urgent is the task? Define when you need the solution.
+What is the priority among other tasks? This helps in resource allocation.
+8. Feedback and Iteration
+How will you test the solution? Plan for testing phases and criteria for success.
+How open are you to revisions? Be prepared to iterate based on feedback and testing results.
+9. Communicate Your Plan
+Document your approach in a clear, structured manner.
+Review and adjust based on feedback from peers or AI assistance.

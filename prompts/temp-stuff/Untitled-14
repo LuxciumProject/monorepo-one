@@ -1,0 +1,70 @@
+Let's break down the concepts and vocabulary related to your request:
+
+**Recursion**: In programming, recursion is a technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. In your case, you want to create a method that calls itself partially, which means it will call other methods that might also call themselves recursively.
+
+**Partial Recursion**: Partial recursion is a technique where a function calls other functions that might also call themselves recursively. This is different from full recursion, where a function calls itself directly.
+
+**Generics**: In TypeScript, generics are a way to create reusable functions, classes, and interfaces that can work with multiple types of data. Generics allow you to create a function that can work with different types of data, such as numbers, strings, or objects, without having to create separate functions for each type.
+
+**Type Parameters**: In TypeScript, type parameters are used to define the types of data that a generic function or class can work with. Type parameters are denoted by the `<` and `>` symbols, and they are used to specify the type of data that a function or class can work with. For example, `function identity<T>(arg: T): T { return arg; }` is a generic function that takes a type parameter `T` and returns a value of type `T`.
+
+**Mapped Types**: In TypeScript, mapped types are a way to create new types by transforming existing types. Mapped types are used to create a new type by applying a transformation to an existing type. For example, `type MappedType<T> = { [P in keyof T]: T[P] }` is a mapped type that takes a type `T` and creates a new type with the same properties as `T`, but with different types.
+
+**Context**: In your case, the context is the scope of the method that needs to be partially recursive. The context includes the method's parameters, local variables, and the surrounding code that calls the method.
+
+Now, let's create an example of a partially recursive method that uses generics and mapped types:
+```typescript
+interface NestedValue<T> {
+  value: T;
+  children: NestedValue<T>[];
+}
+
+function recursiveMethod<T>(value: NestedValue<T>): T[] {
+  const result: T[] = [];
+
+  function recursiveHelper(currentValue: NestedValue<T>) {
+    result.push(currentValue.value);
+
+    if (currentValue.children.length > 0) {
+      currentValue.children.forEach((child) => recursiveHelper(child));
+    }
+  }
+
+  recursiveHelper(value);
+
+  return result;
+}
+
+// Example usage:
+const nestedValue: NestedValue<number> = {
+  value: 1,
+  children: [
+    {
+      value: 2,
+      children: [
+        {
+          value: 3,
+          children: [],
+        },
+      ],
+    },
+    {
+      value: 4,
+      children: [],
+    },
+  ],
+};
+
+const result = recursiveMethod(nestedValue); // [1, 2, 3, 4]
+```
+In this example, the `recursiveMethod` function takes a `NestedValue<T>` object as an argument, where `T` is a type parameter. The function uses a recursive helper function to traverse the nested structure and collect the values in an array. The `recursiveHelper` function calls itself recursively until it reaches the leaf nodes of the nested structure.
+
+The `mapped type` concept is not explicitly used in this example, but it could be used to create a new type that represents the flattened array of values. For example:
+```typescript
+type FlattenedType<T> = {
+  [P in keyof T]: T[P] extends NestedValue<infer U> ? U : T[P];
+}[keyof T][];
+
+const result: FlattenedType<typeof nestedValue> = recursiveMethod(nestedValue);
+```
+This would create a new type `FlattenedType` that represents the flattened array of values, where each element is of type `U` (the type of the values in the nested structure).
