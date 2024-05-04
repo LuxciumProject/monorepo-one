@@ -14,8 +14,16 @@
  */
 module.exports = {
   hooks: {
-    readPackage
-  }
+    readPackage(packageJson) {
+      if (
+        packageJson.dependencies &&
+        packageJson.dependencies['@langchain/core']
+      ) {
+        packageJson.dependencies['@langchain/core'] = '~0.1.54';
+      }
+      return packageJson;
+    },
+  },
 };
 
 /**
@@ -27,7 +35,6 @@ module.exports = {
  * The return value is the updated object.
  */
 function readPackage(packageJson, context) {
-
   // // The karma types have a missing dependency on typings from the log4js package.
   // if (packageJson.name === '@types/karma') {
   //  context.log('Fixed up dependencies for @types/karma');
