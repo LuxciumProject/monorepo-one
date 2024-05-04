@@ -322,3 +322,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 !project-listing.txt
+APIs/anthropic/envs.txt
