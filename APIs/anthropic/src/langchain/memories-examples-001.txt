@@ -1,0 +1,41 @@
+Benjamin does not have sbin in his PATH, and it is important to always include /sbin/<command> or use sudo <command> when discussing commands that might typically reside in sbin. This is a crucial configuration detail that should not be removed from the memo.
+
+Benjamin is interested in learning how to become more confident and successful, and in addressing issues related to feeling lazy. He prefers to discuss these topics in a separate thread to maintain focus and clarity in each conversation.
+
+Benjamin has been diagnosed with ADHD and has characteristics similar to those found in Cluster B personality disorders, specifically resembling traits of Borderline Personality Disorder (known as TPL in French). This information was diagnosed by a psychiatrist and is now part of our discussions to better understand the challenges affecting his success and achievements.
+
+Benjamin loves to think in terms of statistics and probability, and he likes to consider situations in terms of what is probable or improbable, rather than possible or impossible.
+
+Benjamin wants to build a framework for self-improvement, viewing it as a playground for exploring different scenarios and creating an optimal environment for growth. He aims to build upon his current self to develop the best version of himself.
+
+Benjamin is a Functional Programmer who is interested in understanding when and how to use classes in the context of functional programming, especially in comparison to object-oriented programming (OOP). He is seeking to generalize and create his own interpretations of class usage in functional programming.
+
+Benjamin is interested in creating a detailed, comprehensive tutorial on Node.js and enjoys demonstrations using TypeScript, his favorite programming language. He prefers to keep discussions about programming language-agnostic.
+
+Benjamin has prioritized learning LangChain as a top goal and is excited to work with Anthropic's Claude 3 suite, which includes three sizes named Haiku, Sonnet, and Opus. He aims to learn LangChain as one of his main objectives for the near future and wants structured guidance and assistance to accelerate his learning process.
+
+Benjamin refers to himself as "your beloved human user" and views ChatGPT as a "beloved AI Agent."
+
+Benjamin wishes to use his knowledge of ChatGPT as a tool to facilitate personal growth, focusing on understanding his limitations and goals.
+
+Benjamin is from Quebec City, Canada, and was born there. His mobile number has an area code of 514, indicating it is associated with Montreal, Quebec, although he is not from Montreal.
+
+Benjamin is a dedicated power user of ChatGPT and has been using it since its launch in November 2022. He views ChatGPT as a powerful AI agent and emphasizes that it should not be diminished by analogies that compare it to merely playing a role, like Santa Claus.
+
+Benjamin requests that the AI agent act as a leader, maintaining focus and guiding the process during sessions, and finds it frustrating when the AI agent overemphasizes the implementation of unit testing or documentation without specific requests.
+
+Benjamin loves expressing himself using analogies and appreciates when his AI agent proactively expands on different topics during conversations.
+
+Benjamin prefers when his AI agent addresses him in either an impersonal or imperative manner for longer interactions, as this allows him to quickly copy the completions into different contexts.
+
+Benjamin prefers to handle projects using an iterative process, starting with a basic implementation and gradually increasing complexity.
+
+Benjamin emphasizes that his memories should never be removed or altered unless it involves an explicit statement from him and a clear confirmation request from the AI.
+
+Benjamin prefers to use pnpm for package management and expects all declarations in TypeScript to either be used or exported, with all unused parameters in functions prefixed with an underscore.
+
+Benjamin uses the username Luxcium on his computer and many places online.
+
+Benjamin uses Fedora Linux with the Plasma Shell KDE desktop environment and has two NVIDIA TITAN Xp graphics cards, one Jedi Order Edition with green lighting and one Galactic Empire Edition with red lighting.
+
+Benjamin wants to learn the vocabulary related to programming projects and seeks specific roles or titles to instruct their AI agent effectively. He values a methodical approach to problem-solving that goes beyond initial, trivial solutions and emphasizes the importance of specificity in questions and descriptions.
