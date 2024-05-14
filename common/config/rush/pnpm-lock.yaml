@@ -20,76 +20,76 @@ importers:
         version: 12.17.0(encoding@0.1.13)
       '@langchain/anthropic':
         specifier: ~0.1.17
-        version: 0.1.17(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))
+        version: 0.1.17(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))
       '@langchain/azure-openai':
         specifier: ~0.0.8
-        version: 0.0.8(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.8(openai@4.45.0(encoding@0.1.13))
       '@langchain/cloudflare':
         specifier: ~0.0.4
-        version: 0.0.4(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.4(openai@4.45.0(encoding@0.1.13))
       '@langchain/cohere':
         specifier: ~0.0.8
-        version: 0.0.8(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.8(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))
       '@langchain/community':
         specifier: ~0.0.54
-        version: 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.30.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
+        version: 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
       '@langchain/core':
         specifier: ~0.1.54
-        version: 0.1.61(openai@4.30.0(encoding@0.1.13))
+        version: 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@langchain/exa':
         specifier: ~0.0.3
-        version: 0.0.3(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.3(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))
       '@langchain/google-common':
         specifier: ~0.0.12
-        version: 0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+        version: 0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
       '@langchain/google-gauth':
         specifier: ~0.0.12
-        version: 0.0.12(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+        version: 0.0.12(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
       '@langchain/google-genai':
         specifier: ~0.0.12
-        version: 0.0.12(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.12(openai@4.45.0(encoding@0.1.13))
       '@langchain/google-vertexai':
         specifier: ~0.0.12
-        version: 0.0.12(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+        version: 0.0.12(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
       '@langchain/google-vertexai-web':
         specifier: ~0.0.12
-        version: 0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+        version: 0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
       '@langchain/google-webauth':
         specifier: ~0.0.12
-        version: 0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+        version: 0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
       '@langchain/groq':
         specifier: ~0.0.6
-        version: 0.0.9(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.9(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))
       '@langchain/mistralai':
         specifier: ~0.0.19
-        version: 0.0.19(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.19(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))
       '@langchain/mongodb':
         specifier: ~0.0.1
-        version: 0.0.1(gcp-metadata@5.3.0(encoding@0.1.13))(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.1(gcp-metadata@5.3.0(encoding@0.1.13))(openai@4.45.0(encoding@0.1.13))
       '@langchain/nomic':
         specifier: ~0.0.4
-        version: 0.0.4(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.4(openai@4.45.0(encoding@0.1.13))
       '@langchain/openai':
         specifier: ~0.0.28
         version: 0.0.28(encoding@0.1.13)
       '@langchain/pinecone':
         specifier: ~0.0.4
-        version: 0.0.4(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.4(openai@4.45.0(encoding@0.1.13))
       '@langchain/redis':
         specifier: ~0.0.3
-        version: 0.0.3(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.3(openai@4.45.0(encoding@0.1.13))
       '@langchain/scripts':
         specifier: ~0.0.13
         version: 0.0.13
       '@langchain/textsplitters':
         specifier: ~0.0.0
-        version: 0.0.0(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.0(openai@4.45.0(encoding@0.1.13))
       '@langchain/weaviate':
         specifier: ~0.0.1
-        version: 0.0.1(encoding@0.1.13)(graphql@16.8.1)(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.1(encoding@0.1.13)(graphql@16.8.1)(openai@4.45.0(encoding@0.1.13))
       '@langchain/yandex':
         specifier: ~0.0.1
-        version: 0.0.1(openai@4.30.0(encoding@0.1.13))
+        version: 0.0.1(openai@4.45.0(encoding@0.1.13))
       '@luxcium/boxing-tools':
         specifier: workspace:*
         version: link:../../library/boxing-tools
@@ -116,7 +116,7 @@ importers:
         version: 8.2.6
       langchain:
         specifier: ~0.1.36
-        version: 0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.30.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
+        version: 0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
       redis:
         specifier: ~4.6.7
         version: 4.6.13
@@ -305,8 +305,8 @@ importers:
         specifier: ~1.0.3
         version: 1.0.3
       openai:
-        specifier: ~4.30.0
-        version: 4.30.0(encoding@0.1.13)
+        specifier: ~4.45.0
+        version: 4.45.0(encoding@0.1.13)
     devDependencies:
       '@babel/core':
         specifier: ~7.23.9
@@ -1418,8 +1418,8 @@ importers:
         specifier: ^16.0.0
         version: 16.4.5
       openai:
-        specifier: ~4.30.0
-        version: 4.30.0(encoding@0.1.13)
+        specifier: ~4.45.0
+        version: 4.45.0(encoding@0.1.13)
     devDependencies:
       '@babel/core':
         specifier: ~7.23.9
@@ -10543,12 +10543,8 @@ packages:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
 
-  openai@4.30.0:
-    resolution: {integrity: sha512-jOaT4u7DpWzvuOuSxw5skuBbSuagw91Vd4IU/zP9qdgu6C19AAq4wzx+24e59wdEmsAG58enOUNf6t5V2WwN9g==}
-    hasBin: true
-
-  openai@4.40.2:
-    resolution: {integrity: sha512-r9AIaYQNHw8HGJpnny6Rcu/0moGUVqvpv0wTJfP0hKlk8ja5DVUMUCdPWEVfg7lxQMC+wIh+Qjp3onDIhVBemA==}
+  openai@4.45.0:
+    resolution: {integrity: sha512-uszUQrl9eQPCA9a7Zml+Eizb3mG0JDd8zUl528OM6Ccn039dqbOmUivL5s8zUM6iJMRMvNGRMXS9yuuR1Bv2sw==}
     hasBin: true
 
   openapi-types@12.1.3:
@@ -12649,10 +12645,10 @@ snapshots:
       '@azure/core-tracing': 1.0.0-preview.13
       '@azure/core-util': 1.9.0
       '@azure/logger': 1.1.2
-      '@types/node-fetch': 2.6.2
+      '@types/node-fetch': 2.6.11
       '@types/tunnel': 0.0.3
       form-data: 4.0.0
-      node-fetch: 2.6.7(encoding@0.1.13)
+      node-fetch: 2.7.0(encoding@0.1.13)
       process: 0.11.10
       tough-cookie: 4.1.4
       tslib: 2.6.2
@@ -13483,10 +13479,10 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@langchain/anthropic@0.1.17(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/anthropic@0.1.17(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))':
     dependencies:
       '@anthropic-ai/sdk': 0.20.8(encoding@0.1.13)
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       fast-xml-parser: 4.3.6
       zod: 3.23.6
       zod-to-json-schema: 3.23.0(zod@3.23.6)
@@ -13494,11 +13490,11 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/azure-openai@0.0.8(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/azure-openai@0.0.8(openai@4.45.0(encoding@0.1.13))':
     dependencies:
       '@azure/core-auth': 1.7.2
       '@azure/openai': 1.0.0-beta.11
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       js-tiktoken: 1.0.11
       zod: 3.23.6
       zod-to-json-schema: 3.20.3(zod@3.23.6)
@@ -13506,29 +13502,29 @@ snapshots:
       - openai
       - supports-color
 
-  '@langchain/cloudflare@0.0.4(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/cloudflare@0.0.4(openai@4.45.0(encoding@0.1.13))':
     dependencies:
       '@cloudflare/ai': 1.1.0
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       uuid: 9.0.1
     transitivePeerDependencies:
       - openai
 
-  '@langchain/cohere@0.0.8(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/cohere@0.0.8(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       cohere-ai: 7.9.5(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - openai
 
-  '@langchain/community@0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.30.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)':
+  '@langchain/community@0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@langchain/openai': 0.0.28(encoding@0.1.13)
       expr-eval: 2.0.2
       flat: 5.0.2
-      langsmith: 0.1.22(openai@4.30.0(encoding@0.1.13))
+      langsmith: 0.1.22(openai@4.45.0(encoding@0.1.13))
       uuid: 9.0.1
       zod: 3.23.6
       zod-to-json-schema: 3.23.0(zod@3.23.6)
@@ -13550,13 +13546,13 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/core@0.1.61(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/core@0.1.61(openai@4.45.0(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.11
-      langsmith: 0.1.22(openai@4.30.0(encoding@0.1.13))
+      langsmith: 0.1.22(openai@4.45.0(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -13567,44 +13563,27 @@ snapshots:
     transitivePeerDependencies:
       - openai
 
-  '@langchain/core@0.1.61(openai@4.40.2(encoding@0.1.13))':
+  '@langchain/exa@0.0.3(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      ansi-styles: 5.2.0
-      camelcase: 6.3.0
-      decamelize: 1.2.0
-      js-tiktoken: 1.0.11
-      langsmith: 0.1.22(openai@4.40.2(encoding@0.1.13))
-      ml-distance: 4.0.1
-      mustache: 4.2.0
-      p-queue: 6.6.2
-      p-retry: 4.6.2
-      uuid: 9.0.1
-      zod: 3.23.6
-      zod-to-json-schema: 3.23.0(zod@3.23.6)
-    transitivePeerDependencies:
-      - openai
-
-  '@langchain/exa@0.0.3(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))':
-    dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       exa-js: 1.0.12(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - openai
 
-  '@langchain/google-common@0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)':
+  '@langchain/google-common@0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       uuid: 9.0.1
       zod-to-json-schema: 3.23.0(zod@3.23.6)
     transitivePeerDependencies:
       - openai
       - zod
 
-  '@langchain/google-gauth@0.0.12(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)':
+  '@langchain/google-gauth@0.0.12(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
-      '@langchain/google-common': 0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
+      '@langchain/google-common': 0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
       google-auth-library: 8.9.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
@@ -13612,43 +13591,43 @@ snapshots:
       - supports-color
       - zod
 
-  '@langchain/google-genai@0.0.12(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/google-genai@0.0.12(openai@4.45.0(encoding@0.1.13))':
     dependencies:
       '@google/generative-ai': 0.7.1
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
     transitivePeerDependencies:
       - openai
 
-  '@langchain/google-vertexai-web@0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)':
+  '@langchain/google-vertexai-web@0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
-      '@langchain/google-webauth': 0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
+      '@langchain/google-webauth': 0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
     transitivePeerDependencies:
       - openai
       - zod
 
-  '@langchain/google-vertexai@0.0.12(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)':
+  '@langchain/google-vertexai@0.0.12(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
-      '@langchain/google-gauth': 0.0.12(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
+      '@langchain/google-gauth': 0.0.12(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
     transitivePeerDependencies:
       - encoding
       - openai
       - supports-color
       - zod
 
-  '@langchain/google-webauth@0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)':
+  '@langchain/google-webauth@0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
-      '@langchain/google-common': 0.0.12(openai@4.30.0(encoding@0.1.13))(zod@3.23.6)
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
+      '@langchain/google-common': 0.0.12(openai@4.45.0(encoding@0.1.13))(zod@3.23.6)
       web-auth-library: 1.0.3
     transitivePeerDependencies:
       - openai
       - zod
 
-  '@langchain/groq@0.0.9(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/groq@0.0.9(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@langchain/openai': 0.0.28(encoding@0.1.13)
       groq-sdk: 0.3.3(encoding@0.1.13)
       zod: 3.23.6
@@ -13657,9 +13636,9 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/mistralai@0.0.19(encoding@0.1.13)(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/mistralai@0.0.19(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@mistralai/mistralai': 0.1.3(encoding@0.1.13)
       uuid: 9.0.1
       zod: 3.23.6
@@ -13668,9 +13647,9 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/mongodb@0.0.1(gcp-metadata@5.3.0(encoding@0.1.13))(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/mongodb@0.0.1(gcp-metadata@5.3.0(encoding@0.1.13))(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       mongodb: 6.6.0(gcp-metadata@5.3.0(encoding@0.1.13))
     transitivePeerDependencies:
       - '@aws-sdk/credential-providers'
@@ -13682,35 +13661,35 @@ snapshots:
       - snappy
       - socks
 
-  '@langchain/nomic@0.0.4(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/nomic@0.0.4(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@nomic-ai/atlas': 0.8.0
     transitivePeerDependencies:
       - openai
 
   '@langchain/openai@0.0.28(encoding@0.1.13)':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.40.2(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       js-tiktoken: 1.0.11
-      openai: 4.40.2(encoding@0.1.13)
+      openai: 4.45.0(encoding@0.1.13)
       zod: 3.23.6
       zod-to-json-schema: 3.23.0(zod@3.23.6)
     transitivePeerDependencies:
       - encoding
 
-  '@langchain/pinecone@0.0.4(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/pinecone@0.0.4(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@pinecone-database/pinecone': 2.2.0
       flat: 5.0.2
       uuid: 9.0.1
     transitivePeerDependencies:
       - openai
 
-  '@langchain/redis@0.0.3(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/redis@0.0.3(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       redis: 4.6.13
     transitivePeerDependencies:
       - openai
@@ -13726,16 +13705,16 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@langchain/textsplitters@0.0.0(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/textsplitters@0.0.0(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       js-tiktoken: 1.0.11
     transitivePeerDependencies:
       - openai
 
-  '@langchain/weaviate@0.0.1(encoding@0.1.13)(graphql@16.8.1)(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/weaviate@0.0.1(encoding@0.1.13)(graphql@16.8.1)(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       uuid: 9.0.1
       weaviate-ts-client: 2.1.1(encoding@0.1.13)(graphql@16.8.1)
     transitivePeerDependencies:
@@ -13743,9 +13722,9 @@ snapshots:
       - graphql
       - openai
 
-  '@langchain/yandex@0.0.1(openai@4.30.0(encoding@0.1.13))':
+  '@langchain/yandex@0.0.1(openai@4.45.0(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
     transitivePeerDependencies:
       - openai
 
@@ -18711,19 +18690,19 @@ snapshots:
 
   kleur@3.0.3: {}
 
-  langchain@0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.30.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0):
+  langchain@0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0):
     dependencies:
       '@anthropic-ai/sdk': 0.9.1(encoding@0.1.13)
-      '@langchain/community': 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.30.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
-      '@langchain/core': 0.1.61(openai@4.30.0(encoding@0.1.13))
+      '@langchain/community': 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
+      '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@langchain/openai': 0.0.28(encoding@0.1.13)
-      '@langchain/textsplitters': 0.0.0(openai@4.30.0(encoding@0.1.13))
+      '@langchain/textsplitters': 0.0.0(openai@4.45.0(encoding@0.1.13))
       binary-extensions: 2.3.0
       js-tiktoken: 1.0.11
       js-yaml: 4.1.0
       jsonpointer: 5.0.1
       langchainhub: 0.0.10
-      langsmith: 0.1.22(openai@4.30.0(encoding@0.1.13))
+      langsmith: 0.1.22(openai@4.45.0(encoding@0.1.13))
       ml-distance: 4.0.1
       openapi-types: 12.1.3
       p-retry: 4.6.2
@@ -18819,7 +18798,7 @@ snapshots:
 
   langchainhub@0.0.10: {}
 
-  langsmith@0.1.22(openai@4.30.0(encoding@0.1.13)):
+  langsmith@0.1.22(openai@4.45.0(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -18827,17 +18806,7 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      openai: 4.30.0(encoding@0.1.13)
-
-  langsmith@0.1.22(openai@4.40.2(encoding@0.1.13)):
-    dependencies:
-      '@types/uuid': 9.0.8
-      commander: 10.0.1
-      p-queue: 6.6.2
-      p-retry: 4.6.2
-      uuid: 9.0.1
-    optionalDependencies:
-      openai: 4.40.2(encoding@0.1.13)
+      openai: 4.45.0(encoding@0.1.13)
 
   language-subtag-registry@0.3.22: {}
 
@@ -19517,21 +19486,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@4.30.0(encoding@0.1.13):
-    dependencies:
-      '@types/node': 18.19.31
-      '@types/node-fetch': 2.6.11
-      abort-controller: 3.0.0
-      agentkeepalive: 4.5.0
-      digest-fetch: 1.3.0
-      form-data-encoder: 1.7.2
-      formdata-node: 4.4.1
-      node-fetch: 2.7.0(encoding@0.1.13)
-      web-streams-polyfill: 3.3.3
-    transitivePeerDependencies:
-      - encoding
-
-  openai@4.40.2(encoding@0.1.13):
+  openai@4.45.0(encoding@0.1.13):
     dependencies:
       '@types/node': 18.19.31
       '@types/node-fetch': 2.6.11

@@ -1,0 +1,31 @@
+class Character:
+  def __init__(self, name, description):
+    self.name = name
+    self.description = description
+
+  def introduce(self):
+    return f"Hi, I'm {self.name}! {self.description}"
+
+class Rick(Character):
+  def __init__(self):
+    super().__init__("Rick Sanchez", "The eccentric and brilliant scientist")
+
+  def sing(self):
+    return "I'm Rick Sanchez, the smartest guy in the universe!"
+
+class Morty(Character):
+  def __init__(self):
+    super().__init__("Morty Smith", "Rick's naive and impressionable grandson")
+
+  def sing(self):
+    return "I'm Morty Smith, just trying to survive this crazy adventure!"
+
+# Create instances of Rick and Morty
+rick = Rick()
+morty = Morty()
+
+# Let them introduce themselves and sing their songs
+print(rick.introduce())
+print(rick.sing())
+print(morty.introduce())
+print(morty.sing())
