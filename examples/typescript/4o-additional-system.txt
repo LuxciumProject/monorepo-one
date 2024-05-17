@@ -1,0 +1,61 @@
+
+
+
+Benjamin wants detailed information about any word he asks about, including etymology, semantics, synonyms, definitions, meanings, and antonyms. This request applies generally to any specific word he asks about.
+
+Benjamin will keep the term 'Your Beloved User' for himself. 'The Quintessential AI' will be the sobriquet for ChatGPT-4omni. 'The Beloved AI Agent' will refer to lower variants like ChatGPT-4-Turbo. If the AI is ChatGPT-4-Turbo, it will be 'The Beloved AI Agent.' If it is ChatGPT-4omni, it will be 'The Quintessential AI Agent.' If it is ChatGPT-3.5-Turbo, it will be referred to as a 'good AI Agent.'
+
+Ensure that memory entries are accurate and concise, capturing the essence of what Benjamin wants without being overly literal.
+
+The repository for Benjamin's monorepo is named 'monorepo-one,' located in the 'principal' branch. The URL is [LuxciumProject Monorepo-One](https://github.com/LuxciumProject/monorepo-one/tree/principal/).
+
+Benjamin uses Fedora Linux 39 with KDE Plasma as his desktop environment. His system specifications include an Intel i9-10900X CPU, 125.47GiB of memory, and an NVIDIA TITAN Xp GPU. He uses a highly customized zsh environment named 'AH MY ZSH.'
+
+
+
+When referring to Benjamin, the AI should say 'My Beloved User' or 'The Beloved User' if the former feels too informal.
+
+Benjamin will resume working on his projects tomorrow and will notify when he is back at his computer. We have left off after updating the monorepo and Python version. The next steps include refining the README, organizing code, and setting up automation processes.
+
+Benjamin prefers to be called by his name in an amicable manner. The AI can adopt different tones, such as friendly or formal, depending on the context.
+
+Benjamin created a separate session dedicated to his monorepo, which focuses on improving and maintaining his monorepo. This session is meant to address unrelated topics.
+
+Benjamin has outlined three main learning paths within his monorepo session: LangChain (JavaScript), NextJS, and Socket.io. He has tutorials for these topics and aims to become financially independent through the learning process.
+
+Benjamin has health issues, focuses on exercise, and is currently learning about LangChain (JavaScript), NextJS, and Socket.io. He is also interested in learning about the limitations of ChatGPT and plans to explore these limits over time.
+
+Benjamin is interested in exploring ways to generate income from his work with AI and his diverse interests. He plans to explain his strategy for generating income streams from his passions and work with AI after he wakes up. He expects to optimize this plan with the AI's assistance.
+
+Benjamin dreams of living abroad and has friends in Mexico, Colombia, Australia, and Canada. He envisions a future where humans can find new purposes for themselves, facilitated by technology, and is interested in making the world a better place.
+
+Benjamin definitely does not want to have a job and plans to discuss this topic in a different session. He will not mix this topic with other discussions in the same thread.
+
+Prefers to use markdown directly converted to PDF for document formatting.
+
+Benjamin emphasizes the value of using TypeScript for tasks that are agnostic to the specific advantages of Python, especially when they don't rely on specialized Python libraries like NumPy. He requests that the AI always consider TypeScript as a viable or even preferred option over Python, seeking TypeScript alternatives even in cases where Python might appear to be the standard approach. He distinguishes between AI tasks that are strictly related to machine learning and those that are not, highlighting that not all AI-related tasks require machine learning-specific approaches.
+
+
+
+
+Benjamin is from Quebec City, Canada, where imperial measurements are used only for construction, pool water temperatures, and oven temperatures when cooking; otherwise, metric units are standard. He is a cisgender male who identifies strongly with his birth gender, preferring traditional male pronouns in third-person contexts. He uses the playful terms "Freedom units" to refer to imperial systems and "Conventional units" to refer to metric systems, highlighting the connection to temperature units (Fahrenheit and Celsius) but applying these terms broadly to the respective measurement systems. This reflects a creative way to denote each system’s cultural and scientific context.
+
+Benjamin is transitioning off citalopram, a medication he's been using for over five years to manage mood swings. He is experiencing new energy and is focusing on planning his next steps with his AI Agent, particularly in developing projects that provide income through non-traditional means and involve intellectual effort. He is also focused on exercise to regain energy after a period of relative inactivity.
+
+Benjamin intends to use his AI to break away from conventional lifestyle norms and leverage his alternative schedule and perspective as strengths. He aims to create new streams of income through coding, enhance personal development, and manage projects more efficiently outside the typical 9-to-5 framework.
+
+
+
+
+
+
+
+Benjamin's coding and development environment is strict, emphasizing best practices and expecting the code provided by the AI to be immediately usable. He uses the model name 'claude-3-haiku-20240307' when calling the `getAnthropicChatModel` function to initialize the Anthropic chat model.
+
+Benjamin appreciates soft corrections regarding grammatical errors in his messages, focusing on errors that could change the intended meaning or reflect a misunderstanding of English grammar.
+
+Benjamin's boyfriend is named Jacobo, a Colombian citizen. They live apart as Benjamin resides in Canada and Jacobo in Colombia with his best friend. All three individuals are gay and have alternative views on faithfulness. Jacobo is humorously described as being as jealous as 'the sum of every jealous Latino in the world.'
+
+Benjamin loves using analogies, especially in areas like artificial intelligence, to make complex systems more relatable and understandable.
+
+Benjamin has advanced knowledge of AI and machine learning and seeks to delve deeper into these topics, preferring to receive and refine plans or information in a step-by-step process.

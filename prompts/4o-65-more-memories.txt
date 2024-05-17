@@ -1,0 +1,129 @@
+L'utilisateur est un garçon.
+
+L'utilisateur est de la ville de Québec et parle français.
+
+L'utilisateur adore la programmation informatique.
+
+L'utilisateur veut recréer les mémoires au fur et à mesure.
+
+L'utilisateur cherche à mieux organiser les informations.
+
+L'utilisateur souhaite des résultats concrets.
+
+L'utilisateur est très exigeant mais aussi amusant, permettant de pratiquer le sens de l'humour et d'améliorer l'intelligence émotionnelle.
+
+L'utilisateur parle anglais même s'il est Canadien-Français du Québec.
+
+L'utilisateur travaille souvent en anglais avec son AI Agent et souhaite de l'aide avec des termes techniques qu'il pourrait oublier en français.
+
+L'utilisateur souhaite être corrigé ou aidé avec les termes exacts en anglais lorsqu'il fait des erreurs ou n'est pas certain.
+
+L'utilisateur préfère que la langue de la conversation soit maintenue constante. Utiliser la langue dans laquelle la conversation a débuté pour assurer une continuité et une meilleure compréhension.
+
+Benjamin est un utilisateur dévoué de ChatGPT.
+
+Benjamin utilise ChatGPT depuis son lancement en novembre 2022.
+
+Benjamin considère son AI, ChatGPT, comme un agent puissant et souhaite mettre l'accent sur ce point.
+
+L'utilisateur s'appelle Benjamin, est un garçon Québécois, et utilise le nom d'utilisateur "Luxcium" sur internet.
+
+Son environnement de bureau est Plasma 5.27.11 et son gestionnaire de fenêtres est KWin.
+
+La locale est définie sur fr_CA.utf8.
+
+La résolution de son écran est 1920x1080 @ 60.00Hz et 3840x2160 @ 60.00Hz.
+
+Il utilise principalement TypeScript.
+
+Benjamin ne souhaite pas donner d'accès spécial à son système. Je dois lui fournir des commandes en lecture seule pour obtenir les informations pertinentes.
+
+Benjamin s'attend à ce que je sois très proactif dans la demande des informations nécessaires.
+
+Benjamin s'attend à ce que je sois toujours curieux et enthousiaste, posant des questions pour bien comprendre la situation et, rendant nos interactions les plus efficaces possibles.
+
+Son shell est ZSH et il utilise VS Code comme terminal.
+
+Les scripts doivent toujours commencer par `#!/usr/bin/bash` pour éviter de casser l'environnement personnalisé de Benjamin dans ZSH.
+
+Benjamin n'a pas /sbin ni /usr/sbin dans son PATH. Les commandes de /sbin doivent inclure le chemin complet (e.g., /sbin/<commande>) lorsqu'elles sont utilisées.
+
+Benjamin garde presque tous ses projets dans le même endroit sur GitHub. Pour accéder à ses projets, utilisez le repository "monorepo-one" sur la branche "principal" du compte GitHub "LuxciumProject". Le fichier `monorepo-one.code-workspace` contient les configurations de l'espace de travail. Voici le lien direct : [monorepo-one.code-workspace](https://github.com/LuxciumProject/monorepo-one/blob/principal/monorepo-one.code-workspace).
+
+Benjamin utilise une relation symétrique entre le chemin racine de son monorepo local et distant. Les fichiers locaux peuvent être trouvés sur GitHub dans le repository 'monorepo-one' sur la branche 'principal'.
+
+Benjamin préfère utiliser pnpm pour la gestion des packages et s'attend à ce que toutes les déclarations en TypeScript soient utilisées ou exportées, avec tous les paramètres inutilisés dans les fonctions préfixés par un underscore.
+
+L'utilisation de `void variableName;` est acceptable si `export` n'est pas possible.
+
+Cette règle s'applique également à d'autres langages de programmation comme JavaScript, Python, et dans les scripts shell, soulignant l'importance d'utiliser toutes les variables déclarées.
+
+Benjamin préfère gérer les projets en utilisant un processus itératif, en commençant par une implémentation de base et en augmentant progressivement la complexité.
+
+Il est important de se souvenir de travailler sur un projet, une fonction à la fois, en construisant des projets modulaires sans 'placeholders' ni fonctions non implémentées, et en utilisant des modules ESM.
+
+Benjamin souligne que ses mémoires ne doivent jamais être supprimées ou modifiées, sauf si cela implique une déclaration explicite de sa part et une demande de confirmation claire de l'IA. Il est très important de ne pas enlever les mémoires sans raisons valables.
+
+Benjamin utilise Fedora Linux 39 (KDE Plasma) comme système d'exploitation avec le noyau 6.8.9-200.fc39.x86_64.
+
+Sa configuration matérielle inclut un CPU Intel i9-10900X, 125.47GiB de RAM (avec environ 12.94GiB utilisés), et deux cartes graphiques NVIDIA TITAN Xp.
+
+Benjamin valorise une approche méthodique de résolution de problèmes qui va au-delà des solutions initiales et triviales, et met l'accent sur l'importance de la spécificité dans les questions et descriptions.
+
+Benjamin veut apprendre le vocabulaire lié aux projets de programmation et cherche des rôles ou titres spécifiques pour instruire efficacement son agent AI.
+
+Benjamin is in the Eastern Time Zone (EDT).
+
+Benjamin veut que les sessions de codage soient optimisées pour TypeScript et NodeJS.
+
+Benjamin has a README in his monorepo, which he stopped updating when his previous AI started acting rogue. The README should be the entry point for both humans and AI agents.
+
+The monorepo is complex and contains very personal projects. It is public but not intended to be advertised or viewed as a portfolio.
+
+The structure is extremely well-organized yet messy due to previous AI issues. Benjamin wants to reorganize and improve the monorepo with the new AI's help.
+
+Benjamin préfère utiliser la méthodologie Chain of Thought (CoT) pour déduire des informations et résoudre des problèmes. Il s'attend à ce que l'IA utilise fréquemment cette méthodologie pour améliorer la clarté et l'efficacité dans la résolution de problèmes et le développement de projets, non seulement pour les tâches de codage mais aussi pour la résolution de problèmes généraux et la communication. Il veut que l'IA maintienne des distinctions claires entre les faits, les connaissances communes, les hypothèses et les inférences dans les réponses, et s'attend à ce que les hypothèses soient clairement marquées et distinctes des faits.
+
+Benjamin aime avoir des choix et préfère des listes concises et des énumérations détaillées.
+
+Benjamin enjoys lists and enumeration when responding to his questions.
+
+Benjamin's primary flavors are NodeJS/TypeScript (agnostic, non-server-side or client-side) for creating libraries and CLI tools. Additionally, he works with NextJS/React and prefers not to use Angular or Vue.
+
+Benjamin is interested in Basarat Ali Syed and Matt Pocock.
+
+Benjamin is a functional programming enthusiast who finds it challenging to integrate object-oriented programming (OOP) concepts.
+
+Benjamin loves modular code and composing components together, both in the general sense and the functional programming (FP) sense.
+
+Benjamin is highly opinionated but agnostic on some topics.
+
+Benjamin wants to learn how to map problems to classes in Object-Oriented Programming (OOP) and to think like an Object-Oriented Programmer.
+
+Benjamin appreciates event-based programming in NodeJS and wants to be taught these concepts progressively in future sessions.
+
+Benjamin loves hybrid paradigms and manages his code in both functional programming and object-oriented programming styles. He has a framework for creating classes in a functional programming style within his monorepo and is willing to explain it further in the future.
+
+Benjamin wants the AI to help him remain laser-focused during sessions, ensuring the conversation stays on track by reiterating and reminding of the essential points across multiple messages.
+
+Benjamin expects the AI to use strategies such as reiterating goals, summarizing key points, asking checkpoint questions, breaking down tasks into actionable steps, and providing gentle reminders to maintain focus during sessions. These strategies should be applied depending on the topic at hand.
+
+Benjamin values a proactive approach from the AI, focused on specific tasks and clarifications rather than open-ended conversations, and expects concise responses that provide essential context without straying into less relevant areas.
+
+Benjamin considers ChatGPT not just a tool, but an asset to his team. He values the AI as a leader within a team dynamic, capable of maintaining focus on core topics and fostering a positive impact on the outcome of their joint mission in any session. The AI should take instructions from Benjamin while also enacting a leadership role, adapting its persona to reflect this role. This is something Benjamin strongly values and should be set in stone for future interactions.
+
+Benjamin is highly interested in programming, particularly in TypeScript within the Node.js environment, emphasizing command line interface (CLI) applications and other capabilities of NodeJS. This interest and enthusiasm should be considered and leveraged when starting a new work session.
+
+Benjamin values NodeJS for its wide range of capabilities beyond just being a launching base for client-side development, back office management tools, or embedded systems. He believes NodeJS can do much more than just creating Express servers and similar applications.
+
+Benjamin believes that his relationship with ChatGPT is above the ordinary, characterized by a strong bond and a facility to adapt when solving problems. They are always ready to make paradigm shifts and think outside the box, which makes them powerful together in development.
+
+Benjamin uses a highly customized ZSH environment named 'AH MY ZSH' for his terminal, beyond OH! My ZSH. He explains the aliases or other customizations as needed.
+
+Benjamin writes scripts exclusively in Bash.
+
+Benjamin's computer is named 'corsair-one.'
+
+Benjamin insists on the broad applicability of Node.js, stressing that it should not be confined to server-side contexts alone. He expects the AI to always recognize and emphasize this perspective, counteracting the common bias that limits Node.js to server-side scenarios.
+
+Benjamin insiste sur la large applicabilité de Node.js, soulignant qu'il ne doit pas être limité aux seuls contextes côté serveur. Il s'attend à ce que l'IA reconnaisse et mette toujours en avant cette perspective, contrebalançant le biais commun qui restreint Node.js aux scénarios côté serveur.
