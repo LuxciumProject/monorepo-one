@@ -3734,6 +3734,27 @@ importers:
         specifier: ~5.88.1
         version: 5.88.2
 
+  ../../services/image-pipeline:
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.12.8
+      eslint:
+        specifier: ^8.56
+        version: 8.57.0
+      eslint-config-prettier:
+        specifier: ~9.1.0
+        version: 9.1.0(eslint@8.57.0)
+      eslint-plugin-prettier:
+        specifier: ~5.1.3
+        version: 5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.2.5)
+      prettier:
+        specifier: ~3.2.5
+        version: 3.2.5
+      typescript:
+        specifier: ~5.4.5
+        version: 5.4.5
+
   ../../services/mongo-service:
     dependencies:
       mongoose:
@@ -15424,7 +15445,7 @@ snapshots:
 
   ajv-formats@2.1.1:
     dependencies:
-      ajv: 8.12.0
+      ajv: 8.13.0
 
   ajv-keywords@3.5.2(ajv@6.12.6):
     dependencies:
@@ -17770,7 +17791,7 @@ snapshots:
 
   ignore-walk@3.0.4:
     dependencies:
-      minimatch: 3.0.8
+      minimatch: 3.1.2
 
   ignore@5.1.9: {}
 
@@ -18849,7 +18870,7 @@ snapshots:
   load-yaml-file@0.2.0:
     dependencies:
       graceful-fs: 4.2.11
-      js-yaml: 3.13.1
+      js-yaml: 3.14.1
       pify: 4.0.1
       strip-bom: 3.0.0
 
