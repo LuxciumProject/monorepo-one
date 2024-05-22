@@ -1,0 +1,7 @@
+non tu peux aller voir sur git hub /projects/monorepo-one/prompts/API/gpt-3.5-turbo/LuxciumOne/MIPAD/blogs-atempts/IDPAC.txt c'est /projects/monorepo-one/  pour https://github.com/LuxciumProject/monorepo-one/tree/principal/ souviens toi on dois pouvoir faire ca rapidement la prochaine fois
+
+
+La traslation est la suivante:
+pour convertir depui local '/projects/monorepo-one/' vers remote 'https://github.com/LuxciumProject/monorepo-one/tree/principal/' prends la partie du lien après '/projects/monorepo-one/' et ajoutes la à 'https://github.com/LuxciumProject/monorepo-one/tree/principal/' dans notre exemple ca donne 'https://github.com/LuxciumProject/monorepo-one/tree/principal/prompts/API/gpt-3.5-turbo/LuxciumOne/MIPAD/blogs-atempts/IDPAC.txt' maintenant généralize pour tout s fichiers dans le répertoire '/projects/monorepo-one/' et tu as la solution!!!
+
+dans un lien local vers un fichier '/projects/monorepo-one/prompts/API/gpt-3.5-turbo/LuxciumOne/MIPAD/blogs-atempts/IDPAC.txt' sur github.com/LuxciumProject/monorepo-one/tree/principal/ on ajoutes '/prompts/API/gpt-3.5-turbo/LuxciumOne/MIPAD/blogs-atempts/IDPAC.txt' par exemple pour obtenir le lien complet tu peux aller voir sur git hub /projects/monorepo-one/prompts/API/gpt-3.5-turbo/LuxciumOne/MIPAD/blogs-atempts/IDPAC.txt c'est /projects/monorepo-one/  pour
