@@ -59,7 +59,7 @@ function generateSchemaRepresentation(obj: any): SchemaRepresentation {
 }
 
 // Function to analyze and process arrays within the JSON structure
-function processArray(arr: any[]): SchemaRepresentation {
+function processArray(arr: any[]): SchemaRepresentation |any {
     if (arr.length === 0) return 'EmptyArray';
 
     // Check if all elements in the array are objects and have the same structure

@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 // Understood, let's go ahead and implement the `tokenize` and `parse` functions in the `main.ts` file.
 
 // ```typescript
@@ -15,7 +16,7 @@ function tokenize(input: string): Token[] {
   let i = 0;
 
   while (i < input.length) {
-    const char = input[i];
+    let char = input[i];
 
     switch (char) {
       case '{':
