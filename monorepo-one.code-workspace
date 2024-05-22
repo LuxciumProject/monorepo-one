@@ -2298,6 +2298,10 @@
       "path": "services/rpc-worker-pool"
     },
     {
+      "name": "       💁🖼 image-pipeline",
+      "path": "services/image-pipeline"
+    },
+    {
       "name": "       💁📊 mongo-service",
       "path": "services/mongo-service"
     },
