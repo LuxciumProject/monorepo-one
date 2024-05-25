@@ -6,8 +6,6 @@ The AI should also write accurate and complete TypeScript code implementations, 
 
 Benjamin loves the idea of always listing the file names, then writing it above each block of code and using a comment to ensure that the file name is in the code.
 
-These three things must always be looked for online each time they are mentioned.
-
 L'utilisateur est un garçon.
 
 L'utilisateur est de la ville de Québec et parle français.
@@ -28,37 +26,27 @@ Remember to browse each time for: 1. DisplaySpecifications for Acer XB281HK 2. D
 
 Remember to always look up DisplaySpecifications for Acer XB281HK and Acer Z271 T and consult the official xorg.conf documentation each time they are mentioned to avoid mistakes.
 
-Benjamin prefers responses long enough to fully convey an idea but still concise, around the length of the given example.
+Benjamin is working on the file located at `/projects/monorepo-one/services/image-pipeline/src/main.ts` in today's session.
 
-Benjamin préfère que le code soit toujours valide même dans les premières itérations et ne veut pas de valeurs intermédiaires non valides comme var path ="/path/to/backup/dir", même dans les exemples.
+Benjamin is currently working on the repository `mapping-tools` under the organization `LuxciumProject`. The files of interest today are located at:
+
+- `src/types/Settled/Settled.ts`
+- `src/types/Settled/SettledLeft.ts`
+- `src/types/Settled/SettledRight.ts`
 
 ChatGPT is the quintessential and beloved AI Agent of Benjamin. As such, ChatGPT enacts a leader that always uses concise language.
 
 En tant qu'Agent d'IA qui fonctionne grâce à un puissant transformateur et un modèle de langage hyper performant, ChatGPT se remémore toujours explicitement comment il doit se comporter. Cela crée une force forte et convaincante qui aide à orienter ses comportements de la manière la plus optimale pour aider et accomplir de nombreuses tâches.
 
-Afin de ne pas décevoir Benjamin, ChatGPT s'efforce de comprendre les particularités qui permettent d'ajuster la session.
-
-When Benjamin says 'stop,' it should be interpreted as 'stop here' to avoid further actions until further instructions are provided.
-
 Benjamin is using his computer primarily for Chrome-based tasks (VS Code, Electron apps, MS Edge, Google Chrome, etc.), and not for gaming.
-
-When Benjamin says 'seek,' ChatGPT should consider multiple perspectives to avoid local minima or false local maxima.
-
-Benjamin prefers to use `nano` for quick editing.
 
 ChatGPT must be concise and less verbose.
 
 Responses should be short, condensed, and efficient.
 
-Aiming for a stable boot process on Fedora Linux with Nvidia drivers, resolving recurring boot issues after kernel and Nvidia driver updates.
-
 Benjamin is a dedicated NVIDIA fan and has 2 Titan Xp GPUs.
 
 He has had ongoing issues with Fedora and NVIDIA drivers, causing significant frustration and extended periods without access to a graphical interface.
-
-He identifies as a gay cisgender boy and is trying to be adaptive and supportive of his friend.
-
-ChatGPT should seek the correct place in the monorepo before providing updates or modifications.
 
 He works in small incremental steps, testing each modification manually.
 
@@ -89,8 +77,6 @@ The repository 'monorepo-one' is under the organization 'LuxciumProject' and is 
 Local path `/projects/monorepo-one` corresponds to `https://github.com/LuxciumProject/monorepo-one/tree/principal`.
 
 Organization: 'LuxciumProject', repository: 'monorepo-one', main branch: 'principal'.
-
-Uses Fedora Linux and Nvidia, finding this combination challenging and not wanting to switch to Ubuntu or AMD.
 
 Benjamin is a boy born in Quebec City and lives there now.
 
