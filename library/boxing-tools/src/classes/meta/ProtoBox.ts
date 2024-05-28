@@ -15,15 +15,19 @@ export abstract class ProtoBox<T> implements Unboxable<T> {
   }
 }
 
-export const valeure = <T>(value: T): T => value;
-export const _valeure = (value: string) => value[2];
+void async function MAIN() {
+  console.log(`at: MAIN from ${__filename}`);
 
-// _valeure("test");
+  const valeure = <T>(value: T): T => value;
+  const _valeure = (value: string) => value[2];
 
-console.log('s!');
+  // _valeure("test");
 
-export function test() {
-  console.log('test');
-}
+  console.log('s!');
+  function test() {
+    console.log('test');
+  }
 
-test();
+  test();
+  return void [valeure, _valeure];
+}; //();
