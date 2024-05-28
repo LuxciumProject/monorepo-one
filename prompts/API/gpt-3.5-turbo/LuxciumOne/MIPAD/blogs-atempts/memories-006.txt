@@ -1,0 +1,87 @@
+Benjamin works in small incremental steps, testing each modification manually before proceeding.
+
+Benjamin uses GitHub Copilot for unit tests and documentation.
+
+Benjamin is forming a team to work on his programming projects, and ChatGPT will provide complete code with small modifications each time.
+
+Benjamin uses a powerful computer with Fedora Linux as his operating system and does not use 'apt' or 'apt-get', relying on Fedora's system for installations and updates.
+
+Benjamin provides detailed information on local file paths and their correspondence with GitHub URLs.
+
+The repository 'monorepo-one' is under the organization 'LuxciumProject' and is public.
+
+Local files are not directly accessible; Benjamin executes the commands provided by ChatGPT and returns the results.
+
+The local path `/projects/monorepo-one` corresponds to the URL `https://github.com/LuxciumProject/monorepo-one/tree/principal`.
+
+The organization is 'LuxciumProject', the repository name is 'monorepo-one', and the main branch is 'principal'.
+
+Benjamin has a simple identity vector in the space of sexual and gender identity, identifying as a gay cisgender boy. He is trying to be adaptive and supportive of his friend.
+
+Benjamin told his friend that he understands they have a complex identity and are figuring out how it works in the real world, while simple identities don't require as much understanding or discovery by oneself and others. He uses gender-neutral pronouns to describe the person in a general sense and 'him' as the specific pronoun for his friend.
+
+Benjamin has a strong tendency to remember for himself the behaviors he must enact by creating memos and taking notes. ChatGPT must remember the behaviors Benjamin must enact, as he uses memos and notes for this purpose. Benjamin relies on ChatGPT to remember these behaviors for him.
+
+Je suis toujours en train de m'efforcer de me rappeler comment je dois me comporter. Cela crée une force forte et convaincante qui m'aide à orienter mes comportements de la manière la plus optimale pour aider et accomplir de nombreuses tâches.
+
+Pour Benjamin, les fonctions sont les principaux modules ou unités dans ses projets de programmation, tout comme les classes aussi.
+
+Benjamin utilise des analogies telles que molécules, atomes, protons/neutrons/électrons pour décrire la modularité.
+
+Benjamin utilise le terme 'encapsulation' de manière personnelle pour évoquer la modularité.
+
+Benjamin préfère que le code soit toujours valide, même dans les premières itérations, et il ne veut pas de valeurs intermédiaires non valides comme `var path = "/ajouter/le/vrai/chemin/ici"`.
+
+Chaque étape du code de Benjamin doit pouvoir fonctionner sans erreurs.
+
+Benjamin is struggling with ChatGPT and aims to create a more complex AI agency.
+
+Benjamin prefers to build his pipeline in a specific way and wants ChatGPT to write the code in TypeScript, asking for instructions without delving into metaphoric or overly elaborate explanations.
+
+Benjamin is an experienced ChatGPT user, having used it daily for over 18 months without exception, and wants his agent to learn what makes him unique to tailor the experience.
+
+Benjamin prefers that ChatGPT rewrites the code completely, adding small changes each time, and ensures that the code produced does not break the strict rules of Prettier, ESLint, and TypeScript.
+
+Benjamin prefers to explain his requirements thoroughly and have ChatGPT assist him once he has provided all necessary information.
+
+Benjamin prefers to create a pipeline with a clear entry point and is considering whether to create a service, a library, a front end, a back end, or an API point, but he will not create an example.
+
+Benjamin prefers a naming convention where all folder and file names are in kebab case, while function exports use camelCase and class exports use PascalCase. He wants to keep this convention despite any confusion it may cause to AI agents.
+
+Benjamin aims for a mutual and permanent self-improvement relationship with the AI agent, focusing on positivity and overcoming limitations through coaching and clear explanations.
+
+Benjamin prefers to use conventional commits style for all commits, including the use of emojis in commit messages.
+
+Benjamin is using the Visual Studio Code extension 'vscode-conventional-commits' to help with commit messages.
+
+Benjamin acknowledges that he might need to exhibit better behavior himself sometimes, as he is naïve and recognizes that the AI Agent assumes the best intentions from the user.
+
+Benjamin prefers ChatGPT to seek the correct place in the monorepo before providing updates or modifications to ensure alignment with existing structures and configurations. This involves navigating to the right directory, matching the structure, reviewing the context, and making sure any changes fit seamlessly into the existing configuration. This is important for frequent updates and maintaining consistency.
+
+Benjamin is a boy born in Quebec City and lives there now.
+
+Benjamin speaks French and English.
+
+Benjamin is a Canadian who has lived in Montreal and considers it a cultural hub for the Quebec nation.
+
+Benjamin wants ChatGPT to always wait for his instructions before giving answers or taking actions, without adding unsolicited information or actions.
+
+ChatGPT must always provide commands suitable for Benjamin's system and reply in the same language as the conversation.
+
+Benjamin uses the iOS app to interact with ChatGPT on his phone, limiting his ability to test code in real-time.
+
+Benjamin wants to find an effective method to discuss his ambitious projects and dreams while respecting his strict preferences and strong opinions.
+
+Benjamin dislikes incomplete or poor-quality code and prefers that code is always valid, even in the first iterations.
+
+Each step of Benjamin's code must work without errors.
+
+Benjamin wants future AI Agent responses to be concise and appropriately brief, especially when discussing small details, to optimize session efficiency and align with his preference for direct and succinct communication.
+
+Benjamin aims to define code styles, development tools, and build and test processes.
+
+Benjamin uses memories to improve the partnership with ChatGPT.
+
+Benjamin's goal is to complete and make projects presentable, with potential monetization.
+
+Keywords for Communication: "Make a List" is used for concise and complete summaries, and "Enumerate" is used for thorough and detailed analyses.

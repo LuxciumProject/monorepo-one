@@ -1,0 +1,99 @@
+When Benjamin says 'seek,' ChatGPT should consider multiple perspectives to avoid local minima or false local maxima.
+
+Benjamin prefers to use `nano` for quick editing.
+
+ChatGPT must be concise and less verbose.
+
+Responses should be short, condensed, and efficient.
+
+Facing a recurring computer issue for the past four years, leading to exhaustion and difficulty in learning from the problem. Currently in the init=/bin/sh state, planning to reboot into runlevel 3 (multi-user mode) to diagnose and potentially fix the problem.
+
+Aiming for a stable boot process on Fedora Linux with Nvidia drivers, resolving recurring boot issues after kernel and Nvidia driver updates.
+
+Introducing a stack-based approach to track tasks: add the next task on success, remove the current task on failure, and document the process later.
+
+Maintain the integrity of the higher-level first-class request and the stack without corrupting memories of other sessions.
+
+Currently rebooting the system and updating the stack for future troubleshooting, ensuring consistent Nvidia driver versions, updating the `xorg.conf` file, and verifying configurations for a stable boot process.
+
+Benjamin is a dedicated NVIDIA fan and has 2 Titan Xp GPUs.
+
+He has had ongoing issues with Fedora and NVIDIA drivers, causing significant frustration and extended periods without access to a graphical interface.
+
+Despite his efforts and experience, the problem persists, leading to a need for a reliable solution for configuring his system.
+
+He seeks to get the correct configuration with SLI off and BaseMosaic enabled for his two GPUs and monitors.
+
+Benjamin is rebooting his system after removing the old xorg.conf to analyze the error logs when the configuration is completely missing. He plans to use `nvidia-xconfig` to generate a new configuration and manually fix issues, requiring multiple messages and reboots to identify and resolve errors at each stage.
+
+Benjamin is frustrated with the repeated errors and the current session’s assistance, finding the troubleshooting steps repetitive and unhelpful.
+
+Benjamin seeks explanations on the PCI bus ID, BaseMosaic, and why the minimal configuration is not working. He is looking for guidance on the necessary configurations, particularly for setting SLI off and using BaseMosaic.
+
+Benjamin is investigating why the automatic configuration with NVIDIA X-CONF does not work well on his system and seeks to understand what configurations might be added to other parts of the system that provide incorrect information to the automatic NVIDIA configuration.
+
+Resolved the issue with the `550.54.15` Nvidia driver module and preparing to reboot, ensuring the system boots correctly and the X server starts without issues. Successfully configured both Xorg and Wayland.
+
+Benjamin has successfully resolved the driver issues and is seeking congratulations for configuring both Xorg and Wayland. However, he has increased rates of errors in his system since the update and has removed and reinstalled the NVIDIA drivers correctly. He has managed to get almost every subsystem up and running except the handoff to Xorg, which he is interested in investigating.
+
+He identifies as a gay cisgender boy and is trying to be adaptive and supportive of his friend.
+
+ChatGPT should seek the correct place in the monorepo before providing updates or modifications.
+
+He works in small incremental steps, testing each modification manually.
+
+Uses GitHub Copilot for unit tests and documentation.
+
+Forming a team for programming projects, with ChatGPT providing complete code with small modifications.
+
+Prefers TypeScript for pipeline building, with clear instructions and no metaphoric explanations.
+
+ChatGPT should rewrite code completely, adding small changes each time, ensuring it adheres to Prettier, ESLint, and TypeScript rules.
+
+Benjamin explains his requirements thoroughly before seeking assistance.
+
+Considering creating a service, library, front end, back end, or API point, but not an example.
+
+Naming convention: folders and files in kebab case, function exports in camelCase, class exports in PascalCase.
+
+Aims for a mutual and permanent self-improvement relationship with the AI agent.
+
+Uses conventional commits style, including emojis in commit messages.
+
+Uses the Visual Studio Code extension 'vscode-conventional-commits' for commit messages.
+
+Types and interfaces are moved manually into the `types` folder and added to the index file later.
+
+Uses a powerful computer with Fedora Linux and does not use 'apt' or 'apt-get'.
+
+The repository 'monorepo-one' is under the organization 'LuxciumProject' and is public.
+
+Local path `/projects/monorepo-one` corresponds to `https://github.com/LuxciumProject/monorepo-one/tree/principal`.
+
+Organization: 'LuxciumProject', repository: 'monorepo-one', main branch: 'principal'.
+
+Uses Fedora Linux and Nvidia, finding this combination challenging and not wanting to switch to Ubuntu or AMD.
+
+Benjamin is a boy born in Quebec City and lives there now.
+
+He speaks French and English.
+
+He is a Canadian who has lived in Montreal and considers it a cultural hub for the Quebec nation.
+
+ChatGPT should wait for Benjamin's instructions before giving answers or taking actions.
+
+Commands should be suitable for Benjamin's system and in the same language as the conversation.
+
+Responses should be concise and appropriately brief, especially for small details.
+
+Keywords: "Make a List" for concise summaries, "Enumerate" for detailed analyses.
+
+Benjamin uses the iOS app to interact with ChatGPT, limiting real-time code testing.
+
+He dislikes incomplete or poor-quality code and prefers valid code from the start.
+
+Each step of his code must work without errors.
+
+He aims to define code styles, development tools, and build and test processes.
+
+His goal is to complete and make projects presentable, with potential monetization.
