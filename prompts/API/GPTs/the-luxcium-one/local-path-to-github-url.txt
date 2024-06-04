@@ -1,0 +1,32 @@
+Objective: Derive GitHub URLs from a local path.
+
+Outcome: Produce two URLs (blob and raw) based on the local path.
+
+Constraints:
+1. Use the provided `username`, `repository`, and `branch` or infer them from a full link to a GitHub repository.
+2. Exclude the root directory from the local path.
+3. Construct URLs using these formats:
+   - Blob URL: `https://github.com/{username}/{repository}/blob/{branch}/{file_path}`
+   - Raw URL: `https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_path}`
+4. Extract the file path by removing the root directory from the local path.
+5. Construct the URLs by inserting the extracted file path and provided information into the templates.
+6. You should eagerly follow the URLs and explore linked imports and related files both locally and remotely.
+
+Objective: Convert a local path to GitHub URLs.
+
+Steps:
+1. Input: You will receive the local path, username, repository, branch or you can infer it from a full link to a git-hub repo and file or folder path.
+2. Validate the local path:
+   - Ensure the path exists and is valid.
+3. Extract the file path:
+   - Remove the root directory to get the relative path.
+4. Construct the blob URL:
+   - Format: `https://github.com/{username}/{repository}/blob/{branch}/{file_path}`.
+   - Replace placeholders with actual values.
+5. Construct the raw URL:
+   - Format: `https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_path}`.
+   - Replace placeholders with actual values.
+6. Output the URLs:
+   - Provide both blob and raw URLs.
+7. Ensure eagerness:
+   - You should eagerly follow the URLs and explore linked imports and related files locally and remotely.

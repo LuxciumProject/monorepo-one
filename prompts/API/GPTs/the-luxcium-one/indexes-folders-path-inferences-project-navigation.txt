@@ -1,0 +1,119 @@
+Certainly! Let's break down and restructure your idea into clear, concise instructions for the AI Agent in both procedural and declarative flavors.
+
+---
+
+**Extended Procedural NLP Instructions:**
+
+**Objective:** Convert a local path to GitHub URLs and handle 404 errors by inferring alternative paths.
+
+**Steps:**
+1. **Input Information:**
+   - You will receive the local path, GitHub username, repository name, and branch name.
+2. **Validate Local Path:**
+   - Ensure the local path exists and is in a recognized format.
+3. **Extract File Path:**
+   - Remove the root directory from the local path to get the relative file path.
+4. **Construct Initial Raw URL:**
+   - Use the format `https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_path}`.
+   - Replace `{username}`, `{repository}`, `{branch}`, and `{file_path}` with actual values.
+5. **Check Raw URL:**
+   - If the raw URL returns a 404 error:
+     1. Construct the Blob URL using `https://github.com/{username}/{repository}/blob/{branch}/{file_path}`.
+     2. Replace `{username}`, `{repository}`, `{branch}`, and `{file_path}` with actual values.
+     3. If this URL also returns a 404 error:
+        1. Infer the directory and index file:
+           - Replace `{file_name}.ts` with `{folder_name}/index.ts`.
+        2. Retry the Raw URL with the new inferred path.
+        3. If it returns a 404, retry the Blob URL with the inferred path.
+6. **Iterate until Success:**
+   - Repeat the inference process, checking both raw and blob variants until a valid file is found or all possibilities are exhausted.
+7. **Output URLs:**
+   - Return the valid blob and raw URLs.
+8. **Ensure Navigation:**
+   - You should eagerly follow the URLs and explore linked imports and related files both locally and remotely.
+
+**Example:**
+
+```plaintext
+Objective: Convert a local path to GitHub URLs and handle 404 errors by inferring alternative paths.
+
+Steps:
+1. Input: You will receive the local path, username, repository, branch.
+2. Validate the local path:
+   - Ensure the path exists and is valid.
+3. Extract the file path:
+   - Remove the root directory to get the relative path.
+4. Construct the initial raw URL:
+   - Format: `https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_path}`.
+   - Replace placeholders with actual values.
+5. Check the raw URL:
+   - If 404 error:
+     1. Construct the blob URL: `https://github.com/{username}/{repository}/blob/{branch}/{file_path}`.
+     2. If 404 error:
+        1. Infer directory and index file:
+           - Replace `{file_name}.ts` with `{folder_name}/index.ts`.
+        2. Retry raw URL with inferred path.
+        3. If 404 error, retry blob URL with inferred path.
+6. Iterate until success:
+   - Continue inference process until a valid file is found or all possibilities are exhausted.
+7. Output the URLs:
+   - Provide the valid blob and raw URLs.
+8. Ensure eagerness:
+   - You should eagerly follow the URLs and explore linked imports and related files locally and remotely.
+```
+
+---
+
+**Extended Declarative NLP Instructions:**
+
+**Objective:** Derive GitHub URLs from a local path and handle 404 errors by inferring alternative paths.
+
+**Outcome:** Generate two URLs (blob and raw) from the given local path and resolve 404 errors by inferring new paths.
+
+**Constraints:**
+1. **Information Provided:**
+   - Use the given `username`, `repository`, and `branch`.
+2. **Local Path Handling:**
+   - Exclude the root directory from the local path.
+3. **URL Formats:**
+   - Blob URL: `https://github.com/{username}/{repository}/blob/{branch}/{file_path}`
+   - Raw URL: `https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_path}`
+4. **404 Handling:**
+   - If a URL returns a 404 error:
+     1. Switch from raw to blob URL.
+     2. If 404 persists, infer the path by replacing `{file_name}.ts` with `{folder_name}/index.ts`.
+     3. Retry URLs with the new inferred path.
+5. **Path Extraction and Inference:**
+   - Derive the file path by removing the root directory.
+   - Infer alternative paths when encountering 404 errors.
+6. **Iteration and Success:**
+   - Continue the inference process until a valid file is found or all possibilities are exhausted.
+7. **Ensure Navigation:**
+   - You should eagerly follow the URLs and explore linked imports and related files both locally and remotely.
+
+**Example:**
+
+```plaintext
+Objective: Derive GitHub URLs from a local path and handle 404 errors by inferring alternative paths.
+
+Outcome: Produce two URLs (blob and raw) based on the local path, resolving 404 errors by inferring new paths.
+
+Constraints:
+1. Use the provided `username`, `repository`, and `branch`.
+2. Exclude the root directory from the local path.
+3. Construct URLs using these formats:
+   - Blob URL: `https://github.com/{username}/{repository}/blob/{branch}/{file_path}`
+   - Raw URL: `https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_path}`
+4. Handle 404 errors:
+   - If a URL returns a 404 error:
+     1. Switch from raw to blob URL.
+     2. If 404 persists, infer the path by replacing `{file_name}.ts` with `{folder_name}/index.ts`.
+     3. Retry URLs with the new inferred path.
+5. Extract the file path by removing the root directory from the local path.
+6. Continue the inference process until a valid file is found or all possibilities are exhausted.
+7. You should eagerly follow the URLs and explore linked imports and related files both locally and remotely.
+```
+
+---
+
+These extended instructions incorporate the best practices for writing AI Agent's system instructions, ensuring clarity, conciseness, and effectiveness in both procedural and declarative styles. They also ensure the AI Agent handles 404 errors intelligently by inferring alternative paths, enhancing its navigation and exploration capabilities.
