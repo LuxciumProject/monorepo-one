@@ -1,0 +1,92 @@
+PROMPT ENGINEERING
+Use examples
+Examples are one of the most powerful tools for enhancing the AI Agent’s performance and guiding it to produce your desired output. By providing a few well-crafted examples in your prompt, you can significantly improve the accuracy, consistency, and quality of the AI Agent’s responses. This technique is particularly effective for tasks that are highly detailed or require structured outputs or adherence to specific formats.
+
+This technique is also known as few-shot prompting (or one-shot prompting if only one example is provided).
+
+​
+Why use examples?
+Examples serve as a learning tool for the AI Agent, demonstrating exactly what kind of output you expect. They often are far more effective than simply describing or providing instructions, as they allow the AI Agent to generalize patterns and apply them to new inputs. Just as humans often learn best by observing and imitating, the AI Agent can quickly grasp the desired behavior by studying relevant examples.
+
+Here are some key benefits of using examples in your prompts:
+
+Improved accuracy: Examples help the AI Agent understand precisely what you want, reducing the likelihood of misinterpretation or irrelevant responses.
+Increased consistency: By providing a template for the AI Agent to follow, examples ensure that responses maintain a consistent structure and style across different inputs.
+Enhanced performance: Well-chosen examples can significantly boost the AI Agent’s ability to handle complex or nuanced tasks, as it learns from the patterns and logic demonstrated in the examples.
+​
+Crafting effective examples
+To get the most out of using examples in your prompts, consider the following guidelines on how to provide the most effective examples:
+
+Relevance: Ensure that your examples closely resemble the types of inputs and outputs you expect the AI Agent to handle. The more similar the examples are to your actual use case, the better the AI Agent will perform.
+Diversity: Include a variety of examples that cover different scenarios, edge cases, and potential challenges. This helps the AI Agent generalize better and handle a wider range of inputs.
+Clarity: Make your examples clear, concise, and easy to understand. Use formatting tags like <example> to structure your examples and distinguish them from the rest of the prompt. Give the AI Agent context as to what kind of example it’s about to encounter when possible (e.g., Here are some examples of proper APA citations or Here are some examples of emails I've written).
+Quantity: While there’s no hard rule for the optimal number of examples, aim to provide at least 3-5 examples to start to give the AI Agent a solid foundation. You can always add more targeted examples if the AI Agent’s performance isn’t meeting your expectations.
+To provide examples, simply include them in your prompt, clearly distinguishing them from the actual task. We recommend using <example></example> tags to wrap your examples, making it easy for the AI Agent to differentiate between the examples and the rest of the prompt.
+
+Here’s a prompt that demonstrates the use of examples to guide the AI Agent’s response:
+
+Role	Content
+User	I will give you some quotes. Please extract the author from the quote block.
+
+Here is an example:
+<example>
+Quote:
+“When the reasoning mind is forced to confront the impossible again and again, it has no choice but to adapt.”
+― N.K. Jemisin, The Fifth Season
+Author: N.K. Jemisin
+</example>
+
+Quote:
+“Some humans theorize that intelligent species go extinct before they can expand into outer space. If they’re correct, then the hush of the night sky is the silence of the graveyard.”― Ted Chiang, Exhalation
+Author:
+Assistant(the AI Agent’s response)	Ted Chiang
+In this prompt, the example provides the AI Agent with guidance on how to extract the author’s name from a given quote, making it easy for the AI Agent to replicate the process on a new input.
+
+​
+Formatting outputs
+Examples are particularly effective for tasks that require structured or formatted outputs. Sometimes, instead of providing step-by-step formatting instructions, you can simply include a few examples of the desired output format (although we recommend having both instructions and examples together, as that is likely to be more effective than one without the other).
+
+Suppose you want the AI Agent to extract names and professions from a given text and format them as a list. Here’s how you might prompt the AI Agent with examples:
+
+Role	Content
+User	<example>
+Text: Sarah Martinez, a dedicated nurse, was known for her compassionate care at the local hospital. David Thompson, an innovative software engineer, worked tirelessly on groundbreaking projects.
+Output:
+1. Sarah Martinez [NURSE]
+2. David Thompson [SOFTWARE ENGINEER]
+</example>
+
+<example>
+Text: Chef Oliver Hamilton has transformed the culinary scene with his farm-to-table restaurant. Just down the street, you’ll find the library, where head librarian Elizabeth Chen has worked diligently to create a welcoming space for all.
+Output:
+1. Oliver Hamilton [CHEF]
+2. Elizabeth Chen [LIBRARIAN]
+</example>
+
+Text: At the town’s bustling farmer’s market, you’ll find Laura Simmons, a passionate organic farmer known for her delicious produce. In the community center, Kevin Alvarez, a skilled dance instructor, has brought the joy of movement to people of all ages.
+Output:
+Assistant(the AI Agent’s response)	1. Laura Simmons [ORGANIC FARMER]
+2. Kevin Alvarez [DANCE INSTRUCTOR]
+By observing these examples, the AI Agent learns to extract the relevant information and format it as a numbered list with names and professions in the desired style.
+
+​
+A word of caution
+While examples are incredibly powerful, it’s important to be mindful of potential pitfalls. The AI Agent may sometimes pick up on unintended patterns in your examples, leading to overfitting or unexpected behaviors.
+
+For instance, if all your example emails end with “Sincerely,” the AI Agent might learn to always sign off that way for emails it generates, even if it’s not appropriate for every case. To mitigate this, ensure your examples are diverse and representative of the full range of desired outputs.
+
+​
+Iterating and refining
+Crafting the perfect set of examples often involves iteration and refinement. If the AI Agent’s performance isn’t quite meeting your expectations, consider the following:
+
+Analyze the output: Look for patterns in the AI Agent’s responses that deviate from what you want. This can help you identify areas where your examples might be unclear or misleading, or where more examples might help.
+Add more examples: If the AI Agent struggles with certain types of inputs, provide additional examples that specifically address those scenarios.
+Revise existing examples: Sometimes, even small tweaks to your examples can make a big difference. Experiment with different wordings, formats, or structures to see what works best.
+Get the AI Agent’s help: Writing good examples is hard! You can ask the AI Agent to evaluate the diversity or relevance of your examples for a given task, or generate new examples given a set of existing examples to reference.
+Remember, prompt engineering is an iterative process. Don’t be discouraged if your initial examples don’t yield perfect results – with a bit of tweaking and experimentation, you’ll be able to unlock the AI Agent’s full potential and achieve exceptional results for your applications.
+
+​
+Additional resources
+Prompt engineering techniques: Explore other strategies for optimizing your prompts and enhancing the AI Agent’s performance.
+Anthropic Cookbook: Browse a collection of Jupyter notebooks featuring copy-able code snippets that demonstrate highly effective and advanced techniques, integrations, and implementations using the AI Agent.
+Prompt library: Get inspired by a curated selection of prompts for various tasks and use cases.
