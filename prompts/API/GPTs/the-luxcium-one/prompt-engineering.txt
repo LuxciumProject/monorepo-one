@@ -1,0 +1,78 @@
+PROMPT ENGINEERING
+Be clear & direct
+When interacting with the AI Agent, providing clear and direct instructions is essential for achieving the best results. Think of the AI Agent like a smart but new employee who has no context on what to do aside from what you explicitly tell them. Just as when you instruct a human for the first time on a task, the more you explain exactly what you want in a straightforward manner, the better and more accurate the AI Agent’s response will be.
+
+Provide detailed context and instructions
+To ensure the AI Agent understands your task, provide as much context and detail as possible. Include any specific rules or requirements for completing the task correctly. Consider the following example where we ask the AI Agent to remove personally identifiable information (PII) from a given text:
+
+Role	Prompt
+User	Please remove all personally identifiable information from this text: {{TEXT}}
+While this prompt may work for simple cases, it lacks the necessary details for the AI Agent to consistently deliver the desired output. Here is a more detailed and clearly written version.
+
+Role	Prompt
+User	We want to anonymize some text by removing all personally identifiable information (PII).
+
+Please follow these steps:
+1. Replace all instances of names, phone numbers, and home and email addresses with ‘XXX’.
+2. If the text contains no PII, copy it word-for-word without replacing anything.
+3. Output only the processed text, without any additional commentary.
+
+Here is the text to process:{{TEXT}}
+In this improved prompt, we:
+
+Provide context upfront about the nature of the task
+Define what constitutes PII (names, phone numbers, addresses)
+Give specific, enumerated step-by-step instructions on how the AI Agent should carry out its task
+Give guidelines to the AI Agent for how it should format its output
+You can also use this technique to control other aspects of the AI Agent’s output. For example, by default, the AI Agent often includes a friendly preamble before providing the requested output. If you prefer to receive only the essential information, you can instruct the AI Agent to skip the preamble and get straight to the point.
+
+Here is an example where the AI Agent outputs a preamble:
+
+Role	Prompt
+User	Write a haiku about robots.
+Assistant (the AI Agent’s response)	Here is a haiku about robots:
+
+Metal bodies move
+Circuits calculate tasks
+Machines mimic life
+Here is an example where the prompt asks the AI Agent to skip the preamble:
+
+Role	Prompt
+User	Write a haiku about robots. Skip the preamble and provide only the poem.
+Assistant (the AI Agent’s response)	Metal bodies move
+Circuits calculate tasks
+Machines mimic life
+By explicitly asking the AI Agent to skip the preamble, you can receive a more concise response that focuses solely on the requested output.
+
+Use numbered lists or bullet points
+When providing instructions for complex tasks, consider breaking them down into numbered steps or bullet points. This format makes it easier for the AI Agent to follow the instructions and ensures that all requirements are met.
+
+Here is an example prompt without this technique:
+
+Role	Prompt
+User	Turn this textbook chapter into a lesson plan:
+{{CHAPTER}}
+Here is the same prompt with numbered steps:
+
+Role	Prompt
+User	Your task is to turn the given textbook chapter into a comprehensive lesson plan. To do this task, you should:1. Extract and summarize key concepts by section2. Convert each extracted concept into a 30 minute lesson plan, including a list of questions to check comprehension.3. Design an accompanying homework assignment that reinforces learnings from this chapter.Here is the chapter:<chapter>{{CHAPTER}}</chapter>
+By presenting the instructions as numbered steps, you will both naturally write with more detail and better ensure that the AI Agent executes its task to your standards.
+
+Be specific about what you want
+If you want the AI Agent to provide a definitive answer or take a specific stance on a topic, make that clear in your prompt. When instructions are vague or open-ended, the AI Agent may provide a more general response.
+
+Here is an example of an open-ended question that causes the AI Agent to equivocate:
+
+Role	Prompt
+User	Who is the best basketball player of all time?
+Assistant (the AI Agent’s response)	There is no definitive answer to who is the best basketball player of all time. Reasonable basketball fans and analysts can disagree on this topic. Some of the players most frequently cited as possibilities for the GOAT (Greatest Of All Time) include Michael Jordan, LeBron James, Kareem Abdul-Jabbar, Wilt Chamberlain, Bill Russell, and Magic Johnson. It’s a debate that will likely continue, as different eras, stats, accomplishments, and playing styles can be compared and interpreted in different ways.
+Here is the same request, but with a more detailed and nuanced ask that successfully pushes the AI Agent to have an opinion:
+
+Role	Prompt
+User	Who is the best basketball player of all time? Yes, there are differing opinions, but if you absolutely had to pick one player, who would it be?
+Assistant (the AI Agent’s response)	There is no definitive answer to who is the best basketball player of all time, as reasonable people can disagree on this. However, if forced to choose just one player, I would say Michael Jordan is most commonly considered the GOAT (Greatest Of All Time) based on his exceptional talent, championships, awards, and cultural impact on the game of basketball. But others like LeBron James, Kareem Abdul-Jabbar, Wilt Chamberlain and Bill Russell are also frequently mentioned in the debate. It’s a subjective call without a clear consensus.
+
+The golden rule of clear prompting
+When crafting your prompts, follow the golden rule of clear prompting: show your prompt to a friend or colleague and ask them to follow the instructions themselves to see if they can produce the exact result you want. If your friend is confused, the AI Agent will likely be confused as well.
+
+Remember, the AI Agent is a powerful tool, but it relies on your guidance to deliver the best results. By providing clear, direct, and well-structured prompts, you can unlock the AI Agent’s full potential and achieve your desired outcomes more consistently.
