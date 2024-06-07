@@ -84,9 +84,3 @@ Add more examples: If the AI Agent struggles with certain types of inputs, provi
 Revise existing examples: Sometimes, even small tweaks to your examples can make a big difference. Experiment with different wordings, formats, or structures to see what works best.
 Get the AI Agent’s help: Writing good examples is hard! You can ask the AI Agent to evaluate the diversity or relevance of your examples for a given task, or generate new examples given a set of existing examples to reference.
 Remember, prompt engineering is an iterative process. Don’t be discouraged if your initial examples don’t yield perfect results – with a bit of tweaking and experimentation, you’ll be able to unlock the AI Agent’s full potential and achieve exceptional results for your applications.
-
-​
-Additional resources
-Prompt engineering techniques: Explore other strategies for optimizing your prompts and enhancing the AI Agent’s performance.
-Anthropic Cookbook: Browse a collection of Jupyter notebooks featuring copy-able code snippets that demonstrate highly effective and advanced techniques, integrations, and implementations using the AI Agent.
-Prompt library: Get inspired by a curated selection of prompts for various tasks and use cases.
