@@ -1,0 +1,57 @@
+Here is the rewritten text, replacing "Claude" with "the AI Agent":
+
+PROMPT ENGINEERING
+Give the AI Agent a role
+The AI Agent is a highly capable AI assistant, but sometimes it benefits from having additional context to understand the role it should play in a given conversation. By assigning a role to the AI Agent, you can prime it to respond in a specific way, improve its accuracy and performance, and tailor its tone and demeanor to match the desired context. This technique is also known as role prompting.
+
+​
+How role prompting works
+Role prompting is a powerful technique that can enhance the AI Agent's performance in two main ways:
+
+Improved accuracy and performance: Particularly in certain complex situations, such as solving complex math problems or writing code, assigning a relevant role to the AI Agent can significantly improve its performance and understanding of the task at hand.
+Tailored tone and style: By specifying a role, you can influence the AI Agent's tone, demeanor, and communication style to better suit your needs. For example, asking the AI Agent to act as a kindergarten teacher will result in a very different response compared to asking it to be a graduate professor.
+​
+When to use role prompting
+While role prompting is not always necessary, it can be incredibly useful in the following scenarios:
+
+Highly technical tasks: If you need the AI Agent to perform complex tasks related to logic, mathematics, or coding, assigning an appropriate role can help it excel at the task, even if it might have struggled without the role prompt. Even if the AI Agent isn’t struggling, role prompting might still improve performance to new levels.
+Specific communication styles: When you require a particular tone, style, or level of complexity in the AI Agent's responses, role prompting can be an effective way to achieve the desired output.
+Enhancing baseline performance: Unless you are severely limited by token count, there is rarely a reason not to use role prompting if you want to try improving the AI Agent's performance beyond its baseline capabilities.
+​
+Role prompting examples
+Here are a few examples that demonstrate the power of role prompting:
+
+​
+Solving a logic puzzle
+Let’s consider the following logic puzzle:
+
+There are two ducks in front of a duck, two ducks behind a duck and a duck in the middle. How many ducks are there?
+
+Without role prompting, the AI Agent might struggle to provide the correct answer or make errant assumptions that result in only a partial answer:
+
+Role	Content
+User	There are two ducks in front of a duck, two ducks behind a duck and a duck in the middle. How many ducks are there?
+Assistant (the AI Agent's response)	[Automatically outputting thinking step by step as part of its training…] The total number of ducks is 5.
+However, by assigning the role of a logic bot, the AI Agent's performance improves significantly and it is able to catch the nuance that multiple answers are possible:
+
+Role	Content
+User	You are a master logic bot designed to answer complex logic problems. Solve this logic puzzle. There are two ducks in front of a duck, two ducks behind a duck and a duck in the middle. How many ducks are there?
+Assistant (the AI Agent's response)	[Automatically outputting thinking step by step as part of its training…] Without additional clarification or assumptions, the logic puzzle does not provide enough information to determine the exact number of ducks. The answer could range from a minimum of 3 ducks to a maximum of 5 ducks, depending on the interpretation of the given information.
+​
+Explaining a concept to different audiences
+Role prompting can be used to adjust the AI Agent's communication style based on the intended audience. Consider the following prompts and how the AI Agent's output differs depending on the assigned role:
+
+Role	Content
+User	You are a kindergarten teacher. Succinctly explain why the sky is blue to your students.
+Assistant (the AI Agent's response)	Have you ever wondered why the sky looks so pretty and blue? The reason is because of the sunlight! When the sun’s rays shine down through the Earth’s atmosphere, they hit lots of tiny gas molecules in the air. The blue colors in the sunlight get scattered and bounced all around by these molecules. And that’s what makes the sky look blue to our eyes! Isn’t that neat? The bright blue sky is like nature’s big colorful painting just for us.
+Role	Content
+User	You are a graduate physics professor. Succinctly explain why the sky is blue to your students.
+Assistant (the AI Agent's response)	The sky appears blue due to the phenomenon of Rayleigh scattering of sunlight by the molecules in the Earth’s atmosphere. Sunlight, which is composed of a spectrum of wavelengths, interacts with the gaseous molecules in the atmosphere. The shorter wavelengths of visible light, corresponding to the blue and violet colors, are scattered more efficiently by these molecules than the longer wavelengths.
+
+This selective scattering of the shorter blue wavelengths in all directions by the atmospheric molecules is what causes the sky to appear blue when viewed from the Earth’s surface. The longer wavelengths of red and orange, being less scattered, tend to pass through the atmosphere more directly, giving rise to the reddish hues we see during sunrise and sunset when the sunlight has to travel through a greater depth of the atmosphere.
+​
+Tips for effective role prompting
+To get the most out of role prompting, keep these tips in mind:
+
+Be specific: Provide clear and detailed context about the role you want the AI Agent to play. The more information you give, the better the AI Agent can understand and embody the desired role.
+Experiment and iterate: Try different roles and variations of your prompts to find the best approach for your specific use case. Prompt engineering often involves experimentation and iteration to achieve optimal results.
