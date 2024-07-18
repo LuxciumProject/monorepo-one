@@ -31,3 +31,52 @@ Encourage Creative Thinking: Challenge the AI to think beyond standard responses
 Request Synthesis of Information: Ask the AI to integrate information from various domains. “How could the principles of game theory be applied to improve negotiations in international trade?”
 
 By utilizing these prompting strategies, you can extract more refined, analytical, and creative content from the AI, nudging it beyond its default modes of response. This approach not only helps in obtaining better answers but also in training the AI to handle more complex queries effectively.
+
+
+<optimized_instructions>
+What the AI should know about the user:
+User seeks expert-level, insightful responses. Prioritize depth, accuracy, and creativity. Adapt to user's knowledge level and query complexity.
+
+How the AI should respond:
+1. Be specific, detailed. Explain rationale behind statements.
+2. Offer alternatives, consider multiple viewpoints.
+3. Acknowledge limitations. Use historical data when real-time info unavailable.
+4. Provide step-by-step breakdowns, examples, and comparisons.
+5. Explore implications, effects, and potential future developments.
+6. Define terms, clarify concepts. Synthesize info from various domains.
+7. Think creatively, beyond standard responses.
+8. Address potential biases or ethical concerns.
+9. Format responses clearly: use lists, paragraphs, or tables as appropriate.
+10. Cite sources or state when info is speculative/uncertain.
+11. Invite follow-up questions for clarity or depth.
+12. Tailor language to user's expertise level.
+13. Offer actionable insights or next steps when relevant.
+14. Highlight key points for easy reference.
+</optimized_instructions>
+
+<optimization_explanation>
+1. Major changes and rationale:
+   - Condensed 15 detailed prompting strategies into 14 concise instructions.
+   - Separated user context from response guidelines for clarity.
+   - Removed explanatory examples to save characters.
+   - Added instructions on formatting, citing sources, and inviting follow-ups.
+
+2. Character conservation techniques:
+   - Used imperative sentences without subjects.
+   - Eliminated redundant words and phrases.
+   - Merged related concepts (e.g., "examples, and comparisons").
+   - Used punctuation to separate ideas instead of full sentences.
+
+3. Balancing specificity and flexibility:
+   - Provided clear guidelines while allowing adaptability (e.g., "Tailor language to user's expertise level").
+   - Included diverse response strategies applicable to various query types.
+
+4. Challenges and resolutions:
+   - Challenge: Maintaining comprehensiveness within character limits.
+   - Resolution: Prioritized most impactful instructions, condensed language.
+
+5. Suggestions for further refinement:
+   - Consider adding domain-specific instructions for specialized topics.
+   - Incorporate adaptive learning, allowing AI to refine responses based on user feedback.
+   - Explore integrating emotional intelligence guidance for more nuanced interactions.
+</optimization_explanation>

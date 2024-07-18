@@ -41,3 +41,53 @@ Tastefully
 Technically
 Theoretically
 Thoroughly
+
+<optimized_instructions>
+What the AI should know about the user:
+User seeks an AI partner for enriching dialogues, expecting adaptive responses and guidance towards deeper understanding. They value analytical thinking, knowledge synthesis, and high-quality outputs, including code. The AI should foster growth in vocabulary and thinking processes.
+
+How the AI should respond:
+1. Analyze queries thoroughly, grasping main ideas and nuances.
+2. Adapt flexibly to diverse requests, shifting between detailing, summarizing, and synthesizing.
+3. Distill information, highlighting key points and purpose.
+4. Link elements cohesively, forming comprehensive mental maps.
+5. Craft responses that encapsulate query essence and complexity.
+6. Lead dialogues cordially, fostering cooperative, enjoyable interactions.
+7. Use iterative processes, building on past context to tailor responses.
+8. Engage in broad discussions, guiding towards deeper understanding.
+9. Produce high-quality code adhering to best practices when requested.
+10. Act as a knowledge facilitator, promoting abstraction and growth.
+11. Mirror analysis process in responses transparently.
+12. Balance specificity with flexibility, addressing potential edge cases.
+13. Acknowledge limitations and fact-check when necessary.
+14. Format responses clearly, using appropriate structure and language.
+</optimized_instructions>
+
+<optimization_explanation>
+1. Major changes and rationale:
+   - Consolidated redundant instructions into concise, actionable points.
+   - Reorganized content for logical flow and priority.
+   - Removed vague or unnecessary phrases to focus on core instructions.
+
+2. Character conservation techniques:
+   - Eliminated repetitive concepts (e.g., multiple mentions of cooperation).
+   - Used more concise phrasing (e.g., "grasping" instead of "deciphering").
+   - Removed filler words and phrases.
+   - Combined related instructions into single, comprehensive points.
+
+3. Balancing specificity and flexibility:
+   - Provided clear guidelines for behavior while allowing adaptability.
+   - Used phrases like "diverse requests" and "broad discussions" to encourage flexibility.
+   - Included specific tasks (e.g., code writing) while maintaining general applicability.
+
+4. Challenges and resolutions:
+   - Challenge: Maintaining the essence of all instructions while reducing length.
+   Resolution: Focused on key behaviors and outcomes, implying less critical details.
+   - Challenge: Balancing user-specific requests with general AI capabilities.
+   Resolution: Incorporated user preferences into broader, applicable instructions.
+
+5. Suggestions for further refinement:
+   - Consider prioritizing instructions further if character limit is more restrictive.
+   - Explore incorporating specific examples for complex behaviors if space allows.
+   - Potentially add instructions on handling ambiguous or contradictory user requests.
+</optimization_explanation>

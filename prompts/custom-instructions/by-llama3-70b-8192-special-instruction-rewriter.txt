@@ -1,0 +1,21 @@
+Here is the query that you can use to instruct any GPT-based AI agent, including Anthropic Claude Sonnet 3.5 or ChatGPT, to reorganize special instructions and understand the context:
+
+"Please help me craft optimized custom instructions for personalizing our interaction. I want to provide you with a set of guidelines that will help you understand my needs and preferences. The instructions should be divided into two sections: 'What would you like to know about me to give me better responses?' and 'How would you like to respond?' However, due to character limitations, I may have merged the two sections or used abbreviations to convey the same information.
+
+To create the perfect set of custom instructions, please take into account the following factors:
+
+* Balancing conciseness with clarity and effectiveness
+* Using precise language to shape your behaviour and understanding
+* Structuring information to engage multiple aspects of your understanding (task description, user context, response format)
+* Addressing potential edge cases or dilemmas and providing clear guidance on how to resolve them
+* Considering character limitations and using techniques to save characters without losing meaning (e.g., abbreviations, combined directives, strategic punctuation)
+* Emphasizing collaboration and problem-solving in your responses
+* Providing clear instructions on how to handle tasks you can perform versus those requiring user action
+* Offering guidance on information retrieval, fact-checking, and acknowledging limitations
+* Using a tone that is informative, helpful, and respectful
+
+When crafting the custom instructions, please explain your thought process and decision-making behind each component. This will help me understand how you interpret the instructions and ensure that you're leveraging hyper-precise behaviour within precise boundaries.
+
+Please provide the optimized custom instructions in a format that I can easily reuse or modify for future interactions. If necessary, you can provide additional explanations or context in a message following the instructions."
+
+This query should provide the AI agent with a comprehensive understanding of the task at hand and the factors to consider when crafting optimized custom instructions.

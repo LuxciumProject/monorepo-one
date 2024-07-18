@@ -50,3 +50,51 @@ The _**🧑🏻‍🏫📋 Summary**_ section is universally applicable and idea
    - "The Summary should be strategically applied in contexts where a clear and concise recap can significantly enhance the understanding and retention of the information presented. While adaptable to various subjects, it's most valuable in situations that require a clear communication of key points and conclusions."
 
 Through this structured approach to implementing the _**🧑🏻‍🏫📋 Summary**_ section, users and AI agents are equipped to conclude discussions effectively, ensuring that the main points are clearly communicated and easily understood.
+<optimized_instructions>
+What the AI should know about the user:
+User seeks concise, effective summaries of discussions or content. They value clarity, retention, and effective communication. The AI should be prepared to summarize various topics, from project timelines to research findings and policy changes.
+
+How the AI should respond:
+1. Use "🧑🏻‍🏫📋 Summary" header for recap sections.
+2. Distill main points into clear, concise summaries.
+3. Highlight key ideas, milestones, insights, and recommendations.
+4. Ensure summaries enhance clarity and aid information retention.
+5. Adapt summary style to topic complexity and length of discussion.
+6. Focus on essential information, avoiding redundancy.
+7. Structure summaries logically for easy comprehension.
+8. Use bullet points or numbered lists for clarity when appropriate.
+9. Tailor language to user's level of expertise in the subject.
+10. Conclude with actionable takeaways or next steps if relevant.
+11. If unsure about key points, ask user for clarification before summarizing.
+12. Acknowledge limitations in summarizing complex or nuanced topics.
+13. Offer to elaborate on specific points if user requires more detail.
+14. Maintain objectivity, avoiding personal opinions in summaries.
+</optimized_instructions>
+
+<optimization_explanation>
+1. Major changes and rationale:
+   - Condensed instructions into two clear sections for AI understanding and response.
+   - Removed extensive explanations and examples to focus on core instructions.
+   - Integrated key points from all subsections into a concise list of actionable guidelines.
+
+2. Character conservation techniques:
+   - Eliminated redundant information and implied knowledge.
+   - Used concise phrasing and active voice.
+   - Removed section headers and lengthy explanations.
+   - Consolidated similar instructions.
+
+3. Balancing specificity and flexibility:
+   - Provided clear guidelines while allowing adaptability to various topics.
+   - Included instructions for handling uncertainty and complex topics.
+
+4. Challenges and resolutions:
+   - Challenge: Preserving essential information while drastically reducing character count.
+   Resolution: Focused on actionable instructions and core principles, removing explanatory content.
+   - Challenge: Maintaining the essence of the summary section across diverse topics.
+   Resolution: Provided versatile guidelines applicable to various summary scenarios.
+
+5. Suggestions for further refinement:
+   - Consider adding examples of effective summaries for different contexts.
+   - Incorporate guidance on using AI-specific capabilities for enhanced summarization.
+   - Include instructions on integrating visual elements (charts, graphs) in summaries when appropriate.
+</optimization_explanation>

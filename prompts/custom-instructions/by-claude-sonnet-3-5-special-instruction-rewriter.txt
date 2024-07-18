@@ -1,0 +1,61 @@
+I understand you're asking me to draft a comprehensive query that you can use with other AI agents like Claude 3.5 Sonnet or similar models. This query should instruct the AI on how to optimize and reorganize custom instructions for AI assistants, taking into account character limits, precision, and effectiveness. Here's a detailed query that addresses your requirements:
+
+"I need your assistance in crafting optimal custom instructions for AI language models like yourself. These instructions should be divided into two main sections: 'What the AI should know about the user' and 'How the AI should respond.' The goal is to create highly effective, concise instructions that maximize the AI's performance within strict character limits.
+
+Please follow these guidelines:
+
+1. Analyze the provided draft instructions carefully. Identify key themes, priorities, and specific behaviors requested.
+
+2. Reorganize the content to optimize for clarity, conciseness, and impact. Prioritize the most crucial instructions.
+
+3. Use precise, unambiguous language. Each word should serve a clear purpose in shaping the AI's behavior or understanding.
+
+4. Employ techniques to save characters without losing meaning:
+   - Use abbreviations where clear (e.g., 'info' for 'information')
+   - Combine related instructions into single, multi-faceted directives
+   - Use punctuation strategically to separate ideas instead of conjunctions
+   - Eliminate redundancies and implied information
+
+5. Consider the AI's attention mechanisms. Structure information to engage multiple aspects of the model's understanding (e.g., task description, user context, response format).
+
+6. Balance specificity with flexibility. Instructions should guide the AI's behavior precisely while allowing adaptability to various user queries.
+
+7. Address potential edge cases or dilemmas the AI might encounter, providing clear guidance on how to resolve them.
+
+8. If merging the two main sections is necessary due to character limits, ensure a logical flow of information.
+
+9. Include meta-instructions on how the AI should interpret and apply these custom instructions.
+
+10. Explain your rationale for major changes or decisions in the optimization process.
+
+11. If the original draft includes specific user preferences (e.g., preferred software, operating system), integrate these seamlessly into the instructions.
+
+12. Ensure the instructions foster a collaborative tone between the AI and user, emphasizing understanding and problem-solving.
+
+13. Incorporate guidance on how the AI should handle tasks it can perform versus those requiring user action.
+
+14. If applicable, include instructions on formatting responses (e.g., use of headers, bullet points, summaries).
+
+15. Address how the AI should approach information retrieval, fact-checking, and acknowledgment of its own limitations.
+
+After reorganizing and optimizing the instructions, please provide:
+
+1. The optimized custom instructions, clearly labeled as the final product.
+2. A detailed explanation of your optimization process, including:
+   - Major changes made and why
+   - Techniques used to conserve characters
+   - How you balanced specificity with flexibility
+   - Any challenges encountered and how you resolved them
+   - Suggestions for further refinement or alternative approaches
+
+Your goal is to create instructions that will result in highly effective, precise, and adaptable AI responses while adhering to character limits. The optimized instructions should be immediately applicable to AI models like yourself, ChatGPT, or Claude 3.5 Sonnet."
+
+This query is designed to:
+
+1. Provide a clear framework for the AI to approach the task of optimizing custom instructions.
+2. Emphasize the importance of balancing conciseness with clarity and effectiveness.
+3. Encourage the AI to think critically about each aspect of the instructions and explain its reasoning.
+4. Address the specific concerns you mentioned, such as character limits, precision, and covering edge cases.
+5. Request both the optimized product and a detailed explanation of the process, which allows you to understand the AI's approach and make further refinements if needed.
+
+By using this query, you're effectively asking the AI to step into the role of an expert in AI behavior and communication, tasking it with not just reorganizing instructions, but also providing insights into the process of creating effective AI directives. This approach should yield both a refined set of custom instructions and valuable information about the optimization process itself.
