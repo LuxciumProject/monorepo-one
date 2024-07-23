@@ -32,7 +32,7 @@ importers:
         version: 0.0.8(encoding@0.1.13)(openai@4.45.0(encoding@0.1.13))
       '@langchain/community':
         specifier: ~0.0.54
-        version: 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
+        version: 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsdom@20.0.3)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
       '@langchain/core':
         specifier: ~0.1.54
         version: 0.1.61(openai@4.45.0(encoding@0.1.13))
@@ -116,7 +116,7 @@ importers:
         version: 8.2.6
       langchain:
         specifier: ~0.1.36
-        version: 0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
+        version: 0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsdom@20.0.3)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
       redis:
         specifier: ~4.6.7
         version: 4.6.13
@@ -159,7 +159,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -334,7 +334,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -533,7 +533,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -817,7 +817,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -968,7 +968,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -1134,7 +1134,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -1287,7 +1287,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -1595,7 +1595,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -1761,7 +1761,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -1914,7 +1914,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -2078,6 +2078,9 @@ importers:
       jest:
         specifier: ~29.7.0
         version: 29.7.0(@types/node@20.12.8)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+      jest-environment-jsdom:
+        specifier: ~29.7.0
+        version: 29.7.0(canvas@2.11.2)
       postcss:
         specifier: ^8
         version: 8.4.38
@@ -2116,7 +2119,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -2276,7 +2279,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -2574,7 +2577,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -2736,7 +2739,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -2901,7 +2904,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -3060,7 +3063,7 @@ importers:
         version: 5.4.5
       vitest:
         specifier: ~0.31.1
-        version: 0.31.4(terser@5.31.0)
+        version: 0.31.4(jsdom@20.0.3)(terser@5.31.0)
       webpack:
         specifier: ~5.88.1
         version: 5.88.2
@@ -3093,7 +3096,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -3259,7 +3262,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -3419,7 +3422,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -3597,7 +3600,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -3941,7 +3944,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -4107,7 +4110,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -4279,7 +4282,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -4439,7 +4442,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -4599,7 +4602,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -4756,7 +4759,7 @@ importers:
         version: 0.63.6(@types/node@20.12.8)
       '@rushstack/heft-jest-plugin':
         specifier: ~0.10.6
-        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
+        version: 0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@stylistic/eslint-plugin':
         specifier: ~1.6.1
         version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -6590,6 +6593,10 @@ packages:
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
 
+  '@tootallnate/once@2.0.0':
+    resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
+    engines: {node: '>= 10'}
+
   '@ts-morph/common@0.22.0':
     resolution: {integrity: sha512-HqNBuV/oIlMKdkLshXd1zKBqNQCsuPEsgQOkfFQ/eUKjRlwndXW1AjN9LVkBEIukm00gGXSRmfkl0Wv5VXLnlw==}
 
@@ -6703,6 +6710,9 @@ packages:
 
   '@types/jest@29.5.12':
     resolution: {integrity: sha512-eDC8bTvT/QhYdxJAulQikueigY5AsdBRH2yDKW3yveW7svY3+DzN84/2NUgkw10RTiJbWqZrTtoGVdYlvFJdLw==}
+
+  '@types/jsdom@20.0.1':
+    resolution: {integrity: sha512-d0r18sZPmMQr1eG35u12FZfhIXNrnsPU/g5wvRKCUf/tOGilKKwYMYGqh33BNR6ba+2gkHw1EUiHoN3mn7E5IQ==}
 
   '@types/json-schema-generator@2.0.3':
     resolution: {integrity: sha512-DxsHiv9zvKa0yMiW4slLrOdsK+Vm/ZgWb5tkMXHuGwF9cbiBS1uHabf0M7lRVXNgLlk3tYLOYNNjSF+GObqU4w==}
@@ -6838,6 +6848,9 @@ packages:
 
   '@types/through@0.0.33':
     resolution: {integrity: sha512-HsJ+z3QuETzP3cswwtzt2vEIiHBk/dCcHGhbmG5X3ecnwFD/lPrMpliGXxSCg03L9AhrdwA4Oz/qfspkDW+xGQ==}
+
+  '@types/tough-cookie@4.0.5':
+    resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
 
   '@types/tunnel@0.0.3':
     resolution: {integrity: sha512-sOUTGn6h1SfQ+gbgqC364jLFBw2lnFqkgF3q0WovEHRLMrVD1sd5aufqi/aJObLekJO+Aq5z646U4Oxy6shXMA==}
@@ -7167,6 +7180,10 @@ packages:
     resolution: {integrity: sha512-odWb1qUzt0dIOEUPyWBEpFDYQPRjEMr/dbHHAfgBkVkYR9aO7Zo+I7oYWrXIxl+cKlC7+49ftPm8uJxL1MA9kw==}
     engines: {node: '>=10.13'}
 
+  abab@2.0.6:
+    resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
+    deprecated: Use your platform's native atob() and btoa() methods instead
+
   abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
 
@@ -7177,6 +7194,9 @@ packages:
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
+
+  acorn-globals@7.0.1:
+    resolution: {integrity: sha512-umOSDSDrfHbTNPuNpC2NSnnA3LUrqpevPb4T9jRx4MagXNS0rs+gwiTcAvqCRmsD6utzsrzNt+ebm00SNWiC3Q==}
 
   acorn-import-assertions@1.9.0:
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
@@ -7940,6 +7960,16 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
+  cssom@0.3.8:
+    resolution: {integrity: sha512-b0tGHbfegbhPJpxpiBPU2sCkigAqtM9O121le6bbOlgyV+NyGyCmVfJ6QW9eRjz8CpNfWEOYBIMIGRYkLwsIYg==}
+
+  cssom@0.5.0:
+    resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
+
+  cssstyle@2.3.0:
+    resolution: {integrity: sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==}
+    engines: {node: '>=8'}
+
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
@@ -7954,6 +7984,10 @@ packages:
   dashdash@1.14.1:
     resolution: {integrity: sha512-jRFi8UDGo6j+odZiEpjazZaWqEal3w/basFjQHQEwVtZJGDpxbH1MeYluwCS8Xq5wmLJooDlMgvVarmWfGM44g==}
     engines: {node: '>=0.10'}
+
+  data-urls@3.0.2:
+    resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
+    engines: {node: '>=12'}
 
   data-view-buffer@1.0.1:
     resolution: {integrity: sha512-0lht7OugA5x3iJLOWFhWK/5ehONdprk0ISXqVFn/NFrDu+cuc8iADFrGQz5BnRK7LLU3JmkbXSxaqX+/mXYtUA==}
@@ -8001,6 +8035,9 @@ packages:
   decamelize@1.2.0:
     resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
+
+  decimal.js@10.4.3:
+    resolution: {integrity: sha512-VBBaLc1MgL5XpzgIP7ny5Z6Nx3UrRkIViUkPUdtl9aya5amy3De1gsUUSB1g3+3sExYNjCAsAznmukyxCb1GRA==}
 
   decompress-response@3.3.0:
     resolution: {integrity: sha512-BzRPQuY1ip+qDonAOz42gRm/pg9F768C+npV/4JOsxRC2sq+Rlk+Q4ZCAsOhnIaMrgarILY+RMUIvMmmX1qAEA==}
@@ -8153,6 +8190,11 @@ packages:
   domelementtype@2.3.0:
     resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
 
+  domexception@4.0.0:
+    resolution: {integrity: sha512-A2is4PLG+eeSfoTMA95/s4pvAoSo2mKtiM5jlHkAVewmiO8ISFTFKZjH7UAM1Atli/OT/7JHOrJRJiMKUZKYBw==}
+    engines: {node: '>=12'}
+    deprecated: Use your platform's native DOMException instead
+
   domhandler@5.0.3:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
@@ -8291,6 +8333,11 @@ packages:
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+
+  escodegen@2.1.0:
+    resolution: {integrity: sha512-2NlIDTwUWJN0mRPQOdtQBzbUHvdGY2P1VXSyU83Q3xKxM7WHX2Ql8dKq782Q9TgQUNOLEzEYu9bzLNj1q88I5w==}
+    engines: {node: '>=6.0'}
+    hasBin: true
 
   eslint-compat-utils@0.4.1:
     resolution: {integrity: sha512-5N7ZaJG5pZxUeNNJfUchurLVrunD1xJvyg5kYOIVF8kg1f3ajTikmAu/5fZ9w100omNPOoMjngRszh/Q/uFGMg==}
@@ -9017,6 +9064,10 @@ packages:
     resolution: {integrity: sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA==}
     engines: {node: '>=10'}
 
+  html-encoding-sniffer@3.0.0:
+    resolution: {integrity: sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==}
+    engines: {node: '>=12'}
+
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
 
@@ -9029,6 +9080,10 @@ packages:
   http-errors@2.0.0:
     resolution: {integrity: sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==}
     engines: {node: '>= 0.8'}
+
+  http-proxy-agent@5.0.0:
+    resolution: {integrity: sha512-n2hY8YdoRE1i7r6M0w9DIw5GgZN0G25P8zLCRQ8rjXtTU3vsNFBI/vWK/UIeE6g5MUUz6avwAPXmL6Fy9D/90w==}
+    engines: {node: '>= 6'}
 
   http-proxy-agent@7.0.2:
     resolution: {integrity: sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==}
@@ -9293,6 +9348,9 @@ packages:
     resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
     engines: {node: '>=8'}
 
+  is-potential-custom-element-name@1.0.1:
+    resolution: {integrity: sha512-bCYeRA2rVibKZd+s2625gGnGF/t7DSqDs4dP7CrLA1m7jKWz6pps0LpYLJN8Q64HtmPKJ1hrN3nzPNKFEKOUiQ==}
+
   is-regex@1.1.4:
     resolution: {integrity: sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==}
     engines: {node: '>= 0.4'}
@@ -9455,6 +9513,15 @@ packages:
     resolution: {integrity: sha512-gns+Er14+ZrEoC5fhOfYCY1LOHHr0TI+rQUHZS8Ttw2l7gl+80eHc/gFf2Ktkw0+SIACDTeWvpFcv3B04VembQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
+  jest-environment-jsdom@29.7.0:
+    resolution: {integrity: sha512-k9iQbsf9OyOfdzWH8HDmrRT0gSIcX+FLNW7IQq94tFX0gynPwqDTW0Ho6iMVNjGz/nb+l/vW3dWM2bbLLpkbXA==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+    peerDependencies:
+      canvas: ^2.5.0
+    peerDependenciesMeta:
+      canvas:
+        optional: true
+
   jest-environment-node@29.7.0:
     resolution: {integrity: sha512-DOSwCRqXirTOyheM+4d5YZOrWcdu0LNZ87ewUoywbcb2XR4wKgqiG8vNeYwhjFMbEkfju7wx2GYH0P2gevGvFw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -9598,6 +9665,15 @@ packages:
   jsdoc-type-pratt-parser@4.0.0:
     resolution: {integrity: sha512-YtOli5Cmzy3q4dP26GraSOeAhqecewG04hoO8DY56CH4KJ9Fvv5qKWUCCo3HZob7esJQHCv6/+bnTy72xZZaVQ==}
     engines: {node: '>=12.0.0'}
+
+  jsdom@20.0.3:
+    resolution: {integrity: sha512-SYhBvTh89tTfCD/CRdSOm13mOBa42iTaTyfyEWBdKcGdPxPtLFBXuHR8XHb33YNYaP+lLbmSvBTsnoesCNJEsQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      canvas: ^2.5.0
+    peerDependenciesMeta:
+      canvas:
+        optional: true
 
   jsesc@0.5.0:
     resolution: {integrity: sha512-uZz5UnB7u4T9LvwmFqXii7pZSouaRPorGs5who1Ip7VO0wxanFvBL7GkM6dTHlgX+jhBApRetaWpnDabOeTcnA==}
@@ -10564,6 +10640,9 @@ packages:
     resolution: {integrity: sha512-1MQz1Ed8z2yckoBeSfkQHHO9K1yDRxxtotKSJ9yvcTUUxSvfvzEq5GwBrjjHEpMlq/k5gvXdmJ1SbYxWtpNoVg==}
     engines: {node: '>=8'}
 
+  nwsapi@2.2.12:
+    resolution: {integrity: sha512-qXDmcVlZV4XRtKFzddidpfVP4oMSGhga+xdMc25mv8kaLUHtgzCDhUxkrN8exkGdTlLNaXj7CV3GtON7zuGZ+w==}
+
   oauth-sign@0.9.0:
     resolution: {integrity: sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==}
 
@@ -11315,6 +11394,10 @@ packages:
   sax@1.3.0:
     resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
 
+  saxes@6.0.0:
+    resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
+    engines: {node: '>=v12.22.7'}
+
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
@@ -11667,6 +11750,9 @@ packages:
     resolution: {integrity: sha512-b19dMThMV4HVFynSAM1++gBHAbk2Tc/osgLIBZMKsyqh34jb2e8Os7T6ZW/Bt3pJFdBTd2JwAnAAEQV7rSNvcQ==}
     engines: {node: '>=0.10'}
 
+  symbol-tree@3.2.4:
+    resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
+
   synckit@0.6.2:
     resolution: {integrity: sha512-Vhf+bUa//YSTYKseDiiEuQmhGCoIF3CVBhunm3r/DQnYiGT4JssmnKQc44BIyOZRK2pKjXXAgbhfmbeoC9CJpA==}
     engines: {node: '>=12.20'}
@@ -11808,6 +11894,10 @@ packages:
 
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+
+  tr46@3.0.0:
+    resolution: {integrity: sha512-l7FvfAHlcmulp8kr+flpQZmVwtu7nfRV7NZujtN0OqES8EL4O4e0qqzL0DC5gAvx/ZC/9lk6rhcUwYvkBnBnYA==}
+    engines: {node: '>=12'}
 
   tr46@4.1.1:
     resolution: {integrity: sha512-2lv/66T7e5yNyhAAC4NaKe5nVavzuGJQVVtRYLyQ2OI8tsJ61PMLlelehb0wi2Hx6+hT/OJUWZcw8MjlSRnxvw==}
@@ -12282,6 +12372,10 @@ packages:
   vscode-textmate@8.0.0:
     resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
 
+  w3c-xmlserializer@4.0.0:
+    resolution: {integrity: sha512-d+BFHzbiCx6zGfz0HyQ6Rg69w9k19nviJspaj4yNscGjrHu94sVP+aRm75yEbCh+r2/yR+7q6hux9LVtbuTGBw==}
+    engines: {node: '>=14'}
+
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
 
@@ -12349,6 +12443,18 @@ packages:
   well-known-symbols@2.0.0:
     resolution: {integrity: sha512-ZMjC3ho+KXo0BfJb7JgtQ5IBuvnShdlACNkKkdsqBmYw3bPAaJfPeYUo6tLUaT5tG/Gkh7xkpBhKRQ9e7pyg9Q==}
     engines: {node: '>=6'}
+
+  whatwg-encoding@2.0.0:
+    resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
+    engines: {node: '>=12'}
+
+  whatwg-mimetype@3.0.0:
+    resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
+    engines: {node: '>=12'}
+
+  whatwg-url@11.0.0:
+    resolution: {integrity: sha512-RKT8HExMpoYx4igMiVMY83lN6UeITKJlBQ+vR/8ZJ8OCdSiN3RwCq+9gH0+Xzj0+5IrM6i4j/6LuvzbZIQgEcQ==}
+    engines: {node: '>=12'}
 
   whatwg-url@13.0.0:
     resolution: {integrity: sha512-9WWbymnqj57+XEuqADHrCJ2eSXzn8WXIW/YSGaZtb2WKAInQ6CHfaUUcTyyver0p8BDg5StLQq8h1vtZuwmOig==}
@@ -12470,6 +12576,10 @@ packages:
     resolution: {integrity: sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==}
     engines: {node: '>=8'}
 
+  xml-name-validator@4.0.0:
+    resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
+    engines: {node: '>=12'}
+
   xml2js@0.5.0:
     resolution: {integrity: sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==}
     engines: {node: '>=4.0.0'}
@@ -12477,6 +12587,9 @@ packages:
   xmlbuilder@11.0.1:
     resolution: {integrity: sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==}
     engines: {node: '>=4.0'}
+
+  xmlchars@2.2.0:
+    resolution: {integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==}
 
   xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
@@ -13598,7 +13711,7 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/community@0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)':
+  '@langchain/community@0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsdom@20.0.3)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)':
     dependencies:
       '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@langchain/openai': 0.0.28(encoding@0.1.13)
@@ -13615,6 +13728,7 @@ snapshots:
       '@tensorflow/tfjs-core': 4.8.0(encoding@0.1.13)
       cohere-ai: 7.9.5(encoding@0.1.13)
       google-auth-library: 8.9.0(encoding@0.1.13)
+      jsdom: 20.0.3(canvas@2.11.2(encoding@0.1.13))
       jsonwebtoken: 9.0.2
       lodash: 4.17.21
       mongodb: 6.6.0(gcp-metadata@5.3.0(encoding@0.1.13))
@@ -14359,7 +14473,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@rushstack/heft-jest-plugin@0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))':
+  '@rushstack/heft-jest-plugin@0.10.8(@rushstack/heft@0.63.6(@types/node@20.12.8))(@types/node@20.12.8)(jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)))(jest-environment-node@29.7.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))':
     dependencies:
       '@jest/core': 29.5.0(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.4.5))
       '@jest/reporters': 29.5.0(node-notifier@10.0.1)
@@ -14372,6 +14486,7 @@ snapshots:
       jest-snapshot: 29.5.0
       lodash: 4.17.21
     optionalDependencies:
+      jest-environment-jsdom: 29.7.0(canvas@2.11.2(encoding@0.1.13))
       jest-environment-node: 29.7.0
     transitivePeerDependencies:
       - '@types/node'
@@ -14740,6 +14855,8 @@ snapshots:
 
   '@tokenizer/token@0.3.0': {}
 
+  '@tootallnate/once@2.0.0': {}
+
   '@ts-morph/common@0.22.0':
     dependencies:
       fast-glob: 3.3.2
@@ -14883,6 +15000,12 @@ snapshots:
       expect: 29.7.0
       pretty-format: 29.7.0
 
+  '@types/jsdom@20.0.1':
+    dependencies:
+      '@types/node': 20.12.8
+      '@types/tough-cookie': 4.0.5
+      parse5: 7.1.2
+
   '@types/json-schema-generator@2.0.3':
     dependencies:
       '@types/json-schema': 7.0.15
@@ -15015,6 +15138,8 @@ snapshots:
   '@types/through@0.0.33':
     dependencies:
       '@types/node': 20.12.8
+
+  '@types/tough-cookie@4.0.5': {}
 
   '@types/tunnel@0.0.3':
     dependencies:
@@ -15495,6 +15620,8 @@ snapshots:
       graceful-fs: 4.2.11
       is-windows: 1.0.2
 
+  abab@2.0.6: {}
+
   abbrev@1.1.1: {}
 
   abort-controller@3.0.0:
@@ -15505,6 +15632,11 @@ snapshots:
     dependencies:
       mime-types: 2.1.35
       negotiator: 0.6.3
+
+  acorn-globals@7.0.1:
+    dependencies:
+      acorn: 8.11.3
+      acorn-walk: 8.3.2
 
   acorn-import-assertions@1.9.0(acorn@8.11.3):
     dependencies:
@@ -16396,6 +16528,14 @@ snapshots:
 
   cssesc@3.0.0: {}
 
+  cssom@0.3.8: {}
+
+  cssom@0.5.0: {}
+
+  cssstyle@2.3.0:
+    dependencies:
+      cssom: 0.3.8
+
   csstype@3.1.3: {}
 
   csv-parser@3.0.0:
@@ -16407,6 +16547,12 @@ snapshots:
   dashdash@1.14.1:
     dependencies:
       assert-plus: 1.0.0
+
+  data-urls@3.0.2:
+    dependencies:
+      abab: 2.0.6
+      whatwg-mimetype: 3.0.0
+      whatwg-url: 11.0.0
 
   data-view-buffer@1.0.1:
     dependencies:
@@ -16456,6 +16602,8 @@ snapshots:
       map-obj: 1.0.1
 
   decamelize@1.2.0: {}
+
+  decimal.js@10.4.3: {}
 
   decompress-response@3.3.0:
     dependencies:
@@ -16601,6 +16749,10 @@ snapshots:
       entities: 4.5.0
 
   domelementtype@2.3.0: {}
+
+  domexception@4.0.0:
+    dependencies:
+      webidl-conversions: 7.0.0
 
   domhandler@5.0.3:
     dependencies:
@@ -16806,6 +16958,14 @@ snapshots:
   escape-string-regexp@2.0.0: {}
 
   escape-string-regexp@4.0.0: {}
+
+  escodegen@2.1.0:
+    dependencies:
+      esprima: 4.0.1
+      estraverse: 5.3.0
+      esutils: 2.0.3
+    optionalDependencies:
+      source-map: 0.6.1
 
   eslint-compat-utils@0.4.1(eslint@8.57.0):
     dependencies:
@@ -17819,6 +17979,10 @@ snapshots:
     dependencies:
       lru-cache: 6.0.0
 
+  html-encoding-sniffer@3.0.0:
+    dependencies:
+      whatwg-encoding: 2.0.0
+
   html-escaper@2.0.2: {}
 
   htmlparser2@8.0.2:
@@ -17837,6 +18001,14 @@ snapshots:
       setprototypeof: 1.2.0
       statuses: 2.0.1
       toidentifier: 1.0.1
+
+  http-proxy-agent@5.0.0:
+    dependencies:
+      '@tootallnate/once': 2.0.0
+      agent-base: 6.0.2
+      debug: 4.3.4(supports-color@5.5.0)
+    transitivePeerDependencies:
+      - supports-color
 
   http-proxy-agent@7.0.2:
     dependencies:
@@ -18117,6 +18289,8 @@ snapshots:
 
   is-plain-obj@2.1.0: {}
 
+  is-potential-custom-element-name@1.0.1: {}
+
   is-regex@1.1.4:
     dependencies:
       call-bind: 1.0.7
@@ -18367,6 +18541,41 @@ snapshots:
       jest-get-type: 29.6.3
       jest-util: 29.7.0
       pretty-format: 29.7.0
+
+  jest-environment-jsdom@29.7.0(canvas@2.11.2(encoding@0.1.13)):
+    dependencies:
+      '@jest/environment': 29.7.0
+      '@jest/fake-timers': 29.7.0
+      '@jest/types': 29.6.3
+      '@types/jsdom': 20.0.1
+      '@types/node': 20.12.8
+      jest-mock: 29.7.0
+      jest-util: 29.7.0
+      jsdom: 20.0.3(canvas@2.11.2(encoding@0.1.13))
+    optionalDependencies:
+      canvas: 2.11.2(encoding@0.1.13)
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    optional: true
+
+  jest-environment-jsdom@29.7.0(canvas@2.11.2):
+    dependencies:
+      '@jest/environment': 29.7.0
+      '@jest/fake-timers': 29.7.0
+      '@jest/types': 29.6.3
+      '@types/jsdom': 20.0.1
+      '@types/node': 20.12.8
+      jest-mock: 29.7.0
+      jest-util: 29.7.0
+      jsdom: 20.0.3(canvas@2.11.2)
+    optionalDependencies:
+      canvas: 2.11.2(encoding@0.1.13)
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
 
   jest-environment-node@29.7.0:
     dependencies:
@@ -18664,6 +18873,77 @@ snapshots:
 
   jsdoc-type-pratt-parser@4.0.0: {}
 
+  jsdom@20.0.3(canvas@2.11.2(encoding@0.1.13)):
+    dependencies:
+      abab: 2.0.6
+      acorn: 8.11.3
+      acorn-globals: 7.0.1
+      cssom: 0.5.0
+      cssstyle: 2.3.0
+      data-urls: 3.0.2
+      decimal.js: 10.4.3
+      domexception: 4.0.0
+      escodegen: 2.1.0
+      form-data: 4.0.0
+      html-encoding-sniffer: 3.0.0
+      http-proxy-agent: 5.0.0
+      https-proxy-agent: 5.0.1
+      is-potential-custom-element-name: 1.0.1
+      nwsapi: 2.2.12
+      parse5: 7.1.2
+      saxes: 6.0.0
+      symbol-tree: 3.2.4
+      tough-cookie: 4.1.4
+      w3c-xmlserializer: 4.0.0
+      webidl-conversions: 7.0.0
+      whatwg-encoding: 2.0.0
+      whatwg-mimetype: 3.0.0
+      whatwg-url: 11.0.0
+      ws: 8.17.0
+      xml-name-validator: 4.0.0
+    optionalDependencies:
+      canvas: 2.11.2(encoding@0.1.13)
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    optional: true
+
+  jsdom@20.0.3(canvas@2.11.2):
+    dependencies:
+      abab: 2.0.6
+      acorn: 8.11.3
+      acorn-globals: 7.0.1
+      cssom: 0.5.0
+      cssstyle: 2.3.0
+      data-urls: 3.0.2
+      decimal.js: 10.4.3
+      domexception: 4.0.0
+      escodegen: 2.1.0
+      form-data: 4.0.0
+      html-encoding-sniffer: 3.0.0
+      http-proxy-agent: 5.0.0
+      https-proxy-agent: 5.0.1
+      is-potential-custom-element-name: 1.0.1
+      nwsapi: 2.2.12
+      parse5: 7.1.2
+      saxes: 6.0.0
+      symbol-tree: 3.2.4
+      tough-cookie: 4.1.4
+      w3c-xmlserializer: 4.0.0
+      webidl-conversions: 7.0.0
+      whatwg-encoding: 2.0.0
+      whatwg-mimetype: 3.0.0
+      whatwg-url: 11.0.0
+      ws: 8.17.0
+      xml-name-validator: 4.0.0
+    optionalDependencies:
+      canvas: 2.11.2(encoding@0.1.13)
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
   jsesc@0.5.0: {}
 
   jsesc@2.5.2: {}
@@ -18819,10 +19099,10 @@ snapshots:
 
   kleur@3.0.3: {}
 
-  langchain@0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0):
+  langchain@0.1.36(@azure/storage-blob@12.17.0(encoding@0.1.13))(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(axios@1.6.8)(cheerio@1.0.0-rc.12)(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(fast-xml-parser@4.3.6)(google-auth-library@8.9.0(encoding@0.1.13))(handlebars@4.7.8)(ignore@5.3.1)(jsdom@20.0.3)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(puppeteer@19.11.1(encoding@0.1.13)(typescript@5.4.5))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0):
     dependencies:
       '@anthropic-ai/sdk': 0.9.1(encoding@0.1.13)
-      '@langchain/community': 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
+      '@langchain/community': 0.0.54(@cloudflare/ai@1.1.0)(@pinecone-database/pinecone@2.2.0)(@tensorflow/tfjs-converter@4.8.0(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13)))(@tensorflow/tfjs-core@4.8.0(encoding@0.1.13))(cohere-ai@7.9.5(encoding@0.1.13))(encoding@0.1.13)(google-auth-library@8.9.0(encoding@0.1.13))(jsdom@20.0.3)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mongodb@6.6.0(gcp-metadata@5.3.0(encoding@0.1.13)))(openai@4.45.0(encoding@0.1.13))(redis@4.6.13)(weaviate-ts-client@2.1.1(encoding@0.1.13)(graphql@16.8.1))(web-auth-library@1.0.3)(ws@8.17.0)
       '@langchain/core': 0.1.61(openai@4.45.0(encoding@0.1.13))
       '@langchain/openai': 0.0.28(encoding@0.1.13)
       '@langchain/textsplitters': 0.0.0(openai@4.45.0(encoding@0.1.13))
@@ -18848,6 +19128,7 @@ snapshots:
       google-auth-library: 8.9.0(encoding@0.1.13)
       handlebars: 4.7.8
       ignore: 5.3.1
+      jsdom: 20.0.3(canvas@2.11.2(encoding@0.1.13))
       mongodb: 6.6.0(gcp-metadata@5.3.0(encoding@0.1.13))
       puppeteer: 19.11.1(encoding@0.1.13)(typescript@5.4.5)
       redis: 4.6.13
@@ -19550,6 +19831,8 @@ snapshots:
       boolbase: 1.0.0
 
   num-sort@2.1.0: {}
+
+  nwsapi@2.2.12: {}
 
   oauth-sign@0.9.0: {}
 
@@ -20380,6 +20663,10 @@ snapshots:
 
   sax@1.3.0: {}
 
+  saxes@6.0.0:
+    dependencies:
+      xmlchars: 2.2.0
+
   scheduler@0.23.2:
     dependencies:
       loose-envify: 1.4.0
@@ -20772,6 +21059,8 @@ snapshots:
 
   symbol-observable@4.0.0: {}
 
+  symbol-tree@3.2.4: {}
+
   synckit@0.6.2:
     dependencies:
       tslib: 2.6.2
@@ -20953,6 +21242,10 @@ snapshots:
       url-parse: 1.5.10
 
   tr46@0.0.3: {}
+
+  tr46@3.0.0:
+    dependencies:
+      punycode: 2.3.1
 
   tr46@4.1.1:
     dependencies:
@@ -21379,7 +21672,7 @@ snapshots:
       fsevents: 2.3.3
       terser: 5.31.0
 
-  vitest@0.31.4(terser@5.31.0):
+  vitest@0.31.4(jsdom@20.0.3)(terser@5.31.0):
     dependencies:
       '@types/chai': 4.3.15
       '@types/chai-subset': 1.3.5
@@ -21406,6 +21699,8 @@ snapshots:
       vite: 4.5.3(@types/node@20.12.8)(terser@5.31.0)
       vite-node: 0.31.4(@types/node@20.12.8)(terser@5.31.0)
       why-is-node-running: 2.2.2
+    optionalDependencies:
+      jsdom: 20.0.3(canvas@2.11.2(encoding@0.1.13))
     transitivePeerDependencies:
       - less
       - lightningcss
@@ -21418,6 +21713,10 @@ snapshots:
   vscode-oniguruma@1.7.0: {}
 
   vscode-textmate@8.0.0: {}
+
+  w3c-xmlserializer@4.0.0:
+    dependencies:
+      xml-name-validator: 4.0.0
 
   walker@1.0.8:
     dependencies:
@@ -21525,6 +21824,17 @@ snapshots:
       - uglify-js
 
   well-known-symbols@2.0.0: {}
+
+  whatwg-encoding@2.0.0:
+    dependencies:
+      iconv-lite: 0.6.3
+
+  whatwg-mimetype@3.0.0: {}
+
+  whatwg-url@11.0.0:
+    dependencies:
+      tr46: 3.0.0
+      webidl-conversions: 7.0.0
 
   whatwg-url@13.0.0:
     dependencies:
@@ -21658,12 +21968,16 @@ snapshots:
 
   xdg-basedir@4.0.0: {}
 
+  xml-name-validator@4.0.0: {}
+
   xml2js@0.5.0:
     dependencies:
       sax: 1.3.0
       xmlbuilder: 11.0.1
 
   xmlbuilder@11.0.1: {}
+
+  xmlchars@2.2.0: {}
 
   xtend@4.0.2: {}
 
