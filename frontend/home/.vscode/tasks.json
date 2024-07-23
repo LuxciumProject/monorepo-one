@@ -1,0 +1,606 @@
+// {
+//   // See https://go.microsoft.com/fwlink/?LinkId=733558
+//   // for the documentation about the tasks.json format
+//   "version": "2.0.0",
+//   "presentation": {
+//     "clear": true,
+//     "close": true,
+//     "echo": false,
+//     "focus": false,
+//     "panel": "shared",
+//     "reveal": "silent",
+//     "revealProblems": "onProblem",
+//     "showReuseMessage": false
+//   },
+//   "tasks": [
+//     // {
+//     //   "label": "Start/redis-6383",
+//     //   "type": "shell",
+//     //   "detail": "Start REDIS container on port 6383 this project",
+//     //   "command": "bash",
+//     //   "args": [
+//     //     "${workspaceFolder}/scripts/start_6383.sh"
+//     //   ],
+//     //   "isBackground": true,
+//     //   "runOptions": {
+//     //     "reevaluateOnRerun": true,
+//     //     "instanceLimit": 1,
+//     //     "runOn": "folderOpen"
+//     //   },
+//     //   "presentation": {
+//     //     "revealProblems": "onProblem",
+//     //     "panel": "dedicated",
+//     //     "group": "MAIN"
+//     //   }
+//     // },
+//     {
+//       "label": "Start/all/frontend",
+//       "detail": "Start projects in frontend.",
+//       "isBackground": false,
+//       "runOptions": {
+//         "reevaluateOnRerun": true,
+//         "instanceLimit": 1,
+//         "runOn": "default"
+//       },
+//       "icon": {
+//         "id": "server-process",
+//         "color": "terminal.ansiYellow"
+//       },
+//       "group": {
+//         "kind": "none",
+//         "isDefault": false
+//       },
+//       "dependsOrder": "parallel",
+//       "dependsOn": [
+//         "Start/frontend/products",
+//         "Start/frontend/cart"
+//       ]
+//     },
+//     {
+//       "label": "Start/frontend/products",
+//       "detail": "Starts frontend/products.",
+//       "type": "shell",
+//       "options": {
+//         "cwd": "${workspaceFolder}/frontend/products"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "start"
+//       ],
+//       "isBackground": true,
+//       "runOptions": {
+//         "reevaluateOnRerun": true,
+//         "instanceLimit": 1,
+//         "runOn": "default"
+//       },
+//     },
+//     {
+//       "label": "Start/frontend/cart",
+//       "detail": "Starts frontend/cart.",
+//       "type": "shell",
+//       "options": {
+//         "cwd": "${workspaceFolder}/frontend/cart"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "start"
+//       ],
+//       "isBackground": true,
+//       "runOptions": {
+//         "reevaluateOnRerun": true,
+//         "instanceLimit": 1,
+//         "runOn": "default"
+//       },
+//     },
+//     {
+//       "label": "Start/frontend/federal-container",
+//       "detail": "Starts frontend/federal-container.",
+//       "type": "shell",
+//       "options": {
+//         "cwd": "${workspaceFolder}/frontend/federal-container"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "start"
+//       ],
+//       "isBackground": true,
+//       "runOptions": {
+//         "reevaluateOnRerun": true,
+//         "instanceLimit": 1,
+//         "runOn": "default"
+//       },
+//     },
+//     {
+//       "label": "Start/frontend/home",
+//       "detail": "Starts frontend/home.",
+//       "type": "shell",
+//       "options": {
+//         "cwd": "${workspaceFolder}/frontend/home"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "start"
+//       ],
+//       "isBackground": true,
+//       "runOptions": {
+//         "reevaluateOnRerun": true,
+//         "instanceLimit": 1,
+//         "runOn": "default"
+//       },
+//     },
+//     {
+//       "label": "build-all",
+//       "detail": "Build each subprojects using TSC and problemMatcher",
+//       "runOptions": {
+//         "reevaluateOnRerun": true,
+//         "instanceLimit": 1,
+//         "runOn": "folderOpen"
+//       },
+//       "icon": {
+//         "id": "server-process",
+//         "color": "terminal.ansiYellow"
+//       },
+//       "group": {
+//         "kind": "build",
+//         "isDefault": true
+//       },
+//       "dependsOrder": "sequence",
+//       "isBackground": true,
+//       "dependsOn": [
+//         "Build/all/library",
+//         "Build/all/services",
+//         "Build/all/frontend"
+//       ]
+//     },
+//     {
+//       "label": "Build/all/frontend",
+//       "dependsOrder": "parallel",
+//       "isBackground": true,
+//       "dependsOn": [
+//         "Build/frontend/cart",
+//         "Build/frontend/products",
+//         "Build/frontend/federal-container"
+//       ]
+//     },
+//     {
+//       "label": "Build/frontend/federal-container",
+//       "detail": "Build task for frontend (federal-container)",
+//       "type": "shell",
+//       "isBackground": false,
+//       "options": {
+//         "cwd": "${workspaceFolder}/frontend/federal-container"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "run",
+//         "build"
+//       ],
+//     },
+//     {
+//       "label": "Build/frontend/products",
+//       "detail": "Build task for frontend (products)",
+//       "type": "shell",
+//       "isBackground": false,
+//       "options": {
+//         "cwd": "${workspaceFolder}/frontend/products"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "run",
+//         "build"
+//       ],
+//     },
+//     {
+//       "label": "Build/frontend/cart",
+//       "detail": "Build task for frontend (cart)",
+//       "type": "shell",
+//       "isBackground": false,
+//       "options": {
+//         "cwd": "${workspaceFolder}/frontend/cart"
+//       },
+//       "command": "npm",
+//       "args": [
+//         "run",
+//         "build"
+//       ],
+//     },
+//     {
+//       "label": "Build/all/services",
+//       "dependsOrder": "parallel",
+//       "isBackground": true,
+//       "dependsOn": [
+//         "Build/services/phash-compute",
+//         "Build/services/scan-directories",
+//         "Build/services/questrade-ts",
+//         "Build/services/redis-services",
+//         "Build/services/service-one",
+//         "Build/services/service-two"
+//       ]
+//     },
+//     {
+//       "label": "Build/services/phash-compute",
+//       "detail": "Build task for phash-compute",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/services/phash-compute/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/phash-compute.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/services/scan-directories",
+//       "detail": "Build task for scan-directories",
+//       "type": "shell",
+//       "command": "npx",
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/services/scan-directories/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/scan-directories.cpuprofile",
+//         "--verbose"
+//       ],
+//       "isBackground": false,
+//       "presentation": {
+//         "revealProblems": "onProblem",
+//         "panel": "dedicated",
+//         "group": "MAIN"
+//       },
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       }
+//     },
+//     {
+//       "label": "Build/services/questrade-ts",
+//       "detail": "Build task for questrade-ts",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/services/questrade-ts/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/questrade-ts.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/services/redis-services",
+//       "detail": "Build task for redis-services",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/services/redis-services/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/redis-services.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/services/service-one",
+//       "detail": "Build task for service-one",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/services/service-one/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/service-one.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/services/service-two",
+//       "detail": "Build task for service-two",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/services/service-two/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/service-two.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/all/library",
+//       "dependsOrder": "parallel",
+//       "dependsOn": [
+//         "Build/library/bigintString",
+//         "Build/library/colors-tools",
+//         "Build/library/boxed-list",
+//         "Build/library/parallel-mapper",
+//         "Build/library/human-size",
+//         "Build/library/restraining-zalgo",
+//         "Build/library/tools"
+//       ]
+//     },
+//     {
+//       "label": "Build/library/bigintString",
+//       "detail": "Build task for bigintString",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/library/bigintString/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/bigintString.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/library/colors-tools",
+//       "detail": "Build task for colors-tools",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/library/colors-tools/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/colors-tools.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/library/boxed-list",
+//       "detail": "Build task for boxed-list",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/library/boxed-list/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/boxed-list.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/library/parallel-mapper",
+//       "detail": "Build task for parallel-mapper",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/library/parallel-mapper/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/parallel-mapper.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/library/human-size",
+//       "detail": "Build task for human-size",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/library/human-size/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/human-size.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/library/restraining-zalgo",
+//       "detail": "Build task for restraining-zalgo",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/library/restraining-zalgo/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/restraining-zalgo.cpuprofile",
+//         "--verbose"
+//       ]
+//     },
+//     {
+//       "label": "Build/library/tools",
+//       "detail": "Build task for tools",
+//       "type": "shell",
+//       "command": "npx",
+//       "isBackground": false,
+//       "problemMatcher": {
+//         "base": "$tsc",
+//         "applyTo": "allDocuments"
+//       },
+//       "args": [
+//         "tsc",
+//         "-b",
+//         "${workspaceFolder}/library/tools/tsconfig.json",
+//         "--generateCpuProfile",
+//         "${workspaceFolder}/common/performance/tools.cpuprofile",
+//         "--verbose"
+//       ]
+//     }
+//     //     {
+//     //       "label": "Start/frontend/products",
+//     //       "detail": "Starts frontend/products.",
+//     //       "type": "shell",
+//     //       "options": {
+//     //         "cwd": "${workspaceFolder}/frontend/products"
+//     //       },
+//     //       "command": "npm",
+//     //       "args": [
+//     //         "start"
+//     //       ],
+//     //       "isBackground": true,
+//     //       // "problemMatcher": {
+//     //       //   "owner": "webpack",
+//     //       //   "fileLocation": "relative",
+//     //       //   "pattern": {
+//     //       //     "regexp": "^([^\\s].*)\\((\\d+|\\d+,\\d+|\\d+,\\d+,\\d+,\\d+)\\):\\s+(error|warning|info)\\s+(TS\\d+)\\s*:\\s*(.*)$",
+//     //       //     "file": 1,
+//     //       //     "location": 2,
+//     //       //     "severity": 3,
+//     //       //     "code": 4,
+//     //       //     "message": 5
+//     //       //   },
+//     //       //   "background": {
+//     //       //     "activeOnStart": true,
+//     //       //     // \\<i> \\[webpack-dev-server] Project is running at: webpack serve
+//     //       //     "beginsPattern": "^webpack serve$",
+//     //       //     // "beginsPattern": "^\\<i> \\[webpack-dev-server] Project is running at:$",
+//     //       //     "endsPattern": "^(.*)(compiled successfully)in(.*)$",
+//     //       //     // "endsPattern": "^\\s*\\d{1,2}:\\d{1,2}:\\d{1,2}(?: AM| PM)? - Compilation complete\\. Watching for file changes\\."
+//     //       //   }
+//     //       // },
+//     //       "runOptions": {
+//     //         "reevaluateOnRerun": true,
+//     //         "instanceLimit": 1,
+//     //         "runOn": "default"
+//     //       },
+//     //       "icon": {
+//     //         "id": "server-process",
+//     //         "color": "terminal.ansiYellow"
+//     //       },
+//     //       "group": {
+//     //         "kind": "none",
+//     //         "isDefault": false
+//     //       },
+//     //       /*
+//     //       must have a problem matcher that tracks when they are "done". The following task runs task Two, task Three, and then task One.
+//     //       */
+//     //       // "problemMatcher": {
+//     //       //   "owner": "webpack",
+//     //       //   "severity": "error",
+//     //       //   "fileLocation": "absolute",
+//     //       //   "pattern": [
+//     //       //     {
+//     //       //       "regexp": "ERROR in [^ ]* (.*):(.*):(.*)",
+//     //       //       "file": 1,
+//     //       //       "line": 2,
+//     //       //       "column": 3
+//     //       //     },
+//     //       //     {
+//     //       //       "regexp": ".*",
+//     //       //       "message": 0
+//     //       //     }
+//     //       //   ],
+//     //       //   "background": {
+//     //       //     "activeOnStart": false,
+//     //       //     "beginsPattern": {
+//     //       //       "file": 0,
+//     //       //       "regexp": ""
+//     //       //     },
+//     //       //     "endsPattern": {
+//     //       //       "regexp": "^(.*)(compiled successfully)in(.*)$",
+//     //       //     }
+//     //       //   }
+//     //       //   // ,"watching": "bundle is now INVALID.",
+//     //       //   // "watchedTaskBeginsRegExp: bundle is now INVALID.",
+//     //       //   // "watchedTaskEndsRegExp": "webpack: bundle is now VALID."
+//     //       // }
+//     //       /*
+//     //       <i> [webpack-dev-server] Project is running at:
+//     // <i> [webpack-dev-server] Loopback: http://localhost:8081/
+//     // <i> [webpack-dev-server] On Your Network (IPv4): http://192.168.15.129:8081/
+//     // <i> [webpack-dev-server] Content not from webpack is served from '/home/luxcium/projects/monorepo-one/frontend/products/public' directory
+//     // asset vendors-common_temp_node_modules_pnpm_faker-js_faker_7_6_0_node_modules_faker-js_faker_dist_e-eeef2b.js 4.25 MiB [emitted] (id hint: vendors)
+//     // asset remoteEntry.js 273 KiB [emitted] (name: products)
+//     // asset main.js 272 KiB [emitted] (name: main)
+//     // asset src_bootstrap_js.js 3.19 KiB [emitted]
+//     // asset index.html 422 bytes [emitted]
+//     // runtime modules 83.3 KiB 32 modules
+//     //       */
+//     //       // "problemMatcher": {
+//     //       //   // "owner": "cpp",
+//     //       //   "fileLocation": [
+//     //       //     "relative",
+//     //       //     "${workspaceFolder}"
+//     //       //   ],
+//     //       //   "pattern": {
+//     //       //     "regexp": "^(.*)(compiled successfully)in(.*)$",
+//     //       //     // "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+//     //       //     "message": 2,
+//     //       //     "loop": true
+//     //       //   },
+//     //       // },
+//     //     },
+//     // "icon": {
+//     //   "id": "server-process",
+//     //   "color": "terminal.ansiYellow"
+//     // },
+//     // "group": {
+//     //   "kind": "none",
+//     //   "isDefault": false
+//     // }
+//     // "icon": { regexp": "^(.*)(compiled successfully)in(.*)$",
+//     //   "id": "server-process",
+//     //   "color": "terminal.ansiYellow"
+//     // },
+//     // "group": {
+//     //   "kind": "none",
+//     //   "isDefault": false
+//     // }
+//   ]
+// }
