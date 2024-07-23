@@ -1,0 +1,23 @@
+The method you are referring to is called "contrastive learning" or "self-critic approach" or "rationalization" or "explainability". This technique involves training the AI model to generate a justification or explanation for its predictions or actions, in addition to its main task.
+
+The idea behind this technique is to teach the AI model to be reflective and self-critical, by asking it to justify its mistakes or misunderstandings. This helps the model to learn from its errors, and to improve its performance over time.
+
+Contrastive learning can be formalized as a optimization problem, where the AI model is trained to minimize the difference between its predictions and the correct answers, while also maximizing the similarity between its explanations and the correct justifications.
+
+This technique has been shown to be powerful for several reasons:
+
+1. **Improved performance**: By learning to justify its actions, the AI model can improve its performance by avoiding mistakes and misunderstandings.
+2. **Increased transparency**: The AI model can provide insights into its decision-making process, making it more transparent and accountable.
+3. **Explainability**: Contrastive learning can help to explain the AI model's behavior, making it easier to understand and interpret.
+4. **Adversarial robustness**: The self-critical approach can help the AI model to be more robust against adversarial attacks, by encouraging it to be more careful and thoughtful in its decision-making process.
+
+Overall, contrastive learning is a powerful technique that can help AI models to be more accurate, transparent, and explainable, while also improving their performance and robustness.
+
+Here are a few examples of papers that have applied contrastive learning:
+
+* "Self-Critic Experts for Unbiased and Adaptable Deep Learning" (2018)
+* "Adversarial Attacking and Defending Learning Representations" (2018)
+* "Explainable AI: Towards a Better Understanding of Deep Neural Networks" (2019)
+* "What Should I Say? Learning to Explain the Output of a Black Box Model" (2019)
+
+These papers demonstrate the effectiveness of contrastive learning in improving the performance and explainability of AI models, while also highlighting its potential applications in various fields such as machine translation, natural language processing, and computer vision.

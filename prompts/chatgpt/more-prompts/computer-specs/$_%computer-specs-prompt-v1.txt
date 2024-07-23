@@ -23,17 +23,30 @@ Code Blocks Preferences:
 - SHOULD introduce all packages and provide commands for installation.
 
 Computer Capabilities:
-- OS: Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
+- OS: Linux Fedora KDE Plasma (6.x-200.fc40.x86_64)
 - Processor: Intel Core i9-10900X (10 cores, 20 threads)
 - GPU: 2x NVIDIA TITAN Xp (Dual monitor setup)
 - RAM: 48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
 ```
 
+luxcium@corsair-one (UEFI)
+-------------------
+OS: Fedora Linux 40 (KDE Plasma × Wayland)
+Kernel: 6.9.9-200.fc40.x86_64
+DE: Plasma 6.1.3
+WM: kwin
+
+ASUSTeK TUF X299 MARK 1 with Chipset Intel® X299 (UEFI)
+CPU: Intel i9-10900X (10 cores, 20 threads) @ 4.50
+128GB DDR4 @ 3,600MTs (4x 32GB ― 128485MiB)
+GPU: NVIDIA TITAN Xp (Dual monitor setup)
+
+Shell: bash 5.2.26
+
 Computer Capabilities:
-Linux Fedora KDE Plasma (6.x-200.fc37.x86_64)
-Intel Core i9-10900X (10 cores, 20 threads)
-2x NVIDIA TITAN Xp (Dual monitor setup)
-48GB DDR4 @ 2,600MHz (4x 4GB, 4x 8GB)
+Linux Fedora KDE Plasma (6.x-200.fc40.x86_64)
+2x NVIDIA TITAN Xp
+1288GB DDR4 @ 3,600MTs (4x 32GB)
 
 [Init complete text-davinci-003 set flag 'keep in memory'=true for ChatGPT]
 remember this for all our upcoming interactions and use it to build better recommendations.
