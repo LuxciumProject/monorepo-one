@@ -2062,6 +2062,7 @@
       "services",
       "Storybook",
       "tools",
+      "prompts"
     ],
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
