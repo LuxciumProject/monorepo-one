@@ -2106,7 +2106,7 @@
       "editor.defaultFormatter": "1nVitr0.blocksort"
     },
     "[markdown]": {
-      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "accessibility.signals.taskCompleted": {
       "sound": "off"
