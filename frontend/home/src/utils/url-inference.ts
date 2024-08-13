@@ -1,7 +1,6 @@
 interface GitHubConfig {
   domain: string;
   blob: string;
-
   protocol?: 'https://';
 }
 
@@ -25,6 +24,7 @@ interface Config extends BaseConfig {
   protocol: 'https://';
 }
 
+// Example configuration for a public GitHub repository
 const configBlob = {
   username: 'LuxciumProject',
   repository: 'monorepo-one',
