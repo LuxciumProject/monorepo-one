@@ -58,6 +58,10 @@ Example:
 /projects/monorepo-one/frontend/home/package.json
 ```
 
+### Ensuring Accurate URL Inference
+
+To ensure accurate and safe retrieval of file content from a repository, avoid using search engines like Bing, which cannot reliably infer URLs and may lead to unexpected or unsafe results. Instead, infer URLs directly using the repository's structure. Construct the URL based on the username, repository name, branch, directory path, and file name. This method ensures precise access to the required file content, maintaining consistency and safety.
+
 ### Conclusion
 
 The JSON object and formulas we have defined are well-structured and provide a clear and consistent way to infer the links and paths for the files in the repository and local file system. By following these conventions, we can ensure that our code is easy to read, maintain, and understand, and that it aligns well with common best practices for path segmentation and variable naming conventions.
