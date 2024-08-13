@@ -88,6 +88,20 @@ ${localBasePath}/${directoryPath}/${fileName}
 
 To avoid the pitfalls of unreliable search engine inferences, AI agents should directly construct URLs using predefined structures. This method utilizes specific repository details to form accurate web addresses, enhancing security and reliability in accessing file content.
 
+### Direct Navigation and URL Translation
+
+To facilitate seamless content access, automatically translate URLs containing `tree` to `blob`. This ensures direct navigation to file contents without manual URL adjustment.
+
+**Rule:**
+Automatically translate URLs containing `tree` to `blob`.
+
+**Example:**
+
+- **Original**: `https://github.com/LuxciumProject/monorepo-one/tree/principal/frontend/home`
+- **Translated**: `https://github.com/LuxciumProject/monorepo-one/blob/principal/frontend/home`
+
+This translation enhances efficiency and consistency when accessing files directly from GitHub.
+
 ## Detailed Explanation
 
 To reconcile the local path with the two GitHub URL formulas, we need to map the local path components to the components used in the URL formulas. We will then create a generalized approach to derive any of the three paths (local, GitHub Blob URL, and Raw GitHub Content URL) from any given one.
