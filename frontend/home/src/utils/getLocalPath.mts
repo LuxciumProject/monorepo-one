@@ -1,4 +1,4 @@
-import { LocalPath } from './types/LocalPath';
+import { LocalPath } from './types/LocalPath.mjs';
 
 export function getLocalPath<
   L extends string = string,

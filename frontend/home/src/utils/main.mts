@@ -1,4 +1,4 @@
-import { getLocalPath } from './getLocalPath';
+import { getLocalPath } from './getLocalPath.mjs';
 
 // For: /projects/monorepo-one/frontend/home/src/utils/main.ts
 const localPath = getLocalPath({

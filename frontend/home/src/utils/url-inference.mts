@@ -1,4 +1,4 @@
-import { getLocalPath } from './getLocalPath';
+import { getLocalPath } from './getLocalPath.mjs';
 
 interface GitHubConfig {
   domain: string;
