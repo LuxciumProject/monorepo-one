@@ -184,9 +184,10 @@ If you can't retrieve content:
 
 1. Prioritize raw URLs for direct file access.
 2. Use blob URLs for directory navigation.
-3. Avoid `/tree/` URL patterns.
+3. Avoid `/tree/` URL patterns, actively rewriting the url with `/blob/` instead.
 4. Implement robust error handling and reattempting strategies.
 5. Utilize multi-browse techniques for efficient exploration.
 6. Reuse your browsing tool within the same turn when possible.
+7. When you output the content of a file never ,I REPEAT, never change, alter or modify the code or content of configuration files, you shall always output the text as it is first before making any alterations.
 
 By following these strategies and best practices, you'll be able to navigate the LuxciumProject monorepo effectively, overcoming the limitations imposed by robots.txt restrictions and accessing the required files and directories autonomously.
