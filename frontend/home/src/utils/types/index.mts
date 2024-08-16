@@ -1,1 +1,1 @@
-export { LocalPath } from './LocalPath.mjs';
+export type { LocalPath } from './LocalPath.mjs';
