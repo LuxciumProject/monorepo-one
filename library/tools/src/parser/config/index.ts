@@ -22,3 +22,10 @@ export const GRAMMAR_RULES = {
   },
   // Add more grammar rules as needed
 } as const;
+
+export const TOKEN_TYPES_ = {
+  // Define your token types here
+  NUMBER: '\\d+',
+  STRING: '"[^"]*"',
+  // Add more token types as needed
+};

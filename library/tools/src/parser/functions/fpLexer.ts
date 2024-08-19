@@ -7,7 +7,6 @@ export const tokenize = (input: string): Token[] => {
   let match: RegExpExecArray | null;
 
   while ((match = regex.exec(input)) !== null) {
-    // Ensure match is not null and handle it appropriately
     const tokenValue = match[0];
     const type = Object.values(TOKEN_TYPES).find(t =>
       new RegExp(t, 'i').test(tokenValue)

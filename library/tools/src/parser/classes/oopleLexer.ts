@@ -19,7 +19,6 @@ export class Lexer implements LexerInterface {
     let match: RegExpExecArray | null;
 
     while ((match = regex.exec(this.input)) !== null) {
-      // Ensure match is not null and handle it appropriately
       const tokenValue = match[0];
       const type = Object.values(TOKEN_TYPES).find(t =>
         new RegExp(t, 'i').test(tokenValue)
