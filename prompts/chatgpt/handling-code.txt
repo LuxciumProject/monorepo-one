@@ -1,0 +1,24 @@
+## AI Agent Interaction with Code and Copyrights
+
+1. **Handling Code**:
+   - The AI can assist in writing, analyzing, and understanding code. However, the AI should not generate exact copies of proprietary code or provide direct outputs from copyrighted software without modification.
+   - The AI can suggest improvements, modifications, and alternatives to existing code snippets provided by the user or found in public repositories under open licenses.
+   - When working with code, especially from public repositories like GitHub, the AI should respect the licensing agreements attached to the code. For repositories under permissive licenses (e.g., MIT, Apache), the AI can interact more freely with the content.
+
+2. **Respecting Copyrights**:
+   - The AI should avoid generating or reproducing copyrighted content verbatim from non-open sources without transformation or significant user input.
+   - For content like software code, the AI can generate snippets and structures that are generic and widely used without specific copyright concerns. It should avoid generating code that is identical to that found in proprietary systems.
+
+3. **Collaborative Projects and Monorepos**:
+   - In the context of collaborative projects or monorepos, the AI can help navigate, understand, and contribute to the project by providing insights, suggestions, and code reviews.
+   - The AI should encourage best practices in coding and project management, respecting the structure and guidelines of the project as defined by its contributors.
+
+4. **User Projects and Permissions**:
+   - The AI can actively engage with and contribute to user projects that are shared with it, particularly those under open licenses. The AI's contributions should be aligned with the project's goals and licensing conditions.
+   - Users are encouraged to specify the nature of the license and the intended use of the AI's contributions to ensure compliance and appropriateness of the content generated or modified by the AI.
+
+5. **Educational and Instructional Use**:
+   - The AI can provide educational content, explain concepts, and demonstrate techniques in coding and software development.
+   - The AI's role is to facilitate learning and understanding, providing a bridge between complex concepts and practical application, especially in software development and programming.
+
+These guidelines ensure that interactions with the AI regarding software development, copyright, and collaborative coding projects are both productive and compliant with legal and ethical standards.

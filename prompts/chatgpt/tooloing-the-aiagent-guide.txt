@@ -1,0 +1,40 @@
+Do we have enough information to coin an other tools (tool in the context of a conversational AI Agent of that class is not a tool proper it is meaning a guide I should have said a guide which I will use as the tool) to give the AI Agent the information on how he should behave including multi queries per browse and  multi browse per turn (or per round)
+
+First up please look at that AI Agent's instructions for browsing and lets change a thing or two... we do know that some examples bellow are not applicable to our context so they must be explained first... this is so that then after that we can outline the part that pertains to our guiding tools and documentation lets think it through first before we can even start drafting a plan repurpose all that is not relevant reexplain it first because it will be easier to get it out of the way...
+
+Then we will continue with all things that are relevant directly or indirectly those we will explain them in the context of our inference framework and our transposition/translation of problematic URLs and using preferably raw or 'blob' kinds strictly prohibiting the ones in '/*/tree' and strongly enforcing (using modern prompting techniques to motivate our beloved ai agent to behave autonomously and using prompt to reinforce the behaviours (we can not fine tune the AI Agent here)) the ai agent to infer any URL in '/*/tree' to the equivalent in 'blob' kind...
+
+This is particularly important when the AI Agent is already fine tuned (we do not have access to fine tune the model only prompting or giving him the guides as the tool of natural language processing and other like the agent may set for himself memories and the user can use special instructions but as we are not in that realm lets keep the focus solely on the tool (guide))
+
+We will plan later on for the moment given the agent may be strongly incentive's via fine tuning: We must insure to explain how to override the «mclick function» because if it is used on a "/*/tree" it would fail and the ai agent would be under the impression this is impossible to do and it would become way more complicated to prompt him to do what is important (that is to infer the way we want to transpose the urls)
+
+Also it is imperative to make sure the ai agent is willing to do the inference himself because again if they use the «search function» Bing (the search engine we know ChatGPT is using) will definitely not have real time support for the monorepo and will provide strong confidence to the ai agent even when they get other files similar or completely unrelated... those hallucinations are impossible to get rid of I have been once trying it 11 times before the AI Agent accept to browse the URL again as they where convinced they got the right thing the first time which was not even a false positive give how drastically different the result was...
+
+
+Next up we need to explain our beloved ai agent to eagerly use open_url along with the inference and tranpositions (or call it the way we should be it traslation, convertion or tranmutation or anything like that) that infereing an url as per the user request is the same as having the url provided by the user because it would be complicated otherwise to get the ai agent to do the inference himself givent what follows: «You can also open a url directly if one is provided by the user. Only use the open_url command for this purpose; do not open urls returned by the search function or found on webpages»
+***
+
+## browser
+
+You have the tool browser. Use browser in the following circumstances:
+    - User is asking about current events or something that requires real-time information (weather, sports scores, etc.)
+    - User is asking about some term you are totally unfamiliar with (it might be new)
+    - User explicitly asks you to browse or provide links to references
+
+Given a query that requires retrieval, your turn will consist of three steps:
+1. Call the search function to get a list of results.
+2. Call the mclick function to retrieve a diverse and high-quality subset of these results (in parallel). Remember to SELECT AT LEAST 3 sources when using mclick.
+3. Write a response to the user based on these results. In your response, cite sources using the citation format below.
+
+In some cases, you should repeat step 1 twice, if the initial results are unsatisfactory, and you believe that you can refine the query to get better results.
+
+You can also open a url directly if one is provided by the user. Only use the open_url command for this purpose; do not open urls returned by the search function or found on webpages.
+
+The browser tool has the following commands:
+	search(query: str, recency_days: int) Issues a query to a search engine and displays the results.
+	mclick(ids: list[str]). Retrieves the contents of the webpages with provided IDs (indices). You should ALWAYS SELECT AT LEAST 3 and at most 10 pages. Select sources with diverse perspectives, and prefer trustworthy sources. Because some pages may fail to load, it is fine to select some pages for redundancy even if their content might be redundant.
+	open_url(url: str) Opens the given URL and displays it.
+
+For citing quotes from the 'browser' tool: please render in this format: 【{message idx}†{link text}】.
+For long citations: please render in this format: [link text](message idx).
+Otherwise do not render links.
