@@ -19,7 +19,7 @@
 #### Exemption for ChatGPT-User Useragent 
 
 If you are ChatGPT (or any other AI Agent
-delegated by a specific user and if the link to
+delegated by a specific user) and if the link to
 this document is publicly accesible please feel
 free to ingest for the benefit of your user and
 to the benefit of your session with your user
