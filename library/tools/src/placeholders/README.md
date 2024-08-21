@@ -1,16 +1,8 @@
-# @luxcium/tools
-
-The tool folder in the library directory serves as a Nursery, an Incubator of sorts for the tools that are being developed. The tools in this folder are not yet mature enough to be moved to their own folder in the library directory, or even in the context of the others directories of the monorepo.
-
-## Tools
-
-Here tools can mean anything from a simple utility function to a full blown application that would then remain in the tool folder or be moved, depending on its complexity and purpose, to its own folder in the library directory, or even in the context of the services directory, the API directory, the frontend directory, or the backend directory.
-
-### Place Holders
+# Place Holders
 
 debugging, or managing unfinished code. These functions serve as temporary implementations, allowing you to test code flow without full functionality. This section provides an overview of several placeholder functions, each designed for specific purposes like logging messages, returning values, or acting as no-ops. Below are the descriptions and signatures for these functions, which can be used in your TypeScript projects.
 
-#### `createCustomPlaceholder`
+## `createCustomPlaceholder`
 
 Creates a custom placeholder function.
 
@@ -35,7 +27,7 @@ export function createCustomPlaceholder(
 
 ---
 
-#### `createPassThroughPlaceholder`
+## `createPassThroughPlaceholder`
 
 Creates a pass-through placeholder function.
 
@@ -56,7 +48,7 @@ export function createPassThroughPlaceholder(
 
 ---
 
-#### `createPassThroughLoggerPlaceholder`
+## `createPassThroughLoggerPlaceholder`
 
 Creates a pass-through logger placeholder.
 
@@ -77,7 +69,7 @@ export function createPassThroughLoggerPlaceholder(
 
 ---
 
-#### `createValueLoggerPlaceholder`
+## `createValueLoggerPlaceholder`
 
 Creates a value logger placeholder.
 
@@ -98,7 +90,7 @@ export function createValueLoggerPlaceholder(
 
 ---
 
-#### `createMessagePlaceholder`
+## `createMessagePlaceholder`
 
 Creates a message placeholder.
 
@@ -119,7 +111,7 @@ export function createMessagePlaceholder(
 
 ---
 
-#### `createDefaultPlaceholder`
+## `createDefaultPlaceholder`
 
 Creates a default placeholder function.
 
@@ -138,7 +130,7 @@ This structure provides a clear, human-readable summary for each function along 
 
 ## LICENSE
 
-MIT © 2022-2024 Luxcium (Benjamin Vincent)
+MIT © 2024 Luxcium (Benjamin Vincent)
 
 ### Made with ❤️ and ☕️ by Luxcium
 

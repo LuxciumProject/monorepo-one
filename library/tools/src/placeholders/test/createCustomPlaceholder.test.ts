@@ -1,5 +1,5 @@
 // import type { CustomPlaceholderFunction } from '.';
-import { createCustomPlaceholder } from './createCustomPlaceholder';
+import { createCustomPlaceholder } from '../createCustomPlaceholder';
 
 describe('CustomPlaceholderFunction', () => {
   let customPlaceholder = createCustomPlaceholder;

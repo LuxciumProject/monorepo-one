@@ -19,12 +19,7 @@ export interface ParseTreeNode {
   children: ParseTreeNode[];
 }
 
-export type Token = {
-  type: string;
-  value: string;
-};
-
-export interface LexerInterface {
+export interface LexerInterface_ {
   tokenize: () => Token[];
   nextToken: () => Token | null;
 }

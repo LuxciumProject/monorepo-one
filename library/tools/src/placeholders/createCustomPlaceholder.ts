@@ -50,7 +50,7 @@ export function createCustomPlaceholder(
   message = 'This is a placeholder function.',
   logArgs = false,
   returnArgs = false
-) {
+): <T extends any[]>(...args: T) => T | void {
   return <T extends any[]>(...args: T): T | void => {
     // Log the message
     console.log(message);

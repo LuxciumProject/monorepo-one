@@ -14,6 +14,14 @@ export {
 export * as dummyExampleStructure_001 from './dummy-example-structure-001';
 export * as dummyExampleStructure_002 from './dummy-example-structure-002';
 export * as utils from './helpers';
+export {
+  createCustomPlaceholder,
+  createDefaultPlaceholder,
+  createMessagePlaceholder,
+  createPassThroughLoggerPlaceholder,
+  createPassThroughPlaceholder,
+  createValueLoggerPlaceholder,
+} from './placeholders';
 export { range } from './range';
 export type { Mapper } from './types/scan-dir';
 type Mapper_ = Mapper;
