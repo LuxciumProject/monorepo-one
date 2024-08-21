@@ -10,11 +10,10 @@
     "format": "prettier --write 'src/**/*.ts'",
     "start": "node dist/main.js"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "^20",
     "typescript": "~5.4.5",
-    "eslint": "^8.56",
+    "eslint": "^8.57",
     "prettier": "~3.2.5",
     "eslint-config-prettier": "~9.1.0",
     "eslint-plugin-prettier": "~5.1.3"

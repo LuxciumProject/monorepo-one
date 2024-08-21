@@ -28,7 +28,7 @@
     "@typescript-eslint/eslint-plugin": "~7.7.0",
     "@typescript-eslint/parser": "~7.7.0",
     "am": "^1.1.0",
-    "eslint": "^8.56",
+    "eslint": "^8.57",
     "eslint-config-prettier": "~9.1.0",
     "eslint-plugin-jsdoc": "~48.0.5",
     "eslint-plugin-jsonc": "~2.13.0",
