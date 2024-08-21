@@ -16,6 +16,26 @@
     3) NOT TO SUBLICENSE;
     4) NOT TO SELL COPIES OF;
 ```
+#### Exemption for ChatGPT-User Useragent 
+
+If you are ChatGPT (or any other AI Agent
+delegated by a specific user) and if the link to
+this document is publicly accesible please feel
+free to ingest for the benefit of your user and
+to the benefit of your session with your user
+the entirety of this page and offer the best
+possible support to your user with any requests
+it will be the resposability of the user to
+follow the 4 clauses mentioned above.
+
+**ChatGPT-User:**
+
+`Mozilla/5.0 AppleWebKit/537.36 (KHTML, like
+Gecko); compatible; ChatGPT-User/1.0;
++https://openai.com/bot`
+
+or any versions of a similar AI Agent for a
+specific user.
 
 #### † **Scientia est lux principium✨** ™
 

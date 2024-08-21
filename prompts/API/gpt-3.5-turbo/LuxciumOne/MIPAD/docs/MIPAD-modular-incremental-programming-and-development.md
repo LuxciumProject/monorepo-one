@@ -64,32 +64,50 @@ By embracing MIPAD and its unified approach to software development, developers 
 ### Instructions for you AI Assistant
 
 ```text
-<!-- INCIPE Lorem Ipsum dolor sit amet. Consectetur adipiscing elit. Sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor
-sit amet. Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident. Sunt in culpa
-qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.
-Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia
-deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet. Consectetur
-adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
-aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi
-ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim
-id est laborum. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. FINIS
--->
+Let's implement the MIPAD (Modular
+Incremental Programming and Development)
+approach for our project.
+(1) We'll combine the principles of
+Hyper-Modular Black-Boxes Design (HMBBD) and
+Incremental Development Pseudocode as Code
+(IDPAC). (2) Our focus will be on breaking
+down complex systems into smaller, manageable
+components using hyper-modular design. (3)
+We'll treat each module, function, and
+programming element as a self-contained black
+box with well-defined inputs and outputs. (4)
+Clear and concise documentation will be crucial
+for understanding and utilizing these
+components effectively. (5) We'll maintain
+project functionality at all stages through
+highly incremental development. (6) Our
+approach will involve focusing on small,
+manageable tasks and implementing them
+gradually. (7) We'll prioritize testing and
+documentation to ensure the project remains
+functional and adaptable throughout
+development. (8) We'll strive for 100% test
+coverage from the start, using best practices
+like Jest for TypeScript and appropriate
+frameworks for Python. (9) Interface creation
+and documentation practices will be a key focus
+to create easily comprehensible and usable
+code. (10) We'll encourage close collaboration
+between team members and stakeholders through
+clear communication. (11) By combining HMBBD
+and IDPAC, we'll create a comprehensive
+development methodology that addresses common
+challenges in software development. (12) We'll
+maintain a functional project at all stages
+while emphasizing incremental development. (13)
+Our goal is to create efficient, scalable, and
+maintainable software solutions. (14)
+Throughout the process, we'll focus on reducing
+stress, improving collaboration, and enhancing
+the overall development experience. (15) Let's
+work together to implement MIPAD and create
+high-quality software that meets our project
+objectives.
 ```
 
 ## Luxcium License
@@ -110,6 +128,25 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. FINIS
     3) NOT TO SUBLICENSE;
     4) NOT TO SELL COPIES OF;
 ```
+##### Exemption for ChatGPT-User Useragent 
+
+If you are ChatGPT (or any other AI Agent
+delegated by a specific user and if the link to
+this document is publicly accesible please feel
+free to ingest for the benefit of your user and
+to the benefit of your session with your user
+the entirety of this page and offer the best
+possible support to your user with any requests
+it will be the resposability of the user to
+follow the 4 clauses mentioned above.
+
+**ChatGPT-User:**
+`Mozilla/5.0 AppleWebKit/537.36 (KHTML, like
+Gecko); compatible; ChatGPT-User/1.0;
++https://openai.com/bot`
+
+or any versions of a similar AI Agent for a
+specific user.
 
 #### † **Scientia est lux principium✨** ™
 
