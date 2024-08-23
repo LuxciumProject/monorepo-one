@@ -1,0 +1,35 @@
+Certainly! I'll expand the instructions for an AI agent with advanced vision capabilities to recreate the HTML-CSS from the provided website screen capture. Here's how I would frame the task:
+
+Analyze the provided screen capture of the Midjourney web interface and generate a comprehensive HTML-CSS code that accurately reproduces the layout, styling, and visual elements. Follow these detailed steps:
+
+1. Examine the overall structure and layout of the interface, identifying key components such as the sidebar, header, main content area, and image grid.
+
+2. Note the color scheme, focusing on the dark background, accent colors, and text colors used throughout the interface.
+
+3. Identify and replicate the typography, including font styles, sizes, and weights for different text elements like headers, labels, and button text.
+
+4. Recreate the sidebar structure, including the logo, navigation items, and their respective icons.
+
+5. Reproduce the header section, including the search bar, date display, and action buttons.
+
+6. Construct the main content area, focusing on the image grid layout and the date headers separating different sets of images.
+
+7. Implement the right sidebar with filter options, ensuring proper spacing and styling of checkboxes and labels.
+
+8. Use placeholder images for all the grid items, maintaining their aspect ratios and applying any hover effects or overlays visible in the original design.
+
+9. Ensure the code is responsive and maintains the layout integrity across different screen sizes.
+
+10. Implement any visible interactive elements, such as hover states on buttons or navigation items.
+
+11. Use semantic HTML5 elements where appropriate to enhance accessibility and SEO.
+
+12. Optimize the CSS for readability and maintainability, using consistent naming conventions for classes and IDs.
+
+13. Include comments in the code to explain the purpose of different sections and any complex styling decisions.
+
+14. After the HTML-CSS code block, provide a list of annotations for all image placeholders, indicating their locations and any specific styling applied to them.
+
+Please generate the HTML-CSS code as a single, self-contained file that accurately represents the Midjourney interface shown in the screen capture. Ensure that the code is well-structured, properly indented, and follows best practices for modern web development.
+
+After the code block, include XML-like boundaries containing a list of annotations for image placeholders and any other relevant notes about the implementation.
