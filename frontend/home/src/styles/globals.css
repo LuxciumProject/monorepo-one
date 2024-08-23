@@ -1,10 +1,31 @@
 /* globals.css */
+/* CSS Variables // #1e1e1e;*/
+:root {
+  --bg-color: #e0e0e0;
+  --sidebar-bg: #f8f0f0;
+  --text-color: #2e2e2e;
+  --accent-color: #ff4a4a;
+  --header-height: 60px;
+  --sidebar-width: 200px;
+}
+
 body {
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  background-color: #f0f0f0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+  background-color: #f8f0f0;
 }
 
 a {

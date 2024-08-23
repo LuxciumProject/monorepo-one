@@ -13,26 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h1 className="text-3xl font-bold">Dashboard</h1>
-        <h2 className="mb-6 text-2xl font-bold">Welcome to Your Tool Dashboard</h2>
+        <h1 className="mb-6 text-2xl font-bold">Welcome to Your Tool Dashboard</h1>
         <div className="flex h-screen">
-          <aside className="w-64 bg-gray-800 p-4 text-white">
-            <nav>
-              <ul>
-                <li>
-                  <a href="/tool1" className="block rounded px-4 py-2 hover:bg-gray-700">
-                    Tool 1
-                  </a>
-                </li>
-                <li>
-                  <a href="/tool2" className="block rounded px-4 py-2 hover:bg-gray-700">
-                    Tool 2
-                  </a>
-                </li>
-                {/* Add more navigation items here */}
-              </ul>
-            </nav>
-          </aside>
           <main className="flex-1 bg-gray-100 p-8">
             <header className="mb-8"></header>
             <section>{children}</section>
