@@ -13,9 +13,9 @@
     "moduleResolution": "node",
     "rootDir": "src",
     "baseUrl": "src",
-    "outDir": "./build",
-    "declarationDir": "./build/typings",
-    "tsBuildInfoFile": "./build/out.tsbuildinfo.log",
+    "outDir": "./out",
+    "declarationDir": "./out/typings",
+    "tsBuildInfoFile": "./out/out.tsbuildinfo.log",
     "composite": true,
     "useDefineForClassFields": false,
     /* Emit Options */
@@ -43,15 +43,9 @@
     "noLib": false,
     "moduleDetection": "force",
     /* Bundled library declaration files that describe the target runtime environment. */
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     /* Package names to be included without being referenced in a source file. */
-    "types": [
-      "node",
-      "jest"
-    ],
+    "types": ["node", "jest"],
     /* JavaScript Support */
     /* Module Resolution Interop Constraints */
     // "target": "ESNext",
@@ -165,15 +159,6 @@
   //     "path": "dts/rushstack-eslint.d.ts"
   //   }
   // ],
-  "include": [
-    "src/**/*",
-    "dts/**/*"
-  ],
-  "exclude": [
-    "lib",
-    "node_modules",
-    "out",
-    "build",
-    "dist"
-  ]
+  "include": ["src/**/*", "dts/**/*"],
+  "exclude": ["lib", "node_modules", "out", "build", "dist"]
 }

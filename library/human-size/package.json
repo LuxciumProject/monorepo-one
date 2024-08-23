@@ -7,7 +7,7 @@
   "scripts": {
     "install": "pwd; yarn build || exit 13; pwd",
     "build": "(npm run coverage && bash scripts/build.sh) || exit 15",
-    "coverage": "jest --coverage --all --config='jest.config.json'",
+    "coverage": "jest --useStderr=false --silent --coverage --all --config='jest.config.json' 2>&1",
     "test": "jest --all --coverage=false --config='jest.config.json'"
   },
   "author": "Benjamin Vincent",

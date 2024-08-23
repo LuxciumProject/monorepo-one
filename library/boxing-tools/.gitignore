@@ -326,3 +326,4 @@ fabric.properties
 
 !dependencies.png
 /dist
+/lib

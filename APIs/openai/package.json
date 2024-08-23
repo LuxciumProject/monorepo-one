@@ -5,7 +5,7 @@
   "main": "out/index.js",
   "types": "out/typings/index.d.ts",
   "scripts": {
-    "build": "bash scripts/build.sh",
+    "build": "exit 0; # bash scripts/build.sh",
     "install": "pwd; # yarn build || exit 13; pwd",
     "path": "echo $PATH",
     "test": "jest"

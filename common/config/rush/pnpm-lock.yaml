@@ -2041,6 +2041,9 @@ importers:
 
   ../../frontend/home:
     dependencies:
+      eslint-plugin-simple-import-sort:
+        specifier: ~10.0.0
+        version: 10.0.0(eslint@8.57.0)
       next:
         specifier: ~14.2.6
         version: 14.2.6(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2053,9 +2056,6 @@ importers:
       tailwindcss:
         specifier: ~3.4.10
         version: 3.4.10(ts-node@10.9.2(@types/node@22.5.0)(typescript@5.5.4))
-      typedoc:
-        specifier: ~0.26.6
-        version: 0.26.6(typescript@5.5.4)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ~1.7.0
@@ -2168,6 +2168,9 @@ importers:
       storybook:
         specifier: ~8.2.9
         version: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
+      typedoc:
+        specifier: ~0.26.6
+        version: 0.26.6(typescript@5.5.4)
       typedoc-plugin-coverage:
         specifier: ~3.3.0
         version: 3.3.0(typedoc@0.26.6(typescript@5.5.4))

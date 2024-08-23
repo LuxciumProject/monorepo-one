@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc -b configs/tsconfig.build.json",
+    "build": "bash scripts/build.sh",
     "build:dist": "tsc -b configs/tsconfig.dist.json",
     "compile": "tsc -b tsconfig.json",
     "predist": "pnpm run build:dist",

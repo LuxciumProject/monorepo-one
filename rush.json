@@ -15,7 +15,7 @@
    * path segment in the "$schema" field for all your Rush config files. This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.131.4",
+  "rushVersion": "5.133.0",
   /**
    * The next field selects which package manager should be installed and determines its version.
    * Rush installs its own local copy of the package manager to ensure that your build process
@@ -24,7 +24,7 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion". See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "9.7.0",
+  "pnpmVersion": "9.8.0",
   /**
    * Options that are only used when the PNPM package manager is selected
    */
@@ -226,9 +226,7 @@
      * IMPORTANT: Because these are regular expressions encoded as JSON string literals,
      * RegExp escapes need two backslashes, and ordinary periods should be "\\.".
      */
-    "allowedEmailRegExps": [
-      "[^@]+@users\\.noreply\\.github\\.com"
-    ],
+    "allowedEmailRegExps": ["[^@]+@users\\.noreply\\.github\\.com"],
     /**
      * When Rush reports that the address is malformed, the notice can include an example
      * of a recommended email. Make sure it conforms to one of the allowedEmailRegExps
@@ -345,9 +343,7 @@
     {
       "packageName": "scratch-server",
       "projectFolder": "backend/scratch",
-      "tags": [
-        "backend"
-      ]
+      "tags": ["backend"]
     },
     {
       "packageName": "old-api-server",
@@ -365,194 +361,139 @@
       "shouldPublish": false
     },
     {
-      "packageName": "home-nextjs",
+      "packageName": "@luxcium/home-nextjs",
       "projectFolder": "frontend/home",
-      "tags": [
-        "frontend"
-      ]
+      "tags": ["frontend"]
     },
     {
       "packageName": "@luxcium/anthropic-api",
       "projectFolder": "APIs/anthropic",
-      "tags": [
-        "apis"
-      ]
+      "tags": ["apis"]
     },
     {
       "packageName": "@luxcium/openai-api",
       "projectFolder": "APIs/openai",
-      "tags": [
-        "apis"
-      ]
+      "tags": ["apis"]
     },
     {
       "packageName": "@luxcium/bigintstring",
       "projectFolder": "library/bigintString",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/colors-tools",
       "projectFolder": "library/colors-tools",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/boxing-tools",
       "projectFolder": "library/boxing-tools",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/boxed-list",
       "projectFolder": "library/boxed-list",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/object-with-expectations",
       "projectFolder": "library/object-with-expectations",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/human-size",
       "projectFolder": "library/human-size",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/parallel-mapper",
       "projectFolder": "library/parallel-mapper",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "mapping-tools",
       "projectFolder": "library/mapping-tools",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/restraining-zalgo",
       "projectFolder": "library/restraining-zalgo",
-      "tags": [
-        "library"
-      ]
+      "tags": ["library"]
     },
     {
       "packageName": "@luxcium/tools",
       "projectFolder": "library/tools",
-      "tags": [
-        "library",
-        "tools"
-      ]
+      "tags": ["library", "tools"]
     },
     {
       "packageName": "@luxcium/phash-compute",
       "projectFolder": "services/phash-compute",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "@luxcium/scan-dirs",
       "projectFolder": "services/scan-directories",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "@luxcium/rpc-worker-pool",
       "projectFolder": "services/rpc-worker-pool",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "@luxcium/image-pipeline",
       "projectFolder": "services/image-pipeline",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "@luxcium/redis-services",
       "projectFolder": "services/redis-services",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "service-one",
       "projectFolder": "services/service-one",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "service-two",
       "projectFolder": "services/service-two",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "mongo-service",
       "projectFolder": "services/mongo-service",
-      "tags": [
-        "services"
-      ]
+      "tags": ["services"]
     },
     {
       "packageName": "phash-scout-examples",
       "projectFolder": "examples/phash-scout",
-      "tags": [
-        "examples"
-      ]
+      "tags": ["examples"]
     },
     {
       "packageName": "template-example",
       "projectFolder": "examples/template",
-      "tags": [
-        "examples"
-      ]
+      "tags": ["examples"]
     },
     {
       "packageName": "open-ai",
       "projectFolder": "examples/open-ai",
-      "tags": [
-        "examples"
-      ]
+      "tags": ["examples"]
     },
     {
       "packageName": "gpu-stuff",
       "projectFolder": "examples/gpu-stuff",
-      "tags": [
-        "examples"
-      ]
+      "tags": ["examples"]
     },
     {
       "packageName": "playground-example",
       "projectFolder": "examples/playground",
-      "tags": [
-        "examples"
-      ]
+      "tags": ["examples"]
     },
     {
       "packageName": "node-js-example",
       "projectFolder": "examples/node-js",
-      "tags": [
-        "examples"
-      ]
+      "tags": ["examples"]
     }
   ]
   // {
