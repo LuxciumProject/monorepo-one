@@ -37,4 +37,10 @@ module.exports = {
       },
     },
   ],
+  plugins: [
+    'prettier-plugin-tailwindcss',
+    'prettier-plugin-organize-attributes',
+    'prettier-plugin-packagejson',
+    'prettier-plugin-sh',
+  ],
 };
