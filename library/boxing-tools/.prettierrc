@@ -7,7 +7,9 @@
   "jsxSingleQuote": false,
   "overrides": [
     {
-      "files": ["./*.test.ts"],
+      "files": [
+        "./*.test.ts"
+      ],
       "options": {
         "printWidth": 120,
         "proseWrap": "never"
@@ -21,7 +23,7 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
-  "plugins": [
+    "plugins": [
     "prettier-plugin-organize-attributes",
     "prettier-plugin-packagejson",
     "prettier-plugin-sh"
