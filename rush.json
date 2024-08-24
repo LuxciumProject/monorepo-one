@@ -340,11 +340,11 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata. // frontend/my-next-js-app
    */
   "projects": [
-    {
-      "packageName": "scratch-server",
-      "projectFolder": "backend/scratch",
-      "tags": ["backend"]
-    },
+    // {
+    //   "packageName": "scratch-server",
+    //   "projectFolder": "backend/scratch",
+    //   "tags": ["backend"]
+    // },
     {
       "packageName": "old-api-server",
       "projectFolder": "backend/api/api-package", // updated to reflect the new location
