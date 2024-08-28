@@ -47,7 +47,7 @@
     "tsc:version": "tsc --version"
   },
   "dependencies": {
-    "dotenv": "^16.0.0",
+    "dotenv": "~16.4.5",
     "fp-ts": "~2.13.1",
     "heft-jest": "~1.0.2",
     "source-map-support": "~0.5.21"

@@ -100,7 +100,7 @@ importers:
         specifier: ~1.0.0-rc.12
         version: 1.0.0
       dotenv:
-        specifier: ^16.0.0
+        specifier: ~16.4.5
         version: 16.4.5
       file-type:
         specifier: ~19.0.0
@@ -305,7 +305,7 @@ importers:
         specifier: ~0.8.33
         version: 0.8.33
       dotenv:
-        specifier: ^16.0.0
+        specifier: ~16.4.5
         version: 16.4.5
       json-schema-generator:
         specifier: ~2.0.6
@@ -1300,7 +1300,7 @@ importers:
   ../../examples/open-ai:
     dependencies:
       dotenv:
-        specifier: ^16.0.0
+        specifier: ~16.4.5
         version: 16.4.5
       openai:
         specifier: ~4.45.0
@@ -2589,7 +2589,7 @@ importers:
   ../../library/colors-tools:
     dependencies:
       dotenv:
-        specifier: ^16.0.0
+        specifier: ~16.4.5
         version: 16.4.5
       fp-ts:
         specifier: ~2.13.1
@@ -3298,7 +3298,7 @@ importers:
   ../../library/parallel-mapper:
     dependencies:
       dotenv:
-        specifier: ^16.0.0
+        specifier: ~16.4.5
         version: 16.4.5
       fp-ts:
         specifier: ~2.13.1

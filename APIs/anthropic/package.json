@@ -42,7 +42,7 @@
     "@langchain/yandex": "~0.0.1",
     "@luxcium/boxing-tools": "workspace:*",
     "@types/inquirer": "~9.0.7",
-    "dotenv": "^16.0.0",
+    "dotenv": "~16.4.5",
     "file-type": "~19.0.0",
     "graphql": "~16.8.1",
     "groq-sdk": "~0.3.2",
