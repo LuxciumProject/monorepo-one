@@ -113,7 +113,7 @@ Copyright © 2022 LUXCIUM
 
     IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 
-### Copyright © 2022 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
+### Copyright © 2022-2024 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
 
 #### † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
 
