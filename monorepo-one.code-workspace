@@ -2166,6 +2166,18 @@
     // "peacock.color": "#ff7f00",
   },
   "folders": [
+    /*
+    - 📕 Red Book
+    - 📗 Green Book
+    - 📘 Blue Book
+    - 📙 Orange Book
+    - 📚 Books
+    - 📖 Open Book
+    - 📓 Notebook
+    - 📔 Notebook with Decorative Cover
+    - 📒 Ledger
+    - 📑 Bookmark Tabs
+    */
     {
       "name": "→🖥️ ✨ MONOREPO-ONE",
       "path": "."
@@ -2187,19 +2199,19 @@
       "path": "prompts/chatgpt/more-prompts"
     },
     {
-      "name": "       🤖📙 APIs",
+      "name": "       🤖📕 APIs",
       "path": "prompts/API"
     },
     {
-      "name": "         📙⛵ midjourney",
+      "name": "         📕⛵ midjourney",
       "path": "prompts/API/midjourney"
     },
     {
-      "name": "         📙⛵ Anthropic Claude",
+      "name": "         📕⛵ Anthropic Claude",
       "path": "prompts/API/claude-3"
     },
     {
-      "name": "         📙🦾 GPTs",
+      "name": "         📕🦾 GPTs",
       "path": "prompts/API/GPTs"
     },
     {

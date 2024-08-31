@@ -1,10 +1,5 @@
 // assistantSetup.ts
-
-// Load environment variables from .env file
 import dotenv from 'dotenv';
-dotenv.config();
-
-// Import the OpenAI class from the openai package
 import OpenAI from 'openai';
 
 // Define interfaces for configuration and responses
@@ -12,6 +7,12 @@ export interface AssistantConfig {
   apiKey: string;
   model: string;
   instructions: string;
+}
+
+dotenv.config();
+const apiKey = process.env.hermes_assistant_001;
+if (!apiKey) {
+  throw new Error('Missing environment variable: hermes_assistant_001');
 }
 
 // Pseudocode: Initialize OpenAI API client
