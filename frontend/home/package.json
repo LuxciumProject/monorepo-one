@@ -8,6 +8,7 @@
     "dev": "next dev --turbo",
     "eslint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
     "lint": "next lint",
+    "prestart": "./scripts/start_docker.sh;npx db push",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
     "test": "jest --passWithNoTests"
