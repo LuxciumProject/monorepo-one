@@ -5,10 +5,10 @@
   "scripts": {
     "build": "next build",
     "build-storybook": "storybook build",
-    "dev": "next dev --turbo",
+    "predev": "./scripts/start_docker.sh;npx prisma db push; rimraf .next",
+    "dev": "next dev",
     "eslint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
     "lint": "next lint",
-    "prestart": "./scripts/start_docker.sh;npx db push",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
     "test": "jest --passWithNoTests"
@@ -88,6 +88,7 @@
     "prettier-plugin-sh": "~0.14.0",
     "prettier-plugin-tailwindcss": "~0.6.6",
     "prisma": "~5.19.1",
+    "rimraf": "~5.0.0",
     "storybook": "~8.2.9",
     "tailwind-variants": "0.1.20",
     "tailwindcss": "~3.4.10",
@@ -98,6 +99,6 @@
     "typedoc-plugin-rename-defaults": "~0.7.1",
     "typedoc-plugin-replace-text": "~4.0.0",
     "typedoc-plugin-zod": "~1.2.1",
-    "typescript": "^5"
+    "typescript": "~5.5.4"
   }
 }
