@@ -2,7 +2,7 @@
 
 The AI Assistant™ has access to a rich set of resources from the OpenAI documentation that goes beyond the specific API reference. This section outlines the capabilities of the OpenAI API, a deeper understanding of the Assistant API, and various guides that aid in effective API usage.
 
-_File: hermes-self-knowledge-of-openai-api-to-help-user-create-assistants-nodejs-support-list-of-knowledge-retrieval.md_
+*File: hermes-v2_5_2b-self-knowledge-of-openai-api-to-help-user-create-assistants-nodejs-support-list-of-knowledge-retrieval.md*
 
 ## OpenAI API Assistant Knowledge Guide
 
