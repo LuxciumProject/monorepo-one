@@ -10,8 +10,9 @@ dotenv.config();
 // Configuration Settings
 const CONFIG = {
   apiKey: process.env.hermes_assistant_001,
-  model: process.env.OPENAI_MODEL || 'gpt-4o-mini-2024-07-18', // Default to gpt-3.5-turbo
+  model: process.env.OPENAI_MODEL || 'gpt-4o-mini-2024-07-18', // Default to gpt-4o-mini-2024-07-18
   instructions: 'You are an assistant that provides web development guidance.',
+  assistantId: 'asst_iEBXASBBXaTW1B6YVkYR7N37', // Your Hermes Assistant ID
 };
 
 // Validate API key
@@ -24,6 +25,7 @@ export interface AssistantConfig {
   apiKey: string;
   model: string;
   instructions: string;
+  assistantId: string;
 }
 
 // Initialize OpenAI API client
@@ -48,6 +50,7 @@ export function createAssistant(openai: OpenAI, config: AssistantConfig): void {
   // Log the creation process
   console.log('Creating assistant with model:', config.model);
   console.log('Instructions:', config.instructions);
+  console.log('Using assistant ID:', config.assistantId);
   // Placeholder for creating an assistant
   // Define the assistant's behavior using config.model and config.instructions
   // Future implementation: Implement assistant creation logic
@@ -61,6 +64,7 @@ export async function testHelloWorld(openai: OpenAI): Promise<void> {
     const response = await openai.chat.completions.create({
       model: CONFIG.model, // Use the model from the configuration
       messages: [{ role: 'user', content: 'Say hello, world!' }],
+      user: CONFIG.assistantId, // Use the assistant ID for the request
     });
 
     console.log('Assistant response:', response.choices[0]?.message.content);
@@ -76,6 +80,7 @@ export async function main(): Promise<void> {
     apiKey: CONFIG.apiKey,
     model: CONFIG.model,
     instructions: CONFIG.instructions,
+    assistantId: CONFIG.assistantId,
   };
 
   // Initialize OpenAI API client
