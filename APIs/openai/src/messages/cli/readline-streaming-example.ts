@@ -1,15 +1,16 @@
 import { config } from 'dotenv';
-import { Configuration, OpenAIApi } from 'openai';
+import OpenAI from 'openai';
+
 import { createInterface } from 'readline';
 
 config();
 
-const configuration = new Configuration({
+const configuration = {
   apiKey: process.env.OPENAI_API_KEY || '',
   organization: process.env.OPENAI_ORG_ID,
-});
+};
 
-const openai = new OpenAIApi(configuration);
+const openai = new OpenAI(configuration);
 
 const rl = createInterface({
   input: process.stdin,
