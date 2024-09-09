@@ -13,25 +13,16 @@
     "tsBuildInfoFile": "./out/ts-out-info.lib",
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
+    "strict": true,
     /* JavaScript Support */
     "allowJs": true,
     "checkJs": false,
     /* Bundled library declaration files that describe the target runtime environment. */
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     /* Package names to be included without being referenced in a source file. */
-    "types": [
-      "node",
-      "jest"
-    ]
+    "types": ["node", "jest"]
   },
-  "include": [
-    "./src/**/*.js",
-    "./src/**/*.ts",
-    "./src/**/*.json"
-  ],
+  "include": ["./src/**/*.js", "./src/**/*.ts", "./src/**/*.json"],
   "exclude": [
     // "lib",
     // "**/jest.*.js"
