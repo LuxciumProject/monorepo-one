@@ -6,7 +6,7 @@
     */
     // ~@-----------------------------------------------------------@~
     "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.activeIconPack": "react_redux",
     "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
     "workbench.preferredDarkColorTheme": "Pop N' Lock Theme by Luxcium ✨",
     "terminal.integrated.defaultProfile.linux": "MonoRepoOne",
@@ -2068,7 +2068,7 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[properties]": {
       "editor.defaultFormatter": "foxundermoon.shell-format"
@@ -2093,9 +2093,9 @@
       "**/temp/**": true,
     },
     "github.copilot.enable": {
-      "plaintext": "true",
-      "markdown": "true",
-      "scminput": "true"
+      "plaintext": true,
+      "markdown": true,
+      "scminput": true
     },
     "gitHistory.hideCommitViewExplorer": false,
     "runme.cli.useIntegratedRunme": true,

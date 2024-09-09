@@ -1,5 +1,4 @@
 'use server';
-
 import { signIn, signOut } from '@/auth';
 import { prisma } from '@/lib/prisma';
 import { LoginSchema } from '@/lib/schemas/loginSchema';
@@ -8,6 +7,7 @@ import { ActionResult } from '@/types';
 import type { User } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 import { AuthError } from 'next-auth';
+import 'server-only';
 export async function signInUser(
   data: LoginSchema,
 ): Promise<ActionResult<string>> {

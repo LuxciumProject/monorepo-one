@@ -5,6 +5,7 @@ import { RegisterSchema } from '@/lib/schemas/registerSchema';
 import { Button, Card, CardBody, CardHeader, Input } from '@nextui-org/react';
 import { useForm } from 'react-hook-form';
 import { GiPadlock } from 'react-icons/gi';
+import { ZodIssue } from 'zod';
 
 export default function RegisterForm() {
   const {
@@ -24,7 +25,7 @@ export default function RegisterForm() {
       console.log('User registered successfully');
     } else {
       if (Array.isArray(result.error)) {
-        result.error.forEach((e) => {
+        result.error.forEach((e: ZodIssue) => {
           const fieldName = e.path.join('.') as 'email' | 'name' | 'password';
           setError(fieldName, { message: e.message });
         });

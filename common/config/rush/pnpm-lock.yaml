@@ -2052,6 +2052,9 @@ importers:
       react-toastify:
         specifier: ~10.0.5
         version: 10.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      server-only:
+        specifier: 0.0.1
+        version: 0.0.1
       zod:
         specifier: ~3.23.8
         version: 3.23.8
@@ -3968,7 +3971,7 @@ importers:
     dependencies:
       mongoose:
         specifier: ~8.3.2
-        version: 8.3.5(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0)
+        version: 8.3.5(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0(encoding@0.1.13))
       source-map-support:
         specifier: ~0.5.21
         version: 0.5.21
@@ -10721,8 +10724,8 @@ packages:
   citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}
 
-  cjs-module-lexer@1.4.0:
-    resolution: {integrity: sha512-N1NGmowPlGBLsOZLPvm48StN04V4YvQRL0i6b7ctrVY3epjP/ct7hFLOItz6pDIvRjwpfPxi52a2UWV2ziir8g==}
+  cjs-module-lexer@1.4.1:
+    resolution: {integrity: sha512-cuSVIHi9/9E/+821Qjdvngor+xpnlwnuwIyZOaLmHBVdXL+gP+I6QQB9VkO7RI77YIcTV+S1W9AreJ5eN63JBA==}
 
   class-transformer@0.5.1:
     resolution: {integrity: sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==}
@@ -11798,8 +11801,8 @@ packages:
   evp_bytestokey@1.0.3:
     resolution: {integrity: sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==}
 
-  exa-js@1.0.14:
-    resolution: {integrity: sha512-YiGqac7v1erGnN2MyHFPDy2C+CM9qE72lHpUJCZMA/1LnN52TVYGCUBXTWXkgOuCAZH+f8ME81I+2grzjecs0g==}
+  exa-js@1.1.0:
+    resolution: {integrity: sha512-INyRfggWMYv4Hs27cUbpqEwgVJq7bcQ+ZGC+h41xjen6+RZDaZqQNLiSGONANcye7UbGs3nq3MydmDvhEDUXzA==}
 
   execa@4.1.0:
     resolution: {integrity: sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==}
@@ -15520,6 +15523,9 @@ packages:
   serve-static@1.15.0:
     resolution: {integrity: sha512-XGuRDNjXUijsUL0vl6nSD7cwURuzEgglbOaFuZM9g3kwDXOWVTck0jLzjPzGD+TazWbboZYu52/9/XPdUgne9g==}
     engines: {node: '>= 0.8.0'}
+
+  server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
 
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
@@ -19685,7 +19691,7 @@ snapshots:
   '@langchain/exa@0.0.5(encoding@0.1.13)(langchain@0.1.37(nyhxf4o3ibgvrmefjmlx6mcfzy))(openai@4.58.1(encoding@0.1.13)(zod@3.23.8))':
     dependencies:
       '@langchain/core': 0.1.63(langchain@0.1.37(nyhxf4o3ibgvrmefjmlx6mcfzy))(openai@4.58.1(encoding@0.1.13)(zod@3.23.8))
-      exa-js: 1.0.14(encoding@0.1.13)
+      exa-js: 1.1.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - langchain
@@ -21870,8 +21876,8 @@ snapshots:
       '@internationalized/date': 3.5.5
       '@internationalized/string': 3.2.3
       '@react-stately/form': 3.0.5(react@18.3.1)
-      '@react-stately/overlays': 3.6.7(react@18.3.1)
-      '@react-stately/utils': 3.10.1(react@18.3.1)
+      '@react-stately/overlays': 3.6.10(react@18.3.1)
+      '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/datepicker': 3.7.4(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
       '@swc/helpers': 0.5.13
@@ -23080,7 +23086,7 @@ snapshots:
       '@types/semver': 7.5.8
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
-      cjs-module-lexer: 1.4.0
+      cjs-module-lexer: 1.4.1
       constants-browserify: 1.0.0
       css-loader: 6.11.0(webpack@5.88.2)
       es-module-lexer: 1.5.4
@@ -25339,7 +25345,7 @@ snapshots:
     dependencies:
       consola: 3.2.3
 
-  cjs-module-lexer@1.4.0: {}
+  cjs-module-lexer@1.4.1: {}
 
   class-transformer@0.5.1: {}
 
@@ -26688,7 +26694,7 @@ snapshots:
       md5.js: 1.3.5
       safe-buffer: 5.2.1
 
-  exa-js@1.0.14(encoding@0.1.13):
+  exa-js@1.1.0(encoding@0.1.13):
     dependencies:
       cross-fetch: 4.0.0(encoding@0.1.13)
     transitivePeerDependencies:
@@ -28420,7 +28426,7 @@ snapshots:
       '@jest/types': 29.6.3
       '@types/node': 22.5.4
       chalk: 4.1.2
-      cjs-module-lexer: 1.4.0
+      cjs-module-lexer: 1.4.1
       collect-v8-coverage: 1.0.2
       glob: 7.2.3
       graceful-fs: 4.2.11
@@ -29353,7 +29359,7 @@ snapshots:
       '@types/whatwg-url': 11.0.5
       whatwg-url: 13.0.0
 
-  mongodb@6.5.0(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0):
+  mongodb@6.5.0(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0(encoding@0.1.13)):
     dependencies:
       '@mongodb-js/saslprep': 1.1.9
       bson: 6.8.0
@@ -29371,11 +29377,11 @@ snapshots:
       '@aws-sdk/credential-providers': 3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0))
       gcp-metadata: 5.3.0(encoding@0.1.13)
 
-  mongoose@8.3.5(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0):
+  mongoose@8.3.5(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0(encoding@0.1.13)):
     dependencies:
       bson: 6.8.0
       kareem: 2.6.3
-      mongodb: 6.5.0(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0)
+      mongodb: 6.5.0(@aws-sdk/credential-providers@3.645.0(@aws-sdk/client-sso-oidc@3.645.0(@aws-sdk/client-sts@3.645.0)))(gcp-metadata@5.3.0(encoding@0.1.13))
       mpath: 0.9.0
       mquery: 5.0.0
       ms: 2.1.3
@@ -30982,6 +30988,8 @@ snapshots:
       escape-html: 1.0.3
       parseurl: 1.3.3
       send: 0.18.0
+
+  server-only@0.0.1: {}
 
   set-blocking@2.0.0: {}
 
