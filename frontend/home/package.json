@@ -16,17 +16,7 @@
   "dependencies": {
     "@auth/prisma-adapter": "~2.4.2",
     "@hookform/resolvers": "~3.9.0",
-    "@nextui-org/button": "2.0.37",
-    "@nextui-org/code": "2.0.32",
-    "@nextui-org/input": "2.2.4",
-    "@nextui-org/kbd": "2.0.33",
-    "@nextui-org/link": "2.0.34",
-    "@nextui-org/listbox": "2.1.25",
-    "@nextui-org/navbar": "2.0.36",
     "@nextui-org/react": "~2.4.6",
-    "@nextui-org/snippet": "2.0.41",
-    "@nextui-org/switch": "2.0.33",
-    "@nextui-org/system": "2.2.5",
     "@nextui-org/theme": "2.2.9",
     "@prisma/client": "~5.19.1",
     "@react-aria/ssr": "3.9.4",
@@ -45,7 +35,8 @@
     "react-icons": "~5.3.0",
     "react-toastify": "~10.0.5",
     "server-only": "0.0.1",
-    "zod": "~3.23.8"
+    "zod": "~3.23.8",
+    "date-fns": "~3.6.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "~1.7.0",
@@ -100,6 +91,7 @@
     "typedoc-plugin-rename-defaults": "~0.7.1",
     "typedoc-plugin-replace-text": "~4.0.0",
     "typedoc-plugin-zod": "~1.2.1",
-    "typescript": "~5.5.4"
+    "typescript": "~5.5.4",
+    "ts-node": "~10.9.2"
   }
 }
