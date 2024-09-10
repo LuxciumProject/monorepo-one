@@ -1,10 +1,9 @@
-import { Spinner } from '@nextui-org/react'
-import React from 'react'
+import { Spinner } from '@nextui-org/react';
 
 export default function Loading() {
   return (
-    <div className='flex justify-center items-center vertical-center'>
-        <Spinner label='Loading...' color='secondary' labelColor='secondary' />
+    <div className="vertical-center flex items-center justify-center">
+      <Spinner label="Loading..." color="secondary" labelColor="secondary" />
     </div>
-  )
+  );
 }
