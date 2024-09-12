@@ -2224,7 +2224,15 @@
       "path": "private"
     },
     {
-      "name": "  ↓ 🏭 🏦 🗜️ BACKEND",
+      "name": "  ↓ 💻 👨‍💻 FRONTEND",
+      "path": "frontend"
+    },
+    {
+      "name": "           👨‍💻💅📗🏩 home",
+      "path": "frontend/home"
+    },
+    {
+      "name": "  ↓ 🏭 🏦 BACKEND",
       "path": "backend"
     },
     {
@@ -2232,16 +2240,8 @@
       "path": "backend/api"
     },
     {
-      "name": "           🏦🗜️🏫 scratch",
+      "name": "           🏦🏫 scratch",
       "path": "backend/scratch"
-    },
-    {
-      "name": "  ↓ 💻 👨‍💻 FRONTEND",
-      "path": "frontend"
-    },
-    {
-      "name": "           👨‍💻💅📗🏩 home",
-      "path": "frontend/home"
     },
     {
       "name": "  ↓ 📓 📚 LIBRARY",
