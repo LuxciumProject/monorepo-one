@@ -2098,13 +2098,6 @@
       "scminput": true
     },
     "gitHistory.hideCommitViewExplorer": false,
-    "runme.cli.useIntegratedRunme": true,
-    "runme.terminal.cursorStyle": "underline",
-    "runme.actions.openViewInEditor": "toggle",
-    "runme.terminal.fontSize": 12,
-    "[plaintext]": {
-      "editor.defaultFormatter": "1nVitr0.blocksort"
-    },
     "[markdown]": {
       "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
@@ -2187,47 +2180,59 @@
       "path": "prompts"
     },
     {
-      "name": "       🤖📣 TYPING PROMPTER",
+      "name": "           🤖📣 TYPING PROMPTER",
       "path": "prompts/typing_prompter"
     },
     {
-      "name": "       🤖💬 CHAT GPT",
+      "name": "           🤖💬 CHAT GPT",
       "path": "prompts/chatgpt"
     },
     {
-      "name": "       💬💭 MORE PROMPTS",
-      "path": "prompts/chatgpt/more-prompts"
-    },
-    {
-      "name": "       🤖📕 APIs",
+      "name": "           🤖📕 APIs",
       "path": "prompts/API"
     },
     {
-      "name": "         📕⛵ midjourney",
+      "name": "           ⛵📕 midjourney",
       "path": "prompts/API/midjourney"
     },
     {
-      "name": "         📕⛵ Anthropic Claude",
+      "name": "           🦾📕 Anthropic Claude",
       "path": "prompts/API/claude-3"
     },
     {
-      "name": "         📕🦾 GPTs",
+      "name": "           🦾📕 GPTs",
       "path": "prompts/API/GPTs"
+    },
+    {
+      "name": "           🤖💬💭 MORE PROMPTS",
+      "path": "prompts/chatgpt/more-prompts"
+    },
+    {
+      "name": "  ↓ 📓 📙 APIs",
+      "path": "APIs"
+    },
+    {
+      "name": "           📙 Anthropic",
+      "path": "APIs/anthropic"
+    },
+    {
+      "name": "           📙 OpenAI",
+      "path": "APIs/openai"
     },
     {
       "name": "  ↓ 🔐 💫 PRIVATE",
       "path": "private"
     },
     {
-      "name": "  ↓ 🏦 🗜️ BACKEND",
+      "name": "  ↓ 🏭 🏦 🗜️ BACKEND",
       "path": "backend"
     },
     {
-      "name": "       🏦🗜️ api",
+      "name": "           🏦🗜️ api",
       "path": "backend/api"
     },
     {
-      "name": "       🏫🗜️ scratch",
+      "name": "           🏦🗜️🏫 scratch",
       "path": "backend/scratch"
     },
     {
@@ -2235,67 +2240,55 @@
       "path": "frontend"
     },
     {
-      "name": "       👨‍💻💅 home",
+      "name": "           👨‍💻💅📗🏩 home",
       "path": "frontend/home"
-    },
-    {
-      "name": "  ↓ 📓 📙 APIs",
-      "path": "APIs"
-    },
-    {
-      "name": "       📙 Anthropic",
-      "path": "APIs/anthropic"
-    },
-    {
-      "name": "       📙 OpenAI",
-      "path": "APIs/openai"
     },
     {
       "name": "  ↓ 📓 📚 LIBRARY",
       "path": "library"
     },
     {
-      "name": "  S *→ 📚🧭 mapping-tools",
+      "name": "  S*→📚🧭 mapping-tools",
       "path": "library/mapping-tools"
     },
     {
-      "name": "       📚💛 colors-tools",
+      "name": "          📚💛 colors-tools",
       "path": "library/colors-tools"
     },
     {
-      "name": "       📚💗 boxing-tools",
+      "name": "          📚💗 boxing-tools",
       "path": "library/boxing-tools"
     },
     {
-      "name": "       📚🧡 boxed-list",
+      "name": "          📚🧡 boxed-list",
       "path": "library/boxed-list"
     },
     {
-      "name": "       📚❤️ bigintString",
+      "name": "          📚❤️ bigintString",
       "path": "library/bigintString"
     },
     {
-      "name": "       📚💚 human-size",
+      "name": "          📚💚 human-size",
       "path": "library/human-size"
     },
     {
-      "name": "       📚💙 object-with-expectations",
+      "name": "          📚💙 object-with-expectations",
       "path": "library/object-with-expectations"
     },
     {
-      "name": "       📚💜 parallel-mapper",
+      "name": "          📚💜 parallel-mapper",
       "path": "library/parallel-mapper"
     },
     {
-      "name": "       📚🧌 restraining-zalgo",
+      "name": "          📚🧌 restraining-zalgo",
       "path": "library/restraining-zalgo"
     },
     {
-      "name": "       📓🛠️ Tools",
+      "name": "          📓🛠️ Tools",
       "path": "library/tools"
     },
     {
-      "name": "       📘 Typescript",
+      "name": "          📘 Typescript",
       "path": "library/typescript"
     },
     {
@@ -2303,39 +2296,39 @@
       "path": "services"
     },
     {
-      "name": "  S *→ 💁🛵 image-scout",
+      "name": "  S*→ 💁🛵 image-scout",
       "path": "services/image-scout"
     },
     {
-      "name": "  S *→ 💁💜 rpc-worker-pool",
+      "name": "  S*→ 💁💜 rpc-worker-pool",
       "path": "services/rpc-worker-pool"
     },
     {
-      "name": "       💁🖼 image-pipeline",
+      "name": "           💁🖼️ image-pipeline",
       "path": "services/image-pipeline"
     },
     {
-      "name": "       💁📊 mongo-service",
+      "name": "           💁📊 mongo-service",
       "path": "services/mongo-service"
     },
     {
-      "name": "       💁❤️ phash-compute",
+      "name": "           💁❤️ phash-compute",
       "path": "services/phash-compute"
     },
     {
-      "name": "       💁🧡 redis-services",
+      "name": "           💁🧡 redis-services",
       "path": "services/redis-services"
     },
     {
-      "name": "       💁💛 scan-directories",
+      "name": "           💁💛 scan-directories",
       "path": "services/scan-directories"
     },
     {
-      "name": "       💁💚 service-one",
+      "name": "           💁💚 service-one",
       "path": "services/service-one"
     },
     {
-      "name": "       💁💙 service-two",
+      "name": "           💁💙 service-two",
       "path": "services/service-two"
     },
     {
@@ -2343,7 +2336,7 @@
       "path": "static"
     },
     {
-      "name": "       🎨🤖 STABLE DIFFUSION",
+      "name": "           🎨🤖 STABLE DIFFUSION",
       "path": "static/stable-diffusion"
     },
     {
@@ -2351,35 +2344,35 @@
       "path": "examples"
     },
     {
-      "name": "       🎱🪄 template",
+      "name": "           🎱🪄 template",
       "path": "examples/template"
     },
     {
-      "name": "       🎱🪄 open-ai",
+      "name": "           🎱🪄 open-ai",
       "path": "examples/open-ai"
     },
     {
-      "name": "       🎱🪄 gpu-stuff",
+      "name": "           🎱🪄 gpu-stuff",
       "path": "examples/gpu-stuff"
     },
     {
-      "name": "       🎱🪄 playground",
+      "name": "           🎱🪄 playground",
       "path": "examples/playground"
     },
     {
-      "name": "       🎱🪄 node-js",
+      "name": "           🎱🪄 node-js",
       "path": "examples/node-js"
     },
     {
-      "name": "       🎱🛵 phash-scout",
+      "name": "           🎱🛵 phash-scout",
       "path": "examples/phash-scout"
     },
     {
-      "name": "       📘 typescript",
+      "name": "           📘 typescript",
       "path": "examples/typescript"
     },
     {
-      "name": "📓📔Scripts",
+      "name": " ··· 📓 📔 Scripts",
       "path": "scripts"
     }
   ],
