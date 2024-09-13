@@ -6,7 +6,7 @@
     "build": "next build",
     "build-storybook": "storybook build",
     "predev": "./scripts/start_docker.sh; pnpm prisma:set",
-    "dev": "next dev",
+    "dev": "(sleep 4; xdg-open http://localhost:3000) & next dev",
     "predev:clean": "rimraf .next",
     "dev:clean": "pnpm dev",
     "eslint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",

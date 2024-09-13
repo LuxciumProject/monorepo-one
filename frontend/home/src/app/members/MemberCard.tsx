@@ -17,7 +17,7 @@ export default function MemberCard({ member }: Props) {
         src={member.image || '/images/user.png'}
         className="aspect-square object-cover"
       />
-      <CardFooter className="bg-dark-gradient absolute bottom-0 z-10 flex justify-start overflow-hidden bg-black">
+      <CardFooter className="absolute bottom-0 z-10 flex justify-start overflow-hidden bg-gradient-to-b from-transparent to-zinc-800">
         <div className="flex flex-col text-white">
           <span className="font-semibold">
             {member.name}, {calculateAge(member.dateOfBirth)}
