@@ -1,5 +1,6 @@
 import Providers from '@/components/Providers';
 import TopNav from '@/components/navbar/TopNav';
+import { Link } from '@nextui-org/react';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -19,6 +20,23 @@ export default function RootLayout({
         <Providers>
           <TopNav />
           <main className="container mx-auto">{children}</main>
+          <div className="mt-12 flex gap-4 border border-success">
+            <Link href="#" underline="none">
+              None
+            </Link>
+            <Link href="#" underline="hover">
+              Hover
+            </Link>
+            <Link href="#" underline="always">
+              Always
+            </Link>
+            <Link href="#" underline="active">
+              Active
+            </Link>
+            <Link href="#" underline="focus">
+              Focus
+            </Link>
+          </div>
         </Providers>
       </body>
     </html>
