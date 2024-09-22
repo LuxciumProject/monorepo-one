@@ -511,6 +511,13 @@
       ]
     },
     {
+      "packageName": "casecobra-dev",
+      "projectFolder": "examples/casecobra-master",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
       "packageName": "phash-scout-examples",
       "projectFolder": "examples/phash-scout",
       "tags": [
