@@ -1,5 +1,5 @@
-import Providers from '@/components/Providers';
-import TopNav from '@/components/navbar/TopNav';
+import Providers from '@components/Providers';
+import TopNav from '@components/navbar/TopNav';
 import { Link } from '@nextui-org/react';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -42,3 +42,4 @@ export default function RootLayout({
     </html>
   );
 }
+// tailwindcss-animate class-variance-authority lucide-react @radix-ui/react-icons clsx tailwind-merge

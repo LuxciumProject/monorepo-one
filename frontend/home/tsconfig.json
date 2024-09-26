@@ -22,6 +22,9 @@
       }
     ],
     "paths": {
+      "@/registry/*": [
+        "./src/components/ui/registry/*"
+      ],
       "@/*": [
         "./src/*"
       ],

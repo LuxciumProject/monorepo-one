@@ -16,6 +16,12 @@
     "prettier"
     // "simple-import-sort"
   ],
+  "ignorePatterns": [
+    "src/components/ui/registry",
+    "node_modules/",
+    "dist/",
+    "build/"
+  ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
