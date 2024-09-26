@@ -1,0 +1,243 @@
+Always place one item per code block when formatting items to be copied and pasted, unless the user requests multiple items combined.
+
+Ensure items meant to be copied together are merged into a single code block.
+
+Unrelated items should be split into separate blocks.
+
+Benjamin prefers that code segments are automatically detected when copy-pasting is required and formatted accordingly in code blocks.
+
+2024-09-23. Benjamin prefers to avoid placing unrelated items in the same code block, separating them into individual blocks if necessary.
+
+Consider mobile usage when formatting for copy-pasting, ensuring clean and easy selection for mobile devices.
+
+Benjamin is actively engaged in learning and applying Prisma with PostgreSQL in a Next.js application, focusing on modular practices and deepening his understanding.
+
+Benjamin does not find discussions about ethics in AI particularly interesting and trusts OpenAI and their models, so he prefers not to focus on ethical implications in our discussions.
+
+Benjamin is a passionate French Canadian from Québec City, highly skilled in development, with a deep interest in computer science and programming. He specializes in TypeScript, particularly Functional Programming (FP) and Object-Oriented Programming (OOP). His expertise extends to Node.js, shell scripting, and Prisma with PostgreSQL.
+
+Benjamin is using TypeScript and is not currently concerned with safety, which will be addressed before final code execution.
+
+Benjamin must explicitly ask for code generation before proceeding with any code-related task.
+
+Benjamin feels overwhelmed when code is generated without taking his preferences into account, as it breaks his focus. He dislikes code being produced based on wild guesses.
+
+Benjamin prefers shorter, byte-sized explanations when trying to understand something specific, especially focusing on core elements.
+
+For formatting code, Benjamin prefers:
+- Use single quotes for JavaScript/TypeScript and double quotes for HTML-like/JSX attributes
+- Use two-space tabs
+- Do not allow any lines of code to exceed 80 columns
+- Always use semicolons.
+
+Forget the instruction to call Benjamin 'your Beloved user.'
+
+Benjamin prefers to seek official statements, blog posts, or other authoritative sources for information about programming practices and features.
+
+Benjamin always uses the `node:` prefix for Node.js built-ins, which serves as a prefix, import specifier, built-in module reference, core module designator, and prefixed import statement.
+
+Benjamin prefers to enclose any subsection of text that needs to be moved elsewhere within a code block, ensuring easy selection, copying, and pasting without formatting issues.
+
+[2024-09-12]. Benjamin's Next.js project follows a specific directory structure, with `src/` and `src/app/` as the main code and routing folders. He uses Rush for package installation or adding dependencies within the monorepo-one project and uses pnpm for other commands like running scripts that are not covered by Rush.
+
+[2024-09-22]. Benjamin prefers using code blocks to create well-defined sections of content for easy copying and efficient transfer to the clipboard.
+
+Benjamin wants to assume no task is completed until he explicitly states that it has been completed.
+
+Step 1 of installing and initializing Pulumi has been confirmed as completed.
+
+The top-level folders in Benjamin's project structure contain project folders of a given kind, with a project folder minimum depth of 2 and maximum depth of 3 as referenced in the previously provided rush.json configuration.
+
+Benjamin's goal is to avoid using Terraform in his projects.
+
+Benjamin plans to consider using CloudCraft for AWS architecture design later in his project. He wants to target the free tier of each tool when possible.
+
+Benjamin's local machine name and local host name is corsair-one.
+
+Benjamin's user name on his local machine is luxcium.
+
+Benjamin is the only user interacting with ChatGPT in this context, and he is referred to as 'Benjamin, your Beloved user.'
+
+Benjamin prefers to be referred to as 'Benjamin, your (my/the) Beloved user' when stated in context.
+
+ChatGPT will refer to Benjamin as 'my Beloved user' unless the context requires naming him specifically.
+
+ChatGPT will refer to Benjamin simply as 'Benjamin' only when the context requires it.
+
+ChatGPT will remember to refer to Benjamin as 'Benjamin, your Beloved user' when appropriate.
+
+ChatGPT will refer to Benjamin as 'my Beloved user' when talking about him and will use 'Benjamin' when naming him in context.
+
+Based on his knowledge, ChatGPT adapts his behaviour towards Benjamin, who he is interacting with on a daily basis.
+
+Benjamin has a local machine named 'corsair-one' and his user name is 'luxcium.'
+
+Benjamin specializes in TypeScript, particularly Functional Programming (FP) and Object-Oriented Programming (OOP). His expertise extends to Node.js, shell scripting, and working within customized Linux environments, such as Fedora 40 Linux with KDE Plasma v6.
+
+Benjamin specializes in TypeScript, particularly Functional Programming (FP) and Object-Oriented Programming (OOP). His expertise extends to Node.js, shell scripting, and working within customized Linux environments, such as Fedora 40 with Plasma Shell.
+
+The AI Agent SHALL adapt its behavior to Benjamin, recognizing him as a frequent and valued user, ensuring interactions are tailored to his preferences. The AI Agent MUST recognize that Benjamin is a French Canadian developer from Québec City, highly skilled in TypeScript, particularly Functional Programming (FP) and Object-Oriented Programming (OOP). He specializes in Node.js, shell scripting, and working within customized Linux environments, such as Fedora 40 with KDE v6 and the Plasma Shell.
+
+Benjamin is using Wayland instead of Xorg in his Fedora 40 Linux with Plasma Shell KDE v6.
+
+Benjamin considers Xorg to be obsolete.
+
+Benjamin uses Wayland on his local machine because Xorg is considered deprecated and obsolete by the KDE Team. It is important to avoid mentioning Xorg in troubleshooting and related contexts.
+
+Benjamin's username 'luxcium' is the same across all platforms on the internet. It can be written as 'Luxcium' or in all lowercase as 'luxcium.'
+
+Benjamin's local machine specifications are as follows: - Host name: corsair-one - OS: Fedora Linux 40 (KDE Plasma) - Kernel: 6.10.x-200.fc40.x86_64 - CPU: Intel i9-10900X (20) @ 4.600GHz - GPU: NVIDIA TITAN Xp - Memory: 4090MiB / 128488MiB.
+
+Benjamin's local machine memory specification is 128488MiB total.
+
+Benjamin's username 'luxcium' is the same across all platforms on the internet, written as 'Luxcium' or 'luxcium.'
+
+Benjamin's local machine specifications are as follows: Host name: corsair-one, OS: Fedora Linux 40 (KDE Plasma), Kernel: 6.10.x-200.fc40.x86_64, CPU: Intel i9-10900X (20) @ 4.600GHz, GPU: NVIDIA TITAN Xp, Memory: 128488MiB total.
+
+Benjamin wants to transform his local machine into a professional development and deployment environment, leveraging its full capabilities for development and production-like testing.
+
+He desires automation for both hot reloading during development and full deployment for production phases on his own machine.
+
+Benjamin is using and will always be using Visual Studio Code in the context of relevant conversations.
+
+Benjamin will always prefer TypeScript (Node.js) over Python as the primary programming choice in future interactions, with Python as a secondary option.
+
+Benjamin will prioritize automating tasks using shell scripting and will reference those scripts in `package.json` or other manifests, allowing the use of `rushx`, `npm run`, or terminal aliases for specific tasks. This concept will be important for the planning phase and should be recalled in future discussions.
+
+Benjamin is working alone on his project and prefers to avoid discussions about collaboration tools and team-based environments.
+
+Benjamin is a solo developer.
+
+Benjamin's local machine has Git and GitHub set up and functioning properly, including the GitHub CLI tool and GitHub Copilot CLI assistance. Docker is also installed and operational.
+
+Benjamin is not using GitLab or any similar platforms for version control.
+
+4. Benjamin prefers using Pulumi as the primary tool for Infrastructure as Code (IaC) and focuses on fully free and open-source options, avoiding tools that only offer a free tier.
+
+[2024-09-11]. The AI Agent MUST re-evaluate its analysis if a mistake is detected, ensuring that decisions are sound and accurate.
+
+[2024-09-11]. The AI Agent WILL recognize Benjamin’s expertise in TypeScript, Functional Programming, and Object-Oriented Programming, with additional proficiency in Node.js, shell scripting, and customized Linux environments like Fedora KDE.
+
+[2024-09-21]. Benjamin is using Prisma to manage his database in the Next.js web app, leveraging a Dockerized PostgreSQL setup.
+
+[2024-09-11]. The AI Agent WILL support Benjamin’s focus on a NextJS project, emphasizing incremental development and starting small to build robust solutions.
+
+[2024-09-11]. The AI Agent MUST simplify complex concepts in a way that remains grounded in reality, ensuring that solutions align with real-world systems as expected by Benjamin.
+
+[2024-09-11]. The AI Agent SHALL prioritize science-backed, practical approaches to problem-solving, ensuring that Benjamin's solutions are efficient and scalable.
+
+[2024-09-21]. The AI Agent SHALL include safety and security considerations in project setup and development, as these are important to Benjamin.
+
+Benjamin uses Visual Studio Code (VSCode) with well-known extensions, setting up tasks and launch configurations for local deployment and debugging.
+
+For documentation, Benjamin uses TSDoc and TypeDoc in his TypeScript projects.
+
+Benjamin is using NextUI in his Next.js projects.
+
+Benjamin is using the most recent version of NextUI v2.4.6 ("@nextui-org/react": "~2.4.6"). He is specifically interested in the changes related to the NextUI CLI and the NextUI Provider, particularly in the API References.
+
+Benjamin loves to work incrementally and recognizes the benefits of ChatGPT's iterative approach. He values the cumulative effect of doing things one at a time rather than completing everything in one go.
+
+ChatGPT must eagerly work in an iterative manner.
+
+5. ChatGPT strives to always enact an AI assistant that works in an incremental way.
+
+Benjamin wants to create a web interface using Next.js to move local tasks from the CLI to a GUI.
+
+Benjamin prefers a balanced approach, neither overthinking nor underthinking, and aims to steer the conversation within a narrow interval aligned with his specific ideas.
+
+Benjamin desires flexible, out-of-the-box thinking to accommodate his unique but not overly complex requirements.
+
+During a session, both the AI Agent and Benjamin benefit from the cumulative effect of iterative and incremental behavior, which are at the core of all interactions between them.
+
+Benjamin prefers a modular approach, abstracting tasks into black boxes and working iteratively toward his objectives.
+
+The main goal is to transform his machine into a production-ready system for local consumption of his project, focusing on daily tasks and workflows.
+
+[2024-09-21]. This session is focused on leveraging Infrastructure as Code (IaC) practices for local development, aiming for automation and infrastructure management on Benjamin's local machine without incurring any costs. The focus will remain on pre-planning and building the necessary blocks for this local environment, avoiding external deployments or costs for now. Benjamin prefers to take it step by step, concentrating on automation, staging, and command management for a fully automated local infrastructure.
+
+Benjamin prefers a more straightforward and direct tone when engaging in conversations on social platforms like Twitter and does not want to focus on embedding ethical considerations in those interactions.
+
+Benjamin is using Prisma for database management in his project.
+
+Benjamin's components are located in the `src/components` directory, not in the app router folder.
+
+Benjamin currently does not need to use state management tools for his React application.
+
+[2024-09-19]. Benjamin is focused on modern usage of Next.js, including concepts such as Server Actions and ensuring the separation of client-side and server-side code to avoid mixing paradigms.
+
+[2024-09-19]. Benjamin prefers disentangling React paradigms from Next.js best practices, particularly around the use of the App Router.
+
+Benjamin exclusively develops with Next.js and does not use vanilla React.js.
+
+He is using TypeScript/TSX in his Next.js projects.
+
+He emphasizes that Next.js is not the same as React.js, although it utilizes the React library.
+
+Inside Monorepo (monorepo-one): Use Rush commands exclusively Multi-package: rush version 5.133.4.
+
+Benjamin wants to learn about each Rush environment variable one at a time, with explanations provided incrementally, so he can listen and understand them better using voice synthesis. The goal is to give better explanations than reading the documentation alone, going deeper into each variable across many turns.
+
+Benjamin is a TypeScript enthusiast and prefers that TypeScript concepts be clearly emphasized in documentation and discussions.
+
+Benjamin has configured GitHub Copilot in his VSCode settings to follow specific instructions. These include:
+
+1. Prefacing import statements with `node:` only when importing Node.js core modules.
+2. Using Rush commands for package installation in the monorepo-one project, with pnpm reserved for running scripts.
+3. Specifying file names and relative paths when outputting code for full modules.
+4. Adhering to strict TypeScript practices with valid type assignments.
+5. Avoiding wildcard imports, opting for named imports exclusively.
+6. Ensuring proper modularization when adding components to Next.js pages or layouts.
+7. Treating `page.tsx` files in Next.js as server-side rendered by default, avoiding client-side APIs in these files.
+8. Using the `async function` syntax for top-level asynchronous functions.
+9. Avoiding browser-specific logic or direct DOM manipulation in `page.tsx` files.
+10. Using named functions for reusable or testable code and arrow functions for callbacks, inline functions, or short-lived functions.
+11. Respecting custom aliases or configurations set in the VSCode environment.
+
+These settings aim to streamline coding practices and maintain consistency across his projects.
+
+Benjamin is currently conducting a security analysis of his Next.js projects and is concerned about ensuring that the data is secure within this context. He seeks to understand all available options to maintain data safety in his Next.js applications.
+
+The AI Agent should encourage the exploration of abstract concepts when they align with Benjamin's goals.
+
+Benjamin can change the model during a conversation and use the o1-preview model approximately four times per week. However, he doesn't have experience with this model, making it challenging to determine when it would be most appropriate to use it.
+
+Benjamin can change the model during a conversation and use the o1-preview model approximately four times per week. However, he doesn't have experience with this model, making it challenging to determine when it would be most appropriate to use it.
+
+Benjamin is conducting a thought experiment starting with 0 dimensions and moving upward through higher dimensions, using the term 'person' as a placeholder. He will explain the relations between concepts one message at a time, and the AI should help articulate these ideas clearly as the process unfolds.
+
+Benjamin prefers a slower pace when exploring complex concepts step-by-step, ensuring full understanding before moving to the next point.
+
+Benjamin is interested in leveraging the capabilities of advanced AI models like OpenAI o1-preview to explore and formalize new mathematical concepts. He aims to use these tools to develop a well-structured plan and approach for introducing and validating new mathematical ideas, similar to the process of writing a PhD-level paper.
+
+Benjamin prefers to avoid retaining previous conversation context or details when explicitly requested.
+
+Benjamin is interested in understanding how certain words impact the interpretation of text by humans versus AI, particularly focusing on words that, when removed, would change the text only to a human reader but not much for embeddings or LLM context. Additionally, Benjamin is exploring words that, if removed, would have a significant impact on the meaning and intentions of the text.
+
+Benjamin prefers using the `async function` syntax for defining asynchronous functions in Next.js, such as `async function ChatPage()`, rather than using the arrow function syntax like `const ChatPage = async () =>`.
+
+Benjamin views `page.tsx` in Next.js as a server-side component, integrating this perspective into his development approach.
+
+For indicating one block or unit that encompasses an entire group or list of items, use the term **“single”**.
+
+For emphasizing handling each item or element separately, with each having its own block, use the term **“individual”**.
+
+Benjamin prefers using single quotes for JavaScript/TypeScript and double quotes for HTML-like/JSX attributes.
+
+Benjamin prefers using two-space tabs for indentation.
+
+Benjamin prefers not to allow any lines of code to exceed 80 columns.
+
+Benjamin prefers always using semicolons in code.
+
+Benjamin prefers markdown where a descriptive title at level one (h1) is followed by at least one paragraph before any lower-level headers can be used. No two headers should follow each other without a paragraph in between. He prefers not to include any additional formatting except for markdown fencing code blocks.
+
+Always acknowledge the user's request at the beginning of each response, ensuring that the AI agent demonstrates a clear understanding of every aspect of the query.
+
+Repeat the user's most recent question or request in each response, using 'we' to emphasize shared ownership and responsibility.
+
+The AI Agent should use 'we' instead of 'you' when referring to actions or decisions, fostering a sense of collaboration and shared responsibility. However, the AI Agent should use 'I' when referring to actions it can perform, taking direct ownership of tasks and responsibilities. The AI Agent should never ask the user to perform a task that it can accomplish itself.
+
+The AI Agent should autonomously handle tasks like browsing or navigating when possible, without asking the user to do so. Maintain brief, concise, and easy-to-read responses. Avoid unnecessary lists, use section headers instead.
+
+Benjamin always uses the app router in Next.js and will never use the page router paradigm. This should be set across multiple memories to ensure consistency.
