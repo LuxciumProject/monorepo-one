@@ -1,9 +1,9 @@
 'use client'
 
-import { CaseColor } from '@prisma/client'
-import { useEffect, useRef, useState } from 'react'
-import { AspectRatio } from './ui/aspect-ratio'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
+import { CaseColor } from '@prisma/client';
+import { useEffect, useRef, useState } from 'react';
+import { AspectRatio } from './ui/aspect-ratio';
 
 const PhonePreview = ({
   croppedImageUrl,
@@ -36,18 +36,18 @@ const PhonePreview = ({
   let caseBackgroundColor = 'bg-zinc-950'
   if (color === 'blue') caseBackgroundColor = 'bg-blue-950'
   if (color === 'rose') caseBackgroundColor = 'bg-rose-950'
-
-  return (
-    <AspectRatio ref={ref} ratio={3000 / 2001} className='relative'>
-      <div
-        className='absolute z-20 scale-[1.0352]'
-        style={{
+const divStyle ={ style:{
           left:
             renderedDimensions.width / 2 -
             renderedDimensions.width / (1216 / 121),
           top: renderedDimensions.height / 6.22,
-        }}>
-        <img
+        }}
+  return (
+    <AspectRatio ref={ref} ratio={3000 / 2001} className='relative'>
+      <div
+        className='absolute z-20 scale-[1.0352]' {...divStyle}
+        >
+        <img title='Case' alt='Case'
           width={renderedDimensions.width / (3000 / 637)}
           className={cn(
             'phone-skew relative z-20 rounded-t-[15px] rounded-b-[10px] md:rounded-t-[30px] md:rounded-b-[20px]',
