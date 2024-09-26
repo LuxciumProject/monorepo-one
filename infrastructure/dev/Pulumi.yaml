@@ -1,0 +1,10 @@
+name: infrastructure
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+description: Local IaC setup for Next.js project using Pulumi and Docker
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: typescript

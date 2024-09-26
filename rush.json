@@ -24,7 +24,7 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion". See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "9.10.0",
+  "pnpmVersion": "9.11.0",
   /**
    * Options that are only used when the PNPM package manager is selected
    */
@@ -381,6 +381,15 @@
       "projectFolder": "APIs/openai",
       "tags": [
         "apis"
+      ]
+    },
+    // @luxcium/infrastructure
+    {
+      "packageName": "@luxcium/infrastructure",
+      "projectFolder": "infrastructure/dev",
+      "tags": [
+        "backend",
+        "tools"
       ]
     },
     {
