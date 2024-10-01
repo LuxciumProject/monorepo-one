@@ -1,7 +1,7 @@
-import Providers from '@components/Providers';
-import TopNav from '@components/navbar/TopNav';
 import { Link } from '@nextui-org/react';
 import type { Metadata } from 'next';
+import Providers from '@components/Providers';
+import TopNav from '@components/navbar/TopNav';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -21,8 +21,8 @@ export default function RootLayout({
           <TopNav />
           <main className="container mx-auto">{children}</main>
           <div className="mt-12 flex gap-4 border border-success">
-            <Link href="#" underline="none">
-              None
+            <Link href="/zip-images" underline="hover" color="primary">
+              View Zip Images
             </Link>
             <Link href="#" underline="hover">
               Hover

@@ -1,11 +1,10 @@
 'use client';
-
-import LoadingComponent from '@/components/LoadingComponent';
 import { Tab, Tabs } from '@nextui-org/react';
 import { Member } from '@prisma/client';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Key, useTransition } from 'react';
 import MemberCard from '../members/MemberCard';
+import LoadingComponent from '@/components/LoadingComponent';
 
 type Props = {
   members: Member[];
