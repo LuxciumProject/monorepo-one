@@ -1,4 +1,4 @@
-// src/components/zipImages/ZipImageViewer.tsx
+// src/components/zip-images/ZipImageViewer.tsx
 'use server';
 
 import ImageCard from './ImageCard'; // Client Component

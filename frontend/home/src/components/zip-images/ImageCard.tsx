@@ -1,4 +1,4 @@
-// src/components/zipImages/ImageCard.tsx
+// src/components/zip-images/ImageCard.tsx
 'use client';
 
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
@@ -10,21 +10,20 @@ interface ImageCardProps {
 
 export default function ImageCard({ fileName }: ImageCardProps) {
   return (
-    <Card isHoverable isPressable className="w-full">
+    <Card isHoverable isPressable>
       <CardHeader>
-        <h3 className="text-base font-semibold">{fileName}</h3>
+        <h3>{fileName}</h3>
       </CardHeader>
       <CardBody>
         <Image
-          src={`/zip-images/${encodeURIComponent(fileName)}`}
+          src={`/zip-images/${fileName}`}
           alt={fileName}
           width={200}
           height={200}
-          className="object-cover"
         />
       </CardBody>
       <CardFooter>
-        <p className="text-sm text-gray-500">Footer text</p>
+        <p>Image Footer</p>
       </CardFooter>
     </Card>
   );
