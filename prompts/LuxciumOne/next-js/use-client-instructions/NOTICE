@@ -1,0 +1,39 @@
+⚠️ No Right Granted for Content in This Folder 
+
+
+Based on the transcription of the « React visually explained: 'use client' » video on YouTube by @Delba
+
+https://youtu.be/eO51VVCpTk0?si=2oIOgeCu_hsDpvL4
+
+Description: 
+
+What 'use client' is, why it exists, how it works, and how to use it.
+
+The 'use client' directive introduces a new dimension to bundling: allowing developers to use the same language and JSX component model for UI concerns that span the client and server. Replacing network synchronization code in multiple languages, routing systems, and frameworks with simple components and props.
+
+This is an excerpt from a conference talk I gave at React Universe.
+
+
+***
+
+Description
+Developer Experience for Next.js and Vercel A
+Links
+Twitter
+twitter.com/delba_oliveira
+Instagram
+instagram.com/delba.oliveira
+TikTok
+tiktok.com/@delba.oliveira
+• GitHub
+github.com/delbaoliveira
+Website delba.dev
+More info
+www.youtube.com/@Delba
+G United Kingdom
+Joined Sep 1, 2015
+331,480 views
+Bundling
+React visually explained:...
+
+(statistics are valid as of early October 2024)
