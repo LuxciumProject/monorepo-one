@@ -1,0 +1,108 @@
+Based on the transcription of the « React visually explained: 'use client' » video on YouTube by @Delba
+
+https://youtu.be/eO51VVCpTk0?si=2oIOgeCu_hsDpvL4
+
+Description: 
+
+What 'use client' is, why it exists, how it works, and how to use it.
+
+The 'use client' directive introduces a new dimension to bundling: allowing developers to use the same language and JSX component model for UI concerns that span the client and server. Replacing network synchronization code in multiple languages, routing systems, and frameworks with simple components and props.
+
+This is an excerpt from a conference talk I gave at React Universe.
+
+
+***
+
+Here’s the optimized version of the text with proper grammar, punctuation, and paragraph structure to enhance readability and maintain the original meaning:
+
+The use client directive introduces a new dimension to bundling, allowing you as the developer to use the same language in JSX component models for UI concerns that span both the client and the server. It replaces network synchronization code in multiple languages, routing systems, and frameworks. Instead, you use simple components and props.
+
+This change has sometimes been dubbed as complex and difficult, but I want to challenge that notion. I believe some of the confusion comes from a lack of familiarity and understanding of the problems that use client solves. In this talk, we will explore what use client is, why it exists, how it works, and how you can start using it.
+
+Bundling Defined
+
+First, let’s quickly define bundling. During development, we optimize our code for developer productivity by breaking it up into separate files or modules. We export and import code as needed to compose more complex functionality. When we build and deploy an application, we optimize it for the computers it will eventually run on. We follow a module dependency graph and reassemble related code into a single piece, a process we call bundling.
+
+During bundling, we may also choose to slice our single bundle into smaller chunks. For example, we might code-split by route and tree-shake unused relationships. This means that when a specific route is visited, only the code needed for that route is loaded on the client.
+
+Client and Server Environments
+
+A web app doesn’t solely run on the client; it’s a program that runs across two computers: the server and the client, separated by what we call a network boundary. We might also choose to break up the bundle by environment and distribute code to each computer to take advantage of its unique capabilities. These capabilities are determined by when and where the code runs.
+
+The server usually runs on a computer the developer controls. It could either be a runtime server that processes every incoming request or an optimization-time server that runs ahead of time and serves cached results. This means server code can efficiently access data, for example:
+
+	•	Reading files from the file system directly
+	•	Connecting to a database
+	•	Minimizing latency by positioning a server close to its data source
+
+Server code can contain sensitive information like API credentials or authentication logic. It runs exclusively on the server, only sending the computed result to the client. For example, if you use a heavy Markdown parsing library on the server, you only need to return the rendered result as a string to the client. Server code can perform tasks in advance before the user’s initial request, like pre-rendering a page and caching it. These capabilities mean that certain tasks are better handled by the server rather than the client.
+
+On the other hand, the client runs on the user’s computer, specifically their web browser. This means with client code, you can access the browser’s DOM and APIs. For example, you can observe if an element has entered the user’s viewport, access user state to open or close a dropdown, or check the user’s current scroll position. Client code allows you to respond instantly to user interactions. Let’s say the user wants to expand or read more; that can be done instantly without having to make a round trip to the server. Again, this means that some tasks are better handled by the client rather than the server.
+
+Ideally, if we had complete autonomy, each tiny unit of functionality would be moved to the most appropriate environment and phase. But in reality, disconnecting actually becomes quite difficult to implement in a single application, especially in traditional architectures where the server code and client code use different programming languages, routing systems, and ecosystems altogether. Any functionality that crosses the network boundary requires synchronization code to manage the handoff between both sides. It becomes even more complicated with less type safety, especially when you also have to cross a technology boundary.
+
+Even in frameworks like Next.js, which use the same language and router on both sides, there’s still a lot of ceremony to wire up the server with the React client. Passing information from server to client involves creating an API route, stitching types, requesting the data, updating local state, and more. Abstractions like getServerSideProps, React Query, and tRPC help, but they all exist to bridge the gap between different models.
+
+React’s Latest Changes
+
+The latest changes in React aim to address this problem by extending its component model in JSX syntax to the server. React can now manage both sides of the network within the same paradigm. Passing information from server to client becomes as simple as importing a component and passing props. Similarly, if you want to send data from the client to the server, it becomes as easy as importing a function and calling it, also known as server actions.
+
+Since we’re using JavaScript imports, crossing the network boundary is type-safe by default. We can hover over functions from the opposite world, see inline documentation, and quickly jump to their definitions. Just like how JSX helped break down the artificial boundary between HTML, CSS, and JavaScript, React is now breaking down the barrier between UI concerns across the network using the same language for both environments.
+
+This means our bundler now needs a way to distinguish between server and client code so it can produce an optimized bundle for each environment. But how do we tell our bundler about the server-client boundary?
+
+Marking Server and Client Code
+
+Every web app’s lifecycle starts on a server computer, either at build time when you deploy or at runtime when the user visits your application. A server framework like Next.js might logically also start route entry points in the server environment. This means that any routes created by the developer will be imported by the framework into the server environment, and if the route imports any modules, they will also be brought into the server environment.
+
+However, we also want to take advantage of the client computer, so we need a way to mark where the server code ends and the client code begins. In React, the use client directive serves this purpose by adding the directive to the top of a file. We’re creating a boundary between server-run code and client-run code. You can think of use client as a doorway from our starting point in the server world into the client world. We simply choose at which point in each import chain we want to open the door.
+
+Practical Examples
+
+This leads us nicely to some practical examples of how to use use client. First, it’s a common misunderstanding to believe use client must be added to every file that should run on the client. There’s nothing wrong with this, but in practice, we only need to mark each entry point once. For example, adding use client to page.js marks the module as a client entry point. Importing the MyComp component into page.js brings it into the client environment. Adding or removing use client in a JSX file has no additional bundling effect on MyComp because it’s already part of the client environment. So, in summary, modules become a part of whichever environment they are imported into.
+
+Importing Between Client and Server Modules
+
+Now, let’s explore what happens when we import from a client module into a server module. We’ll start by importing a simple numeric value from utils.js into page.js. As a reminder, both files are currently client modules, so if we console log myInt in both modules, it logs the same value twice. This is expected since JavaScript is typically used in a single environment.
+
+But now, let’s change page.js to be a server module by moving use client down the tree. This means we’re now importing from a client module into a server module. If we console log again, in the client environment, myInt logs 1, 2, 3 as expected. But in the server environment, myInt logs something about react.client.reference with an ID that points to the file in the export name. This is an internal React detail, but it shows that code imported across a use client boundary is a reference pointing to something rather than the actual thing. Similarly, when we import a client component into a server module, we are importing a reference to the component. The component itself is only rendered once we get to the client environment.
+
+Introducing use server
+
+Now, let’s talk about use server. We might naively assume use server is the opposite of use client, a way to mark server components. However, in reality, it serves a slightly different purpose. After the initial response from the server, you may wish to allow the user to change or mutate data. Traditionally, we would create a server-side API endpoint, privately connect to a database, securely process the change, manage the communication between the client and the server, and share types. This can be simplified with use server, which can be used to mark server-side functions that can be called from client-side code. Behind the scenes, React will internally handle the communication layer.
+
+While use client and use server serve as doorways into the other world, they are different because of the request-response lifecycle. When you’re going from the server to the client world with use client, React runs all the server code in the server environment, maintains a reference to any client components it finds, and serializes any props that have to travel to the client world. Once in the client environment, it picks up where it left off and runs the remaining client code.
+
+On the other hand, when you’re going from the client world to the server world with use server, React keeps code on the server but exposes a way for the client to call it. Just like how React abstracted a way of updating the browser’s DOM, React now abstracts a way of crossing the network.
+
+Nesting Server Components Inside Client Components
+
+Next, let’s discuss nesting server components inside client components. As we learned earlier, importing a module into the client environment turns it into a client module. This makes it impossible to import a server component into a client module. Theoretically, perhaps we could use the use server directive to opt a client module back into the server environment. However, React doesn’t support this because it would create a server-client-server rendering waterfall.
+
+For example, React on the server renders a server component, say Page, but leaves the reference to a client component A for the client. Then, React on the client starts rendering client component A only to discover that it has to go back to the server to render server component B. This behavior means rendering the page could take multiple server round trips, which would be very slow.
+
+Instead, React supports passing server components to client components as props. This way, React can render all server components, including those passed to the client components, in a single render pass on the server before handing off to the client. This avoids multiple round trips but allows us to visually place UI rendered in the server environment inside UI rendered in the client environment. For example, we can have a Card component that fetches data on the server inside a Modal component that uses local state to toggle visibility, or we can nest server components inside client-side context providers like theme providers without having to move the whole application to the client bundle.
+
+Pre-rendering Client Components on the Server
+
+So far, we have repeatedly mentioned that client components run in the client environment. You might be forgiven for thinking that client components run exclusively on the client (aka the browser) and never on the server. But in reality, client components can also be pre-rendered on the server. It’s confusing, I know. Let’s discuss why.
+
+If client-side JavaScript is responsible for rendering the initial HTML, the browser doesn’t have anything useful to show to the users until the JavaScript is downloaded, parsed, and executed. As an optimization for the initial visit to a site, we might choose to pre-render the HTML document, allowing the user to passively consume the content, scroll around, and even perform HTML-native actions like clicking links and submitting forms. In the background, React hydrates the page, making it fully interactive.
+
+If content is shared between users and doesn’t change, we might even choose to pre-render ahead of time at build time rather than at runtime for every request. So, while client components are intended to be rendered on the client, they may also be pre-rendered on the server to improve the loading experience of the initial visit to a page.
+
+Conclusion
+
+In conclusion, React on the client allows developers to break down complex UI into simple, isolated Lego blocks that can be combined to form larger pieces. However, front-end UI often depends on server-side logic, which is usually in a different system. This makes bundling front-end UI more like trying to compose Lego blocks with mismatched pieces.
+
+React on the server aims to unify these concerns under a single model. Developers can use imports, props, components, and actions, and behind the scenes, React will run code in the correct environment at the right time, produce the appropriate output, suspend and stream the result, and then reassemble everything back together into the final UI. What happens under the hood is actually quite complex, but what we are exposed to as developers is much simpler.
+
+Of course, that is not to say that there won’t be trade-offs and new challenges. There’s still a lot of rough edges and unanswered questions, but I think the React team is onto something here, and I’m excited to see where this goes.
+
+It should be noted that React’s shift to the server addresses the backend side of UI concerns. It’s not trying to replace specialist backend languages and frameworks. Apps have backend needs not directly related to serving UI, and this is where a lot of these tools shine.
+
+
+***
+
+More info about the initial author:
+www.youtube.com/@Delba
