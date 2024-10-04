@@ -1,11 +1,12 @@
-// src/app/actions/getImageFile.ts
+// @/app/actions/getImageFile.ts
 'use server';
 
 import fs from 'fs';
 import path from 'path';
 import AdmZip from 'adm-zip';
+import { NextResponse } from 'next/server';
 
-export async function getImageFile(fileName: string): Promise<Buffer | null> {
+export async function getImageFile(fileName: string): Promise<NextResponse> {
   try {
     const zipFilePath = path.resolve(
       '/run/media/luxcium/2TB-Seagate/MJ-backups/2023/octobre/04/midjourney_session_2023-10-4_[350-400].zip',
@@ -19,19 +20,21 @@ export async function getImageFile(fileName: string): Promise<Buffer | null> {
     const fileEntry = zip.getEntry(fileName);
 
     if (!fileEntry) {
-      throw new Error(`File ${fileName} not found in the zip`);
+      throw new Error(`File "${fileName}" not found in zip`);
     }
 
-    const fileData = fileEntry.getData(); // Returns Buffer
-    return fileData;
+    const imageData = fileEntry.getData();
+    return new NextResponse(imageData, {
+      headers: {
+        'Content-Type': 'image/png', // Adjust based on image type
+      },
+    });
   } catch (e: unknown) {
     if (e instanceof Error) {
-      console.error('Error retrieving image file:', e.message);
-    } else {
-      console.error(
-        'An unknown error occurred while retrieving the image file.',
-      );
+      console.error('Error fetching image:', e.message);
+      return new NextResponse(`Error: ${e.message}`, { status: 404 });
     }
-    return null;
+    console.error('Unknown error occurred while fetching image.');
+    return new NextResponse('Unknown error occurred', { status: 500 });
   }
 }

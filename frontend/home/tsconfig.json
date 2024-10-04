@@ -26,18 +26,31 @@
       }
     ],
     "paths": {
-      "@/registry/*": [
-        "./src/components/ui/registry/*"
-      ],
+      // Default path aliases for imports.
       "@/*": [
         "./src/*"
       ],
-      "@components/*": [
+      // Custom path aliases for imports (for better readability).
+      // ServerActions is for actions that are only used on the server side.
+      "@ServerActions/*": [
+        "./src/app/actions/*"
+      ],
+      //  Default path aliases for components imports.
+      "@Components/*": [
         "./src/components/*"
       ],
-      "@utils/*": [
-        "./src/utils/*"
-      ]
+      // ServerComponents is for components that are only used on the server side.
+      "@ServerComponents/*": [
+        "./src/components/server/*"
+      ],
+      // ClientComponents is for components that are only used on the client side.
+      "@ClientComponents/*": [
+        "./src/components/client/*"
+      ],
+      // UIComponents is for components that are basic building blocks of the UI specificaly.
+      "@UIComponents/*": [
+        "./src/components/ui/*"
+      ],
     }
   },
   "include": [
@@ -45,8 +58,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/**/*",
-    "../../library/tools/src/local-path/utils"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"

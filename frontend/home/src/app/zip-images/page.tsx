@@ -1,19 +1,14 @@
-// src/app/zip-images/page.tsx
-'use server';
-
-import dynamic from 'next/dynamic';
-
-// Dynamically import Client Component with ssr: false
-const ClientSideImageActions = dynamic(
-  () => import('@/components/zipImages/ClientSideImageActions'),
-  { ssr: false },
-);
+// @/app/zip-images/page.tsx
+import { listZipContents } from '@/app/actions/listZipContents';
+import ClientSideImageActions from '@/components/zip-images/ClientSideImageActions';
 
 export default async function ZipImagesPage() {
+  const fileList = await listZipContents();
+
   return (
     <div className="p-4">
-      <h1 className="mb-4 text-2xl font-bold">Zip File Images</h1>
-      <ClientSideImageActions />
+      <h1>Zip File Images</h1>
+      <ClientSideImageActions fileList={fileList} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-// src/components/zip-images/ImageCard.tsx
+// @/components/zip-images/ImageCard.tsx
 'use client';
 
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';

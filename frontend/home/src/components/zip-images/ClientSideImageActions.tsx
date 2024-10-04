@@ -1,19 +1,20 @@
-// src/components/zipImages/ClientSideImageActions.tsx
+// @/components/zip-images/ClientSideImageActions.tsx
 'use client';
 
-import dynamic from 'next/dynamic';
 import { useState } from 'react';
+import ZipImageViewer from './ZipImageViewer';
 
-// Dynamically import ZipImageViewer as a Server Component
-const ZipImageViewer = dynamic(() => import('./ZipImageViewer'), {
-  ssr: false,
-});
+interface ClientSideImageActionsProps {
+  fileList: string[];
+}
 
-export default function ClientSideImageActions() {
+export default function ClientSideImageActions({
+  fileList,
+}: ClientSideImageActionsProps) {
   const [refreshKey, setRefreshKey] = useState(0);
 
   const handleReloadImages = () => {
-    setRefreshKey((prevKey) => prevKey + 1); // Trigger a re-render
+    setRefreshKey((prevKey) => prevKey + 1);
   };
 
   return (
@@ -25,8 +26,8 @@ export default function ClientSideImageActions() {
       >
         Reload Images
       </button>
-      {/* Use the refreshKey to trigger a re-render of the server-side image viewer */}
-      <ZipImageViewer key={refreshKey} />
+      {/* Pass the fileList to ZipImageViewer */}
+      <ZipImageViewer key={refreshKey} fileList={fileList} />
     </div>
   );
 }

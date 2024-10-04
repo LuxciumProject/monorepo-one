@@ -1,7 +1,7 @@
+import TopNav from '@Components/navbar/TopNav';
+import Providers from '@Components/Providers';
 import { Link } from '@nextui-org/react';
 import type { Metadata } from 'next';
-import Providers from '@components/Providers';
-import TopNav from '@components/navbar/TopNav';
 import './globals.css';
 
 export const metadata: Metadata = {

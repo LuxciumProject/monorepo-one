@@ -1,4 +1,4 @@
-// src/app/actions/listZipContents.ts
+// @/app/actions/listZipContents.ts
 'use server';
 
 import fs from 'fs';
