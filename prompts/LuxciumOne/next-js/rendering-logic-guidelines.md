@@ -68,6 +68,7 @@
 
 - **Supported Patterns:**
   - **Using `children` Prop:**
+
     ```typescript
     // @/app/page.tsx
     import ClientComponent from '@ClientComponents/ClientComponent';
@@ -81,7 +82,9 @@
       );
     }
     ```
+
   - **Using Custom Props:**
+
     ```typescript
     // @/app/page.tsx
     import ClientComponent from '@ClientComponents/ClientComponent';
@@ -96,9 +99,10 @@
 
 - **Unsupported Patterns:**
   - Importing Server Components directly into Client Components.
+
     ```typescript
     // @/components/client/ClientComponent.tsx
-    'use client';
+    'use client'; // 🚷 Importing server-side modules strictly prohibited
     import ServerComponent from '@ServerComponents/ServerComponent'; // ❌ Unsupported
 
     export default function ClientComponent() {

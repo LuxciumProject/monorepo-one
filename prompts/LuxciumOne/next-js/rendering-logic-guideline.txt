@@ -131,7 +131,7 @@ These instructions are designed to guide the AI agent in generating Next.js code
   - Importing Server Components directly into Client Components.
     ```typescript
     // @/components/client/ClientComponent.tsx
-    'use client';
+    'use client'; // 🚷 Importing server-side modules strictly prohibited
     import ServerComponent from '@ServerComponents/ServerComponent'; // ❌ Unsupported
 
     export default function ClientComponent() {
@@ -222,4 +222,3 @@ I have refined the instruction set to address the confusion between Server Compo
 Moving forward, I will consistently apply these guidelines in all code generation and ensure that any future refinements are integrated seamlessly. This approach will help in maintaining a clean, efficient, and scalable codebase that aligns with your preferences and Next.js best practices.
 
 If there are any additional preferences or specific areas you’d like to focus on, please let me know, and I will incorporate them into the instruction set.
-
