@@ -1,9 +1,10 @@
 // @/app/actions/listZipContents.ts
 'use server';
+// 🚫 Do NOT import this module directly in client code ('use client') modules
 
+import AdmZip from 'adm-zip';
 import fs from 'fs';
 import path from 'path';
-import AdmZip from 'adm-zip';
 
 export async function listZipContents(): Promise<string[]> {
   try {

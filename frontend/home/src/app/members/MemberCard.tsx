@@ -1,4 +1,4 @@
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import LikeButton from '@/components/LikeButton';
 import { calculateAge } from '@/lib/util';

@@ -1,4 +1,4 @@
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import { toggleLikeMember } from '@/app/actions/likeActions';
 import { useRouter } from 'next/navigation';

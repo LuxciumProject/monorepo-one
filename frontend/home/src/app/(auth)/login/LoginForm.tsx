@@ -1,4 +1,4 @@
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import { signInUser } from '@/app/actions/authActions';
 import { LoginSchema, loginSchema } from '@/lib/schemas/loginSchema';

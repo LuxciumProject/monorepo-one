@@ -1,5 +1,6 @@
 // @/app/zip-images/[fileName]/route.tsx
 'use server';
+// 🚫 Do NOT import this module directly in client code ('use client') modules
 
 import { getImageFile } from '@/app/actions/getImageFile';
 

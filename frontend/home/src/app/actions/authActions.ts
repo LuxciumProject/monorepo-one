@@ -1,4 +1,6 @@
 'use server';
+// 🚫 Do NOT import this module directly in client code ('use client') modules
+
 import { auth, signIn, signOut } from '@/auth';
 import { prisma } from '@/lib/prisma';
 import { LoginSchema } from '@/lib/schemas/loginSchema';

@@ -7,7 +7,7 @@
     "build-storybook": "storybook build",
     "db:start": "bash ./scripts/start_docker.sh",
     "predev": "pnpm db:start && pnpm prisma:set",
-    "dev": "pnpm db:start && (sleep 4; xdg-open http://localhost:3000) & next dev",
+    "dev": " (sleep 4; xdg-open http://localhost:3000) & next dev",
     "predev:clean": "rimraf .next",
     "dev:clean": "pnpm predev:clean && pnpm dev",
     "eslint": "eslint . --ext .ts,.tsx --cache --cache-location .eslintcache",

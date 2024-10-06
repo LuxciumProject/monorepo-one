@@ -1,5 +1,5 @@
 // @/components/zip-images/ZipImageViewer.tsx
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import ImageCard from './ImageCard';
 

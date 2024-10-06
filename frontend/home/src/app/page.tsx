@@ -16,6 +16,7 @@ export default async function Home() {
           <form
             action={async () => {
               'use server';
+              // 🚫 Do NOT import this module directly in client code ('use client') modules
 
               await signOut();
             }}

@@ -1,4 +1,4 @@
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import { signOutUser } from '@/app/actions/authActions';
 import {

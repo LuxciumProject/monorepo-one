@@ -1,4 +1,4 @@
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import { NextUIProvider } from '@nextui-org/react';
 import { ReactNode } from 'react';

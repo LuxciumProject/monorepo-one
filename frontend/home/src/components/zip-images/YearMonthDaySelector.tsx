@@ -1,5 +1,7 @@
 // @/components/zip-images/YearMonthDaySelector.tsx
 'use client';
+// ❌ Do NOT use async functions in client code
+// 🚷 Importing server-side modules strictly prohibited
 
 import { listDirectoryContents } from '@ServerActions/listDirectoryContents';
 import { useEffect, useState } from 'react';

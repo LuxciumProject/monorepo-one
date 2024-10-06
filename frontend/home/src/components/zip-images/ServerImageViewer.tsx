@@ -1,9 +1,10 @@
 // src/app/zip-images/ServerImageViewer.tsx
 'use server';
+// 🚫 Do NOT import this module directly in client code ('use client') modules
 
-import path from 'path';
-import Image from 'next/image';
 import { listZipContents } from '@/app/actions/listZipContents';
+import Image from 'next/image';
+import path from 'path';
 
 export default async function ServerImageViewer() {
   const fileList = await listZipContents();

@@ -1,33 +1,144 @@
 // @/components/zip-images/ClientSideImageActions.tsx
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
+// 🚷 Importing server-side module strictly prohibited in client code
+import 'client-only'; // ❌ DO NOT use async functions in client code
 
-import { useState } from 'react';
-import ZipImageViewer from './ZipImageViewer';
+import { useEffect, useState } from 'react';
 
-interface ClientSideImageActionsProps {
-  fileList: string[];
+interface YearMonthDaySelectorProps {
+  onSelectionChange: (path: string) => void;
 }
 
-export default function ClientSideImageActions({
-  fileList,
-}: ClientSideImageActionsProps) {
-  const [refreshKey, setRefreshKey] = useState(0);
+export default function YearMonthDaySelector({
+  onSelectionChange,
+}: YearMonthDaySelectorProps) {
+  const [years, setYears] = useState<string[]>([]);
+  const [months, setMonths] = useState<string[]>([]);
+  const [days, setDays] = useState<string[]>([]);
+  const [selectedYear, setSelectedYear] = useState<string | null>(null);
+  const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
 
-  const handleReloadImages = () => {
-    setRefreshKey((prevKey) => prevKey + 1);
+  useEffect(() => {
+    function fetchYears() {
+      fetch(
+        '/api/list-directory?dirPath=' +
+          encodeURIComponent('/run/media/luxcium/2TB-Seagate/MJ-backups/'),
+      )
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch years');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setYears(data.directories || []);
+        })
+        .catch((error) => {
+          console.error('Error fetching years:', error);
+        });
+    }
+    fetchYears();
+  }, []);
+
+  const handleYearChange = (year: string) => {
+    setSelectedYear(year);
+    setMonths([]);
+    setDays([]);
+    fetch(
+      '/api/list-directory?dirPath=' +
+        encodeURIComponent(`/run/media/luxcium/2TB-Seagate/MJ-backups/${year}`),
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch months');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setMonths(data.directories || []);
+      })
+      .catch((error) => {
+        console.error('Error fetching months:', error);
+      });
+  };
+
+  const handleMonthChange = (month: string) => {
+    setSelectedMonth(month);
+    setDays([]);
+    fetch(
+      '/api/list-directory?dirPath=' +
+        encodeURIComponent(
+          `/run/media/luxcium/2TB-Seagate/MJ-backups/${selectedYear}/${month}`,
+        ),
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch days');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setDays(data.directories || []);
+      })
+      .catch((error) => {
+        console.error('Error fetching days:', error);
+      });
   };
 
   return (
     <div>
-      <button
-        type="button"
-        onClick={handleReloadImages}
-        className="mb-4 rounded bg-blue-500 px-4 py-2 text-white"
+      <select
+        title="Select Year"
+        onChange={(e) => handleYearChange(e.target.value)}
+        value={selectedYear || ''}
       >
-        Reload Images
-      </button>
-      {/* Pass the fileList to ZipImageViewer */}
-      <ZipImageViewer key={refreshKey} fileList={fileList} />
+        <option value="" disabled>
+          Select Year
+        </option>
+        {years.map((year) => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
+      </select>
+
+      {selectedYear && (
+        <select
+          title="Select Month"
+          onChange={(e) => handleMonthChange(e.target.value)}
+          value={selectedMonth || ''}
+        >
+          <option value="" disabled>
+            Select Month
+          </option>
+          {months.map((month) => (
+            <option key={month} value={month}>
+              {month}
+            </option>
+          ))}
+        </select>
+      )}
+
+      {selectedMonth && (
+        <select
+          title="Select Day"
+          onChange={(e) =>
+            onSelectionChange(
+              `${selectedYear}/${selectedMonth}/${e.target.value}`,
+            )
+          }
+          value=""
+        >
+          <option value="" disabled>
+            Select Day
+          </option>
+          {days.map((day) => (
+            <option key={day} value={day}>
+              {day}
+            </option>
+          ))}
+        </select>
+      )}
     </div>
   );
 }

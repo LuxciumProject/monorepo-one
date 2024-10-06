@@ -1,5 +1,5 @@
 // @/components/zip-images/ImageCard.tsx
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 import Image from 'next/image';

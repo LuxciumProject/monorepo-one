@@ -1,10 +1,11 @@
 // @/app/actions/getImageFile.ts
 'use server';
+// 🚫 Do NOT import this module directly in client code ('use client') modules
 
-import fs from 'fs';
-import path from 'path';
 import AdmZip from 'adm-zip';
+import fs from 'fs';
 import { NextResponse } from 'next/server';
+import path from 'path';
 
 export async function getImageFile(fileName: string): Promise<NextResponse> {
   try {

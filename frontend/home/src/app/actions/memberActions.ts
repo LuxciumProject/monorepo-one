@@ -1,4 +1,5 @@
 'use server';
+// 🚫 Do NOT import this module directly in client code ('use client') modules
 
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';

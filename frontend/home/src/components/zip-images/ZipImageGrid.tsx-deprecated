@@ -1,5 +1,7 @@
 // src/components/zipImages/ZipImageViewer.tsx
 'use server';
+// 🚫 Do NOT import this module directly in client code ('use client') modules
+
 
 import ImageCard from './ImageCard'; // Client Component
 import { listZipContents } from '@/app/actions/listZipContents';

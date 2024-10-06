@@ -1,4 +1,4 @@
-'use client';
+'use client'; // 🚷 Importing server-side modules strictly prohibited
 
 import { NavbarItem } from '@nextui-org/react';
 import Link from 'next/link';
