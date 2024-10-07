@@ -23,32 +23,28 @@ pwd
 #   -p webpack@latest \
 #   --dev --make-consistent
 
+# -p @typescript-eslint/eslint-plugin@latest \
+# -p @typescript-eslint/parser@latest \
+# -p eslint-config-next@latest \
+# -p eslint-config-prettier@latest \
+# -p eslint-config-react-app@latest \
+# -p eslint-import-resolver-typescript@latest \
+# -p eslint-plugin-import@latest \
+# -p eslint-plugin-jsdoc@latest \
+# -p eslint-plugin-jsonc@latest \
+# -p eslint-plugin-prettier@latest \
+# -p eslint-plugin-promise@latest \
+# -p eslint-plugin-react-hooks@latest \
+# -p eslint-plugin-react@latest \
+# -p eslint-plugin-simple-import-sort@latest \
+# -p eslint-plugin-tsdoc@latest \
+# -p eslint-plugin-unicorn@latest \
+rush remove \
+  -p eslint \
+  --all
+
 rush add \
-  -p @babel/core@latest \
-  -p @babel/plugin-syntax-flow \
-  -p @babel/plugin-transform-react-jsx \
-  -p @babel/plugin-transform-typescript@latest \
-  -p @types/eslint-config-prettier@latest \
-  -p @types/eslint-plugin-prettier@latest \
-  -p @types/eslint@latest \
-  -p @types/prettier@latest \
-  -p @typescript-eslint/eslint-plugin@latest \
-  -p @typescript-eslint/parser@latest \
-  -p eslint-config-next@latest \
-  -p eslint-config-prettier@latest \
-  -p eslint-config-react-app@latest \
-  -p eslint-import-resolver-typescript@latest \
-  -p eslint-plugin-import@latest \
-  -p eslint-plugin-jsdoc@latest \
-  -p eslint-plugin-jsonc@latest \
-  -p eslint-plugin-prettier@latest \
-  -p eslint-plugin-promise@latest \
-  -p eslint-plugin-react-hooks@latest \
-  -p eslint-plugin-react@latest \
-  -p eslint-plugin-simple-import-sort@latest \
-  -p eslint-plugin-tsdoc@latest \
-  -p eslint-plugin-unicorn@latest \
-  -p eslint@latest \
+  -p eslint@^8 \
   -p prettier@latest \
   --dev --make-consistent --all
 
