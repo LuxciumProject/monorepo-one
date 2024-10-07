@@ -1,12 +1,11 @@
 // @/app/zip-images/[fileName]/route.tsx
 'use server';
-// 🚫 Do NOT import this module directly in client code ('use client') modules
-
-import { getImageFile } from '@/app/actions/getImageFile';
+// 🚫 Importing server-side logic into client modules strictly prohibited
+import { getImageFile } from '@ServerActions/getImageFile';
 
 export async function GET(
   _request: Request,
-  { params }: { params: { fileName: string } },
+  { params }: { params: { fileName: string; zipFilePath: string } },
 ) {
-  return getImageFile(params.fileName);
+  return getImageFile(params.fileName, params.zipFilePath);
 }

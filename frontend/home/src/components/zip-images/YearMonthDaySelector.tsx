@@ -1,9 +1,9 @@
 // @/components/zip-images/YearMonthDaySelector.tsx
 'use client';
 // ❌ Do NOT use async functions in client code
+import 'client-only';
 // 🚷 Importing server-side modules strictly prohibited
 
-import { listDirectoryContents } from '@ServerActions/listDirectoryContents';
 import { useEffect, useState } from 'react';
 
 interface YearMonthDaySelectorProps {
@@ -20,29 +20,70 @@ export default function YearMonthDaySelector({
   const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
 
   useEffect(() => {
-    async function fetchYears() {
-      const { directories } = await listDirectoryContents(
-        '/run/media/luxcium/2TB-Seagate/MJ-backups/',
-      );
-      setYears(directories);
+    function fetchYears() {
+      fetch(
+        '/api/list-directory?dirPath=' +
+          encodeURIComponent('/run/media/luxcium/2TB-Seagate/MJ-backups/'),
+      )
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch years');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setYears(data.directories || []);
+        })
+        .catch((error) => {
+          console.error('Error fetching years:', error);
+        });
     }
     fetchYears();
   }, []);
 
-  const handleYearChange = async (year: string) => {
+  const handleYearChange = (year: string) => {
     setSelectedYear(year);
-    const { directories } = await listDirectoryContents(
-      `/run/media/luxcium/2TB-Seagate/MJ-backups/${year}`,
-    );
-    setMonths(directories);
+    setMonths([]);
+    setDays([]);
+    fetch(
+      '/api/list-directory?dirPath=' +
+        encodeURIComponent(`/run/media/luxcium/2TB-Seagate/MJ-backups/${year}`),
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch months');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setMonths(data.directories || []);
+      })
+      .catch((error) => {
+        console.error('Error fetching months:', error);
+      });
   };
 
-  const handleMonthChange = async (month: string) => {
+  const handleMonthChange = (month: string) => {
     setSelectedMonth(month);
-    const { directories } = await listDirectoryContents(
-      `/run/media/luxcium/2TB-Seagate/MJ-backups/${selectedYear}/${month}`,
-    );
-    setDays(directories);
+    setDays([]);
+    fetch(
+      '/api/list-directory?dirPath=' +
+        encodeURIComponent(
+          `/run/media/luxcium/2TB-Seagate/MJ-backups/${selectedYear}/${month}`,
+        ),
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch days');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setDays(data.directories || []);
+      })
+      .catch((error) => {
+        console.error('Error fetching days:', error);
+      });
   };
 
   return (

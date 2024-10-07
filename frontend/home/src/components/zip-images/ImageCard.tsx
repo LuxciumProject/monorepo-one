@@ -1,30 +1,22 @@
 // @/components/zip-images/ImageCard.tsx
-'use client'; // 🚷 Importing server-side modules strictly prohibited
-
-import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
-import Image from 'next/image';
+'use client';
+// ❌ Do NOT use async functions in client code
+import 'client-only';
 
 interface ImageCardProps {
+  imageUrl: string;
   fileName: string;
 }
 
-export default function ImageCard({ fileName }: ImageCardProps) {
+export default function ImageCard({ imageUrl, fileName }: ImageCardProps) {
   return (
-    <Card isHoverable isPressable>
-      <CardHeader>
-        <h3>{fileName}</h3>
-      </CardHeader>
-      <CardBody>
-        <Image
-          src={`/zip-images/${fileName}`}
-          alt={fileName}
-          width={200}
-          height={200}
-        />
-      </CardBody>
-      <CardFooter>
-        <p>Image Footer</p>
-      </CardFooter>
-    </Card>
+    <div className="image-card">
+      <img
+        src={imageUrl}
+        alt={fileName}
+        className="h-auto w-full object-cover"
+      />
+      <p className="text-center">{fileName}</p>
+    </div>
   );
 }

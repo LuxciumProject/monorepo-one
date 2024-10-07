@@ -1,28 +1,37 @@
-// src/app/zip-images/ServerImageViewer.tsx
+// @/components/zip-images/ServerImageViewer.tsx
 'use server';
-// 🚫 Do NOT import this module directly in client code ('use client') modules
+// 🚫 Do NOT import client components in server code
 
-import { listZipContents } from '@/app/actions/listZipContents';
-import Image from 'next/image';
-import path from 'path';
+import ImageCard from '@Components/zip-images/ImageCard'; // did fix an error here by changing to correct import
+import { listZipContents } from '@ServerActions/listZipContents';
 
-export default async function ServerImageViewer() {
-  const fileList = await listZipContents();
+interface ServerImageViewerProps {
+  zipFilePath: string;
+}
 
-  return (
-    <div className="flex flex-wrap gap-4">
-      {fileList.map((file) => (
-        <div key={file} className="p-4">
-          <Image
-            src={`/zip-images/${path.basename(file)}`} // Use dynamic route to serve image
-            alt={path.basename(file)}
-            width={200}
-            height={200}
-            priority
+export default async function ServerImageViewer({
+  zipFilePath,
+}: ServerImageViewerProps) {
+  try {
+    const fileList = await listZipContents(zipFilePath);
+
+    return (
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        {fileList.map((fileName) => (
+          <ImageCard
+            key={fileName}
+            imageUrl={`/api/get-image?fileName=${fileName}&zipFilePath=${encodeURIComponent(zipFilePath)}`}
+            fileName={fileName}
           />
-          <p className="text-center text-sm">{path.basename(file)}</p>
-        </div>
-      ))}
-    </div>
-  );
+        ))}
+      </div>
+    );
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      console.error('Error in ServerImageViewer:', e.message);
+      return <p>Error loading images: {e.message}</p>;
+    }
+    console.error('Unknown error in ServerImageViewer.');
+    return <p>Unknown error occurred while loading images.</p>;
+  }
 }

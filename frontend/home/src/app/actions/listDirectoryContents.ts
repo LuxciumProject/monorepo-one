@@ -1,7 +1,7 @@
 // @/ServerActions/listDirectoryContents.ts
 'use server';
 // 🚫 Do NOT import this module directly in client code.
-import 'server-only'; // ✅ OK to import in server-only modules.
+import 'server-only';
 
 import fs from 'fs';
 import path from 'path';

@@ -2,7 +2,7 @@ import { auth } from '@/auth';
 import { authRoutes, publicRoutes } from '@/routes';
 import { NextResponse } from 'next/server';
 
-export default auth((req) => {
+export default auth((req: any) => {
   const { nextUrl } = req;
   const isLoggedIn = !!req.auth;
 

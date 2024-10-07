@@ -1,22 +1,21 @@
-// @/app/actions/listZipContents.ts
+// @/ServerActions/listZipContents.ts
 'use server';
-// 🚫 Do NOT import this module directly in client code ('use client') modules
+// 🚫 Do NOT import this module directly in client code.
+import 'server-only';
 
 import AdmZip from 'adm-zip';
 import fs from 'fs';
 import path from 'path';
 
-export async function listZipContents(): Promise<string[]> {
+export async function listZipContents(zipFilePath: string): Promise<string[]> {
   try {
-    const zipFilePath = path.resolve(
-      '/run/media/luxcium/2TB-Seagate/MJ-backups/2023/octobre/04/midjourney_session_2023-10-4_[350-400].zip',
-    );
+    const resolvedPath = path.resolve(zipFilePath);
 
-    if (!fs.existsSync(zipFilePath)) {
+    if (!fs.existsSync(resolvedPath)) {
       throw new Error('Zip file not found');
     }
 
-    const zip = new AdmZip(zipFilePath);
+    const zip = new AdmZip(resolvedPath);
     const fileEntries = zip
       .getEntries()
       .filter(
