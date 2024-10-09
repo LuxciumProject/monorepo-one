@@ -1,9 +1,8 @@
 // app/chat/page.tsx
 
-export async function ChatPage() {
+async function ChatPage() {
   // const [messages, setMessages] = useState<string[]>([]);
   // const [input, setInput] = useState<string>('');
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const messages: any[] = [];
   // const handleSendMessage = (e: React.FormEvent) => {
   //   e.preventDefault();
@@ -35,5 +34,4 @@ export async function ChatPage() {
     </div>
   );
 }
-
 export default ChatPage;

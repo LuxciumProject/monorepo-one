@@ -31,6 +31,10 @@
         "./src/*"
       ],
       // Custom path aliases for imports (for better readability).
+      // App folder contains Next.js routes, including page.tsx and related files.
+      "@App/*": [
+        "./src/app/*"
+      ],
       // ServerActions is for actions that are only used on the server side.
       "@ServerActions/*": [
         "./src/app/actions/*"
