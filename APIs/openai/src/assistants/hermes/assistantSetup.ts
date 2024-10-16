@@ -77,7 +77,7 @@ export async function testHelloWorld(openai: OpenAI): Promise<void> {
 export async function main(): Promise<void> {
   // Example configuration for the assistant
   const assistantConfig: AssistantConfig = {
-    apiKey: CONFIG.apiKey,
+    apiKey: CONFIG.apiKey || '',
     model: CONFIG.model,
     instructions: CONFIG.instructions,
     assistantId: CONFIG.assistantId,
