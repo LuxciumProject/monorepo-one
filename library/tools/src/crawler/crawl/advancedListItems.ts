@@ -80,44 +80,27 @@ async function getAllItemStats(
  * Filters the items based on the provided filtering function.
  *
  * @param items - The list of item information.
- * @param filterFn - The optional filtering function.
  * @returns The filtered list of items.
  */
 function applyFiltering(
-  items: string[],
-  basePath: string,
-  filterFn?: (item: ItemInfo) => boolean
-): string[] {
-  if (!filterFn) {
-    return items;
-  }
-  return items.filter(item =>
-    filterFn({
-      name: item,
-      path: join(basePath, item),
-      type: 'file',
-      createdAt: new Date(),
-      modifiedAt: new Date(),
-      stats: {} as Stats,
-    })
-  );
+  items: ItemInfo[],
+  filterFn: (item: ItemInfo) => boolean
+): ItemInfo[] {
+  return items.filter(filterFn);
 }
 
 /**
  * Sorts the items based on the provided sorting function.
  *
  * @param items - The list of item information.
- * @param sortFn - The optional sorting function.
+ * @param sortFn - The sorting function.
  * @returns The sorted list of item information.
  */
 function applySorting(
   items: ItemInfo[],
-  sortFn?: (a: ItemInfo, b: ItemInfo) => number
+  sortFn: (a: ItemInfo, b: ItemInfo) => number
 ): ItemInfo[] {
-  if (sortFn) {
-    return [...items].sort(sortFn);
-  }
-  return items;
+  return [...items].sort(sortFn);
 }
 
 /**
@@ -135,9 +118,18 @@ export async function advancedListItems(
 ): Promise<ItemInfo[]> {
   try {
     const items = await readdir(basePath);
-    const validItems = applyFiltering(items, basePath, filterFn);
-    const itemStats = await getAllItemStats(validItems, basePath);
-    return applySorting(itemStats, sortFn);
+    const itemStats = await getAllItemStats(items, basePath);
+
+    let filteredItems: ItemInfo[] = itemStats;
+    if (filterFn) {
+      filteredItems = applyFiltering(itemStats, filterFn);
+    }
+
+    if (sortFn) {
+      return applySorting(filteredItems, sortFn);
+    }
+
+    return filteredItems;
   } catch (error) {
     console.error(`Error listing items in path ${basePath}:`, error);
     return [];
