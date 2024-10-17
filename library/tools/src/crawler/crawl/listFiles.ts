@@ -1,6 +1,6 @@
 // src/crawler/crawl/listFiles.ts
 import { readdirSync, statSync } from 'fs';
-import { join } from 'path/posix';
+import { join } from 'path';
 
 /**
  * @function listFiles
