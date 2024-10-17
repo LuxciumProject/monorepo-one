@@ -1,135 +1,335 @@
 // src/crawler/crawl/advancedListItems.ts
+
 import { Stats } from 'fs';
 import { readdir, stat } from 'fs/promises';
-import { join } from 'path/posix';
+import { extname, join } from 'path';
 
 /**
- * Detailed information about an item (file or folder).
+ * The possible types of items.
  */
-type ItemInfo = {
-  /** The name of the file or folder. */
+type ItemType =
+  | 'file'
+  | 'folder'
+  | 'blockDevice'
+  | 'characterDevice'
+  | 'symbolicLink'
+  | 'fifo'
+  | 'socket'
+  | 'unknown';
+
+/**
+ * Base information about an item.
+ */
+interface BaseItemInfo {
+  /** The type of the item. */
+  type: ItemType;
+  /** The name of the item. */
   name: string;
-  /** The absolute path of the file or folder. */
+  /** The absolute path of the item. */
   path: string;
-  /** The type of the item (file or folder). */
-  type: 'file' | 'folder';
-  /** The size of the file (optional, relevant for files). */
-  size?: number | undefined;
   /** The creation date of the item. */
   createdAt: Date;
   /** The last modified date of the item. */
   modifiedAt: Date;
-  /** The Stat object of the item. */
+  /** The Stats object of the item. */
   stats: Stats;
-};
+}
 
 /**
- * Retrieves detailed information about the item.
- *
- * @param itemPath - The path to the item.
- * @param item - The name of the item.
- * @returns The information about the item.
+ * Information specific to files.
  */
-async function getItemStats(itemPath: string, item: string): Promise<ItemInfo> {
+interface FileInfo extends BaseItemInfo {
+  type: 'file';
+  /** The size of the file in bytes. */
+  size: number;
+  /** The extension of the file, undefined if none. */
+  extension: string | undefined;
+}
+
+/**
+ * Information specific to folders.
+ */
+interface FolderInfo extends BaseItemInfo {
+  type: 'folder';
+  /** The size is always null for folders. */
+  size: null;
+  /** The extension is always null for folders. */
+  extension: null;
+}
+
+/**
+ * Information specific to block devices.
+ */
+interface BlockDeviceInfo extends BaseItemInfo {
+  type: 'blockDevice';
+  // Additional properties for block devices can be added here.
+}
+
+/**
+ * Information specific to character devices.
+ */
+interface CharacterDeviceInfo extends BaseItemInfo {
+  type: 'characterDevice';
+  // Additional properties for character devices can be added here.
+}
+
+/**
+ * Information specific to symbolic links.
+ */
+interface SymbolicLinkInfo extends BaseItemInfo {
+  type: 'symbolicLink';
+  // Additional properties for symbolic links can be added here.
+}
+
+/**
+ * Information specific to FIFOs.
+ */
+interface FIFOInfo extends BaseItemInfo {
+  type: 'fifo';
+  // Additional properties for FIFOs can be added here.
+}
+
+/**
+ * Information specific to sockets.
+ */
+interface SocketInfo extends BaseItemInfo {
+  type: 'socket';
+  // Additional properties for sockets can be added here.
+}
+
+/**
+ * Information for unknown types.
+ */
+interface UnknownInfo extends BaseItemInfo {
+  type: 'unknown';
+}
+
+/**
+ * Union type representing all possible item info types.
+ */
+type ItemInfo =
+  | FileInfo
+  | FolderInfo
+  | BlockDeviceInfo
+  | CharacterDeviceInfo
+  | SymbolicLinkInfo
+  | FIFOInfo
+  | SocketInfo
+  | UnknownInfo;
+
+/**
+ * Mapping from item types to their corresponding info interfaces.
+ */
+interface ItemTypeMap {
+  file: FileInfo;
+  folder: FolderInfo;
+  blockDevice: BlockDeviceInfo;
+  characterDevice: CharacterDeviceInfo;
+  symbolicLink: SymbolicLinkInfo;
+  fifo: FIFOInfo;
+  socket: SocketInfo;
+  unknown: UnknownInfo;
+}
+
+/**
+ * Filtering function type.
+ */
+type FilterFn<T extends ItemInfo> = (item: T) => boolean;
+
+/**
+ * Sorting function type.
+ */
+type SortFn<T extends ItemInfo> = (a: T, b: T) => number;
+
+/**
+ * Options for listing items.
+ */
+interface ListOptions<T extends ItemInfo> {
+  /** The type of items to list ('file', 'folder', etc., or 'all'). */
+  type?: T['type'] | 'all';
+  /** The optional filtering function. */
+  filterFn?: FilterFn<T>;
+  /** The optional sorting function. */
+  sortFn?: SortFn<T>;
+}
+
+/**
+ * Retrieves detailed information about an item.
+ *
+ * @param itemPath - The absolute path to the item.
+ * @param itemName - The name of the item.
+ * @returns A promise that resolves to the item's information.
+ */
+async function getItemInfo(
+  itemPath: string,
+  itemName: string
+): Promise<ItemInfo> {
   const stats = await stat(itemPath);
-  const isDirectory = stats.isDirectory();
-  return {
-    name: item,
+  const baseInfo: BaseItemInfo = {
+    type: 'unknown', // Default type, will be updated.
+    name: itemName,
     path: itemPath,
-    type: isDirectory ? 'folder' : 'file',
-    size: isDirectory ? undefined : stats.size,
     createdAt: stats.birthtime,
     modifiedAt: stats.mtime,
     stats,
   };
+
+  if (stats.isFile()) {
+    const fileInfo: FileInfo = {
+      ...baseInfo,
+      type: 'file',
+      size: stats.size,
+      extension: extname(itemName) || undefined,
+    };
+    return fileInfo;
+  } else if (stats.isDirectory()) {
+    const folderInfo: FolderInfo = {
+      ...baseInfo,
+      type: 'folder',
+      size: null,
+      extension: null,
+    };
+    return folderInfo;
+  } else if (stats.isBlockDevice()) {
+    const blockDeviceInfo: BlockDeviceInfo = {
+      ...baseInfo,
+      type: 'blockDevice',
+    };
+    return blockDeviceInfo;
+  } else if (stats.isCharacterDevice()) {
+    const characterDeviceInfo: CharacterDeviceInfo = {
+      ...baseInfo,
+      type: 'characterDevice',
+    };
+    return characterDeviceInfo;
+  } else if (stats.isSymbolicLink()) {
+    const symbolicLinkInfo: SymbolicLinkInfo = {
+      ...baseInfo,
+      type: 'symbolicLink',
+    };
+    return symbolicLinkInfo;
+  } else if (stats.isFIFO()) {
+    const fifoInfo: FIFOInfo = {
+      ...baseInfo,
+      type: 'fifo',
+    };
+    return fifoInfo;
+  } else if (stats.isSocket()) {
+    const socketInfo: SocketInfo = {
+      ...baseInfo,
+      type: 'socket',
+    };
+    return socketInfo;
+  } else {
+    const unknownInfo: UnknownInfo = {
+      ...baseInfo,
+      type: 'unknown',
+    };
+    return unknownInfo;
+  }
 }
 
 /**
- * Retrieves detailed information for all items.
+ * Retrieves detailed information for all items in a directory.
  *
- * @param items - The list of item names.
- * @param basePath - The base path of the items.
- * @returns The list of item information.
+ * @param basePath - The base path to list items from.
+ * @returns A promise that resolves to a list of item information.
  */
-async function getAllItemStats(
-  items: string[],
-  basePath: string
-): Promise<ItemInfo[]> {
-  const itemStatsPromises = items.map(async item => {
-    const itemPath = join(basePath, item);
+async function getAllItemsInfo(basePath: string): Promise<ItemInfo[]> {
+  const itemNames = await readdir(basePath);
+  const itemInfoPromises = itemNames.map(async itemName => {
+    const itemPath = join(basePath, itemName);
     try {
-      return await getItemStats(itemPath, item);
+      return await getItemInfo(itemPath, itemName);
     } catch (error) {
-      console.error(`Error getting stats for item ${itemPath}:`, {
-        error,
-        itemPath,
-        item,
-        basePath,
-      });
+      console.error(`Error getting info for item ${itemPath}:`, error);
       return null;
     }
   });
 
-  const itemStats = await Promise.all(itemStatsPromises);
-  // The error handling in the try-catch block ensures that each item is processed independently and returns a compatible type in case of an error, making the use of `Promise.allSettled` unnecessary here.
-  // Additionally, logging or counting `null` items can help understand the frequency and causes of failed stats retrievals if required in the future.
-  return itemStats.filter((item): item is ItemInfo => item !== null);
+  // Wait for all ItemInfo promises to resolve and filter out null values
+  const itemsInfo = await Promise.all(itemInfoPromises);
+  return itemsInfo.filter((item): item is ItemInfo => item !== null);
 }
 
 /**
- * Filters the items based on the provided filtering function.
+ * Filters items based on a provided function.
  *
  * @param items - The list of item information.
+ * @param filterFn - The filtering function.
  * @returns The filtered list of items.
  */
-function applyFiltering(
-  items: ItemInfo[],
-  filterFn: (item: ItemInfo) => boolean
-): ItemInfo[] {
+function applyFiltering<T extends ItemInfo>(
+  items: T[],
+  filterFn: FilterFn<T>
+): T[] {
   return items.filter(filterFn);
 }
 
 /**
- * Sorts the items based on the provided sorting function.
+ * Sorts items based on a provided function.
  *
  * @param items - The list of item information.
  * @param sortFn - The sorting function.
- * @returns The sorted list of item information.
+ * @returns The sorted list of items.
  */
-function applySorting(
-  items: ItemInfo[],
-  sortFn: (a: ItemInfo, b: ItemInfo) => number
-): ItemInfo[] {
+function applySorting<T extends ItemInfo>(items: T[], sortFn: SortFn<T>): T[] {
   return [...items].sort(sortFn);
 }
 
 /**
- * Lists all items in the specified base path, including additional information about each item, with optional filtering and sorting.
+ * Filters items by type ('file', 'folder', etc.).
+ *
+ * @param items - The list of item information.
+ * @param type - The type of items to filter ('file', 'folder', etc.).
+ * @returns The filtered list of items.
+ */
+function filterByType<K extends ItemType>(
+  items: ItemInfo[],
+  type: K
+): Array<ItemTypeMap[K]> {
+  return items.filter((item): item is ItemTypeMap[K] => item.type === type);
+}
+
+/**
+ * Lists items in a directory with optional filtering and sorting.
  *
  * @param basePath - The base path to list items from.
- * @param filterFn - The optional filtering function.
- * @param sortFn - The optional sorting function.
- * @returns The list of filtered and sorted item information.
+ * @param options - The options for listing items.
+ * @returns A promise that resolves to the list of item information.
  */
+export function advancedListItems<K extends ItemType>(
+  basePath: string,
+  options: ListOptions<ItemTypeMap[K]> & { type: K }
+): Promise<Array<ItemTypeMap[K]>>;
+
+export function advancedListItems(
+  basePath: string,
+  options?: ListOptions<ItemInfo> & { type?: 'all' }
+): Promise<ItemInfo[]>;
+
 export async function advancedListItems(
   basePath: string,
-  filterFn?: (item: ItemInfo) => boolean,
-  sortFn?: (a: ItemInfo, b: ItemInfo) => number
+  options: ListOptions<ItemInfo> = { type: 'all' }
 ): Promise<ItemInfo[]> {
-  try {
-    const items = await readdir(basePath);
-    const itemStats = await getAllItemStats(items, basePath);
+  const { type = 'all', filterFn, sortFn } = options;
 
-    let filteredItems: ItemInfo[] = itemStats;
+  try {
+    let items: ItemInfo[] = await getAllItemsInfo(basePath);
+
+    if (type !== 'all') {
+      items = filterByType(items, type);
+    }
+
     if (filterFn) {
-      filteredItems = applyFiltering(itemStats, filterFn);
+      items = applyFiltering(items as any[], filterFn as any);
     }
 
     if (sortFn) {
-      return applySorting(filteredItems, sortFn);
+      items = applySorting(items as any[], sortFn as any);
     }
 
-    return filteredItems;
+    return items;
   } catch (error) {
     console.error(`Error listing items in path ${basePath}:`, error);
     return [];
@@ -137,21 +337,89 @@ export async function advancedListItems(
 }
 
 /**
- * Lists all folders in the specified base path.
+ * Lists files in a directory with optional filtering and sorting.
  *
- * @param basePath - The base path to list folders from.
- * @returns The list of folder information.
+ * @param basePath - The base path to list files from.
+ * @param filterFn - The optional filtering function.
+ * @param sortFn - The optional sorting function.
+ * @returns A promise that resolves to the list of file information.
  */
-export function listFoldersInfo(basePath: string): Promise<ItemInfo[]> {
-  return advancedListItems(basePath, item => item.type === 'folder');
+export function listFiles(
+  basePath: string,
+  filterFn?: FilterFn<FileInfo>,
+  sortFn?: SortFn<FileInfo>
+): Promise<FileInfo[]> {
+  const options: ListOptions<FileInfo> & { type: 'file' } = { type: 'file' };
+
+  if (filterFn) options.filterFn = filterFn;
+  if (sortFn) options.sortFn = sortFn;
+
+  return advancedListItems(basePath, options);
 }
 
 /**
- * Lists all files in the specified base path.
+ * Lists folders in a directory with optional filtering and sorting.
  *
- * @param basePath - The base path to list files from.
- * @returns The list of file information.
+ * @param basePath - The base path to list folders from.
+ * @param filterFn - The optional filtering function.
+ * @param sortFn - The optional sorting function.
+ * @returns A promise that resolves to the list of folder information.
  */
-export function listFilesInfo(basePath: string): Promise<ItemInfo[]> {
-  return advancedListItems(basePath, item => item.type === 'file');
+export function listFolders(
+  basePath: string,
+  filterFn?: FilterFn<FolderInfo>,
+  sortFn?: SortFn<FolderInfo>
+): Promise<FolderInfo[]> {
+  const options: ListOptions<FolderInfo> & { type: 'folder' } = {
+    type: 'folder',
+  };
+
+  if (filterFn) options.filterFn = filterFn;
+  if (sortFn) options.sortFn = sortFn;
+
+  return advancedListItems(basePath, options);
+}
+
+/**
+ * Lists all items (files and folders) in a directory with optional filtering and sorting.
+ *
+ * @param basePath - The base path to list items from.
+ * @param filterFn - The optional filtering function.
+ * @param sortFn - The optional sorting function.
+ * @returns A promise that resolves to the list of item information.
+ */
+export function listAllItems(
+  basePath: string,
+  filterFn?: FilterFn<ItemInfo>,
+  sortFn?: SortFn<ItemInfo>
+): Promise<ItemInfo[]> {
+  const options: ListOptions<ItemInfo> & { type: 'all' } = { type: 'all' };
+
+  if (filterFn) options.filterFn = filterFn;
+  if (sortFn) options.sortFn = sortFn;
+
+  return advancedListItems(basePath, options);
+}
+
+/**
+ * Lists items of a specific type in a directory with optional filtering and sorting.
+ *
+ * @param basePath - The base path to list items from.
+ * @param type - The type of items to list ('file', 'folder', etc.).
+ * @param filterFn - The optional filtering function.
+ * @param sortFn - The optional sorting function.
+ * @returns A promise that resolves to the list of item information.
+ */
+export function listItemsOfType<K extends ItemType>(
+  basePath: string,
+  type: K,
+  filterFn?: FilterFn<ItemTypeMap[K]>,
+  sortFn?: SortFn<ItemTypeMap[K]>
+): Promise<Array<ItemTypeMap[K]>> {
+  const options: ListOptions<ItemTypeMap[K]> & { type: K } = { type };
+
+  if (filterFn) options.filterFn = filterFn;
+  if (sortFn) options.sortFn = sortFn;
+
+  return advancedListItems(basePath, options);
 }
