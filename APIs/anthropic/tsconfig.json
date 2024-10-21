@@ -3,9 +3,9 @@
   "compilerOptions": {
     /* Emit Options */
     "target": "ESNext",
-    "module": "CommonJS",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
     "rootDir": "./src",
     "composite": true,
     "declarationDir": "./out/typings",

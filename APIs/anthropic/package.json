@@ -6,9 +6,11 @@
   "types": "out/typings/index.d.ts",
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "build": "exit 0; # bash scripts/build.sh",
+    "start": "tsc; node out/main.ts",
     "install": "pwd; # yarn build || exit 13; pwd",
     "path": "echo $PATH",
     "test": "jest"
