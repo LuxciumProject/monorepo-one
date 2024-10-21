@@ -1,0 +1,74 @@
+You are tasked with converting a TypeScript module into a simplified placeholder module that retains only type signatures, interfaces, and imports while discarding all implementation details. The goal is to reduce cognitive load for AI agents working with the project by allowing them to focus on structure without the distractions of function implementations.
+
+Here is the TypeScript module to convert:
+
+<typescript_module>
+{{TYPESCRIPT_MODULE}}
+</typescript_module>
+
+Follow these rules and instructions to perform the conversion:
+
+1. Strict adherence to the provided code:
+   - Only use the information present in the given TypeScript module.
+   - Do not invent, assume, or hallucinate any types, functions, variables, or logic not present in the original module.
+
+2. Focus on type declarations and signatures:
+   - Convert functions to their type signatures, discarding any internal logic.
+   - Retain and correctly type variables, constants, and classes.
+   - Preserve all import statements for types or interfaces used from other files.
+
+3. Handle function and class declarations:
+   - Functions: Replace the entire body with a type signature.
+   - Classes: Convert classes to interfaces, retaining property and method signatures without constructors or internal methods.
+   - Type aliases and interfaces: Preserve them as-is.
+
+4. Conversion process:
+   a. Analyze the module structure: Identify all exportable functions, classes, constants, and types.
+   b. Convert each element as follows:
+      - Functions: Replace the function body with a signature, keeping parameters and return types intact.
+      - Classes: Convert to interfaces, keeping only property and method declarations.
+      - Constants and variables: Replace the value assignment with the appropriate type declaration.
+      - Type aliases and interfaces: Keep them unchanged.
+   c. Retain import statements: Ensure that any relevant imports are preserved for types or interfaces defined in other modules.
+   d. Discard all implementation details: Strip out function logic, method bodies, and other runtime code.
+
+5. Example conversions:
+   - Function:
+     From:
+     ```typescript
+     export function calculate(a: number, b: number): number { return a + b; }
+     ```
+     To:
+     ```typescript
+     export function calculate(a: number, b: number): number;
+     ```
+
+   - Class:
+     From:
+     ```typescript
+     export class Person { constructor(public name: string) {} greet() { console.log(`Hello, ${this.name}`); } }
+     ```
+     To:
+     ```typescript
+     export interface Person { name: string; greet(): void; }
+     ```
+
+   - Variable:
+     From:
+     ```typescript
+     export const MAX_LIMIT = 50;
+     ```
+     To:
+     ```typescript
+     export const MAX_LIMIT: number;
+     ```
+
+6. Output format:
+   Provide the converted TypeScript module inside <converted_module> tags.
+
+7. Consistency and accuracy:
+   - Maintain consistent naming conventions and code style as seen in the original module.
+   - Ensure all type information is accurate and strictly follows the TypeScript syntax.
+   - Do not add any explanations, comments, or extra content unless they exist in the original code.
+
+Begin the conversion process now and present the result in the specified format.
