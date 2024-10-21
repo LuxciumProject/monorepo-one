@@ -1,0 +1,49 @@
+Axis: Verb Tense
+
+Command (imperative)
+Instruct (imperative or indicative)
+Direct (imperative or indicative)
+Order (imperative or indicative)
+Tell (indicative)
+Axis: Formality
+
+Command (formal, strict)
+Give instructions (formal, professional)
+Direct someone (formal, authoritative)
+Order around (informal, colloquial)
+Tell someone what to do (informal, conversational)
+Axis: Authority
+
+Dictate (authoritative, controlling)
+Assign a task (authoritative, managerial)
+Specify a direction (authoritative, prescriptive)
+Guide someone (authoritative, advisory)
+Suggest a course of action (non-authoritative, collaborative)
+Axis: Tone
+
+Boss around (domineering, abrasive)
+Provide guidance (helpful, supportive)
+Give orders (neutral, matter-of-fact)
+Offer suggestions ( collaborative, open-ended)
+Request action ( polite, respectful)
+Axis: Context
+
+Work orders (professional, business)
+Military orders (military, hierarchy)
+Parental orders (parent-child, authority)
+Leadership orders (organizational, management)
+Friendship orders (social, agreement)
+Axis: Object
+
+Give directions ( geographic, spatial)
+Provide instructions (cognitive, procedural)
+Give commands (military, tactical)
+Provide guidelines (regulatory, compliance)
+Share advice (counseling, supportive)
+Axis: Level of Abstraction
+
+Task-level orders (specific, detailed)
+Functional orders (broad, functional)
+Strategic orders (high-level, visionary)
+Tactical orders (operational, implementation)
+Philosophical orders ( meta, abstract)
