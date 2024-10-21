@@ -1,5 +1,6 @@
+// @/decorators/Functor.ts
 import { FantasyLand } from './utils';
 
-export function Functor() {
-  return FantasyLand('map');
+export function Functor<T>() {
+  return FantasyLand<T>('map');
 }

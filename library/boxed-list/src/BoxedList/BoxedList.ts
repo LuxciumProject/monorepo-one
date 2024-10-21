@@ -1,11 +1,12 @@
-import { Box } from '../Box/Box';
+// @/BoxedList/BoxedList.ts
+import { Box } from '@/Box/Box';
 import type {
   CallbackfnT,
   CallbackfnU,
   IMapItems,
   IUnbox,
   IUnboxList,
-} from '../types';
+} from '@/types';
 
 export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   #value: T[];
@@ -28,7 +29,16 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     const unbox: TVal | TVal[] = box.unbox();
     return BoxedList.of<TVal>(unbox as TVal);
   }
-
+  public static from2<TVal>(
+    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>
+  ): BoxedList<TVal> {
+    const unbox = box.unbox();
+    if (Array.isArray(unbox)) {
+      return BoxedList.of(...unbox);
+    } else {
+      return BoxedList.of(unbox);
+    }
+  }
   // protected ================================-| constructor() |-====
   protected constructor(value: T[]) {
     this.#value = value;

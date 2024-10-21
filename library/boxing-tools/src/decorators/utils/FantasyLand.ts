@@ -1,3 +1,4 @@
+// @/decorators/utils/FantasyLand.ts
 /**
  * Decorator that assigns the decorated method to the Fantasy Land specific key on the class prototype.
  *
@@ -13,7 +14,7 @@
  * @internal
  */
 
-export function FantasyLand(methodName: string) {
+export function FantasyLand<T>(methodName: string) {
   /**
    * @param target - The class prototype.
    * @param _propertyKey - The name of the decorated method.
@@ -21,12 +22,12 @@ export function FantasyLand(methodName: string) {
    * @internal
    */
   return function (
-    target: any,
-    _propertyKey: string,
+    target: T,
+    _propertyKey: PropertyKey,
     descriptor: PropertyDescriptor
-  ) {
+  ): void {
     // Assign the method to the Fantasy Land specific key on the class prototype
-    Object.defineProperty(target, `fantasy-land/${methodName}`, {
+    Object.defineProperty<T>(target, `fantasy-land/${methodName}`, {
       value: descriptor.value,
       writable: true,
       configurable: true,

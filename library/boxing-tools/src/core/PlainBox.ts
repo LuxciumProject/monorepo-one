@@ -1,3 +1,4 @@
+// @/core/PlainBox.ts
 import {
   Applicative,
   Apply,
@@ -160,7 +161,8 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @public
    */
-  @Functor()
+  @Functor<PlainBox<T>>()
+  // ['fantasy-land/map'] = this.map;
   public map<R>(fn: (value: T) => R): PlainBox<R> {
     return PlainBox.of(fn(this.boxedValue));
   }

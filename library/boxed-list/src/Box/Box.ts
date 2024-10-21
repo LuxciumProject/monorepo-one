@@ -1,4 +1,6 @@
-import type { IApply, IBox, IChain, IMap, IUnbox, IValue } from '../types';
+// @/Box/Box.ts
+
+import type { IApply, IBox, IChain, IMap, IUnbox, IValue } from '@/types';
 
 /**
  * This is the doc comment for Box class
