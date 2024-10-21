@@ -1,0 +1,114 @@
+To ensure that this task can be executed properly without any human supervision, I will enhance your directives to focus on the elimination of errors, strict compliance with TypeScript syntax, and precision in output. The goal is to avoid the mistakes observed earlier and guarantee that the final TypeScript module is syntactically correct and accurate.
+
+Here is the enhanced version with additional directives for error-free execution:
+
+You are tasked with converting a TypeScript module into a simplified placeholder module that retains only type signatures, interfaces, and imports while discarding all implementation details. The goal is to reduce cognitive load for AI agents working with the project by allowing them to focus on structure without the distractions of function implementations.
+
+Here is the TypeScript module to convert:
+
+<typescript_module>
+{{TYPESCRIPT_MODULE}}
+</typescript_module>
+
+Follow these rules and instructions to perform the conversion:
+
+1. Strict adherence to the provided code:
+
+	•	No assumptions or inventions: Only use information present in the given TypeScript module.
+	•	No hallucinations: Do not create or assume any types, functions, variables, or logic that do not exist in the original module.
+
+2. Focus on type declarations and signatures:
+
+	•	Functions: Convert all function implementations to their type signatures, discarding any internal logic.
+	•	Classes: Convert all classes to interfaces, retaining only the property and method signatures (no constructors or methods should contain logic).
+	•	Variables and Constants: Ensure all variables and constants are converted to their type declarations.
+	•	Type Aliases and Interfaces: Retain any existing type aliases or interfaces as they are.
+	•	Imports: Preserve all import statements for types or interfaces that are used from other modules.
+
+3. Handle function and class declarations:
+
+	•	Functions:
+	•	Replace the entire function body with a type signature.
+	•	Preserve the function name, parameters, and return type, ensuring these are kept intact and correctly typed.
+	•	Classes:
+	•	Convert each class into an interface.
+	•	Retain all class properties and methods as interface members without including constructor bodies or method logic.
+	•	Variables and Constants:
+	•	Replace any value assignment in variables or constants with the correct type declaration.
+	•	Ensure that types are strictly adhered to based on the original value.
+
+4. Conversion Process:
+
+a. Analyze the module structure:
+- Identify and categorize all exportable elements: functions, classes, constants, variables, type aliases, and interfaces.
+
+b. Convert each element according to these steps:
+- Functions: Remove the function body and replace it with a type signature, keeping all parameters and return types.
+- Classes: Convert each class into an interface, keeping only the property and method signatures (no logic).
+- Variables and Constants: Replace the value assignment with the appropriate type declaration.
+- Type Aliases and Interfaces: Leave them unchanged.
+
+c. Retain import statements:
+- Ensure that any import statements for types or interfaces defined elsewhere are preserved. Do not modify or remove any necessary imports.
+
+d. Discard all implementation details:
+- Remove all function logic, method bodies, and any runtime code that executes within functions or methods. The resulting module should only include signatures and type declarations.
+
+5. Example Conversions:
+
+	•	Function:
+From:
+
+export function calculate(a: number, b: number): number { return a + b; }
+
+To:
+
+export function calculate(a: number, b: number): number;
+
+
+	•	Class:
+From:
+
+export class Person { constructor(public name: string) {} greet() { console.log(`Hello, ${this.name}`); } }
+
+To:
+
+export interface Person { name: string; greet(): void; }
+
+
+	•	Variable:
+From:
+
+export const MAX_LIMIT = 50;
+
+To:
+
+export const MAX_LIMIT: number;
+
+
+
+6. Output Format:
+
+	•	Provide the converted TypeScript module inside <converted_module> tags.
+	•	Ensure that the output is formatted in a clean and readable manner, following TypeScript standards.
+
+7. Consistency and Accuracy:
+
+	•	No errors allowed: Ensure that the output is valid TypeScript that can be compiled and processed by TypeScript compilers without errors.
+	•	Strict type information: All type information must be preserved and accurate, strictly following the TypeScript syntax.
+	•	No extra content: Do not add any explanations, comments, or additional content that do not exist in the original module.
+	•	Naming conventions: Maintain consistent naming conventions as seen in the original module.
+	•	Valid syntax only: Ensure that every exported item and its corresponding type or interface is correctly typed.
+
+8. Additional Safeguards:
+
+	•	Check for missing elements: If an element in the original module is unclear, report it instead of inventing a type or structure.
+	•	Run validation checks: Simulate running TypeScript’s type checker on the output to ensure all types are valid, and the output is free from syntax errors.
+	•	Enforce type safety: Ensure that no element in the code violates TypeScript’s strict type rules.
+
+9. Begin the Conversion Process:
+
+	•	Convert the module now and ensure it complies with all the rules listed above.
+	•	Present the result in the specified format for further review.
+
+By adding these additional safeguards and focusing on error-free output, the instructions will ensure that the AI agent produces valid TypeScript modules without human supervision, and that the final output will be free from logical or syntactical errors.
