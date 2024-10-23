@@ -17,14 +17,14 @@ export const chatHistory = [
   new AIMessage('Yes!'),
 ];
 
-void (async function MAIN() {
+void async function MAIN() {
   console.log(`at: MAIN from ${__filename}`);
   const chain = prompt.pipe(chatModel);
 
-  await historyAwareRetrieverChain.invoke({
-    chat_history: chatHistory,
-    input: 'Tell me how!',
-  });
+  // await historyAwareRetrieverChain.invoke({
+  // chat_history: chatHistory,
+  // input: 'Tell me how!',
+  // });
 
   const aIMessage = await chain.invoke({
     input: 'what is LangSmith?',
@@ -34,4 +34,4 @@ void (async function MAIN() {
 
   console.dir({ aIMessage });
   return void 0;
-})();
+}; // ();

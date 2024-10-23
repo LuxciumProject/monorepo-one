@@ -106,7 +106,7 @@
     "typedoc-plugin-rename-defaults": "~0.7.1",
     "typedoc-plugin-replace-text": "~4.0.0",
     "typedoc-plugin-zod": "~1.2.1",
-    "typescript": "~5.6.2",
+    "typescript": "~5.6.3",
     "typescript-eslint": "~8.8.1",
     "eslint": "~9.12.0"
   },

@@ -21,8 +21,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <TopNav />
-          <main className="container mx-auto">{children}</main>
-          <div className="mt-12 flex gap-4 border border-success">
+          <div className="mt-1 flex gap-4 border border-success">
             <Link href="/zip-images" underline="hover" color="primary">
               View Zip Images
             </Link>
@@ -39,6 +38,7 @@ export default function RootLayout({
               Focus
             </Link>
           </div>
+          <main className="container mx-auto">{children}</main>
         </Providers>
       </body>
     </html>
