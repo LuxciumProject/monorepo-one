@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pwd; bash scripts/build.sh || exit 15",
-    "install": "pwd; yarn build || exit 13; pwd",
+    "build": "pwd; # bash scripts/build.sh || exit 15",
+    "install": "pwd; # yarn build || exit 13; pwd",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
