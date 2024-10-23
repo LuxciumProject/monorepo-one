@@ -7,13 +7,12 @@
   "author": "Luxcium (Benjamin Vincent)",
   "license": "MIT",
   "scripts": {
-    "build": "bash scripts/build.sh|| exit 15; pwd",
-    "install": "pwd; yarn build || exit 13; pwd",
+    "build": "pwd; bash scripts/build.sh|| exit 15; pwd",
+    "install": "pwd;  yarn build || exit 13; pwd",
     "test": "jest --config='config/jest.config.json'"
   },
   "keywords": [],
   "devDependencies": {
-    
     "@rushstack/heft": "~0.63.4",
     "@rushstack/heft-jest-plugin": "~0.10.6",
     "@types/eslint-config-prettier": "~6.11.3",

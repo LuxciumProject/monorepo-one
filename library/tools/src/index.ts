@@ -34,3 +34,11 @@ export const tools = {
 };
 
 export default tools;
+
+export type {
+  DelayValue,
+  PerformanceResult,
+  PerformanceResultTupple,
+  TaskStepsResult,
+  TaskValue,
+} from './delay';

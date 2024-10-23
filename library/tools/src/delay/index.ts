@@ -7,6 +7,13 @@ import {
   swap,
   timeStamp,
 } from './utils';
+export type {
+  DelayValue,
+  PerformanceResult,
+  PerformanceResultTupple,
+  TaskStepsResult,
+  TaskValue,
+} from './types';
 
 export { delay } from './delay';
 export { heavyTask } from './heavyTask';
