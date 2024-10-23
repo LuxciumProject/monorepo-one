@@ -11,9 +11,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  ...props
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(props);
   return (
     <html lang="en">
       <body>
