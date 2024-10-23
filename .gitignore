@@ -324,3 +324,4 @@ fabric.properties
 !project-listing.txt
 APIs/anthropic/envs.txt
 .pnpm-store
+rush.json.bak
