@@ -1,6 +1,6 @@
 // @App/anthropic/page.tsx
 
-import { sendMessage } from '@ServerActions/anthropic/actions/sendMessage';
+import { sendMessage } from '@ServerActions/anthropic/actions';
 
 export default async function AnthropicPage() {
   async function handleSubmit(formData: FormData) {
