@@ -1,0 +1,83 @@
+if you would have to write some code for me (DO NOT WRITE CODE INSTEAD EXPLAIN IN WORDS) if I wanted to have some sort of NextJS idiomatic and modular code… what would I need to say and what would you in return?
+
+To help you write NextJS code effectively, here's what would be most helpful to include in your request:
+
+1. The specific feature/component you want to build
+2. Any design requirements or constraints
+3. Whether you need client or server-side functionality
+4. Data requirements (if any)
+5. Desired folder structure/organization
+6. Any specific NextJS features you want to utilize (App Router vs Pages, Server Components vs Client Components, etc.)
+7. UI framework preferences (like Tailwind, shadcn/ui, etc.)
+
+In return, I would:
+1. Propose a modular structure following NextJS best practices
+2. Separate concerns into appropriate components/files
+3. Use proper NextJS patterns (like proper data fetching methods)
+4. Include TypeScript types if needed
+5. Add comments explaining key architectural decisions
+6. Suggest optimizations where relevant
+
+For example, instead of saying "I want a blog", you might say:
+"I need a blog page in NextJS App Router that shows posts from a CMS, has client-side pagination, uses Tailwind for styling, and needs to be SEO-friendly."
+
+Would you like to try making a specific request and I can show you how I would structure the response?​​​​​​​​​​​​​​​​
+
+App router and no api folder because i embrasse server action (DO NOT WRITE CODE) assuming that it would need some sort of server side computation and some sort of client side logic or event handlers…
+
+I understand you want to use modern NextJS patterns! When you make such a request, I would structure the response to show:
+
+1. Root level organization:
+- How to structure the app/ folder
+- Where to place shared components
+- Where to put types, utils, and lib functions
+- Placement of server actions (co-located with components using them)
+
+2. Component architecture:
+- Break down into server vs client components
+- Show proper 'use client' usage only where needed
+- Demonstrate form handling with server actions
+- Pattern for optimistic updates if needed
+
+3. Data flow:
+- Server action placement directly in server components
+- How to properly type the actions
+- Pattern for error handling
+- Revalidation strategies
+
+4. State management:
+- When to use React hooks like useState, useOptimistic
+- How to handle loading states
+- Managing form state
+
+Would you like me to demonstrate this with a specific feature example? Just describe what you'd like to build and I'll outline how I would structure it following these patterns.​​​​​​​​​​​​​​​​
+
+I am thinking about the overall experience, and the workflow of working with the Anthropic API to make my custom AI Agent so i am asking you before… because you are made of the same model… and not that i want to confuse you by being too meta but… i would love to use this custom made AI Agent to create the code that would make it possible to embody the custom made AI Agent so it could make an amazing bootstrapping mechanism for my future project… I don’t know if you understand that? but i am curious about the concept and not ready for any kind of code… not for the moment!
+
+I understand you're exploring a fascinating meta-concept: using Claude to help design an AI agent that could then help create its own implementation - a kind of self-bootstrapping development cycle. Let me break down what I understand:
+
+1. Initial Phase:
+- You want to use the Anthropic API to create a custom AI agent
+- This agent would be specialized for your specific development needs
+- It would inherit some of Claude's capabilities but be more focused
+
+2. The Bootstrap Concept:
+- Once the initial agent is defined, you'd use it to help write its own implementation
+- This creates an interesting recursive development pattern where the agent helps improve itself
+- The agent would understand both its own architecture and the code needed to implement it
+
+3. Workflow Considerations:
+- How to structure conversations with the agent to get optimal code output
+- How to maintain consistency between the agent's understanding and its implementation
+- How to balance between server-side operations (Next.js server actions) and client interactions
+
+This reminds me of the concept of "meta-circular evaluators" in programming language design, where a language is used to implement itself. 
+
+Before diving into code, some key questions to consider:
+1. What specialized capabilities do you want your agent to have beyond standard Claude?
+2. How would you want the agent to structure its code outputs?
+3. What kind of interaction model would work best for your development workflow?
+4. How would you handle the evolution of the agent's capabilities over time?
+
+Would you like to explore any of these aspects in more detail?​​​​​​​​​​​​​​​​
+
