@@ -1,0 +1,273 @@
+Globbing Syntax Reference Guide
+
+Globbing allows you to use wildcard patterns to match filenames and paths in shells, programming languages, and configuration files. This guide provides a compact, easy-to-use reference for all globbing syntax, including detailed explanations, examples, and variations across different environments.
+
+Globbing Syntax at a Glance
+
+Pattern	Description	Example	Matches	Does Not Match
+*	Matches any number of any characters except /	*.txt	file.txt, notes.txt	file.txt.bak, dir/file.txt
+?	Matches exactly one character except /	file?.txt	file1.txt, fileA.txt	file10.txt, file.txt
+[...]	Matches one character from the set	file[ab].txt	filea.txt, fileb.txt	filec.txt, fileab.txt
+[^...] or [!]...	Matches one character not in the set	file[!a].txt	fileb.txt, filec.txt	filea.txt
+{p1,p2,...}	Matches any of the patterns p1, p2, etc.	*.{jpg,png}	image.jpg, graphic.png	image.gif, imagejpg
+**	Matches any number of directories (including /)	src/**/test.js	src/test.js, src/lib/test.js	Depends on shell support
+!(pattern)	Matches anything except the pattern	!(file).txt	data.txt, note.txt	file.txt
+?(pattern)	Matches zero or one occurrence of the pattern	?(file)name.txt	name.txt, filename.txt	filefilename.txt
+*(pattern)	Matches zero or more occurrences of the pattern	*(file).txt	file.txt, filefile.txt, .txt	filedata.txt
++(pattern)	Matches one or more occurrences of the pattern	+(file).txt	file.txt, filefile.txt	.txt, data.txt
+
+Note: Extended patterns like !(pattern), ?(pattern), *(pattern), and +(pattern) require specific shell options (e.g., extglob in Bash) or are available in certain tools.
+
+Contents
+
+	1.	Introduction to Globbing
+	2.	Detailed Globbing Syntax
+	3.	Flavors of Globbing
+	4.	Boundaries with Regular Expressions
+	5.	Examples in Different Contexts
+	6.	Techniques and Tips
+	7.	Conclusion
+
+1. Introduction to Globbing
+
+Globbing is a mechanism for matching file and directory names using patterns with wildcards. It simplifies tasks like listing, copying, or deleting multiple files without specifying each one individually.
+
+2. Detailed Globbing Syntax
+
+2.1 Basic Wildcards
+
+	•	* (Asterisk)
+	•	Description: Matches any string of characters (including none) except for the directory separator /.
+	•	Example: *.txt matches file.txt, notes.txt, but not file.txt.bak.
+	•	? (Question Mark)
+	•	Description: Matches exactly one character except /.
+	•	Example: file?.txt matches file1.txt, fileA.txt, but not file10.txt.
+	•	[...] (Bracket Expression)
+	•	Description: Matches any one character within the brackets.
+	•	Example: data[0-9].csv matches data1.csv, data5.csv.
+	•	[^...] or [!... ] (Negated Bracket Expression)
+	•	Description: Matches any one character not within the brackets.
+	•	Example: file[!a].txt matches fileb.txt, filec.txt, but not filea.txt.
+
+2.2 Extended Wildcards (Requires Support)
+
+	•	** (Double Asterisk)
+	•	Description: Matches any number of directories (including none). Used for recursive matching.
+	•	Example: src/**/main.js matches src/main.js, src/app/main.js, src/app/utils/main.js.
+	•	Brace Expansion {p1,p2,...}
+	•	Description: Matches any of the patterns inside the braces.
+	•	Example: *.{jpg,png} matches image.jpg, graphic.png.
+	•	Extended Patterns (Bash extglob, Zsh, etc.)
+	•	!(pattern): Matches anything except the given pattern.
+	•	Example: !(test).js matches app.js, main.js, but not test.js.
+	•	?(pattern): Matches zero or one occurrence of the pattern.
+	•	Example: ?(prefix-)file.txt matches file.txt, prefix-file.txt.
+	•	*(pattern): Matches zero or more occurrences of the pattern.
+	•	Example: *(data)-file.txt matches file.txt, data-file.txt, data-data-file.txt.
+	•	+(pattern): Matches one or more occurrences of the pattern.
+	•	Example: +(data)-file.txt matches data-file.txt, data-data-file.txt, but not file.txt.
+
+3. Flavors of Globbing
+
+3.1 POSIX Standard Globbing
+
+	•	Supported Wildcards: *, ?, [...]
+	•	Limitations: No recursive matching (**), no extended patterns.
+	•	Usage: Common in basic Unix shells like sh.
+
+3.2 Bash Globbing
+
+	•	Default Support: POSIX wildcards.
+	•	Extensions:
+	•	Extended Globbing: Enable with shopt -s extglob.
+	•	Recursive Matching: Enable with shopt -s globstar to use **.
+	•	Example:
+
+shopt -s extglob globstar
+ls **/*.sh  # Lists all .sh files recursively
+
+
+
+3.3 Zsh Globbing
+
+	•	Features:
+	•	Extended globbing enabled by default.
+	•	Recursive matching with **.
+	•	Glob qualifiers for advanced matching (e.g., *.log(.m-1) for logs modified in the last day).
+	•	Example:
+
+ls **/*.py  # Lists all .py files recursively
+
+
+
+3.4 Windows Command Prompt
+
+	•	Supported Wildcards: *, ?
+	•	Limitations: No support for [], {}, or **.
+	•	Example:
+
+dir *.exe  # Lists all .exe files
+
+
+
+3.5 PowerShell
+
+	•	Supported Wildcards: *, ?, character ranges [a-z].
+	•	Limitations: Wildcards are similar but not identical to Unix shells.
+	•	Example:
+
+Get-ChildItem *.txt  # Retrieves all .txt files
+
+
+
+3.6 Programming Languages and Tools
+
+	•	Node.js:
+	•	Libraries like glob, minimatch, micromatch provide globbing.
+	•	Support for extended patterns and recursive matching.
+	•	Python:
+	•	glob module supports basic patterns.
+	•	glob.glob('**/*.py', recursive=True) for recursive matching.
+
+4. Boundaries with Regular Expressions
+
+Globs vs. Regular Expressions
+
+	•	Globs:
+	•	Simple wildcard patterns.
+	•	Limited to file and path matching.
+	•	Wildcards: *, ?, [], {}, ** (in some environments).
+	•	Cannot express complex patterns like repetitions or assertions.
+	•	Regular Expressions:
+	•	Powerful pattern matching for strings.
+	•	Supports quantifiers, groups, alternations, assertions.
+	•	Syntax: ^, $, .*, +, (), [], |, etc.
+
+When to Use Which
+
+	•	Use Globs when matching filenames and paths in shells, scripts, and config files.
+	•	Use Regular Expressions when needing complex string pattern matching beyond simple wildcards.
+
+5. Examples in Different Contexts
+
+5.1 Shell Scripting
+
+	•	List all .log files except error.log:
+
+ls *.log | grep -v 'error.log'
+
+	•	With Extended Globbing:
+
+shopt -s extglob
+ls !('error').log
+
+
+
+5.2 Node.js
+
+	•	Using glob Module:
+
+const glob = require('glob');
+
+glob('src/**/*.js', (err, files) => {
+  // files is an array of filenames.
+});
+
+
+
+5.3 Python
+
+	•	Using glob Module:
+
+import glob
+
+# Non-recursive
+files = glob.glob('*.txt')
+
+# Recursive
+files = glob.glob('**/*.txt', recursive=True)
+
+
+
+5.4 Configuration Files
+
+	•	.gitignore:
+
+# Ignore all .log files
+*.log
+
+# Ignore everything in the build/ directory
+build/
+
+# Ignore all .txt files in docs/ but not README.txt
+docs/*.txt
+!docs/README.txt
+
+
+	•	tsconfig.json:
+
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
+
+
+
+6. Techniques and Tips
+
+6.1 Combining Patterns
+
+	•	Brace Expansion:
+	•	Use {} to match multiple patterns.
+	•	Example: *.{jpg,png,gif} matches all image files.
+
+6.2 Excluding Files
+
+	•	Negation:
+	•	In Bash with extglob, use ! to negate patterns.
+	•	Example: rm !(*.bak) deletes all files except .bak files.
+
+6.3 Recursive Matching
+
+	•	Using **:
+	•	In supported shells (Bash with globstar, Zsh), ** matches directories recursively.
+	•	Example: cp src/** dist/ copies all files from src/ to dist/.
+
+6.4 Testing Patterns Safely
+
+	•	Dry Runs:
+	•	Use echo or printf to see what files match a pattern before executing commands.
+	•	Example: echo rm *.tmp shows which .tmp files would be deleted.
+
+6.5 Be Cautious with rm and Wildcards
+
+	•	Always double-check patterns when deleting files.
+	•	Consider using interactive mode: rm -i *.log.
+
+7. Conclusion
+
+Understanding globbing syntax empowers you to efficiently manipulate files and directories across various systems and programming environments. By familiarizing yourself with the patterns and their variations, you can perform complex file operations with simple commands.
+
+Quick Reference Table
+
+Pattern	Matches
+*	Any string of characters except /
+?	Any single character except /
+[...]	Any one character inside the brackets
+[^...] or [!...]	Any one character not inside the brackets
+{p1,p2,...}	Any of the patterns p1, p2, etc.
+**	Any directories recursively (needs support)
+!(pattern)	Anything except the pattern (requires extglob)
+?(pattern)	Zero or one occurrence of the pattern (requires extglob)
+*(pattern)	Zero or more occurrences of the pattern (requires extglob)
++(pattern)	One or more occurrences of the pattern (requires extglob)
+@(pattern)	Exactly one occurrence of the pattern (requires extglob)
+
+Remember:
+
+	•	Wildcards Simplify File Operations: Use them to match multiple files without typing each name.
+	•	Check Shell Support: Not all shells support all patterns; enable options like extglob or globstar as needed.
+	•	Test Patterns First: Use echo or similar commands to ensure your pattern matches the intended files.
+	•	Be Mindful of Differences: Globbing syntax can vary slightly between environments; always refer to the specific documentation if unsure.
+
+By keeping this guide handy, you can quickly reference globbing patterns and apply them confidently across different tasks and environments.
