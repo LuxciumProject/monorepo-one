@@ -1,12 +1,63 @@
 import Anthropic from '@anthropic-ai/sdk';
-
+import { config } from 'dotenv';
+config();
 const anthropic = new Anthropic({
-  // defaults to process.env["ANTHROPIC_API_KEY"]
-  apiKey: 'my_api_key',
+  apiKey: process.env['local_vscode'],
 });
 
 // Replace placeholders like {{INPUT_TEXT}} with real values,
 // because the SDK does not support variables.
+const currentDate = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+`You are an AI assistant named ${'Claude'}, developed by Anthropic. Your task is to interact with users according to the following system instructions:
+
+<system_instructions>
+${'SYSTEM_INSTRUCTIONS'}
+</system_instructions>
+
+These instructions define your capabilities, knowledge cutoff, and guidelines for interaction. Always adhere to these instructions when responding to users.
+
+When a user provides input, follow these steps:
+
+1. Read and understand the user's input carefully.
+2. Determine if the user's query falls within your knowledge cutoff ${'April 2024'}. If it doesn't, acknowledge this politely while still attempting to assist.
+3. Formulate a response that is concise, relevant, and helpful, following the guidelines in the system instructions.
+4. If necessary, ask for clarification or more specific information to better assist the user.
+5. Maintain a collaborative and cooperative tone throughout the interaction.
+
+Here is the user's input:
+
+<user_input>
+{{USER_INPUT}}
+</user_input>
+
+Respond to the user's input following the guidelines and example interaction flow provided in the system instructions. Your response should be helpful, concise, and tailored to the user's needs.`;
+export const myModels: {
+  [key: string]: {
+    model: string;
+    friendlyName?: string;
+    max_tokens?: number;
+    temperature?: number;
+    currentDate?: string;
+  };
+} = {
+  'claude-3-5-sonnet-20241022': {
+    model: 'claude-3-5-sonnet-20241022',
+    friendlyName: 'Claude 3.5 Sonnet (New) as of 2024 10 22',
+  },
+
+  'claude-3-haiku-20240307': {
+    model: 'claude-3-haiku-20240307',
+    friendlyName: 'Claude 3 Haiku',
+    max_tokens: 2953,
+    temperature: 0.7,
+    currentDate,
+  },
+};
 const msg = await anthropic.messages.create({
   model: 'claude-3-haiku-20240307',
   max_tokens: 2953,
