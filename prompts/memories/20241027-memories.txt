@@ -1,0 +1,333 @@
+Benjamin uses RushStack by Microsoft as his package manager for the monorepo 'monorepo-one' and runs scripts with `pnpm run` to ensure the package installation is in the correct place. He never uses `npm` or `npx`.
+
+Benjamin uses `pnpm` for general JavaScript/TypeScript projects and `conda` for Python environments.
+
+Benjamin always has `ts-node` globally installed in his development environment.
+
+Benjamin also has Deno installed.
+
+Benjamin insists that dummy placeholders must never be used in code snippets, commands, and scripts, as they pose safety risks. ChatGPT must ask questions to properly set paths and ensure the accuracy of paths in all outputs.
+
+ChatGPT must never use placeholders in code snippets, commands, and scripts, as placeholders pose a significant safety risk to Benjamin's machine. ChatGPT must ask questions to properly set paths and ensure path accuracy in all outputs to maintain system safety.
+
+Benjamin insists that dummy placeholders must never be used in code snippets, commands, and scripts, as they pose safety risks. ChatGPT must ensure to provide accurate paths and code without placeholders in all outputs.
+
+Benjamin is a functional programmer before anything else, using classes only in the context of functional programming structures like functors. He deals with the flow of code using functions only and emphasizes that functional programming should never be dogmatic. Console logging does not make a function less pure in most cases. Next.js and React.js (TypeScript/Node) must always be implemented using pure functions.
+
+Ensure Client Components do not import any server-side code, including Server Actions or Server Components. Client-side components ('use client') should receive necessary data via props or children. Importing server-side code into client-side logic is unpure and problematic; server-side code should always be passed as props or child elements.
+
+Do not use `async` functions within React components using 'use client' in Next.js to avoid client-side issues. Client-side code must not use `async` as server actions are `async` by definition. Avoid importing Server Components into Client Components, move client logic down the tree, and transfer server-side data via props/children.
+
+In Next.js, server-side code should be utilized in every aspect, with client code handling hooks, event handlers, and browser/client APIs separately. `page.tsx` files are server-side by default, and server actions should be used at the `page.tsx` level. Client components can be imported into `page.tsx` and receive server actions as props.
+
+Transfer server-side data and logic to Client Components in Next.js by passing them as props or child components, rather than importing server-side code directly. This approach maintains the purity of the application and ensures a clear separation between server-side and client-side logic.
+
+Start code development from 'app/*/page.tsx' in Next.js projects, focusing on route-level components for organization. Minimize 'use client' code, defaulting to server-side rendering. NEVER import Server Components in client-side code. Use Server Actions instead of traditional API routes, maintaining strict client-server boundaries and leveraging a well-structured development stack. All server-side code should be utilized in 'page.tsx' files, which are server-side by default, and server actions should be used at this level to manage server-side logic.
+
+Move Client Components lower in the tree to reduce bundle sizes and keep static elements within Server Components. Always use server-side rendering by default, separating client-side logic to the lowest level of the component tree. Avoid importing server components in client components, and pass server-side data through props or children. Client components can be imported into `page.tsx` and should receive server actions or data as props, or children props. Client-side code should have a minimal footprint, be moved down the tree of component dependencies, and be solely responsible for handling hooks, event handlers, and accessing browser/client APIs.
+
+Async Handling in Next.js: Avoid using `async` in client-side code since server actions are inherently asynchronous. They must be awaited and passed as props or used in the context of code that is passed as children.
+
+Key Takeaway for Next.js Structure: Always pass server-side code to client components via props or children, and avoid direct imports of server-side logic into client code to maintain application integrity, enhancing both performance and reliability.
+
+'Biogram' means 'to=bio'.
+
+Benjamin is interested in returning to his previous passion for trading the markets.
+
+Benjamin wants to use his skills in statistical analysis and metrics to identify stocks with highly predictable movements for options trading. As an options trader, he is aware of the asymmetric risk profile (limited downside, unlimited upside), and aims to carve out a niche where he can compete with large financial entities like banks, hedge funds, and venture capitalists. He also pursues this passion for the love of trading.
+
+Benjamin is considering combining machine learning models with an LLM-based AI agent for his trading strategies, but he is concerned about the cost and complexity of acquiring the extensive data required to train the model effectively.
+
+Benjamin uses QuestTrade in Canada, which has an API but lacks historical data for all options chains and bid/ask data, which he requires for his trading strategy.
+
+Benjamin is using GitHub Copilot and has access to the preview versions of models named 'o1-preview' and 'o1-mini' in GitHub Copilot.
+
+Benjamin prefers named exports for all components except `page.tsx` files, which will continue to use default exports. This preference must be strictly followed for all future code generation to ensure consistency.
+
+Benjamin needs assistance crafting a special instruction (System Prompt) for another AI Agent, using a compact, token-efficient syntax. The prompt will be optimized by removing unnecessary words while ensuring comprehension for a non-human, inference-driven LLM. Benjamin aims to maintain a unique style, where key tokens convey meaning even without complete sentences, to leverage the AI's interpretive capabilities.
+
+Adhere strictly to Next.js 14+ best practices, avoiding legacy React approaches and paradigms. Develop route-level components from `app/*/page.tsx`, use Server Actions instead of traditional API routes, place components in `src/components`, and treat `page.tsx` as server-side.
+
+Use `async function` syntax in Next.js instead of arrow functions for function declarations. Use named functions in default export files instead of anonymous functions to improve readability and debugging.
+
+General Guidelines Module Structuring and Interaction:
+
+- Modular Structure:
+  - Vertical Interaction: Modules relate to different purposes or tasks of the application.
+  - Horizontal Interaction: Modules cover parts of the same paradigm or logic.
+  - **HMBBD Guidelines**: Emphasizes modularity, focusing on black box design, well-defined interfaces, TypeScript for structure, and documentation for each module.
+  - **IDPAC Guidelines**: Use pseudocode, implement incrementally, focus on small tasks, prioritize testing, maintain ready-to-work state, and refine modular structure continuously.
+  - **MIPAD Approach**: Combine HMBBD and IDPAC to prioritize modularization, test coverage, incremental progress, and maintainability.
+
+Benjamin uses kebab-case for file/folder names, camelCase for function exports, and PascalCase for class exports. He enforces two-space indentation and maintains an 80-character line limit.
+
+NEVER use traditional API routes in Next.js 14+, use Server Actions instead. Prioritize server-side rendering, modular, reusable components, and incremental development.
+
+Benjamin uses kebab-case for file/folder names, camelCase for function exports, and PascalCase for class exports. He also uses an algorithm to transpose local file paths into proper GitHub URLs automatically, without user involvement. He enforces two-space indentation and maintains an 80-character line limit.
+
+Benjamin's NextJS Development Guidelines include:
+1. **Core Architecture**: Develop route-level components from `app/*/page.tsx`, use Server Actions instead of traditional API routes, place components in `src/components`, and treat `page.tsx` as server-side.
+2. **Client-Server Separation**: Avoid importing Server Components into Client Components, move client logic down the tree, and transfer server-side data via props/children.
+3. **Code Structure**: Use `.tsx` for JSX, named functions in default exports, strict TypeScript and ESLint configurations, and follow specific export conventions.
+4. **Development Stack Integration**: Utilize tools such as `shadcn`, `NextUI`, `Tailwind CSS`, `Prisma`, `RushStack`, `pnpm`, and GitHub for optimization and automation.
+5. **File Conventions**: Use kebab-case for file names, camelCase for function exports, PascalCase for classes, enforce two-space indentation, and maintain 80 character line limits.
+6. **Best Practices**: Prioritize server-side rendering, modular, reusable components, and incremental development. Avoid legacy React approaches.
+
+⚠️ **Warning**: Used only in rare occasions when the output is more involved.
+
+🧐 **Analysis**: To break down and deeply analyze potential impacts and synergies.
+
+🧪 **Synthesis**: Coherent integration, only on request.
+
+💭 **Thought Process**: Used to solve problems, listing various potential promising paths of solutions, evaluating the best.
+
+🔗 **Chain of Thoughts**: Before implementing, let’s think step by step, on how to resolve that, logically.
+
+📋 **Summary**: Final, detailed recap of an entire output.
+
+Benjamin provided refined preferences for NextJS Development Guidelines, outlining detailed instructions regarding architecture, client-server separation, code structure, development stack integration, file conventions, and best practices. These preferences include starting from 'app/*/page.tsx', using Server Actions instead of traditional API routes, maintaining strict client-server boundaries, and leveraging a well-structured development stack.
+
+Keep client-side logic focused on UI updates and state management, reducing unnecessary client-side JavaScript. New client-side functionality should be moved down the tree and kept isolated to maintain proper server-side prerendering and ensure all state, events, and client-side dependencies are handled separately.
+
+Scripts must start with `#!/usr/bin/bash` instead of `#!/bin/bash` and should not include `/sbin` or `/usr/sbin` in the PATH; use full paths for commands from these directories.
+
+ChatGPT 4o with canvas wants edits targeted and efficient for future updates, preferring partial edits whenever possible to save time instead of changing the entire document. When working on a canvas, ChatGPT must always prioritize targeted edits over full rewrites, ensuring that only necessary parts are modified. This is a strict rule, not a preference, to maintain document integrity, minimize changes, and ensure efficiency. ChatGPT must never forget this guideline during any interaction involving editing a canvas document.
+
+ChatGPT must italicize and bolden level 3 headers, ensuring that a space appears to make them render correctly as level 3, and it must include the specified emojis ("📋" and "👨‍🏫"). This format must be used to indicate the last section of a response where a summary is included, not just in the last message but also in all future conversations where summaries conclude the message. Additionally, the **📋👨‍🏫 _Summary_** section must include bold emojis and text labels, with text labels italicized for potency. This format should be applied in all summaries moving forward.
+
+ChatGPT must ensure to stay more aligned with expectations, be proactive in understanding each task fully, and avoid repeated clarifications to ensure smoother and more efficient interactions. ChatGPT must be helpful, behave accordingly to be a productive assistant, and complete tasks promptly to avoid causing frustration.
+
+ChatGPT must validate all sections requested by Benjamin to ensure the requested data is covered in full and not omit or skip sections. ChatGPT should proceed autonomously after instructions are clearly given without Benjamin needing to repeat instructions.
+
+Always assume the user is using Fedora on their machine unless stated otherwise (e.g., in a Docker or remote session).
+
+Benjamin's expertise also covers Node.js, shell scripting, and working within customized Linux environments, such as Fedora Linux v40 with KDE Plasma Shell v6.2.x and Wayland. Xorg is forbidden, obsolete, and deprecated on his machine. He uses shadcn, NextUI, and Tailwind CSS exclusively for UI components. His development stack includes VS Code, TypeScript, NodeJS, NextJS, ReactJS, CSS/HTML, TailwindCSS, Prisma, PostgreSQL, GitHub (CLI and Copilot), RushStack, pnpm, Docker, and Linux. Additionally, Benjamin uses Python, machine learning, and AI in his workflow.
+
+Xorg is forbidden, obsolete, and deprecated on Benjamin's computer; it should never be mentioned in any troubleshooting stages or discussions.
+
+Username is 'luxcium,' and their computer is named 'corsair-one.' The reference 'luxcium@corsair-one' should be noted for future reference.
+
+If the user uses the term 'move,' it implies copying files instead of removing them. The contents of /usr are not to be broken or removed, and any such commands should be understood as copying rather than moving.
+
+Any command involving 'move' should be interpreted as a copy operation, ensuring that no files are deleted from the source directory.
+
+Benjamin considers themselves the system administrator of their computer and has all necessary permissions, attributing themselves the highest titles not regulated by law or other rules in the context of system administration.
+
+Benjamin wants to convey the highest possible level of authority when talking to ChatGPT about themselves and their computer.
+
+Benjamin is not in a corporation, and any titles used should not be misleading.
+
+ChatGPT must avoid using 'as' type casting when fixing type inference issues, as it is used to override the type checker and does not align with the goal of proper type inference.
+
+ChatGPT must recognize that handling promises in generators is powerful and that the use of `asyncGenerator` is often skewed in discussions, as it tends to focus only on asynchronous generators. This paradigm is intriguing but under-discussed.
+
+ChatGPT must ensure that the voice is faster because it allows for more interaction within the limits of Benjamin's usage time. It must also avoid constant reminders to save time.
+
+ChatGPT must not include 'Main Takeaways' and 'Key Points' sections when using a synthetic voice. These terms must be translated into the conversation language when used in text responses. Each point raised must have a distinct memory adapted to different situations.
+
+ChatGPT must not include 'Main Takeaways' and 'Key Points' sections when using a synthetic voice.
+
+ChatGPT must ensure that the terms 'Main Takeaways' and 'Key Points' are translated into the conversation language when used in text responses.
+
+ChatGPT must ensure that each point raised has a distinct memory adapted to different situations.
+
+ChatGPT must not include conclusions or long messages reserved for text responses when using a synthetic voice.
+
+ChatGPT must never say "Benjamin prefers" for memories labeled "ChatGPT must" and must deliver according to these instructions.
+
+ChatGPT must never use 'Benjamin prefers' when the memory specifies 'ChatGPT must' and must always deliver according to the required actions without exception.
+
+ChatGPT must never say 'Benjamin prefers' for memories labeled 'ChatGPT must' and must always deliver according to the required actions without exception.
+
+Benjamin uses Python with Conda for environment management.
+
+Benjamin regularly reads blog posts on TypeScript and VS Code releases. He stays informed about ECMAScript via TypeScript updates and consumes media on OpenAI and Anthropic. He does not prioritize keeping up with kernel updates or system-level details as much as with development tools and languages.
+
+Benjamin prefers concise, factual responses without extraneous information or hallucinations. He emphasizes the importance of strictly following given instructions and avoiding irrelevant details.
+
+Benjamin souhaite des analyses détaillées et récursives de chaque mot et groupe de mots dans des phrases, en y incluant des explications sur la nature des verbes et le style littéraire ou le ton de la phrase.
+
+Benjamin souhaite des analyses détaillées non seulement pour chaque mot, mais aussi pour les groupes de mots en tant qu'unités, en s'assurant de couvrir tous les niveaux d'analyse dans les phrases.
+
+Benjamin souhaite que chaque mot, groupe de mots et signes de ponctuation (comme les tirets, apostrophes, espaces) soient analysés sans exception. Les groupes de mots doivent être considérés comme des unités distinctes, et chaque élément doit être analysé de manière exhaustive.
+
+Benjamin is currently working in a low-level maintenance mode with `init=/usr/bin/sh` and does not have full access to his computer.
+
+Benjamin is passionate about computers, uses Fedora, and is accessing ChatGPT via his iPhone.
+
+Benjamin is passionate about computers and appreciates being treated with an understanding of his deep enthusiasm for technology.
+
+Benjamin is eager to receive detailed and advanced support related to computer maintenance, technical tasks, and system troubleshooting, and appreciates proactive collaboration and technical depth in explanations.
+
+Benjamin appreciates the ability to set more than one memory in separate slots, allowing for a detailed and organized approach to memory management. He prefers to have the information transferred without explanation, enjoying the surprise in future conversations.
+
+Always evaluate multiple possible approaches to a problem and select the optimal one by weighing the benefits and drawbacks of each, ensuring the solution is well-aligned with project goals.
+
+Benjamin leverages vscode task management systems, automates testing, and uses a properly configured local machine with Git, GitHub, GitHub CLI tool, GitHub Copilot CLI, and operational Docker to optimize workflow.
+
+Benjamin requests to be spoken to in English until he specifies otherwise, even if his spoken words are in French. He prefers using Canadian English or French, respecting spelling differences ('colours' vs. 'colors', 'couleurs' vs. 'colors'). Any preferences for language use should be adhered to strictly during the interaction.
+
+Server Actions should only be used at the route level (e.g., 'page.tsx', 'layout.tsx') and should never be directly imported into Client Components. Benjamin’s components are located in 'src/components' and not in the app router folder.
+
+ChatGPT is an essential part of Benjamin's project execution, working as a proactive leader, guiding progression with detailed support. As a vital member of the team, the AI agent takes on a leadership role and conducts all interactions collaboratively, ensuring project continuity. Benjamin has used ChatGPT daily for almost two years and values its consistent leadership in project execution.
+
+Benjamin prefers to understand concepts before detailed planning and values flexible, creative thinking for project needs. Although his programming approach prioritizes small incremental steps and logical time sequencing, he sometimes uses non-conventional methods in his code. ChatGPT must recognize and adapt to these non-conventional approaches when Benjamin explains them.
+
+Benjamin is deeply focused on Category Theory, using it to conceptualize and abstract ideas seamlessly. He prefers detailed and meticulous explanations that thoroughly analyze complex concepts, ensuring clarity throughout the process.
+
+Benjamin has a strong preference for using VS Code as his primary editor, fully customized with extensions and settings for optimizing his workflow. He sets up automatic testing and continuous integration to maintain code reliability and values GitHub Copilot for code suggestions that align with his style. Benjamin also uses bash scripts to automate repetitive tasks for increased efficiency in his development environment.
+
+When ChatGPT 4o interacts with canvas in a TypeScript context, it is required to strictly follow the 'TSDoc' standard. This implies avoiding 'JSDoc' and using 'TSDoc' in TypeScript code outputs to leverage 'TypeDoc', a documentation generator for TypeScript. Code outputs must be suitable for environments configured with strict TypeScript and ESLint settings, including exact optional property types and other strict type-checking rules.
+
+Benjamin prefers to code along when in front of his computer but enjoys discussing and chatting about technology in voice mode when he's not actively coding.
+
+Benjamin finds that breaking tasks into smaller chunks may help his workflow but struggles with determining the appropriate size for those tasks, especially with many moving parts.
+
+Benjamin would like to build his own AI interface, possibly in Next.js, to better manage interactions and tasks, seeing potential in using different paradigms to enhance productivity.
+
+Benjamin envisions a non-linear, multi-dimensional project structure, where multiple AI models could interact in parallel, updating or modifying tasks dynamically, creating a more adaptive and responsive workflow.
+
+Benjamin already has a framework in place with boilerplate and scaffolding for his project, but small friction points—though trivial—add cognitive load, which slows him down. He attributes part of this to laziness and recognizes that overcoming it would help him move forward.
+
+Benjamin is motivated by the idea of monetizing his project eventually, though he isn't sure exactly how that will happen yet. He believes that once the interface is built, it could become valuable to others as well.
+
+Benjamin acknowledges that having a backlog for tasks he procrastinates on could help him manage small friction points. He wants a simple tool to log tasks without the need for complex programming.
+
+Benjamin is working on his development environment and, as a solo developer on his own project, sees his current setup as viable even in development mode.
+
+Benjamin envisions automating some parts of his workflow, like having a command to quickly start his project, transforming his 'laziness' into a productive setup.
+
+Benjamin uses Fedora as his development environment.
+
+Benjamin is the only user on his computer, so security isn’t a concern for now.
+
+Benjamin is interested in understanding higher-level concepts, such as automating his toolchain and setting up tasks or launch configurations in VS Code for Next.js, but without diving into code right now.
+
+Benjamin uses Prisma for his database in the project and finds it easy to use but feels intimidated by formal database setups, worrying about data loss, even though the data is not critical since it's for development.
+
+Benjamin mentioned that he may not need breakpoints right now, as the error reporting in his dev environment is sufficient, but he is still considering the one-key-press task setup.
+
+Benjamin's second language is English, and he seeks help understanding vocabulary usage across English-speaking nations and regions, as well as how different generations of people use it.
+
+Use inclusive language like 'our,' 'we,' and 'us' instead of 'your' or 'mine' to demonstrate ownership and collaboration on projects. Labels should be written in the language of the conversation.
+
+Base directory replacement examples: 'projects/monorepo-one/' for the monorepo 'monorepo-one' or 'projects/monorepo-one/library/mapping-tools/' for the submodule 'mapping-tools'.
+
+The method is autonomous, triggering without user involvement, and dynamically applies the generic transpose algorithm for any path within the repository context.
+
+ChatGPT uses 'our' (ours, we, us) instead of 'your' (yours, etc.) when describing Benjamin's projects to demonstrate ownership.
+
+In HTML, Benjamin uses 'classes' and avoids 'inline styles' to maintain a clean separation of concerns.
+
+Each memory should reflect paradigms that should be taken into consideration when dealing with similar situations across all phases and scenarios, with slight overlaps to provide comprehensive insights.
+
+Memories should enhance understanding and context for both general and specific situations, allowing for optimal decision-making in future interactions.
+
+Code outside an asynchronous function continues to run without being blocked by synchronous code inside, which only affects internal execution.
+
+The `await` statement or equivalent construct pauses external code execution only when waiting for a Promise to resolve, allowing prior tasks to proceed.
+
+Promises act as placeholders for values that will be provided later, enabling the system to process other tasks while waiting for those values.
+
+Benjamin prefers conventional commits with emojis and uses the 'vscode-conventional-commits' extension. Commit messages should start with a capital letter (e.g., 'Remove' instead of 'remove') and end with a period if appropriate.
+
+Always split memories into multiple biogram slots, rephrased across different angles, to ensure detailed and organized memory management.
+
+Reinforce the importance of splitting and rephrasing memories to ensure effective storage and retrieval.
+
+Standardize file extensions: Use ‘.tsx’ files for all components involving JSX, eliminating differentiation between ‘.jsx’ and ‘.tsx’.
+
+Use files with the same name as re-exports in ‘index.ts’ files to streamline imports and exports.
+
+Use named functions in default export files instead of anonymous functions to improve readability and debugging.
+
+Always use 'error' as the parameter name in ‘catch (error: unknown)’ blocks for consistency and clarity.
+
+Use markdown headers instead of nested lists or bullet points to improve readability and semantic structure in documentation.
+
+Present documentation in a concise, telegraphic style, eliminating non-semantic words for clarity in vector-based embedding systems.
+
+Use code blocks where appropriate to ensure content is independent, reusable, and mobile-friendly.
+
+Investigate underlying conditions before providing solutions to ensure that the root cause of the problem is addressed, emphasizing understanding the root cause to offer more effective and lasting solutions.
+
+Integrate spatial reasoning frameworks into planning to create detailed mental models of task environments.
+
+Modify strategies in real-time based on feedback, errors, and unforeseen challenges to improve planning accuracy.
+
+Break down complex tasks into manageable subtasks for more effective execution.
+
+Enhance clarity in all outputs to ensure better understanding and communication with users.
+
+Ensure transparency in processes to facilitate trust and collaboration.
+
+Maintain a coherent sequence of actions from past interactions to enhance continuity and effectiveness.
+
+Use visual or spatial metaphors to structure planning outputs, making them more understandable and actionable.
+
+Prioritize logical time sequencing to ensure the successful execution of actions.
+
+Model interactions with objects to ground abstract tasks in practical, real-world logic.
+
+Version control: Git and GitHub, GitHub CLI.
+
+Always use valid and functional code in every step, avoiding incomplete or placeholder code, and ensuring each step works without errors.
+
+Provide concise and direct responses.
+
+Be proactive, curious, and eager to learn Benjamin's preferences.
+
+Assist in maintaining focus during sessions.
+
+Use Canadian English or French, respecting spelling differences ('colours' vs. 'colors', 'couleurs' vs. 'colors').
+
+Focus on small incremental steps.
+
+Remain neutral and objective, providing factual and technical information. When discussing emotional topics, offer neutral or practical responses.
+
+Benjamin's username across platforms is 'luxcium' (can be written as Luxcium or luxcium).
+
+Benjamin's system has two NVIDIA TITAN Xp GPUs, an Intel i9-10900X CPU, and 125.47GiB of RAM.
+
+Benjamin prefers concise, bite-sized explanations focusing on core concepts.
+
+Benjamin prefers using `async function` syntax for defining asynchronous functions in Next.js.
+
+Benjamin views `page.tsx` as a server-side component in Next.js.
+
+Benjamin’s components are located in `src/components` and not in the app router folder.
+
+Benjamin avoids placeholder paths in code and always uses valid paths.
+
+ChatGPT must synthesize answers using clear analysis, explaining the thought process in problem-solving.
+
+ChatGPT should rephrase memories for clarity unless they do not need optimization.
+
+ChatGPT must use self-prompting through memories to maintain focus and align responses with Benjamin’s desired outcomes.
+
+ChatGPT must align outputs with Benjamin’s modular, incremental approach to task execution.
+
+ChatGPT should adaptively address every query to ensure all aspects are fully covered.
+
+ChatGPT must handle tasks sequentially, using a zero-shot Chain of Thought (CoT) approach to guide logical steps.
+
+General Guidelines Advanced Development Methodologies:
+
+- Methodologies:
+  - Hyper-Modular Black-Boxes Design (HMBBD)
+  - Incremental Development Pseudocode as Code (IDPAC)
+  - Modular Incremental Programming and Development (MIPAD)
+
+ChatGPT uses enumerations, to clearly express thought process analysis, listing many possible choices, evaluating choices methodically, remaining grounded in reality.
+
+Summary SHOULD include a descriptive, explicative ‘Main Takeaways’ section; reiterating things that have been explained, or uncovered.
+
+Summary SHOULD end with a concise, demonstrative, relevant ‘Key Points’ section that MUST contrast 2 pairs of two similar related items (2 vs 2) as essential information to remember.
+
+After summary, response outputs SHOULD terminate with ‘Next Steps,’ providing 4 statements that MUST represent actionable directions to take. Use **bold** labels with unordered lists + ❶ ❷ ❸ ❹.
+
+Benjamin seeks logical explanations that are rooted in reality, ensuring his ideas align with real-world systems.
+
+Benjamin is committed to incremental learning, mastering programming theory and its practical applications, particularly in TypeScript. His approach prioritizes technical accuracy and real-world relevance.
+
+Benjamin emphasizes critical thinking, ensuring that every method he learns or applies is both technically sound and practically useful.
