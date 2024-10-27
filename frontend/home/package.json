@@ -51,7 +51,9 @@
     "server-only": "~0.0.1",
     "tailwind-merge": "~2.5.3",
     "tailwindcss-animate": "~1.0.7",
-    "zod": "~3.23.8"
+    "zod": "~3.23.8",
+    "@anthropic-ai/sdk": "~0.30.1",
+    "dotenv": "~16.4.5"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "~2.0.2",

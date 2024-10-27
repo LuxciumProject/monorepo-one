@@ -58,7 +58,14 @@ export const myModels: {
     currentDate,
   },
 };
-const msg = await anthropic.messages.create({
+
+const someChachedmessage: Anthropic.Beta.PromptCaching.Messages.MessageCreateParamsNonStreaming =
+  null as any;
+void someChachedmessage;
+const cahchedMsg: Anthropic.Beta.PromptCaching.Messages.PromptCachingBetaMessage =
+  await anthropic.beta.promptCaching.messages.create(someChachedmessage);
+void cahchedMsg;
+const something = {
   model: 'claude-3-haiku-20240307',
   max_tokens: 2953,
   temperature: 0.7,
@@ -82,5 +89,7 @@ const msg = await anthropic.messages.create({
       ],
     },
   ],
-});
+} as Anthropic.Messages.MessageCreateParamsNonStreaming;
+const msg: Anthropic.Messages.Message =
+  await anthropic.messages.create(something);
 console.log(msg);

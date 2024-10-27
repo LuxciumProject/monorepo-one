@@ -2345,7 +2345,10 @@
       "name": "  ↓ 🪄 🎱 EXAMPLES",
       "path": "examples"
     },
-    // /projects/monorepo-one/examples/casecobra-master
+    {
+      "name": "           🎱🪄 OpenHands (OpenDevin)",
+      "path": "examples/OpenHands"
+    },
     {
       "name": "           🎱🪄 casecobra",
       "path": "examples/casecobra-master"
