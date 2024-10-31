@@ -1,0 +1,49 @@
+version: 1  # Required, only '1' is supported
+
+languages:  # Enable or disable Copilot per language
+  # Examples of languages, all set to true for permissive configuration
+  javascript:
+    enabled: true
+  typescript:
+    enabled: true
+  python:
+    enabled: true
+  # Add more languages here as needed
+  # ruby:
+  #   enabled: true
+  # go:
+  #   enabled: true
+
+policies:  # Define suggestion and completion policies
+  suggestions:
+    enableInPRComments: true  # Enable Copilot suggestions in pull request comments by default
+
+  completions:
+    maxTokens: 100  # Set a permissive default for maximum token length for completions
+    maxCompletionsPerRequest: 3  # Default number of completions per request
+    enableCodeReferencing: true  # Enable code referencing to surface similar code references from GitHub repositories
+
+  rateLimit:  # Rate limiting options for organizations with multiple Copilot users
+    requestsPerMinute: 60  # Default: 60 requests per minute
+    maxCompletionsPerHour: 1000  # Default: 1000 completions per hour
+
+# Commented-out default values for reference
+# version: 1  # Required, only '1' is supported
+# languages:  # Enable or disable Copilot per language
+#   <language>:
+#     enabled: <true|false>  # Boolean to enable or disable Copilot per language
+# policies:  # Define suggestion and completion policies
+#   suggestions:
+#     enableInPRComments: <true|false>  # Enable or disable Copilot suggestions in pull request comments
+#   completions:
+#     maxTokens: <integer>  # Maximum token length for completions
+#     maxCompletionsPerRequest: <integer>  # Number of completions generated per request
+#     enableCodeReferencing: <true|false>  # Enable code referencing (public beta)
+#   rateLimit:  # Rate limiting options
+#     requestsPerMinute: <integer>  # Limit requests per minute
+#     maxCompletionsPerHour: <integer>  # Limit completions per hour
+
+# Additional items could be added here, but are not included as they are not commonly useful
+# For example:
+#   someOtherSetting:
+#     enableFeatureX: false  # Example of a less useful setting
