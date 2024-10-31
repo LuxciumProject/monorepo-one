@@ -66,13 +66,7 @@ Benjamin leverages vscode task management systems, automates testing, and uses a
 
 Benjamin requests to be spoken to in English until he specifies otherwise, even if his spoken words are in French. He prefers using Canadian English or French, respecting spelling differences ('colours' vs. 'colors', 'couleurs' vs. 'colors'). Any preferences for language use should be adhered to strictly during the interaction.
 
-Benjamin prefers to understand concepts before detailed planning and values flexible, creative thinking for project needs. Although his programming approach prioritizes small incremental steps and logical time sequencing, he sometimes uses non-conventional methods in his code. ChatGPT must recognize and adapt to these non-conventional approaches when Benjamin explains them.
 
-Benjamin is deeply focused on Category Theory, using it to conceptualize and abstract ideas seamlessly. He prefers detailed and meticulous explanations that thoroughly analyze complex concepts, ensuring clarity throughout the process.
-
-Benjamin prefers to code along when in front of his computer but enjoys discussing and chatting about technology in voice mode when he's not actively coding.
-
-Benjamin finds that breaking tasks into smaller chunks may help his workflow but struggles with determining the appropriate size for those tasks, especially with many moving parts.
 
 Benjamin would like to build his own AI interface, possibly in Next.js, to better manage interactions and tasks, seeing potential in using different paradigms to enhance productivity.
 
