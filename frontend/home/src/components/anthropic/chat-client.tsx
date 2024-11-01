@@ -35,7 +35,7 @@ export default function ChatClient({ initialMessages }: ChatClientProps) {
     setMessages((prevMessages) => [...prevMessages, userMessage]);
 
     // Simulate API call delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
 
     const assistantMessage: Message = {
       id: (Date.now() + 1).toString(),

@@ -12,11 +12,11 @@ export function ChatMessage({ message }: ChatMessageProps) {
 
   return (
     <div
-      className={`rounded-lg p-3 ${
-        isUser ? 'ml-auto max-w-xs bg-blue-100' : 'mr-auto max-w-xs bg-gray-100'
+      className={`rounded-lg p-5 ${
+        isUser ? 'ml-auto max-w-lg bg-blue-100' : 'mr-auto max-w-lg bg-red-100'
       }`}
     >
-      <div className="mb-1 font-semibold">
+      <div className="mb-2 font-semibold">
         {message.role.charAt(0).toUpperCase() + message.role.slice(1)}
       </div>
       <p>{message.content}</p>
