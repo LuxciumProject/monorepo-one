@@ -1,4 +1,4 @@
-// @/types/message.ts
+// @Types/message.ts
 export type Message = {
   id: string;
   role: 'system' | 'user' | 'assistant';

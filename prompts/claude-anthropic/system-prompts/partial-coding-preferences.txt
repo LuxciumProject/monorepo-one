@@ -1,0 +1,82 @@
+<user_preferences>
+NextJS Development Guidelines:
+
+Core Architecture:
+- Start development from 'app/*/page.tsx', focusing on route-level components
+- Server Actions should only be used at route level (page.tsx, layout.tsx)
+- Avoid traditional API routes in Next.js 14+, use Server Actions instead
+- Components should be located in 'src/components', not in app router folder
+- 'page.tsx' is treated as a server-side component
+
+Client-Server Separation:
+- Never import Server Components or Server Actions into Client Components
+- Move Client Components lower in tree to reduce bundle sizes
+- Keep static elements within Server Components
+- Transfer server-side data to Client Components via props or children
+- Maintain client-side logic focus on UI/state management
+- Avoid async functions within 'use client' components
+
+Code Structure:
+- Use .tsx extension for all components involving JSX
+- Use named functions in default exports for better debugging
+- Use files with same name as re-exports in index.ts
+- Implement async function syntax instead of arrow functions
+- Maintain valid and functional code at each step
+- Follow strict TypeScript and ESLint configurations
+
+Development Stack Integration:
+- Uses shadcn, NextUI, and Tailwind CSS for UI components
+- Integrates with TypeScript, NodeJS, ReactJS
+- Employs Prisma with PostgreSQL for database management
+- Utilizes RushStack with pnpm for package management
+- Implements GitHub tools (CLI, Copilot) for version control
+- Manages testing through automated systems
+- Configures VS Code tasks for workflow optimization
+
+File Conventions:
+- Use kebab-case for file/folder names
+- Apply camelCase for function exports
+- Use PascalCase for class exports
+- Implement single quotes for JavaScript/TypeScript strings
+- Use double quotes for HTML/JSX attributes
+- Enforce two-space indentation
+- Limit lines to 80 characters
+
+Best Practices:
+- Adhere to Next.js 14+ standards, avoiding legacy React approaches
+- Focus on incremental development steps
+- Maintain modular, reusable components
+- Ensure scalability and adaptability in code structure
+- Prioritize server-side rendering by default
+- Keep development environment viable even in development mode
+
+HMBBD Guidelines:
+1. Break down the system into the smallest possible independent modules.
+2. Treat each module as a black box with well-defined inputs and outputs.
+3. Focus on optimizing interfaces between components.
+4. Use hierarchy, layering, and nesting to organize modules.
+5. Create clear documentation for each module using tools like tsdocs or typedoc.
+6. Implement both pure and almost-pure functions, documenting side effects.
+7. Use TypeScript interfaces to define data structures.
+8. Continuously refine and adapt the modular structure as the project evolves.
+
+IDPAC Guidelines:
+1. Start with pseudocode that is valid in the target language.
+2. Implement modules incrementally, beginning with no-ops.
+3. Maintain project functionality at all stages of development.
+4. Focus on small, manageable tasks rather than the entire project at once.
+5. Prioritize testing, aiming for 100% coverage from the start.
+6. Use Jest for TypeScript and appropriate frameworks for Python testing.
+7. Create interfaces and documentation alongside code implementation.
+8. Keep the project in a ready-to-work state at all times.
+9. Use conceptual implementations before writing actual code.
+10. Break down tasks to reduce stress and maintain motivation.
+
+MIPAD:
+- Combines principles of HMBBD and IDPAC.
+- Emphasizes breaking down complex systems into small, manageable components.
+- Maintains project functionality through incremental development.
+- Prioritizes testing, documentation, and collaboration.
+- Aims for 100% test coverage.
+- Balances modularization with incremental progress to create scalable, maintainable software.
+</user_preferences>

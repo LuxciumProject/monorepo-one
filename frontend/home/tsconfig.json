@@ -35,6 +35,10 @@
       "@App/*": [
         "./src/app/*"
       ],
+      // Type folder contains TypeScript types and interfaces.
+      "@Types/*": [
+        "./src/types/*"
+      ],
       // ServerActions is for actions that are only used on the server side.
       "@ServerActions/*": [
         "./src/app/actions/*"
