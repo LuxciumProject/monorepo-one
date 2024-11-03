@@ -1,0 +1,287 @@
+## Quickstart
+Quickstart
+/en/copilot/quickstart
+
+## About GitHub Copilot
+About GitHub Copilot
+(No direct link, but it has sublinks)
+
+### What is GitHub Copilot?
+What is GitHub Copilot?
+/en/copilot/about-github-copilot/what-is-github-copilot
+
+### Copilot features
+Copilot features
+/en/copilot/about-github-copilot/github-copilot-features
+
+### Subscriptions
+Subscriptions
+/en/copilot/about-github-copilot/subscription-plans-for-github-copilot
+
+## Set up
+Set up
+(No direct link, but it has sublinks)
+
+### Set up for organization
+Set up for organization
+/en/copilot/setting-up-github-copilot/setting-up-github-copilot-for-your-organization
+
+### Set up for self
+Set up for self
+/en/copilot/setting-up-github-copilot/setting-up-github-copilot-for-yourself
+
+## Use GitHub Copilot
+Use GitHub Copilot
+(No direct link, but it has sublinks)
+
+### Best practices
+Best practices
+/en/copilot/using-github-copilot/best-practices-for-using-github-copilot
+
+### Get code suggestions
+Get code suggestions
+/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot
+
+### Chat in IDE
+Chat in IDE
+/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide
+
+### Chat in GitHub
+Chat in GitHub
+/en/copilot/using-github-copilot/asking-github-copilot-questions-in-github
+
+### Chat in Mobile
+Chat in Mobile
+/en/copilot/using-github-copilot/asking-github-copilot-questions-in-github-mobile
+
+### Copilot in Windows Terminal
+Copilot in Windows Terminal
+/en/copilot/using-github-copilot/asking-github-copilot-questions-in-windows-terminal
+
+## Code review
+Code review
+(No direct link, but it has sublinks)
+
+### Using code review
+Using code review
+/en/copilot/using-github-copilot/code-review/using-copilot-code-review
+
+### Configuring coding guidelines
+Configuring coding guidelines
+/en/copilot/using-github-copilot/code-review/configuring-coding-guidelines
+
+### Use Copilot in the CLI
+Use Copilot in the CLI
+/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line
+
+### Prompt engineering
+Prompt engineering
+/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot
+
+### Use Copilot Extensions
+Use Copilot Extensions
+/en/copilot/using-github-copilot/using-extensions-to-integrate-external-tools-with-copilot-chat
+
+### Use Claude 3.5 Sonnet
+Use Claude 3.5 Sonnet
+/en/copilot/using-github-copilot/using-claude-sonnet-in-github-copilot
+
+### Find matching code
+Find matching code
+/en/copilot/using-github-copilot/finding-public-code-that-matches-github-copilot-suggestions
+
+## Copilot for pull requests
+Copilot for pull requests
+(No direct link, but it has sublinks)
+
+### Working on a PR
+Working on a PR
+/en/copilot/using-github-copilot/using-github-copilot-for-pull-requests/using-copilot-to-help-you-work-on-a-pull-request
+
+### Create a PR summary
+Create a PR summary
+/en/copilot/using-github-copilot/using-github-copilot-for-pull-requests/creating-a-pull-request-summary-with-github-copilot
+
+## Examples
+Examples
+(No direct link, but it has sublinks)
+
+### Example prompts for chat
+Example prompts for chat
+/en/copilot/using-github-copilot/example-use-cases/example-prompts-for-copilot-chat
+
+### Refactor code
+Refactor code
+/en/copilot/using-github-copilot/example-use-cases/refactoring-code-with-github-copilot
+
+### Write tests
+Write tests
+/en/copilot/using-github-copilot/example-use-cases/writing-tests-with-github-copilot
+
+## Manage Copilot
+Manage Copilot
+(No direct link, but it has sublinks)
+
+### Manage for enterprise
+Manage for enterprise
+(No direct link, but it has sublinks)
+
+#### Manage subscription
+Manage subscription
+(No direct link, but it has sublinks)
+
+##### About billing
+About billing
+/en/copilot/managing-copilot/managing-copilot-for-your-enterprise/managing-the-copilot-subscription-for-your-enterprise/about-billing-for-github-copilot-in-your-enterprise
+
+### Manage for organization
+Manage for organization
+(No direct link, but it has sublinks)
+
+#### Manage subscription
+Manage subscription
+(No direct link, but it has sublinks)
+
+##### About billing
+About billing
+/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization
+
+### Manage for individual
+Manage for individual
+(No direct link, but it has sublinks)
+
+#### Manage subscription
+Manage subscription
+(No direct link, but it has sublinks)
+
+##### About billing
+About billing
+/en/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/managing-your-copilot-subscription/about-billing-for-github-copilot-individual
+
+### Configure personal settings
+Configure personal settings
+(No direct link, but it has sublinks)
+
+#### Install Copilot extension
+Install Copilot extension
+/en/copilot/managing-copilot/configure-personal-settings/installing-the-github-copilot-extension-in-your-environment
+
+#### Install Copilot in the CLI
+Install Copilot in the CLI
+/en/copilot/managing-copilot/configure-personal-settings/installing-github-copilot-in-the-cli
+
+#### Network settings
+Network settings
+/en/copilot/managing-copilot/configure-personal-settings/configuring-network-settings-for-github-copilot
+
+#### Configure in your environment
+Configure in your environment
+/en/copilot/managing-copilot/configure-personal-settings/configuring-github-copilot-in-your-environment
+
+## Customize Copilot
+Customize Copilot
+(No direct link, but it has sublinks)
+
+### Install extensions
+Install extensions
+/en/copilot/customizing-copilot/extending-the-capabilities-of-github-copilot-in-your-organization
+
+### Index repositories
+Index repositories
+/en/copilot/customizing-copilot/indexing-repositories-for-copilot-chat
+
+### Custom instructions
+Custom instructions
+/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot
+
+## Build Copilot Extensions
+Build Copilot Extensions
+(No direct link, but it has sublinks)
+
+### About building Extensions
+About building Extensions
+/en/copilot/building-copilot-extensions/about-building-copilot-extensions
+
+### Set up Copilot Extensions
+Set up Copilot Extensions
+/en/copilot/building-copilot-extensions/setting-up-copilot-extensions
+
+### Build a Copilot agent
+Build a Copilot agent
+(No direct link, but it has sublinks)
+
+#### About Copilot agents
+About Copilot agents
+/en/copilot/building-copilot-extensions/building-a-copilot-agent-for-your-copilot-extension/about-copilot-agents
+
+### Debug Copilot Extension
+Debug Copilot Extension
+/en/copilot/building-copilot-extensions/debugging-your-github-copilot-extension
+
+### Manage Extension availability
+Manage Extension availability
+/en/copilot/building-copilot-extensions/managing-the-availability-of-your-copilot-extension
+
+### Extensions Glossary
+Extensions Glossary
+/en/copilot/building-copilot-extensions/copilot-extensions-glossary
+
+## Troubleshooting
+Troubleshooting
+(No direct link, but it has sublinks)
+
+### Common issues with GitHub Copilot
+Common issues with GitHub Copilot
+/en/copilot/troubleshooting-github-copilot/troubleshooting-common-issues-with-github-copilot
+
+### View logs
+View logs
+/en/copilot/troubleshooting-github-copilot/viewing-logs-for-github-copilot-in-your-environment
+
+### Connectivity security settings
+Connectivity security settings
+/en/copilot/troubleshooting-github-copilot/troubleshooting-firewall-settings-for-github-copilot
+
+### Network errors
+Network errors
+/en/copilot/troubleshooting-github-copilot/troubleshooting-network-errors-for-github-copilot
+
+### Copilot Chat
+Copilot Chat
+/en/copilot/troubleshooting-github-copilot/troubleshooting-issues-with-github-copilot-chat-in-ides
+
+## Responsible use
+Responsible use
+(No direct link, but it has sublinks)
+
+### Chat in your IDE
+Chat in your IDE
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-chat-in-your-ide
+
+### Chat in GitHub
+Chat in GitHub
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-chat-in-github
+
+### Chat in GitHub Mobile
+Chat in GitHub Mobile
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-chat-in-github-mobile
+
+### Copilot in the CLI
+Copilot in the CLI
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-in-the-cli
+
+### Copilot in Windows Terminal
+Copilot in Windows Terminal
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-in-windows-terminal
+
+### Pull request summaries
+Pull request summaries
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-pull-request-summaries
+
+### Copilot text completion
+Copilot text completion
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-text-completion
+
+### Code review
+Code review
+/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-code-review
