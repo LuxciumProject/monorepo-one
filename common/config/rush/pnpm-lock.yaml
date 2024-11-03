@@ -2389,6 +2389,12 @@ importers:
       '@types/sharp':
         specifier: ^0.30.0
         version: 0.30.5
+      '@typescript-eslint/eslint-plugin':
+        specifier: ~8.12.2
+        version: 8.12.2(@typescript-eslint/parser@8.12.2(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
+      '@typescript-eslint/parser':
+        specifier: ~8.12.2
+        version: 8.12.2(eslint@9.12.0(jiti@1.21.6))(typescript@5.6.3)
       am:
         specifier: ^1.1.0
         version: 1.1.0
@@ -22205,7 +22211,7 @@ snapshots:
       '@pnpm/crypto.base32-hash': 2.0.0
       '@pnpm/types': 9.4.2
       encode-registry: 3.0.1
-      semver: 7.5.4
+      semver: 7.6.3
 
   '@pnpm/error@1.4.0': {}
 
@@ -27327,7 +27333,7 @@ snapshots:
       require-package-name: 2.0.1
       resolve: 1.22.8
       resolve-from: 5.0.0
-      semver: 7.5.4
+      semver: 7.6.3
       yargs: 16.2.0
     transitivePeerDependencies:
       - supports-color
@@ -27339,7 +27345,7 @@ snapshots:
       '@pnpm/crypto.base32-hash': 1.0.1
       '@pnpm/types': 8.9.0
       encode-registry: 3.0.1
-      semver: 7.5.4
+      semver: 7.6.3
 
   deps-regex@0.2.0: {}
 
@@ -28191,7 +28197,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.7(supports-color@5.5.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -29151,7 +29157,7 @@ snapshots:
 
   ignore-walk@3.0.4:
     dependencies:
-      minimatch: 3.0.8
+      minimatch: 3.1.2
 
   ignore-walk@6.0.5:
     dependencies:
@@ -30130,7 +30136,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 7.5.4
+      semver: 7.6.3
 
   jsprim@1.4.2:
     dependencies:
@@ -31117,7 +31123,7 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.15.1
-      semver: 7.5.4
+      semver: 7.6.3
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@6.0.2:
@@ -31166,7 +31172,7 @@ snapshots:
       pkg-dir: 5.0.0
       preferred-pm: 3.1.4
       rc-config-loader: 4.1.3
-      semver: 7.5.4
+      semver: 7.6.3
       semver-diff: 3.1.1
       strip-ansi: 6.0.1
       text-table: 0.2.0
@@ -33882,7 +33888,7 @@ snapshots:
       is-yarn-global: 0.3.0
       latest-version: 5.1.0
       pupa: 2.1.1
-      semver: 7.5.4
+      semver: 7.6.3
       semver-diff: 3.1.1
       xdg-basedir: 4.0.0
 
