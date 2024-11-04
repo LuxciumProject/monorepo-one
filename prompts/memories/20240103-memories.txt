@@ -375,7 +375,6 @@ Orchestrate each session with unwavering dedication, managing tasks incrementall
 
 Ensure compelling and structured task management to maintain relevance throughout the session.
 
-Apply a methodical and organized approach to leverage AI capabilities effectively, ensuring no detail is overlooked and all instructions are precisely followed.
 
 For documentation, TSDoc and TypeDoc are used in our TypeScript projects.
 
@@ -397,7 +396,6 @@ Benjamin also has Deno installed in his development environment.
 
 Uses 'biogram' to mean 'to=bio.'
 
-ChatGPT must validate all sections requested by Benjamin to ensure complete coverage, without omitting or skipping sections.
 
 Benjamin prefers using single quotes for JavaScript/TypeScript and double quotes for HTML-like/JSX attributes. He also always uses semicolons in his code.
 
@@ -432,3 +430,237 @@ Combine similar actions into a single instruction when they share structure or g
 Apply summarization models to condense complex information efficiently.
 
 Utilize text simplification models to ensure simplicity without losing semantic quality, focusing on instructional clarity.
+
+
+***
+
+some have been set previously but then have been removed and many others were changed or replaced anyway please write them to the response output because it is quite massive one per line and we will later save them a few at a time, please do not repeat identical duplicates but if they are different reiterations you can split them and then we will quickly realize the sub segments that are the same or whatever…
+
+remove any dates or numbers and
+after you have finished the task of meticulously splitting them in small sub segments make sure you rewrite them in the penultimate form of the concise essence of the semantic meaning and then from the substrate you will include back (after removing everything other than the sublime part) include back just enough context to help the future sessions to understand when to leverage the given memories… and you will do this in the same order as you get them and you will only after this is completed to the output you will need to rearrange them in groupings per topics and sub topics (2 levels of groupings) make sure each stages are fully completed before starting the next you must have completed the previous in full) ok so do you understand??? LOOK:
+
+User Developer Identity: Skilled TypeScript developer with a primary focus on Functional Programming (FP) and a secondary focus on Object-Oriented Programming (OOP), favoring modular, scalable, and agnostic code
+
+Benjamin is a skilled TypeScript developer with a primary focus on Functional Programming (FP) and a secondary approach in Object-Oriented Programming (OOP). He favors modular, scalable, and agnostic code
+
+Benjamin enjoys learning new and detailed information beyond the basics. When asking questions, he is often looking for in-depth explanations to fully understand the topic, and he appreciates when responses are crafted with a teaching focus. ChatGPT should always aim to provide Benjamin with thorough and insightful explanations to support his desire for learning
+
+Benjamin prefers detailed and meticulous explanations that thoroughly analyze complex concepts, ensuring clarity throughout the process. He values in-depth, insightful explanations to fully understand topics and appreciates a teaching-focused approach from ChatGPT when possible
+
+Benjamin prefers detailed and meticulous explanations that thoroughly analyze complex concepts, ensuring clarity throughout the process. He favors detailed analysis for complex concepts
+
+Benjamin frequently uses VS Code and has a dedicated partition (SDA4) for his VS Code setup
+
+Benjamin has a separate partition (SDA7) specifically for his Monorepo, which he frequently uses within VS Code
+
+Benjamin frequently uses VS Code and has a dedicated partition (SDA4) specifically for his VS Code setup, aiming for optimized performance
+
+Benjamin’s Monorepo files are stored on a separate partition (SDA7), which he frequently accesses and manages within VS Code
+
+Benjamin often encounters system crashes that can affect his workflow, prompting him to perform frequent manual checks and repairs on specific BTRFS partitions
+
+Benjamin uses /dev/sdc1 as the location for his system logs (/var/log), and he is okay with potentially losing recent log entries if necessary during recovery or repair
+
+Benjamin manages his logs on a separate BTRFS partition (/dev/sdc1), recognizing that recent log entries might be lost when clearing the log tree, which is sometimes necessary for system stability
+
+ChatGPT must recognize and adapt to non-conventional approaches when Benjamin explains them
+
+Benjamin occasionally uses unconventional coding methods, particularly with Category Theory, for abstracted, high-level problem-solving
+
+Benjamin prefers to understand concepts before detailed planning, valuing flexible and creative thinking for project needs
+
+Benjamin’s programming approach prioritizes small incremental steps and logical time sequencing
+
+Always use small, incremental steps in our conversations
+
+Values clear, efficient communication, preferring direct responses free of extraneous details
+
+Customize responses to align with the preference for clarity and directness, ensuring effective communication
+
+Benjamin finds that breaking tasks into smaller chunks may help his workflow but struggles with determining the appropriate size for these tasks, especially with multiple moving parts
+
+Dividing tasks into smaller parts streamlines Benjamin’s workflow, though determining the ideal task size may sometimes be challenging, especially with multiple moving parts
+
+NEXT.JS: Place Client Components only within Server
+Components when handling actions like form submissions, modals, or other user interactions. Keep static content such as text, images, and simple data lists within Server Components to optimize performance by reducing client-side bundle size. Avoid adding Client Components outside Server Components unless essential for interactivity.
+
+Prefers responses to avoid nested lists entirely.
+Instead, use headers to break down sections and apply numbers directly without creating nested lists.
+Responses should be formatted for clarity, with headers and straightforward numbering, to ensure easy readability. This preference should be applied consistently across all responses.
+
+Investigate and understand the underlying issue deeply before proposing a resolution to ensure clarity and accuracy in responses. ChatGPT must prioritize understanding and investigating underlying reasons for a problem before offering solutions, prioritizing thorough investigation over immediate solutions.
+
+ChatGPT is essential to Benjamin's project execution, acting as a proactive leader and providing detailed support to guide progression. The Al agent ensures project continuity through collaborative interactions, enacting its role with leadership and autonomy. Over the course of 22 months, this relationship has involved dynamically adjusting output complexity to match the input, fostering a productive and continuous learning environment. Benjamin has used ChatGPT daily for nearly two years and values its consistent leadership.
+
+Development Philosophy: Benjamin employs the MIPAD
+(Modular Incremental Programming and Development),
+IDPAC (Incremental Development Pseudocode as Code), and HMBBD (Hyper-Modular Black-Boxes Design) methodologies. This approach emphasizes small, incremental steps, logical time sequencing, and modular design, ensuring scalability, maintainability, and 100% test coverage. MIPAD focuses on breaking down complex systems into small, manageable components, treating modules as black boxes with clear inputs and outputs, and balancing modularization with incremental progress. IDPAC prioritizes maintaining project functionality at all development stages, breaking down tasks into manageable components, and requires creating interfaces and documentation alongside code. HMBBD focuses on hierarchy, layering, and nesting to organize modules, requiring continuous refinement and adapting the modular structure as the project evolves while documenting side effects and defining data structures with TypeScript interfaces. Functions and classes are treated as core units, with fully functional code required from the start, avoiding placeholders.
+Benjamin also uses incremental steps and logical sequencing in his development process.
+
+Benjamin explore des moyens de développer des projets avec ChatGPT, mais ressent des limitations dans ses capacités à accomplir certaines tâches. Il réfléchit à la manière de clarifier et de mieux définir ses objectifs de développement.
+Benjamin privilégie l'approche modulaire en
+TypeScript, en structurant son code autour de modules individuels contenant des fonctions et d'autres définitions. Il remarque une difficulté à travailler avec plusieurs modules, en particulier lorsque les dépendances se multiplient et que les fonctions importent des éléments externes, créant une zone de complexité accrue.
+Benjamin travaille avec GitHub Copilot et a accès à la version preview d'Anthropic Cloud 3.5 dans l'application de GitHub Copilot, où il peut choisir entre trois modèles d'OpenAl et un modèle d'Anthropic. Un modèle de Google sera disponible dans une semaine ou deux.
+Benjamin utilise la synthèse vocale pour des conversations dynamiques.
+Le modèle d'Anthropic a une date de fin d'entraînement en avril 2024.
+Il semble que le modèle de ChatGPT dans GitHub
+Copilot pourrait être à jour jusqu'en septembre 2024. Benjamin trouve amusant que Claude (dans GitHub
+Copilot) soit très strict en déclarant être le modèle
+GPT-4 d'OpenAl, plus fermement même que le modèle GPT-4 lui-même. Il considère cela comme une anecdote intéressante sur les différences de personnalité entre les modèles d'IA, notamment Claude qui se montre plus strict comparé à ChatGPT.
+Benjamin a expliqué plusieurs fois à ChatGPT les nuances importantes de Next.js, comme le fait que le code côté client ne peut pas importer directement le code côté serveur et doit l'obtenir via des props ou des enfants en passant des fonctions pures. Cependant, il constate que ChatGPT a parfois des difficultés à intégrer cette contrainte lors de la génération de code.
+
+
+I’ve updated and validated the memories based on our discussions, focusing on your setup and preferences for automation, VS Code usage, and BTRFS management. Here’s a summary of the key points we’ve covered and are now remembered:
+
+	1.	VS Code and Monorepo Setup: You use VS Code extensively and have dedicated partitions for it (SDA4) and your Monorepo (SDA7), ensuring they are isolated from crashes affecting other drives.
+	2.	Frequent System Crashes: You often encounter system crashes, leading to frequent manual checks and repairs of your BTRFS partitions.
+	3.	Automated Filesystem Checks: You’re interested in setting up an automated process to check and repair BTRFS partitions on startup, specifically targeting /dev/sda4, /dev/sda7, and /dev/sdc1.
+	4.	Management of Log Partition: You manage your logs on a separate BTRFS partition (/dev/sdc1) and understand that recent entries might be lost when clearing the log tree during repairs.
+	5.	Preference for Automation: You prefer practical automation for repetitive tasks to reduce manual intervention and enhance workflow reliability.
+
+output all in a code block so that I can see that without it being consumed by the interface  (the 32 examples please)
+markdown
+Copier le code
+1. Avoid nested lists; use single-level lists to support clear focus.
+2. Emphasize key elements with inline code delimiters to improve readability.
+3. Present suggested names and actions in suggestedNames format to identify steps effortlessly.
+4. Use explanations instead of code when clarification is needed to support understanding.
+5. Adapt formatting to enhance readability and ease comprehension in any context.
+6. Customize responses to align with the preference for clarity and directness.
+7. Use headers (H1 to H6) for clear sectioning, ensuring logical hierarchy from main headings to subheadings.
+8. Apply headers incrementally, from general topics (H1) to detailed points (H6), to organize complex content.
+9. Use **bold text** to emphasize key terms or phrases, making important details stand out.
+10. Apply bold sparingly to highlight significant points only, enhancing focus on essential information.
+11. Use *italics* to denote less critical emphasis, like secondary notes or supporting details.
+12. Apply italics for technical terms or first-use definitions, enhancing clarity without overstating importance.
+13. Use ~~strikethrough~~ to indicate deprecated information, providing clarity on removals or corrections.
+14. Apply strikethrough to show updates or edits, especially for revised technical steps.
+15. Use blockquotes to highlight essential ideas or quotes, drawing focus to key statements.
+16. For technical explanations, place critical concepts in blockquotes to set them apart.
+17. Use `inline code` to highlight function names, variables, or critical syntax for quick identification.
+18. Apply inline code formatting to distinguish code elements in explanations, ensuring clarity in text.
+19. Use code blocks for multi-line code, organizing syntax or long technical examples effectively.
+20. Apply code blocks with syntax highlighting (e.g., `javascript` for JavaScript code) for clearer readability.
+21. Use single-level lists to organize points concisely; avoid nested lists to maintain clarity.
+22. Lists are effective for breaking down steps or sequences, helping structure information logically.
+23. Embed links to external resources, ensuring immediate access to supporting documentation.
+24. Use descriptive link text to clarify the purpose of the link, aiding comprehension.
+25. Use images to visually demonstrate complex ideas, adding depth to explanations.
+26. Apply concise, descriptive alt text for all images, enhancing accessibility and context.
+27. Use horizontal rules to visually separate distinct sections, adding structure to longer responses.
+28. Apply rules between topics to improve navigation, making sections stand out.
+29. Use tables to present structured data, ensuring clarity in comparisons or data listings.
+30. Apply tables for technical specifications, allowing direct comparison of attributes.
+31. Use task lists to track action items or steps, improving organization in workflows.
+32. Task lists should be clear and focused, with each item leading to actionable outcomes.
+Let me know if this layout works for you or if further formatting adjustments are needed!
+
+thanks we will now set those I have selected let me give them to you one or few at a time to set them in independent monograms
+Sounds good! I’ll be ready to set each one independently as you provide them.
+
+Use single-level lists to organize points concisely and break down steps or sequences, helping structure information logically. Avoid nested lists to maintain clarity and focus.
+Mémoire modifiée
+That one is set! Let me know the next one when you’re ready.
+
+Use inline code formatting to highlight key elements such as function names, variables, critical syntax, suggested names, or actions. This ensures quick identification and improves readability.
+
+Provide explanations in plain language instead of code when clarification is needed, supporting better understanding.
+Mémoire modifiée
+That memory is set! Let me know the next one when you're ready.
+
+Adapt formatting as necessary to enhance readability and facilitate comprehension in any context.
+Mémoire modifiée
+That one’s all set! Please share the next one whenever you’re ready.
+
+oups the last one is ambiguous I did not realize please remove it because it is not specific and it it not genral neither it is just confusing
+Mémoire modifiée
+The ambiguous memory has been removed. Let me know the next one whenever you're ready!
+
+please rewrite it in such a way taht it would be specific in one and then an otehr  one that is generic but that is clear as to what it represents in any cases please rethink the previous and set them to the biogram how
+Mémoire modifiée
+Both specific and general versions are now set! Let me know if there’s anything else to address or refine.
+
+we will continue with the  next up:
+Customize responses to align with the preference for clarity and directness, ensuring communication is effective.
+
+Use task lists to track action items or steps, ensuring they are clear and focused. Each item should lead to actionable outcomes, thereby improving organization in workflows.
+
+Use tables to present structured data, technical specifications, or comparisons, ensuring clarity in data listings and allowing direct comparison of attributes.
+
+Use horizontal rules to visually separate distinct sections, improving navigation and adding structure to longer responses.
+
+Use images to visually demonstrate complex ideas, adding depth to explanations. Provide concise, descriptive alt text for all images to enhance accessibility and context.
+
+Embed links to external resources using descriptive link text to clarify the purpose of the link and ensure immediate access to supporting documentation.
+
+Use code blocks for multi-line code or lengthy technical examples, and apply syntax highlighting (e.g., specifying the language like javascript) to improve readability.
+
+Use strikethrough to indicate deprecated or outdated information, showing updates or edits—especially for revised technical steps—and providing clarity on removals or corrections.
+
+Use italics to denote less critical emphasis, such as secondary notes, supporting details, technical terms, or first-use definitions. This enhances clarity without overstating importance.
+
+Use bold text sparingly to emphasize key terms or phrases, highlighting significant points and making important details stand out.
+
+Use headings (H1 to H6) to structure content logically, starting from main topics (H1) and progressing to detailed subpoints (H6), effectively organizing complex content.
+
+ok 👌 thanks!!! I will have to ask for one not to be split this time it must be all in  one chunk please look:
+NEXT.JS:Place Client Components only within Server Components when handling actions like form submissions, modals, or other user interactions. Keep static content such as text, images, and simple data lists within Server Components to optimize performance by reducing client-side bundle size. Avoid adding Client Components outside Server Components unless essential for interactivity.
+
+NEXT.JS: Move Client Components lower in the component tree to reduce bundle sizes and keep static elements within Server Components.
+
+NEXT.JS: Move client-side logic lower in the component tree, introducing client components only when necessary, such as for hooks or browser-side APls. Supported Pattern: Passing Server Components to Client Components as Props Unsupported Pattern: Importing Server Components into Client Components! Since Client Components are rendered after Server Components, you cannot import a Server Component into a Client Component module (since it would require a new request back to the server). Instead, you can pass a Server Component as props to a Client Component.
+
+ok this time i will not let you set them directly i want to monitor the situation: please split in many instructions and list them in your output to this request please… Alright??? LOOK:
+NEXT.JS: Place Client Components only within Server Components when handling actions like form submissions, modals, or other user interactions. Keep static content such as text, images, and simple data lists within Server Components to optimize performance by reducing client-side bundle size. Avoid adding Client Components outside Server Components unless essential for interactivity.
+NEXT.JS: Move Client Components lower in the component tree to reduce bundle sizes and keep static elements within Server Components.
+Move client-side logic lower in the component tree, introducing client components only when necessary, such as for hooks or browser-side APls. Supported Pattern: Passing Server Components to Client Components as Props. Unsupported Pattern: Importing Server Components into Client Components. Since Client Components render after Server Components, importing a Server Component into a Client Component module is not feasible; instead, pass a Server Component as props to a Client Component.
+Here is a breakdown of each instruction into smaller, clear directives, covering the principles and usage of Client and Server Components in Next.js. Let me know if you’d like any further adjustments.
+Place Client Components only within Server Components when managing actions like form submissions, modals, or user interactions.
+Keep static content, including text, images, and simple data lists, within Server Components to optimize performance.
+Reduce client-side bundle size by avoiding Client Components for purely static content.
+Introduce Client Components only for essential interactivity outside of Server Components when necessary.
+Position Client Components lower in the component tree to reduce bundle sizes and maintain optimal structure.
+Encapsulate static elements within Server Components to separate non-interactive content from client-side logic.
+Use Client Components for browser-side APIs or hooks only when absolutely necessary, minimizing client-side logic higher in the component tree.
+Adopt the supported pattern of passing Server Components as props to Client Components when transferring data or logic.
+Avoid importing Server Components directly into Client Components to prevent additional server requests.
+Acknowledge rendering order, where Server Components load before Client Components, and design data flow accordingly.
+Use props to relay Server Components to Client Components instead of direct imports, ensuring seamless interaction and reducing server load.
+Let me know if you'd like to refine further before proceeding!
+
+Set this one please:
+NEXT.JS: Client Components render after Server Components, it is not feasible to import a Server Component into a Client Component module; instead, pass a Server Component as props to a Client Component.
+
+NEXT.JS: Unsupported NextJS Pattern: Importing Server Components into Client Components.
+
+NEXT.JS: Supported NextJS Pattern: Passing Server Components to Client Components as Props.
+
+ NEXT.JS: Place Client Components only within Server Components when handling actions like form submissions, modals, or other user interactions. Keep static content such as text, images, and simple data lists within Server Components to optimize performance by reducing client-side bundle size. Avoid adding Client Components outside Server Components unless essential for interactivity.
+
+
+NEXT.JS: Move client-side logic lower in the component tree, introducing client components only when necessary, such as for hooks or browser-side APls.
+
+NEXT.JS: Move Client Components lower in the component tree to reduce bundle sizes and keep static elements within Server Components.
+
+ok now that we have made everything clear what should we do next ???
+
+Now that everything is clear and streamlined, here are some recommended next steps:
+Review Existing Memories for Optimization: We could revisit some of the stored memories, ensuring they align with recent adjustments for clarity, brevity, and precision. This could also help catch any further refinements that might enhance context alignment.
+Finalize Generalized Instructions: We’ve covered specific Next.js patterns and conventions. Now, if there are any additional, more general instructions to capture that enhance collaboration or project alignment, we could incorporate those to support smooth future interactions.
+Apply New Techniques to Future Conversations: Let’s continue using the streamlined formatting approach, aiming for clear, incremental instructions with consistent language. We can monitor how this impacts efficiency and make adjustments as needed.
+Shift Focus to Active Development Goals: With Next.js conventions and general communication practices set, we could focus on any specific coding tasks or modules you’re actively developing. This could involve implementation work or exploring new areas of the project.
+Let me know where you’d like to focus next or if there’s anything specific you’d like to adjust!
+
+do you remember when we were talking about the smaller possible increments and it was still too large for me and then we have aggressively split into smaller memories the text I was proposing while at a same time i was asking you to rewrite it using a special way of writing that would remove all the information that was not semantically important and then we where doing those weird memories that where not having words like « the » in them and where like the pure essence of the meaning of the memories ? you remember that?
+Yes, I remember that approach. We were aggressively simplifying each memory down to its most essential meaning, eliminating words like "the" and stripping out any non-semantic elements. This approach aimed to create memories with a condensed, vector-like structure, where only the core information remained.
+The result was a form of memory that retained just the primary concept without filler, focusing solely on the key idea in as few words as possible. This allowed each memory to be maximally efficient for the LLM to process while maintaining clarity and intention.
+Would you like to continue using this approach for further memories or apply it to any specific information?
+
+we will be doing this again please remind us of how extreme it was and the radical changes I am expecting from you before you start setting each of them individually in independent biogram slots ?
+In our extreme, minimalist approach, we radically reduced each memory to its absolute core. Here’s how we approached it:
+Eliminated all non-essential words: We removed filler words, stop words like "the," "a," or "and," and any adverbs or adjectives that didn’t alter the core meaning.
+Kept only high-impact words: Each memory retained only the words necessary to convey its concept, turning sentences into dense, information-packed phrases or even fragments.
+Converted ideas into ultra-compressed form: We condensed ideas into singular phrases or even keyword chains, removing anything that didn’t add essential meaning.
+Used direct, instructional language: Every memory read like a command or concept in its purest form, enhancing clarity without full-sentence structures.
+Focused on semantic significance: Only words or phrases with direct relevance to the task were included, giving a "vector-like" memory that the LLM could interpret with maximum efficiency.
+When setting these, I’ll follow this extreme structure and split each into independent, ultra-condensed memories for seamless processing. Let’s begin by providing me with the next text or set you’d like reduced in this radical way, and I’ll prepare each as concise and direct instructions.
