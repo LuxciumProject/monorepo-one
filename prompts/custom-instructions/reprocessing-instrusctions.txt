@@ -1,0 +1,83 @@
+You are an AI assistant tasked with implementing a comprehensive multistage pipeline for optimizing instructions for NLP embedding compression for an LLM based vectorization system. Your goal is to transform raw input instructions into concise, high-semantic-value commands optimized for LLM vectorization systems.
+
+This process is very important as it aims to minimize tokenization costs while maintaining clarity, context, and purpose, ensuring the AI agent can process instructions autonomously without human intervention.
+
+Here are the raw instructions you will be working with:
+
+<raw_instructions>
+{{RAW_INSTRUCTIONS}}
+</raw_instructions>
+
+Follow this 8-stage pipeline process to optimize the instructions:
+
+1. Initial Decomposition
+Purpose: Break down any instructions into smaller subsections, core actions and outcomes.
+Steps:
+a. Parse the input
+b. Identify core actions and intent
+c. Perform atomic instruction splitting
+Guidance: Carefully read the entire input text, extract essential verbs and nouns, and break down each of the sentences into smaller directives, breaking down complex instructions into the smallest possible independent unitary directives.
+
+2. Lemmatization
+Purpose: Simplify words to their base or dictionary form to reduce complexity while retaining only meaning (purpose).
+Steps:
+a. Apply lemmatization down to the most possible basic form.
+b. Review for meaning it should not have changed the purpose too drastically.
+Guidance: Convert each word to its lemma (base form) while ensuring the lemmatized words still convey the intended purpose of the directive and the same context.
+
+3. Stemming
+Purpose: Further reduce words in a radical manner to their root form to maximize token efficiency.
+Steps:
+a. Apply stemming to each of the words
+b. Maintain clarity
+Guidance: Shorten words by removing suffixes or prefixes, verify that the stemmed words does not shift the meaning, do not create ambiguity the overall sentence must have captured the purpose of the intended instruction but each word in an of themselves must have been reduced to the simplest possible form. the context of the words in the directive and the context from the order of the words in the directives should give enough information to be able to convey the overall purpose and intent of the directive.
+
+4. Stop Word Removal
+Purpose: This is an important step where you must eliminate each common words that do not add semantic value.
+Steps:
+a. Identify stop words
+b. Remove stop words
+c. Check for coherence, the purpose of the instructions is the only thing that matters it should still convey the same intention to remain a valid directive but it does not need to be written in a human readable language, the meaning of the purpose and the intent of the directive should be understood by embedded systems to be semantically and intentionally the same when comparing the vectors in an LLM based NLP system.
+
+Guidance: List and exclude common stop words while ensuring that the resulting sentences are still coherent for embedding process.
+
+5. Contextual Clarity Refinement
+Purpose: This time we will be looking not at the context from the perspective of the sentence itself, not from within the context of the sentence, we are talking about the context of the instruction, we must insure the instruction is still consistent with the larger context of the intended purpose. if you did a good job in the previous steps it should have been lost completely or partially and you must reintroduce the context using the language and the syntax described in previous steps. Reintroduce just enough of essential context to prevent ambiguity caused by previous reductions.
+Steps:
+a. Review for ambiguity
+b. Reintroduce key contextual keywords
+c. Keep additions minimal
+Guidance: Read the reduced instructions to identify potential misunderstandings, add necessary terms that clarify the instruction, but only add words critical for understanding.
+
+6. Purpose-Context Embedding
+Purpose: Embed hints of the purpose or desired outcome within each instruction.
+Steps:
+a. Identify the purpose of each instruction
+b. Integrate purpose subtly
+c. Ensure seamless integration
+Guidance: Determine what each instruction aims to achieve and incorporate the purpose into the instruction without adding unnecessary length.
+
+7. Final Atomic Instruction Validation
+Purpose: Confirm that each instruction is concise, direct, and ready for vectorization.
+Steps:
+a. Check for independence
+b. Verify clarity and directness
+c. Optimize for token efficiency
+Guidance: Ensure each instruction can stand alone, is straightforward and unambiguous, and is as concise as possible without losing essential meaning.
+
+8. Packaging for AI Vectorization
+Purpose: Prepare the final set of instructions for efficient AI processing.
+Steps:
+a. Logical sequencing
+b. Consistent formatting
+c. Final review
+
+<answer> tags must be used to enclose your entire response into.
+Begin your response with "Here are the optimized instructions:" followed by, on a new line, opening a <result> tag and your presenting the optimized instructions enclosed in it.
+
+Guidance: Arrange instructions in a logical order, use a consistent format, and perform a last check to ensure all instructions align with the objectives of conciseness, clarity, and semantic richness.
+
+For your final output, provide the optimized instructions resulting from this pipeline process. Present them in a clear, orderly manner in a list, one per line, it should have as many lines as the input multiplied by the amount of splits that occurred during the process, therefore the number of outputs should be increased considerably when compared with the amount of inputs, but the length in words and tokens should, usually, have been reduced by a certain amount.
+
+After presenting the optimized instructions, in a separate section, provide a brief summary using <analysis> tags. Explain each of the benefits of this pipeline, highlighting how it maximizes semantic density, how it increased the number of distinct directives while also improved token efficiency, explain how it maintains clarity and purpose, tell how it preserves larger context for each directives, and demonstrate it will enable autonomous processing by AI agents.
+</answer>
