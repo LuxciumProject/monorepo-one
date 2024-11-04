@@ -1,0 +1,23 @@
+import { getAnthropic } from './getAnthropic';
+
+const { anthropic } = getAnthropic();
+
+// Replace placeholders like {{RAW_INSTRUCTIONS}} with real values,
+// because the SDK does not support variables.
+const msg = await anthropic.messages.create({
+  model: "claude-3-5-sonnet-20241022",
+  max_tokens: 1000,
+  temperature: 0,
+  messages: [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "You are an AI assistant tasked with implementing a comprehensive multistage pipeline for optimizing instructions for AI vectorization. Your goal is to transform raw input instructions into concise, high-semantic-value commands optimized for AI vectorization systems. This process aims to minimize tokenization costs while maintaining clarity, context, and purpose, ensuring the AI agent can process instructions autonomously without human intervention.\n\nHere are the raw instructions you will be working with:\n\n<raw_instructions>\n{{RAW_INSTRUCTIONS}}\n</raw_instructions>\n\nFollow this 8-stage pipeline process to optimize the instructions:\n\n1. Initial Decomposition\n   Purpose: Break down complex instructions into core actions and outcomes.\n   Steps:\n   a. Parse the input\n   b. Identify core actions and intent\n   c. Perform atomic instruction splitting\n   Guidance: Carefully read the entire input text, extract essential verbs and nouns, and break down complex instructions into the smallest possible independent units.\n\n2. Lemmatization\n   Purpose: Simplify words to their base or dictionary form to reduce complexity while retaining meaning.\n   Steps:\n   a. Apply lemmatization\n   b. Review for meaning\n   Guidance: Convert each word to its lemma (base form) while ensuring the lemmatized words still convey the intended meaning in context.\n\n3. Stemming (Optional)\n   Purpose: Further reduce words to their root form to maximize token efficiency.\n   Steps:\n   a. Apply stemming where beneficial\n   b. Maintain clarity\n   Guidance: Shorten words by removing suffixes or prefixes, but verify that the stemmed words remain understandable and do not create ambiguity.\n\n4. Stop Word Removal\n   Purpose: Eliminate common words that do not add significant semantic value.\n   Steps:\n   a. Identify stop words\n   b. Remove stop words\n   c. Check for coherence\n   Guidance: List and exclude common stop words while ensuring that the resulting sentences are still coherent for AI processing.\n\n5. Contextual Clarity Refinement\n   Purpose: Reintroduce essential context to prevent ambiguity caused by previous reductions.\n   Steps:\n   a. Review for ambiguity\n   b. Reintroduce key contextual keywords\n   c. Keep additions minimal\n   Guidance: Read the reduced instructions to identify potential misunderstandings, add necessary terms that clarify the instruction, but only add words critical for understanding.\n\n6. Purpose-Context Embedding\n   Purpose: Embed hints of the purpose or desired outcome within each instruction.\n   Steps:\n   a. Identify the purpose of each instruction\n   b. Integrate purpose subtly\n   c. Ensure seamless integration\n   Guidance: Determine what each instruction aims to achieve and incorporate the purpose into the instruction without adding unnecessary length.\n\n7. Final Atomic Instruction Validation\n   Purpose: Confirm that each instruction is concise, direct, and ready for vectorization.\n   Steps:\n   a. Check for independence\n   b. Verify clarity and directness\n   c. Optimize for token efficiency\n   Guidance: Ensure each instruction can stand alone, is straightforward and unambiguous, and is as concise as possible without losing essential meaning.\n\n8. Packaging for AI Vectorization\n   Purpose: Prepare the final set of instructions for efficient AI processing.\n   Steps:\n   a. Logical sequencing\n   b. Consistent formatting\n   c. Final review\n   Guidance: Arrange instructions in a logical order, use a consistent format, and perform a last check to ensure all instructions align with the objectives of conciseness, clarity, and semantic richness.\n\nFor your final output, provide the optimized instructions resulting from this pipeline process. Present them in a clear, numbered list format.\n\nAfter presenting the optimized instructions, provide a brief summary of the benefits of this pipeline, highlighting how it maximizes semantic density, improves token efficiency, maintains clarity and purpose, preserves context, and enables autonomous processing by AI agents.\n\nBegin your response with \"Here are the optimized instructions:\" and enclose your entire response in <answer> tags."
+        }
+      ]
+    }
+  ]
+});
+console.log(msg);
