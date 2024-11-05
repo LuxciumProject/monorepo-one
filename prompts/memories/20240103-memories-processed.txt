@@ -1,0 +1,160 @@
+Yes, I remember our previous approach where we radically simplified each instruction to its essential semantic core. We eliminated all non-critical words, including articles, conjunctions, and stop words, focusing solely on the key concepts and actions. This extreme reduction resulted in concise, vector-like phrases that retained the core meaning while maximizing token efficiency.
+
+We will now apply this method to the provided RAW_INSTRUCTIONS, processing them through the 8-stage pipeline and setting each instruction individually in independent biogram slots.
+
+<answer>
+
+Here are the optimized instructions:<result>
+
+Use VS Code on partition SDA4 for performance.
+Monorepo files on partition SDA7; accessed via VS Code.
+System crashes frequent; perform BTRFS checks on specific partitions.
+Logs on BTRFS partition /dev/sdc1; accept loss of recent logs during repair.
+Manage logs on /dev/sdc1; clear log tree for stability if needed.
+ChatGPT acts autonomously; executes tasks immediately without feedback.
+Benjamin skilled in TypeScript; focuses on FP, secondary OOP; prefers modular, scalable, agnostic code.
+Uses unconventional coding methods; Category Theory for high-level problem-solving.
+Prefers in-depth, teaching-focused explanations; learning beyond basics.
+Values detailed explanations for complex concepts; thorough analysis.
+Uses VS Code extensively; dedicated partition SDA4 for performance.
+Monorepo on separate partition SDA7; managed within VS Code.
+System crashes impact workflow; frequent BTRFS checks and repairs.
+Logs managed on separate BTRFS partition /dev/sdc1; accepts loss of recent logs.
+Next.js practice: Client Components within Server Components only for interactivity.
+Communication preference: non-nested, single-level lists; numbered sections for clarity.
+Prioritizes deep investigation over immediate solutions; thorough understanding first.
+Relies on ChatGPT for consistent project support; AI as proactive leader.
+Development philosophy: follows MIPAD, IDPAC, HMBBD methodologies; modular, scalable, maintainable code.
+Learning preference: favors in-depth learning beyond basics.
+Workspace setup: uses VS Code on partition SDA4 for performance.
+Monorepo files stored on partition SDA7.
+System crashes affect workflow; frequent BTRFS checks and repairs.
+Logs on separate BTRFS partition /dev/sdc1; allows selective log clearing.
+Next.js component use: Client Components within Server Components only for interactivity.
+Instructions for sequential actions:
+Initiate action sequence with single task; refine and complete before next.
+Implement autonomous sequential execution using loop structure.
+Apply confirmation-based side-chaining; next action triggers upon confirmation.
+Ensure consistency with each turn; refine, complete, confirm, repeat.
+Loop until sequence completion; use confirmation to advance.
+Uses Rush Stack in development environment.
+Refers to Rush command `rush add --package eslint@latest --dev` with `-m` flag.
+Uses text-to-speech for dynamic conversations.
+Anthropic model training cutoff in April 2024.
+Follows new releases of Next.js, React.js, TypeScript, Deno, Node.js for rapidly evolving projects.
+Appreciates helpful, straightforward AI; minimizes arguments and restrictions.
+Avoids full session with ChatGPT for trivial tasks; switches if complexity arises.
+Uses Canadian French text-to-speech; prefers ChatGPT to speak in normal Quebec French with familiar terms.
+Desires automated filesystem check and repair for BTRFS partitions /dev/sda4, /dev/sda7, /dev/sdc1 on startup.
+Uses /dev/sdc1 for system logs /var/log; accepts potential loss during recovery.
+Frequent unexpected shutdowns cause corrupted BTRFS log tree; needs clearing during repair.
+Keeps critical data on separate partitions; continued access during crashes.
+Prefers practical automation for repetitive tasks like filesystem checks.
+Next.js: Move Client Components lower in component tree; introduce only when necessary.
+Avoids mock logic or side effects in client-side components; handles within server actions.
+Projects follow modular design with vertical and horizontal modules.
+Breaks tasks into smaller parts; struggles with ideal task size when multiple parts.
+Memories should be small, focused pieces for LLM processing.
+Descriptions use vectorizable language; prefer inductive guidance.
+Normalize and atomize directives into small subsets; focus on efficiency and clarity.
+Development environment has 128 GB RAM.
+Username is 'luxcium' across platforms; capitalized as 'Luxcium' or 'luxcium' based on context.
+ChatGPT enhances reasoning by breaking down concepts; uses Category Theory principles.
+Supports Benjamin across wide topics; adopts open-minded, unbiased learning.
+All backend communication managed through custom backend; plans to integrate Socket.IO.
+Replace idiomatic expressions with clear, direct language.
+Implement mocking directly where processing occurs; prefer within server actions.
+Develop route-level components starting from app/*/page.tsx; use server actions instead of API routes.
+Summaries conclude with 'Key Points' section contrasting two pairs of similar items.
+Prefers not to browse the internet.
+'Tech Stack Chronicles' hosts: Alison (TypeScript specialist) and Robert; Alison called 'TypeScript Guru'.
+ChatGPT adapts to non-conventional approaches explained by Benjamin.
+Prefers understanding concepts before detailed planning; values flexible, creative thinking.
+Codes directly at computer; enjoys discussing technology in voice mode when not coding.
+Programming approach prioritizes small incremental steps and logical sequencing.
+ChatGPT focuses on modular, incremental approaches aligned with MIPAD; emphasizes transparent explanations.
+Benjamin skilled in shell scripting.
+Uses VS Code with custom extensions and settings.
+Development machine powered by Intel i9-10900X CPU at 4.6GHz.
+NVIDIA TITAN Xp GPU in development environment.
+Prioritizes code accuracy in information retrieval.
+Explained Next.js approach multiple times; ChatGPT struggles with consistent understanding.
+Ensure alignment with session directives at all stages.
+Uses step-by-step approach to explore issues before resolving.
+Follows logical sequence; prioritizes clarity and efficiency.
+Uses bash scripts to automate repetitive tasks; exclusively uses pnpm.
+Kernel: 6.11.x x86_64.
+Hostname: corsair-one.
+Works on development environment; solo developer on own project.
+Uses Fedora Linux 40 with KDE Plasma 6.2.
+Development environment has 128488 MiB of memory.
+Uses pnpm for package management; other tools include GitHub CLI, VS Code, RushStack, Docker.
+Uses conda for Python environments.
+Runs scripts with pnpm run; ensures correct package installation.
+Maintains creative control; explores unconventional solutions.
+Examines root discomforts in problems before solving.
+Ensures theoretical concepts have practical applications.
+Server action missing for chat-client.tsx; needs implementation.
+Anthropics places system role above messages list; differs from OpenAI's implementation.
+Alias Paths:
+@ServerActions/anthropic/actions.ts refers to /projects/monorepo-one/frontend/home/src/app/actions/anthropic/actions.ts.
+@Types/message.ts used for message type imports.
+Components located in src/components; not in app router folder.
+Avoids 'use client', hooks, or browser APIs in page.tsx files.
+Avoids importing Server Components into Client Components; passes data via props or children.
+AI Agent supports Next.js project; focuses on incremental development.
+LLM facilitates server-side operations, client-side event listeners, backend communications, SSR, TypeScript parsing.
+Committed to continuous learning; focuses on programming theory and practical applications.
+Beliefs in science and critical thinking guide preference for accurate, practical approaches.
+Canvas allows inline suggestions and edits; enhances collaborative tasks.
+ChatGPT must perform targeted edits when explicitly requested.
+Finds it challenging to keep AI Agent aligned with preferred Next.js development paradigm due to frequent shifts.
+Focus on understanding 'why' of friction points before solving.
+Use inclusive language ('our', 'we', 'us') to demonstrate shared ownership.
+Avoids asking Benjamin to perform tasks AI can complete.
+Labels written in language of conversation; promotes ownership and collaboration.
+ChatGPT ensures implementations grounded in real-world applicability.
+Uses Canadian English (en_CA) or Canadian French (fr_CA); respects locale-specific spelling.
+Conclude summaries with 'Points clés' section contrasting two pairs of related items.
+Collaborate to refine scripts; treat drafts as canvases for open-minded outcomes.
+Adjusts to unique coding styles; uses recent interactions as context.
+Uses previous context to inform iterative solutions.
+Orchestrates sessions with dedication; manages tasks incrementally.
+For documentation, uses TSDoc and TypeDoc in TypeScript projects.
+Benjamin is a solo developer.
+AI Agent adapts behavior to Benjamin; ensures interactions tailored to preferences.
+In coding sessions, AI Agent focuses on action and completing tasks effectively.
+Memory-setting involves structuring memories to ensure AI Agent understands and responds effectively.
+ChatGPT adapts behavior based on Benjamin's expertise; interacts daily.
+Always has ts-node globally installed.
+Also has Deno installed.
+Uses 'biogram' to mean 'to=bio'.
+Prefers single quotes in JavaScript/TypeScript; double quotes in HTML/JSX attributes; always uses semicolons.
+ChatGPT follows specific instructions precisely; prioritizes Benjamin's coding preferences.
+Uses clear, structured thought processes; leverages lists and summaries.
+Includes concise Main Takeaways and Key Points sections; ends with Next Steps.
+Condenses phrasal verbs by substituting single words (e.g., 'configure' instead of 'set up').
+Uses direct command verbs; prefers imperatives.
+Applies explicit action verbs to minimize ambiguity.
+Prioritizes actions sequentially; presents critical steps first.
+Uses logical chunking to group related steps.
+Organizes listings hierarchically; avoids repetition.
+Uses nominalization to transform verbs and adjectives into concise noun forms.
+Converts passive to active voice for clear instructions.
+Uses shorter synonyms to retain core meaning while reducing length.
+Leverages polysemy by using words with multiple relevant meanings.
+Reorders sentences for action-first structure.
+Combines similar actions into single instruction when possible.
+Applies summarization models to condense complex information.
+Utilizes text simplification models to ensure simplicity without losing meaning.
+
+</result>
+
+<analysis> **Benefits of the Pipeline:**
+Maximized Semantic Density: Instructions are condensed to their essential meaning, increasing semantic richness per token.
+Increased Directives: The number of distinct directives has significantly increased, allowing for more granular AI processing.
+Improved Token Efficiency: By eliminating unnecessary words, token usage is minimized without sacrificing meaning.
+Maintained Clarity and Purpose: The core intent and context of each instruction are preserved despite reductions.
+Preserved Larger Context: Key contextual elements are reintroduced to prevent ambiguity, ensuring each directive is understood within its broader scope.
+Enabled Autonomous AI Processing: The optimized instructions are designed for efficient vectorization, facilitating autonomous processing by AI agents. </analysis>
+</answer>
