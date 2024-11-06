@@ -1,1 +1,1 @@
-export { openaiApi } from './openaiApi';
+export { getOpenAI } from './getOpenAI';

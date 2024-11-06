@@ -1,5 +1,5 @@
 import { ModerationCreateResponse } from 'openai/resources';
-import { getOpenAI } from '../lib/openaiApi';
+import { getOpenAI } from '../lib/getOpenAI';
 
 // Example function to send a message to OpenAI's chat API
 async function chatWithOpenAI(prompt: string) {

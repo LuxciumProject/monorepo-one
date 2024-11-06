@@ -2064,7 +2064,7 @@
       "prompts"
     ],
     "[typescript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "denoland.vscode-deno"
     },
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
