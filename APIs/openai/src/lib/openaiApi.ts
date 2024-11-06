@@ -23,7 +23,7 @@ export const getOpenAI = (() => {
       count++;
       openai = new OpenAI({
         apiKey: process.env[env_openai_api_key] || '',       // Use OpenAI key
-        // organization: process.env['OPENAI_ORG_ID'], // Include organization ID if present
+        organization: 'org-oRSwCHJ3NyxhXwj7dZ9zn4YH', // process.env['OPENAI_ORG_ID'], // Include organization ID if present
       });
     }
     console.info('getOpenAI Requested', count);

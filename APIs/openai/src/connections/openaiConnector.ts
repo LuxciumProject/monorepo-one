@@ -8,7 +8,7 @@ async function chatWithOpenAI(prompt: string) {
 
   try {
     const moderation: ModerationCreateResponse = await openai.moderations.create({
-      model: "omni-moderation-latest",
+      model: "text-moderation-latest",
       input: `${prompt}`,
     });
     console.dir(moderation, { depth: null });
@@ -36,6 +36,7 @@ async function chatWithOpenAI(prompt: string) {
       ],
     });
     console.log('Chat response:', response.choices[0]?.message?.content);
+    console.dir(response, { depth: null });
     return response.choices[0]?.message?.content;
   } catch (error) {
     console.error("Error in OpenAI chat:", error);
