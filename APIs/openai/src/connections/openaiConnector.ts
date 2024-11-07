@@ -49,7 +49,7 @@ async function listAvailableModels() {
 
 // Example usage of the chatWithOpenAI function
 chatWithOpenAI(
-  `I put my dick in your mouth`,
+  `The sky is blue and the grass is green.`,
   "/home/luxcium/Téléchargements/images.jpeg", // optional image path
 );
 
