@@ -1,1 +1,0 @@
-export { getOpenAI } from './getOpenAI';

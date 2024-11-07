@@ -1,0 +1,19 @@
+import { Categories } from "./Categories";
+import { CategoryData } from "./CategoryData";
+import { CategoryScores } from "./CategoryScores";
+
+export function processCategories(
+  categories: Categories,
+  categoryScores: CategoryScores,
+): Record<string, CategoryData> {
+  const processedCategories: Record<string, CategoryData> = {};
+
+  Object.keys(categories).forEach((category: string): void => {
+    processedCategories[category] = {
+      isEnabled: categories[category],
+      score: categoryScores[category],
+    };
+  });
+
+  return processedCategories;
+}

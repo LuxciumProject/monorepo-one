@@ -1,14 +1,10 @@
 import { config } from "dotenv";
 import OpenAI from "openai";
-
-type OpenAIInstance = {
-  openai: OpenAI;
-  currentDate: string;
-};
+import { OpenAIInstance } from "./OpenAIInstance";
+import { getCurrentDate } from "./getCurrentDate";
 
 let initializationCount: number = 0;
 let requestCount: number = 0;
-
 export const getOpenAI = (() => {
   initializationCount++;
   console[initializationCount === 1 ? "info" : "warn"](
@@ -43,11 +39,3 @@ export const getOpenAI = (() => {
     return { openai, currentDate };
   };
 })();
-
-function getCurrentDate() {
-  return new Date().toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
