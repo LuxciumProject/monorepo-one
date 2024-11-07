@@ -1,48 +1,57 @@
-import { ModerationCreateResponse } from 'openai/resources';
-import { getOpenAI } from '../lib/getOpenAI';
+import { ModerationCreateResponse } from "openai/resources";
+import { getOpenAI } from "../lib/getOpenAI";
+
+interface ContentInput {
+  text: string;
+  imagePath?: string;
+}
 
 // Example function to send a message to OpenAI's chat API
-async function chatWithOpenAI(prompt: string) {
-  const { openai, currentDate } = getOpenAI();
-
-
+const { openai, currentDate } = getOpenAI("vscode_API_OpenAI_env");
+async function chatWithOpenAI(prompt: string, imagePath?: string) {
   try {
-    const moderation: ModerationCreateResponse = await openai.moderations.create({
-      model: "text-moderation-latest",
-      input: `${prompt}`,
-    });
-    console.dir(moderation, { depth: null });
+    const input: ContentInput = {
+      text: prompt,
+      ...(imagePath && { imagePath }),
+    };
+
+    const moderation: ModerationCreateResponse = await openai.moderations
+      .create({
+        model: "omni-moderation-latest",
+        input: input.text, // Currently OpenAI moderation only supports text
+        // Note: image moderation would require different API endpoints
+      });
+
+    if (imagePath) {
+      console.log("Image path provided:", imagePath);
+      // Additional image handling logic can be added here
+    }
+
+    console.dir(moderation, { depth: null, colors: true });
   } catch (error: unknown) {
-    // if (error instanceof Error) {
-    //   return console.warn('ModerationCreateResponse failed (message):', error.message);
-    // }
-    console.dir({ 'ModerationCreateResponse failed (error):': error }, { depth: null, colors: true, compact: true });
-
-
-  }
-
-
-  try {
-    // const moderation = await openai.moderations.create({
-    //   model: "text-moderation-stable",
-    //   input: `${prompt}`,
-    // });
-
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: `Today's date is ${currentDate}.` },
-        { role: 'user', content: prompt },
-      ],
+    console.dir({ "ModerationCreateResponse failed (error):": error }, {
+      depth: null,
+      colors: true,
+      compact: true,
     });
-    console.log('Chat response:', response.choices[0]?.message?.content);
-    console.dir(response, { depth: null });
-    return response.choices[0]?.message?.content;
+  }
+  void listAvailableModels;
+}
+
+async function listAvailableModels() {
+  try {
+    const models = await openai.models.list();
+    console.log("Available Models:", models.data.map((model) => model.id));
   } catch (error) {
-    console.error("Error in OpenAI chat:", error);
-    throw error;
+    console.error("Error listing models:", error);
   }
 }
 
 // Example usage of the chatWithOpenAI function
-chatWithOpenAI("Tell me something interesting about today.");
+chatWithOpenAI(
+  `I put my dick in your mouth`,
+  "/home/luxcium/Téléchargements/images.jpeg", // optional image path
+);
+
+// lorem ipsum
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
