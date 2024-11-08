@@ -1,6 +1,6 @@
 import { ModerationCreateResponse } from "openai/resources";
+import { SimplifiedModeration } from "../types/SimplifiedModeration";
 import { processCategories } from "./processCategories";
-import { SimplifiedModeration } from "./SimplifiedModeration";
 import { validateModerationResult } from "./validateModerationResult";
 
 export function createSimplifiedModeration(

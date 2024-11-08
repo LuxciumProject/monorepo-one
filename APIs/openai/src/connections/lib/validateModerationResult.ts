@@ -1,4 +1,4 @@
-import { ModerationResult } from "./ModerationResult";
+import { ModerationResult } from "../types/ModerationResult";
 
 export function validateModerationResult(
   result: unknown,

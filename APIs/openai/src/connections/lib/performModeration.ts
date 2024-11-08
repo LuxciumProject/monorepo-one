@@ -1,6 +1,6 @@
 import { ModerationCreateResponse } from "openai/resources";
-import { getOpenAI } from "./getOpenAI";
-const { openai } = getOpenAI("vscode_API_OpenAI_env");
+import { connectOpenAI } from "../connectOpenAI";
+const { openai } = connectOpenAI("vscode_API_OpenAI_env");
 
 export async function performModeration(
   text: string,

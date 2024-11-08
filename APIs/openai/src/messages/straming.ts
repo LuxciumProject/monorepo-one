@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { getOpenAI } from "../connections";
+import { connectOpenAI } from "../connections";
 
-const { openai, currentDate } = getOpenAI("vscode_API_OpenAI_env");
+const { openai, currentDate } = connectOpenAI("vscode_API_OpenAI_env");
 async function main() {
   const stream = await openai.chat.completions.create({
     model: "o1-mini",

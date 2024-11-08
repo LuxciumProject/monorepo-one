@@ -1,9 +1,9 @@
-import { ContentInput } from "./ContentInput";
-import { createSimplifiedModeration } from "./createSimplifiedModeration";
-import { handleError } from "./handleError";
-import { handleImagePath } from "./handleImagePath";
-import { listAvailableModels } from "./listAvailableModels";
-import { performModeration } from "./performModeration";
+import { ContentInput } from "../../types/ContentInput";
+import { createSimplifiedModeration } from "../createSimplifiedModeration";
+import { handleError } from "../handleError";
+import { handleImagePath } from "../handleImagePath";
+import { listAvailableModels } from "../listAvailableModels";
+import { performModeration } from "../performModeration";
 
 export async function chatWithOpenAI(
   prompt: string,

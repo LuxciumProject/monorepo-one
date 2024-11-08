@@ -1,6 +1,6 @@
-import { getOpenAI } from "./getOpenAI";
+import { connectOpenAI } from "../connectOpenAI";
 import { handleError } from "./handleError";
-const { openai } = getOpenAI("vscode_API_OpenAI_env");
+const { openai } = connectOpenAI("vscode_API_OpenAI_env");
 
 export async function listAvailableModels(): Promise<void> {
   try {

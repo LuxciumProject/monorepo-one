@@ -1,6 +1,6 @@
-import { Categories } from "./Categories";
-import { CategoryData } from "./CategoryData";
-import { CategoryScores } from "./CategoryScores";
+import { Categories } from "../types/Categories";
+import { CategoryData } from "../types/CategoryData";
+import { CategoryScores } from "../types/CategoryScores";
 
 export function processCategories(
   categories: Categories,

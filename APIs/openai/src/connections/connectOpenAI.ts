@@ -1,11 +1,11 @@
 import { config } from "dotenv";
 import OpenAI from "openai";
-import { OpenAIInstance } from "./OpenAIInstance";
-import { getCurrentDate } from "./getCurrentDate";
+import { getCurrentDate } from "./lib/getCurrentDate";
+import { OpenAIInstance } from "./types/OpenAIInstance";
 
 let initializationCount: number = 0;
 let requestCount: number = 0;
-export const getOpenAI = (() => {
+export const connectOpenAI = (() => {
   initializationCount++;
   console[initializationCount === 1 ? "info" : "warn"](
     `OpenAI client initialization attempt #${initializationCount}`,
@@ -14,7 +14,7 @@ export const getOpenAI = (() => {
   let openai: OpenAI | null = null;
   const currentDate: string = getCurrentDate();
 
-  return function getOpenAI(
+  return function connectWithOpenAI(
     env_openai_api_key: string = "OPENAI_API_KEY",
   ): OpenAIInstance {
     if (openai === null) {

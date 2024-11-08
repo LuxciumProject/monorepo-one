@@ -1,4 +1,4 @@
-import { chatWithOpenAI } from "./chatWithOpenAI";
+import { chatWithOpenAI } from "./chats/chatWithOpenAI";
 
 // Example usage
 
