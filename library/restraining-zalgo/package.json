@@ -43,7 +43,7 @@
     "@types/heft-jest": "~1.0.3",
     "eslint-plugin-import": "~2.31.0",
     "webpack": "~5.88.1",
-    "@types/node": "~22.7.4",
+    "@types/node": "22",
     "jest": "~29.7.0",
     "ts-jest": "~29.2.5",
     "@jest/globals": "~29.7.0",

@@ -27,7 +27,7 @@
     "@types/heft-jest": "~1.0.3",
     "@types/jest": "~29.5.12",
     "@types/mime-types": "~2.1.1",
-    "@types/node": "~22.7.4",
+    "@types/node": "22",
     "chai": "~4.3.7",
     "concurrently": "~8.0.1",
     "eslint-config-prettier": "~9.1.0",
