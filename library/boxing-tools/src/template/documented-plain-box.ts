@@ -92,8 +92,13 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @category Utilities
    */
-  public static unbox<U>(value: IUnbox<any> | U): Unbox<U> {
-    return PlainBox.isUnboxable(value) ? PlainBox.unbox(value.unbox()) : value;
+  public static unbox<U>(value: IUnbox<U>): Unbox<U>;
+  public static unbox<U>(value: U): U;
+  public static unbox<U>(value: IUnbox<U> | U): Unbox<U> | U {
+    const _value = value; // Safe temporary variable
+    return PlainBox.isUnboxable(_value)
+      ? PlainBox.unbox(_value.unbox())
+      : _value;
   }
 
   protected constructor(private _boxedValue: T) {}
@@ -168,7 +173,14 @@ export class PlainBox<T> implements IUnbox<T> {
    * @returns The unboxed value.
    */
   public unbox(): Unbox<T> {
-    return PlainBox.unbox(this.boxedValue);
+    const _value = this._boxedValue; // Safe temporary variable
+    if (PlainBox.isUnboxable(_value)) {
+      const _unboxedValue = _value.unbox();
+      // Use static unbox to handle nested unboxing properly
+      const _finalValue = PlainBox.unbox(_unboxedValue);
+      return _finalValue as Unbox<T>;
+    }
+    return _value as Unbox<T>;
   }
 
   /**
@@ -203,22 +215,3 @@ export interface IUnbox<U> {
    */
   unbox(): Unbox<U> | U;
 }
-
-/*
-
-```
-
-The provided code defines a `PlainBox` class that implements the Fantasy Land Specification, providing a set of standard methods for working with "boxed" values. The class also includes several static methods for constructing and manipulating `PlainBox` instances.
-
-The documentation for the `PlainBox` class and its members is comprehensive and follows the TSDoc standard. It includes:
-
-1. A summary of the class's purpose and functionality in the class-level comment.
-2. Detailed descriptions of the static methods, including their parameters, return values, and their relation to the Fantasy Land Specification.
-3. Detailed descriptions of the instance methods, including their parameters, return values, and their relation to the Fantasy Land Specification.
-4. A type alias `Unbox` that represents the unboxed value of a given type, handling recursive unboxing.
-5. An interface `IUnbox` that defines the unbox operation for a type.
-
-The documentation is well-structured, using appropriate TSDoc tags such as `@remarks`, `@typeParam`, `@param`, `@returns`, `@category`, and `@fantasy-land` to provide clear and concise information about the class and its members.
-
-Overall, the documentation provided for the `PlainBox` class is comprehensive, follows the TSDoc standard, and should be very helpful for users of the class.
- */

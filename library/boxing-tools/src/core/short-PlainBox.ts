@@ -43,7 +43,9 @@ export class PlainBox<T> implements IUnbox<T> {
     );
   }
 
-  static unbox<U>(value: IUnbox<any> | U): Unbox<U> {
+  static unbox<U>(value: IUnbox<U>): Unbox<U>;
+  static unbox<U>(value: U): U;
+  static unbox<U>(value: IUnbox<U> | U): Unbox<U> | U {
     return PlainBox.isUnboxable(value) ? PlainBox.unbox(value.unbox()) : value;
   }
 
@@ -66,7 +68,14 @@ export class PlainBox<T> implements IUnbox<T> {
   }
 
   public unbox(): Unbox<T> {
-    return PlainBox.unbox(this._boxedValue);
+    const _value = this._boxedValue;
+    if (PlainBox.isUnboxable(_value)) {
+      const _unboxedValue = _value.unbox();
+      // Ensure proper typing through static unbox
+      const _finalValue = PlainBox.unbox(_unboxedValue);
+      return _finalValue as Unbox<T>;
+    }
+    return _value as Unbox<T>;
   }
 
   public get boxedValue(): T {

@@ -49,7 +49,7 @@ export class BaseBox<T>
     );
   }
 
-  static unbox<U>(value: IUnbox<any> | U): Unbox<U> {
+  static unbox<U>(value: IUnbox<any> | U): U {
     return BaseBox.isUnboxable(value) ? BaseBox.unbox(value.unbox()) : value;
   }
 
@@ -78,7 +78,7 @@ export class BaseBox<T>
 
   public ['fantasy-land/extract'] = this.unbox;
 
-  public unbox(): Unbox<T> {
+  public unbox(): T {
     return BaseBox.unbox(this.boxedValue);
   }
 

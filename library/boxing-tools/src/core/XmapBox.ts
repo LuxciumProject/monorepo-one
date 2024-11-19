@@ -57,7 +57,9 @@ export class XmapBox<T> implements IUnbox<T>, BoxLike<T> {
     );
   }
 
-  static unbox<U>(value: IUnbox<any> | U): Unbox<U> {
+  static unbox<U>(value: IUnbox<U>): Unbox<U>;
+  static unbox<U>(value: U): U;
+  static unbox<U>(value: IUnbox<U> | U): Unbox<U> | U {
     return XmapBox.isUnboxable(value) ? XmapBox.unbox(value.unbox()) : value;
   }
 
@@ -82,17 +84,20 @@ export class XmapBox<T> implements IUnbox<T>, BoxLike<T> {
   }
 
   public unbox(): Unbox<T> {
-    return XmapBox.unbox(this.boxedValue);
+    const value = this.boxedValue;
+    return XmapBox.isUnboxable(value) ? value.unbox() : (value as Unbox<T>);
   }
 
   public get boxedValue(): T {
     return this._boxedValue;
   }
-  public xmap<R>(fn: (value: Unbox<T>) => R): XmapBox<any> {
-    if (this.boxedValue instanceof XmapBox) {
-      return XmapBox.of(this.boxedValue.xmap(fn));
+
+  public xmap<R>(fn: (value: Unbox<T>) => R): XmapBox<R> {
+    const value = this.boxedValue;
+    if (XmapBox.isUnboxable(value)) {
+      return XmapBox.of(fn(value.unbox()));
     }
-    return XmapBox.of(fn(this.boxedValue as Unbox<T>));
+    return XmapBox.of(fn(value as Unbox<T>));
   }
 
   public static isXmapBox<U>(value: any): value is XmapBox<U> {

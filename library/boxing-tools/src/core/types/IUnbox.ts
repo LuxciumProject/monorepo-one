@@ -15,5 +15,5 @@ export interface IUnbox<U> {
    * @returns The unboxed value.
    * @public
    */
-  unbox(): Unbox<U> | U;
+  unbox(): Unbox<U>;
 }

@@ -83,6 +83,29 @@
       "chatgpt": "cobol",
       "prompts": "log"
     },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.requireConfig": true,
+    "prettier.configPath": ".prettierrc",
+    "typescript.format.enable": false,
+    "javascript.format.enable": false,
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     // #endregion: FORMAT BEHAVIOUR                                       !
     /*
   |-···----------------------------------------------------------···-|
@@ -2064,7 +2087,7 @@
       "prompts"
     ],
     "[typescript]": {
-      "editor.defaultFormatter": "denoland.vscode-deno"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
@@ -2074,6 +2097,18 @@
     },
     "[dockerfile]": {
       "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "files.watcherExclude": {
       "**/build/**": true,
@@ -2238,7 +2273,7 @@
       "path": "backend"
     },
     {
-      "name": "           🏦🗜️ api",
+      "name": "           ��🗜️ api",
       "path": "backend/api"
     },
     {

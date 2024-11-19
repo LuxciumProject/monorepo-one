@@ -29,8 +29,11 @@ export class BaseBox<T> implements IMap<T>, IUnbox<T> {
       typeof val.unbox === 'function'
     );
   }
-  static unbox<U>(value: IUnbox<any> | U): Unbox<U> {
-    return BaseBox.isUnboxable(value) ? BaseBox.unbox(value.unbox()) : value;
+  static unbox<U>(value: IUnbox<U>): Unbox<U>;
+  static unbox<U>(value: U): U;
+  static unbox<U>(value: IUnbox<U> | U): Unbox<U> | U {
+    const _value = value; // Safe temporary variable
+    return BaseBox.isUnboxable(_value) ? BaseBox.unbox(_value.unbox()) : _value;
   }
   protected constructor(private _boxedValue: T) {}
 
@@ -38,7 +41,7 @@ export class BaseBox<T> implements IMap<T>, IUnbox<T> {
     return BaseBox.of(fn(this.boxedValue));
   }
 
-  public unbox(): Unbox<T> {
+  public unbox(): T {
     return BaseBox.unbox(this.boxedValue);
   }
 

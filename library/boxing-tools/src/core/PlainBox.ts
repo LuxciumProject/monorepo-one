@@ -141,8 +141,13 @@ export class PlainBox<T> implements IUnbox<T> {
    *
    * @public
    */
-  static unbox<U>(value: IUnbox<any> | U): Unbox<U> {
-    return PlainBox.isUnboxable(value) ? PlainBox.unbox(value.unbox()) : value;
+  static unbox<U>(value: IUnbox<U>): Unbox<U>;
+  static unbox<U>(value: U): U;
+  static unbox<U>(value: IUnbox<U> | U): Unbox<U> | U {
+    const _value = value;
+    return PlainBox.isUnboxable(_value)
+      ? PlainBox.unbox(_value.unbox())
+      : _value;
   }
 
   /**
@@ -260,7 +265,8 @@ export class PlainBox<T> implements IUnbox<T> {
    * console.log(value); // Output: 42
    */
   public unbox(): Unbox<T> {
-    return PlainBox.unbox(this.boxedValue);
+    const _value = this._boxedValue;
+    return PlainBox.isUnboxable(_value) ? _value.unbox() : (_value as Unbox<T>);
   }
 
   /**
