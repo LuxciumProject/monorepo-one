@@ -1,30 +1,29 @@
-// Define interfaces for image data and processing steps.
+// src/index.ts
+export type { FileStats } from "./FileStats";
+export type { ImageData } from "./ImageData";
+export type { ImageDimensions } from "./ImageDimensions";
+export type { ImageMetadata } from "./ImageMetadata";
+export type { ImageStats } from "./ImageStats";
+export type { ProcessingHistory } from "./ProcessingHistory";
+export type { ProcessingStage } from "./ProcessingStage";
+export type { ProcessingStatus } from "./ProcessingStatus";
+export type { ProcessingStep } from "./ProcessingStep";
+/*
+export type for each (do not include the extension):
+FileStats.ts
+ImageData.ts
+ImageDimensions.ts
+ImageMetadata.ts
+ImageStats.ts
+index.ts
+isImageMetadata.ts
+ProcessingHistory.ts
+ProcessingStage.ts
+ProcessingStatus.ts
+ProcessingStep.ts
+processing.ts
+*/
 
-export interface ImageData {
-  buffer: Buffer;
-  metadata: ImageMetadata;
-}
-
-export interface ImageMetadata {
-  filename: string;
-  filepath: string;
-  [key: string]: any; // Additional metadata fields.
-  processing: {
-    stage: string;
-    startTime: Date;
-    history: ProcessingHistory[];
-  };
-}
-
-export interface ProcessingStep {
-  name: string;
-  process: (image: ImageData) => Promise<ImageData>;
-}
-
-export interface ProcessingHistory {
-  step: string;
-  timestamp: Date;
-  duration: number;
-  status: "success" | "error";
-  error?: string;
-}
+// file-stats.ts
+// image-metadata.ts
+// image-stats.ts
