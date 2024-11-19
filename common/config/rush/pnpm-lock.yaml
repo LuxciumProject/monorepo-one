@@ -3697,6 +3697,13 @@ importers:
         version: 5.88.2
 
   ../../services/image-pipeline:
+    dependencies:
+      sharp:
+        specifier: ~0.33.5
+        version: 0.33.5
+      uuid:
+        specifier: ~11.0.3
+        version: 11.0.3
     devDependencies:
       '@eslint/js':
         specifier: ~9.12.0
@@ -3707,6 +3714,12 @@ importers:
       '@types/node':
         specifier: '22'
         version: 22.9.0
+      '@types/sharp':
+        specifier: ^0.30.0
+        version: 0.30.5
+      '@types/uuid':
+        specifier: ~10.0.0
+        version: 10.0.0
       eslint:
         specifier: ~9.12.0
         version: 9.12.0(jiti@1.21.6)
@@ -17401,6 +17414,10 @@ packages:
 
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
+    hasBin: true
+
+  uuid@11.0.3:
+    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
     hasBin: true
 
   uuid@3.4.0:
@@ -33964,6 +33981,8 @@ snapshots:
   utils-merge@1.0.1: {}
 
   uuid@10.0.0: {}
+
+  uuid@11.0.3: {}
 
   uuid@3.4.0: {}
 

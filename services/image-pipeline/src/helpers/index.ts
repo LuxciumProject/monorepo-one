@@ -8,6 +8,7 @@ export async function runPythonScript(
   image: ImageData,
 ): Promise<ImageData> {
   // ...implementation to call Python script using child_process.spawn
+  scriptPath;
   return image;
 }
 

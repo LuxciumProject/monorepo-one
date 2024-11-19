@@ -6,6 +6,7 @@ import { ImageData } from "../types";
 export async function loadImagesFromDirectory(
   directoryPath: string,
 ): Promise<ImageData[]> {
+  directoryPath;
   // ...implementation to read image files and return as ImageData[]
   return [];
 }
