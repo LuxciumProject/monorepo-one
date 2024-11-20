@@ -14,7 +14,7 @@ void (async function MAIN(): Promise<void> {
     const processedImage = await metadataService.processImage(testImagePath);
     console.log(
       "Metadata extraction completed:",
-      processedImage.metadata.fileInfo.filename,
+      processedImage.metadata.filename,
     );
   } catch (error) {
     console.error("Error processing image:", error);

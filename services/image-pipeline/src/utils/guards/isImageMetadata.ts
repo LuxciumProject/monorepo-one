@@ -1,5 +1,6 @@
-// src/guards/image-metadata.guard.ts
-import type { ImageMetadata } from "./ImageMetadata";
+import { ImageMetadata } from "../../types/ImageMetadata";
+
+// Type guard
 
 export const isImageMetadata = (value: unknown): value is ImageMetadata => {
   const metadata = value as ImageMetadata;

@@ -1,13 +1,21 @@
+// src/index.ts
 // Processing tools/modules for image processing steps.
 
-import { ImageData, ProcessingStep } from "../types";
+import sharp from "sharp";
+import type { ImageData, ProcessingStep } from "../types";
 
 // Example processing step: Resize image.
 export const resizeImageStep: ProcessingStep = {
   name: "resizeImage",
   process: async (image: ImageData): Promise<ImageData> => {
     // ...implementation to resize the image.
-    return image;
+    const resizedImageBuffer = await sharp(image.buffer)
+      .resize({ width: 800, height: 600 })
+      .toBuffer(); // Buffer<ArrayBufferLike>
+
+    // image.buffer = resizedImageBuffer;
+    // const image:{buffer : resizedImageBuffer}}
+    return { ...image, buffer: resizedImageBuffer };
   },
 };
 

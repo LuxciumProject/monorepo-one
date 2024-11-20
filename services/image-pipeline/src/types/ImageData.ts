@@ -1,8 +1,14 @@
-import { ImageMetadata } from "./ImageMetadata";
+// src/types/ImageData.ts
+import type { ImageMetadata } from "./ImageMetadata";
 
-// Define interfaces for image data and processing steps.
+export type ImageData = {
+  readonly buffer: Buffer;
+  readonly metadata: ImageMetadata;
+};
 
-export interface ImageData {
-  buffer: Buffer;
-  metadata: ImageMetadata;
-}
+// src/types/ProcessingStep.ts
+
+export type ProcessingStep = {
+  readonly name: string;
+  readonly process: (image: ImageData) => Promise<ImageData>;
+};

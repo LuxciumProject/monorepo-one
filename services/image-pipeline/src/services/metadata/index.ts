@@ -1,7 +1,7 @@
+import { MetadataExtractor } from "@/utils/MetadataExtractor";
 import { promises as fs } from "node:fs";
 import { dirname, join } from "node:path";
 import { ImageData, ImageMetadata } from "../../types";
-import { MetadataExtractor } from "../../utils/metadata-extractor";
 import { validateMetadata } from "./validation";
 
 export class MetadataService {
@@ -40,10 +40,7 @@ export class MetadataService {
     workingDir: string,
     metadata: ImageMetadata,
   ): Promise<void> {
-    const metadataPath = join(
-      workingDir,
-      `${metadata.fileInfo.filename}.metadata.json`,
-    );
+    const metadataPath = join(workingDir, `${metadata.filename}.metadata.json`);
     await fs.writeFile(
       metadataPath,
       JSON.stringify(metadata, null, 2),
