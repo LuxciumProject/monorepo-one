@@ -9,7 +9,7 @@ void (async function MAIN(): Promise<void> {
 
   try {
     const metadataService = createMetadataService();
-    const testImagePath = join(__dirname, "../test-images/sample.jpg");
+    const testImagePath = join(__dirname, "../images/sample.png");
 
     const processedImage = await metadataService.processImage(testImagePath);
     console.log(
@@ -23,7 +23,3 @@ void (async function MAIN(): Promise<void> {
 
   return void 0;
 })();
-
-// Interfaces goes here
-
-// Types goes here

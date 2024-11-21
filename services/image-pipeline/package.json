@@ -2,8 +2,9 @@
   "name": "@luxcium/image-pipeline",
   "version": "0.1.0",
   "description": "A service for processing images.",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "types": "dist/typings/index.d.ts",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
     "lint": "eslint 'src/**/*.ts'",

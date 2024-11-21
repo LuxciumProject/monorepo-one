@@ -1,7 +1,7 @@
-import { MetadataExtractor } from "@/utils/MetadataExtractor";
 import { promises as fs } from "node:fs";
 import { dirname, join } from "node:path";
 import { ImageData, ImageMetadata } from "../../types";
+import { MetadataExtractor } from "../../utils/MetadataExtractor";
 import { validateMetadata } from "./validation";
 
 export class MetadataService {

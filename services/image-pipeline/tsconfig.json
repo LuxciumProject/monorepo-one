@@ -11,18 +11,24 @@
     "outDir": "./dist/src",
     "tsBuildInfoFile": "./dist/ts-out-info.lib",
     "baseUrl": "./src",
-    "emitDecoratorMetadata": false,
-    "experimentalDecorators": false,
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+    "resolveJsonModule": false,
+    /* Type Checking */
+    "strict": true,
+    /* Module Options */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     /* JavaScript Support */
     "allowJs": true,
     "checkJs": false,
-    /* Bundled library declaration files that describe the target runtime environment. */
+    /* Bundled library declaration files */
     "lib": ["dom", "esnext"],
-    /* Package names to be included without being referenced in a source file. */
-    "types": ["node"],
-    "paths": {
-      "@/*": ["./*"]
-    }
+    /* Package names to be included */
+    "types": ["node"]
   },
   "include": ["./src"],
   "exclude": ["dist", "**/jest.*.js"]
