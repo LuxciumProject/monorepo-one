@@ -33,6 +33,7 @@ export function createResizeStep(options: {
           dimensions: {
             width: options.width,
             height: options.height,
+            aspectRatio: options.width / options.height,
           },
         },
       };

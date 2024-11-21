@@ -1,36 +1,29 @@
+import { promises as fs } from "node:fs";
 import type { ImageData } from "../../types";
-import { validateMetadata } from "./validation";
+import { analyzeFileSystem } from "./file-system-analyzer";
+import { analyzeImage } from "./image-analyzer";
 
 export function createMetadataService() {
   return {
     async processImage(imagePath: string): Promise<ImageData> {
-      // TODO: Implement actual image processing and metadata extraction
+      const buffer = await fs.readFile(imagePath);
+
+      // Get filesystem metadata
+      const fsMetadata = await analyzeFileSystem(imagePath);
+
+      // Get image metadata
+      const imageMetadata = await analyzeImage(buffer);
+
+      // Create complete image data
       const image: ImageData = {
-        buffer: Buffer.from([]), // Placeholder
+        buffer,
         metadata: {
-          filename: imagePath,
-          filepath: imagePath,
-          fileStats: {
-            size: 0, // Placeholder value
-            createdAt: new Date(), // Placeholder value
-            modifiedAt: new Date(), // Placeholder value
-          },
-          imageStats: {
-            width: 0, // Placeholder value
-            height: 0, // Placeholder value
-            colorDepth: 24, // Placeholder value
-          },
-          processing: [], // Placeholder
-          additionalMetadata: {}, // Placeholder
-          dimensions: {
-            width: 0, // Placeholder value
-            height: 0, // Placeholder value
-          },
+          ...fsMetadata,
+          ...imageMetadata,
+          processing: [],
+          additionalMetadata: {},
         },
       };
-
-      // Validate metadata
-      await validateMetadata(image.metadata);
 
       return image;
     },

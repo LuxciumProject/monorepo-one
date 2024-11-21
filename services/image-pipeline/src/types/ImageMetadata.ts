@@ -1,20 +1,15 @@
-export type ImageMetadata = {
+import type { FileStats } from "./FileStats";
+import type { ImageDimensions } from "./ImageDimensions";
+import type { ImageStats } from "./ImageStats";
+import type { ProcessingHistory } from "./ProcessingHistory";
+
+export interface ImageMetadata {
   filename: string;
   filepath: string;
-  fileStats: {
-    size: number;
-    createdAt: Date;
-    modifiedAt: Date;
-  };
-  imageStats: {
-    width: number;
-    height: number;
-    colorDepth: number;
-  };
-  processing: string[];
+  fileStats: FileStats;
+  imageStats: ImageStats;
+  dimensions: ImageDimensions;
+  exif?: Record<string, unknown>;
+  processing: ProcessingHistory[];
   additionalMetadata: Record<string, unknown>;
-  dimensions: {
-    width: number;
-    height: number;
-  };
-};
+}
