@@ -1,7 +1,6 @@
 // src/types/file-stats.ts
-export type FileStats = {
-  readonly size: number;
-  readonly created: Date;
-  readonly modified: Date;
-  readonly accessed: Date;
-};
+export interface FileStats {
+  size: number;
+  createdAt: Date;
+  modifiedAt: Date;
+}
