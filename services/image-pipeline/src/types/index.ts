@@ -1,4 +1,5 @@
 // src/index.ts
+export type { ExifData } from "./ExifData";
 export type { FileStats } from "./FileStats";
 export type { ImageData } from "./ImageData";
 export type { ImageDimensions } from "./ImageDimensions";

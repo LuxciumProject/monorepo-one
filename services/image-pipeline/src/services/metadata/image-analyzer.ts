@@ -1,44 +1,44 @@
 import sharp from "sharp";
 import type { ImageMetadata } from "../../types";
 
-// SECTION: Image Analysis Core
-// This section handles the core functionality for analyzing image properties
-
+// SECTION: Image Analysis
 /**
- * Analyzes an image buffer to extract metadata about its properties.
+ * Analyzes image buffer to extract metadata such as dimensions and format.
  *
- * @param buffer - Raw image data buffer to analyze
- * @returns Extracted image metadata including dimensions and basic stats
+ * @param buffer - The image buffer to analyze.
+ * @returns An object containing the extracted image metadata.
  *
- * @throws {Error} If the image buffer cannot be processed
+ * @throws {Error} If the image metadata cannot be extracted.
  *
  * @example
- * const metadata = await analyzeImage(imageBuffer);
- * console.log(metadata.dimensions); // { width: 800, height: 600, aspectRatio: 1.33 }
+ * const imageMetadata = await analyzeImage(imageBuffer);
+ * console.log(imageMetadata);
  */
 export async function analyzeImage(
   buffer: Buffer,
-): Promise<Pick<ImageMetadata, "imageStats" | "dimensions">> {
-  // INFO: Sharp's metadata() provides basic image information like dimensions
+): Promise<Pick<ImageMetadata, "dimensions" | "imageStats">> {
+  // INFO: Use sharp to get metadata from the image buffer
   const metadata = await sharp(buffer).metadata();
 
-  // WARNING: Some images may not provide all metadata fields
-  // Fallback to sensible defaults in those cases
-  return {
-    imageStats: {
-      width: metadata.width ?? 0,
-      height: metadata.height ?? 0,
-      colorDepth: metadata.channels ?? 0,
-      // TODO: Add histogram analysis
-      // HINT: Consider using Sharp's stats() for color distribution
-    },
-    dimensions: {
-      width: metadata.width ?? 0,
-      height: metadata.height ?? 0,
-      // SIDE EFFECTS: aspectRatio calculation depends on height being non-zero
-      aspectRatio: (metadata.width ?? 0) / (metadata.height ?? 1),
-    },
+  const dimensions = {
+    width: metadata.width ?? 0,
+    height: metadata.height ?? 0,
+    orientation: metadata.orientation ?? 0,
+    aspectRatio:
+      metadata.width && metadata.height ? metadata.width / metadata.height : 0,
   };
+
+  const imageStats = {
+    format: metadata.format ?? "unknown",
+    hasAlpha: metadata.hasAlpha ?? false,
+    isProgressive: metadata.isProgressive ?? false,
+    channels: metadata.channels ?? 0,
+    width: metadata.width ?? 0,
+    height: metadata.height ?? 0,
+    colorDepth: typeof metadata.depth === "number" ? metadata.depth : 0,
+  };
+
+  return { dimensions, imageStats };
 }
 
 // UNIMPLEMENTED: Advanced image analysis features

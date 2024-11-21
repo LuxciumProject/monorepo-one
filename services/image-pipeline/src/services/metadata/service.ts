@@ -38,7 +38,7 @@ export function createMetadataService() {
         metadata: {
           ...fsMetadata,
           ...imageMetadata,
-          ...exifData,
+          exif: exifData,
           processing: [],
           additionalMetadata: {},
         },
