@@ -9,7 +9,7 @@ export interface ImageMetadata {
   fileStats: FileStats;
   imageStats: ImageStats;
   dimensions: ImageDimensions;
-  exif?: Record<string, unknown>;
+  exif: Record<string, unknown>; // Updated to be non-optional
   processing: ProcessingHistory[];
   additionalMetadata: Record<string, unknown>;
 }
