@@ -1,8 +1,8 @@
-import { ProcessingHistory } from "./ProcessingHistory";
-import { ProcessingStage } from "./ProcessingStage";
-
-export type ProcessingStatus = {
-  readonly stage: ProcessingStage;
-  readonly startTime: Date;
-  readonly history: readonly ProcessingHistory[];
-};
+/**
+ * Represents the status of a processing stage.
+ */
+export type ProcessingStatus =
+  | "pending"
+  | "in-progress"
+  | "completed"
+  | "failed";

@@ -1,15 +1,23 @@
 {
   "name": "@luxcium/image-pipeline",
   "version": "0.1.0",
-  "description": "A service for processing images.",
+  "description": "A service for processing images and extracting metadata",
   "main": "dist/src/index.js",
   "types": "dist/typings/index.d.ts",
   "type": "commonjs",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint 'src/**/*.ts'",
+    "clean": "rimraf dist",
+    "dev": "ts-node-dev --respawn src/main.ts",
     "format": "prettier --write 'src/**/*.ts'",
-    "start": "node dist/main.js"
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "prebuild": "npm run clean",
+    "start": "node dist/main.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@eslint/js": "~9.12.0",

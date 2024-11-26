@@ -36,6 +36,8 @@ export async function analyzeImage(
     width: metadata.width ?? 0,
     height: metadata.height ?? 0,
     colorDepth: typeof metadata.depth === "number" ? metadata.depth : 0,
+    histogram: [], // Placeholder for histogram data
+    dominantColor: "", // Placeholder for dominant color
   };
 
   return { dimensions, imageStats };

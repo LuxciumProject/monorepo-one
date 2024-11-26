@@ -1,8 +1,14 @@
 // src/types/ImageData.ts
 import type { ImageMetadata } from "./ImageMetadata";
 
+/**
+ * Represents the image data along with its metadata.
+ */
 export type ImageData = {
+  /** The binary buffer of the image */
   readonly buffer: Buffer;
+
+  /** Metadata associated with the image */
   readonly metadata: ImageMetadata;
 };
 

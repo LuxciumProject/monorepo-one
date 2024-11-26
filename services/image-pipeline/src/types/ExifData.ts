@@ -1,28 +1,34 @@
 /**
- * Represents normalized EXIF metadata extracted from an image.
+ * Represents the EXIF data extracted from an image.
  */
-export interface ExifData extends Record<string, unknown> {
+export interface ExifData {
   /** Camera manufacturer */
-  make: string;
+  make?: string;
 
   /** Camera model */
-  model: string;
+  model?: string;
 
-  /** Exposure time in seconds */
-  exposureTime: number;
+  /** Orientation of the image */
+  orientation?: number;
 
-  /** F-number (aperture) */
-  fNumber: number;
+  /** X resolution of the image */
+  xResolution?: number;
 
-  /** ISO speed */
-  iso: number;
+  /** Y resolution of the image */
+  yResolution?: number;
 
-  /** Focal length in millimeters */
-  focalLength: number;
+  /** Resolution unit of the image */
+  resolutionUnit?: number;
 
-  /** Original date/time when photo was taken */
-  dateTaken: string;
+  /** Software used to process the image */
+  software?: string;
 
-  /** Raw EXIF data object for additional metadata */
-  raw: Record<string, unknown>;
+  /** Date and time when the image was created */
+  dateTime?: string;
+
+  /** Artist who created the image */
+  artist?: string;
+
+  /** Copyright information of the image */
+  copyright?: string;
 }

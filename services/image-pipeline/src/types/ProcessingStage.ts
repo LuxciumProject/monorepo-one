@@ -1,8 +1,12 @@
 // src/types/processing.ts
-export type ProcessingStage =
-  | "queued"
-  | "analyzing"
-  | "optimizing"
-  | "transforming"
-  | "completed"
-  | "failed";
+
+import { ProcessingStatus } from "./ProcessingStatus";
+
+/**
+ * Represents a processing stage in the image pipeline.
+ */
+export interface ProcessingStage {
+  name: string;
+  status: ProcessingStatus;
+  timestamp: Date;
+}
