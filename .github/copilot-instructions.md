@@ -144,10 +144,168 @@ The goal of this guide is to ensure that generated code is both human-readable a
   - **Java**: Use Javadoc.
 - **Best Practices**: Give examples and make sure to explain *why* something is done.
 
-## Comments and Annotations
+## Comments Documentation and Annotations
 
-- **Use TSDoc**: Follow TSDoc for writing clear comments.
-- **Add Context**: Include the filename and path in comments for more context.
+Remember that the code we are producing will be read by other ai agents and developers. It is important to provide clear and concise comments to help others understand the codebase. Here are some guidelines to follow:
+
+- **Use Comments Wisely**: Place shebangs, encoding, and other metadata at the top of the file.
+- **Add Context**: Always include the filename and path in a comment for more context.
+- **Use TSDoc**: Follow the TSDoc standard for writing comments in TypeScript.
+- **Use TypeDoc**: Keep the codebase well-documented using TypeDoc.
+- **Use Annotations**: Add annotations like `// TODO`, `// FIXME`, and `// UNIMPLEMENTED` to mark tasks.
+
+### **Use TSDoc**: Follow TSDoc standard for writing comments in TypeScript
+
+TSDoc is a standard for documenting TypeScript code that provides a structured way to write comments in the codebase. It helps developers understand the code better and generates documentation automatically.
+
+#### Key Features
+
+1. Comment Format
+
+   ```typescript
+   /**
+    * Description of the function
+    * @param userName - The user's name
+    * @returns True if operation succeeds
+    */
+   function createUser(userName: string): boolean {
+     // Implementation
+   }
+   ```
+
+2. Core Tags
+   - `@param` - Documents parameters
+   - `@returns` - Documents return value
+   - `@throws` - Documents exceptions
+   - `@example` - Provides usage examples
+   - `@remarks` - Additional details
+   - `@see` - References other documentation
+
+3. Type System Tags
+   - `@template` - Generic type parameters
+   - `@typedef` - Custom type definitions
+   - `@type` - Type annotations
+   - `@property` - Object properties
+
+4. Access Control
+   - `@public` - Public visibility
+   - `@private` - Private visibility
+   - `@protected` - Protected visibility
+   - `@internal` - Internal use only
+
+5. Key Benefits
+   - TypeScript-aware documentation
+   - IDE integration with IntelliSense
+   - Automatic documentation generation
+   - Type information preservation
+   - Markdown support
+
+### **Use TypeDoc**: Keep the codebase well-documented using TypeDoc
+
+TypeDoc is a documentation generator for TypeScript projects that converts comments in the source code into rendered HTML documentation or other formats. It provides a way to document code using comments that are easy to read and understand.
+
+- Key Benefits
+  - Automatic documentation generation
+  - Type information extraction
+  - Markdown support
+  - Multiple output formats
+  - Integration with build tools
+  - Source code linking
+  - API documentation
+  - Search functionality
+
+For TypeDoc, there are three main types of documentation tags:
+
+1. Block Tags
+
+   ```typescript
+   /**
+    * @module MyModule Main application module
+    * @description This module handles core functionality
+    * @version 1.0.0
+    * @since 2.0.0
+    * @deprecated Use NewModule instead
+    * @beta This is a beta feature
+    * @internal For internal use only
+    */
+   ```
+
+2. Inline Tags
+
+   ```typescript
+   /**
+    * Processes user data
+    * {@link User} The user interface
+    * {@label UPDATE_USER} Operation label
+    * {@inheritDoc BaseClass} Inherit docs
+    */
+   function processUser(user: User): void {
+     // Implementation
+   }
+   ```
+
+3. Modifier Tags
+
+   ```typescript
+   /**
+    * @public Available to all
+    * @private Internal use only
+    * @protected Available to inheriting classes
+    * @readonly Cannot be modified
+    * @sealed Cannot be inherited
+    */
+   ```
+
+#### Key Tag Categories
+
+1. Visibility and Access
+   - `@public` - Publicly accessible
+   - `@private` - Private to containing class/module
+   - `@protected` - Available to inheriting classes
+   - `@internal` - For internal use only
+   - `@readonly` - Read-only property/value
+
+2. Status and Lifecycle
+   - `@beta` - Beta feature
+   - `@alpha` - Alpha/experimental feature
+   - `@deprecated` - Marked for deprecation
+   - `@experimental` - Experimental feature
+   - `@stable` - Stable API
+   - `@sealed` - Cannot be inherited
+
+3. Type System
+   - `@type` - Type definition
+   - `@interface` - Interface definition
+   - `@class` - Class definition
+   - `@enum` - Enumeration
+   - `@typedef` - Custom type definition
+   - `@template` - Generic type parameter
+
+4. Documentation
+   - `@example` - Usage examples
+   - `@see` - Reference to other documentation
+   - `@link` - Link to other symbols
+   - `@inheritDoc` - Inherit documentation
+   - `@remarks` - Additional details
+   - `@summary` - Brief description
+   - `@since` - Version introduced
+   - `@version` - Current version
+
+5. Parameters and Returns
+   - `@param` - Parameter description
+   - `@returns` - Return value description
+   - `@throws` - Possible exceptions
+   - `@async` - Asynchronous method
+   - `@generator` - Generator function
+   - `@yields` - Generator yield value
+
+6. Module Organization
+   - `@module` - Module definition
+   - `@namespace` - Namespace definition
+   - `@package` - Package information
+   - `@default` - Default value
+   - `@hidden` - Hide from documentation
+   - `@ignore` - Ignore in documentation
 
 ### Types of Comments
 

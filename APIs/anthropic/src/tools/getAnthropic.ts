@@ -10,11 +10,12 @@ const currentDate = new Date().toLocaleDateString('en-US', {
 });
 
 let count: number = -1;
+
 export const getAnthropic = (() => {
   let anthropic: Anthropic | null = null;
   console.log('getAnthropic seted', ++count + 1);
   return function getAnthropic(
-    env_anthropic_api_key = 'vscode_home_dev_anthropic',
+    env_anthropic_api_key = 'vscode_home_dev_anthropic'
   ): {
     anthropic: Anthropic;
     currentDate: string;
