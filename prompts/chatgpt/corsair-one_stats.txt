@@ -1,15 +1,11 @@
 luxcium@corsair-one
 -------------------
-Local IP: 192.168.15.15
-OS: Fedora Linux 39 (KDE Plasma)
-Kernel: 6.7.3-200.fc39.x86_64
+OS: Fedora Linux 40 (KDE Plasma) x86_64
+Kernel: 6.11.10-200.fc40.x86_64
 Shell: bash 5.2.26
-Terminal: vscode
-DE: Plasma 5.27.10
-WM: KWin
-WM Theme: Sunset-dark
-Locale: fr_CA.utf8
-CPU: Intel i9-10900X (20) @ 4.8GHz [53.0°C]
+DE: Plasma 6.2.3
+WM: kwin
+Terminal: konsole
+CPU: Intel i9-10900X (20) @ 3.700GHz
 GPU: NVIDIA TITAN Xp
-GPU: NVIDIA TITAN Xp
-Resolution: 3840x2160 @ 60.00Hz, 1920x1080 @ 60.00Hz
+Memory: 128484MiB
