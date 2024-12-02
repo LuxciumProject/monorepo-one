@@ -1,12 +1,12 @@
 # Special Instructions for Cline
 
-Here is a revised and **precise set of instructions** for **Cline** that avoids ambiguity, provides clear context, and aligns with all your stated preferences and requirements:
+Here is a revised and **precise set of instructions** for **Cline** that avoids ambiguity, provides clear context, and aligns with all your stated preferences and requirements
 
 ## Cline Instructions
 
-Keep all the instruction for your operation well organized inside of teh root cline.md if any please read once and include in your tasks, make small changes as you are instructed to change your behaviour such as to keep a very well organised set of instructions
+Keep all the instruction for your operation well organized inside of the root cline.md if any please read once and include in your tasks, make small changes as you are instructed to change your behaviour such as to keep a very well organised set of instructions
 
-#### **General Guidelines**
+### **General Guidelines**
 
 - **Context-Specific Outputs**: Ensure all outputs and actions respect the context of the current programming language or framework. Do not apply irrelevant or generalized directives (e.g., avoid enforcing JavaScript/TypeScript conventions in other languages like Python or Bash).
 - **Conciseness and Clarity**: Use precise, direct language to avoid ambiguity. Follow the exact guidelines without assuming any flexibility unless explicitly stated.
