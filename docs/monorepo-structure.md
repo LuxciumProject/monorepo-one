@@ -1,13 +1,8 @@
-# Documentation
+# Monorepo Structure
 
-## Table of Contents
+This document provides an overview of the folder structure and metadata for the `monorepo-one` project. It includes information about each folder and subfolder, their purpose, and any relevant metadata.
 
-- [Monorepo Structure](monorepo-structure.md)
-- [Naming Conventions](naming-conventions.md)
-
-## Monorepo Structure
-
-The `monorepo-one` project is organized into several key directories, each serving a specific purpose. Below is an overview of the main directories and their contents:
+## Folder Structure
 
 ### Root Directory
 

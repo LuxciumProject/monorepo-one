@@ -24,6 +24,9 @@
      * instead of the latest version.
      */
     // "some-library": "1.2.3"
+    "typescript": "4.5.4",
+    "eslint": "7.32.0",
+    "prettier": "2.5.1"
   },
 
   /**
@@ -58,5 +61,17 @@
     // "typescript": [
     //   "~2.4.0"
     // ]
+    "typescript": [
+      "~4.4.0",
+      "~4.3.0"
+    ],
+    "eslint": [
+      "~7.31.0",
+      "~7.30.0"
+    ],
+    "prettier": [
+      "~2.4.0",
+      "~2.3.0"
+    ]
   }
 }

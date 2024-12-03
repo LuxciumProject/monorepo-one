@@ -50,6 +50,11 @@
 
 - [Scripts](/scripts/README.md): Utility and automation scripts for development and operations.
 
+### DOCUMENTATION
+
+- [Monorepo Structure](/docs/monorepo-structure.md): Documentation of the folder structure and metadata.
+- [Naming Conventions](/docs/naming-conventions.md): Guide to the agreed-upon naming conventions for files, folders, and variables.
+
 (Note: The links to README.md files are placeholders and will need to be verified for correctness. Each subdirectory should contain a README.md that provides further details about its contents.)
 
 ## Access for ChatGPT and Other AI Agents to This Repository
