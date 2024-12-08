@@ -82,6 +82,17 @@ The goal of this guide is to ensure that generated code is both human-readable a
 - **Node Imports**: Use the `node:` prefix when importing Node.js core modules to clearly distinguish them from user-defined modules.
 - **Strict Mode**: Enable strict mode in `tsconfig.json` (`"strict": true`) to enforce stronger type checking.
 - **Named Exports**: Use named exports for predictability and ease of refactoring.
+- **Export Types with IsolatedModules**: When re-exporting types with 'isolatedModules' enabled, always use the 'export type' keyword:
+
+  ```typescript
+  // Correct
+  export type { MyType } from './types';
+
+  // Incorrect
+  export { MyType } from './types';
+  ```
+
+- **Index File Exports**: Ensure all index.ts files explicitly use the 'type' keyword when re-exporting types, following the Barrel-Only Index Paradigm.
 
 ## Error Handling
 
@@ -329,6 +340,47 @@ For TypeDoc, there are three main types of documentation tags:
 - `// REVIEW NEEDED:` – Needs someone to check.
 - `// SIDE EFFECTS:` – Explains side effects.
 - `// HINT:` – Gives tips for better code.
+
+## Remember to Include Specified Instructions
+
+- **Always Remember**: AI agents must always remember to include in the files the things they are asked to remember.
+
+- **Do Not Forget Instructions**: AI agents should not forget any instructions that are included unless there is a specific request and confirmation to change anything that would result in removing some instructions.
+
+- **Explicit Inclusion**: Explicitly direct AI agents to always modify files to include the things that must be remembered.
+
+- **Follow TypeScript Rules**: AI agents must never forget to always follow our strict rules in TypeScript when writing exports (re-exporting) such as: "Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'." Ensure that all index files include the keyword `type` where necessary.
+
+## TypeScript Rules
+
+- **Always Remember Instructions**: AI agents must actively include in the files any specified instructions they are asked to remember. They should never remove anything unless specifically requested and confirmed.
+
+- **Modify `.github/copilot-instructions.md` When Needed**: AI agents with the capability should update the `.github/copilot-instructions.md` file to include new instructions or reminders. If an AI agent lacks this capability, they should explain the necessary changes to those who can modify the file.
+
+- **Explicit Inclusion in Code**: AI agents should ensure that important instructions are explicitly included in the code, especially in TypeScript files. Use comments or appropriate annotations to make these instructions clear.
+
+- **Follow TypeScript Export Rules**: Always adhere to strict TypeScript rules when writing exports. For example, "Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'." Ensure all `index.ts` files include the keyword `type` where necessary.
+
+## Instructions for AI Agents
+
+### Remembering and Updating Instructions
+
+- **Instruction Management**: AI agents must maintain a record of all instructions they are asked to remember and incorporate them into their responses.
+
+- **File Modification Protocol**:
+  - AI agents with file modification capabilities should update `.github/copilot-instructions.md` to include new instructions
+  - AI agents without this capability must explain the necessary changes to those who can modify the file
+  - Document the filepath and specific sections that need updating
+
+- **Instruction Preservation**:
+  - Never remove existing instructions without explicit request and confirmation
+  - When adding new instructions, preserve all existing content
+  - Place new instructions in their most relevant sections
+
+- **Documentation Updates**:
+  - Include clear explanations of why changes are needed
+  - Reference the original request that prompted the update
+  - Maintain consistent formatting and style
 
 ## Why Use This Guide?
 
