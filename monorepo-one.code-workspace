@@ -1,10 +1,5 @@
 {
   "settings": {
-
-    "typescript.tsdk": "node_modules/typescript/lib",
-
-
-
     "window.title": "🧩°MONOREPO_ONE°🌟 ${dirty}(${focusedView}) ${activeEditorShort}  ${activeFolderMedium}",
     /*
   |-···----------------------------------------------------------···-|
@@ -91,7 +86,7 @@
     },
     "prettier.configPath": ".prettierrc",
     "[typescript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
