@@ -1,24 +1,16 @@
 {
   "unwantedRecommendations": [],
   "recommendations": [
-    "aaron-bond.better-comments",
-    "alefragnani.Bookmarks",
-    "christian-kohler.path-intellisense",
     "dbaeumer.vscode-eslint",
-    "dlech.chmod",
-    "dplain.jest-test-language-support",
     "esbenp.prettier-vscode",
-    "formulahendry.code-runner",
-    "ghmcadams.lintlens",
-    "gruntfuggly.todo-tree",
-    "joeberria.statusbarerror",
-    "Luxcium.pop-n-lock-theme-vscode",
-    "PKief.material-icon-theme",
-    "salbert.comment-ts",
-    "SophodorosLLC.codevalet-vscode",
-    "ue.alphabetical-sorter",
-    "usernamehw.errorlens",
-    "VisualStudioExptTeam.vscodeintellicode",
-    "saoudrizwan.claude-dev"
+    "bradlc.vscode-tailwindcss",
+    "prisma.prisma",
+    "ms-vscode.vscode-typescript-next",
+    "statelyai.stately-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "formulahendry.auto-rename-tag",
+    "naumovs.color-highlight",
+    "christian-kohler.path-intellisense",
+    "chrmarti.regex"
   ]
 }

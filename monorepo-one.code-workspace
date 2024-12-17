@@ -1,5 +1,10 @@
 {
   "settings": {
+
+    "typescript.tsdk": "node_modules/typescript/lib",
+
+
+
     "window.title": "🧩°MONOREPO_ONE°🌟 ${dirty}(${focusedView}) ${activeEditorShort}  ${activeFolderMedium}",
     /*
   |-···----------------------------------------------------------···-|
@@ -13,7 +18,8 @@
     "editor.fontFamily": "'FiraCode Nerd Font'",
     "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
     "files.associations": {
-      "*.json": "jsonc"
+      "*.json": "jsonc",
+      "*.css": "tailwindcss"
     },
     // ~@-----------------------------------------------------------@~
     /*
@@ -83,13 +89,9 @@
       "chatgpt": "cobol",
       "prompts": "log"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.requireConfig": true,
     "prettier.configPath": ".prettierrc",
-    "typescript.format.enable": false,
-    "javascript.format.enable": false,
     "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -2086,9 +2088,7 @@
       "tools",
       "prompts"
     ],
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -2098,18 +2098,10 @@
     "[dockerfile]": {
       "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+
+
+
+
     "files.watcherExclude": {
       "**/build/**": true,
       "**/dist/**": true,
@@ -2131,10 +2123,8 @@
       "markdown": true,
       "scminput": true
     },
+
     "gitHistory.hideCommitViewExplorer": false,
-    "[markdown]": {
-      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
     "accessibility.signals.taskCompleted": {
       "sound": "off"
     },
