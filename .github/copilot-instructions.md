@@ -116,6 +116,12 @@ The goal of this guide is to ensure that generated code is both human-readable a
 
 ## Tools and Configurations
 
+- **PACKAGE MANAGEMENT RULES**:
+  - Inside monorepo-one: Use ONLY Rush commands (rush add -m -p, rush update)
+  - Outside monorepo-one: Use ONLY pnpm/pnpx commands (pnpm add, pnpx)
+  - NEVER use npm, yarn, or npx anywhere
+  - NEVER use pnpm directly inside monorepo-one when exists a rush stack command for the same purpose.
+
 - **Rush CLI Commands**:
   - **`rush update`**: Install and link dependencies.
   - **`rush build`**: Compile all projects in the correct order.
