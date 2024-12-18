@@ -1,0 +1,21 @@
+# This file specifies the users responsible for code in different parts of the repository.
+
+# Core Components
+/library/ @Luxcium
+/services/ @Luxcium
+/APIs/ @Luxcium
+
+# Backend & Frontend
+/backend/ @Luxcium
+/frontend/ @Luxcium
+
+# Development Resources
+/examples/ @Luxcium
+/common/ @Luxcium
+/scripts/ @Luxcium
+
+# Additional Resources
+/docker/ @Luxcium
+/docs/ @Luxcium
+/infrastructure/ @Luxcium
+/helpers/ @Luxcium

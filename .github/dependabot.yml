@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/services/image-scout"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/services/questrade-ts"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/services/rpc-worker-pool"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/library/mapping-tools"
+    schedule:
+      interval: "daily"
