@@ -24,7 +24,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](./
 
 ## Code Style
 
-Please follow the code style guidelines outlined in our [Code Style Guide](./copilot-instructions.md). Consistent code style helps maintain readability and makes it easier for others to understand and review your code.
+Please follow the code style guidelines outlined in our [Code Style Guide](./CODE_STYLE_GUIDE.md). Consistent code style helps maintain readability and makes it easier for others to understand and review your code.
 
 ## Pull Request Process
 
