@@ -555,6 +555,13 @@
       ]
     },
     {
+      "packageName": "@modelcontextprotocol/servers",
+      "projectFolder": "examples/mcp-servers",
+      "tags": [
+      "examples"
+      ]
+    },
+    {
       "packageName": "playground-example",
       "projectFolder": "examples/playground",
       "tags": [

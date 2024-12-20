@@ -2386,6 +2386,10 @@
       "path": "examples/gpu-stuff"
     },
     {
+      "name": "           🎱🪄 mcp-servers",
+      "path": "examples/mcp-servers"
+    },
+    {
       "name": "           🎱🪄 playground",
       "path": "examples/playground"
     },
