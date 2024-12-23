@@ -1,0 +1,1873 @@
+{
+  "editor.semanticHighlighting.enabled": false,
+  "editor.suggest.showIcons": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.autoSurround": "languageDefined",
+  "editor.codeLens": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.experimental.asyncTokenization": true,
+  "editor.find.autoFindInSelection": "multiline",
+  "editor.find.seedSearchStringFromSelection": "selection",
+  "editor.folding": true,
+  "editor.foldingMaximumRegions": 10000,
+  "editor.foldingStrategy": "auto",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.glyphMargin": true,
+  "editor.gotoLocation.alternativeDeclarationCommand": "editor.action.goToTypeDefinition",
+  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToTypeDefinition",
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.hover.delay": 750,
+  "editor.inlayHints.padding": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "on",
+  "editor.linkedEditing": true,
+  "editor.minimap.maxColumn": 70,
+  "editor.minimap.showSlider": "always",
+  "editor.multiCursorLimit": 100000,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.overviewRulerBorder": true,
+  "editor.parameterHints.cycle": true,
+  "editor.quickSuggestionsDelay": 100,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.scrollbar.verticalScrollbarSize": 18,
+  "editor.showFoldingControls": "always",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 8,
+  "editor.stickyTabStops": true,
+  "editor.suggest.insertMode": "insert",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordSeparators": "`~!@$%^&*()=+[]{}\\|;:'\",.<>/?",
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 121,
+  "editor.wrappingIndent": "deepIndent",
+  "editor.wrappingStrategy": "advanced",
+  "breadcrumbs.enabled": true,
+  "inlineChat.mode": "preview",
+  "editor.snippetSuggestions": "inline",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.customCommand": "echo Hello",
+  "code-runner.cwd": "",
+  "code-runner.defaultLanguage": "typescript",
+  "code-runner.enableAppInsights": true,
+  "code-runner.fileDirectoryAsCwd": false,
+  "code-runner.ignoreSelection": true,
+  "code-runner.preserveFocus": false,
+  "code-runner.respectShebang": false,
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.showExecutionMessage": true,
+  "code-runner.showRunCommandInEditorContextMenu": true,
+  "code-runner.showRunCommandInExplorerContextMenu": true,
+  "code-runner.showRunIconInEditorTitleMenu": true,
+  "code-runner.showStopIconInEditorTitleMenu": true,
+  "code-runner.temporaryFileName": "tempCodeRunnerFile",
+  "code-runner.terminalRoot": "",
+  "codesnap-plus.boxShadow": "0.5em 1em 2em rgba(10, 5, 30, 0.7)",
+  "codesnap-plus.containerPadding": "3.5em",
+  "codesnap-plus.transparentBackground": true,
+  "codeValet.tool.comment.wrap.column": 80,
+  "codeValet.tool.comment.wrap.prefixes": "*  # /// ",
+  "comments.openView": "file",
+  "conventionalCommits.emojiFormat": "emoji",
+  "conventionalCommits.lineBreak": "\\n",
+  "conventionalCommits.showEditor": true,
+  "css.validate": false,
+  "debug.confirmOnExit": "always",
+  "debug.javascript.codelens.npmScripts": "never",
+  "debug.toolBarLocation": "docked",
+  "diffEditor.codeLens": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "eslint.format.enable": true,
+  "eslint.onIgnoredFiles": "warn",
+  "eslint.quiet": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.incrementalNaming": "smart",
+  "explorer.openEditors.minVisible": 10,
+  "explorer.openEditors.sortOrder": "fullPath",
+  "explorer.openEditors.visible": 10,
+  "explorer.sortOrder": "type",
+  "extensions.ignoreRecommendations": true,
+  "files.defaultLanguage": "txt",
+  "files.enableTrash": false,
+  "files.insertFinalNewline": true,
+  "files.participants.timeout": 7500,
+  "files.simpleDialog.enable": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.alwaysSignOff": true,
+  "git.autofetch": true,
+  "git.autoStash": true,
+  "git.confirmSync": false,
+  "git.detectSubmodules": true,
+  "git.enableSmartCommit": true,
+  "git.fetchOnPull": true,
+  "git.followTagsWhenSync": true,
+  "git.ignoreLimitWarning": true,
+  "git.inputValidation": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.postCommitCommand": "sync",
+  "git.pruneOnFetch": true,
+  "git.repositoryScanMaxDepth": 2,
+  "git.showProgress": true,
+  "git.statusLimit": 0,
+  "git.suggestSmartCommit": true,
+  "git.untrackedChanges": "separate",
+  "git.useCommitInputAsStashMessage": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "gitlens.advanced.repositorySearchDepth": 10,
+  "gitlens.hovers.annotations.changes": true,
+  "gitlens.hovers.annotations.details": true,
+  "gitlens.hovers.annotations.enabled": true,
+  "gitlens.hovers.annotations.over": "annotation",
+  "gitlens.hovers.avatars": true,
+  "gitlens.hovers.changesDiff": "hunk",
+  "gitlens.hovers.currentLine.changes": true,
+  "gitlens.hovers.currentLine.details": true,
+  "gitlens.hovers.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "annotation",
+  "gitlens.hovers.enabled": true,
+  "gitlens.statusBar.reduceFlicker": true,
+  "gitlens.views.repositories.files.layout": "list",
+  "html.autoClosingTags": false,
+  "html.format.wrapAttributes": "preserve",
+  "html.format.wrapLineLength": 120,
+  "html.suggest.html5": true,
+  "html.validate.scripts": false,
+  "html.validate.styles": false,
+  "javascript.autoClosingTags": false,
+  "javascript.format.semicolons": "insert",
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": true,
+  "js/ts.implicitProjectConfig.strictFunctionTypes": true,
+  "json.trace.server": "verbose",
+  "less.validate": false,
+  "markdown.links.openLocation": "beside",
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "npm.packageManager": "pnpm",
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "peacock.affectSideBarBorder": true,
+  "php.validate.enable": false,
+  "prettier.endOfLine": "lf",
+  "prettier.jsxSingleQuote": true,
+  "prettier.proseWrap": "preserve",
+  "prettier.requireConfig": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  // "prettier.configPath": ".prettierrc",
+  "problems.showCurrentInStatus": true,
+  "problems.sortOrder": "position",
+  "reflowMarkdown.preferredLineLength": 70,
+  "remote.restoreForwardedPorts": true,
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.defaultViewMode": "tree",
+  "scm.diffDecorationsGutterWidth": 5,
+  "scm.providerCountBadge": "visible",
+  "screencastMode.mouseIndicatorColor": "#FF3366",
+  "scss.validate": false,
+  "search.collapseResults": "alwaysCollapse",
+  "search.quickOpen.history.filterSortOrder": "recency",
+  "search.quickOpen.includeSymbols": true,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+  "search.searchOnType": true,
+  "search.searchOnTypeDebouncePeriod": 500,
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "terminal.integrated.bellDuration": 2000,
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorWidth": 3,
+  "terminal.integrated.customGlyphs": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.environmentChangesIndicator": "on",
+  "terminal.integrated.letterSpacing": 0,
+  "terminal.integrated.lineHeight": 0,
+  "terminal.integrated.scrollback": 900000,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.showExitAlert": true,
+  "terminal.integrated.splitCwd": "workspaceRoot",
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiYellow",
+  "terminal.integrated.tabs.defaultIcon": "console",
+  "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}${cwdFolder}",
+  "terminal.integrated.tabs.enableAnimation": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.tabs.focusMode": "doubleClick",
+  "terminal.integrated.tabs.hideCondition": "singleGroup",
+  "terminal.integrated.tabs.separator": " - ",
+  "terminal.integrated.tabs.showActions": "always",
+  "terminal.integrated.tabs.showActiveTerminal": "singleTerminalOrNarrow",
+  "terminal.integrated.tabs.title": "${task}${process}",
+  "editor.experimentalWhitespaceRendering": "font",
+  "typescript.autoClosingTags": false,
+  "typescript.experimental.updateImportsOnPaste": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.tsserver.maxTsServerMemory": 18432,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.validate.enable": true,
+  "window.autoDetectColorScheme": true,
+  "window.closeWhenEmpty": true,
+  "window.commandCenter": true,
+  "window.title": "${rootName}  ${dirty} ${activeEditorShort} ° † Scientia es lux principium✨ ™ ° ${activeFolderShort}",
+  "window.titleSeparator": " - ",
+  "workbench.activityBar.iconClickBehavior": "focus",
+  "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.labelFormat": "medium",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.excludeDirty": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 5,
+  "workbench.editor.openPositioning": "first",
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.sharedViewState": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.titleScrollbarSizing": "large",
+  "workbench.editor.untitled.labelFormat": "name",
+  "workbench.editor.wrapTabs": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": true,
+  "workbench.list.smoothScrolling": true,
+  "workbench.preferredDarkColorTheme": "Pop N' Lock Theme by Luxcium ✨",
+  "workbench.quickOpen.preserveInput": true,
+  "workbench.reduceMotion": "off",
+  "workbench.sash.size": 8,
+  "workbench.statusBar.visible": true,
+  "workbench.tree.indent": 16,
+  "workbench.view.alwaysShowHeaderActions": true,
+  "github.copilot.editor.enableCodeActions": true,
+  // |-··===================··-| ErrorLens |-··===================··-|
+  "errorLens.enabled": true,
+  "errorLens.delay": 0,
+  "errorLens.fontFamily": "'VictorMono Nerd Font'",
+  "errorLens.fontSize": "1.1rem",
+  "errorLens.fontWeight": "bold",
+  "errorLens.fontStyleItalic": true,
+  "errorLens.borderRadius": "10px",
+  "errorLens.margin": "0.75rem",
+  "errorLens.padding": "0rem 0.5rem",
+  "errorLens.messageBackgroundMode": "line",
+  "errorLens.messageMaxChars": 500,
+  "errorLens.onSaveTimeout": 1000,
+  "errorLens.codeLensOnClick": "none",
+  "errorLens.delayMode": "debounce",
+  "errorLens.followCursorMore": 0,
+  "errorLens.followCursor": "allLines",
+  "errorLens.replaceLinebreaksSymbol": "⏎",
+  "errorLens.searchForProblemQuery": "https://duckduckgo.com/?q=$message",
+  "errorLens.selectProblemType": "activeLine",
+  "errorLens.codeLensEnabled": false,
+  "errorLens.ignoreUntitled": false,
+  "errorLens.onSave": false,
+  "errorLens.problemRangeDecorationEnabled": true,
+  "errorLens.scrollbarHackEnabled": true,
+  "errorLens.enabledInMergeConflict": true,
+  "errorLens.enableOnDiffView": true,
+  "errorLens.messageEnabled": true,
+  "errorLens.onSaveUpdateOnActiveEditorChange": true,
+  "errorLens.removeLinebreaks": true,
+  // |-··===================··-| ErrorLens |-··===================··-|
+  "errorLens.statusBarColorsEnabled": true,
+  "errorLens.statusBarIconsEnabled": true,
+  "errorLens.statusBarIconsUseBackground": true,
+  "errorLens.statusBarMessageEnabled": true,
+  "errorLens.statusBarIconsPriority": 0,
+  "errorLens.statusBarMessagePriority": 0,
+  "errorLens.statusBarCommand": "goToLine",
+  "errorLens.statusBarIconsAlignment": "left",
+  "errorLens.statusBarIconsAtZero": "hide",
+  "errorLens.statusBarIconsTargetProblems": "activeEditor",
+  "errorLens.statusBarMessageAlignment": "right",
+  "errorLens.statusBarMessageType": "closestProblem",
+  // |-··===================··-| ErrorLens |-··===================··-|
+  "errorLens.statusBarMessageTemplate": "$severity $message",
+  "errorLens.codeLensTemplate": "$severity $message [$source #$code] ($count)",
+  "errorLens.messageTemplate": "$severity $message [$source #$code] ($count)",
+  // |-··===================··-| ErrorLens |-··===================··-|
+  "errorLens.gutterIconSet": "emoji",
+  "errorLens.gutterIconSize": "75%",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconsFollowCursorOverride": true,
+  "errorLens.errorGutterIconColor": "#F36F",
+  "errorLens.hintGutterIconColor": "#39CF",
+  "errorLens.infoGutterIconColor": "#FB0F",
+  "errorLens.warningGutterIconColor": "#CF3F",
+  "errorLens.errorGutterIconPath": "",
+  "errorLens.hintGutterIconPath": "",
+  "errorLens.infoGutterIconPath": "",
+  "errorLens.warningGutterIconPath": "",
+  "errorLens.exclude": [],
+  "errorLens.excludePatterns": [],
+  "errorLens.excludeWorkspaces": [],
+  "errorLens.replace": [],
+  "errorLens.light": {},
+  /*
+   */
+  "errorLens.gutterEmoji": {
+    "error": "🍒",
+    "info": "✨",
+    "warning": "🧩",
+    "hint": "🎯"
+  },
+  "errorLens.severityText": ["🍒 ~~> ", "🧩 ==> ", "✨ -> ", "🎯 +> "],
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "errorLens.respectUpstreamEnabled": {
+    "enabled": false,
+    "inlineMessage": false,
+    "gutter": false,
+    "statusBar": false
+  },
+  "errorLens.decorations": {
+    "errorRange": {},
+    "warningRange": {},
+    "infoRange": {},
+    "hintRange": {}
+  },
+  "errorLens.excludeBySource": [
+    "shellcheck(SC2207)",
+    "shellcheck(SC2317)",
+    "shellcheck(SC2015)",
+    "eslint(@typescript-eslint/no-explicit-any)",
+    "ts(7016)"
+  ],
+  "errorLens.multilineMessage": {
+    "decorationMaxNumberOfLines": 6,
+    "preferFittingMessageMultiplier": 2,
+    "maxColumnForCalculation": 130,
+    // "preferSameLineMultiplier": 1,
+    "highlightProblemLine": "line",
+    "alignStart": 0,
+    "alignEnd": 0,
+    "margin": 4,
+    "padding": 1,
+    "borderRadius": "",
+    "useFixedPosition": false
+  },
+  "errorLens.alignMessage": {
+    "start": 0,
+    "end": 0,
+    "minimumMargin": 0
+  },
+  "errorLens.codeLensLength": {
+    "min": 0,
+    "max": 200
+  },
+  "errorLens.disableLineComments": {
+    "eslint": "// eslint-disable-next-line $code",
+    "Stylelint": "/* stylelint-disable-next-line $code */"
+  },
+  "errorLens.lintFilePaths": {
+    "eslint": ["**/*.eslintrc.{js,cjs,yaml,yml,json}", "**/*package.json"],
+    "Stylelint": [
+      "**/*.stylelintrc",
+      "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
+      "**/*stylelint.config.{cjs,js}",
+      "**/*package.json"
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "errorLens.errorForeground": "#F36F",
+    "errorLens.errorMessageBackground": "#F366",
+    "errorLens.errorBackground": "#F363",
+    "errorLens.warningForeground": "#CF3F",
+    "errorLens.warningMessageBackground": "#CF36",
+    "errorLens.warningBackground": "#CF33",
+    "errorLens.hintForeground": "#39CF",
+    "errorLens.hintMessageBackground": "#39C6",
+    "errorLens.hintBackground": "#39C3",
+    "errorLens.infoForeground": "#FB0F",
+    "errorLens.infoMessageBackground": "#FB06",
+    "errorLens.infoBackground": "#FB03"
+  },
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.folders.associations": {
+    "eslint-plugin": "rules"
+  },
+  "material-icon-theme.files.associations": {
+    "index.ts": "Raml",
+    "index.mts": "Raml",
+    "index.cts": "Raml",
+    "main.ts": "Contributing",
+    "main.mts": "Contributing",
+    "main.cts": "Contributing",
+    "_*.ts": "Contributing",
+    "index.js": "Json",
+    "*.cpuprofile": "Auto"
+  },
+  "files.watcherExclude": {
+    "**/.ammonite": true,
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/lib/**": true,
+    "**/out/**": true,
+    "**/string-art-generator/opencv.js": true
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "files.exclude": {
+    ".directory": true,
+    ".history": true,
+    "*.cpuprofile": true,
+    "**/*.zwc": true
+  },
+  "code-runner.languageIdToFileExtensionMap": {
+    "bat": ".bat",
+    "powershell": ".ps1",
+    "typescript": ".ts"
+  },
+  "code-runner.executorMapByGlob": {
+    "pom.xml": "cd $dir && mvn clean package",
+    "*.code-workspace": "code",
+    "tsconfig.json": "tsc -b",
+    "*.spec.?s": "jest",
+    "*.test.?s": "jest",
+    "*.spec.?sx": "jest",
+    "*.test.?sx": "jest",
+    "*.source.zsh": "source",
+    "*.src.zsh": "source",
+    "*.src.sh": "source",
+    "*.source.sh": "source",
+    "*.mp3": "play -v 0.5",
+    "*.wav": "play -v 0.5",
+    "*.wave": "play -v 0.5"
+  },
+  "code-runner.executorMap": {
+    "dockerfile": "cd $dir && docker build -t my-image . && docker run my-image",
+    "ahk": "autohotkey",
+    "applescript": "osascript",
+    "autoit": "autoit3",
+    "bat": "cmd /c",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "clojure": "lein exec",
+    "coffeescript": "coffee",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "crystal": "crystal",
+    "csharp": "scriptcs",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "dart": "dart",
+    "fsharp": "fsi",
+    "go": "go run",
+    "groovy": "groovy",
+    "haskell": "runhaskell",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "julia": "julia",
+    "kit": "kitc --run",
+    "lisp": "sbcl --script",
+    "lua": "lua",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "ocaml": "ocaml",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "perl": "perl",
+    "perl6": "perl6",
+    "php": "php",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "python": "python -u",
+    "r": "Rscript",
+    "racket": "racket",
+    "ruby": "ruby",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "sass": "sass --style expanded",
+    "scala": "scala",
+    "scheme": "csi -script",
+    "scss": "scss --style expanded",
+    "shellscript": "zsh",
+    "swift": "swift",
+    "typescript": "ts-node",
+    "v": "v run",
+    "vbscript": "cscript Nologo"
+  },
+  "code-runner.executorMapByFileExtension": {
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".cr": "crystal",
+    ".csproj": "dotnet run --project",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".dart": "dart",
+    ".exs": "elixir",
+    ".fsproj": "dotnet run --project",
+    ".hs": "runhaskell",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".jl": "julia",
+    ".kit": "kitc --run",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".lisp": "sbcl --script",
+    ".ml": "ocaml",
+    ".mp3": "play -v 0.5",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".rkt": "racket",
+    ".sass": "sass --style expanded",
+    ".scala": "scala",
+    ".scm": "csi -script",
+    ".ts": "ts-node",
+    ".v": "v run",
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript Nologo",
+    ".vsh": "v run",
+    ".wav": "play -v 0.5",
+    ".wave": "play -v 0.5",
+    ".zsh": "zsh"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.codeAction.disableRuleComment": {
+    "location": "separateLine",
+    "enable": true
+  },
+  "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue", "markdown", "json"],
+  "editor.unicodeHighlight.allowedCharacters": {
+    "α": true,
+    "σ": true,
+    "️": true,
+    "×": true
+  },
+  "terminal.integrated.profiles.linux": {
+    "tmux": {
+      "path": "tmux",
+      "color": "terminal.ansiCyan",
+      "icon": "terminal-tmux"
+    },
+    "zsh": {
+      "path": "/bin/zsh",
+      "overrideName": false,
+      "color": "terminal.ansiYellow",
+      "icon": "terminal-linux"
+    },
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "fish": null,
+    "MonoRepoOne": {
+      "path": "zsh",
+      "overrideName": true,
+      "icon": "repo",
+      "color": "terminal.ansiMagenta",
+      "args": [],
+      "env": {}
+    },
+    "pwsh": null
+  },
+  "terminal.integrated.automationProfile.linux": {
+    "overrideName": true,
+    "path": "bash",
+    "color": "terminal.ansiGreen",
+    "icon": "server-process"
+  },
+  /*
+    |-····――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+    */
+  "editor.rulers": [
+    {
+      "column": 2,
+      "color": "#9BE4"
+    },
+    {
+      "column": 70,
+      "color": "#FF8C00BB"
+    },
+    {
+      "column": 80,
+      "color": "#9BEA"
+    },
+    {
+      "column": 81,
+      "color": "#9BEA"
+    },
+    {
+      "column": 84,
+      "color": "#FFFFFF11"
+    },
+    {
+      "column": 89,
+      "color": "#DAF3FF33"
+    },
+    {
+      "column": 96,
+      "color": "#DAF3FF55"
+    },
+    {
+      "column": 104,
+      "color": "#90BCFF77"
+    },
+    {
+      "column": 114,
+      "color": "#90BCFF99"
+    },
+    {
+      "column": 120,
+      "color": "#F368"
+    },
+    {
+      "column": 121,
+      "color": "#F36A"
+    },
+    {
+      "column": 122,
+      "color": "#F80C"
+    },
+    {
+      "column": 123,
+      "color": "#F80F"
+    },
+    {
+      "column": 124,
+      "color": "#FF0D"
+    },
+    {
+      "column": 125,
+      "color": "#FF0F"
+    },
+    {
+      "column": 126,
+      "color": "#0F0F"
+    },
+    {
+      "column": 127,
+      "color": "#0F0D"
+    },
+    {
+      "column": 128,
+      "color": "#39FF"
+    },
+    {
+      "column": 129,
+      "color": "#39FC"
+    },
+    {
+      "column": 130,
+      "color": "#93FA"
+    },
+    {
+      "column": 131,
+      "color": "#93F8"
+    }
+  ],
+  "scm.diffDecorationsGutterPattern": {
+    "added": true
+  },
+  /*
+  |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
+  */
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules"],
+  "todo-tree.highlights.defaultHighlight": {
+    "background": "#FFF",
+    "borderRadius": "0px",
+    "fontWeight": "500",
+    "foreground": "#224",
+    "opacity": 50,
+    "gutterIcon": true,
+    "hideFromStatusBar": true,
+    "hideFromTree": false,
+    "icon": "alert",
+    "iconColour": "#37B",
+    "rulerLane": "none",
+    "type": "line"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "#region:": {
+      "foreground": "#DF3",
+      "background": "#DF3",
+      "iconColour": "#DF3",
+      "opacity": 30,
+      "icon": "mirror",
+      "gutterIcon": true
+    },
+    "#endregion:": {
+      "foreground": "#F15",
+      "background": "#F15",
+      "iconColour": "#F15",
+      "opacity": 30,
+      "icon": "mirror",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "BUG:": {
+      "foreground": "#F15",
+      "background": "#F15",
+      "iconColour": "#F15",
+      "fontWeight": "800",
+      "opacity": 10,
+      "icon": "bug",
+      "gutterIcon": true
+    },
+    "TODO:": {
+      "foreground": "#F80",
+      "background": "#F80",
+      "iconColour": "#F80",
+      "fontWeight": "700",
+      "opacity": 20,
+      "icon": "bookmark",
+      "gutterIcon": true
+    },
+    "FIXME:": {
+      "foreground": "#FB3",
+      "background": "#FB3",
+      "iconColour": "#FB3",
+      "fontWeight": "600",
+      "opacity": 30,
+      "icon": "tools",
+      "gutterIcon": true
+    },
+    "SECTION:": {
+      "foreground": "#DF3",
+      "background": "#DF3",
+      "iconColour": "#DF3",
+      "icon": "mirror",
+      "gutterIcon": true,
+      "fontWeight": "500",
+      "opacity": 40,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "REVIEW NEEDED:": {
+      "foreground": "#FC9",
+      "background": "#05F",
+      "opacity": 50,
+      "fontWeight": "400",
+      "gutterIcon": true,
+      "icon": "search",
+      "iconColour": "#93F"
+    },
+    "HACK:": {
+      "background": "#74F",
+      "foreground": "#FC9",
+      "opacity": 60,
+      "fontWeight": "300",
+      "gutterIcon": true,
+      "icon": "squirrel",
+      "iconColour": "#93F"
+    },
+    "XXX:": {
+      "foreground": "#E22",
+      "iconColour": "#E22",
+      "background": "#000",
+      "fontWeight": "200",
+      "opacity": 30,
+      "icon": "law",
+      "gutterIcon": true
+    },
+    "INFO:": {
+      "foreground": "#FB7",
+      "background": "#05F",
+      "iconColour": "#05F",
+      "icon": "info",
+      "gutterIcon": true,
+      "fontWeight": "300",
+      "opacity": 30,
+      "rulerLane": "full",
+      "rulerColour": "#BBB",
+      "rulerOpacity": 50
+    },
+    "WARNING:": {
+      "foreground": "#BF2",
+      "background": "#BF2",
+      "iconColour": "#BF2",
+      "fontWeight": "400",
+      "opacity": 30,
+      "icon": "alert",
+      "gutterIcon": true
+    },
+    "ERROR:": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "fontWeight": "500",
+      "opacity": 30,
+      "icon": "x-circle",
+      "gutterIcon": true
+    },
+    "UNIMPLEMENTED:": {
+      "foreground": "#FC9",
+      "background": "#F35",
+      "fontWeight": "500",
+      "icon": "skip",
+      "iconColour": "#EE3366EE",
+      "opacity": 50
+    },
+    "UNSAFE:": {
+      "background": "#900",
+      "foreground": "#FB3",
+      "iconColour": "#900",
+      "gutterIcon": true,
+      "fontWeight": "900",
+      "icon": "flame"
+    },
+    "FUNC DEF:": {
+      "foreground": "#FB7",
+      "background": "#07F",
+      "iconColour": "#55BBFFBB",
+      "icon": "package-dependencies",
+      "gutterIcon": true,
+      "opacity": 50,
+      "fontWeight": "700",
+      "rulerColour": "#FB7",
+      "hideFromStatusBar": true
+    },
+    "FUNC CALL:": {
+      "foreground": "#07F",
+      "background": "#ADE",
+      "opacity": 100,
+      "fontWeight": "700",
+      "iconColour": "#ADE",
+      "icon": "package-dependents",
+      "gutterIcon": true,
+      "rulerColour": "#07F",
+      "hideFromStatusBar": true
+    },
+    "RETURNS:": {
+      "foreground": "#224",
+      "background": "#CF2",
+      "iconColour": "#CF2",
+      "icon": "cross-reference",
+      "gutterIcon": true
+    },
+    "CONSOLE:": {
+      "foreground": "#224",
+      "background": "#4B9",
+      "iconColour": "#4B9",
+      "icon": "terminal",
+      "gutterIcon": true
+    },
+    "HARDCODE:": {
+      "foreground": "#FC9",
+      "background": "#F35",
+      "iconColour": "#F149",
+      "icon": "cpu",
+      "fontWeight": "400",
+      "gutterIcon": true
+    },
+    "ERROR HANDLER:": {
+      "foreground": "#FC9",
+      "background": "#F35",
+      "iconColour": "#F149",
+      "icon": "note",
+      "gutterIcon": true
+    },
+    "LOG:": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "checklist",
+      "gutterIcon": true
+    },
+    "!:": {
+      "foreground": "#F20",
+      "background": "#F20",
+      "iconColour": "#F20",
+      "icon": "stop",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "@:": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "icon": "mention",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "#:": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "file-binary",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "$:": {
+      "foreground": "#F84",
+      "background": "#F84",
+      "iconColour": "#F84",
+      "icon": "star",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "%:": {
+      "foreground": "#4EF",
+      "background": "#4EF",
+      "iconColour": "#4EF",
+      "icon": "file-code",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "?:": {
+      "foreground": "#39F",
+      "background": "#39F",
+      "iconColour": "#39F",
+      "icon": "unverified",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "&:": {
+      "foreground": "#93F",
+      "background": "#93F",
+      "iconColour": "#93F",
+      "icon": "squirrel",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "*:": {
+      "foreground": "#9C7",
+      "background": "#9C7",
+      "iconColour": "#9C7",
+      "icon": "north-star",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "opacity": 20
+    },
+    "-+": {
+      "foreground": "#DF3",
+      "background": "#DF3",
+      "opacity": 25,
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "-:": {
+      "background": "#F15",
+      "foreground": "#F15",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "opacity": 15
+    },
+    "->": {
+      "background": "#93F",
+      "foreground": "#5CF",
+      "gutterIcon": true,
+      "icon": "report",
+      "iconColour": "#FB0",
+      "opacity": 30,
+      "rulerColour": "#5CF5"
+    },
+    "-*": {
+      "background": "#0BF",
+      "foreground": "#FB0",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "opacity": 20,
+      "iconColour": "#FB0",
+      "rulerColour": "#FB05"
+    },
+    "-?": {
+      "foreground": "#FDB",
+      "background": "#F14",
+      "opacity": 30,
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "-&": {
+      "background": "#93F",
+      "foreground": "#5CF",
+      "opacity": 25,
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerColour": "#F45"
+    },
+    "-%": {
+      "foreground": "#FDB",
+      "background": "#BF2",
+      "opacity": 25,
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "eslint-disable": {
+      "foreground": "#5CF",
+      "background": "#93F",
+      "opacity": 30,
+      "iconColour": "#FB0",
+      "icon": "report",
+      "gutterIcon": true
+    },
+    "-!": {
+      "background": "#9BF",
+      "foreground": "#BBB",
+      "gutterIcon": false,
+      "hideFromStatusBar": true,
+      "hideFromTree": true,
+      "opacity": 20,
+      "rulerColour": "#FFF5"
+    },
+    "#-|": {
+      "foreground": "#F36",
+      "background": "#F36",
+      "iconColour": "#F36",
+      "icon": "cpu",
+      "gutterIcon": true,
+      "opacity": 20
+    },
+    "→": {
+      "foreground": "#CF2",
+      "background": "#CF2",
+      "iconColour": "#CF2",
+      "opacity": 50,
+      "icon": "cross-reference",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "←": {
+      "foreground": "#5CF",
+      "background": "#5CF",
+      "opacity": 30,
+      "gutterIcon": false,
+      "hideFromTree": true,
+      "hideFromStatusBar": true
+    },
+    "-#": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "star",
+      "opacity": 30,
+      "type": "line",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerColour": "#9BE",
+      "rulerOpacity": 50,
+      "rulerLane": "center"
+    },
+    "-$": {
+      "foreground": "#F84",
+      "background": "#F84",
+      "iconColour": "#F84",
+      "icon": "star",
+      "opacity": 30,
+      "type": "line",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "rulerColour": "#F84",
+      "rulerOpacity": 50,
+      "rulerLane": "center"
+    },
+    "::": {
+      "foreground": "#9BE",
+      "background": "#9BE",
+      "iconColour": "#9BE",
+      "icon": "grabber",
+      "gutterIcon": true,
+      "opacity": 30,
+      "type": "whole-line",
+      "rulerColour": "#9BE",
+      "rulerOpacity": 50,
+      "rulerLane": "full"
+    },
+    ":::": {
+      "foreground": "#F84",
+      "background": "#F84",
+      "iconColour": "#F84",
+      "icon": "grabber",
+      "gutterIcon": true,
+      "opacity": 30,
+      "type": "whole-line",
+      "rulerColour": "#F84",
+      "rulerOpacity": 50,
+      "rulerLane": "full"
+    }
+  },
+  "todo-tree.general.tags": [
+    "-:",
+    "-!",
+    "-?",
+    "-@",
+    "-*",
+    "-&",
+    "-#",
+    "-%",
+    "-%0",
+    "-%1",
+    "-%2",
+    "-%3",
+    "-%4",
+    "-%5",
+    "-%6",
+    "-+",
+    "->",
+    "-$",
+    ":::",
+    "::",
+    "!:",
+    "?:",
+    "[ ]",
+    "[x]",
+    "@:",
+    "*:",
+    "&:",
+    "#-|",
+    "#:",
+    "#endregion:",
+    "#region:",
+    "%:",
+    "←:",
+    "→",
+    "+:",
+    "|-::",
+    "$:",
+    "BUG:",
+    "CONSOLE:",
+    "REVIEW NEEDED:",
+    "ERROR HANDLER:",
+    "ERROR:",
+    "eslint-disable",
+    "FIXME:",
+    "FUNC CALL:",
+    "FUNC DEF:",
+    "HACK:",
+    "HARDCODE:",
+    "HINT:",
+    "INFO:",
+    "LOG:",
+    "RETURNS:",
+    "SECTION:",
+    "SEND COMMAND:",
+    "SIDE EFFECTS:",
+    "TODO:",
+    "UNIMPLEMENTED:",
+    "UNSAFE:",
+    "WARNING:",
+    "XXX:",
+    ":→",
+    "→:",
+    ":←",
+    "←",
+    "::"
+  ],
+  "todo-tree.filtering.excludedWorkspaces": [],
+  "todo-tree.filtering.ignoreGitSubmodules": false,
+  "todo-tree.filtering.includedWorkspaces": [],
+  "todo-tree.filtering.includeGlobs": [],
+  "todo-tree.filtering.includeHiddenFiles": false,
+  "todo-tree.filtering.passGlobsToRipgrep": true,
+  "todo-tree.filtering.scopes": [],
+  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  "todo-tree.general.debug": false,
+  "todo-tree.general.exportPath": "~/todo-tree-%Y%m%d-%H%M.txt",
+  "todo-tree.general.revealBehaviour": "end of todo",
+  "todo-tree.general.rootFolder": "",
+  "todo-tree.general.showActivityBarBadge": false,
+  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": false,
+  "todo-tree.general.statusBar": "current file",
+  "todo-tree.general.statusBarClickBehaviour": "cycle",
+  "todo-tree.general.tagGroups": {},
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.highlights.highlightDelay": 100,
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.regex.enableMultiLine": false, // new items
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.regex.regexCaseSensitive": true,
+  "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)",
+  "todo-tree.ripgrep.ripgrep": "",
+  "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",
+  "todo-tree.ripgrep.ripgrepMaxBuffer": 200,
+  "todo-tree.ripgrep.usePatternFile": true,
+  "todo-tree.tree.autoRefresh": true,
+  "todo-tree.tree.buttons.expand": true,
+  "todo-tree.tree.buttons.export": false,
+  "todo-tree.tree.buttons.filter": true,
+  "todo-tree.tree.buttons.groupBySubTag": false,
+  "todo-tree.tree.buttons.groupByTag": true,
+  "todo-tree.tree.buttons.refresh": true,
+  "todo-tree.tree.buttons.reveal": true,
+  "todo-tree.tree.buttons.scanMode": false,
+  "todo-tree.tree.buttons.viewStyle": true,
+  "todo-tree.tree.disableCompactFolders": false,
+  "todo-tree.tree.expanded": true,
+  "todo-tree.tree.filterCaseSensitive": false,
+  "todo-tree.tree.flat": false,
+  "todo-tree.tree.groupedBySubTag": false,
+  "todo-tree.tree.groupedByTag": false,
+  "todo-tree.tree.hideIconsWhenGroupedByTag": false,
+  "todo-tree.tree.hideTreeWhenEmpty": false,
+  "todo-tree.tree.labelFormat": "${tag} ${after} ― Line ${line}",
+  "todo-tree.tree.scanAtStartup": true,
+  "todo-tree.tree.scanMode": "workspace",
+  "todo-tree.tree.showBadges": true,
+  "todo-tree.tree.showCountsInTree": true,
+  "todo-tree.tree.showCurrentScanMode": true,
+  "todo-tree.tree.sort": true,
+  "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
+  "todo-tree.tree.subTagClickUrl": "",
+  "todo-tree.tree.tagsOnly": true,
+  "todo-tree.tree.tooltipFormat": "${filepath}, line ${line}",
+  "todo-tree.tree.trackFile": true,
+  "terminal.integrated.gpuAcceleration": "on",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // ~!------------------------500----------------------------------!~
+  "[jsonc]": {
+    "editor.fontFamily": "'FiraCode Nerd Font',",
+    "editor.fontWeight": "500",
+    "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+    "prettier.printWidth": 120
+    // !! Fira Code stylistic sets:
+    // "editor.fontLigatures": true,
+    //  !!ss01  r                  Sans-serif r
+    //  $ ss02  <= >=              Less than/greater than with horizontal bar
+    //  $ ss03  &                  Traditional ampersand
+    //  $ ss04  $                  Lightweight dollar sign
+    //  !!ss05  @                  Traditional at sign
+    //  $ ss06  \\\\\\\                 Thin backslash
+    //  $ ss07  =~ !~              Regexp matching operator
+    //  !!ss08  == === != !==      Gaps in double/triple equals
+    //  $ ss09  >>= <<= ||= |=     Compound assignments
+    //  $ ss10  Fl Tl fi fj fl ft  Full ligatures
+    //  !!zero  0                  Dotted zero
+    //  $ onum  0123456789         Old-style figures
+    // Variants:
+    //  !!cv01  a      Single-storey a
+    //  !!cv02  g      Single-storey g
+    //  !!cv03  i      Sans-serif i
+    //  !!cv04  i      i without base
+    //  $ cv05  i      i with flat tail
+    //  !!cv06  i      i with curved tail
+    //  !!cv07  l      Sans-serif l
+    //  !!cv08  l      l without base
+    //  $ cv09  l      l with flat tail
+    //  !!cv10  l      l with curved tail (same as default?)
+    //  !!cv11  0      Plain zero
+    //  $ cv12  0      Slashed zero
+    //  !!cv13  0      Dotted zero
+    //  $ cv14  3      3 with flat top
+    //  !!cv15  *      Top-aligned asterisk
+    //  !!cv16  *      Hexagonal asterisk
+    //  !!cv17  ~      Top-aligned tilde
+    //  !!cv18  %      Percent with filled dots
+    //  $ cv19  <=     Lte with horizontal bar (< =)  <= < =
+    //  !!cv20  <=     Left arrow              (< =)
+    //  $ cv21  =<     Lte                     (= <)
+    //  !!cv22  =<     Lte with horizontal bar (= <)
+    //  $ cv23  >=     Gte with horizontal bar (> =) >= > = .. => => . .. ... ....
+    //  $ cv24  /=     Not equal               (/ =)
+    //  $ cv25  .-     Clojure .- // 'VictorMono Nerd Font Mono', ",
+    //  $ cv26  :-     Prolog :-
+    //  $ cv27  []     Box square brackets
+    //  $ cv28  {. .}  Nim pragma 'ss02',
+    //  !!cv29  {}     Rounded curly braces 'cv21', 'cv22', 'cv23', 'cv24',
+    //  $ cv30  |      Long vertical bar A 1st 3/4 fi ct fl st g 'cv11', 'cv12', 'cv13',
+    // "'TerminessTTF Nerd Font'",
+    // "editor.fontFamily": "'FiraCode Nerd Font'",
+  },
+  "[prisma]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.fontWeight": "700",
+    "editor.fontFamily": "'VictorMono Nerd Font'",
+    "editor.fontLigatures": true
+    // "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+    //, 'Fira Code iScript', 'Fira Code', 'Fira Code iScript','Fira Code iScript'",
+  },
+  "[json]": {
+    "editor.fontWeight": "300",
+    "editor.fontFamily": "'Fira Code'",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 120
+  },
+  "[typescript]": {
+    "editor.fontWeight": "500",
+    "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+    "editor.fontFamily": "'Fira Code', 'FiraCode Nerd Font', 'VictorMono Nerd Font', 'Fira Code iScript', 'Fira Code', 'Fira Code iScript','Fira Code iScript'",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[code-workspace]": {
+    "editor.fontWeight": "600"
+  },
+  "[javascript]": {
+    "editor.fontWeight": "700",
+    "editor.fontFamily": "'VictorMono Nerd Font', 'Fira Code iScript', 'Fira Code', 'Fira Code iScript','Fira Code iScript'",
+    "editor.fontLigatures": true, // "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+    // "editor.fontFamily": "'VictorMono Nerd Font', 'FiraCode Nerd Font', 'Fira Code', 'Fira Code iScript'",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+    // "editor.fontFamily": "'VictorMono Nerd Font Mono','FiraCode Nerd Font'",
+    // "editor.fontLigatures": true,
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "github.copilot.advanced": {
+  //   "top_p": 1,
+  //   "temperature": "0.5"
+  // },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.fontFamily": "'FiraCode Nerd Font', 'VictorMono Nerd Font Mono', 'Fira Code', 'Fira Code iScript','Fira Code iScript'",
+  "debug.console.fontFamily": "'VictorMono Nerd Font', LigaFantasqueSansMono",
+  "editor.codeLensFontFamily": "'TerminessTTF Nerd Font','FiraCode Nerd Font'",
+  "editor.inlayHints.fontFamily": "'FiraCode Nerd Font'",
+  "markdown.preview.fontFamily": "'Ubuntu', 'Droid Sans', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', sans-serif",
+  "notebook.output.fontFamily": "'FiraCode Nerd Font'",
+  "scm.inputFontFamily": "'ProFontIIx Nerd Font', 'Source Code Pro Black'",
+  "terminal.integrated.fontFamily": " 'FiraCode Nerd Font'",
+  "chat.editor.fontFamily": "'VictorMono Nerd Font', 'Source Code Pro Black', 'MesloLGS Nerd Font', 'TerminessTTF Nerd Font', 'ProFontIIx Nerd Font', 'Source Code Pro Black'",
+  "chat.editor.fontWeight": "700",
+  "chat.editor.lineHeight": 1.099,
+  "chat.editor.wordWrap": "on",
+  "css.lint.fontFaceProperties": "warning",
+  "chat.editor.fontSize": 14,
+  "editor.codeLensFontSize": 20,
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
+  "editor.suggestFontSize": 10,
+  "markdown.preview.fontSize": 14,
+  "screencastMode.fontSize": 56,
+  "editor.fontVariations": "opsz:auto;wght:700",
+  "editor.fontWeight": "400",
+  "less.lint.fontFaceProperties": "error",
+  "scss.lint.fontFaceProperties": "error",
+  "terminal.integrated.fontWeight": "900",
+  "terminal.integrated.fontWeightBold": "bold",
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+  "git.ignoredRepositories": [
+    "/home/luxcium/main-vscode/data/extensions/stepsize.stepsize-1.0.15/resources/demo-repository"
+  ],
+  "peacock.affectPanelBorder": true,
+  "peacock.affectTabActiveBorder": true,
+  "peacock.affectStatusAndTitleBorders": true,
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#dd0531"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#61dafb"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Svelte Orange",
+      "value": "#ff3d00"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    },
+    {
+      "name": "Mandarine",
+      "value": "#ff7f00"
+    }
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "window.density.editorTabHeight": "compact",
+  "window.zoomLevel": 3,
+  "workbench.editor.tabActionLocation": "left",
+  "workbench.activityBar.location": "top",
+  "vscode-edge-devtools.showWorkers": true,
+  "vscode-edge-devtools.hostname": "localhost",
+  "inlineChat.acceptedOrDiscardBeforeSave": true,
+  "files.associations": {
+    "*.md.txt": "markdown"
+  },
+  "git.mergeEditor": true,
+  "git.verboseCommit": true,
+  "git.terminalGitEditor": true,
+  "markdown.extension.syntax.plainTheme": true,
+  "scm.defaultViewSortKey": "status",
+  "workbench.editorLargeFileConfirmation": 2048,
+  "typescript.tsserver.nodePath": "node",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "vscode-edge-devtools.browserFlavor": "Default",
+  "notebook.lineNumbers": "on",
+  "workbench.tree.stickyScrollMaxItemCount": 8,
+  "gitlens.hovers.avatarSize": 40,
+  "[scminput]": {
+    "editor.rulers": [
+      {
+        "column": 70,
+        "color": "#F368"
+      },
+      {
+        "column": 50,
+        "color": "#F838"
+      }
+    ],
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 70
+  },
+  "accessibility.voice.keywordActivation": "chatInContext",
+  "errorLens.editorHoverPartsEnabled": {
+    "messageEnabled": true,
+    "sourceCodeEnabled": true,
+    "buttonsEnabled": true
+  },
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  },
+  "ShortcutMenuBar.paste": true,
+  "git.inputValidationSubjectLength": 70,
+  "javascript-repl.context": "Node",
+  "accessibility.voice.autoSynthesize": "on",
+  "accessibility.underlineLinks": true,
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasWarning": {
+    "sound": "on"
+  },
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "on"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "on"
+  },
+  "accessibility.signals.terminalQuickFix": {
+    "sound": "on"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "on"
+  },
+  "accessibility.signals.noInlayHints": {
+    "sound": "auto"
+  },
+  "accessibility.signals.taskCompleted": {
+    "sound": "on"
+  },
+  "accessibility.signals.taskFailed": {
+    "sound": "on"
+  },
+  "accessibility.signals.terminalCommandFailed": {
+    "sound": "on"
+  },
+  "accessibility.signals.notebookCellCompleted": {
+    "sound": "on"
+  },
+  "accessibility.signals.notebookCellFailed": {
+    "sound": "on"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "auto"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "auto"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "auto"
+  },
+  "accessibility.signals.chatRequestSent": {
+    "sound": "on"
+  },
+  "accessibility.signals.chatResponseReceived": {
+    "sound": "on"
+  },
+  "accessibility.signals.clear": {
+    "sound": "on"
+  },
+  "accessibility.signals.save": {
+    "sound": "always",
+    "announcement": "userGesture"
+  },
+  "accessibility.signals.format": {
+    "sound": "always"
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "on",
+    "announcement": "auto"
+  },
+  "accessibility.signals.positionHasError": {
+    "sound": "on",
+    "announcement": "auto"
+  },
+  "accessibility.signals.positionHasWarning": {
+    "sound": "on",
+    "announcement": "auto"
+  },
+  "accessibility.signalOptions.experimental.delays.errorAtPosition": {
+    "announcement": 3000
+  },
+  "accessibility.signalOptions.experimental.delays.general": {},
+  "accessibility.signals.voiceRecordingStarted": {
+    "sound": "on"
+  },
+  "accessibility.signals.voiceRecordingStopped": {
+    "sound": "auto"
+  },
+  "accessibility.signals.terminalCommandSucceeded": {
+    "sound": "auto",
+    "announcement": "auto"
+  },
+  "terminal.integrated.enableVisualBell": true,
+  "inlineChat.accessibleDiffView": "off",
+  "github.copilot.chat.welcomeMessage": "always",
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "black-formatter.showNotifications": "onError",
+  "black-formatter.path": ["/home/luxcium/anaconda3/envs/swe-agent/bin/black"],
+  "black-formatter.args": ["--skip-string-normalization"],
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.revealjsTheme": "solarized.css",
+  "accessibility.signals.progress": {
+    "sound": "on"
+  },
+  "search.exclude": {
+    "**/*.cpuprofile": true
+  },
+  "accessibility.signalOptions.volume": 7,
+  "accessibility.signalOptions.debouncePositionChanges": true,
+  "editor.lightbulb.enabled": "on",
+  "github.copilot.renameSuggestions.triggerAutomatically": true,
+  "github.copilot.advanced": {},
+  "github.copilot.chat.useProjectTemplates": true,
+  "github.copilot.chat.fixTestFailure.enabled": true,
+  "github.copilot.chat.followUps": "always",
+  "github.copilot.chat.localeOverride": "en",
+  "github.copilot.chat.scopeSelection": true,
+  "github.copilot.chat.search.semanticTextResults": true,
+  "github.copilot.chat.terminalChatLocation": "chatView",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "editor.minimap.size": "fill",
+  "accessibility.voice.speechTimeout": 1500,
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.autoClosingDelete": "always",
+  "editor.guides.bracketPairs": true,
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path-linux": "/home/luxcium/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vscode-kubernetes.kubectl-path-linux": "/home/luxcium/.local/state/vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.minikube-path-linux": "/home/luxcium/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  },
+  // "blockman.n23AnalyzeSquareBrackets": true,
+  // "blockman.n24AnalyzeRoundBrackets": true,
+  // "blockman.n21BorderRadius": 10,
+  // "blockman.n04Sub02ColorComboPresetForLightTheme": "none",
+  // "blockman.n04Sub01ColorComboPresetForDarkTheme": "Small Galaxy (Solid colors)",
+  // "blockman.n18CustomColorOfFocusedBlockBorder": "#F80A",
+  // "blockman.n19CustomColorOfBlockBorder": "#9BE8",
+  // "blockman.n20CustomColorOfDepth0Border": "#F80",
+  // "blockman.n27AlsoRenderBlocksInsideSingleLineAreas": true,
+  "vscode-pets.petSize": "small",
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.petColor": "socks black",
+  "vscode-pets.theme": "forest",
+  "accessibility.voice.speechLanguage": "en-CA",
+  "github.copilot.chat.startDebugging.enabled": true,
+  "github.copilot.chat.setupTests.enabled": true,
+  // "github.copilot.chat.codeGeneration.instructions": [
+  //   { "text": "Separate domain logic and infrastructure in all project structures." },
+  //   { "text": "Ensure strict modularity in every code component, keeping logic, data, and I/O separated." },
+  //   { "text": "Organize projects into logical modules with minimal interdependencies." },
+  //   { "text": "Encapsulate infrastructure concerns in dedicated layers to protect domain logic." },
+  //   { "text": "Use interfaces or abstract classes to define boundaries between components." },
+  //   { "text": "Use dependency injection or abstract factory patterns for service instantiation." },
+  //   { "text": "Design repositories to be interchangeable with minimal impact on the domain layer." },
+  //   { "text": "Separate command operations from queries, following CQRS principles." },
+  //   { "text": "Always refactor large functions into smaller units of work that perform a single responsibility." },
+  //   { "text": "Enable 'strict' mode in TypeScript projects with explicit typings for variables and functions." },
+  //   { "text": "Use named exports instead of default exports unless necessary for compatibility." },
+  //   { "text": "Avoid `import *` or `export *`; explicitly name all imports and exports." },
+  //   { "text": "Declare functions with named function declarations; avoid top-level arrow functions for declarations." },
+  //   { "text": "Never use the `as` keyword for type assertions in TypeScript." },
+  //   { "text": "Use consistent naming: folders in `kebab-case`, files in PascalCase or camelCase matching exports." },
+  //   { "text": "Use single quotes for JavaScript/TypeScript and semicolons to terminate all statements." },
+  //   { "text": "Include the filename and relative path as a comment at the top of code blocks in documentation." },
+  //   { "text": "Mock dependencies in TypeScript to simulate missing implementations for modular development." },
+  //   { "text": "Write unit tests for each module or function to ensure correctness before integration." },
+  //   { "text": "Use integration tests to validate how modules interact at a system level." },
+  //   { "text": "Ensure test coverage remains high (90%+), emphasizing automation during code changes." },
+  //   { "text": "Use defensive programming to validate inputs early, especially in public APIs or services." },
+  //   { "text": "Validate inputs and outputs with guards or utility functions." },
+  //   { "text": "Use functional programming principles to compose reusable, stateless functions." },
+  //   { "text": "Prioritize immutability, avoiding variable or object mutation; return new instances." },
+  //   { "text": "Leverage constructs like map, filter, and reduce for operations on collections." },
+  //   { "text": "Use declarative code to define what the code should do, not how it should do it." },
+  //   { "text": "Implement error-handling mechanisms that prevent unchecked error propagation." },
+  //   { "text": "Use asynchronous operations for long-running tasks to improve responsiveness." },
+  //   { "text": "Use `pnpm` exclusively for JavaScript/TypeScript (outside 'monorepo-one'); avoid `npm` or `yarn`." },
+  //   { "text": "Install packages in 'monorepo-one' using `rush add -m -p <package-name> [--dev].`" },
+  //   { "text": "Use `rush update --make-consistent` in 'monorepo-one' to ensure consistent dependencies." },
+  //   { "text": "Use the `node:` prefix exclusively for Node.js core module imports." }
+  // ]
+  "github.copilot.chat.codeGeneration.instructions": [
+    { "text": "Separate domain logic from infrastructure in all project structures." },
+    { "text": "Ensure strict modularity in every code component, keeping logic, data, and I/O separated." },
+    { "text": "Organize projects into logical modules with minimal interdependencies." },
+    { "text": "Encapsulate infrastructure concerns in dedicated layers to protect domain logic." },
+    { "text": "Use interfaces or abstract classes to define boundaries between components." },
+    { "text": "Use dependency injection or abstract factory patterns for service instantiation." },
+    { "text": "Design repositories to be interchangeable with minimal impact on the domain layer." },
+    { "text": "Separate command operations from queries, following CQRS principles." },
+    { "text": "Always refactor large functions into smaller units of work that perform a single responsibility." },
+    { "text": "Enable 'strict' mode in TypeScript projects with explicit typings for variables and functions." },
+    { "text": "Use named exports instead of default exports unless necessary for compatibility." },
+    { "text": "Avoid `import *` or `export *`; explicitly name all imports and exports." },
+    { "text": "Declare functions with named function declarations; avoid top-level arrow functions for declarations." },
+    { "text": "Never use the `as` keyword for type assertions in TypeScript." },
+    { "text": "Use consistent naming: folders in `kebab-case`, files in PascalCase or camelCase matching exports." },
+    { "text": "Use single quotes for JavaScript/TypeScript and semicolons to terminate all statements." },
+    { "text": "Include the filename and relative path as a comment at the top of code blocks in documentation." },
+    { "text": "Mock dependencies in TypeScript to simulate missing implementations for modular development." },
+    { "text": "Write unit tests for each module or function to ensure correctness before integration." },
+    { "text": "Use integration tests to validate how modules interact at a system level." },
+    { "text": "Ensure test coverage remains high (90%+), emphasizing automation during code changes." },
+    { "text": "Use defensive programming to validate inputs early, especially in public APIs or services." },
+    { "text": "Validate inputs and outputs with guards or utility functions." },
+    { "text": "Use functional programming principles to compose reusable, stateless functions." },
+    { "text": "Prioritize immutability, avoiding variable or object mutation; return new instances." },
+    { "text": "Leverage constructs like map, filter, and reduce for operations on collections." },
+    { "text": "Use declarative code to define what the code should do, not how it should do it." },
+    { "text": "Implement error-handling mechanisms that prevent unchecked error propagation." },
+    { "text": "Use asynchronous operations for long-running tasks to improve responsiveness." },
+    { "text": "Use `pnpm` exclusively for JavaScript/TypeScript (outside 'monorepo-one'); avoid `npm` or `yarn`." },
+    { "text": "Install packages in 'monorepo-one' using `rush add -m -p <package-name> [--dev]." },
+    { "text": "Use `rush update --make-consistent` in 'monorepo-one' to ensure consistent dependencies." },
+    { "text": "Use the `node:` prefix exclusively for Node.js core module imports." },
+    { "text": "Use the following tags in all TypeScript projects to annotate and organize code effectively:" },
+    { "text": "// TODO: Marks incomplete tasks or features. Always include the next steps or implementation plan." },
+    { "text": "// FIXME: Flags broken or suboptimal code. Provide context and potential solutions." },
+    {
+      "text": "// BUG: Identifies known issues. Briefly describe the problem and include references to relevant tickets or issues."
+    },
+    { "text": "// SECTION: Divides code into logical blocks. Add a short description of each block's purpose." },
+    { "text": "// LOG: Marks debugging or monitoring points. Include what is being logged and why." },
+    {
+      "text": "// WARNING: Highlights risky or unsafe code. Explain why caution is needed and suggest safer alternatives."
+    },
+    {
+      "text": "// ERROR: Flags critical or unrecoverable issues. Provide debugging details and any possible recovery steps."
+    },
+    {
+      "text": "// UNIMPLEMENTED: Notes placeholders for missing code. Include the intended functionality or design plan."
+    },
+    {
+      "text": "// SIDE EFFECTS: Describes external impacts of code (e.g., global state modification). Always explain the effect."
+    },
+    { "text": "// REVIEW NEEDED: Indicates sections that need peer review. Mention what aspects require feedback." },
+    {
+      "text": "// INFO: Adds context or background for complex code. Provide enough detail for others to understand its purpose."
+    },
+    { "text": "// HINT: Shares tips or optimizations. Suggest improvements or better practices." },
+    // { "file": "./README.md" },
+    { "file": "./_@_ChatGPT.txt" },
+    // { "file": "LuxciumOne/MIPAD/condensate-versions/hmbbd.md" },
+    // { "file": "LuxciumOne/MIPAD/condensate-versions/idpac.md" },
+    // { "file": "LuxciumOne/MIPAD/condensate-versions/mipad.md" },
+    // { "file": "LuxciumOne/MIPAD/docs/HMBBD-hyper-modular-black-boxes-design.md" },
+    // { "file": "LuxciumOne/MIPAD/docs/IDPAC-incremental-development-pseudocode-as-code.md" },
+    // { "file": "LuxciumOne/MIPAD/docs/MIPAD-modular-incremental-programming-and-development.md" },
+    // { "file": "LuxciumOne/MIPAD/docs/README.md" },
+    // { "file": "LuxciumOne/MIPAD/step-by-step-aproach/with-gpt-4/modular-black-boxes-v2.0.md" },
+    // { "file": ".github/code-quality-best-practices-guide.md" },
+    // { "file": "src/copilot-instructions.md" },
+    { "file": ".github/copilot-instructions.md" }
+    // { "file": ".github/tooling-configuration-guide.md" }
+  ],
+  "github.copilot.chat.testGeneration.instructions": [],
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "text": "Resolve all TODO tasks."
+    }
+  ],
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.inlineChatCompletionTrigger.enabled": true,
+  "github.copilot.chat.inlineChatHint.enabled": true,
+  "github.copilot.chat.temporalContext.enabled": true,
+  "dataWrangler.experiments.copilot.enabled": true,
+  "mdb.useSampleDocsInCopilot": true,
+  "pulumi-lsp.detectExtensionConflicts": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "workbench.panel.showLabels": false,
+  "editor.minimap.side": "left",
+  "@azure.argTenant": "",
+  "workspaceSidebar.rootFolders": [
+    {
+      "path": "/projects/monorepo-one"
+    }
+  ],
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "chat.detectParticipant.enabled": true,
+  "inlineChat.lineEmptyHint": true,
+  "editor.minimap.renderCharacters": false
+
+  // "github.copilot.advanced": {}
+} //==== © 2021-2024 · Luxcium
+
+// "gitlens.ai.experimental.provider": "openai",
+// "gitlens.ai.experimental.openai.model": "gpt-3.5-turbo-1106",
+// ~@-----------------------------------------------------------@---→
+//   "editor.fontFamily": "'FiraCode Nerd Font', 'VictorMono Nerd Font Mono', 'Fira Code', 'Fira Code iScript','Fira Code iScript'",
+//   "chat.editor.fontFamily": "'TerminessTTF Nerd Font'",
+//   "debug.console.fontFamily": "'VictorMono Nerd Font', LigaFantasqueSansMono",
+//   "editor.codeLensFontFamily": "'FiraCode Nerd Font'",
+//   "editor.inlayHints.fontFamily": "'FiraCode Nerd Font'",
+//   "errorLens.fontFamily": "'VictorMono Nerd Font', Victor Mono, Fira Code iScript, 'ProFontIIx Nerd Font Mono', 'MesloLGS NF', ",
+//   "markdown.preview.fontFamily": "'Ubuntu', 'Droid Sans', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', sans-serif",
+//   "notebook.output.fontFamily": "'FiraCode Nerd Font'",
+//   "scm.inputFontFamily": "'ProFontIIx Nerd Font Mono', 'Source Code Pro Black'",
+//   "terminal.integrated.fontFamily": "'FiraCode Nerd Font'"
+// setting for javascript only not typescript, and not json:
+// "[javascript]": {} //==== © 2021-2024 · Luxcium
+// , // setting for javascript only not typescript, and not json:
+// "[typescript]": {
+//   "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+//   // "editor.fontFamily": "'VictorMono Nerd Font Mono','FiraCode Nerd Font'",
+//   "editor.fontFamily": "'FiraCode Nerd Font'",
+//   "editor.fontLigatures": true,
+//   "editor.fontSize": 16,
+//   "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+//   "editor.fontLigatures": true,
+//   "editor.defaultFormatter": "esbenp.prettier-vscode",
+//   "editor.fontFamily": "'FiraCode Nerd Font'",
+//   "editor.defaultFormatter": "vscode.json-language-features",
+//   "editor.fontFamily": "'FiraCode Nerd Font'",
+//   "editor.fontWeight": "100",
+//   "editor.fontLigatures": "'ss03', 'ss04', 'ss06', 'ss07', 'ss09', 'ss10', 'onum', 'cv05', 'cv09', 'cv12', 'cv14', 'cv19', 'cv21', 'cv23', 'cv24','cv25', 'cv26', 'cv27', 'cv28', 'cv30'",
+//   "editor.fontLigatures": true,
+//   "editor.defaultFormatter": "esbenp.prettier-vscode",
+//   "editor.fontFamily": "'FiraCode Nerd Font'",
+//   "[typescript]": {
+//   "editor.fontFamily": "'VictorMono Nerd Font Mono','FiraCode Nerd Font'",
+//   "editor.fontLigatures": true,
+//   "editor.fontSize": 16,
+//   "editor.fontWeight": "600",
+//   "editor.defaultFormatter": "esbenp.prettier-vscode"
+// },
+// !! Fira Code stylistic sets:
+// "editor.fontLigatures": true,
+//  !ss01  r                  Sans-serif r
+//   ss02  <= >=              Less than/greater than with horizontal bar
+//   ss03  &                  Traditional ampersand
+//   ss04  $                  Lightweight dollar sign
+//  !ss05  @                  Traditional at sign
+//   ss06  \\\\\\\                 Thin backslash
+//   ss07  =~ !~              Regexp matching operator
+//  !ss08  == === != !==      Gaps in double/triple equals
+//   ss09  >>= <<= ||= |=     Compound assignments
+//   ss10  Fl Tl fi fj fl ft  Full ligatures
+//  !zero  0                  Dotted zero
+//   onum  0123456789         Old-style figures
+// Variants:
+//  !cv01  a      Single-storey a
+//  !cv02  g      Single-storey g
+//  !cv03  i      Sans-serif i
+//  !cv04  i      i without base
+//   cv05  i      i with flat tail
+//  !cv06  i      i with curved tail
+//  !cv07  l      Sans-serif l
+//  !cv08  l      l without base
+//   cv09  l      l with flat tail
+//  !cv10  l      l with curved tail (same as default?)
+//  !cv11  0      Plain zero
+//   cv12  0      Slashed zero
+//  !cv13  0      Dotted zero
+//   cv14  3      3 with flat top
+//  !cv15  *      Top-aligned asterisk
+//  !cv16  *      Hexagonal asterisk
+//  !cv17  ~      Top-aligned tilde
+//  !cv18  %      Percent with filled dots
+//   cv19  <=     Lte with horizontal bar (< =)  <= < =
+//  !cv20  <=     Left arrow              (< =)
+//   cv21  =<     Lte                     (= <)
+//  !cv22  =<     Lte with horizontal bar (= <)
+//   cv23  >=     Gte with horizontal bar (> =) >= > = .. => => . .. ... ....
+//   cv24  /=     Not equal               (/ =)
+//   cv25  .-     Clojure .- // 'VictorMono Nerd Font Mono', ",
+//   cv26  :-     Prolog :-
+//   cv27  []     Box square brackets
+//   cv28  {. .}  Nim pragma 'ss02',
+//  !cv29  {}     Rounded curly braces 'cv21', 'cv22', 'cv23', 'cv24',
+//   cv30  |      Long vertical bar A 1st 3/4 fi ct fl st g 'cv11', 'cv12', 'cv13',
+// "'TerminessTTF Nerd Font'",
+// "editor.fontFamily": "'FiraCode Nerd Font'",
+// } //==== © 2021-2022 ==== Luxcium✨ ==== (Benjamin Vincent) ==== MIT License ====-|
