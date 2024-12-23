@@ -541,7 +541,7 @@
       ]
     },
     {
-      "packageName": "open-ai",
+      "packageName": "@luxcium/open-ai",
       "projectFolder": "examples/open-ai",
       "tags": [
         "examples"

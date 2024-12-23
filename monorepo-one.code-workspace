@@ -22,16 +22,10 @@
     */
     // #region: excludes                                                    !
     "files.exclude": {
-      ".directory": true,
-      "**/*.build.log": true,
       ".editorconfig": false,
-      ".git/": true,
       ".gitattributes": false,
       ".gitignore": false,
       ".gitmodules": false,
-      ".history/": true,
-      ".nvmrc": true,
-      ".prettierignore": true,
       ".prettierrc.cjs": false,
       ".vscode/": false,
       "backend/": false,
@@ -42,12 +36,18 @@
       "library/": false,
       "LICENSE": false,
       "out": false,
-      "pnpm-workspace.yaml": true,
       "public/": false,
       "readme.md": false,
       "rush.json": false,
       "scripts/": false,
-      "services/": false
+      "services/": false,
+      "pnpm-workspace.yaml": false,
+      ".directory": false,
+      "**/*.build.log": false,
+      ".history/": false,
+      ".nvmrc": false,
+      ".prettierignore": false,
+      ".git/": true,
     },
     "search.exclude": {
       "docs": true,

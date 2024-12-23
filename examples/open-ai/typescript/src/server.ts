@@ -3,7 +3,7 @@ import 'dotenv/config';
 import express, { NextFunction, Request, Response } from 'express';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
-import { Configuration, OpenAIApi } from 'openai';
+import OpenAI from 'openai';
 import path from 'path';
 
 const app = express();
@@ -28,8 +28,8 @@ if (!apiKey) {
 }
 
 // OpenAI Configuration
-const configuration = new Configuration({ apiKey });
-const openai = new OpenAIApi(configuration);
+const openai:OpenAI = new OpenAI({ apiKey });
+// const openai = new OpenAIApi(configuration);
 
 // Routes
 app.post('/generate', async (req: Request, res: Response, next: NextFunction) => {

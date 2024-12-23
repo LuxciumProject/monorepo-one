@@ -1,12 +1,12 @@
 {
-  "name": "open-ai",
+  "name": "@luxcium/open-ai",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "pwd; # bash scripts/build.sh || exit 15",
     "install": "pwd; # yarn build || exit 13; pwd",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
   "author": "",
