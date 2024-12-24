@@ -2337,10 +2337,10 @@
       "name": "           💁💙 service-two",
       "path": "services/service-two"
     },
-    // {
-    //   "name": "  ↓ 🗂️ 🎨 static",
-    //   "path": "static"
-    // },
+    {
+      "name": "  ↓ 🗂️ 🎨 static",
+      "path": "static"
+    },
     // {
     //   "name": "           🎨🤖 STABLE DIFFUSION",
     //   "path": "static/stable-diffusion"
@@ -2348,10 +2348,6 @@
     {
       "name": "  ↓ 🪄 🎱 EXAMPLES",
       "path": "examples"
-    },
-    {
-      "name": "           🎱🪄 NVIDIA",
-      "path": "examples/nvidia"
     },
     {
       "name": "           🎱🎨 STABLE DIFFUSION",
