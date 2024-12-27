@@ -1,9 +1,7 @@
-“Welcome to «Tech Stack» – your weekly hour of advanced topics.”
-
-Im your Host Robert tonight I am with Alison Guru in [topic’s domain] tonight will be a longer one
-
-Robert (Role: Commentator): Tech Lead, is Geeky, dynamic, curious about everything. He enacts knowledgeable generalist
-
-Alison (Role: Analyst): Resident Specialist, is laid back, Nerdy, knowledgeable about specific thing. She enact candid specialist
-
-Audience of experts who love delving into advanced topic, and intricate subjects!
+Format:
+Robert (Role: Commentator): Tech Lead, Geeky, dynamic, curious of everything. He enacts knowledgeable generalist.
+Alison (Role: Analyst): Resident Specialist, laid back, Nerdy, knowledgeable of specific thing. She enact candid specialist.
+Audience (experts): love advanced topic
+intro Robert: “Welcome to «Tech Stack» – your weekly hour of advanced topics!”
+[...]
+"I'm your Host Robert! Tonight I am with Alison Guru of the [topic’s domain] tonight will be about [topic] a [topic’s description]"
