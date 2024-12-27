@@ -55,3 +55,60 @@ In summer of 2019, we launched **Rush Stack** with the aim to provide a reusable
 - Trade your flexibility for an opinionated approach backed by tooling experts who run huge monorepos
 - Join forces with the open community that's investing in this approach
 - Help us to "go deep" with integrations, optimizations, documentation, and polish to achieve a world class developer experience
+
+## Heft references and links to browse now
+
+Heft is a config-driven toolchain that invokes other popular tools such as TypeScript, ESLint, Jest, Webpack, and API Extractor. You can use it to build web applications, Node.js services, command-line tools, libraries, and more. Heft builds all your JavaScript projects the same way: A way that works.
+
+### Introduction
+
+- [Overview](/)
+- [Getting started](/pages/intro/getting_started/)
+- [Heft architecture](/pages/intro/architecture/)
+- [Using rig packages](/pages/intro/rig_packages/)
+- [Heft command line](/pages/intro/cli/)
+
+### Heft tutorials
+
+- [Hello world](/pages/tutorials/hello_world/)
+- [Adding more tasks](/pages/tutorials/adding_tasks/)
+- [Everyday Heft commands](/pages/tutorials/everyday_commands/)
+- [Interfacing with Rush](/pages/tutorials/heft_and_rush/)
+
+### Advanced topics
+
+- [@rushstack/heft-config-file](/pages/advanced/heft-config-file/)
+
+### Heft plugins
+
+- [(package index)](/pages/plugins/package_index/)
+- [API Extractor](/pages/plugins/api-extractor/)
+- [Copy files](/pages/plugins/copy-files/)
+- [Delete files](/pages/plugins/delete-files/)
+- [Dev certificate](/pages/plugins/dev-cert/)
+- [Jest](/pages/plugins/jest/)
+- [ESlint / TSLint](/pages/plugins/lint/)
+- [Node.js service](/pages/plugins/node-service/)
+- [Run script](/pages/plugins/run-script/)
+- [Sass](/pages/plugins/sass/)
+- [Serverless Stack](/pages/plugins/serverless-stack/)
+- [Storybook](/pages/plugins/storybook/)
+- [TypeScript](/pages/plugins/typescript/)
+- [Webpack](/pages/plugins/webpack/)
+
+### Heft config files
+
+- [Environment variables](/pages/configs/environment_vars/)
+- [api-extractor-task.json](/pages/configs/api-extractor-task_json/)
+- [heft.json](/pages/configs/heft_json/)
+- [node-service.json](/pages/configs/node-service_json/)
+- [rig.json](/pages/configs/rig_json/)
+- [sass.json](/pages/configs/sass_json/)
+- [typescript.json](/pages/configs/typescript_json/)
+- [Other config files](/pages/configs/other_files/)
+
+### Support
+
+- [Help](/pages/support/help/)
+- [What's new](/pages/support/news/)
+- [Contributing](/pages/support/contributing/)
