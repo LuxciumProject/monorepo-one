@@ -2,9 +2,9 @@
   /*
   |-····―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――··-|
   */
-  "files.associations": {
-    "*.json": "jsonc"
-  },
+  // "files.associations": {
+  //   "*.json": "jsonc"
+  // },
   // #region: EDITOR & TERMINAL                                      !
   // "workbench.iconTheme": "material-icon-theme",
   // "editor.fontFamily": "'FiraCode Nerd Font'",
@@ -44,32 +44,32 @@
   */
   // #region: excludes                                               !
   "files.exclude": {
-    ".directory": true,
-    "**/*.build.log": true,
-    ".editorconfig": false,
-    ".git/": true,
-    ".gitattributes": false,
-    ".gitignore": false,
-    ".gitmodules": false,
-    ".history/": true,
-    ".nvmrc": true,
-    ".prettierignore": true,
-    ".prettierrc.cjs": false,
-    ".vscode/": false,
-    "backend/": false,
-    "common/": false,
-    "dist": false,
-    "docs/": false,
-    "frontend/": false,
-    "library/": false,
-    "LICENSE": false,
-    "out": false,
-    "pnpm-workspace.yaml": true,
-    "public/": false,
-    "readme.md": false,
-    "rush.json": false,
-    "scripts/": false,
-    "services/": false
+    // ".directory": true,
+    // "**/*.build.log": true,
+    // ".editorconfig": false,
+    // ".git/": true,
+    // ".gitattributes": false,
+    // ".gitignore": false,
+    // ".gitmodules": false,
+    // ".history/": true,
+    // ".nvmrc": true,
+    // ".prettierignore": true,
+    // ".prettierrc.cjs": false,
+    // ".vscode/": false,
+    // "backend/": false,
+    // "common/": false,
+    // "dist": false,
+    // "docs/": false,
+    // "frontend/": false,
+    // "library/": false,
+    // "LICENSE": false,
+    // "out": false,
+    // "pnpm-workspace.yaml": true,
+    // "public/": false,
+    // "readme.md": false,
+    // "rush.json": false,
+    // "scripts/": false,
+    // "services/": false
   },
   "search.exclude": {
     "docs": true,

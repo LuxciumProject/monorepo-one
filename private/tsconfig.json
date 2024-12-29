@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    // ...existing options...
+    "lib": ["es2016", "dom"],
+    "strict": true
+  }
+}

@@ -4,119 +4,93 @@ This document provides an overview of the various scripts available in this repo
 
 ## Table of Contents
 
-- [Installation Scripts](#installation-scripts)
-- [Maintenance Scripts](#maintenance-scripts)
-- [Build and Deployment Scripts](#build-and-deployment-scripts)
-- [Utility Scripts](#utility-scripts)
-- [Development Scripts](#development-scripts)
+- [Scripts Documentation](#scripts-documentation)
+  - [Table of Contents](#table-of-contents)
+  - [Core Scripts](#core-scripts)
+  - [Specialized Scripts](#specialized-scripts)
+    - [Docker Maintenance](#docker-maintenance)
+    - [Rush Scripts](#rush-scripts)
+  - [Build and Deployment Scripts](#build-and-deployment-scripts)
+  - [Utility Scripts](#utility-scripts)
+  - [Development Scripts](#development-scripts)
+  - [Tasks](#tasks)
+  - [Usage](#usage)
+  - [Notes](#notes)
+  - [License](#license)
+  - [Contact](#contact)
 
-## Installation Scripts
+## Core Scripts
 
-### `install-all.rush.sh`
+- `for_each-do_the_thing.sh` - Batch operation script that performs a specified action for each item in a list.
+- `install_vscode.sh` - Installs Visual Studio Code in a portable manner.
+- `install-all.rush.sh` - Installs all necessary dependencies for the project using Rush.
+- `install-more.rush.sh` - Installs additional dependencies for the project using Rush.
+- `install-ts-eslint.sh` - Installs TypeScript and ESLint for the project.
+- `npm-global-install.sh` - Installs global npm packages required for the project.
+- `populate-directories.sh` - Populates directories with initial files.
+- `prepare.js` - Prepares the project for development.
+- `pull-upstream.sh` - Pulls the latest changes from the upstream repository.
+- `purge-rebuild.rush.sh` - Purges and rebuilds the project using Rush.
+- `reset-all.sh` - Resets all configurations to their default state.
+- `system_status.sh` - Checks the system status and provides a report.
+- `update-minimal-all.sh` - Performs a minimal update for the project.
+- `upgrade-eslint.sh` - Upgrades ESLint to the latest version.
 
-This script installs all necessary dependencies for the project using Rush.
+## Specialized Scripts
 
-### `install-more.rush.sh`
+### Docker Maintenance
 
-This script installs additional dependencies for the project using Rush.
+Located in `/docker-maintenance-global-system/`:
 
-### `install_vscode.sh`
+- `install-docker-desktop.sh` - Installs Docker Desktop on the system.
+- `UNSAFE-docker-engine-maintenance.sh` - Performs unsafe maintenance on the Docker engine.
+- `UNSAFE-HARD-docker-engine-maintenance.sh` - Performs hard maintenance on the Docker engine.
 
-This script installs Visual Studio Code in a portable manner.
+### Rush Scripts
 
-### `npm-global-install.sh`
+Located in `/rush/`:
 
-This script installs global npm packages required for the project.
-
-## Maintenance Scripts
-
-### `docker-maintenance-global-system/install-docker-desktop.sh`
-
-This script installs Docker Desktop on the system.
-
-### `docker-maintenance-global-system/UNSAFE-docker-engine-maintenance.sh`
-
-This script performs unsafe maintenance on the Docker engine.
-
-### `docker-maintenance-global-system/UNSAFE-HARD-docker-engine-maintenance.sh`
-
-This script performs hard maintenance on the Docker engine.
-
-### `purge-rebuild.rush.sh`
-
-This script purges and rebuilds the project using Rush.
+- Rush-specific automation and management scripts for monorepo workflows.
 
 ## Build and Deployment Scripts
 
-### `build.sh`
-
-This script builds the project.
-
-### `deploy.sh`
-
-This script deploys the project.
-
-### `start-minikube.sh`
-
-This script starts Minikube for local Kubernetes development.
+- `build.sh` - Builds the project.
+- `deploy.sh` - Deploys the project.
+- `start-minikube.sh` - Starts Minikube for local Kubernetes development.
 
 ## Utility Scripts
 
-### `for_each-do_the_thing.sh`
-
-This script performs a specified action for each item in a list.
-
-### `populate-directories.sh`
-
-This script populates directories with initial files.
-
-### `reset-all.sh`
-
-This script resets all configurations to their default state.
-
-### `system_status.sh`
-
-This script checks the system status and provides a report.
+- `for_each-do_the_thing.sh` - Performs a specified action for each item in a list.
+- `populate-directories.sh` - Populates directories with initial files.
+- `reset-all.sh` - Resets all configurations to their default state.
+- `system_status.sh` - Checks the system status and provides a report.
 
 ## Development Scripts
 
-### `install-ts-eslint.sh`
-
-This script installs TypeScript and ESLint for the project.
-
-### `upgrade-eslint.sh`
-
-This script upgrades ESLint to the latest version.
-
-### `prepare.js`
-
-This script prepares the project for development.
-
-### `pull-upstream.sh`
-
-This script pulls the latest changes from the upstream repository.
-
-### `stress-test.sh`
-
-This script performs a stress test on the system.
-
-### `structure.sh`
-
-This script sets up the initial structure for the project.
+- `install-ts-eslint.sh` - Installs TypeScript and ESLint for the project.
+- `upgrade-eslint.sh` - Upgrades ESLint to the latest version.
+- `prepare.js` - Prepares the project for development.
+- `pull-upstream.sh` - Pulls the latest changes from the upstream repository.
+- `stress-test.sh` - Performs a stress test on the system.
+- `structure.sh` - Sets up the initial structure for the project.
 
 ## Tasks
 
-### `tasks.json`
+- `tasks.json` - Contains the configuration for various tasks that can be run in the project.
+- `launch.json` - Contains the configuration for launching the project in a development environment.
+- `settings.json` - Contains the configuration settings for the project.
 
-This file contains the configuration for various tasks that can be run in the project.
+## Usage
 
-### `launch.json`
+Most scripts can be executed directly from the command line. Always check the script content and any accompanying documentation before running.
 
-This file contains the configuration for launching the project in a development environment.
+```bash
+# Make script executable
+chmod +x script_name.sh
 
-### `settings.json`
-
-This file contains the configuration settings for the project.
+# Run script
+./script_name.sh
+```
 
 ## Notes
 
@@ -130,6 +104,6 @@ This project is licensed under the terms of the Luxcium License. See the [LICENS
 
 ## Contact
 
-For any questions or issues, please contact Benjamin Vincent Kasapoglu at luxcium﹫neb401.com.
+For any questions or issues, please contact Benjamin Vincent Kasapoglu at luxcium＠neb401.com.
 
 † Scientia est lux principium✨ ™

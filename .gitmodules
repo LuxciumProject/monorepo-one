@@ -16,3 +16,7 @@ url = https://github.com/LuxciumProject/mapping-tools.git
 [submodule "examples/OpenHands"]
 	path = examples/OpenHands
 	url = https://github.com/LuxciumProject/OpenHands.git
+[submodule "examples/mcp-servers"]
+	path = examples/mcp-servers
+	url = https://github.com/Luxcium/servers.git
+	branch = main

@@ -1,26 +1,27 @@
 {
-  "arrowParens": "avoid",
-  "bracketSpacing": true,
+  "semi": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "printWidth": 80,
+  "proseWrap": "never",
   "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "css",
-  "insertPragma": false,
   "jsxSingleQuote": false,
+  "insertPragma": false,
+  "bracketSpacing": true,
+  "trailingComma": "es5",
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "css",
+  "vueIndentScriptAndStyle": false,
   "overrides": [
     {
-      "files": ["./*.test.ts"],
+      "files": "*.{test,spec}.{js,ts,mts,cts}",
       "options": {
         "printWidth": 120,
         "proseWrap": "never"
       }
     }
   ],
-  "printWidth": 80,
-  "proseWrap": "never",
-  "semi": true,
-  "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "es5",
-  "useTabs": false,
   "plugins": [
     "prettier-plugin-organize-attributes",
     "prettier-plugin-packagejson",

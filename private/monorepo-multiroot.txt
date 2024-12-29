@@ -1,0 +1,475 @@
+in the context of vscode multiroot workspaces in order to have a better view in the vscoe I have included additional roots (dummies) along with th propper roots (leafe like) this is the current implementation that you can keep in mind when trying to understand how each projects are separated from one an other in the monorepo-one multi root (vscode) monorepo (rush stack) project(s)
+
+  "folders": [
+    /*
+    - 📕 Red Book
+    - 📗 Green Book
+    - 📘 Blue Book
+    - 📙 Orange Book
+    - 📚 Books
+    - 📖 Open Book
+    - 📓 Notebook
+    - 📔 Notebook with Decorative Cover
+    - 📒 Ledger
+    - 📑 Bookmark Tabs
+    */
+    {
+      "name": "→🖥️ ✨ MONOREPO-ONE",
+      "path": "."
+    },
+    {
+      "name": "  ↓ ✨ 🤖 PROMPTS",
+      "path": "prompts"
+    },
+    {
+      "name": "           🤖📣 TYPING PROMPTER",
+      "path": "prompts/typing_prompter"
+    },
+    {
+      "name": "           🤖💬 CHAT GPT",
+      "path": "prompts/chatgpt"
+    },
+    {
+      "name": "           🤖📕 APIs",
+      "path": "prompts/API"
+    },
+    {
+      "name": "           ⛵📕 midjourney",
+      "path": "prompts/API/midjourney"
+    },
+    {
+      "name": "           🦾📕 Anthropic Claude",
+      "path": "prompts/API/claude-3"
+    },
+    {
+      "name": "           🦾📕 GPTs",
+      "path": "prompts/API/GPTs"
+    },
+    {
+      "name": "           🤖💬💭 MORE PROMPTS",
+      "path": "prompts/chatgpt/more-prompts"
+    },
+    {
+      "name": "  ↓ 📓 📙 APIs",
+      "path": "APIs"
+    },
+    {
+      "name": "           📙 Anthropic",
+      "path": "APIs/anthropic"
+    },
+    {
+      "name": "           📙 OpenAI",
+      "path": "APIs/openai"
+    },
+    {
+      "name": "  ↓ 🔐 💫 PRIVATE",
+      "path": "private"
+    },
+    {
+      "name": "  ↓ 💻 👨‍💻 FRONTEND",
+      "path": "frontend"
+    },
+    {
+      "name": "           👨‍💻 🏠 HOME 🏗️ 📗🏳️‍🌈",
+      "path": "frontend/home"
+    },
+    {
+      "name": "  ↓ 🏭 🏦 BACKEND",
+      "path": "backend"
+    },
+    {
+      "name": "           ��🗜️ api",
+      "path": "backend/api"
+    },
+    {
+      "name": "           🏦🏫 scratch",
+      "path": "backend/scratch"
+    },
+    {
+      "name": "  ↓ 📓 📚 LIBRARY",
+      "path": "library"
+    },
+    {
+      "name": "  S*→📚🧭 mapping-tools",
+      "path": "library/mapping-tools"
+    },
+    {
+      "name": "          📚💛 colors-tools",
+      "path": "library/colors-tools"
+    },
+    {
+      "name": "          📚💗 boxing-tools",
+      "path": "library/boxing-tools"
+    },
+    {
+      "name": "          📚🧡 boxed-list",
+      "path": "library/boxed-list"
+    },
+    {
+      "name": "          📚❤️ bigintString",
+      "path": "library/bigintString"
+    },
+    {
+      "name": "          📚💚 human-size",
+      "path": "library/human-size"
+    },
+    {
+      "name": "          📚💙 object-with-expectations",
+      "path": "library/object-with-expectations"
+    },
+    {
+      "name": "          📚💜 parallel-mapper",
+      "path": "library/parallel-mapper"
+    },
+    {
+      "name": "          📚🧌 restraining-zalgo",
+      "path": "library/restraining-zalgo"
+    },
+    {
+      "name": "          📓🛠️ Tools",
+      "path": "library/tools"
+    },
+    {
+      "name": "          📘 Typescript",
+      "path": "library/typescript"
+    },
+    {
+      "name": "  ↓ 🖥️ 💁📒 SERVICES",
+      "path": "services"
+    },
+    {
+      "name": "  S*→ 💁🛵 image-scout",
+      "path": "services/image-scout"
+    },
+    {
+      "name": "  S*→ 💁💜 rpc-worker-pool",
+      "path": "services/rpc-worker-pool"
+    },
+    {
+      "name": "           💁🖼️ image-pipeline",
+      "path": "services/image-pipeline"
+    },
+    {
+      "name": "           💁📊 mongo-service",
+      "path": "services/mongo-service"
+    },
+    {
+      "name": "           💁❤️ phash-compute",
+      "path": "services/phash-compute"
+    },
+    {
+      "name": "           💁🧡 redis-services",
+      "path": "services/redis-services"
+    },
+    {
+      "name": "           💁💛 scan-directories",
+      "path": "services/scan-directories"
+    },
+    {
+      "name": "           💁💚 service-one",
+      "path": "services/service-one"
+    },
+    {
+      "name": "           💁💙 service-two",
+      "path": "services/service-two"
+    },
+    {
+      "name": "  ↓ 🗂️ 🎨 static",
+      "path": "static"
+    },
+    // {
+    //   "name": "           🎨🤖 STABLE DIFFUSION",
+    //   "path": "static/stable-diffusion"
+    // },
+    {
+      "name": "  ↓ 🪄 🎱 EXAMPLES",
+      "path": "examples"
+    },
+    {
+      "name": "           🎱🎨 STABLE DIFFUSION",
+      "path": "examples/stable-diffusion"
+    },
+    {
+      "name": "           🎱🪄 OpenHands (OpenDevin)",
+      "path": "examples/OpenHands"
+    },
+    {
+      "name": "           🎱🪄 casecobra",
+      "path": "examples/casecobra-master"
+    },
+    {
+      "name": "           🎱🪄 template",
+      "path": "examples/template"
+    },
+    {
+      "name": "           🎱🪄 open-ai",
+      "path": "examples/open-ai"
+    },
+    {
+      "name": "           🎱🪄 gpu-stuff",
+      "path": "examples/gpu-stuff"
+    },
+    {
+      "name": "           🎱🪄 mcp-servers",
+      "path": "examples/mcp-servers"
+    },
+    {
+      "name": "           🎱🪄 playground",
+      "path": "examples/playground"
+    },
+    {
+      "name": "           🎱🪄 node-js",
+      "path": "examples/node-js"
+    },
+    {
+      "name": "           🎱🛵 phash-scout",
+      "path": "examples/phash-scout"
+    },
+    {
+      "name": "           📘 typescript",
+      "path": "examples/typescript"
+    },
+    {
+      "name": " ··· 📓 📔 Scripts",
+      "path": "scripts"
+    }
+  ]
+
+
+  those above are the roots that are included in the vscode multiroot workspace, the following are the roots that are included in the rush stack monorepo project configuration as you can it is a subset of theactual proper roots that are included in the vscode multiroot workspace:
+
+    "projects": [
+    // {
+    //   "packageName": "scratch-server",
+    //   "projectFolder": "backend/scratch",
+    //   "tags": ["backend"]
+    // },
+    {
+      "packageName": "old-api-server",
+      "projectFolder": "backend/api/api-package", // updated to reflect the new location
+      "shouldPublish": false
+    },
+    {
+      "packageName": "api-server-comments",
+      "projectFolder": "backend/api/comments", // new package
+      "shouldPublish": false
+    },
+    {
+      "packageName": "api-server-posts",
+      "projectFolder": "backend/api/posts", // new package
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@luxcium/home-nextjs",
+      "projectFolder": "frontend/home",
+      "tags": [
+        "frontend"
+      ]
+    },
+    {
+      "packageName": "@luxcium/anthropic-api",
+      "projectFolder": "APIs/anthropic",
+      "tags": [
+        "apis"
+      ]
+    },
+    {
+      "packageName": "@luxcium/openai-api",
+      "projectFolder": "APIs/openai",
+      "tags": [
+        "apis"
+      ]
+    },
+    // @luxcium/infrastructure
+    {
+      "packageName": "@luxcium/infrastructure",
+      "projectFolder": "infrastructure/dev",
+      "tags": [
+        "backend",
+        "tools"
+      ]
+    },
+    {
+      "packageName": "@luxcium/bigintstring",
+      "projectFolder": "library/bigintString",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/colors-tools",
+      "projectFolder": "library/colors-tools",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/boxing-tools",
+      "projectFolder": "library/boxing-tools",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/boxed-list",
+      "projectFolder": "library/boxed-list",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/object-with-expectations",
+      "projectFolder": "library/object-with-expectations",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/human-size",
+      "projectFolder": "library/human-size",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/parallel-mapper",
+      "projectFolder": "library/parallel-mapper",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "mapping-tools",
+      "projectFolder": "library/mapping-tools",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/restraining-zalgo",
+      "projectFolder": "library/restraining-zalgo",
+      "tags": [
+        "library"
+      ]
+    },
+    {
+      "packageName": "@luxcium/tools",
+      "projectFolder": "library/tools",
+      "tags": [
+        "library",
+        "tools"
+      ]
+    },
+    {
+      "packageName": "@luxcium/phash-compute",
+      "projectFolder": "services/phash-compute",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "@luxcium/scan-dirs",
+      "projectFolder": "services/scan-directories",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "@luxcium/rpc-worker-pool",
+      "projectFolder": "services/rpc-worker-pool",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "@luxcium/image-pipeline",
+      "projectFolder": "services/image-pipeline",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "@luxcium/redis-services",
+      "projectFolder": "services/redis-services",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "service-one",
+      "projectFolder": "services/service-one",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "service-two",
+      "projectFolder": "services/service-two",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "mongo-service",
+      "projectFolder": "services/mongo-service",
+      "tags": [
+        "services"
+      ]
+    },
+    {
+      "packageName": "casecobra-dev",
+      "projectFolder": "examples/casecobra-master",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
+      "packageName": "phash-scout-examples",
+      "projectFolder": "examples/phash-scout",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
+      "packageName": "template-example",
+      "projectFolder": "examples/template",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
+      "packageName": "@luxcium/open-ai",
+      "projectFolder": "examples/open-ai",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
+      "packageName": "gpu-stuff",
+      "projectFolder": "examples/gpu-stuff",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
+      "packageName": "@modelcontextprotocol/servers",
+      "projectFolder": "examples/mcp-servers",
+      "tags": [
+      "examples"
+      ]
+    },
+    {
+      "packageName": "playground-example",
+      "projectFolder": "examples/playground",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
+      "packageName": "node-js-example",
+      "projectFolder": "examples/node-js",
+      "tags": [
+        "examples"
+      ]
+    }
+  ]
