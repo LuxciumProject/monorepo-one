@@ -60,6 +60,10 @@ This monorepo contains various projects, libraries, and services organized in a 
 
 #### COMMON & SCRIPTS
 
+### DOCUMENTATION
+
+- [Monorepo Structure](/docs/monorepo-structure.md): Documentation of the folder structure and metadata.
+- [Naming Conventions](/docs/naming-conventions.md): Guide to the agreed-upon naming conventions for files, folders, and variables.
 - [Common](/common/README.md) - Shared configurations and utilities
   - [Config](/common/config/README.md) - Shared configuration files
   - [Git Hooks](/common/git-hooks/README.md) - Repository management hooks
@@ -67,6 +71,7 @@ This monorepo contains various projects, libraries, and services organized in a 
 - [Scripts](/scripts/README.md) - Utility and automation scripts
   - [Docker Maintenance](/scripts/docker-maintenance-global-system/README.md)
   - [Rush Scripts](/scripts/rush/README.md)
+(Note: The links to README.md files are placeholders and will need to be verified for correctness. Each subdirectory should contain a README.md that provides further details about its contents.)
 
 ### Additional Resources
 
@@ -120,10 +125,10 @@ Copyright © 2022-2024 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫n
 
 ### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
 
-    1) NOT TO PUBLISH;
-    2) NOT TO DISTRIBUTE;
-    3) NOT TO SUBLICENSE;
-    4) NOT TO SELL COPIES OF;
+   1) NOT TO PUBLISH;
+   2) NOT TO DISTRIBUTE;
+   3) NOT TO SUBLICENSE;
+   4) NOT TO SELL COPIES OF;
 
 #### NOTICE
 
@@ -139,12 +144,12 @@ Copyright © 2022-2024 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫n
 
 #### YOU HAVE THE RIGHT TO
 
-    A) USE IT FOR YOURSELF;
-    B) DISTRIBUTE IT TO YOUR FRIENDS;
-    C) DISTRIBUTE IT TO YOUR STUDENTS;
-    D) DISTRIBUTE IT TO YOUR COWORKER;
-    (FOR PERSONAL USE; AT HOME, AT SCHOOL OR AT WORK)
+  A) USE IT FOR YOURSELF;
+  B) DISTRIBUTE IT TO YOUR FRIENDS;
+  C) DISTRIBUTE IT TO YOUR STUDENTS;
+  D) DISTRIBUTE IT TO YOUR COWORKER;
+  (FOR PERSONAL USE; AT HOME, AT SCHOOL OR AT WORK)
 
-    IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
+   IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
 
 † Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu

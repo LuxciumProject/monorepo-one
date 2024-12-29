@@ -1,0 +1,9 @@
+packages:
+  - 'backend/**'
+  - 'frontend/**'
+  - 'library/**'
+  - 'services/**'
+  - 'examples/**'
+  - 'APIs/**'
+  - 'tools/**'
+  - 'infrastructure/**'

@@ -29,6 +29,16 @@ path = library/mapping-tools
 url = https://github.com/LuxciumProject/mapping-tools.git
 main_branch = principal
 
+[submodule "docker/nvidia/ComfyUI"]
+path = docker/nvidia/ComfyUI
+url = https://github.com/Luxcium/ComfyUI.git
+main_branch = master
+
+[submodule "examples/OpenHands"]
+path = examples/OpenHands
+url = https://github.com/LuxciumProject/OpenHands.git
+main_branch = master
+
 Know that the GitHub files have raw format versions accessible with this URL structure: ${https:}//${"raw.githubusercontent.com"}/${git_hub_user_name}/${repo_name}/${git_branch}/${path_to_filename}.
 
 
@@ -114,6 +124,8 @@ Know that the GitHub files have raw format versions accessible with this URL str
 # ✣ services/questrade-ts: https://github.com/Luxcium/questrade-ts.git
 # ✣ services/rpc-worker-pool: https://github.com/Luxcium/rpc-worker-pool.git
 # ✣ library/mapping-tools: https://github.com/LuxciumProject/mapping-tools.git
+# ✣ docker/nvidia/ComfyUI: https://github.com/Luxcium/ComfyUI.git
+# ✣ examples/OpenHands: https://github.com/LuxciumProject/OpenHands.git
 
 # Source files:
 # ✦: https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/monorepo-one.code-workspace
