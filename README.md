@@ -47,7 +47,17 @@ This monorepo contains various projects, libraries, and services organized in a 
   - [Home](/frontend/home/README.md) - Home page components
   - [Projects](/frontend/projects/README.md) - Individual frontend projects
 
-### Development Resources
+#### PROMPTS
+
+- [Prompts](/prompts/README.md) - Prompts for exercises and examples
+
+#### PRIVATE
+
+- [Private](/private/README.md) - Private and confidential files
+
+#### STATIC
+
+- [Static](/static/README.md) - Static assets and resources
 
 #### EXAMPLES
 
@@ -57,6 +67,12 @@ This monorepo contains various projects, libraries, and services organized in a 
   - [GPU Stuff](/examples/gpu-stuff/README.md) - GPU computation examples
   - [Node.js](/examples/node-js/README.md) - Node.js implementation examples
   - [TypeScript](/examples/typescript/README.md) - TypeScript implementation examples
+
+#### SCRIPTS
+
+- [Scripts](/scripts/README.md) - Utility and automation scripts
+
+### Development Resources
 
 #### COMMON & SCRIPTS
 
@@ -80,25 +96,6 @@ This monorepo contains various projects, libraries, and services organized in a 
 - [Infrastructure](/infrastructure/README.md) - Infrastructure setup
 - [Helpers](/helpers/README.md) - Helper utilities
 
-## Repository Configuration
-
-### Git Submodules
-
-The repository includes several submodules:
-
-- services/image-scout: <https://github.com/Luxcium/Redis-ImageScout.git>
-- services/questrade-ts: <https://github.com/Luxcium/questrade-ts.git>
-- services/rpc-worker-pool: <https://github.com/Luxcium/rpc-worker-pool.git>
-- library/mapping-tools: <https://github.com/LuxciumProject/mapping-tools.git>
-
-### Project Management
-
-The project uses:
-
-- Rush stack for monorepo management (rush.json)
-- VSCode multi-root workspaces (monorepo-one.code-workspace)
-- Git submodules (.gitmodules)
-
 ## Getting Started
 
 1. Clone the repository with submodules:
@@ -121,35 +118,29 @@ The project uses:
 
 ## License
 
-Copyright © 2022-2024 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
+### Luxcium License: NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
 
-### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
+- THESE FILES ARE **NOT** FIT FOR ANY PARTICULAR PURPOSE IN THEIR CURRENT FORM.
+- THESE FILES OR THEIR CONTENT HAVE NOT BEEN TESTED OR RUN YET IN ANY OR ALL ENVIRONMENTS!
+- **DO NOT** RUN ANY OF THESE FILES UNLESS YOU HAVE REVIEWED THEIR FULL CONTENT.
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOU (or anyone).
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOUR MACHINE (or any machine).
 
-   1) NOT TO PUBLISH;
-   2) NOT TO DISTRIBUTE;
-   3) NOT TO SUBLICENSE;
-   4) NOT TO SELL COPIES OF;
+#### NO PERMISSIONS ARE GRANTED FOR THIS SOFTWARE OR DOCUMENTATION
 
-#### NOTICE
+    1) NOT TO PUBLISH;
+    2) NOT TO DISTRIBUTE;
+    3) NOT TO SUBLICENSE;
+    4) NOT TO SELL COPIES OF;
 
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ALL OR ANY KIND,
-> EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS WILL BE LIABLE FOR ALL
-> OR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-> TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
-> OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   Even for unpermited usage you must provide the name of the copyright holder and this must be included in all copies or substantial portions of the Software:
 
-### EXCEPTIONS
+   The Software is provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders X be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the Software.
 
-#### YOU HAVE THE RIGHT TO
+Except as contained in this notice, the name of the \<copyright holders> shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization from the \<copyright holders>. »
 
-  A) USE IT FOR YOURSELF;
-  B) DISTRIBUTE IT TO YOUR FRIENDS;
-  C) DISTRIBUTE IT TO YOUR STUDENTS;
-  D) DISTRIBUTE IT TO YOUR COWORKER;
-  (FOR PERSONAL USE; AT HOME, AT SCHOOL OR AT WORK)
+## COPYRIGHT
 
-   IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
+Copyright © 2023-2024 · LUXCIUM · (Benjamin Vincent) · luxcium﹫neb401.com
 
-† Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
+† **Scientia est lux principium✨** ™
