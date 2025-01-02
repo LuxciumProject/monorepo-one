@@ -364,3 +364,12 @@ Running JavaScript from custom rules, `markdown-it` plugins, or configuration fi
 ## Recent updates
 
 To acess the most recent version of this document please visit the GitHub page of [vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint)
+
+## Used Under License
+
+The content of this document was obtained and is used under the MIT License
+
+Copyright (c) David Anson
+
+Reference:
+[DavidAnson/vscode-markdownlint ― MIT License](https://github.com/DavidAnson/vscode-markdownlint/blob/d9234b5034f79cf43a3aa4dcdbc04a7381824b4d/LICENSE)
