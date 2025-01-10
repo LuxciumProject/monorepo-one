@@ -9,6 +9,11 @@ This directory contains the backend services and APIs for the monorepo.
 - `/scratch` - Development and experimental code
 - `/typescript` - TypeScript-specific backend implementations
 
+### Links to Projects
+
+- [API](api/README.md)
+- [Scratch](scratch/README.md)
+
 ## Related Sections
 
 - [Return to Root](../README.md)

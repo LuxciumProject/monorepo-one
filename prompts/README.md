@@ -1,11 +1,17 @@
 # MONOREPO/PROMPTS
 
-This directory contains all the prompts for the exercises in the monorepo.
+This directory contains all the prompts for the exercises in the monorepo. The `prompts` directory is organized into several subdirectories, each serving a specific purpose.
 
+## Subdirectories
+
+- **typing_prompter/**: Contains scripts or files that prompt the user for input or display messages to the user.
+- **chatgpt/**: Contains scripts and resources related to ChatGPT prompts.
+  - **more-prompts/**: Additional prompts for various applications.
 
 ## Table of Contents
 
 - [MONOREPO/PROMPTS](#monorepoprompts)
+  - [Subdirectories](#subdirectories)
   - [Table of Contents](#table-of-contents)
   - [license](#license)
     - [Luxcium License: NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY](#luxcium-license-no-permissions-granted---provided-as-is---without-warranty)
