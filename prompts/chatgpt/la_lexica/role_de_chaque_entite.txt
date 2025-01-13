@@ -1,0 +1,125 @@
+Rôle de chaque entité :
+Expéditeur : Vous, l'utilisateur, qui pose la question.
+Récepteur : Le LLM, qui reçoit la question.
+Répondant : Le LLM, qui répond à la question.
+Destinataire : Vous, l'utilisateur, qui reçoit la réponse.
+Est-ce que cette proposition vous semble claire et alignée avec votre logique de communication ?
+
+Expéditeur et Destinataire
+Expéditeur et Récepteur
+Expéditeur et Répondant
+Récepteur et Destinataire
+Récepteur et Répondant
+Répondant et Destinataire
+
+
+utilisateur, system, agent, LLM
+1 - L'utilisateur
+2 - Le système
+3 - L'agent
+4 - Le LLM
+A - L'utilisateur
+B - Le système
+C - L'agent
+D - Le LLM
+  ↔   → ←   
+
+
+
+
+## on a deux façon de les énumérées en terme de ce qui est possible de faire 
+1 - L'utilisateur → A, B, C, ou D
+2 - Le système → A, B, C, ou D
+3 - L'agent → A, B, C, ou D
+4 - Le LLM → A, B, C, ou D
+A - L'utilisateur ← 1, 2, 3, ou 4
+B - Le système ← 1, 2, 3, ou 4
+C - L'agent ← 1, 2, 3, ou 4
+D - Le LLM ← 1, 2, 3, ou 4
+
+### Réflexif (parler à soi-même) :
+1. **1 - L'utilisateur** «SE DIT [ ]  À (lui-même ou elle-même l'utilisateur courant est un garcon)» A - L'utilisateur  
+2. **2 - Le système** «SE DIT [ ] À (lui-même)» B - Le système
+3. **3 - L'agent** «SE DIT [ ] À (lui-même ou elle-même)» C - L'agent
+4. **4 - Le LLM** «SE DIT [ ] À (elle-même)» D - Le LLM
+
+### Relation externe (parler à un autre) :
+5. **L'utilisateur** «DIT [ ] À» B - Le système  
+6. **L'utilisateur** «DIT [ ] À» C - L'agent  
+7. **L'utilisateur** «DIT [ ] À» D - Le LLM  
+8. **Le système** «DIT [ ] À» A - L'utilisateur  
+9. **Le système** «DIT [ ] À» C - L'agent  
+10. **Le système** «DIT [ ] À» D - Le LLM  
+11. **L'agent** «DIT 'tu' À» A - L'utilisateur  
+12. **L'agent** «DIT [ ] À» B - Le système  
+13. **L'agent** «DIT [ ] À» D - Le LLM  
+14. **Le LLM** «DIT 'VOUS' À» A - L'utilisateur  
+15. **Le LLM** «DIT [ ] À» B - Le système  
+16. **Le LLM** «DIT [ ] À» C - L'agent  
+
+### Réflexif (parler de soi-même) :
+17. ** A - L'utilisateur** «PARLE DE [ ] (lui-même ou elle-même l'utilisateur courant est un garcon)» 1 - L'utilisateur
+18. ** B - Le système** «PARLE DE [ ] (lui-même)» 2 - Le système
+19. ** C - L'agent** «PARLE DE [ ] (lui-même ou elle-même)» 3 - L'agent
+20. ** D - Le LLM** «PARLE DE [ ] (elle-même)» 4 - Le LLM
+
+### Retour du message (récepteur passif) :
+21. **A - L'utilisateur** «SE FAIT DIRE [ ] PAR» 2 - Le système  
+22. **B - Le système** «SE FAIT DIRE [ ] PAR» 2 - Le système  
+23. **C - L'agent** «SE FAIT DIRE [ ] PAR» 2 - Le système  
+24. **D - Le LLM** «SE FAIT DIRE [ ] PAR» 2 - Le système  
+25. **A - L'utilisateur** «SE FAIT DIRE 'tu' PAR» 3 - L'agent  
+26. **B - Le système** «SE FAIT DIRE [ ] PAR» 3 - L'agent  
+27. **C - L'agent** «SE FAIT DIRE [ ] PAR» 3 - L'agent  
+28. **D - Le LLM** «SE FAIT DIRE [ ] PAR» 3 - L'agent  
+29. **A - L'utilisateur** «SE FAIT DIRE 'VOUS' PAR» 4 - Le LLM  
+30. **B - Le système** «SE FAIT DIRE [ ] PAR» 4 - Le LLM  
+31. **C - L'agent** «SE FAIT DIRE [ ] PAR» 4 - Le LLM  
+32. **D - Le LLM** «SE FAIT DIRE [ ] PAR» 4 - Le LLM
+
+
+
+## fait toutes les lignes complètes précédentes plusieurs lignes à la fois pour →  ... j'ai corrigé!
+
+1.  1 - L'utilisateur → A - L'utilisateur
+2.  2 - Le système → B - Le système
+3.  3 - L'agent → C - L'agent
+4.  4 - Le LLM → D - Le LLM
+
+5. 1 - L'utilisateur → B - Le système
+6. 1 - L'utilisateur → C - L'agent
+7. 1 - L'utilisateur → D - Le LLM
+8. 2 - Le système → A - L'utilisateur
+9. 2 - Le système → C - L'agent
+10. 2 - Le système → D - Le LLM
+11. 3 - L'agent → A - L'utilisateur
+12. 3 - L'agent → B - Le système
+13. 3 - L'agent → D - Le LLM
+14. 4 - Le LLM → A - L'utilisateur
+15. 4 - Le LLM → B - Le système
+16. 4 - Le LLM → C - L'agent
+
+## fait toutes les lignes complètes précédentes plusieurs lignes à la fois pour ←  ... j'ai corrigé!
+
+17. A - L'utilisateur ← 1 - L'utilisateur
+18. B - Le système ← 2 - Le système
+19. C - L'agent ← 3 - L'agent
+20. D - Le LLM ← 4 - Le LLM
+
+21. B - Le système ← 1 - L'utilisateur
+22. C - L'agent ← 1 - L'utilisateur
+23. D - Le LLM ← 1 - L'utilisateur
+24. A - L'utilisateur ← 2 - Le système
+25. C - L'agent ← 2 - Le système
+26. D - Le LLM ← 2 - Le système
+27. A - L'utilisateur ← 3 - L'agent
+28. B - Le système ← 3 - L'agent
+29. D - Le LLM ← 3 - L'agent
+30. A - L'utilisateur ← 4 - Le LLM
+31. B - Le système ← 4 - Le LLM
+32. C - L'agent ← 4 - Le LLM
+
+
+
+
+
