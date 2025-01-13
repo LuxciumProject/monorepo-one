@@ -2289,6 +2289,11 @@
       "name": "          📚🧌 restraining-zalgo",
       "path": "library/restraining-zalgo"
     },
+    // /P3/monorepo-one/library/python
+    {
+      "name": "          📚🐍 python",
+      "path": "library/python",
+    },
     {
       "name": "          📓🛠️ Tools",
       "path": "library/tools"
@@ -2341,10 +2346,6 @@
       "name": "  ↓ 🗂️ 🎨 static",
       "path": "static"
     },
-    // {
-    //   "name": "           🎨🤖 STABLE DIFFUSION",
-    //   "path": "static/stable-diffusion"
-    // },
     {
       "name": "  ↓ 🪄 🎱 EXAMPLES",
       "path": "examples"
