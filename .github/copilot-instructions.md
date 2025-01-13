@@ -144,6 +144,12 @@ The goal of this guide is to ensure that generated code is both human-readable a
   - **Remove**: `pnpm remove <package-name>`
 - **Note**: Don’t use PNPM in `monorepo-one`; use Rush instead.
 
+## Additional Optional Tooling
+
+You may optionally integrate tools like [Prettier](https://prettier.io/docs/en/next/) or [ESLint](https://eslint.org/docs/latest/rules/) for code formatting and linting, ensuring code consistency. When working with Rush ([https://rushjs.io/pages/intro/get_started/](https://rushjs.io/pages/intro/get_started/)) or [Heft](https://heft.rushstack.io/), you can configure these tools at the project or monorepo level, using either `pnpm` or corresponding Rush commands where appropriate.
+
+While none of these integrations are mandatory, applying them consistently helps maintain high-quality code. Use PNPM commands outside monorepo-one or Rush commands within monorepo-one as needed, observing the established packaging rules for smooth development and collaboration.
+
 ## Testing the Code
 
 - **Unit Tests**: Write tests for each function.
@@ -323,8 +329,6 @@ For TypeDoc, there are three main types of documentation tags:
    - `@default` - Default value
    - `@hidden` - Hide from documentation
    - `@ignore` - Ignore in documentation
-
-### Types of Comments
 
 #### Maintenance
 
