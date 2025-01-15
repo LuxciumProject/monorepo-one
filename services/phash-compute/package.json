@@ -13,7 +13,6 @@
   "author": "Benjamin Vincent",
   "license": "MIT",
   "devDependencies": {
-    
     "@rushstack/heft-jest-plugin": "~0.10.6",
     "@rushstack/heft": "~0.63.4",
     "@types/eslint-config-prettier": "~6.11.3",
@@ -73,5 +72,6 @@
     "@luxcium/boxed-list": "workspace:*",
     "@luxcium/colors-tools": "workspace:*",
     "@luxcium/object-with-expectations": "workspace:*"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
