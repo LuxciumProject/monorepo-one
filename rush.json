@@ -370,6 +370,13 @@
       ]
     },
     {
+      "packageName": "@luxcium/quick-start",
+      "projectFolder": "frontend/quick-start",
+      "tags": [
+        "frontend"
+      ]
+    },
+    {
       "packageName": "@luxcium/anthropic-api",
       "projectFolder": "APIs/anthropic", // new package
       "shouldPublish": false,
