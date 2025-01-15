@@ -4,7 +4,7 @@ When working on larger projects, breaking them down into smaller, clearly define
 
 ## 30-minute Sessions Structure
 
-Here’s how we can structure this 30-minute session:
+A structured approach helps maintain steady progress. By dividing the session into clear intervals, we can focus on manageable subtasks, track progress, and adapt as needed.
 
 1. **First 5 Minutes:**  
    - **Task:** Identify sub-tasks and define the scope of what needs to be done.  
@@ -24,35 +24,44 @@ After the 30-minute cycle, we’ll take a short break. During this time, the AI 
 **Outcome:**  
 This methodical approach ensures that every cycle has a clear structure, builds on the previous session’s work, and maintains a comprehensive internal to-do list. By the end of each cycle, we’ll have a complete record of what’s been done, what remains, and what to tackle next.
 
-### Instructions for the AI Agent
+## Instructions for the AI Agent
 
-We will tackle the larger problem by breaking it into smaller, focused steps. For each cycle:  
+We will tackle the larger problem by breaking it into smaller, focused steps. This method helps the AI maintain strict attention on each phase and adapt to changes without losing track of the overall objectives.
 
-- **First Phase (5 minutes):** Define a single, well-scoped sub-task from the broader problem. Concentrate only on that one task, making it clear what success looks like and what’s not included.  
-- **Second Phase (20 minutes):** Work exclusively on that defined sub-task. Do not attempt to address unrelated issues or future steps. Treat this time as if we’re solving a single, isolated puzzle piece.  
-- **Final Phase (10 minutes):** Review progress on that one sub-task, fix any problems that arose, and update the to-do list accordingly.  
-- **Between Cycles:** Reset focus. Start the next session by choosing the next small sub-task.
+1. **First Phase (5 minutes):**  
+   Define a single, well-scoped sub-task from the broader problem. Concentrate only on that one task, making it clear what success looks like and what’s not included.
+
+2. **Second Phase (20 minutes):**  
+   Work exclusively on that defined sub-task. Do not attempt to address unrelated issues or future steps. Treat this time as if we’re solving a single, isolated puzzle piece.
+
+3. **Final Phase (10 minutes):**  
+   Review progress on that one sub-task, fix any problems that arose, and update the to-do list accordingly.
+
+4. **Between Cycles:**  
+   Reset focus. Start the next session by choosing the next small sub-task.
 
 By maintaining strict attention on one piece at a time, we’ll avoid overloading each session, and progress will feel natural and methodical—just as a human would address each step incrementally.
 
-### Reliable time
+## Reliable time
 
-Got it! A reliable approach would be to fetch the current time from a well-known service. Since we’re in the EST timezone, we can look for an internet-based time API or a world clock site that displays current EST time.
+Having a reliable approach to fetching the current time ensures that we stay on schedule. By leveraging known services or tools, we can quickly determine the time and maintain accurate intervals.
 
-For instance, you could use any of these methods:
+**Options to Consider:**
 
 1. **World Clock API or Website:**  
-   - Check a site like [time.is](https://time.is/EST) or [worldtimeapi.org](http://worldtimeapi.org/api/timezone/America/New_York) for a direct EST reading.
+   Check a site like [time.is](https://time.is/EST) or [worldtimeapi.org](http://worldtimeapi.org/api/timezone/America/New_York) for a direct EST reading.
 
 2. **Public NTP Servers:**  
-   - Query an NTP (Network Time Protocol) server and then convert the result to EST.  
+   Query an NTP (Network Time Protocol) server and then convert the result to EST.  
 
 3. **Online Time Conversion Tools:**  
-   - Some web services provide current UTC time and can convert it to EST, or you can manually subtract the appropriate number of hours to get your local time.
+   Some web services provide current UTC time and can convert it to EST, or you can manually subtract the appropriate number of hours to get your local time.
 
 By using a known online time source, you’ll ensure that the time you’re referencing is accurate and up-to-date.
 
 ## Integrated To-Do List Concept
+
+A well-maintained to-do list is central to staying organized and making progress. This list should always reflect current priorities, tasks to be done, and those that can be postponed.
 
 ### Maintain a To-Do List
 
@@ -71,9 +80,7 @@ To clarify, the key instruction here is to use a running to-do list as a dynamic
 
 By integrating these approaches, the instructions aim to create a clear path forward. Each step is small enough to maintain focus, the to-do list keeps everything organized and visible, and the overall method promotes steady progress without being overwhelmed by the larger scope of the project.
 
----
-
-**Guidelines for the AI Agent:**
+### Guidelines for the AI Agent
 
 - The AI agent must keep a running to-do list in this conversation at all times. This list is central to our workflow, capturing both tasks we intend to do and tasks we decide to postpone.
   - When a new task arises, add it to the list immediately.
@@ -85,7 +92,7 @@ By integrating these approaches, the instructions aim to create a clear path for
 
 ## Structured Work Cycles
 
-We will use a focused time structure for each work session:
+By adhering to a regular schedule, we can maintain consistency and ensure steady progress. Each phase has a distinct focus, allowing us to remain effective without becoming overwhelmed.
 
 1. **First Phase (5 minutes):**  
    Concentrate on defining one small sub-task of the larger problem. Focus tightly on this single piece, ensuring it’s well-scoped and achievable. Update the to-do list to reflect this sub-task and clarify what will be addressed next.
