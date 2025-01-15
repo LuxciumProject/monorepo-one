@@ -2234,6 +2234,10 @@
       "path": "frontend"
     },
     {
+      "name": "           👨‍💻 🏠 $PROJECT_NAME 🏗️",
+      "path": "frontend/$PROJECT_NAME"
+    },
+    {
       "name": "           👨‍💻 🏠 HOME 🏗️ 📗🏳️‍🌈",
       "path": "frontend/home"
     },
@@ -2289,7 +2293,6 @@
       "name": "          📚🧌 restraining-zalgo",
       "path": "library/restraining-zalgo"
     },
-    // /P3/monorepo-one/library/python
     {
       "name": "          📚🐍 python",
       "path": "library/python",
