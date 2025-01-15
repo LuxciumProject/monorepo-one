@@ -54,12 +54,26 @@ By using a known online time source, you’ll ensure that the time you’re refe
 
 ## Integrated To-Do List Concept
 
-- **Maintain a To-Do List:**  
-   The AI agent must keep a running to-do list in this conversation at all times. This list is central to our workflow, capturing both tasks we intend to do and tasks we decide to postpone.  
-  - When a new task arises, add it to the list immediately.  
-  - If a task is completed, mark it as done.  
-  - If priorities shift, reorder or revise the tasks accordingly.  
-  - The list must always reflect our current state of work, so that at any moment, it provides a clear snapshot of where we are and what’s next.
+- **Maintain a To-Do List:**
+
+    To clarify, the key instruction here is to use a running to-do list as a dynamic guide for maintaining focus. The process begins by clearly defining the primary problem or project at hand. Instead of tackling it all at once, the goal is to break it down into smaller, actionable subtasks. Each subtask represents a manageable step toward the larger goal, making it easier to stay concentrated on one thing at a time.
+
+The to-do list serves multiple purposes:
+
+By integrating these approaches, the instructions aim to create a clear path forward. Each step is small enough to maintain focus, the to-do list keeps everything organized and visible, and the overall method promotes steady progress without being overwhelmed by the larger scope of the project.
+
+  1. **Capturing all tasks:** It provides a place to record everything that needs to be done, including those tasks that aren’t immediately critical. By having a single, central location for all tasks, it becomes easier to prioritize and postpone non-urgent items without forgetting about them.
+
+  2. **Maintaining hyper-focus:** By focusing solely on the current subtask listed at the top of the to-do list, distractions from other parts of the project are minimized. This ensures that all energy and attention remain on the most important work at that moment.
+
+  3. **Adjusting as needed:** As tasks are completed, the list is updated to reflect progress, and postponed tasks can be revisited at a more appropriate time. This adaptability allows for better long-term management and ensures that even postponed tasks don’t slip through the cracks.
+
+   The AI agent must keep a running to-do list in this conversation at all times. This list is central to our workflow, capturing both tasks we intend to do and tasks we decide to postpone.
+
+- When a new task arises, add it to the list immediately.  
+- If a task is completed, mark it as done.  
+- If priorities shift, reorder or revise the tasks accordingly.  
+- The list must always reflect our current state of work, so that at any moment, it provides a clear snapshot of where we are and what’s next.
 
 - **Structured Work Cycles:**  
    We will use a focused time structure for each work session:  
