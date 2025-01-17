@@ -119,7 +119,7 @@ These instructions are designed to ensure **accurate, consistent, and complete a
 
 ### Directory Tree Output
 
-```exemple
+```example
 └── 📂 project-root (17, 144, 5, 7)
     ├── .gitignore [6L, 46.0B]
     ├── 📂 src (6, 86, 1)
