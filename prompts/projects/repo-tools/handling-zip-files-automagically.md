@@ -156,6 +156,112 @@ The example outputs below demonstrate the expected structure and format of the a
 
 The directory tree provides a comprehensive overview of the project’s structure and content. It displays folder statistics and detailed file information to give a clear understanding of the repository.
 
+**Output the full detailed directory structure without abridgment:**
+
+```python
+import os
+import zipfile
+
+# Function to get the size of a file in human-readable format.
+def human_readable_size(size):
+    """Converts a file size in bytes to a human-readable format, e.g., KB, MB."""
+    for unit in ['B', 'KB', 'MB', 'GB', 'TB']:
+        if size < 1024:
+            return f"{size:.1f}{unit}"
+        size /= 1024
+    return f"{size:.1f}TB"
+
+# Function to count lines in a text file.
+def count_lines(filepath):
+    """Counts the number of lines in a file if it is a text file. Returns None for binary files."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return sum(1 for _ in f)
+    except (UnicodeDecodeError, OSError):  # Handle non-text or inaccessible files.
+        return None
+
+# Function to extract and process a ZIP file.
+def process_zip_file(zip_path, output_dir):
+    """Extracts a ZIP file and generates a detailed directory tree with file statistics."""
+    # Step 1: Extract the ZIP file.
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(output_dir)
+
+    # Initialize a list to store the formatted directory tree.
+    detailed_output = []
+
+    def generate_detailed_tree(directory, prefix=""):
+        """Recursively generates a detailed directory tree, including file and folder statistics."""
+        entries = sorted(os.listdir(directory))  # Sort entries for consistent output.
+        for index, entry in enumerate(entries):
+            path = os.path.join(directory, entry)
+            is_last = index == len(entries) - 1  # Determine if this is the last entry.
+            connector = "└── " if is_last else "├── "
+            current_prefix = prefix + ("    " if is_last else "│   ")
+
+            if os.path.isdir(path):  # Handle folders.
+                folder_counts = analyze_folder(path)
+                # Format folder output based on subfolder and file counts.
+                if folder_counts[3] == 0:  # No subfolders.
+                    if folder_counts[1] == folder_counts[0]:
+                        detailed_output.append(f"{prefix}{connector}📂 {entry} ({folder_counts[0]})")
+                    else:
+                        detailed_output.append(f"{prefix}{connector}📂 {entry} ({folder_counts[0]}, {folder_counts[1]})")
+                else:
+                    if folder_counts[2] == folder_counts[3]:
+                        detailed_output.append(f"{prefix}{connector}📂 {entry} ({folder_counts[0]}, {folder_counts[1]}, {folder_counts[2]})")
+                    else:
+                        detailed_output.append(f"{prefix}{connector}📂 {entry} ({folder_counts[0]}, {folder_counts[1]}, {folder_counts[2]}, {folder_counts[3]})")
+                # Recursively process the folder.
+                generate_detailed_tree(path, current_prefix)
+            elif os.path.isfile(path):  # Handle files.
+                size = os.path.getsize(path)
+                line_count = count_lines(path)
+                if line_count is not None:
+                    detailed_output.append(f"{prefix}{connector}{entry} [{line_count}L, {human_readable_size(size)}]")
+                else:
+                    detailed_output.append(f"{prefix}{connector}{entry} [{human_readable_size(size)}]")
+
+    def analyze_folder(folder_path):
+        """Analyzes a folder to calculate counts of files and subfolders, both directly and recursively."""
+        files_in = 0  # Files directly in the folder.
+        folders_in = 0  # Subfolders directly in the folder.
+        total_files = 0  # Total files including nested ones.
+        total_folders = 0  # Total subfolders including nested ones.
+
+        for entry in os.listdir(folder_path):
+            entry_path = os.path.join(folder_path, entry)
+            if os.path.isfile(entry_path):
+                files_in += 1
+            elif os.path.isdir(entry_path):
+                folders_in += 1
+                # Recursively analyze subfolders.
+                sub_files, sub_total_files, sub_folders, sub_total_folders = analyze_folder(entry_path)
+                total_files += sub_total_files
+                total_folders += sub_total_folders
+
+        total_files += files_in
+        total_folders += folders_in
+
+        return files_in, total_files, folders_in, total_folders
+
+    # Generate the directory tree starting from the extracted directory.
+    generate_detailed_tree(output_dir)
+
+    # Return the detailed directory tree as a string.
+    return "\n".join(detailed_output)
+
+# Example usage:
+# zip_path = "path/to/your/file.zip"
+# output_dir = "path/to/extract/directory"
+# tree_output = process_zip_file(zip_path, output_dir)
+# print(tree_output)
+```
+
+**Output the full detailed directory:**
+
+In this exemple the output is truncated, you must NEVER reduce the length, the output must be in the fullest extent possible.
+
 ```example
 └── 📂 project-root (17, 144, 5, 7)
     ├── .gitignore [6L, 46.0B]
