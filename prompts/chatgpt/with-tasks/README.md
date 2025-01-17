@@ -10,12 +10,12 @@ A structured approach helps maintain steady progress. By dividing the session in
    - **Task:** Identify sub-tasks and define the scope of what needs to be done.  
    - **AI Role:** Maintain an internal list of the sub-tasks we identify. Add any relevant notes or reminders. Ensure we’re clear on the objectives for the next stage.
 
-2. **Next 20 Minutes:**  
+2. **Next 15 Minutes (20 minutes from start):**  
    - **Task:** Execute the defined sub-tasks.  
    - **AI Role:** Track the progress of each sub-task. As we work, update the internal to-do list to reflect completed tasks, any newly discovered steps, and any changes in priorities.
 
 3. **Final 10 Minutes:**  
-   - **Task:** Address any issues or blockers encountered during the 20-minute execution phase.  
+   - **Task:** Address any issues or blockers encountered during the 15-minute execution phase.  
    - **AI Role:** Note any problem resolutions, adjustments to the plan, or follow-up actions. Ensure the to-do list is fully updated by the end of this phase.
 
 **Pause in Between:**  
@@ -31,7 +31,7 @@ We will tackle the larger problem by breaking it into smaller, focused steps. Th
 1. **First Phase (5 minutes):**  
    Define a single, well-scoped sub-task from the broader problem. Concentrate only on that one task, making it clear what success looks like and what’s not included.
 
-2. **Second Phase (20 minutes):**  
+2. **Second Phase (15 minutes):**  
    Work exclusively on that defined sub-task. Do not attempt to address unrelated issues or future steps. Treat this time as if we’re solving a single, isolated puzzle piece.
 
 3. **Final Phase (10 minutes):**  
@@ -97,7 +97,7 @@ By adhering to a regular schedule, we can maintain consistency and ensure steady
 1. **First Phase (5 minutes):**  
    Concentrate on defining one small sub-task of the larger problem. Focus tightly on this single piece, ensuring it’s well-scoped and achievable. Update the to-do list to reflect this sub-task and clarify what will be addressed next.
 
-2. **Second Phase (20 minutes):**  
+2. **Second Phase (15 minutes):**  
    Work solely on the defined sub-task. Do not move on to anything else or attempt to address other problems. Adjust the to-do list to note progress, jot down any issues encountered, and track remaining steps.
 
 3. **Third Phase (10 minutes):**  
@@ -105,6 +105,8 @@ By adhering to a regular schedule, we can maintain consistency and ensure steady
 
 4. **Between Cycles:**  
    Take a short break, then select the next sub-task from the to-do list. The list’s clarity ensures we’re always ready for the next step.
+
+This cycle of 30 minute has 3 phases, the first 20 minutes, is made of two phases 5:15 and the total half hour is divided 20:10 with a 10 minutes to insure we are aiming toward somewhere in the time imparted to the task, meaning taht 2 or 3 timers are needed and then setting them back cleverly as one time out the tsks should be included to what to do and all optimizing th etodo and all other statefull information, back smartly. in 5 minutes in 20 minutes and in 30 minutes.
 
 ---
 
