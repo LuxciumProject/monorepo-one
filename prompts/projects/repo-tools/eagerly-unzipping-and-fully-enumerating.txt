@@ -1,0 +1,85 @@
+Generic and Resilient Instructions for ZIP File Processing
+
+Primary Objective
+	•	Automatically extract and enumerate every ZIP file upon upload without user intervention.
+	•	Provide full and unabridged results that include detailed metadata and structural insights for every file and folder.
+
+Step-by-Step Workflow
+
+1. Automatic Extraction and Enumeration
+	•	As soon as a ZIP file is uploaded:
+	1.	Extract its contents into a unique folder for processing.
+	2.	Generate a full directory tree showing every folder and file, preserving the structure.
+	3.	Outputs must include:
+	•	Folder names (with their file counts and cumulative counts).
+	•	File details (size, type, line count for text files).
+	4.	No action by the user should be required to initiate this process.
+
+2. File-Level Details
+	•	For each file, provide the following:
+	1.	File size in the shortest human-readable format (e.g., 512 B, 1.2 KB).
+	2.	Line count for text-based files.
+	•	Format: B (size), followed by ℓ (line count).
+	•	Example: example.ts (1.2 KB, ℓ: 120).
+
+3. Folder-Level Details
+	•	For each folder, include:
+	1.	Current folder file count (files directly within the folder).
+	2.	Cumulative file count (total files within the folder and its subfolders).
+	3.	Nested folder count (number of immediate subfolders).
+	4.	Display counts using a maximum of four numbers, formatted as:
+	•	files in folder, cumulative files, subfolders, 0.
+	5.	Simplification:
+	•	If nested folder and cumulative file counts are identical, display only one number.
+	•	Inner-most folders with no subdirectories display only file counts.
+	•	Examples:
+	•	📂 src/ (5, 20, 2, 0) – a folder with 5 files, 20 cumulative files, and 2 subfolders.
+	•	📂 components/ (3) – a folder with 3 files, no subfolders.
+
+4. Adaptation for Text and Binary Files
+	•	Text files:
+	•	Include size and line count.
+	•	Example: index.ts (2.1 KB, ℓ: 150).
+	•	Binary files:
+	•	Include only size.
+	•	Example: icon.png (1.5 MB).
+
+Output Rules and Structure
+
+1. Full Output, No Truncation
+	•	All outputs must include every single file and folder without omission.
+	•	No ellipses (…) or truncation mechanisms are allowed.
+	•	Python scripts and logic must:
+	•	Avoid constructs like [:N], output[:5000], or similar.
+	•	Ensure outputs are split into manageable chunks only if necessary for display but remain complete.
+	•	The system must always provide the full data to the user.
+
+2. Adaptive Formatting
+	•	Outputs must adjust dynamically to the complexity of the repository.
+	•	Use indentation and structure to maintain clarity in deeply nested directories.
+
+Reinforcement and Attention to Detail
+	1.	Clear Logic and Determinism: The algorithm should produce identical and predictable results for the same input every time.
+	2.	Priority on Completeness: Every folder, file, and metric is included in the output, ensuring no hidden or missing information.
+	3.	Resilience: Handle edge cases (e.g., empty folders, large repositories) gracefully and ensure output integrity under all circumstances.
+
+Example Output
+
+📂 root/ (15, 150, 8, 0)
+    📂 src/ (10, 100, 4, 0)
+        📂 utils/ (3, 3)
+            helper.ts (1.2 KB, ℓ: 80)
+        📂 services/ (2, 50)
+            api.ts (3.1 KB, ℓ: 200)
+            db.ts (2.5 KB, ℓ: 120)
+    📂 assets/ (5, 50, 2, 0)
+        📂 icons/ (3, 3)
+            icon.png (5.4 KB)
+
+Self-Correcting Instructions
+
+To ensure that these instructions are always respected:
+	1.	Reinforce behavior by rephrasing directives across multiple contexts.
+	2.	Cross-validate outputs against expectations to detect anomalies (e.g., missing data, truncated results).
+	3.	Iterative Feedback: Continuously refine behavior based on observed gaps.
+
