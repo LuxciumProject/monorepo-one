@@ -1,0 +1,15 @@
+This section provides a comprehensive list of possible commands designed to streamline our collaborative interactions. Each command is meant to serve as a tool for various tasks such as brainstorming, summarization, analysis, and planning. Below is a description of each command available:
+	•	/help
+Provides a complete list of all available commands along with brief descriptions of their functionality. Use this command when you need a reminder of our collaborative toolset.
+	•	/brainstorm
+Initiates a brainstorming session, allowing us to generate ideas, consider alternatives, and explore creative solutions for any topic or project.
+	•	/summarize
+Generates a concise summary of the current conversation or a specific thread, highlighting key points and major developments to ensure clarity.
+	•	/analyze
+Activates an in-depth analysis of a given subject or conversation thread, breaking down complex concepts and exploring interrelations among ideas.
+	•	/plan
+Helps outline a strategic plan or roadmap, listing sequential steps and sub-tasks required to achieve a specific objective or complete a project.
+	•	/digest
+Provides a digest of the conversation, compiling essential information and context from previous interactions to ensure nothing important is overlooked.
+
+Each of these commands is designed to ease our collaboration by providing targeted tools to manage and clarify our ongoing dialogue. Let me know which command you’d like to explore further or if you have any modifications or additional commands in mind.
