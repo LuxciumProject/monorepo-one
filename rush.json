@@ -15,7 +15,7 @@
    * path segment in the "$schema" field for all your Rush config files. This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.144.0",
+  "rushVersion": "5.148.0",
   /**
    * The next field selects which package manager should be installed and determines its version.
    * Rush installs its own local copy of the package manager to ensure that your build process
@@ -24,7 +24,7 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion". See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "9.15.0",
+  "pnpmVersion": "9.15.3",
   /**
    * Options that are only used when the PNPM package manager is selected
    */
@@ -370,8 +370,16 @@
       ]
     },
     {
+      "packageName": "@luxcium/quick-start",
+      "projectFolder": "frontend/quick-start",
+      "tags": [
+        "frontend"
+      ]
+    },
+    {
       "packageName": "@luxcium/anthropic-api",
-      "projectFolder": "APIs/anthropic",
+      "projectFolder": "APIs/anthropic", // new package
+      "shouldPublish": false,
       "tags": [
         "apis"
       ]
@@ -379,6 +387,7 @@
     {
       "packageName": "@luxcium/openai-api",
       "projectFolder": "APIs/openai",
+      "shouldPublish": false,
       "tags": [
         "apis"
       ]
@@ -387,6 +396,7 @@
     {
       "packageName": "@luxcium/infrastructure",
       "projectFolder": "infrastructure/dev",
+      "shouldPublish": false,
       "tags": [
         "backend",
         "tools"
@@ -395,6 +405,7 @@
     {
       "packageName": "@luxcium/bigintstring",
       "projectFolder": "library/bigintString",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -402,6 +413,7 @@
     {
       "packageName": "@luxcium/colors-tools",
       "projectFolder": "library/colors-tools",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -409,6 +421,7 @@
     {
       "packageName": "@luxcium/boxing-tools",
       "projectFolder": "library/boxing-tools",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -416,6 +429,7 @@
     {
       "packageName": "@luxcium/boxed-list",
       "projectFolder": "library/boxed-list",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -423,6 +437,7 @@
     {
       "packageName": "@luxcium/object-with-expectations",
       "projectFolder": "library/object-with-expectations",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -430,6 +445,7 @@
     {
       "packageName": "@luxcium/human-size",
       "projectFolder": "library/human-size",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -437,6 +453,7 @@
     {
       "packageName": "@luxcium/parallel-mapper",
       "projectFolder": "library/parallel-mapper",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -444,6 +461,7 @@
     {
       "packageName": "mapping-tools",
       "projectFolder": "library/mapping-tools",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -451,6 +469,7 @@
     {
       "packageName": "@luxcium/restraining-zalgo",
       "projectFolder": "library/restraining-zalgo",
+      "subspaceName": "library",
       "tags": [
         "library"
       ]
@@ -458,6 +477,7 @@
     {
       "packageName": "@luxcium/tools",
       "projectFolder": "library/tools",
+      "subspaceName": "library",
       "tags": [
         "library",
         "tools"
@@ -465,6 +485,7 @@
     },
     {
       "packageName": "@luxcium/phash-compute",
+      "shouldPublish": false,
       "projectFolder": "services/phash-compute",
       "tags": [
         "services"
@@ -473,6 +494,7 @@
     {
       "packageName": "@luxcium/scan-dirs",
       "projectFolder": "services/scan-directories",
+      "shouldPublish": false,
       "tags": [
         "services"
       ]
@@ -480,6 +502,7 @@
     {
       "packageName": "@luxcium/rpc-worker-pool",
       "projectFolder": "services/rpc-worker-pool",
+      "shouldPublish": false,
       "tags": [
         "services"
       ]
@@ -487,6 +510,7 @@
     {
       "packageName": "@luxcium/image-pipeline",
       "projectFolder": "services/image-pipeline",
+      "shouldPublish": false,
       "tags": [
         "services"
       ]
@@ -494,6 +518,7 @@
     {
       "packageName": "@luxcium/redis-services",
       "projectFolder": "services/redis-services",
+      "shouldPublish": false,
       "tags": [
         "services"
       ]
@@ -501,6 +526,7 @@
     {
       "packageName": "service-one",
       "projectFolder": "services/service-one",
+      "shouldPublish": false,
       "tags": [
         "services"
       ]
@@ -508,6 +534,7 @@
     {
       "packageName": "service-two",
       "projectFolder": "services/service-two",
+      "shouldPublish": false,
       "tags": [
         "services"
       ]
@@ -515,6 +542,7 @@
     {
       "packageName": "mongo-service",
       "projectFolder": "services/mongo-service",
+      "shouldPublish": false,
       "tags": [
         "services"
       ]
@@ -558,7 +586,7 @@
       "packageName": "@modelcontextprotocol/servers",
       "projectFolder": "examples/mcp-servers",
       "tags": [
-      "examples"
+        "examples"
       ]
     },
     {

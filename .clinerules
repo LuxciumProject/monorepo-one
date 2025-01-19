@@ -19,6 +19,8 @@ Here is a revised and **precise set of instructions** for **Cline** that avoids 
     - [Structural Principles](#structural-principles)
     - [Key Directories](#key-directories)
   - [Error Handling](#error-handling)
+  - [Docker Container Usage](#docker-container-usage)
+  - [Optional Tooling for Consistency](#optional-tooling-for-consistency)
   - [Maintenance Guidelines](#maintenance-guidelines)
     - [Purpose](#purpose)
     - [Maintenance Principles](#maintenance-principles)
@@ -49,6 +51,8 @@ This document serves as the comprehensive instruction set for AI agent operation
 - Ensure configuration aligns with best practices for the specific ecosystem
 
 ## Code Conventions
+
+❗ Always use docker containers for development and testing to ensure consistent and reproducible environments.
 
 ### JavaScript/TypeScript Standards
 
@@ -105,6 +109,19 @@ This document serves as the comprehensive instruction set for AI agent operation
 - Create robust error management strategies
 - Prevent unhandled exceptions
 - Ensure data integrity through strict validation
+
+## Docker Container Usage
+
+- Always ❗ run in a Docker container to ensure safety and resilience
+- Use official and minimal Docker base images
+- Adhere to least-privilege principles in containers
+- Maintain ephemeral container instances for secure operation
+
+## Optional Tooling for Consistency
+
+Optionally integrate Prettier, ESLint, or similar tools in your Docker-based development workflows. They can be configured either via pnpm in external projects or through Rush/Heft commands inside monorepo-one, ensuring uniform code quality checks.
+
+While these tools simplify collaborative development, they remain non-compulsory and should be adapted to project-specific needs. Align them with the existing package management and container guidelines to maintain consistency and reliability.
 
 ## Maintenance Guidelines
 

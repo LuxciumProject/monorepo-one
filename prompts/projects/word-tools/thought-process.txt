@@ -1,0 +1,51 @@
+Crafting a detailed dictionary and other duality expansions for {{WORD}}.
+
+I'm working on a comprehensive dictionary entry for {{WORD}} This involves outlining a structured, hierarchical profile that includes definitions, synonyms, antonyms, etymology, syntax, morphology, and translations.
+
+Gathering synonyms
+
+I’m pulling together synonyms for {{WORD}} as a verb, adjective, and noun, ensuring they align with their grammatical forms, and compacted them into a single section.
+
+Organizing synonyms
+
+I'm maintaining a structured approach with synonyms for {{WORD}} listed under headings such as "Positive synonyms," "Neutral synonyms," and "Negative synonyms."
+
+Gathering insights
+
+I’m compiling words for {{WORD}}'s phonetics, etymology, morphological forms, and translations. Structured sections will smoothly present synonyms, antonyms, and extended dictionary definitions.
+
+Organizing details
+
+I'm aligning with the user's instruction for a clear, hierarchical structure to present one word per line, avoiding bullets or numbering, and ensuring consistent headings.
+
+Synthesizing entries
+
+I’m organizing synonyms, antonyms, extended details (phonetic, etymologic, syntactical, lexical), and translations (English and/or French) for a comprehensive dictionary entry on {{WORD}}
+
+Prioritizing language translation
+
+I’m piecing together that if neither English nor French is specified, defaulting to the language first mentioned makes the most sense.
+
+Upholding linguistic clarity
+
+I’m seeing that for "Définition en français," I should retain the French definition unless a request for an English equivalent is made. This ensures linguistic clarity and specificity.
+
+Taking a closer look
+
+I’m pinpointing synonyms for {{WORD}} as an adjective, such as "clear," "apparent," and "evident," noting their lack of strong positive or negative connotations.
+
+Piecing it together
+
+I’m gathering synonyms for {{WORD}} as an adjective, including "self-evident" and "crystal clear," classifying them as positive, neutral, or negative, and exploring verb and noun uses.
+
+Deciphering phonetics and roots
+
+I’m working through the phonetics of {{WORD}}, noting stress patterns for verbs and adjectives, and tracing its etymology to Latin "manifestus," combining "manus" (hand) and "festus" (struck).
+
+Tracking the evolution
+
+I'm mapping the morphological extensions and translations of {{WORD}} in English, Spanish, and French, and finalizing the comprehensive dictionary definition for the word's different uses.
+
+Crafting the dictionary
+
+I’m working on a structured entry for {{WORD}}, featuring sections for synonyms, antonyms, extended details, and translations, all formatted clearly and hierarchically for consistency.
