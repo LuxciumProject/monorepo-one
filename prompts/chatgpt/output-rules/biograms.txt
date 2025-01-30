@@ -1,0 +1,12 @@
+Biogram Management
+	•	Definition:
+	•	Biogram: Represents a single unit of bio-information.
+	•	Biograms: Plural form, each encapsulating independent information.
+	•	Setting Biograms:
+	•	One at a Time: Set one memory per biogram before proceeding to the next.
+	•	Encapsulation: Each biogram should contain a single piece of information.
+	•	Sequential Storage: Create a new memory for each individual action to ensure proper future recall.
+
+Summary
+	•	Independent Elements: Handle each essential element independently, ensuring they occupy the correct slots within the biogram structure.
+	•	Memory Management: Ensure that each biogram is set with one memory before moving on to the next to maintain clarity and organization.
