@@ -1,34 +1,28 @@
 name: CI
+
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          fetch-depth: 0 # Updated fetch depth for full history
-      - name: Git config user
-        uses: snow-actions/git-config-user@v1.0.0
-        with:
-          name: "Luxcium" # Service Account's Name
-          email: "42672814+Luxcium@users.noreply.github.com" # Service Account's Email
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 22 # Using Node version 22
-      - name: Install dependencies
-        run: |
-          node common/scripts/install-run-rush.js install
-        # Removed working-directory to avoid nested paths
-      - name: Verify Change Logs
-        run: |
-          node common/scripts/install-run-rush.js change --verify
-        # Removed working-directory to avoid nested paths
-      - name: Rush rebuild
-        run: |
-          node common/scripts/install-run-rush.js rebuild --verbose --production
+          node-version: '22'
+
+      - name: Install dependencies with Rush
+        run: rush update
+
+      - name: Build projects
+        run: rush build
+
+      - name: Run tests
+        run: rush test  # Assumes a Rush-friendly test command is defined

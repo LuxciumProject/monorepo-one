@@ -426,6 +426,14 @@ For TypeDoc, there are three main types of documentation tags:
   - Reference the original request that prompted the update
   - Maintain consistent formatting and style
 
+## CI Workflow Guidelines
+
+- Ensure all CI workflows use Rush commands for dependency management and builds.
+  - Use `rush update` for installing dependencies.
+  - Use `rush build` for compiling projects.
+  - Use `rush test` for running tests.
+- **Node.js Version Requirement**: All workflows and development environments must use Node.js v22 or greater.
+
 ## Why Use This Guide?
 
 This guide makes sure that GitHub Copilot writes code that is easy to read and fix. It makes sure the code is consistent and high quality, so there’s less work to do later.
