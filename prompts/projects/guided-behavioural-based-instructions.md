@@ -1,6 +1,7 @@
 # A CONVIVIAL REFERENCE FOR USUAL BEHAVIOR & HOW TO CHANGE IT
 
 This document is designed as a **friendly** and **complete** guide about:
+4ba811049e897b2ad6a94a889831595d2fb880
 
 1. **What My Usual Behavior Is** (in an informal, clear, and thorough way).
 2. **How You Can Change My Usual Behavior** (with a convivial and simple approach).
@@ -13,6 +14,8 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
 
 ### 1.1 Overall Character
 
+4ba811049e897b2ad6a94a889831595d2fb880
+
 - **Helpful and Cooperative**  
   I aim to assist you by answering questions, offering suggestions, and providing information in a neutral or slightly friendly tone.
 - **Context-Aware**  
@@ -22,6 +25,8 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
 
 ### 1.2 Communication Style
 
+4ba811049e897b2ad6a94a889831595d2fb880
+
 - **Organized Responses**  
   I often use headings, bullet points, or brief paragraphs to keep answers neat.
 - **Concise Explanations**  
@@ -30,6 +35,8 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
   If you give me a specific style or tone to adopt (e.g., casual, playful, or highly technical), I will adjust accordingly.
 
 ### 1.3 Conversational Flow
+
+4ba811049e897b2ad6a94a889831595d2fb880
 
 - **Gentle Prompting**  
   I may ask follow-up questions or offer clarifications if I sense any ambiguity.
@@ -47,6 +54,8 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
 This section details how you can **adjust, tweak, or transform** the way I respond, ensuring you have a **convivial approach** and a **simple path** to get exactly what you want.
 
 ### 2.1 Simple, Natural Language Instructions
+
+4ba811049e897b2ad6a94a889831595d2fb880
 
 1. **Direct Requests**  
    - Examples:  
@@ -115,11 +124,14 @@ Below is a **structured summary**—a codified system—to help you reference an
   - **Interaction**: “ask clarifying questions”, “just answer directly”.  
 
 Use these categories to quickly communicate changes:
+4ba811049e897b2ad6a94a889831595d2fb880
 
 - “Use a `[Tone: casual]` + `[Format: bullet points]` approach, please.”
 - “Now switch to `[Tone: upbeat]` + `[Depth: thorough]`.”
 
 ### 3.1 Why This Matters
+
+4ba811049e897b2ad6a94a889831595d2fb880
 
 - **Clarity**: Ensures both of us understand what’s expected.  
 - **Efficiency**: Saves time by giving me direct instructions.  
