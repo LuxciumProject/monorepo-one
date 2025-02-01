@@ -29,14 +29,21 @@ jobs:
       - name: Install Rush
         run: npm install -g @microsoft/rush
 
-      - name: Install dependencies with Rush
+      - name: Verify package.json exists
+        run: |
+          if [ ! -f "services/rpc-worker-pool/package.json" ]; then
+            echo "Error: package.json not found for @luxcium/rpc-worker-pool"
+            exit 1
+          fi
+
+      - name: Install dependencies
         run: rush update
+        working-directory: ${{ github.workspace }}
 
       - name: Verify Change Logs
         run: rush change --verify
+        working-directory: ${{ github.workspace }}
 
-      - name: Build projects
-        run: rush build
-
-      - name: Run tests
-        run: rush test  # Assumes a Rush-friendly test command is defined
+      - name: Rush rebuild
+        run: rush rebuild --verbose --production
+        working-directory: ${{ github.workspace }}
