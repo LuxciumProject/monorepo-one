@@ -268,12 +268,12 @@
      * your PR branch, and in this situation "rush change" will also automatically invoke "git fetch"
      * to retrieve the latest activity for the remote main branch.
      */
-    "url": "https://github.com/Luxcium/monorepo-one",
+    "url": "https://github.com/LuxciumProject/monorepo-one",
     /**
      * The default branch name. This tells "rush change" which remote branch to compare against.
      * The default value is "main"
      */
-    "defaultBranch": "principal",
+    "defaultBranch": "main",
     /**
      * The default remote. This tells "rush change" which remote to compare against if the remote URL is
      * not set or if a remote matching the provided remote URL is not found.
@@ -374,6 +374,15 @@
       "projectFolder": "frontend/quick-start",
       "tags": [
         "frontend"
+      ]
+    },
+    {
+      "packageName": "@luxcium/groq-cloud",
+      "projectFolder": "APIs/groq-cloud", // new package
+      "shouldPublish": false,
+      "skipRushCheck": true,
+      "tags": [
+        "apis"
       ]
     },
     {

@@ -1,14 +1,14 @@
-# @luxcium/anthropic-api v0.1.0
+# Package full name (npm registry or other) and version v0.0.0
 
 Main short description of what the package can do and what probleme it is solving.
 
-## Luxcium's Anthropic API
+## Short name (display name).
 
 ## MIT
 
-any [NOTICE.md](NOTICE.md) file have precedence on this license.
+any (NOTICE.md)[NOTICE.md] file have precedence on this license.
 
-Copyright © 2024 Benjamin Vincent (Luxcium) ✨
+Copyright © <year> <copyright holders>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files
@@ -30,8 +30,8 @@ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-### MIT License ― Copyright © 2024 Luxcium ✨ (Benjamin Vincent)
+###### MIT License ― Copyright © 2022 Luxcium ✨ (Benjamin Vincent)
 
-<!-- brand statment -->
+<!-- Your brand statment -->
 
 † Scientia est lux principium✨ ™
