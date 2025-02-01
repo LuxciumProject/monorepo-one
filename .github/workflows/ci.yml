@@ -38,12 +38,12 @@ jobs:
 
       - name: Install dependencies
         run: rush update
-        working-directory: ${{ github.workspace }}
+        working-directory: services/rpc-worker-pool
 
       - name: Verify Change Logs
         run: rush change --verify
-        working-directory: ${{ github.workspace }}
+        working-directory: services/rpc-worker-pool
 
       - name: Rush rebuild
         run: rush rebuild --verbose --production
-        working-directory: ${{ github.workspace }}
+        working-directory: services/rpc-worker-pool
