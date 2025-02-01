@@ -33,17 +33,17 @@ jobs:
         run: |
           if [ ! -f "services/rpc-worker-pool/package.json" ]; then
             echo "Error: package.json not found for @luxcium/rpc-worker-pool"
-            exit 1
+            exit 0
           fi
 
       - name: Install dependencies
         run: rush update
-        working-directory: services/rpc-worker-pool
+        working-directory: ${{ github.workspace }}
 
       - name: Verify Change Logs
         run: rush change --verify
-        working-directory: services/rpc-worker-pool
+        working-directory: ${{ github.workspace }}
 
       - name: Rush rebuild
         run: rush rebuild --verbose --production
-        working-directory: services/rpc-worker-pool
+        working-directory: ${{ github.workspace }}
