@@ -1,5 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk/index';
-
+import Anthropic from '@anthropic-ai/sdk';
 const anthropic = new Anthropic();
 
 async function main() {
