@@ -10,16 +10,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Git config user
+        uses: snow-actions/git-config-user@v1.0.0
+        with:
+          name: Luxcium
+          email: 42672814+Luxcium@users.noreply.github.com
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '22'
 
+      - name: Install Rush
+        run: npm install -g @microsoft/rush
+
       - name: Install dependencies with Rush
         run: rush update
+
+      - name: Verify Change Logs
+        run: rush change --verify
 
       - name: Build projects
         run: rush build
