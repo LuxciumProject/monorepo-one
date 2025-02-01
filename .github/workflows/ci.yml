@@ -18,7 +18,7 @@ jobs:
           email: "42672814+Luxcium@users.noreply.github.com" # Service Account's Email Address
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 22 # 22 is the latest version of node
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
       - name: Rush Install

@@ -14,12 +14,20 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for proper git operations
+
+      - name: Git config user
+        uses: snow-actions/git-config-user@v1.0.0
+        with:
+          name: "Luxcium" # Service Account's Name
+          email: "42672814+Luxcium@users.noreply.github.com" # Service Account's Email Address
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
