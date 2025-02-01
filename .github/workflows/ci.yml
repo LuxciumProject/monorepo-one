@@ -4,24 +4,31 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          fetch-depth: 0 # Updated fetch depth for full history
       - name: Git config user
         uses: snow-actions/git-config-user@v1.0.0
         with:
           name: "Luxcium" # Service Account's Name
-          email: "42672814+Luxcium@users.noreply.github.com" # Service Account's Email Address
+          email: "42672814+Luxcium@users.noreply.github.com" # Service Account's Email
       - uses: actions/setup-node@v3
         with:
-          node-version: 22 # 22 is the latest version of node
+          node-version: 22 # Using Node version 22
+      - name: Install dependencies
+        run: |
+          node common/scripts/install-run-rush.js install
+        # Removed working-directory to avoid nested paths
       - name: Verify Change Logs
-        run: node common/scripts/install-run-rush.js change --verify
-      - name: Rush Install
-        run: node common/scripts/install-run-rush.js install
+        run: |
+          node common/scripts/install-run-rush.js change --verify
+        # Removed working-directory to avoid nested paths
       - name: Rush rebuild
-        run: node common/scripts/install-run-rush.js rebuild --verbose --production
+        run: |
+          node common/scripts/install-run-rush.js rebuild --verbose --production
