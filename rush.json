@@ -377,6 +377,15 @@
       ]
     },
     {
+      "packageName": "@luxcium/groq-cloud",
+      "projectFolder": "APIs/groq-cloud", // new package
+      "shouldPublish": false,
+      "skipRushCheck": true,
+      "tags": [
+        "apis"
+      ]
+    },
+    {
       "packageName": "@luxcium/anthropic-api",
       "projectFolder": "APIs/anthropic", // new package
       "shouldPublish": false,

@@ -2222,6 +2222,10 @@
       "path": "APIs/anthropic"
     },
     {
+      "name": "           📙 Groq-Cloud",
+      "path": "APIs/groq-cloud"
+    },
+    {
       "name": "           📙 OpenAI",
       "path": "APIs/openai"
     },
