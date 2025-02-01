@@ -36,6 +36,13 @@ jobs:
             exit 0
           fi
 
+      - name: Verify no package.json in root directory
+        run: |
+          if [ -f "package.json" ]; then
+            echo "Error: package.json found in the root directory"
+            exit 1
+          fi
+
       - name: Install dependencies
         run: rush update
         working-directory: ${{ github.workspace }}

@@ -221,7 +221,7 @@
      * before they get started.
      *
      * Define a list of regular expressions describing allowable e-mail patterns for Git commits.
-     * They are case-insensitive anchored JavaScript RegExps. Example: ".*@example\.com"
+     * They are case-insensitive anchored JavaScript RegExps. Example: ".*@example\\.com"
      *
      * IMPORTANT: Because these are regular expressions encoded as JSON string literals,
      * RegExp escapes need two backslashes, and ordinary periods should be "\\.".
