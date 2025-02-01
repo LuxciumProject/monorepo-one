@@ -12,6 +12,7 @@
     "tsBuildInfoFile": "./out/ts-out-info.lib",
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
+    "esModuleInterop": true,
     /* JavaScript Support */
     "allowJs": true,
     "checkJs": false,
@@ -24,7 +25,9 @@
     "types": [
       "node",
       "jest"
-    ]
+    ],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "./src/**/*.js",

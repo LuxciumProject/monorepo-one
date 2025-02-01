@@ -191,7 +191,7 @@ monorepo-one/ (./)
 # ✣: present in the .gitmodules file
 
 
-# Mono-repo: https://github.com/Luxcium/monorepo-one.git
+# Mono-repo: https://github.com/LuxciumProject/monorepo-one.git
 
 # Submodules:
 # ✣ services/image-scout: https://github.com/Luxcium/Redis-ImageScout.git
