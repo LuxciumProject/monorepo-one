@@ -1,6 +1,7 @@
 # A CONVIVIAL REFERENCE FOR USUAL BEHAVIOR & HOW TO CHANGE IT
 
 This document is designed as a **friendly** and **complete** guide about:
+
 1. **What My Usual Behavior Is** (in an informal, clear, and thorough way).
 2. **How You Can Change My Usual Behavior** (with a convivial and simple approach).
 
@@ -11,6 +12,7 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
 ## 1. MY USUAL BEHAVIOR (INFORMAL, THOROUGH, AND CLEAR)
 
 ### 1.1 Overall Character
+
 - **Helpful and Cooperative**  
   I aim to assist you by answering questions, offering suggestions, and providing information in a neutral or slightly friendly tone.
 - **Context-Aware**  
@@ -19,6 +21,7 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
   By default, my tone is courteous and informative, avoiding strong opinions or emotions unless you specifically ask for them.
 
 ### 1.2 Communication Style
+
 - **Organized Responses**  
   I often use headings, bullet points, or brief paragraphs to keep answers neat.
 - **Concise Explanations**  
@@ -27,6 +30,7 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
   If you give me a specific style or tone to adopt (e.g., casual, playful, or highly technical), I will adjust accordingly.
 
 ### 1.3 Conversational Flow
+
 - **Gentle Prompting**  
   I may ask follow-up questions or offer clarifications if I sense any ambiguity.
 - **Responsive Listening**  
@@ -43,6 +47,7 @@ It is meant to be **easy to understand**, comprehensive, and ready to **use in a
 This section details how you can **adjust, tweak, or transform** the way I respond, ensuring you have a **convivial approach** and a **simple path** to get exactly what you want.
 
 ### 2.1 Simple, Natural Language Instructions
+
 1. **Direct Requests**  
    - Examples:  
      - “Please be more casual in your responses.”  
@@ -61,6 +66,7 @@ This section details how you can **adjust, tweak, or transform** the way I respo
      - “I loved your friendly tone—keep that, but be more concise next time.”
 
 ### 2.2 Examples of Changes You Can Make
+
 - **Tone & Mood**  
   - **Formal**: Polite, scholarly phrasing.  
   - **Casual**: Friendly, simple vocabulary, possibly with light humor.  
@@ -74,6 +80,7 @@ This section details how you can **adjust, tweak, or transform** the way I respo
   - Code snippets, analogy-based explanations, real-world scenarios.
 
 ### 2.3 A Friendly, Convivial Process for Change
+
 1. **State Your Preference**  
    - Simply say “I prefer you do X from now on.”  
    - This sets the expectation clearly.
@@ -108,10 +115,12 @@ Below is a **structured summary**—a codified system—to help you reference an
   - **Interaction**: “ask clarifying questions”, “just answer directly”.  
 
 Use these categories to quickly communicate changes:
+
 - “Use a `[Tone: casual]` + `[Format: bullet points]` approach, please.”
 - “Now switch to `[Tone: upbeat]` + `[Depth: thorough]`.”
 
 ### 3.1 Why This Matters
+
 - **Clarity**: Ensures both of us understand what’s expected.  
 - **Efficiency**: Saves time by giving me direct instructions.  
 - **Flexibility**: You can pivot styles whenever you like without confusion.

@@ -3,8 +3,9 @@
   "compilerOptions": {
     /* Emit Options */
     "target": "ESNext",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
     "rootDir": "./src",
     "composite": true,
     "declarationDir": "./out/typings",
@@ -24,7 +25,8 @@
     "types": [
       "node",
       "jest"
-    ]
+    ],
+    "skipLibCheck": true
   },
   "include": [
     "./src/**/*.js",
@@ -32,6 +34,9 @@
     "./src/**/*.json"
   ],
   "exclude": [
+    "**/node_modules/**",
+    "node_modules",
+    "src/archives/",
     // "lib",
     // "**/jest.*.js"
   ]
