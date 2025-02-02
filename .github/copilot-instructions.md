@@ -434,6 +434,16 @@ For TypeDoc, there are three main types of documentation tags:
   - Use `rush test` for running tests.
 - **Node.js Version Requirement**: All workflows and development environments must use Node.js v22 or greater.
 
+## Linux Environment
+
+All development and operations are assumed to be running on Fedora Linux. Package management is handled through `dnf` (which is aliased to `dnf5`). When providing system-level commands or configurations:
+
+- Always use `dnf` for package management (it will use dnf5 via alias)
+- Ensure compatibility with Fedora's filesystem hierarchy
+- Follow Fedora's security and SELinux policies
+- Use Fedora's standard locations for configuration files
+- Consider systemd for service management
+
 ## Why Use This Guide?
 
 This guide makes sure that GitHub Copilot writes code that is easy to read and fix. It makes sure the code is consistent and high quality, so there’s less work to do later.

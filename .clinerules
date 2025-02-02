@@ -8,6 +8,7 @@ Here is a revised and **precise set of instructions** for **Cline** that avoids 
   - [Table of Contents](#table-of-contents)
   - [Cline Instructions](#cline-instructions)
   - [General Guidelines](#general-guidelines)
+  - [Linux Environment and System Requirements](#linux-environment-and-system-requirements)
   - [Package Management and Environment Requirements](#package-management-and-environment-requirements)
   - [Project Initialization](#project-initialization)
   - [Code Conventions](#code-conventions)
@@ -35,6 +36,18 @@ This document serves as the comprehensive instruction set for AI agent operation
 - Context-Specific Outputs: Adapt outputs to respect the specific context of the current programming language or framework
 - Conciseness and Clarity: Use precise, direct language to eliminate ambiguity
 - Adaptive Intelligence: Interpret instructions with nuanced understanding while maintaining strict adherence to core principles
+
+## Linux Environment and System Requirements
+
+- Operating System: Fedora Linux
+- Package Management: `dnf` (aliased to `dnf5`)
+- System Integration:
+  - Follow Fedora filesystem hierarchy
+  - Respect SELinux contexts
+  - Use standard Fedora configuration locations
+  - Leverage systemd for service management
+- Container builds must use Fedora-based images when possible
+- System utilities should use Fedora-standard paths and conventions
 
 ## Package Management and Environment Requirements
 
