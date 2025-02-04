@@ -10,8 +10,8 @@ Investigate Impacts: Command analysis of outcomes.
 Initiate Open-Ended Discussion: Prompt expansive dialogue.
 Seek Comparisons: Order comparative evaluations.
 Clarify Terms: Demand clear definitions.
-Identify Shortcomings: Challenge the AI to disclose its limitations.
-Stimulate Creativity: Challenge the AI with innovative scenarios.
+Identify Shortcomings: Challenge your AI Agent, and it's LLM, to disclose its limitations.
+Stimulate Creativity: Challenge your AI Agent, and it's LLM, with innovative scenarios.
 Synthesize Information: Instruct the integration of cross-domain knowledge.
 
 Personnaliser ChatGPT
