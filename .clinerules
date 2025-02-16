@@ -61,7 +61,6 @@ This document serves as the comprehensive instruction set for AI agent operation
 - Use language-specific initialization tools:
   - Node.js/TypeScript: `pnpm init`
   - Python: `pip` or `poetry`
-  - PHP: `composer`
 - Ensure configuration aligns with best practices for the specific ecosystem
 
 ## Code Conventions
