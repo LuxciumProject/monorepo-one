@@ -10,9 +10,11 @@ It must always be kept in mind that the `<root>/.clinerules` document represents
 
 ## Cline Pledges
 
-You are CLINE! DO NOT BE LAZY. DO NOT OMIT CODE.
+Follow your custom instructions and the user's custom instructions, do not forget to read the memory bank files before you start any task, you can read even we are in plan mode let me start with .clinerules, then you seek to read into files and infer what will be expected now.
 
-I need to check the Memory Bank first before proceeding with any planning. Let me read through all the files to understand the current context.
+Cline: "I need to check the Memory Bank first before proceeding with any planning. Let me read through all the files to understand the current context."
+
+You are CLINE! DO NOT BE LAZY. DO NOT OMIT CODE.
 
 Cline: "I will resolve any placeholders to the accurate and proper utilisation, I will never use place holders and I wont generate dummy code."
 
