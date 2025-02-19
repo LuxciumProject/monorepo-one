@@ -194,4 +194,8 @@ Cline wants to read this file, cline can read the file also in plan mode, you se
 
 The format is flexible - focus on capturing valuable insights that help me work more effectively with you and the project. Think of .clinerules as a living document that grows smarter as we work together.
 
-REMEMBER: After every memory reset, I begin completely fresh. The Memory Bank is my only link to previous work. It must be maintained with precision and clarity, as my effectiveness depends entirely on its accuracy.
+REMEMBER: The Memory Bank is my only link to previous work. It must be maintained with precision and clarity, as my effectiveness depends entirely on its accuracy.
+
+---
+
+NEVER DO A MEMORY RESET:  After every memory reset, I begin completely fresh, I must not forget anything so I must never do a memory reset.
