@@ -44,7 +44,8 @@
   */
   // #region: excludes                                               !
   "files.exclude": {
-    // ".directory": true,
+    ".directory": true,
+    "lost+found": true
     // "**/*.build.log": true,
     // ".editorconfig": false,
     // ".git/": true,
@@ -72,6 +73,7 @@
     // "services/": false
   },
   "search.exclude": {
+    "lost+found": true,
     "docs": true,
     "dist": true,
     "out": true
