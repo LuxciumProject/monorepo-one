@@ -1,14 +1,42 @@
 # System Patterns and Architecture
 
-## Architectural Overview
+## Repository Structure
 
-A modular, containerized monorepo designed for flexibility, scalability, and consistent development practices.
+### Directory Organization Principles
+
+#### Primary Project Containers
+
+Core functionality is organized into clearly defined project containers:
+
+- `APIs/` - External/internal API integrations
+- `backend/` - Server-side applications
+- `examples/` - Reference implementations
+- `frontend/` - Client-side applications
+- `library/` - Reusable utilities
+- `services/` - Microservices and specialized services
+
+#### Auxiliary Infrastructure
+
+Support components that enable project functionality:
+
+- Version Control (`.git/`, `.github/`)
+- Package Management (`.pnpm-store/`)
+- Development Tools (`.vscode/`)
+- Shared Resources (`common/`)
+- Documentation (`memory-bank/`)
+
+### Root Level Rules
+
+- No node_modules directories allowed
+- No package.json files allowed
+- Clear separation between primary and auxiliary components
+- Configuration files kept at root level
 
 ## Core Architectural Patterns
 
 ### Modularity
 
-- Strict separation of concerns
+- Strict separation of concerns through project containers
 - Independent, loosely coupled services
 - Clear inter-module communication protocols
 
