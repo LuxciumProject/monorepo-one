@@ -84,4 +84,3 @@ Some folders have special characters or spacing that are important for VSCode ap
 ## Conclusion
 
 This document provides an overview of the folder structure and metadata for the `monorepo-one` project. It is important to keep this documentation up-to-date with any changes to the monorepo structure to ensure consistency and clarity for all collaborators.
-

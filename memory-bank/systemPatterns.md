@@ -4,26 +4,30 @@
 
 ### Directory Organization Principles
 
-#### Primary Project Containers
+#### Primary Project Areas
 
-Core functionality is organized into clearly defined project containers:
+Core functionality is organized into clearly defined project areas:
 
-- `APIs/` - External/internal API integrations
-- `backend/` - Server-side applications
-- `examples/` - Reference implementations
-- `frontend/` - Client-side applications
-- `library/` - Reusable utilities
+- `APIs/` - External/internal API integrations and implementations
+- `backend/` - Server-side applications and services
+- `examples/` - Reference implementations and templates
+- `frontend/` - Client-side applications and interfaces
+- `library/` - Reusable utilities and tools
 - `services/` - Microservices and specialized services
+- `infrastructure/` - Development and deployment setup
 
-#### Auxiliary Infrastructure
+Each area contains multiple projects, with Rush managing TypeScript-based projects while allowing for other technologies as needed.
 
-Support components that enable project functionality:
+#### Support Infrastructure
+
+Components that enable project development and maintenance:
 
 - Version Control (`.git/`, `.github/`)
 - Package Management (`.pnpm-store/`)
 - Development Tools (`.vscode/`)
 - Shared Resources (`common/`)
 - Documentation (`memory-bank/`)
+- Build Configuration (`rush.json`, `pnpm-workspace.yaml`)
 
 ### Root Level Rules
 
@@ -36,11 +40,11 @@ Support components that enable project functionality:
 
 ### Modularity
 
-- Strict separation of concerns through project containers
+- Strict separation of concerns across project areas
 - Independent, loosely coupled services
 - Clear inter-module communication protocols
 
-### Containerization Strategy
+### Development Environment Strategy
 
 - Docker-based development environments
 - Least-privilege container design
