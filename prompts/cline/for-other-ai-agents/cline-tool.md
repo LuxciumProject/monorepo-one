@@ -1,4 +1,6 @@
-Below is a comprehensive report synthesizing everything we’ve gathered on Cline, its Memory Bank, and the project‐specific custom instructions (.clinerules) to help you work with and even prompt this autonomous coding assistant optimally.
+# Cline Report
+
+Comprehensive report synthesizing everything we’ve gathered on Cline, its Memory Bank, and the project‐specific custom instructions (.clinerules) to help you work with and even prompt this autonomous coding assistant optimally.
 
 ---
 
@@ -11,8 +13,6 @@ Cline is an AI-powered coding assistant for Visual Studio Code that works as an 
 - **Custom Instructions & .clinerules:** These let you tailor its behaviour both globally (via custom instructions in VSCode settings) and per project (with a .clinerules file in your project root).
 - **API Flexibility:** Supports multiple API providers (OpenRouter, Anthropic, OpenAI, etc.) as well as local model setups via LM Studio or Ollama.
   
-*Reference: citeturn0fetch1, cite0†Cline Documentation*
-
 ---
 
 ## 2. The Memory Bank
@@ -38,13 +38,9 @@ Typically, the Memory Bank is composed of Markdown files organized in a clear hi
 
 A common diagram (often rendered with Mermaid) shows how these files interrelate, ensuring that Cline reads all of them at task start to rebuild context accurately.
 
-*Reference: citeturn0search0, citeturn0search2*
-
 ### Challenges & Community Feedback
 
 Some users have noted that reading multiple files can be token‑expensive, particularly on larger projects. There have been suggestions—like consolidating files into one—to reduce token usage without losing context fidelity. Benchmarking and fine‑tuning remain active topics in community discussions.
-
-*Reference: citeturn0search1*
 
 ---
 
@@ -60,8 +56,6 @@ The .clinerules file is a project-specific configuration placed at the root of y
 
 For example, a .clinerules file might include prompts to update the Memory Bank (“update memory bank”) after significant changes. It can be viewed as a living document that evolves as the project develops.
 
-*Reference: citeturn0search2, citeturn0search3*
-
 ### Custom Instructions in VSCode
 
 While the .clinerules file provides project‑specific guidance, custom instructions (set globally in the Cline extension settings) define Cline’s baseline behaviour. These instructions might include:
@@ -71,8 +65,6 @@ While the .clinerules file provides project‑specific guidance, custom instruct
 - Outlining how to handle errors or unexpected behaviour.
 
 Together, these layers of instruction (global custom instructions plus .clinerules) ensure that Cline’s responses are both consistent with your personal workflow and adaptable to each project’s context.
-
-*Reference: citeturn0search2, citeturn0fetch0*
 
 ---
 
@@ -90,15 +82,11 @@ Together, these layers of instruction (global custom instructions plus .clinerul
    - Enable auto‑approval for read-only operations if you want smoother file access.
    - Optionally, adjust advanced settings like token tracking and mode switching.
 
-*Reference: citeturn0search2, citeturn0fetch0*
-
 ### Setting Up the Memory Bank
 
 - **Create a Folder:** Add a `memory-bank/` folder in your project root.
 - **Populate Core Files:** Include the key Markdown files (projectbrief.md, productContext.md, systemPatterns.md, techContext.md, activeContext.md, and progress.md).
 - **Integrate with Custom Instructions:** Ensure your custom instructions tell Cline to read these files at the beginning of each task.
-
-*Reference: citeturn0search0*
 
 ---
 
@@ -115,8 +103,6 @@ Cline supports multiple modes—such as Architect, Code, Ask, and Debug—that a
 
 Intelligent mode switching can be triggered by specific keywords or task requirements, ensuring that the appropriate context and permissions are in place.
 
-*Reference: citeturn0search4 (Roo Code Memory Bank Developer Primer)*
-
 ### Terminal Commands, File Diff, and Browser Integration
 
 Beyond file creation and editing, Cline can:
@@ -124,8 +110,6 @@ Beyond file creation and editing, Cline can:
 - **Execute Terminal Commands:** It integrates with VSCode’s shell so that it can run commands (with your permission) and capture outputs.
 - **Display Diffs:** Every file change is recorded and shown as a diff, allowing you to approve or modify changes.
 - **Interact with the Browser:** Cline can launch headless browsers to test web apps, capture screenshots, and even interact with page elements—all directed by your commands.
-
-*Reference: citeturn0fetch1*
 
 ---
 
