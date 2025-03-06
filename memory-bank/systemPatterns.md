@@ -108,3 +108,35 @@ Components that enable project development and maintenance:
 - Efficient memory management
 - Concurrent processing
 - Minimal overhead design
+
+## Library Patterns
+
+### Parallel Processing
+
+#### Worker Thread Pattern
+
+- CPU-bound parallel operations
+- Worker pool management
+- Chunk-based data distribution
+- Thread coordination and lifecycle
+
+#### Promise Concurrency Pattern
+
+- I/O-bound parallel operations
+- Controlled concurrency limits
+- Promise batching and settlement
+- Error boundary isolation
+
+#### Asynchronous Control Flow
+
+- Zalgo prevention utilities
+- Consistent async boundaries
+- Configurable scheduling strategies
+- Promise-based coordination
+
+### Type System Integration
+
+- Generic type definitions
+- Strict TypeScript configuration
+- Comprehensive type inference
+- Function signature consistency

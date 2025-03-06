@@ -69,6 +69,29 @@
 - gRPC support
 - Microservice architecture
 
+### Library
+
+#### Parallel Processing
+
+- Node.js worker_threads
+- Promise.allSettled for batch operations
+- TypeScript strict mode
+- fp-ts for functional utilities
+
+#### Core Technologies
+
+- TypeScript 5.7+
+- Node.js v22+ runtime
+- Jest for testing
+- ESLint/Prettier for code quality
+
+#### Build Tools
+
+- Rush for monorepo management
+- pnpm for package management
+- Source maps for debugging
+- TypeScript declaration files
+
 ### Database & Persistence
 
 - Redis for caching

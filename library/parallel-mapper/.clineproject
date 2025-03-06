@@ -1,0 +1,155 @@
+# Parallel Mapper Library
+
+## Overview
+
+A library providing parallel processing capabilities through CPU and I/O mappers, designed for efficient data processing in Node.js applications.
+
+## Core Components
+
+### CPU_Mapper
+
+Worker thread-based parallel processing for CPU-intensive operations.
+
+```typescript
+const processor = CPU_Mapper(filename)
+const { mapper, thread } = processor(items, mapFn, limit)
+```
+
+### IO_Mapper
+
+Promise-based concurrent operations for I/O-bound tasks.
+
+```typescript
+const result = await IO_Mapper({ list, mapFn, limit })
+```
+
+### Zalgo Prevention Utilities
+
+Tools to ensure consistent asynchronous behavior:
+
+- immediateZalgo: setImmediate-based async wrap
+- nextTickZalgo: process.nextTick-based async wrap
+- timeoutZalgo: setTimeout-based async wrap
+- restrainingZalgo: Configurable async behavior
+
+## Implementation Details
+
+### Worker Thread Implementation
+
+- Uses Node.js worker_threads for true parallel processing
+- Each worker processes a chunk of data independently
+- Results are aggregated using Promise.allSettled
+- Automatic CPU core detection for optimal thread count
+
+### Promise Handling
+
+- Consistent Promise-based API across CPU and I/O operations
+- Error boundary containment within individual operations
+- Settled results with success/failure status for each item
+
+### Type System
+
+- Comprehensive TypeScript definitions
+- Generic type parameters for flexible data handling
+- Strict type checking enabled
+
+## Architecture
+
+### Design Principles
+
+1. Separation of CPU and I/O concerns
+2. Type-safe parallel processing
+3. Consistent error handling
+4. Configurable concurrency limits
+5. Zalgo prevention by default
+
+### Core Types
+
+```typescript
+type Mapper<T, R> = (item: T) => R | Promise<R>
+type MapperArgs<T, R> = {
+  list: T[]
+  mapFn: Mapper<T, R>
+  limit?: number
+}
+```
+
+## Integration
+
+### Project Role
+
+- Core utility library for parallel processing
+- Used by other monorepo components needing parallel capabilities
+- Foundation for CPU/IO-intensive operations
+
+### Dependencies
+
+- Node.js v22+ (worker_threads, Promise APIs)
+- TypeScript for type safety
+- fp-ts for functional programming utilities
+
+## Testing Strategy
+
+### Unit Tests
+
+- Individual mapper function testing
+- Worker thread communication validation
+- Error handling verification
+- Edge case coverage
+
+### Integration Tests
+
+- Real-world usage patterns
+- Performance benchmarking
+- Memory usage monitoring
+- Concurrency limit validation
+
+## Build Process
+
+### Development
+
+1. TypeScript compilation with strict checks
+2. ESLint + Prettier for code quality
+3. Jest for testing
+
+### Production
+
+1. TypeScript build with declarations
+2. Bundling for optimal distribution
+3. Source map generation
+
+## Usage Examples
+
+### CPU-Intensive Operations
+
+```typescript
+const cpuMapper = CPU_Mapper('./worker.js')
+const { mapper } = cpuMapper(data, item => heavyComputation(item))
+const results = await mapper()
+```
+
+### I/O Operations
+
+```typescript
+const results = await IO_Mapper({
+  list: urls,
+  mapFn: url => fetch(url),
+  limit: 5
+})
+```
+
+## Future Improvements
+
+1. Enhanced error reporting and recovery
+2. Performance optimizations
+3. Additional utility functions
+4. Extended documentation and examples
+5. Integration with streaming APIs
+
+## Maintenance
+
+- Regular dependency updates
+- Performance monitoring
+- Bug tracking and fixes
+- Documentation updates
+- Compatibility testing

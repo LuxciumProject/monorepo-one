@@ -78,6 +78,16 @@ A unified development platform that addresses complex software engineering chall
 - Clear dependency boundaries
 - Project-specific configurations
 
+### Library Components
+
+#### Parallel Mapper
+
+- Efficient parallel processing capabilities
+- CPU-bound operations via worker threads
+- I/O-bound operations via Promise concurrency
+- Type-safe parallel data processing
+- Zalgo prevention utilities
+
 ## Key Value Propositions
 
 1. **Unified Ecosystem**: Single repository for diverse projects
