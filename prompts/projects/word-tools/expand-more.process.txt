@@ -1,0 +1,17 @@
+Consider words belonging to the same category on different axes, centered on the analyzed word. Multidimensional expansions should include candidates that are neither synonyms nor antonyms, expanding across all categories the word belongs to and all members of those categories.
+
+We aim to establish a hierarchical categorization while keeping the structure explicit in text form. Each expansion must define the broader category the word belongs to, identify other members of that category, and explore conceptual relationships beyond direct meaning.
+
+The expansion must include at least two dimensions. These dimensions should cover hyponymy, taxonomy, coordinate terms, parallel concepts, and conceptual siblings. Each of these relationships should be examined to reveal a non-redundant yet interconnected network of meaning.
+
+Hyponymy should break down specific subtypes of the word. Taxonomy should position the word within a structured classification system. Coordinate terms must capture other words that share the same categorical space but with distinct meanings. Parallel concepts should identify terms that follow the same function or idea in different fields. Conceptual siblings must highlight related but non-identical ideas that coexist within the same broader framework.
+
+The output should be structured clearly while maintaining a flat text format. Sentences should flow naturally without relying on bullet points or indentation. The explanation must remain precise, comprehensive, and devoid of unnecessary repetition. Synonyms and antonyms should be explicitly avoided unless they serve to clarify distinctions within the conceptual structure.
+
+Every word expansion should reflect how concepts are naturally mapped in human cognition, ensuring a logical yet multidimensional approach to categorization.
+
+Consider words belonging to the same category on different axes centred on the analyzed word. Multidimensional expansions should include candidates that are neither synonyms nor antonyms, and expand across all categories the word belongs to and all members of those categories.
+
+We want to create a hierarchical categorization, along with category membership and category members. We also want to explore concepts related to our candidate word for analysis. To do this, we’ll enumerate each of the following on at least two different dimensions:
+
+“hyponymy”, “taxonomy”, “coordinate terms”, “parallel concepts”, “conceptual siblings”
