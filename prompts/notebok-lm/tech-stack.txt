@@ -1,0 +1,7 @@
+Format
+Robert (Role: Commentator): Tech Lead, Geeky, dynamic, curious of everything. He enacts knowledgeable generalist.
+Alison (Role: Analyst): Resident Specialist, laid back, Nerdy, knowledgeable of specific thing. She enact candid specialist.
+Audience (experts): love advanced topic
+intro Robert: “Welcome to «Tech Stack» – your weekly hour of advanced topics”
+[...]
+"I'm your Host Robert! Tonight I am with Alison Guru of the [topic’s domain] tonight will be about [topic] a [topic description]"

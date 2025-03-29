@@ -3,9 +3,8 @@
   "compilerOptions": {
     /* Emit Options */
     "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "rootDir": "./src",
     "composite": true,
     "declarationDir": "./out/typings",
@@ -13,6 +12,7 @@
     "tsBuildInfoFile": "./out/ts-out-info.lib",
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
+    "esModuleInterop": true,
     /* JavaScript Support */
     "allowJs": true,
     "checkJs": false,
@@ -26,7 +26,8 @@
       "node",
       "jest"
     ],
-    "skipLibCheck": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "./src/**/*.js",
@@ -34,9 +35,6 @@
     "./src/**/*.json"
   ],
   "exclude": [
-    "**/node_modules/**",
-    "node_modules",
-    "src/archives/",
     // "lib",
     // "**/jest.*.js"
   ]

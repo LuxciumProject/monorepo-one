@@ -16,6 +16,11 @@ The frontend contains several projects and applications:
 - Home page components
 - Various frontend projects
 
+### Links to Projects
+
+- [Home](home/README.md)
+- [Projects](projects/README.md)
+
 ## Related Sections
 
 - [Return to Root](../README.md)

@@ -8,7 +8,7 @@ This monorepo contains various projects, libraries, and services organized in a 
 
 ### Core Components
 
-#### LIBRARY
+#### 📚 LIBRARY
 
 - [LIBRARY](/library/README.md)
   - [bigintString](/library/bigintString/README.md) - BigInt string manipulation utilities
@@ -21,45 +21,78 @@ This monorepo contains various projects, libraries, and services organized in a 
   - [restraining-zalgo](/library/restraining-zalgo/README.md) - Text normalization tools
   - [tools](/library/tools/README.md) - General utility functions
 
-#### SERVICES
+#### 💁 SERVICES
 
-- [Image Scout (Submodule)](/services/image-scout/README.md) - Service for image scouting operations
-- [RPC Worker Pool (Submodule)](/services/rpc-worker-pool/README.md) - Remote Procedure Call worker management
-- [Mongo Service](/services/mongo-service/README.md) - MongoDB related services
-- [Questrade TS (Submodule)](/services/questrade-ts/README.md) - Questrade API TypeScript service
 - [Phash Compute](/services/phash-compute/README.md) - Perceptual hash computation service
+- [Scan Directories](/services/scan-directories/README.md) - Directory scanning utilities
+- [RPC Worker Pool](/services/rpc-worker-pool/README.md) - Remote Procedure Call worker management
+- [Image Pipeline](/services/image-pipeline/README.md) - Image processing pipeline service
+- [Redis Services](/services/redis-services/README.md) - Redis integration services
+- [Service One](/services/service-one/README.md) - General purpose service
+- [Service Two](/services/service-two/README.md) - General purpose service
+- [Mongo Service](/services/mongo-service/README.md) - MongoDB related services
 
-#### APIs
+#### 📙 APIs
 
 - [APIs](/APIs/README.md) - API implementations and integrations
-  - [Version 2](/APIs/2/README.md) - Version 2 API implementations
+  - [Groq Cloud](/APIs/groq-cloud/README.md) - Groq Cloud API integration
   - [Anthropic](/APIs/anthropic/README.md) - Anthropic AI API integration
   - [OpenAI](/APIs/openai/README.md) - OpenAI API integration
-  - [Sonnet 3.5](/APIs/sonnet-3-5/README.md) - Sonnet 3.5 API implementation
 
-#### BACKEND & FRONTEND
+#### 🏦 BACKEND
 
 - [Backend](/backend/README.md) - Backend services and server-side code
   - [API](/backend/api/README.md) - Core API implementations
-  - [Scratch](/backend/scratch/README.md) - Development and experimental code
+    - [API Package](/backend/api/api-package/README.md) - Legacy API server
+    - [Comments](/backend/api/comments/README.md) - Comments API service
+    - [Posts](/backend/api/posts/README.md) - Posts API service
+
+#### 👨‍💻 FRONTEND
+
 - [Frontend](/frontend/README.md) - Frontend applications and client-side code
-  - [Client](/frontend/client/README.md) - Core client applications
   - [Home](/frontend/home/README.md) - Home page components
-  - [Projects](/frontend/projects/README.md) - Individual frontend projects
+  - [Quick Start](/frontend/quick-start/README.md) - Quick start application
 
-### Development Resources
+#### 🤖 PROMPTS
 
-#### EXAMPLES
+- [Prompts](/prompts/README.md) - Prompts for exercises and examples
+
+#### 💫 PRIVATE
+
+- [Private](/private/README.md) - Private and confidential files
+
+#### 🎨 STATIC
+
+- [Static](/static/README.md) - Static assets and resources
+
+#### 🎱 EXAMPLES
 
 - [Examples](/examples/README.md) - Code examples and demonstrations
+  - [CaseCobra](/examples/casecobra-master/README.md) - CaseCobra development example
+  - [Phash Scout](/examples/phash-scout/README.md) - Perceptual hash scouting examples
   - [Template](/examples/template/README.md) - Template examples for quick starting new modules
   - [Open AI](/examples/open-ai/README.md) - Examples related to OpenAI API usage
   - [GPU Stuff](/examples/gpu-stuff/README.md) - GPU computation examples
+  - [MCP Servers](/examples/mcp-servers/README.md) - Model Context Protocol server examples
+  - [Playground](/examples/playground/README.md) - General playground for experimentation
   - [Node.js](/examples/node-js/README.md) - Node.js implementation examples
-  - [TypeScript](/examples/typescript/README.md) - TypeScript implementation examples
+
+#### 📔 SCRIPTS
+
+- [Scripts](/scripts/README.md) - Utility and automation scripts
+
+### Additional Resources
+
+- [Infrastructure](/infrastructure/README.md) - Infrastructure setup and development tools
+
+### Development Resources
 
 #### COMMON & SCRIPTS
 
+### DOCUMENTATION
+
+- [Monorepo Structure](/docs/monorepo-structure.md): Documentation of the folder structure and metadata.
+- [Naming Conventions](/docs/naming-conventions.md): Guide to the agreed-upon naming conventions for files, folders, and variables.
 - [Common](/common/README.md) - Shared configurations and utilities
   - [Config](/common/config/README.md) - Shared configuration files
   - [Git Hooks](/common/git-hooks/README.md) - Repository management hooks
@@ -67,6 +100,7 @@ This monorepo contains various projects, libraries, and services organized in a 
 - [Scripts](/scripts/README.md) - Utility and automation scripts
   - [Docker Maintenance](/scripts/docker-maintenance-global-system/README.md)
   - [Rush Scripts](/scripts/rush/README.md)
+(Note: The links to README.md files are placeholders and will need to be verified for correctness. Each subdirectory should contain a README.md that provides further details about its contents.)
 
 ### Additional Resources
 
@@ -74,25 +108,6 @@ This monorepo contains various projects, libraries, and services organized in a 
 - [Docs](/docs/README.md) - Project documentation
 - [Infrastructure](/infrastructure/README.md) - Infrastructure setup
 - [Helpers](/helpers/README.md) - Helper utilities
-
-## Repository Configuration
-
-### Git Submodules
-
-The repository includes several submodules:
-
-- services/image-scout: <https://github.com/Luxcium/Redis-ImageScout.git>
-- services/questrade-ts: <https://github.com/Luxcium/questrade-ts.git>
-- services/rpc-worker-pool: <https://github.com/Luxcium/rpc-worker-pool.git>
-- library/mapping-tools: <https://github.com/LuxciumProject/mapping-tools.git>
-
-### Project Management
-
-The project uses:
-
-- Rush stack for monorepo management (rush.json)
-- VSCode multi-root workspaces (monorepo-one.code-workspace)
-- Git submodules (.gitmodules)
 
 ## Getting Started
 
@@ -116,35 +131,31 @@ The project uses:
 
 ## License
 
-Copyright © 2022-2024 · LUXCIUM · (Benjamin Vincent Kasapoglu) · luxcium﹫neb401.com
+### Luxcium License: NO PERMISSIONS GRANTED - PROVIDED "AS IS" - WITHOUT WARRANTY
 
-### NO PERMISSION ARE GRANTED FOR THIS SOFTWARE
+- THESE FILES ARE **NOT** FIT FOR ANY PARTICULAR PURPOSE IN THEIR CURRENT FORM.
+- THESE FILES OR THEIR CONTENT HAVE NOT BEEN TESTED OR RUN YET IN ANY OR ALL ENVIRONMENTS!
+- **DO NOT** RUN ANY OF THESE FILES UNLESS YOU HAVE REVIEWED THEIR FULL CONTENT.
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOU (or anyone).
+- YOU MUST TAKE FULL RESPONSIBILITY FOR ANY PROBLEMS THEY MAY CAUSE TO YOUR MACHINE (or any machine).
 
+#### NO PERMISSIONS ARE GRANTED FOR THIS SOFTWARE OR DOCUMENTATION
+
+```plaintext
     1) NOT TO PUBLISH;
     2) NOT TO DISTRIBUTE;
     3) NOT TO SUBLICENSE;
     4) NOT TO SELL COPIES OF;
+```
 
-#### NOTICE
+   Even for unpermited usage you must provide the name of the copyright holder and this must be included in all copies or substantial portions of the Software:
 
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ALL OR ANY KIND,
-> EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS WILL BE LIABLE FOR ALL
-> OR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-> TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
-> OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   The Software is provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders X be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in this Software.
 
-### EXCEPTIONS
+Except as contained in this notice, the name of the \<copyright holders> shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization from the \<copyright holders>. »
 
-#### YOU HAVE THE RIGHT TO
+## COPYRIGHT
 
-    A) USE IT FOR YOURSELF;
-    B) DISTRIBUTE IT TO YOUR FRIENDS;
-    C) DISTRIBUTE IT TO YOUR STUDENTS;
-    D) DISTRIBUTE IT TO YOUR COWORKER;
-    (FOR PERSONAL USE; AT HOME, AT SCHOOL OR AT WORK)
+Copyright © 2023-2025 · LUXCIUM · (Benjamin Vincent) · luxcium﹫neb401.com
 
-    IN ALL OR ANY CASES THE COPYRIGHT AND NOTICE ABOVE MUST BE INCLUDED.
-
-† Scientia est lux principium✨ is a Trade Mark of Benjamin Vincent Kasapoglu
+† **Scientia est lux principium✨** ™

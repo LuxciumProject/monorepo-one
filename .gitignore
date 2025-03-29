@@ -326,5 +326,5 @@ APIs/anthropic/envs.txt
 .pnpm-store
 rush.json.bak
 !prompt-tree-list.txt
-.Trash-1000/files/pnpm-lock.yaml
-.Trash-1000/info/pnpm-lock.yaml.trashinfo
+.Trash-1000/
+lost+found

@@ -13,6 +13,8 @@ This directory contains example code, templates, and demonstrations of various f
 - `/playground` - Experimental code and testing ground
 - `/template` - Project templates and boilerplates
 - `/typescript` - TypeScript implementation examples
+- `/nvidia` - NVIDIA related examples
+- `/stable-diffusion` - Stable diffusion examples
 
 ## Overview
 

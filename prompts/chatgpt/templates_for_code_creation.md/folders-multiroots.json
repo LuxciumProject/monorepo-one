@@ -1,0 +1,237 @@
+// templates_for_code_creation.md/folders-multiroots.jsonc
+// "folders in the multiroot context"
+[
+    /*
+    - 📕 Red Book
+    - 📗 Green Book
+    - 📘 Blue Book
+    - 📙 Orange Book
+    - 📚 Books
+    - 📖 Open Book
+    - 📓 Notebook
+    - 📔 Notebook with Decorative Cover
+    - 📒 Ledger
+    - 📑 Bookmark Tabs
+    */
+    {
+        "name": "→🖥️ ✨ MONOREPO-ONE",
+        "path": "."
+    },
+    {
+        "name": "  ↓ ✨ 🤖 PROMPTS",
+        "path": "prompts"
+    },
+    {
+        "name": "           🤖📣 TYPING PROMPTER",
+        "path": "prompts/typing_prompter"
+    },
+    {
+        "name": "           🤖💬 CHAT GPT",
+        "path": "prompts/chatgpt"
+    },
+    {
+        "name": "           🤖📕 APIs",
+        "path": "prompts/API"
+    },
+    {
+        "name": "           ⛵📕 midjourney",
+        "path": "prompts/API/midjourney"
+    },
+    {
+        "name": "           🦾📕 Anthropic Claude",
+        "path": "prompts/API/claude-3"
+    },
+    {
+        "name": "           🦾📕 GPTs",
+        "path": "prompts/API/GPTs"
+    },
+    {
+        "name": "           🤖💬💭 MORE PROMPTS",
+        "path": "prompts/chatgpt/more-prompts"
+    },
+    {
+        "name": "  ↓ 📓 📙 APIs",
+        "path": "APIs"
+    },
+    {
+        "name": "           📙 Anthropic",
+        "path": "APIs/anthropic"
+    },
+    {
+        "name": "           📙 OpenAI",
+        "path": "APIs/openai"
+    },
+    {
+        "name": "  ↓ 🔐 💫 PRIVATE",
+        "path": "private"
+    },
+    {
+        "name": "  ↓ 💻 👨‍💻 FRONTEND",
+        "path": "frontend"
+    },
+    {
+        "name": "           👨‍💻 🏠 HOME 🏗️ 📗🏳️‍🌈",
+        "path": "frontend/home"
+    },
+    {
+        "name": "  ↓ 🏭 🏦 BACKEND",
+        "path": "backend"
+    },
+    {
+        "name": "           ��🗜️ api",
+        "path": "backend/api"
+    },
+    {
+        "name": "           🏦🏫 scratch",
+        "path": "backend/scratch"
+    },
+    {
+        "name": "  ↓ 📓 📚 LIBRARY",
+        "path": "library"
+    },
+    {
+        "name": "  S*→📚🧭 mapping-tools",
+        "path": "library/mapping-tools"
+    },
+    {
+        "name": "          📚💛 colors-tools",
+        "path": "library/colors-tools"
+    },
+    {
+        "name": "          📚💗 boxing-tools",
+        "path": "library/boxing-tools"
+    },
+    {
+        "name": "          📚🧡 boxed-list",
+        "path": "library/boxed-list"
+    },
+    {
+        "name": "          📚❤️ bigintString",
+        "path": "library/bigintString"
+    },
+    {
+        "name": "          📚💚 human-size",
+        "path": "library/human-size"
+    },
+    {
+        "name": "          📚💙 object-with-expectations",
+        "path": "library/object-with-expectations"
+    },
+    {
+        "name": "          📚💜 parallel-mapper",
+        "path": "library/parallel-mapper"
+    },
+    {
+        "name": "          📚🧌 restraining-zalgo",
+        "path": "library/restraining-zalgo"
+    },
+    // /P3/monorepo-one/library/python
+    {
+        "name": "          📚🐍 python",
+        "path": "library/python",
+    },
+    {
+        "name": "          📓🛠️ Tools",
+        "path": "library/tools"
+    },
+    {
+        "name": "          📘 Typescript",
+        "path": "library/typescript"
+    },
+    {
+        "name": "  ↓ 🖥️ 💁📒 SERVICES",
+        "path": "services"
+    },
+    {
+        "name": "  S*→ 💁🛵 image-scout",
+        "path": "services/image-scout"
+    },
+    {
+        "name": "  S*→ 💁💜 rpc-worker-pool",
+        "path": "services/rpc-worker-pool"
+    },
+    {
+        "name": "           💁🖼️ image-pipeline",
+        "path": "services/image-pipeline"
+    },
+    {
+        "name": "           💁📊 mongo-service",
+        "path": "services/mongo-service"
+    },
+    {
+        "name": "           💁❤️ phash-compute",
+        "path": "services/phash-compute"
+    },
+    {
+        "name": "           💁🧡 redis-services",
+        "path": "services/redis-services"
+    },
+    {
+        "name": "           💁💛 scan-directories",
+        "path": "services/scan-directories"
+    },
+    {
+        "name": "           💁💚 service-one",
+        "path": "services/service-one"
+    },
+    {
+        "name": "           💁💙 service-two",
+        "path": "services/service-two"
+    },
+    {
+        "name": "  ↓ 🗂️ 🎨 static",
+        "path": "static"
+    },
+    {
+        "name": "  ↓ 🪄 🎱 EXAMPLES",
+        "path": "examples"
+    },
+    {
+        "name": "           🎱🎨 STABLE DIFFUSION",
+        "path": "examples/stable-diffusion"
+    },
+    {
+        "name": "           🎱🪄 OpenHands (OpenDevin)",
+        "path": "examples/OpenHands"
+    },
+    {
+        "name": "           🎱🪄 casecobra",
+        "path": "examples/casecobra-master"
+    },
+    {
+        "name": "           🎱🪄 template",
+        "path": "examples/template"
+    },
+    {
+        "name": "           🎱🪄 open-ai",
+        "path": "examples/open-ai"
+    },
+    {
+        "name": "           🎱🪄 gpu-stuff",
+        "path": "examples/gpu-stuff"
+    },
+    {
+        "name": "           🎱🪄 mcp-servers",
+        "path": "examples/mcp-servers"
+    },
+    {
+        "name": "           🎱🪄 playground",
+        "path": "examples/playground"
+    },
+    {
+        "name": "           🎱🪄 node-js",
+        "path": "examples/node-js"
+    },
+    {
+        "name": "           🎱🛵 phash-scout",
+        "path": "examples/phash-scout"
+    },
+    {
+        "name": "           📘 typescript",
+        "path": "examples/typescript"
+    },
+    {
+        "name": " ··· 📓 📔 Scripts",
+        "path": "scripts"
+    }
+]

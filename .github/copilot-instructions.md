@@ -144,6 +144,46 @@ The goal of this guide is to ensure that generated code is both human-readable a
   - **Remove**: `pnpm remove <package-name>`
 - **Note**: Don’t use PNPM in `monorepo-one`; use Rush instead.
 
+## Optional Tooling and Integration
+
+This project allows for the optional integration of various development tools to enhance code quality and streamline the development process. While not mandatory, these tools can significantly improve code consistency and maintainability when used appropriately.
+
+[Prettier](https://prettier.io/) is an opinionated code formatter that can be used to enforce consistent styling across the codebase. [ESLint](https://eslint.org/) provides static code analysis to identify problematic patterns in JavaScript and TypeScript code. Both can be configured at the project or monorepo level.
+
+[Rush](https://rushjs.io/) is a scalable monorepo manager that can be used to handle large repositories with multiple projects. [Heft](https://rushstack.io/pages/heft/overview/) is a pluggable build system designed to work seamlessly with Rush, providing a unified build process for different project types. [PNPM](https://pnpm.io/) is a fast, disk space efficient package manager that can be used outside of the monorepo context.
+
+When integrating these tools, use Rush commands within the monorepo and PNPM commands for projects outside the monorepo, adhering to the established package management rules. This flexible approach allows for tailored tooling configurations while maintaining overall project consistency.
+
+## Additional Optional Tooling
+
+You may optionally integrate tools like [Prettier](https://prettier.io/docs/en/next/) or [ESLint](https://eslint.org/docs/latest/rules/) for code formatting and linting, ensuring code consistency. When working with Rush ([https://rushjs.io/pages/intro/get_started/](https://rushjs.io/pages/intro/get_started/)) or [Heft](https://heft.rushstack.io/), you can configure these tools at the project or monorepo level, using either `pnpm` or corresponding Rush commands where appropriate.
+
+While none of these integrations are mandatory, applying them consistently helps maintain high-quality code. Use PNPM commands outside monorepo-one or Rush commands within monorepo-one as needed, observing the established packaging rules for smooth development and collaboration.
+
+### Prettier Code Formatter
+
+[Prettier](https://prettier.io/docs/en/next/) is an opinionated code formatter that enforces consistent code style across your entire codebase. It automatically formats your code according to predefined rules, eliminating debates about styling in code reviews. When integrated with Rush or Heft, Prettier ensures that all projects within your monorepo maintain consistent formatting standards.
+
+Key features include automatic code formatting, support for multiple languages, and seamless integration with most IDEs and build tools. Configure Prettier at either the project level or monorepo level to maintain uniform code appearance across your codebase.
+
+### ESLint Static Analysis
+
+[ESLint](https://eslint.org/docs/latest/rules/) is a static code analysis tool that helps identify problematic patterns in your JavaScript and TypeScript code. It goes beyond simple formatting to enforce coding standards and catch potential errors before they cause problems in production.
+
+ESLint can be configured with custom rule sets and integrates well with modern development workflows. In a monorepo context, you can share ESLint configurations across projects while allowing for project-specific overrides when needed.
+
+### Rush Monorepo Manager
+
+[Rush](https://rushjs.io/pages/intro/get_started/) is a scalable monorepo manager that handles large repositories with multiple projects. It provides advanced features for managing dependencies, building projects, and maintaining consistency across your codebase.
+
+Use Rush commands exclusively within monorepo-one for tasks like dependency management, builds, and publishing. This ensures consistent package management and helps maintain the integrity of your monorepo structure.
+
+### Heft Build System
+
+[Heft](https://heft.rushstack.io/) is a configurable build system designed to work seamlessly with Rush. It provides a unified build process that can be customized for different project types while maintaining consistency across your monorepo.
+
+Heft integrates well with TypeScript, Jest, ESLint, and other popular tools, making it an excellent choice for managing complex build requirements in a monorepo environment. Configure Heft at the project level while keeping common configurations at the monorepo level for maximum efficiency.
+
 ## Testing the Code
 
 - **Unit Tests**: Write tests for each function.
@@ -324,8 +364,6 @@ For TypeDoc, there are three main types of documentation tags:
    - `@hidden` - Hide from documentation
    - `@ignore` - Ignore in documentation
 
-### Types of Comments
-
 #### Maintenance
 
 - `// TODO:` – Things to finish later.
@@ -388,6 +426,24 @@ For TypeDoc, there are three main types of documentation tags:
   - Reference the original request that prompted the update
   - Maintain consistent formatting and style
 
+## CI Workflow Guidelines
+
+- Ensure all CI workflows use Rush commands for dependency management and builds.
+  - Use `rush update` for installing dependencies.
+  - Use `rush build` for compiling projects.
+  - Use `rush test` for running tests.
+- **Node.js Version Requirement**: All workflows and development environments must use Node.js v22 or greater.
+
+## Linux Environment
+
+All development and operations are assumed to be running on Fedora Linux. Package management is handled through `dnf` (which is aliased to `dnf5`). When providing system-level commands or configurations:
+
+- Always use `dnf` for package management (it will use dnf5 via alias)
+- Ensure compatibility with Fedora's filesystem hierarchy
+- Follow Fedora's security and SELinux policies
+- Use Fedora's standard locations for configuration files
+- Consider systemd for service management
+
 ## Why Use This Guide?
 
 This guide makes sure that GitHub Copilot writes code that is easy to read and fix. It makes sure the code is consistent and high quality, so there’s less work to do later.
@@ -395,3 +451,8 @@ This guide makes sure that GitHub Copilot writes code that is easy to read and f
 ## Conclusion
 
 By following these rules, GitHub Copilot will create code that is easier to understand and maintain. Keeping things simple and using good practices will help make the code strong and reliable for everyone.
+
+## Rules for Managing `package.json` Files
+
+- **No `package.json` in Root Directory**: Ensure that no `package.json` file exists in the root directory of the `monorepo-one` repository. This rule is essential for maintaining the integrity of the Rush stack and avoiding conflicts.
+- **Subdirectory `package.json` Files**: `package.json` files should only be present in the appropriate subdirectories where individual projects are located. This ensures that each project is managed independently and follows the Rush stack guidelines.

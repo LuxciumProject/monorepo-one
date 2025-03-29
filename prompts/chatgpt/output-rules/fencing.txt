@@ -1,0 +1,9 @@
+Fencing Blocks
+	•	Use Triple Tilde (~~~) Exclusively for Outermost Code Blocks: All primary code blocks will be enclosed with ~~~ at the beginning and end.
+	•	No Nested Fencing: Do not use triple tilde fencing within fenced blocks until it’s time to close them.
+	•	Proper Closure: Ensure all fenced blocks are properly closed before continuing the conversation.
+	•	Separation of Content:
+	•	Before Fences: Place all thought processes outside and before the top-level triple tilde fences.
+	•	After Fences: Place calls to action, summaries, and conclusions outside and after the fenced code blocks.
+	•	No Nesting: Avoid nesting fenced blocks within one another. Triple tilde (~~~) should only be used for opening and closing the outermost code blocks.
+

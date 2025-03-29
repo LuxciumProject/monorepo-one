@@ -34,7 +34,8 @@ Upon completion, present the final summary to the user. Ensure that it maintains
 
 Finally, reassure the user that they will be pleased with this final product, as it has retained the important parts of the original text but in a summarized, easy-to-understand format.
 
-BAD ==========================
+BAD ========================== hay stack hidden: [±Item 010±]  
+
 
 1. Analyze the source text discussing how to tell if a function is pure.
 2. The test for a function's purity is if it can be memoized.

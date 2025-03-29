@@ -17,7 +17,39 @@
    * If the main project should include other unrelated Rush projects, add it to the "projectSettings" section,
    * and then specify those projects in the "additionalProjectsToInclude" list.
    */
-  "deploymentProjectNames": ["service-two"],
+  "deploymentProjectNames": [
+    "service-two",
+    "api-server-comments",
+    "api-server-posts",
+    "@luxcium/home-nextjs",
+    "@luxcium/anthropic-api",
+    "@luxcium/openai-api",
+    "@luxcium/infrastructure",
+    "@luxcium/bigintstring",
+    "@luxcium/colors-tools",
+    "@luxcium/boxing-tools",
+    "@luxcium/boxed-list",
+    "@luxcium/object-with-expectations",
+    "@luxcium/human-size",
+    "@luxcium/parallel-mapper",
+    "mapping-tools",
+    "@luxcium/restraining-zalgo",
+    "@luxcium/tools",
+    "@luxcium/phash-compute",
+    "@luxcium/scan-dirs",
+    "@luxcium/rpc-worker-pool",
+    "@luxcium/image-pipeline",
+    "@luxcium/redis-services",
+    "service-one",
+    "mongo-service",
+    "casecobra-dev",
+    "phash-scout-examples",
+    "template-example",
+    "open-ai",
+    "gpu-stuff",
+    "playground-example",
+    "node-js-example"
+  ],
 
   /**
    * When deploying a local Rush project, the package.json "devDependencies" are normally excluded.

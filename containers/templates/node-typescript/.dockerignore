@@ -1,0 +1,55 @@
+# Dependencies
+node_modules
+.pnpm-store
+.npm
+.yarn
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist
+build
+*.tsbuildinfo
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+
+# Logs and debugging
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage
+.nyc_output
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.docker
+
+# Documentation
+README.md
+docs/
+*.md
+
+# Development files
+nodemon.json
+.eslintrc*
+.prettierrc*
+.editorconfig
