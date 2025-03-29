@@ -451,3 +451,8 @@ This guide makes sure that GitHub Copilot writes code that is easy to read and f
 ## Conclusion
 
 By following these rules, GitHub Copilot will create code that is easier to understand and maintain. Keeping things simple and using good practices will help make the code strong and reliable for everyone.
+
+## Rules for Managing `package.json` Files
+
+- **No `package.json` in Root Directory**: Ensure that no `package.json` file exists in the root directory of the `monorepo-one` repository. This rule is essential for maintaining the integrity of the Rush stack and avoiding conflicts.
+- **Subdirectory `package.json` Files**: `package.json` files should only be present in the appropriate subdirectories where individual projects are located. This ensures that each project is managed independently and follows the Rush stack guidelines.
