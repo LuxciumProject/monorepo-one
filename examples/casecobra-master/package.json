@@ -51,7 +51,7 @@
     "@types/react-dom": "~19.0.3",
     "postcss": "~8.5.1",
     "tailwindcss": "~3.4.17",
-    "typescript": "~5.7.3",
+    "typescript": "~5.8.2",
     "@types/sharp": "^0.30.0",
     "prettier": "~3.4.2",
     "eslint": "~9.18.0",

@@ -27,7 +27,7 @@
     "ts-jest": "~29.2.5",
     "ts-node": "~10.9.2",
     "tsconfig-paths": "~4.2.0",
-    "typescript": "~5.7.3",
+    "typescript": "~5.8.2",
     "@babel/core": "~7.23.9",
     "@babel/plugin-transform-react-jsx": "~7.22.5",
     "@babel/plugin-transform-typescript": "~7.25.9",

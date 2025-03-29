@@ -13,7 +13,7 @@
   "author": "Benjamin Vincent",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "~5.7.3",
+    "typescript": "~5.8.2",
     "eslint-import-resolver-typescript": "~3.6.3",
     "eslint-plugin-simple-import-sort": "~12.1.1",
     "nodemon": "~3.0.3",
