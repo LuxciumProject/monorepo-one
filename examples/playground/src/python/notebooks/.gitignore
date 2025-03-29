@@ -1,0 +1,28 @@
+# Image file extensions
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+*.psd
+*.ai
+*.eps
+*.raw
+*.cr2
+*.nef
+*.orf
+*.sr2
+*.heic
+*.heif
+*.jfif
+*.jp2
+*.j2k
+
+# Jupyter notebook visualization outputs that may contain images
+.ipynb_checkpoints/
+*_files/
