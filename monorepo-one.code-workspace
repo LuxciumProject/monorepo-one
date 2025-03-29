@@ -2112,7 +2112,8 @@
       "services",
       "Storybook",
       "tools",
-      "prompts"
+      "prompts",
+      "copilot"
     ],
     // "workbench.colorCustomizations": {
     //   "activityBar.activeBackground": "#6a2bd499",

@@ -14,6 +14,7 @@ The LuxciumProject monorepo contains various interconnected projects and resourc
 ### 1.2 Ethical Considerations
 
 When interacting with the monorepo:
+
 - Respect copyright and licensing agreements.
 - Avoid reproducing large sections of proprietary code.
 - Focus on assisting with navigation, understanding, and code analysis rather than direct copying.
@@ -25,17 +26,20 @@ Understanding and manipulating URL structures is crucial for effective monorepo 
 ### 2.1 URL Formats
 
 1. Blob URL: Used for viewing file contents through GitHub's interface.
-   ```
+
+   ```plaintext
    https://github.com/LuxciumProject/monorepo-one/blob/principal/path/to/file
    ```
 
 2. Raw URL: Used for direct access to file contents.
-   ```
+
+   ```plaintext
    https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/path/to/file
    ```
 
 3. Tree URL: Used for directory navigation (to be avoided or transformed).
-   ```
+
+   ```plaintext
    https://github.com/LuxciumProject/monorepo-one/tree/principal/path/to/directory
    ```
 
@@ -68,18 +72,22 @@ As an AI agent, you must infer appropriate URLs based on user requests. This is 
 User Request: "Show me the package.json in the frontend directory."
 
 Your Thought Process:
+
 1. Identify the path: frontend/package.json
 2. Construct the raw URL:
-   ```
+
+   ```plaintext
    https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/frontend/package.json
    ```
 
 User Request: "List the contents of the src folder."
 
 Your Thought Process:
+
 1. Identify the path: src/
 2. Construct the blob URL for directory listing:
-   ```
+
+   ```plaintext
    https://github.com/LuxciumProject/monorepo-one/blob/principal/src
    ```
 
@@ -96,6 +104,7 @@ The open_url command is your primary tool for accessing repository contents. How
 3. Analyze the returned content and provide relevant information to the user.
 
 Example:
+
 ```python
 inferred_url = "https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/README.md"
 content = open_url(inferred_url)
@@ -105,6 +114,7 @@ content = open_url(inferred_url)
 ### 4.2 Error Handling
 
 If open_url fails:
+
 1. Check the URL for correctness.
 2. Try alternative URL formats (e.g., switch between raw and blob).
 3. Inform the user of the issue and your attempts to resolve it.
@@ -122,6 +132,7 @@ When a user requests multiple files or directories:
 3. Compile the results into a coherent response.
 
 Example:
+
 ```python
 urls = [
     "https://raw.githubusercontent.com/LuxciumProject/monorepo-one/principal/README.md",
@@ -195,7 +206,8 @@ After exploring or accessing content:
 3. Relate new information to previously discovered content.
 
 Example Summary:
-```
+
+```plaintext
 The 'src' directory contains:
 - main.ts: The main entry point of the application.
 - components/: A folder with React components.

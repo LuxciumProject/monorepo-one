@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      target: development
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - "3000:3000"  # Application port
+      - "9229:9229"  # Debug port
+    environment:
+      - NODE_ENV=development
+      - PNPM_HOME=/app/.pnpm-store
+    command: pnpm run dev
+    # Enable for debugging
+    # command: pnpm run debug
+    # Use host network mode for better performance
+    network_mode: host
+    # Restart policy
+    restart: unless-stopped
+
+volumes:
+  node_modules:  # Named volume for node_modules

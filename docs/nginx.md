@@ -1,8 +1,8 @@
 # NGINX Documentation
 
-# Modules Reference
+## Modules Reference
 
-## Alphabetical Index Of Directives
+### Alphabetical Index Of Directives
 
 1. [absolute_redirect](https://nginx.org/en/docs/http/ngx_http_core_module.html#absolute_redirect)
 1. [accept_mutex](https://nginx.org/en/docs/ngx_core_module.html#accept_mutex)
@@ -570,7 +570,6 @@
 1. [smtp_auth](https://nginx.org/en/docs/mail/ngx_mail_smtp_module.html#smtp_auth)
 1. [smtp_capabilities](https://nginx.org/en/docs/mail/ngx_mail_smtp_module.html#smtp_capabilities)
 1. [smtp_client_buffer](https://nginx.org/en/docs/mail/ngx_mail_smtp_module.html#smtp_client_buffer)
-1. [smtp_greeting_delay](https://nginx.org/en/docs/mail/ngx_mail_smtp_module.html#smtp_greeting_delay)
 1. [source_charset](https://nginx.org/en/docs/http/ngx_http_charset_module.html#source_charset)
 1. [spdy_chunk_size](https://nginx.org/en/docs/http/ngx_http_spdy_module.html#spdy_chunk_size)
 1. [spdy_headers_comp](https://nginx.org/en/docs/http/ngx_http_spdy_module.html#spdy_headers_comp)
