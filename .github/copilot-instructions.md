@@ -444,6 +444,48 @@ All development and operations are assumed to be running on Fedora Linux. Packag
 - Use Fedora's standard locations for configuration files
 - Consider systemd for service management
 
+## Markdown Formatting Guidelines
+
+When writing or updating markdown documentation, follow these strict formatting rules:
+
+- **Add Blank Lines Around Headings**: Always include a blank line before and after headings.
+
+- **Surround Code Blocks with Blank Lines**: Always include a blank line before and after fenced code blocks.
+
+- **Use Proper List Formatting**: Ensure lists have consistent indentation and spacing.
+
+- **Limit Line Length**: Keep markdown lines under 80 characters when possible.
+
+- **Use Reference-Style Links**: For better readability, prefer reference-style links over inline links.
+
+These formatting rules ensure consistency across all documentation files and improve readability for both humans and AI agents. All markdown files must adhere to standard markdown linting rules.
+
+### Example of Properly Formatted Markdown
+
+```md
+# Heading 1
+
+This is a paragraph under heading 1.
+
+## Heading 2
+
+This is a paragraph under heading 2.
+
+- List item 1
+- List item 2
+- List item 3
+```
+
+Code blocks must be surrounded by blank lines:
+
+```typescript
+function example(): void {
+  console.log('Hello world');
+}
+```
+
+Text after the code block must also be preceded by a blank line.
+
 ## Why Use This Guide?
 
 This guide makes sure that GitHub Copilot writes code that is easy to read and fix. It makes sure the code is consistent and high quality, so there’s less work to do later.
@@ -456,3 +498,57 @@ By following these rules, GitHub Copilot will create code that is easier to unde
 
 - **No `package.json` in Root Directory**: Ensure that no `package.json` file exists in the root directory of the `monorepo-one` repository. This rule is essential for maintaining the integrity of the Rush stack and avoiding conflicts.
 - **Subdirectory `package.json` Files**: `package.json` files should only be present in the appropriate subdirectories where individual projects are located. This ensures that each project is managed independently and follows the Rush stack guidelines.
+
+## Rush Procedures and Preferences
+
+### Core Rush Commands
+
+- `rush update`: Install and link dependencies across the monorepo.
+- `rush build`: Build all projects in the correct dependency order.
+- `rush add -p <package-name> -m`: Add a production dependency to the current subproject.
+- `rush add -p <package-name> --dev -m`: Add a development dependency to the current subproject.
+- `rush remove -p <package-name>`: Remove a dependency from the current subproject.
+- `rush publish`: Publish packages with versioning and changelog updates.
+- `rush change`: Generate changelog entries for a project.
+
+### Package Management Rules
+
+- **Inside monorepo-one**: Use ONLY Rush commands for dependency management.
+- **Outside monorepo-one**: Use ONLY pnpm commands (`pnpm add`, `pnpm remove`, etc.).
+- **NEVER** use npm, yarn, or npx anywhere in the project.
+- **NEVER** create a `package.json` file in the root directory of the monorepo.
+- **ALWAYS** navigate to the specific subproject directory before running Rush commands.
+
+### Rush Command Examples
+
+#### Adding Multiple Production Dependencies
+
+```bash
+cd /projects/monorepo-one/services/rpc-worker-pool && \
+  rush add -p typescript -p ts-node -p chalk -m
+```
+
+#### Adding Multiple Development Dependencies
+
+```bash
+cd /projects/monorepo-one/services/rpc-worker-pool && \
+  rush add -p @types/node -p @types/chalk --dev -m
+```
+
+#### Removing a Dependency
+
+```bash
+cd /projects/monorepo-one/services/rpc-worker-pool && \
+  rush remove -p chalk
+```
+
+### Environment-Specific Notes
+
+- **Fedora Linux**: All Rush commands should be run in a Fedora Linux environment to ensure compatibility with the project's configuration.
+- **Absolute Paths**: Always use absolute paths when navigating to subproject directories to avoid confusion.
+
+### Memory Preservation Rules
+
+- **Instruction Updates**: Never remove existing instructions without explicit confirmation.
+- **Placement**: Add new instructions in the most relevant section.
+- **Formatting**: Use consistent markdown formatting with clear headings and code blocks.

@@ -26,6 +26,17 @@ Here is a revised and **precise set of instructions** for **Cline** that avoids 
     - [Purpose](#purpose)
     - [Maintenance Principles](#maintenance-principles)
   - [Summary of Approach](#summary-of-approach)
+  - [Rush Procedures for Monorepo Management](#rush-procedures-for-monorepo-management)
+    - [Core Commands](#core-commands)
+    - [Package Management Rules](#package-management-rules)
+    - [Examples](#examples)
+      - [Adding Multiple Production Dependencies](#adding-multiple-production-dependencies)
+      - [Adding Multiple Development Dependencies](#adding-multiple-development-dependencies)
+      - [Removing a Dependency](#removing-a-dependency)
+    - [Environment-Specific Notes](#environment-specific-notes)
+    - [Critical Directives](#critical-directives)
+  - [Markdown Documentation Standards](#markdown-documentation-standards)
+    - [Example of Proper Markdown Formatting](#example-of-proper-markdown-formatting)
 
 ## Cline Instructions
 
@@ -178,3 +189,95 @@ A dynamic, context-aware instruction set designed to provide flexible yet precis
 ---
 
 NEVER DO A MEMORY RESET!
+
+## Rush Procedures for Monorepo Management
+
+### Core Commands
+
+- **Install Dependencies**: Use `rush update` to install and link dependencies across the monorepo.
+- **Build Projects**: Use `rush build` to build all projects in the correct dependency order.
+- **Add Dependencies**:
+  - Production: `rush add -p <package-name> -m`
+  - Development: `rush add -p <package-name> --dev -m`
+- **Remove Dependencies**: Use `rush remove -p <package-name>` to remove a dependency.
+- **Publish Packages**: Use `rush publish` to publish packages with versioning and changelog updates.
+- **Generate Changelogs**: Use `rush change` to generate changelog entries for a project.
+
+### Package Management Rules
+
+- **Inside monorepo-one**: Use ONLY Rush commands for dependency management.
+- **Outside monorepo-one**: Use ONLY pnpm commands (`pnpm add`, `pnpm remove`, etc.).
+- **Prohibited Tools**: NEVER use npm, yarn, or npx anywhere in the project.
+- **Root Directory**: NEVER create a `package.json` file in the root directory of the monorepo.
+- **Subproject Context**: ALWAYS navigate to the specific subproject directory before running Rush commands.
+
+### Examples
+
+#### Adding Multiple Production Dependencies
+
+```bash
+cd /projects/monorepo-one/services/rpc-worker-pool && \
+  rush add -p typescript -p ts-node -p chalk -m
+```
+
+#### Adding Multiple Development Dependencies
+
+```bash
+cd /projects/monorepo-one/services/rpc-worker-pool && \
+  rush add -p @types/node -p @types/chalk --dev -m
+```
+
+#### Removing a Dependency
+
+```bash
+cd /projects/monorepo-one/services/rpc-worker-pool && \
+  rush remove -p chalk
+```
+
+### Environment-Specific Notes
+
+- **Fedora Linux**: All Rush commands should be run in a Fedora Linux environment to ensure compatibility with the project's configuration.
+- **Absolute Paths**: Always use absolute paths when navigating to subproject directories to avoid confusion.
+
+### Critical Directives
+
+- ❗ **Navigation Requirement**: ALWAYS navigate to the specific subproject directory before running Rush commands.
+- ❗ **Consistency**: Use the `-m` flag in all Rush commands to ensure version consistency across the monorepo.
+- ❗ **Separation of Concerns**: Separate production and development dependencies into distinct commands.
+
+## Markdown Documentation Standards
+
+All markdown documents must adhere to these formatting requirements:
+
+- **Blank Lines Around Headings**: Include a blank line before and after each heading.
+- **Blank Lines Around Code Blocks**: Always surround fenced code blocks with blank lines.
+- **Consistent Indentation**: Use consistent indentation for nested lists and code blocks.
+- **Line Length**: Limit lines to 80-100 characters for readability.
+- **List Formatting**: Use consistent spacing and bullet types in lists.
+- **Standard Compliance**: Ensure all markdown follows CommonMark specifications.
+
+### Example of Proper Markdown Formatting
+
+```md
+# Main Heading
+
+This is an introductory paragraph.
+
+## Secondary Heading
+
+This text is under the secondary heading.
+
+- First list item
+- Second list item
+  - Nested item
+  - Another nested item
+```
+
+Code blocks must be surrounded by blank lines:
+
+```bash
+#!/bin/bash
+echo "Example code block"
+```
+
+Tables should be well-formatted with aligned columns.
