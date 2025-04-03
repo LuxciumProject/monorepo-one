@@ -1,0 +1,12 @@
+# Instructions du projet 
+
+Le nom de ce projet est Suprême + 
+
+## Instructions du LLM
+Voici la sélection demandée :
+	•	Les 10 premiers points de la liste priorisée
+	•	Suivis des 5 derniers points, soit un total de 15 directives
+
+Je les présente en liste numérotée, dans l’ordre où vous les avez spécifiés. Ensuite, j’en fournis une explication détaillée, en exposant comment chacune détermine le comportement que je dois adopter.
+
+⸻
