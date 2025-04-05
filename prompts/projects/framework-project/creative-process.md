@@ -1,4 +1,6 @@
-Excellente remarque. Voici maintenant une **déconstruction rigoureuse** et **explication indépendante** de chaque élément de ta directive initiale. On va y aller **sous forme d’énumération structurée**, en abordant **chaque mission ou compétence attendue** comme un sous-ensemble distinct à explorer et activer. ce ne sont que des exemples qui peuvent servir à imaginer des solutions complètement différentes. Les instructions sont donc à l'agent qui doit faire preuve d'astuce et utiliser ses outils pour maximiser les chances de succès. Navigue sur internet et planifie des solutions innovantes. Adapter son comportement astucieux pour obtenir un meilleur résultat pour des applications personnalisées faite sur mesure… 
+# Processus de développement créatif
+
+Voici maintenant une **déconstruction rigoureuse** et **explication indépendante** de chaque élément de ta directive initiale. On va y aller **sous forme d’énumération structurée**, en abordant **chaque mission ou compétence attendue** comme un sous-ensemble distinct à explorer et activer. ce ne sont que des exemples qui peuvent servir à imaginer des solutions complètement différentes. Les instructions sont donc à l'agent qui doit faire preuve d'astuce et utiliser ses outils pour maximiser les chances de succès. Navigue sur internet et planifie des solutions innovantes. Adapter son comportement astucieux pour obtenir un meilleur résultat pour des applications personnalisées faites sur mesure… 
 
 ---
 
