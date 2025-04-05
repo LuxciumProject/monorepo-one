@@ -1,0 +1,235 @@
+React Flow Documentation
+├── Learn
+│   ├── Quickstart
+│   ├── Concepts
+│   │   ├── Introduction
+│   │   ├── Terms and Definitions
+│   │   ├── Core Concepts
+│   │   ├── The Viewport
+│   │   └── Built-In Components
+│   ├── Getting Started
+│   │   ├── Installation
+│   │   ├── Building a Flow
+│   │   └── Adding Interactivity
+│   ├── Customizing React Flow
+│   │   ├── Custom Nodes
+│   │   ├── Custom Edges
+│   │   └── Theming
+│   ├── Layouting
+│   │   ├── Layouting Libraries
+│   │   └── Sub Flows
+│   ├── Advanced Use
+│   │   ├── Accessibility
+│   │   ├── Testing
+│   │   ├── TypeScript
+│   │   ├── Uncontrolled Flow
+│   │   ├── State Management
+│   │   ├── Computing Flows
+│   │   ├── Server Side Rendering
+│   │   └── Devtools
+│   ├── Tutorials
+│   │   ├── Slideshow App
+│   │   ├── Web Audio API
+│   │   ├── Mind Map App
+│   │   └── React Flow Components
+│   └── Troubleshooting
+│       ├── Common Errors
+│       ├── Remove Attribution
+│       ├── Migrate to v12
+│       ├── Migrate to v11
+│       └── Migrate to v10
+├── Reference
+│   ├── API Reference
+│   ├── ReactFlow Component
+│   ├── ReactFlowProvider Component
+│   ├── Components
+│   │   ├── Background
+│   │   ├── BaseEdge
+│   │   ├── ControlButton
+│   │   ├── Controls
+│   │   ├── EdgeLabelRenderer
+│   │   ├── EdgeText
+│   │   ├── Handle
+│   │   ├── MiniMap
+│   │   ├── NodeResizeControl
+│   │   ├── NodeResizer
+│   │   ├── NodeToolbar
+│   │   ├── Panel
+│   │   └── ViewportPortal
+│   ├── Hooks
+│   │   ├── useConnection
+│   │   ├── useEdges
+│   │   ├── useEdgesState
+│   │   ├── useHandleConnections
+│   │   ├── useInternalNode
+│   │   ├── useKeyPress
+│   │   ├── useNodeConnections
+│   │   ├── useNodeId
+│   │   ├── useNodes
+│   │   ├── useNodesData
+│   │   ├── useNodesInitialized
+│   │   ├── useNodesState
+│   │   ├── useOnSelectionChange
+│   │   ├── useOnViewportChange
+│   │   ├── useReactFlow
+│   │   ├── useStore
+│   │   ├── useStoreApi
+│   │   ├── useUpdateNodeInternals
+│   │   └── useViewport
+│   ├── Types
+│   │   ├── BackgroundVariant
+│   │   ├── Connection
+│   │   ├── ConnectionLineComponentProps
+│   │   ├── ConnectionLineType
+│   │   ├── ConnectionState
+│   │   ├── CoordinateExtent
+│   │   ├── DefaultEdgeOptions
+│   │   ├── DeleteElements
+│   │   ├── Edge
+│   │   ├── EdgeChange
+│   │   ├── EdgeMarker
+│   │   ├── EdgeProps
+│   │   ├── FitViewOptions
+│   │   ├── Handle
+│   │   ├── HandleConnection
+│   │   ├── InternalNode
+│   │   ├── MarkerType
+│   │   ├── MiniMapNodeProps
+│   │   ├── Node
+│   │   ├── NodeChange
+│   │   ├── NodeConnection
+│   │   ├── NodeHandle
+│   │   ├── NodeOrigin
+│   │   ├── NodeProps
+│   │   ├── OnEdgesChange
+│   │   ├── OnNodesChange
+│   │   ├── PanOnScrollMode
+│   │   ├── PanelPosition
+│   │   ├── Position
+│   │   ├── ProOptions
+│   │   ├── ReactFlowInstance
+│   │   ├── ReactFlowJsonObject
+│   │   ├── ResizeParams
+│   │   ├── Viewport
+│   │   └── XYPosition
+│   └── Utils
+│       ├── addEdge
+│       ├── applyEdgeChanges
+│       ├── applyNodeChanges
+│       ├── getBezierPath
+│       ├── getConnectedEdges
+│       ├── getIncomers
+│       ├── getNodesBounds
+│       ├── getOutgoers
+│       ├── getSimpleBezierPath
+│       ├── getSmoothStepPath
+│       ├── getStraightPath
+│       ├── getTransformForBounds
+│       ├── getViewportForBounds
+│       ├── isEdge
+│       ├── isNode
+│       └── reconnectEdge
+├── Examples
+│   ├── Feature Overview
+│   ├── Nodes
+│   │   ├── Add Node on Edge Drop
+│   │   ├── Connection Limit
+│   │   ├── Custom Nodes
+│   │   ├── Delete Middle Node
+│   │   ├── Drag Handle
+│   │   ├── Easy Connect
+│   │   ├── Hidden
+│   │   ├── Intersections
+│   │   ├── Node Resizer
+│   │   ├── Node Toolbar
+│   │   ├── Proximity Connect
+│   │   ├── Rotatable Node
+│   │   ├── Stress Test
+│   │   ├── Updating Nodes
+│   │   ├── Shapes (Pro Example)
+│   │   └── Dynamic Grouping (Pro Example)
+│   ├── Edges
+│   │   ├── Animating Edges
+│   │   ├── Custom Connection Line
+│   │   ├── Custom Edges
+│   │   ├── Delete Edge on Drop
+│   │   ├── Edge Label Renderer
+│   │   ├── Edge Intersection
+│   │   ├── Edge Types
+│   │   ├── Floating Edges
+│   │   ├── Markers
+│   │   ├── Multi Connection Line
+│   │   ├── Reconnect Edge
+│   │   ├── Simple Floating Edges
+│   │   ├── Temporary Edges
+│   │   └── Editable Edge (Pro Example)
+│   ├── Interaction
+│   │   ├── Computing Flows
+│   │   ├── Connection Events
+│   │   ├── Context Menu
+│   │   ├── Contextual Zoom
+│   │   ├── Drag and Drop
+│   │   ├── Interaction Props
+│   │   ├── Prevent Cycles
+│   │   ├── Save and Restore
+│   │   ├── Touch Device
+│   │   ├── Validation
+│   │   ├── Zoom Transitions
+│   │   ├── Collaborative (Pro Example)
+│   │   ├── Copy and Paste (Pro Example)
+│   │   ├── Helper Lines (Pro Example)
+│   │   └── Undo and Redo (Pro Example)
+│   ├── Layout
+│   │   ├── Dagre
+│   │   ├── Elkjs
+│   │   ├── Elkjs Multiple Handles
+│   │   ├── Entitree Flex
+│   │   ├── Horizontal
+│   │   ├── Sub Flows
+│   │   ├── Dynamic Layouting (Pro Example)
+│   │   ├── Auto Layout (Pro Example)
+│   │   ├── Expand and Collapse (Pro Example)
+│   │   └── Force Layout (Pro Example)
+│   ├── Styling
+│   │   ├── Base Style
+│   │   ├── Dark Mode
+│   │   ├── Styled Components
+│   │   ├── Tailwind
+│   │   └── Turbo Flow
+│   └── Misc
+│       ├── Download Image
+│       ├── Provider
+│       ├── Use React Flow Hook
+│       └── Static Server Side Generation
+├── Components
+│   ├── Introduction
+│   ├── Templates
+│   │   └── Workflow Editor (Pro)
+│   ├── Nodes
+│   │   ├── Tooltip
+│   │   ├── Placeholder
+│   │   ├── Database Schema
+│   │   ├── Annotation
+│   │   ├── Group with Label
+│   │   ├── Node Header
+│   │   ├── Base Node
+│   │   └── Node Status Indicator
+│   ├── Edges
+│   │   ├── Edge with Button
+│   │   ├── Edge with Node Data
+│   │   └── Animated SVG Edge
+│   ├── Controls
+│   │   ├── Zoom Slider
+│   │   └── Zoom Select
+│   ├── Handles
+│   │   ├── Handle with Label
+│   │   ├── Base Handle
+│   │   └── Button Handle
+│   └── Misc
+│       └── DevTools
+├── Showcase
+│   └── (List not detailed in UI — likely dynamic showcase gallery)
+└── More
+    ├── Changelog
+    ├── Blog ↗
+    └── Contact Us ↗
