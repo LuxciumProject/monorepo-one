@@ -58,8 +58,9 @@
       // UIComponents is for components that are basic building blocks of the UI specificaly.
       "@UIComponents/*": [
         "./src/components/ui/*"
-      ],
-    }
+      ]
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",

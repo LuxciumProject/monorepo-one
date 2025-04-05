@@ -1,0 +1,194 @@
+### Key Points
+- It seems likely that each link in the provided list corresponds to a specific section of the React Flow API documentation, covering components, hooks, types, and utilities for building node-based UIs.
+- The evidence leans toward each link detailing a unique aspect, such as `<ReactFlow />` for the core component or `useReactFlow()` for state management, with detailed descriptions and usage examples.
+- Research suggests that these links are part of a comprehensive API reference, useful for developers integrating React Flow into React applications, with potential overlap in related topics like node and edge management.
+
+### React Flow API Overview
+React Flow is a library for creating interactive node-based user interfaces in React, and its API reference is extensive, covering components, hooks, types, and utilities. The provided links likely map to specific sections of this documentation, each offering detailed insights into different features. For example, [https://reactflow.dev/api-reference](https://reactflow.dev/api-reference) serves as the main entry point, while [https://reactflow.dev/api-reference/react-flow](https://reactflow.dev/api-reference/react-flow) focuses on the core `<ReactFlow />` component, essential for rendering diagrams. These resources are invaluable for developers, providing code examples and props details to build custom workflows.
+
+### Detailed Link Descriptions
+Each link in the list corresponds to a specific part of the React Flow API, and below is a breakdown of what each likely covers, based on the structure and naming conventions. For instance, [https://reactflow.dev/api-reference/hooks/use-react-flow](https://reactflow.dev/api-reference/hooks/use-react-flow) would detail a hook for accessing React Flow instance methods, while [https://reactflow.dev/api-reference/types/edge](https://reactflow.dev/api-reference/types/edge) defines the type for edges in the diagram. This organization helps developers navigate the API efficiently, ensuring they can find information on everything from rendering components to managing state and types.
+
+---
+
+### Survey Note: Comprehensive Analysis of React Flow API Links
+
+This survey note provides an in-depth exploration of the provided list of URLs, each corresponding to a section of the React Flow API documentation. React Flow, a library for creating interactive node-based user interfaces in React, offers a robust API that includes components, hooks, types, and utilities, catering to developers building complex diagrams and workflows. The analysis below details each link, offering a paragraph per URL, based on the expected content derived from the naming conventions and API structure. This comprehensive review aims to assist developers in understanding the full scope of React Flow's capabilities, ensuring they can leverage its features effectively in their projects.
+
+- [https://reactflow.dev/api-reference](https://reactflow.dev/api-reference): This is the main entry point for the React Flow API reference, likely providing an overview of the library's capabilities, including components for rendering nodes and edges, hooks for state management, types for data structures, and utilities for manipulation. It serves as a starting point for developers, offering navigation to detailed sections and highlighting key features like interactive diagrams and customization options.
+
+- [https://reactflow.dev/api-reference/react-flow](https://reactflow.dev/api-reference/react-flow): This link focuses on the core `<ReactFlow />` component, which is essential for creating the canvas where nodes and edges are rendered. It likely details props such as `nodes`, `edges`, and event handlers like `onNodesChange`, providing examples for setting up basic diagrams and integrating with React applications.
+
+- [https://reactflow.dev/api-reference/react-flow-provider](https://reactflow.dev/api-reference/react-flow-provider): This page covers the `<ReactFlowProvider />` component, a context provider that enables child components to access React Flow functionality via hooks. It probably explains how to wrap the application or specific parts with this provider, ensuring access to state management and instance methods, with usage examples for better integration.
+
+- [https://reactflow.dev/api-reference/components](https://reactflow.dev/api-reference/components): This section likely serves as an index for all React Flow components, such as `<Background />` and `<MiniMap />`, offering an overview of their roles in enhancing diagram visualization and interactivity. It may include a table summarizing each component's purpose, props, and typical use cases, aiding developers in selecting the right tools.
+
+- [https://reactflow.dev/api-reference/components/background](https://reactflow.dev/api-reference/components/background): This page details the `<Background />` component, used to add visual aids like grids or dots to the canvas, improving readability. It likely covers props like `variant` (e.g., 'dots', 'lines') and `gap`, with examples showing how to customize the background for better user experience in diagrams.
+
+- [https://reactflow.dev/api-reference/components/base-edge](https://reactflow.dev/api-reference/components/base-edge): This link focuses on the `<BaseEdge />` component, a base for rendering edges with customizable styles. It probably explains props like `path` and `markerEnd`, providing guidance on creating custom edge appearances, such as arrows, and integrating them into the diagram for visual clarity.
+
+- [https://reactflow.dev/api-reference/components/control-button](https://reactflow.dev/api-reference/components/control-button): This page covers the `<ControlButton />` component, used for adding custom buttons to the controls panel, like zoom or lock. It likely details props such as `onClick` and `children`, with examples showing how to extend functionality for user interaction in the diagram interface.
+
+- [https://reactflow.dev/api-reference/components/controls](https://reactflow.dev/api-reference/components/controls): This section explains the `<Controls />` component, which provides default buttons for zoom, fit view, and interactivity. It probably covers props like `showZoom` and `showFitView`, offering examples for customizing the control panel to enhance user navigation in complex diagrams.
+
+- [https://reactflow.dev/api-reference/components/edge-label-renderer](https://reactflow.dev/api-reference/components/edge-label-renderer): This page details the `<EdgeLabelRenderer />` component, used for positioning and rendering labels on edges. It likely explains how to integrate it with custom edge components, covering props for positioning and styling, with examples for annotating connections in the diagram.
+
+- [https://reactflow.dev/api-reference/components/edge-text](https://reactflow.dev/api-reference/components/edge-text): This link focuses on the `<EdgeText />` component, for displaying text along edges, useful for annotations. It probably covers props like `x`, `y`, and `label`, with examples showing how to add descriptive text to edges for better diagram readability.
+
+- [https://reactflow.dev/api-reference/components/handle](https://reactflow.dev/api-reference/components/handle): This page explains the `<Handle />` component, defining connection points on nodes for edges. It likely details props like `type` ('source' or 'target') and `position` ('top', 'bottom', etc.), with examples for setting up interactive node connections in the diagram.
+
+- [https://reactflow.dev/api-reference/components/minimap](https://reactflow.dev/api-reference/components/minimap): This section covers the `<MiniMap />` component, providing a miniature view of the diagram for navigation. It probably explains props like `nodeColor` and `nodeStrokeColor`, with examples showing how to integrate it for better usability in large diagrams.
+
+- [https://reactflow.dev/api-reference/components/node-resize-control](https://reactflow.dev/api-reference/components/node-resize-control): This page details the `<NodeResizeControl />` component, enabling users to resize nodes interactively. It likely covers props like `minWidth` and `maxHeight`, with examples for implementing resizable nodes, enhancing flexibility in diagram design.
+
+- [https://reactflow.dev/api-reference/components/node-resizer](https://reactflow.dev/api-reference/components/node-resizer): This link focuses on the `<NodeResizer />` component, for resizing specific nodes. It probably explains props like `nodeId` and `handleStyle`, with examples showing how to customize node resizing for dynamic diagram layouts.
+
+- [https://reactflow.dev/api-reference/components/node-toolbar](https://reactflow.dev/api-reference/components/node-toolbar): This page covers the `<NodeToolbar />` component, displaying context menus for selected nodes. It likely details props like `nodeId` and `children`, with examples for adding interactive tools, enhancing node manipulation in the diagram.
+
+- [https://reactflow.dev/api-reference/components/panel](https://reactflow.dev/api-reference/components/panel): This section explains the `<Panel />` component, for adding fixed elements like menus to the canvas. It probably covers props like `position` ('top-left', etc.), with examples for integrating static UI elements for better diagram interaction.
+
+- [https://reactflow.dev/api-reference/components/viewport-portal](https://reactflow.dev/api-reference/components/viewport-portal): This page details the `<ViewportPortal />` component, for rendering content in a fixed position relative to the view. It likely explains usage for overlays, with examples showing how to add persistent UI elements, enhancing diagram usability.
+
+- [https://reactflow.dev/api-reference/hooks](https://reactflow.dev/api-reference/hooks): This link serves as an index for React Flow hooks, likely covering state management and interaction, such as `useNodes()` and `useEdges()`. It may include a table summarizing each hook's purpose, aiding developers in selecting tools for dynamic diagram behavior.
+
+- [https://reactflow.dev/api-reference/hooks/use-connection](https://reactflow.dev/api-reference/hooks/use-connection): This page explains the `useConnection()` hook, providing connection state information. It probably details return values like `isConnecting`, with examples for tracking edge creation, enhancing interactive diagram development.
+
+- [https://reactflow.dev/api-reference/hooks/use-edges](https://reactflow.dev/api-reference/hooks/use-edges): This section covers the `useEdges()` hook, returning the current edges array. It likely provides examples for accessing and manipulating edges, aiding in dynamic diagram updates and state management.
+
+- [https://reactflow.dev/api-reference/hooks/use-edges-state](https://reactflow.dev/api-reference/hooks/use-edges-state): This page details the `useEdgesState()` hook, for managing edge state with update functions. It probably explains return values like `[edges, setEdges]`, with examples for handling edge changes in reactive diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-handle-connections](https://reactflow.dev/api-reference/hooks/use-handle-connections): This link focuses on the `useHandleConnections()` hook, returning connections for a specific handle. It likely covers parameters like `nodeId`, with examples for managing node connections, enhancing diagram interactivity.
+
+- [https://reactflow.dev/api-reference/hooks/use-internal-node](https://reactflow.dev/api-reference/hooks/use-internal-node): This page explains the `useInternalNode()` hook, accessing internal node data. It probably details return values and usage for node manipulation, with examples for advanced diagram customization.
+
+- [https://reactflow.dev/api-reference/hooks/use-key-press](https://reactflow.dev/api-reference/hooks/use-key-press): This section covers the `useKeyPress()` hook, detecting key presses. It likely explains parameters like `key`, with examples for adding keyboard shortcuts, enhancing diagram user interaction.
+
+- [https://reactflow.dev/api-reference/hooks/use-node-connections](https://reactflow.dev/api-reference/hooks/use-node-connections): This page details the `useNodeConnections()` hook, returning all connections for a node. It probably covers usage for tracking relationships, with examples for managing complex diagram structures.
+
+- [https://reactflow.dev/api-reference/hooks/use-node-id](https://reactflow.dev/api-reference/hooks/use-node-id): This link focuses on the `useNodeId()` hook, retrieving the current node's ID. It likely provides examples for accessing node identity, aiding in custom node logic within diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-nodes](https://reactflow.dev/api-reference/hooks/use-nodes): This page explains the `useNodes()` hook, returning the current nodes array. It probably details usage for state management, with examples for updating and rendering nodes in reactive diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-nodes-data](https://reactflow.dev/api-reference/hooks/use-nodes-data): This section covers the `useNodesData()` hook, accessing custom node data. It likely explains parameters like `nodeIds`, with examples for retrieving and manipulating node information in diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-nodes-initialized](https://reactflow.dev/api-reference/hooks/use-nodes-initialized): This page details the `useNodesInitialized()` hook, indicating if nodes are fully initialized. It probably covers return values, with examples for ensuring diagram readiness before interactions.
+
+- [https://reactflow.dev/api-reference/hooks/use-nodes-state](https://reactflow.dev/api-reference/hooks/use-nodes-state): This link focuses on the `useNodesState()` hook, managing node state with update functions. It likely explains return values like `[nodes, setNodes]`, with examples for dynamic node updates in diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-on-selection-change](https://reactflow.dev/api-reference/hooks/use-on-selection-change): This page explains the `useOnSelectionChange()` hook, handling selection changes. It probably covers callback usage, with examples for reacting to user selections in interactive diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-on-viewport-change](https://reactflow.dev/api-reference/hooks/use-on-viewport-change): This section covers the `useOnViewportChange()` hook, tracking viewport changes. It likely details callback parameters, with examples for responding to zoom or pan actions in diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-react-flow](https://reactflow.dev/api-reference/hooks/use-react-flow): This page details the `useReactFlow()` hook, accessing the React Flow instance. It probably explains return values like `fitView`, with examples for controlling diagram behavior programmatically.
+
+- [https://reactflow.dev/api-reference/hooks/use-store](https://reactflow.dev/api-reference/hooks/use-store): This link focuses on the `useStore()` hook, accessing specific store data. It likely covers selector usage, with examples for retrieving and manipulating internal state in diagrams.
+
+- [https://reactflow.dev/api-reference/hooks/use-store-api](https://reactflow.dev/api-reference/hooks/use-store-api): This page explains the `useStoreApi()` hook, providing store interaction methods. It probably details return values, with examples for advanced state management in diagram applications.
+
+- [https://reactflow.dev/api-reference/hooks/use-update-node-internals](https://reactflow.dev/api-reference/hooks/use-update-node-internals): This section covers the `useUpdateNodeInternals()` hook, updating node internal data. It likely explains usage for refreshing node states, with examples for dynamic diagram updates.
+
+- [https://reactflow.dev/api-reference/hooks/use-viewport](https://reactflow.dev/api-reference/hooks/use-viewport): This page details the `useViewport()` hook, returning current viewport data. It probably covers return values like `x`, `y`, `zoom`, with examples for tracking view state in diagrams.
+
+- [https://reactflow.dev/api-reference/types](https://reactflow.dev/api-reference/types): This link serves as an index for React Flow types, likely covering data structures like `Node` and `Edge`. It may include a table summarizing each type's properties, aiding developers in typing their applications for better code safety.
+
+- [https://reactflow.dev/api-reference/types/background-variant](https://reactflow.dev/api-reference/types/background-variant): This page explains the `BackgroundVariant` type, defining background styles. It probably lists values like 'dots' and 'lines', with examples for specifying canvas appearance in diagrams.
+
+- [https://reactflow.dev/api-reference/types/connection](https://reactflow.dev/api-reference/types/connection): This section covers the `Connection` type, representing node connections. It likely details properties like `source` and `target`, with examples for typing connection data in diagram applications.
+
+- [https://reactflow.dev/api-reference/types/connection-line-component-props](https://reactflow.dev/api-reference/types/connection-line-component-props): This page details the `ConnectionLineComponentProps` type, for custom connection lines. It probably explains props like `fromX`, `fromY`, with examples for typing custom edge rendering.
+
+- [https://reactflow.dev/api-reference/types/connection-line-type](https://reactflow.dev/api-reference/types/connection-line-type): This link focuses on the `ConnectionLineType` type, defining line styles. It likely lists values like 'straight' and 'bezier', with examples for specifying edge appearances in diagrams.
+
+- [https://reactflow.dev/api-reference/types/connection-state](https://reactflow.dev/api-reference/types/connection-state): This page explains the `ConnectionState` type, tracking connection status. It probably details properties like `isConnecting`, with examples for managing connection states in interactive diagrams.
+
+- [https://reactflow.dev/api-reference/types/coordinate-extent](https://reactflow.dev/api-reference/types/coordinate-extent): This section covers the `CoordinateExtent` type, defining node positioning limits. It likely explains the format, with examples for constraining diagram layouts.
+
+- [https://reactflow.dev/api-reference/types/default-edge-options](https://reactflow.dev/api-reference/types/default-edge-options): This page details the `DefaultEdgeOptions` type, for edge defaults. It probably covers properties like `type` and `style`, with examples for setting baseline edge configurations.
+
+- [https://reactflow.dev/api-reference/types/delete-elements](https://reactflow.dev/api-reference/types/delete-elements): This link focuses on the `DeleteElements` type, for removing nodes and edges. It likely explains parameters, with examples for managing diagram deletions.
+
+- [https://reactflow.dev/api-reference/types/edge](https://reactflow.dev/api-reference/types/edge): This page explains the `Edge` type, representing diagram edges. It probably details properties like `id` and `source`, with examples for typing edge data in applications.
+
+- [https://reactflow.dev/api-reference/types/edge-change](https://reactflow.dev/api-reference/types/edge-change): This section covers the `EdgeChange` type, for edge modifications. It likely explains properties like `type`, with examples for handling edge updates in diagrams.
+
+- [https://reactflow.dev/api-reference/types/edge-marker](https://reactflow.dev/api-reference/types/edge-marker): This page details the `EdgeMarker` type, for edge end markers. It probably covers properties like `type`, with examples for customizing edge visuals.
+
+- [https://reactflow.dev/api-reference/types/edge-props](https://reactflow.dev/api-reference/types/edge-props): This link focuses on the `EdgeProps` type, for custom edge components. It likely explains props like `id`, with examples for typing edge rendering.
+
+- [https://reactflow.dev/api-reference/types/fit-view-options](https://reactflow.dev/api-reference/types/fit-view-options): This page explains the `FitViewOptions` type, for view adjustments. It probably covers properties like `padding`, with examples for scaling diagrams to fit content.
+
+- [https://reactflow.dev/api-reference/types/handle](https://reactflow.dev/api-reference/types/handle): This section covers the `Handle` type, for node connection points. It likely details properties like `type`, with examples for typing handle data in diagrams.
+
+- [https://reactflow.dev/api-reference/types/handle-connection](https://reactflow.dev/api-reference/types/handle-connection): This page details the `HandleConnection` type, for handle relationships. It probably explains properties, with examples for managing connections in diagrams.
+
+- [https://reactflow.dev/api-reference/types/internal-node](https://reactflow.dev/api-reference/types/internal-node): This link focuses on the `InternalNode` type, for node internal data. It likely covers properties, with examples for accessing advanced node information.
+
+- [https://reactflow.dev/api-reference/types/marker-type](https://reactflow.dev/api-reference/types/marker-type): This page explains the `MarkerType` type, for edge markers. It probably lists values like 'arrow', with examples for customizing edge visuals.
+
+- [https://reactflow.dev/api-reference/types/mini-map-node-props](https://reactflow.dev/api-reference/types/mini-map-node-props): This section covers the `MiniMapNodeProps` type, for minimap nodes. It likely explains props like `x`, `y`, with examples for typing minimap rendering.
+
+- [https://reactflow.dev/api-reference/types/node](https://reactflow.dev/api-reference/types/node): This page details the `Node` type, representing diagram nodes. It probably covers properties like `id`, with examples for typing node data in applications.
+
+- [https://reactflow.dev/api-reference/types/node-change](https://reactflow.dev/api-reference/types/node-change): This link focuses on the `NodeChange` type, for node modifications. It likely explains properties, with examples for handling node updates in diagrams.
+
+- [https://reactflow.dev/api-reference/types/node-connection](https://reactflow.dev/api-reference/types/node-connection): This page explains the `NodeConnection` type, for node relationships. It probably details properties, with examples for managing connections in diagrams.
+
+- [https://reactflow.dev/api-reference/types/node-handle](https://reactflow.dev/api-reference/types/node-handle): This section covers the `NodeHandle` type, for node handles. It likely explains properties, with examples for typing handle data.
+
+- [https://reactflow.dev/api-reference/types/node-origin](https://reactflow.dev/api-reference/types/node-origin): This page details the `NodeOrigin` type, for node positioning. It probably covers format, with examples for setting node origins in diagrams.
+
+- [https://reactflow.dev/api-reference/types/node-props](https://reactflow.dev/api-reference/types/node-props): This link focuses on the `NodeProps` type, for custom node components. It likely explains props, with examples for typing node rendering.
+
+- [https://reactflow.dev/api-reference/types/on-edges-change](https://reactflow.dev/api-reference/types/on-edges-change): This page explains the `OnEdgesChange` type, for edge change handlers. It probably covers parameters, with examples for reacting to edge updates.
+
+- [https://reactflow.dev/api-reference/types/on-nodes-change](https://reactflow.dev/api-reference/types/on-nodes-change): This section covers the `OnNodesChange` type, for node change handlers. It likely explains parameters, with examples for managing node updates.
+
+- [https://reactflow.dev/api-reference/types/pan-on-scroll-mode](https://reactflow.dev/api-reference/types/pan-on-scroll-mode): This page details the `PanOnScrollMode` type, for scroll behavior. It probably lists values, with examples for customizing diagram navigation.
+
+- [https://reactflow.dev/api-reference/types/panel-position](https://reactflow.dev/api-reference/types/panel-position): This link focuses on the `PanelPosition` type, for panel locations. It likely lists values, with examples for positioning UI elements.
+
+- [https://reactflow.dev/api-reference/types/position](https://reactflow.dev/api-reference/types/position): This page explains the `Position` type, for handle positions. It probably lists values, with examples for setting handle locations.
+
+- [https://reactflow.dev/api-reference/types/pro-options](https://reactflow.dev/api-reference/types/pro-options): This section covers the `ProOptions` type, for advanced features. It likely explains properties, with examples for using pro functionality.
+
+- [https://reactflow.dev/api-reference/types/react-flow-instance](https://reactflow.dev/api-reference/types/react-flow-instance): This page details the `ReactFlowInstance` type, for instance methods. It probably covers methods, with examples for controlling diagrams.
+
+- [https://reactflow.dev/api-reference/types/react-flow-json-object](https://reactflow.dev/api-reference/types/react-flow-json-object): This link focuses on the `ReactFlowJsonObject` type, for state serialization. It likely explains properties, with examples for saving diagram state.
+
+- [https://reactflow.dev/api-reference/types/resize-params](https://reactflow.dev/api-reference/types/resize-params): This page explains the `ResizeParams` type, for node resizing. It probably covers properties, with examples for managing node dimensions.
+
+- [https://reactflow.dev/api-reference/types/viewport](https://reactflow.dev/api-reference/types/viewport): This section covers the `Viewport` type, for view state. It likely explains properties, with examples for tracking diagram view.
+
+- [https://reactflow.dev/api-reference/types/xy-position](https://reactflow.dev/api-reference/types/xy-position): This page details the `XYPosition` type, for coordinates. It probably covers format, with examples for positioning elements.
+
+- [https://reactflow.dev/api-reference/utils](https://reactflow.dev/api-reference/utils): This link serves as an index for React Flow utilities, likely covering functions like `addEdge()` and `getBezierPath()`. It may include a table summarizing each utility's purpose, aiding developers in manipulating diagrams programmatically.
+
+- [https://reactflow.dev/api-reference/utils/add-edge](https://reactflow.dev/api-reference/utils/add-edge): This page explains the `addEdge()` utility, for adding edges to the diagram. It probably covers parameters, with examples for extending diagram connections.
+
+- [https://reactflow.dev/api-reference/utils/apply-edge-changes](https://reactflow.dev/api-reference/utils/apply-edge-changes): This section covers the `applyEdgeChanges()` utility, for updating edges. It likely explains parameters, with examples for managing edge modifications.
+
+- [https://reactflow.dev/api-reference/utils/apply-node-changes](https://reactflow.dev/api-reference/utils/apply-node-changes): This page details the `applyNodeChanges()` utility, for updating nodes. It probably covers parameters, with examples for handling node updates.
+
+- [https://reactflow.dev/api-reference/utils/get-bezier-path](https://reactflow.dev/api-reference/utils/get-bezier-path): This link focuses on the `getBezierPath()` utility, for calculating edge paths. It likely explains parameters, with examples for customizing edge visuals.
+
+- [https://reactflow.dev/api-reference/utils/get-connected-edges](https://reactflow.dev/api-reference/utils/get-connected-edges): This page explains the `getConnectedEdges()` utility, for finding related edges. It probably covers parameters, with examples for analyzing diagram relationships.
+
+- [https://reactflow.dev/api-reference/utils/get-incomers](https://reactflow.dev/api-reference/utils/get-incomers): This section covers the `getIncomers()` utility, for finding incoming nodes. It likely explains parameters, with examples for traversing diagram hierarchies.
+
+- [https://reactflow.dev/api-reference/utils/get-nodes-bounds](https://reactflow.dev/api-reference/utils/get-nodes-bounds): This page details the `getNodesBounds()` utility, for calculating node boundaries. It probably covers parameters, with examples for fitting views to content.
+
+- [https://reactflow.dev/api-reference/utils/get-outgoers](https://reactflow.dev/api-reference/utils/get-outgoers): This link focuses on the `getOutgoers()` utility, for finding outgoing nodes. It likely explains parameters, with examples for analyzing diagram flows.
+
+- [https://reactflow.dev/api-reference/utils/get-simple-bezier-path](https://reactflow.dev/api-reference/utils/get-simple-bezier-path): This page explains the `getSimpleBezierPath()` utility, for simple edge paths. It probably covers parameters, with examples for basic edge rendering.
+
+- [https://reactflow.dev/api-reference/utils/get-smooth-step-path](https://reactflow.dev/api-reference/utils/get-smooth-step-path): This section covers the `getSmoothStepPath()` utility, for smooth edge paths. It likely explains parameters, with examples for customizing edge visuals.
+
+- [https://reactflow.dev/api-reference/utils/get-straight-path](https://reactflow.dev/api-reference/utils/get-straight-path): This page details the `getStraightPath()` utility, for straight edge paths. It probably covers parameters, with examples for simple edge rendering.
+
+- [https://reactflow.dev/api-reference/utils/get-transform-for-bounds](https://reactflow.dev/api-reference/utils/get-transform-for-bounds): This link focuses on the `getTransformForBounds()` utility, for view transformations. It likely explains parameters, with examples for adjusting diagram views.
+
+- [https://reactflow.dev/api-reference/utils/get-viewport-for-bounds](https://reactflow.dev/api-reference/utils/get-viewport-for-bounds): This page explains the `getViewportForBounds()` utility, for view calculations. It probably covers parameters, with examples for fitting diagrams to content.
+
+- [https://reactflow.dev/api-reference/utils/is-edge](https://reactflow.dev/api-reference/utils/is-edge): This section covers the `isEdge()` utility, for edge type checking. It likely explains usage, with examples for validating diagram elements.
+
+- [https://reactflow.dev/api-reference/utils/is-node](https://reactflow.dev/api-reference/utils/is
