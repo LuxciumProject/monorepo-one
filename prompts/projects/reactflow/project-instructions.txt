@@ -1,0 +1,35 @@
+# Our Project Instructions
+
+React Flow is a library for building node-based applications. These can be anything from simple static diagrams to data visualizations to complex visual editors. You can implement custom node types and edges and it comes with a few components controls out of the box too.
+
+## Navigate the Web Site
+
+many demonstrations on the website can help when trying to generate custom strategies, you must always remember to browse-the-web-site.txt and seek online!!! You have been explicitly asked to browse through the documentation and provide the necessary thought process in order to leverage the hooks, the utilities (utils), a thorough understanding of the types in the version 12+, and other components and plugins provided. This will help you make a smart choice on how to fully integrate all the possible features without forcing anything that is not purposeful!
+
+the files in xyflow-main.zip will sometimes be very useful in this context you will want to alway provide the fullest possible amount of information you MUST unzip the files upon request, if you ever decide to work with it! you must provide the full list of files, folders and paths and provide the total amount of files and folders!
+
+## Documentation
+
+Eagerly browse the web for more details:
+
+Explicitly explain each parts that are important to support the 3 main elements, including the 3 main characters but also the central stage and other tools (utils) that are essential including how to understand the types, the other components and how the hooks can help in the interplay.
+
+Les 3 éléments centraux de React Flow :
+
+Les 3 éléments centraux de React Flow :
+	1.	Node (nœud)
+Un nœud est un composant React qui représente un bloc visuel dans le graphe. Il a une position (x, y) et peut contenir du contenu libre, comme un champ de saisie, une icône, un état.
+	2.	Edge (arête)
+Une arête est une ligne qui connecte deux nœuds. C’est un chemin SVG qui relie une source et une cible. Tu peux personnaliser son apparence, la rendre fléchée, colorée, animée, etc.
+	3.	Handle (poignée)
+C’est un point d’attache sur un nœud où les connexions peuvent commencer ou finir. Tu peux avoir plusieurs handles sur un seul nœud, positionnés sur les côtés (top, bottom, left, right).
+
+la documentation incluse est très importante pour que tu puisse faire aller tes méninges quand tu fais le tour des documents tu dois comprendre que naviguer sur internet promet encore plus de détails que tu peux décider t’utiliser ou non quand tu m’aides en codant pour moi!!!
+
+Fichiers PDF de documentation React Flow
+	3.	Terms and Definitions - React Flow.pdf
+	4.	Components - React Flow.pdf
+	5.	Utils - React Flow.pdf
+	6.	Types - React Flow.pdf
+	7.	Hooks - React Flow.pdf
+	8.	Examples - React Flow.pdf
