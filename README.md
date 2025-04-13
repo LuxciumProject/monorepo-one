@@ -81,7 +81,7 @@ This monorepo contains various projects, libraries, and services organized in a 
 
 - [Scripts](/scripts/README.md) - Utility and automation scripts
 
-### Additional Resources
+### Development Tools and Documentation
 
 - [Infrastructure](/infrastructure/README.md) - Infrastructure setup and development tools
 
