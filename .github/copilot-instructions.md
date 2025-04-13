@@ -73,6 +73,8 @@ The goal of this guide is to ensure that generated code is both human-readable a
 - **Single Responsibility Per File**: Ensure each file is responsible for a single, well-defined task.
 - **Logical Modules**: Structure the project into clear, cohesive modules with minimal dependencies.
 
+[local folders](prompts/folder-structure.prompt.md)
+
 ## TypeScript Best Practices
 
 - **Prefer ****`const`**: Use `const` for variables that do not need reassignment.
@@ -116,23 +118,37 @@ The goal of this guide is to ensure that generated code is both human-readable a
 
 ## Tools and Configurations
 
-- **PACKAGE MANAGEMENT RULES**:
-  - Inside monorepo-one: Use ONLY Rush commands (rush add -m -p, rush update)
-  - Outside monorepo-one: Use ONLY pnpm/pnpx commands (pnpm add, pnpx)
-  - NEVER use npm, yarn, or npx anywhere
-  - NEVER use pnpm directly inside monorepo-one when exists a rush stack command for the same purpose.
+### PACKAGE MANAGEMENT RULES
 
-- **Rush CLI Commands**:
-  - **`rush update`**: Install and link dependencies.
-  - **`rush build`**: Compile all projects in the correct order.
-  - **`rush rebuild`**: Clean build of all projects.
-  - **`rush add -m -p <package-name>`**: Add a production dependency.
-  - **`rush remove -p <package-name>`**: Remove a dependency.
-  - **`rush install`**: Install dependencies without modifying the lockfile.
-  - **`rush link`**: Create symlinks for easy local development.
-  - **`rush publish`**: Publish packages, manage versions, and handle changelogs.
-  - **`rush change`**: Generate changelog entries.
-  - **`rush purge`**: Clean temporary files.
+- Inside monorepo-one: Use ONLY Rush commands (rush add -m -p, rush update)
+
+- Outside monorepo-one: Use ONLY pnpm/pnpx commands (pnpm add, pnpx)
+
+- NEVER use npm, yarn, or npx anywhere
+
+- NEVER use pnpm directly inside monorepo-one when exists a rush stack command for the same purpose.
+
+### Rush CLI Commands
+
+- **`rush update`**: Install and link dependencies.
+
+- **`rush build`**: Compile all projects in the correct order.
+
+- **`rush rebuild`**: Clean build of all projects.
+
+- **`rush add -m -p <package-name>`**: Add a production dependency.
+
+- **`rush remove -p <package-name>`**: Remove a dependency.
+
+- **`rush install`**: Install dependencies without modifying the lockfile.
+
+- **`rush link`**: Create symlinks for easy local development.
+
+- **`rush publish`**: Publish packages, manage versions, and handle changelogs.
+
+- **`rush change`**: Generate changelog entries.
+
+- **`rush purge`**: Clean temporary files.
 
 ### Managing Dependencies with Rush and PNPM
 
@@ -143,6 +159,32 @@ The goal of this guide is to ensure that generated code is both human-readable a
   - **Update**: `pnpm update <package-name>`
   - **Remove**: `pnpm remove <package-name>`
 - **Note**: Don’t use PNPM in `monorepo-one`; use Rush instead.
+
+## Creating a Next.js Project
+
+When creating a new Next.js project, follow this command to ensure it adheres to the project's standards and configurations:
+
+```bash
+pnpx create-next-app my-next-app --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --turbopack --use-pnpm --disable-git --yes
+```
+
+### Explanation of Flags
+
+- `--ts`: Sets up the project with TypeScript.
+- `--tailwind`: Includes Tailwind CSS for styling.
+- `--eslint`: Configures ESLint for linting.
+- `--app`: Enables the new App Router feature.
+- `--src-dir`: Creates a `src` directory for better project organization.
+- `--import-alias "@/*"`: Sets up an import alias for cleaner imports.
+- `--turbopack`: Uses Turbopack for faster builds.
+- `--use-pnpm`: Ensures PNPM is used as the package manager.
+- `--disable-git`: Skips initializing a Git repository.
+- `--yes`: Skips prompts and uses default options.
+
+### Notes
+
+- Always use `pnpx` for creating Next.js projects outside the `monorepo-one` directory.
+- Ensure the project is created outside the monorepo to avoid conflicts with the Rush stack.
 
 ## Optional Tooling and Integration
 
@@ -485,6 +527,49 @@ function example(): void {
 ```
 
 Text after the code block must also be preceded by a blank line.
+
+## Markdown Linting Rules
+
+When writing or updating markdown documents, strictly adhere to these linting rules:
+
+- **Blank Lines Around Headings**: Always include a blank line before AND after each heading.
+
+- **No Trailing Punctuation in Headings**: Avoid ending headings with punctuation marks like periods, colons, or question marks.
+
+- **Blank Lines Around Lists**: Always surround lists with blank lines before and after.
+
+- **Consistent Indentation in Lists**: Use consistent indentation (usually 2 or 4 spaces) for nested list items.
+
+- **Code Block Formatting**: Always use fenced code blocks with appropriate language identifiers.
+
+- **Line Length**: Keep lines under 100 characters when possible.
+
+- **Emphasis Consistency**: Use either asterisks or underscores for emphasis consistently.
+
+### Example of Proper Markdown Formatting
+
+```markdown
+# Heading 1
+
+This is a paragraph under heading 1.
+
+## Heading 2
+
+This is a paragraph under heading 2.
+
+- List item 1
+- List item 2
+- List item 3
+
+Another paragraph after the list.
+
+```
+
+These rules ensure consistency and readability across all markdown documents in the project.
+
+## Important Reminder
+
+- **DO NOT REMOVE ANYTHING**: Under no circumstances should any existing content, instructions, or guidelines be removed from this document. This rule is absolute and must be followed at all times.
 
 ## Why Use This Guide?
 

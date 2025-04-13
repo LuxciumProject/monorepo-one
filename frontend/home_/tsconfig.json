@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      // Default path aliases for imports.
+      "@/*": [
+        "./src/*"
+      ],
+      // Custom path aliases for imports (for better readability).
+      // App folder contains Next.js routes, including page.tsx and related files.
+      "@App/*": [
+        "./src/app/*"
+      ],
+      // Type folder contains TypeScript types and interfaces.
+      "@Types/*": [
+        "./src/types/*"
+      ],
+      // ServerActions is for actions that are only used on the server side.
+      "@ServerActions/*": [
+        "./src/app/actions/*"
+      ],
+      //  Default path aliases for components imports.
+      "@Components/*": [
+        "./src/components/*"
+      ],
+      // ServerComponents is for components that are only used on the server side.
+      "@ServerComponents/*": [
+        "./src/components/server/*"
+      ],
+      // ClientComponents is for components that are only used on the client side.
+      "@ClientComponents/*": [
+        "./src/components/client/*"
+      ],
+      // UIComponents is for components that are basic building blocks of the UI specificaly.
+      "@UIComponents/*": [
+        "./src/components/ui/*"
+      ]
+    },
+    "target": "ES2017"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
