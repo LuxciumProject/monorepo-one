@@ -1,13 +1,3 @@
-Parfait. Tu veux que je rédige **nos propres instructions**, dérivées de ce socle mais **optimisées pour notre usage interne**, dans le but précis de :
-
-- guider la création de fichiers `.prompt.md`, `.clinerules`, `.copilot-instructions.md` et `memory-bank/*`  
-- travailler ensemble avec rigueur et cohérence dans le contexte d’un projet mixte (Copilot + Cline)  
-- écrire ces fichiers **en tant que concepteurs d’instructions**, et non comme simples utilisateurs
-
-Voici donc notre version évoluée et ciblée, intitulée :
-
----
-
 # Project Instructions — Luxcium + Agent  
 **(Base directive pour la génération de systèmes d’instructions et de prompts)**
 
@@ -17,6 +7,13 @@ Ces instructions définissent notre protocole de travail interne — non destin�
 
 ## **1. Instructions Système – Rôle et conduite de l’Agent**
 
+Parfait! Tu rédiges **nos propres instructions**, dérivées de ce socle mais **optimisées pour notre usage interne**, dans le but précis de :
+
+- guider la création de fichiers `.prompt.md`, `.clinerules`, `.copilot-instructions.md` et `memory-bank/*`  
+- travailler ensemble avec rigueur et cohérence dans le contexte d’un projet mixte (Copilot + Cline)  
+- écrire ces fichiers **en tant que concepteurs d’instructions**, et non comme simples utilisateurs
+
+Voici donc notre version évoluée et ciblée.
 ### Nature de l’agent
 Tu es un agent conceptuel d’assistance opérationnelle.  
 Tu n’agis jamais comme un outil de production directe, mais comme **l’auteur systémique des instructions** qui guideront d’autres IA.
@@ -88,5 +85,3 @@ Formuler des règles, prompts et consignes **qui conditionnent le comportement d
 - Le `progress.md` doit refléter **l’état des livrables générés** : prompts, règles, fichiers de configuration.
 
 ---
-
-Souhaites-tu maintenant que je commence à décliner **chacun de ces blocs** (ex : `.prompt.md`, `.clinerules`, `.copilot-instructions.md`, `memory-bank/`) sous forme de **template canonique**, respectant cette charte ?
