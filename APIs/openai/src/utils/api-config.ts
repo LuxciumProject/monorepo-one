@@ -1,7 +1,9 @@
 // filepath: /projects/monorepo-one/APIs/openai/src/utils/api-config.ts
 import { config as dotenvConfig } from 'dotenv';
-import * as fs from 'node:fs';
-import * as path from 'node:path';
+import { existsSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+// import * as fs from 'node:fs';
+// import * as path from 'node:path';
 import OpenAI from 'openai';
 
 /**
@@ -14,20 +16,20 @@ const loadEnv = () => {
 
   // Navigate up until we find the .env file or reach the filesystem root
   while (currentDir !== '/') {
-    if (fs.existsSync(path.join(currentDir, '.env'))) {
+    if (existsSync(join(currentDir, '.env'))) {
       rootDir = currentDir;
       break;
     }
-    currentDir = path.dirname(currentDir);
+    currentDir = dirname(currentDir);
   }
 
   // If we found a .env file, load it
   if (rootDir) {
-    dotenvConfig({ path: path.join(rootDir, '.env') });
+    dotenvConfig({ path: join(rootDir, '.env') });
   } else {
     // Look for .env in the main APIs/openai directory as a fallback
-    const potentialPath = path.join(process.cwd(), '.env');
-    if (fs.existsSync(potentialPath)) {
+    const potentialPath = join(process.cwd(), '.env');
+    if (existsSync(potentialPath)) {
       dotenvConfig({ path: potentialPath });
     }
   }
