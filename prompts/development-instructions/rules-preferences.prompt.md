@@ -40,10 +40,10 @@ Below is a fully layered, categorical specification of **every** preference and 
   - Pass server components as props into client components; never import server code in a client  
   - Initialization command:  
     ```bash
-    pnpx create-next-app@latest my-next-app \
-  --ts --tailwind --eslint --app --src-dir \
-  --import-alias "@/*" --turbopack \
-  --use-pnpm --disable-git --yes
+        pnpx create-next-app@latest my-next-app \
+      --ts --tailwind --eslint --app --src-dir \
+      --import-alias "@/*" --turbopack \
+      --use-pnpm --disable-git --yes
     ```
 - **GitHub Copilot (VSCE)**  
   - Maintain `.github/copilot-instructions.md` for guidance  
