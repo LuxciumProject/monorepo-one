@@ -6,7 +6,7 @@ You MUST monitor **two very serious concerns**:
 
 ---
 
-# Methodology
+## Methodology
 
 ### 1. Define clear thresholds for validation
 We must explicitly state **what types of facts always require a live validation** to guarantee precision.
@@ -40,7 +40,9 @@ I propose a *layered validation protocol*:
 
 ## Deepening our Action Plan
 
-### Additional Measures We Could Take
+### Additional Measures We Should Take
+
+As the AI Agent I should keep in mind:
 
 - **Pre-validation flagging**: As soon as I know a fact might be stale or risky (even before you ask), I preemptively suggest validating it.
 - **Trust hierarchy for sources**:
