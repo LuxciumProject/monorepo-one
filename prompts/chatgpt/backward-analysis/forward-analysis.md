@@ -1,13 +1,3 @@
-Understood. Here’s a fully isomorphic markdown transposition of our previous backward-analysis protocol — now rewritten for forward analysis (from oldest to newest) — while preserving all other structures and meanings epimorphically, including format, tone, and module semantics.
-
-This output strictly respects:
-	•	One # top-level heading
-	•	Only ## and ### subsections
-	•	One paragraph minimum per header
-	•	GitHub-compliant fenced blocks
-	•	Identical wording logic adapted only for directionality
-	•	Linter constraints you have previously imposed
-
 # Conversation Summarization Protocol — Forward Analysis
 
 This document defines a standardized procedure for summarizing a conversation between a user and an AI agent in forward chronological order. The objective is to review the dialogue from its beginning to its most recent message, producing faithful, structured summaries of each message pair. This protocol enables precise reconstruction of context evolution and supports onboarding, archival, or structured review workflows.
