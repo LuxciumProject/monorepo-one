@@ -21,6 +21,36 @@ Assistance for this, when relevant assist the user, also if a new project needs 
   "github.copilot.prompts.enabled": true,
   "github.copilot.prompts.folders": [".github/prompts"]
 
+### ClineAI Essentials 
+
+**ClineAI Configuration**  
+- **.clinerules** / **.clinerules/**  
+  `<project>/.clinerules` (or as a folder) containing project‑specific instruction files for Cline (e.g. `01-coding.md`, `02-documentation.md`, `current-sprint.md`).  [oai_citation:0‡Prompt Engineering Guide | Cline.pdf](file-service://file-GyZ1h8o2QxVvMqqfXvDTtq)  
+- **.clineignore**  
+  `<project>/.clineignore` lists files and folders for Cline to skip (build artifacts, large data, env files).  [oai_citation:1‡Prompt Engineering Guide | Cline.pdf](file-service://file-GyZ1h8o2QxVvMqqfXvDTtq)  
+- **VS Code Custom Instructions**  
+  In your VS Code user or workspace `settings.json`, set the `cline.customInstructions` field to reference `.clinerules` or inline text.
+
+**Cline Memory Bank**  
+- **memory-bank/projectbrief.md**  
+- **memory-bank/productContext.md**  
+- **memory-bank/systemPatterns.md**  
+- **memory-bank/techContext.md**  
+- **memory-bank/activeContext.md**  
+- **memory-bank/progress.md**  
+- _Plus any additional Markdown files in `memory-bank/` for complex features, API specs, testing strategies, deployment procedures, etc._  [oai_citation:2‡Cline Memory Bank | Cline.pdf](file-service://file-1SZptS8ehgP8AFrCAPBgXC)
+
+### Codex CLI Essentials
+
+System‑level configuration
+	•	~/.codex/config.yaml (or ~/.codex/config.json)  
+	•	~/.codex/instructions.md  
+
+Project‑level configuration
+	•	codex.md at the repository root  
+	•	codex.md in the current working directory (sub‑package specifics)  
+	•	.env at the project root (for persistent environment variables like OPENAI_API_KEY)  
+
 ## Agent Neutre
 
 **Mission**  
