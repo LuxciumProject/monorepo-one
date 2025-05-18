@@ -6,18 +6,18 @@ The **Prompt Engineering Guide** details how to configure Cline’s behavior via
 
 ## 1. Custom Instructions ⚙️
 
-* **Definition**: Global, always-on directives that shape Cline’s baseline behavior across all projects ([Cline][1]).
-* **Scope**: Can specify personality, output formats, architectural principles, or coding style ([Cline][1]).
+* **Definition**: Global, always-on directives that shape Cline’s baseline behavior across all projects.
+* **Scope**: Can specify personality, output formats, architectural principles, or coding style.
 * **Configuration**:
 
   1. Open VS Code
   2. Access Cline settings (⚙️)
-  3. Paste instructions in “Custom Instructions” field ([Cline][1]).
+  3. Paste instructions in “Custom Instructions” field.
 * **Benefits**:
 
-  * Enforce coding conventions and best practices ([Cline][1])
-  * Improve code quality, readability, and maintainability ([Cline][1])
-  * Standardize error-handling and logging approaches ([Cline][1])
+  * Enforce coding conventions and best practices
+  * Improve code quality, readability, and maintainability
+  * Standardize error-handling and logging approaches
 
 ---
 
@@ -25,12 +25,12 @@ The **Prompt Engineering Guide** details how to configure Cline’s behavior via
 
 ### 2.1 Project-Specific Rules
 
-* **Purpose**: Append project-level instructions to global custom instructions ([Cline][1]).
+* **Purpose**: Append project-level instructions to global custom instructions.
 * **Use Cases**:
 
-  * Enforce documentation updates in `/docs` when modifying features ([Cline][1])
-  * Keep `README.md` and `CHANGELOG.md` synchronized ([Cline][1])
-  * Create ADRs under `/docs/adr` for key architectural decisions ([Cline][1])
+  * Enforce documentation updates in `/docs` when modifying features
+  * Keep `README.md` and `CHANGELOG.md` synchronized
+  * Create ADRs under `/docs/adr` for key architectural decisions
 * **Example Structure**:
 
 ```markdown
@@ -56,10 +56,10 @@ The **Prompt Engineering Guide** details how to configure Cline’s behavior via
 
 ### 2.2 Key Benefits
 
-1. Version-controlled within source repo ([Cline][1])
-2. Ensures consistency across team ([Cline][1])
-3. Tailors rules to project needs ([Cline][1])
-4. Captures institutional knowledge alongside code ([Cline][1])
+1. Version-controlled within source repo
+2. Ensures consistency across team
+3. Tailors rules to project needs
+4. Captures institutional knowledge alongside code
 
 ---
 
@@ -67,57 +67,61 @@ The **Prompt Engineering Guide** details how to configure Cline’s behavior via
 
 ### 3.1 Modular Rule Organization
 
-* **Active Folder**: Place individual rule files (`01-coding.md`, `02-documentation.md`, etc.) in `.clinerules/` ([Cline][1]).
-* **Bank of Rules**: Store reusable rules in `clinerules-bank/`, organized by client, framework, or project type ([Cline][1]).
-* **Processing**: Cline auto-merges all Markdown files in `.clinerules/`, ordered by numeric prefix if present ([Cline][1]).
+* **Active Folder**: Place individual rule files (`01-coding.md`, `02-documentation.md`, etc.) in `.clinerules/`.
+* **Bank of Rules**: Store reusable rules in `clinerules-bank/`, organized by client, framework, or project type.
+* **Processing**: Cline auto-merges all Markdown files in `.clinerules/`, ordered by numeric prefix if present.
 
 ### 3.2 Benefits & Practices
 
-* *Contextual Activation*: Copy only relevant rules into the active folder ([Cline][1])
-* *Maintenance Ease*: Update or remove individual rules without disturbing others ([Cline][1])
-* *Team Flexibility*: Different members can activate rules per task ([Cline][1])
-* *Noise Reduction*: Keep the active set lean and focused ([Cline][1])
+* *Contextual Activation*: Copy only relevant rules into the active folder
+* *Maintenance Ease*: Update or remove individual rules without disturbing others
+* *Team Flexibility*: Different members can activate rules per task
+* *Noise Reduction*: Keep the active set lean and focused
 
 ### 3.3 Usage Examples
 
-#### Switch client rules
+```bash
+# Switch client rules
 
 rm .clinerules/client-a.md
 cp clinerules-bank/clients/client-b.md .clinerules/
+```
 
-#### Adapt to React
+```bash
+# Adapt to React
 
 cp clinerules-bank/frameworks/react.md .clinerules/
+```
 
 ### 3.4 Implementation Tips  
 
 * Use descriptive filenames  
 
 * Git-ignore active `.clinerules/` if using a separate bank  
-* Script common activations for quick context switching :contentReference[oaicite:23]{index=23}
+* Script common activations for quick context switching
 
 ---
 
 ## 4. Managing Rules with Toggleable Popover  
 
-* **Location**: Under the chat input in Cline v3.13+ :contentReference[oaicite:24]{index=24}  
+* **Location**: Under the chat input in Cline v3.13+
 
 * **Features**:  
-  * View active global and workspace rules at a glance :contentReference[oaicite:25]{index=25}  
-  * Enable/disable specific rule files with one click :contentReference[oaicite:26]{index=26}  
-  * Create or add `.clinerules` files/folders directly from the UI :contentReference[oaicite:27]{index=27}  
-* **Advantage**: Simplifies context and rule management without manual file edits :contentReference[oaicite:28]{index=28}
+  * View active global and workspace rules at a glance
+  * Enable/disable specific rule files with one click
+  * Create or add `.clinerules` files/folders directly from the UI
+* **Advantage**: Simplifies context and rule management without manual file edits
 
 ---
 
 ## 5. `.clineignore` File Guide  
 
-* **Purpose**: Exclude files/directories from Cline’s context and analysis :contentReference[oaicite:29]{index=29}  
+* **Purpose**: Exclude files/directories from Cline’s context and analysis
 
 * **Goals**:  
-  * Reduce noise (e.g., auto-generated code, build artifacts) :contentReference[oaicite:30]{index=30}  
-  * Improve performance by limiting scanned content :contentReference[oaicite:31]{index=31}  
-  * Protect sensitive data (e.g., `.env*`, large datasets) :contentReference[oaicite:32]{index=32}  
+  * Reduce noise (e.g., auto-generated code, build artifacts)
+  * Improve performance by limiting scanned content
+  * Protect sensitive data (e.g., `.env*`, large datasets)
 * **Example Patterns**:  
 
 node\_modules/
@@ -137,38 +141,38 @@ coverage/
 
 ### 6.1 Effective Prompting Principles  
 
-* **Clear Context**: Describe goals and reference files with `@` :contentReference[oaicite:34]{index=34}  
+* **Clear Context**: Describe goals and reference files with `@`
 
-* **Break Complexity**: Split tasks into smaller steps :contentReference[oaicite:35]{index=35}  
-* **Ask Specific Questions**: Guide toward the intended outcome :contentReference[oaicite:36]{index=36}  
-* **Validate & Refine**: Review suggestions and iterate :contentReference[oaicite:37]{index=37}  
+* **Break Complexity**: Split tasks into smaller steps
+* **Ask Specific Questions**: Guide toward the intended outcome
+* **Validate & Refine**: Review suggestions and iterate
 
 ### 6.2 Prompt Examples  
 
 * **Context Management**:  
 
-> “Cline, create `user-authentication.js` … requirements…” :contentReference[oaicite:38]{index=38}  
+> “Cline, create `user-authentication.js` … requirements…”
 
 * **Debugging**:  
 
-> “I’m getting this error: [msg]. Analyze and suggest a fix.” :contentReference[oaicite:39]{index=39}  
+> “I’m getting this error: [msg]. Analyze and suggest a fix.”
 
 * **Refactoring**:  
 
-> “Refactor this function into smaller functions.” :contentReference[oaicite:40]{index=40}  
+> “Refactor this function into smaller functions.”
 
 * **Feature Development**:  
 
-> “Brainstorm ideas for feature X and generate code.” :contentReference[oaicite:41]{index=41}
+> “Brainstorm ideas for feature X and generate code.”
 
 ---
 
 ## 7. Advanced Prompting Techniques  
 
-* **Constraint Stuffing**: Embed explicit constraints to prevent truncation :contentReference[oaicite:42]{index=42}  
+* **Constraint Stuffing**: Embed explicit constraints to prevent truncation
 
-* **Confidence Checks**: Ask Cline to rate confidence (1–10) before/after tool use :contentReference[oaicite:43]{index=43}  
-* **Challenge Assumptions**: Pose “stupid” questions to surface hidden assumptions :contentReference[oaicite:44]{index=44}  
+* **Confidence Checks**: Ask Cline to rate confidence (1–10) before/after tool use
+* **Challenge Assumptions**: Pose “stupid” questions to surface hidden assumptions
 
 ---
 
@@ -176,41 +180,41 @@ coverage/
 
 ### 8.1 Memory & Confidence Checks  
 
-* “Respond with 'YARRR!' if you understand—no tools.” :contentReference[oaicite:45]{index=45}  
+* “Respond with 'YARRR!' if you understand—no tools.”
 
-* “Rate confidence level (0–10) before/after any tool use.” :contentReference[oaicite:46]{index=46}  
+* “Rate confidence level (0–10) before/after any tool use.”
 
 ### 8.2 Code Quality Prompts  
 
-* “DO NOT BE LAZY. DO NOT OMIT CODE.” for full code outputs :contentReference[oaicite:47]{index=47}  
+* “DO NOT BE LAZY. DO NOT OMIT CODE.” for full code outputs
 
-* Pledge to follow custom instructions: “I pledge to follow…” :contentReference[oaicite:48]{index=48}  
+* Pledge to follow custom instructions: “I pledge to follow…”
 
 ### 8.3 Code Organization  
 
-* “Analyze how this file works and suggest ways to fragment it” :contentReference[oaicite:49]{index=49}  
+* “Analyze how this file works and suggest ways to fragment it”
 
-* “Don't forget to update codebase documentation with changes” :contentReference[oaicite:50]{index=50}  
+* “Don't forget to update codebase documentation with changes”
 
 ### 8.4 Analysis & Planning  
 
-* “Before writing code: list files, get context, write MD plan, then implement” :contentReference[oaicite:51]{index=51}  
+* “Before writing code: list files, get context, write MD plan, then implement”
 
-* “List all assumptions and uncertainties” :contentReference[oaicite:52]{index=52}  
+* “List all assumptions and uncertainties”
 
 ### 8.5 Thoughtful Development  
 
-* “Count to 10” as a pause-and-reflect prompt :contentReference[oaicite:53]{index=53}  
+* “Count to 10” as a pause-and-reflect prompt
 
-* “Don't complete analysis prematurely” to ensure depth :contentReference[oaicite:54]{index=54}  
+* “Don't complete analysis prematurely” to ensure depth
 
 ### 8.6 Best Practices  
 
-* “Check project files before suggesting changes” to maintain integrity :contentReference[oaicite:55]{index=55}  
+* “Check project files before suggesting changes” to maintain integrity
 
-* “Ask 'stupid' questions” to promote critical thinking :contentReference[oaicite:56]{index=56}  
-* “Use words like 'elegant' and 'simple' in prompts” for code style influence :contentReference[oaicite:57]{index=57}  
-* “THE HUMAN WILL GET ANGRY.” set expectations humorously :contentReference[oaicite:58]{index=58}  
+* “Ask 'stupid' questions” to promote critical thinking
+* “Use words like 'elegant' and 'simple' in prompts” for code style influence
+* “THE HUMAN WILL GET ANGRY.” set expectations humorously
 
 ---
 
@@ -229,6 +233,3 @@ coverage/
 | File        | `/src/utils/errors.ts`             | Project’s error-handling utility pattern      |
 
 This complete analysis inventories all knowledge segments, ready for the forthcoming synthesis. 🔅
-::contentReference[oaicite:59]{index=59}
-
-[1]: https://docs.cline.bot/prompting/prompt-engineering-guide "Prompt Engineering Guide - Cline"
