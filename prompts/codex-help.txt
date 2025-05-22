@@ -1,0 +1,76 @@
+# /projects/monorepo-one/prompts/codex-help.txt
+
+  Usage
+    $ codex [options] <prompt>
+    $ codex completion <bash|zsh|fish>
+
+  Options
+    --version                       Print version and exit
+
+    -h, --help                      Show usage and exit
+    -m, --model <model>             Model to use for completions (default: codex-mini-latest)
+    -p, --provider <provider>       Provider to use for completions (default: openai)
+    -i, --image <path>              Path(s) to image files to include as input
+    -v, --view <rollout>            Inspect a previously saved rollout instead of starting a session
+    --history                       Browse previous sessions
+    --login                         Start a new sign in flow
+    --free                          Retry redeeming free credits
+    -q, --quiet                     Non-interactive mode that only prints the assistant's final output
+    -c, --config                    Open the instructions file in your editor
+    -w, --writable-root <path>      Writable folder for sandbox in full-auto mode (can be specified multiple times)
+    -a, --approval-mode <mode>      Override the approval policy: 'suggest', 'auto-edit', or 'full-auto'
+
+    --auto-edit                Automatically approve file edits; still prompt for commands
+    --full-auto                Automatically approve edits and commands when executed in the sandbox
+
+    --no-project-doc           Do not automatically include the repository's 'AGENTS.md'
+    --project-doc <file>       Include an additional markdown file at <file> as context
+    --full-stdout              Do not truncate stdout/stderr from command outputs
+    --notify                   Enable desktop notifications for responses
+
+    --disable-response-storage Disable server‑side response storage (sends the
+                               full conversation context with every request)
+
+    --flex-mode               Use "flex-mode" processing mode for the request (only supported
+                              with models o3 and o4-mini)
+
+    --reasoning <effort>      Set the reasoning effort level (low, medium, high) (default: high)
+
+  Dangerous options
+    --dangerously-auto-approve-everything
+                               Skip all confirmation prompts and execute commands without
+                               sandboxing. Intended solely for ephemeral local testing.
+
+  Experimental options
+    -f, --full-context         Launch in "full-context" mode which loads the entire repository
+                               into context and applies a batch of edits in one go. Incompatible
+                               with all other flags, except for --model.
+
+  Examples
+    $ codex "Write and run a python program that prints ASCII art"
+    $ codex -q "fix build issues"
+    $ codex completion bash
+
+    Inside codex:
+
+ Available commands
+                                                                               
+  Slash‑commands                                                               
+  /help – show this help overlay                                               
+  /model – switch the LLM model in‑session                                     
+  /approval – switch auto‑approval mode                                        
+  /history – show command & file history for this session                      
+  /clear – clear screen & context                                              
+  /clearhistory – clear command history                                        
+  /bug – generate a prefilled GitHub issue URL with session log                
+  /diff – view working tree git diff                                           
+  /compact – condense context into a summary                                   
+  /sessions Browse previous sessions                                           
+                                                                               
+  Keyboard shortcuts                                                           
+  Enter – send message                                                         
+  Ctrl+J – insert newline                                                      
+  Up/Down – scroll prompt history                                              
+  Esc(✕2) – interrupt current action                                          
+  Ctrl+C – quit Codex                                                          
+  esc or q to close
