@@ -1,0 +1,44 @@
+**** 1:
+
+we will do an aside and then we will later resume where we left off ready to hit the ground running and next steps… sidebar: Go through the conversation 
+
+how many rounds, turns and such do we have when you look at pairs of messages in this conversation; a pair is the twos or more turns (user, agent)… or rounds… ???
+
+<start_aside_now action="preserve current state"/> 
+
+!!count_now!! rounds, turns, messages, tool usage, web tools used, memory store!!
+
+**** 2:
+
+ok you must start with a deep analysis; now from newest, or more recent to the oldest, initial/first.
+Process messages in pairs: user message first, then agent response.
+Summarize each message in one or two sentences.
+Label each summary as “User” or “Agent.”
+Include timestamps or turn numbers if available.
+Continue until all messages have been summarized without inventing or omitting any details.
+(will give you an end aside directive when you get it we must resume our conversation where we left off before any recaps and summarization and other like such)
+basically:
+You should traverse our conversation from the newest message to the oldest, pairing each user message with your reply, and for each one provide a one‑ to two‑sentence summary labeled “User:” or “Agent:” with the timestamp if available, without adding, omitting, or inventing anything. explain in your own words includig goals pupose result did the user explained more than once did the agent undertood waht could have been optimized by the user in requests… what agent could have improved in reponses… for each query/reply pairs start here (not including this very message obviously)!!!!
+
+|*-*-*-*|
+
+recap the entire conversation by explaining in your own word what we did in each pairs of user's request (first) and agent's response (second) going backward in time look at  each user message just before this one up to the first and explain what it was about then explain all agent responses that stem form that... then move up next and carry on... explain in your own words the aim, purpose goal and other informations also... so that we have a full recap and a rever progression of all that happened (for each message no exceptions)... thanks !  (we do not have to include those messages in our curent asside obviously but each and every other must be)
+
+**** 3:
+
+this time around we will do from scratch (without our sidebar obviously every other message for the first until the last this time)
+
+now you will replay this going forward and improve based on your analysis to get a better cumulative result considerations of your analysis on a per message basis with complete improved outputs and improvements to the format and the structure of each messge you will now methiculously replay and improve the conversion!!! ok??? 
+
+The AI agent should process the conversation in chronological order, beginning with the earliest message and moving forward toward the most recent, grouping each user message with its corresponding agent response as a pair. For every message in these pairs, the agent must produce a clear, one‑ to two‑sentence summary labeled “User:” or “Agent:”. After completing a pair, it should immediately continue to the next pair until the entire history is summarized. Throughout this process, the agent must faithfully rephrase only the original content without adding, omitting, or inventing any information. Whenever available, the agent should include the timestamp or turn number beside each summary to maintain precise context.
+
+do you think you understood please demonstrate rethink of each one at a time you will regenerate each outputs that brought value in this conversation to strongly impove  them impacting each and rethink holistically seek additional informations with respect to the best possible outcome…
+
+**** 4:
+
+make the complete guide for future reference and use your skills to make it unabridged and include questions to ask based on contexte as references also…
+
+basically make a coherent guide to be used later using maskdown include everything unabridged… all details and informations structured as a reference guide for specialists to have all of the above in a complete structured  codified and normative reference! now !
+
+
+<end_aside_now action="resume to previously saved current state"/>
