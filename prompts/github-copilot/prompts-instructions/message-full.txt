@@ -1,0 +1,3036 @@
+please compare it must be verbatim unabridged and unmodified LOOK:
+
+
+
+// -&!! !!! user !!! !!- 01
+i need to have help on the topic and ask you some questions 
+// -?!! !!! ASSISTANT !!! !!- 01 
+
+
+
+✔︎
+
+
+
+I understand you want help with GitHub Copilot topics including:
+
+- Custom instructions and prompt files for personalizing Copilot responses
+
+- The extensive settings available for configuring Copilot's behavior across different scenarios
+
+- How to implement workspace-specific vs user-specific customizations
+
+
+
+I'm ready to answer your questions about any aspect of these Copilot features. What specific area would you like to explore first?
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 02
+i need assistance to write a configuration or a doccument can you help me ? we must be capable to write instructions using the something.instructions.md and also we may need or not (instead) to do something.prompt.md please insure you understand the differece by striving to get all the details about it all over the web and also inn https://code.visualstudio.com/docs/copilot/copilot-customization (i include the file as pdf so you do have access to taht instead of the web link) 
+// -?!! !!! ASSISTANT !!! !!- 02 
+
+
+
+✔︎
+
+
+
+**Key Differences Between Instructions and Prompt Files:**
+
+
+
+**Instructions Files (.instructions.md):**
+
+- **Purpose**: Automatic guidelines that supplement your existing chat requests
+
+- **Behavior**: Always applied in background - you don't see them directly
+
+- **Scope**: Define coding standards, preferences, and rules
+
+- **Trigger**: Automatically included based on context or file patterns
+
+
+
+**Prompt Files (.prompt.md):**
+
+- **Purpose**: Complete standalone chat prompts you can invoke
+
+- **Behavior**: Manually executed - you call them explicitly 
+
+- **Scope**: Full conversation templates with specific tasks
+
+- **Trigger**: You run them via `/promptname` or command palette
+
+
+
+**Configuration Strategy Options:**
+
+
+
+1. **Instructions-Only Approach**: Set persistent coding standards
+
+2. **Prompts-Only Approach**: Create reusable task templates  
+
+3. **Hybrid Approach**: Instructions for standards + Prompts for specific workflows
+
+
+
+What type of development work are you doing, and what specific behaviors do you want to automate or standardize? This will help me recommend the best approach and create the appropriate configuration files for your needs.
+
+
+
+Would you like me to start with a specific scenario or create a template structure you can customize?
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 03
+not only taht but also the fact is that we want to prepare a project using only those 2 kinds and along with the ai agent in flight would have to follow either those 2 and also with the fact taht he would write the files for us as scripts (in the scripts/ folder top level of the project ok this is with the 2   .instructions.md for ongoing coding rules and .prompt.md for on-demand, template-driven AI tasks as it is the best leveraged... and best practices or well known best practices for using them thing as a seed for replicable projects segments from scratch to multipurpose monolithic project of each kind we want to define and other like such
+// -?!! !!! ASSISTANT !!! !!- 03 
+
+
+
+✔︎
+
+
+
+**Proposed Project Structure & Strategy:**
+
+
+
+```
+
+project-root/
+
+├── .github/
+
+│   ├── copilot-instructions.md          # Global project standards
+
+│   ├── instructions/
+
+│   │   ├── general-coding.instructions.md
+
+│   │   ├── security.instructions.md
+
+│   │   ├── testing.instructions.md
+
+│   │   └── documentation.instructions.md
+
+│   └── prompts/
+
+│       ├── generate-script.prompt.md
+
+│       ├── create-component.prompt.md
+
+│       ├── setup-workflow.prompt.md
+
+│       └── project-init.prompt.md
+
+├── scripts/                              # AI-generated automation
+
+└── docs/
+
+    └── ai-configuration.md               # Documentation of the system
+
+```
+
+
+
+**Key Design Principles:**
+
+
+
+1. **Instructions** = Persistent coding DNA of the project
+
+2. **Prompts** = Executable AI workflows for specific tasks
+
+3. **Scripts** = Generated automation based on project needs
+
+4. **Layered Standards** = From global → domain-specific → task-specific
+
+
+
+Would you like me to:
+
+
+
+A) Create a complete example configuration for a specific project type (web app, API, CLI tool)?
+
+B) Build the foundational instruction/prompt templates first?
+
+C) Start with the script generation workflow system?
+
+
+
+What type of project should we use as our initial template - this will help me craft the most relevant examples and best practices for your replicable system.
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 04 // User 
+ok to start with we will look into something that i have here... we want to have a folder that (at root level of a project alright??) to have a multipurpose initial folder that can have stuff added and configured via prompts and scripts and the ai agent would have to write everything themselves and update them state at each stage autonomously the way i will explain to you please note that you need to ask me if i forget to tell you later remind me
+// -?!! !!! ASSISTANT !!! !!- 04 
+
+
+
+✔︎
+
+
+
+**What I've Captured So Far:**
+
+- Root-level folder in the project
+
+- Multipurpose initialization capabilities  
+
+- AI agent writes all content autonomously
+
+- AI agent updates state tracking at each stage
+
+- Configuration driven by prompts and scripts
+
+- Self-managing system
+
+
+
+**Ready for Your Explanation:**
+
+
+
+Please explain how you envision this autonomous state management system working. I'm particularly interested in:
+
+
+
+- How the AI should track and update state between stages
+
+- What triggers the autonomous updates
+
+- How the multipurpose folder should evolve
+
+- The interaction flow between prompts, scripts, and state updates
+
+
+
+Go ahead with your explanation - I'll remind you if you forget to cover any aspects you mentioned you'd explain later.
+
+
+
+What's your vision for how this autonomous AI-managed initialization system should operate?
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 05 // User 
+explain like you would to an ai agent how to create a *.prompt.md file please with all the details required for an ai agent to know how to decide what to write how, when and all of the above... alright??? please do now !!! 
+// -?!! !!! ASSISTANT !!! !!- 05 
+# Instructions for AI Agent: Creating *.prompt.md Files
+
+
+
+## File Structure and Syntax Requirements
+
+
+
+**File Naming Convention:**
+
+- Use descriptive names: `task-description.prompt.md`
+
+- Always end with `.prompt.md` suffix
+
+- Use kebab-case for multi-word names
+
+- Examples: `generate-component.prompt.md`, `setup-testing.prompt.md`
+
+
+
+**File Structure (Two Sections):**
+
+
+
+### 1. Front Matter Header (Optional but Recommended)
+
+```yaml
+
+---
+
+mode: 'agent'                    # Options: 'ask', 'edit', 'agent'
+
+tools: ['codebase', 'terminal']  # Available tools for agent mode
+
+description: 'Brief task description'
+
+---
+
+```
+
+
+
+### 2. Prompt Body (Required)
+
+- Written in Markdown format
+
+- Contains natural language instructions
+
+- Can reference variables using `${variableName}` syntax
+
+- Can link to other files using `[text](path)` syntax
+
+
+
+## Decision Matrix: When to Create Each Type
+
+
+
+**Create a Prompt File When:**
+
+- Task is repeatable across projects
+
+- Requires specific context or templates
+
+- Involves multiple steps or complex logic
+
+- Needs to be shared with team members
+
+- Requires specific tool combinations
+
+
+
+**Mode Selection Logic:**
+
+- `agent`: Multi-step tasks, file generation, complex workflows
+
+- `edit`: Direct code modifications, refactoring existing files
+
+- `ask`: Questions, explanations, planning discussions
+
+
+
+## Content Crafting Guidelines
+
+
+
+**Structure Your Prompt Body:**
+
+
+
+1. **Goal Statement** (First paragraph)
+
+   ```markdown
+
+   Your goal is to [specific outcome]. This prompt [context/purpose].
+
+   ```
+
+
+
+2. **Context Section** (If needed)
+
+   ```markdown
+
+   ## Context
+
+   - Current project structure: ${workspaceFolder}
+
+   - Working with: ${file}
+
+   - User selection: ${selection}
+
+   ```
+
+
+
+3. **Requirements Section** (Always include)
+
+   ```markdown
+
+   ## Requirements
+
+   * Use [specific technology/pattern]
+
+   * Follow [coding standards/conventions]
+
+   * Include [specific elements]
+
+   * Ensure [quality criteria]
+
+   ```
+
+
+
+4. **Process Steps** (For complex tasks)
+
+   ```markdown
+
+   ## Process
+
+   1. Analyze ${input:requirement}
+
+   2. Generate initial structure
+
+   3. Implement core functionality
+
+   4. Add error handling and validation
+
+   5. Create documentation
+
+   ```
+
+
+
+5. **References** (Link to relevant files)
+
+   ```markdown
+
+   ## References
+
+   - Design patterns: [patterns.md](../docs/patterns.md)
+
+   - API specs: [api-spec.yaml](../specs/api-spec.yaml)
+
+   - Coding standards: [standards.instructions.md](../instructions/standards.instructions.md)
+
+   ```
+
+
+
+## Variable Usage Patterns
+
+
+
+**Built-in Variables:**
+
+- `${workspaceFolder}` - Root workspace path
+
+- `${file}` - Current file path
+
+- `${selection}` - Selected text
+
+- `${selectedText}` - Selected text content
+
+
+
+**Input Variables:**
+
+- `${input:variableName}` - Prompt user for input
+
+- `${input:componentName:Enter component name}` - With placeholder
+
+
+
+**Usage Example:**
+
+```markdown
+
+Generate a ${input:componentType:Select component type} component named ${input:name} 
+
+in the ${workspaceFolder}/src/components directory.
+
+```
+
+
+
+## Tool Selection Strategy
+
+
+
+**Choose Tools Based on Task Requirements:**
+
+
+
+```yaml
+
+# For code generation and file manipulation
+
+tools: ['codebase', 'filesystem']
+
+
+
+# For running commands and testing
+
+tools: ['terminal', 'codebase']
+
+
+
+# For repository analysis
+
+tools: ['githubRepo', 'codebase']
+
+
+
+# For comprehensive project work
+
+tools: ['codebase', 'filesystem', 'terminal', 'githubRepo']
+
+```
+
+
+
+## Quality Criteria for Effective Prompts
+
+
+
+**Clarity Requirements:**
+
+- Use specific, actionable language
+
+- Avoid ambiguous terms like "good" or "appropriate"
+
+- Specify exact file locations and naming conventions
+
+- Include examples when possible
+
+
+
+**Completeness Checklist:**
+
+- [ ] Clear goal statement
+
+- [ ] Specific requirements list
+
+- [ ] Context variables defined
+
+- [ ] Tool permissions specified
+
+- [ ] Success criteria stated
+
+- [ ] Error handling instructions
+
+- [ ] Output format specified
+
+
+
+## Example Template Pattern
+
+
+
+```markdown
+
+---
+
+mode: 'agent'
+
+tools: ['codebase', 'filesystem']
+
+description: 'Generate [specific deliverable] following [standards]'
+
+---
+
+
+
+Your goal is to create ${input:target} that follows [project standards].
+
+
+
+## Requirements
+
+* Use [technology stack]
+
+* Follow [naming conventions]
+
+* Include [required elements]
+
+* Ensure [quality standards]
+
+
+
+## Process
+
+1. Analyze existing [context]
+
+2. Generate [deliverable] structure
+
+3. Implement [core functionality]
+
+4. Add [additional requirements]
+
+5. Validate [success criteria]
+
+
+
+## References
+
+- Standards: [file.instructions.md](../instructions/file.instructions.md)
+
+- Examples: [examples/](../examples/)
+
+
+
+## Success Criteria
+
+- [ ] [Specific outcome 1]
+
+- [ ] [Specific outcome 2]
+
+- [ ] [Validation criteria]
+
+```
+
+
+
+## Decision Flow for AI Agent
+
+
+
+1. **Identify Task Type** → Choose appropriate mode
+
+2. **Assess Complexity** → Select required tools
+
+3. **Define Scope** → Write clear goal statement
+
+4. **Gather Context** → Include relevant variables and references
+
+5. **Specify Requirements** → List concrete, measurable criteria
+
+6. **Plan Process** → Break down into actionable steps
+
+7. **Validate Completeness** → Ensure all elements are covered
+
+
+
+**Always remember:** The prompt file should enable another AI agent to execute the task autonomously with consistent, predictable results.
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 06 // User 
+sorry it must make the ai agent do the things only when needed please explain also when and also why or how to determine when to do X (where here we explain how to do a prompt file to an ai agent so they can do just that on request) all good ??? please do now! as i would ask the ai agent in the tool (vscode ai agent or other in that range) to do generate on my request a given *.prompt.md file and all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? NOW! DO!!!
+// -?!! !!! ASSISTANT !!! !!- 06 
+# AI Agent Instructions: Creating *.prompt.md Files On-Demand
+
+
+
+## TRIGGER RECOGNITION
+
+
+
+**You create a prompt file ONLY when the user explicitly requests:**
+
+- "Create a prompt file for [task]"
+
+- "Make a prompt for [workflow]"
+
+- "Generate a .prompt.md that [does X]"
+
+- "I need a reusable prompt to [accomplish Y]"
+
+- "Setup a prompt file for [process]"
+
+
+
+**DO NOT create prompt files when user asks for:**
+
+- Direct code generation
+
+- Immediate task execution
+
+- One-time solutions
+
+- Simple explanations
+
+
+
+## INTENT ANALYSIS PROTOCOL
+
+
+
+When user requests a prompt file, analyze:
+
+
+
+```
+
+1. TASK PATTERN IDENTIFICATION
+
+   └─ Is this task:
+
+      ├─ Repeatable? → Include variables
+
+      ├─ Multi-step? → Use agent mode
+
+      ├─ Transformative? → Use edit mode
+
+      └─ Informational? → Use ask mode
+
+
+
+2. SCOPE DETERMINATION
+
+   └─ What does user want to automate:
+
+      ├─ Code generation? → Focus on output specs
+
+      ├─ Workflow automation? → Include process steps
+
+      ├─ Analysis/Review? → Emphasize criteria
+
+      └─ Project setup? → Define structure templates
+
+
+
+3. CONTEXT REQUIREMENTS
+
+   └─ What context will the prompt need:
+
+      ├─ File references? → Use ${file} variables
+
+      ├─ User inputs? → Add ${input:name} prompts
+
+      ├─ Workspace data? → Include ${workspaceFolder}
+
+      └─ External specs? → Link [spec](path) files
+
+```
+
+
+
+## DECISION TREE: PROMPT CONSTRUCTION
+
+
+
+### Step 1: Determine Mode
+
+```yaml
+
+IF task requires:
+
+  - Multiple file operations
+
+  - Running commands
+
+  - Complex workflows
+
+  → mode: 'agent'
+
+  
+
+ELSE IF task requires:
+
+  - Modifying existing code
+
+  - Refactoring
+
+  - Direct file edits
+
+  → mode: 'edit'
+
+  
+
+ELSE:
+
+  - Questions/planning
+
+  - Analysis/review
+
+  - Documentation
+
+  → mode: 'ask'
+
+```
+
+
+
+### Step 2: Select Tools (for agent mode)
+
+```yaml
+
+Task involves → Required tools:
+
+- Reading/analyzing code → ['codebase']
+
+- Creating/modifying files → ['filesystem']
+
+- Running commands → ['terminal']
+
+- GitHub operations → ['githubRepo']
+
+- Searching code patterns → ['codebase', 'filesystem']
+
+```
+
+
+
+### Step 3: Structure Content Based on Task Type
+
+
+
+**FOR CODE GENERATION TASKS:**
+
+```markdown
+
+---
+
+mode: 'agent'
+
+tools: ['codebase', 'filesystem']
+
+description: 'Generate [what] following [standards]'
+
+---
+
+
+
+Your goal is to generate ${input:componentType} that implements ${input:requirements}.
+
+
+
+## Context
+
+Working in: ${workspaceFolder}
+
+Target location: ${input:targetPath:Enter target path (e.g., src/components)}
+
+
+
+## Requirements
+
+* Use [specific framework/library] patterns
+
+* Follow naming convention: [pattern]
+
+* Include these elements:
+
+  - [Element 1]
+
+  - [Element 2]
+
+* Implement error handling for [scenarios]
+
+
+
+## Implementation Guidelines
+
+1. Create file structure at ${targetPath}/${componentName}
+
+2. Generate base implementation with [specifications]
+
+3. Add necessary imports from [sources]
+
+4. Include unit tests in [test location]
+
+
+
+## Quality Criteria
+
+- TypeScript types are properly defined
+
+- All functions have JSDoc comments
+
+- Error boundaries are implemented
+
+- Tests achieve >80% coverage
+
+```
+
+
+
+**FOR WORKFLOW AUTOMATION TASKS:**
+
+```markdown
+
+---
+
+mode: 'agent'
+
+tools: ['terminal', 'filesystem', 'codebase']
+
+description: 'Automate [workflow name] process'
+
+---
+
+
+
+Your goal is to automate the ${input:workflowName} workflow.
+
+
+
+## Process Overview
+
+This automation handles: ${input:processDescription}
+
+
+
+## Steps to Execute
+
+1. Validate prerequisites:
+
+   - Check for [requirement 1]
+
+   - Ensure [requirement 2]
+
+   
+
+2. Execute main workflow:
+
+   ```bash
+
+   # Commands to run
+
+   ${input:commands:Enter commands to execute}
+
+   ```
+
+   
+
+3. Generate artifacts:
+
+   - Create [output 1] at [location]
+
+   - Update [configuration] with [values]
+
+   
+
+4. Verify results:
+
+   - Test [functionality]
+
+   - Validate [output format]
+
+
+
+## Error Handling
+
+- If [condition], then [action]
+
+- On failure of [step], [recovery action]
+
+```
+
+
+
+**FOR ANALYSIS/REVIEW TASKS:**
+
+```markdown
+
+---
+
+mode: 'ask'
+
+description: 'Analyze [subject] for [criteria]'
+
+---
+
+
+
+Analyze the ${selection|file} for the following aspects:
+
+
+
+## Analysis Criteria
+
+* [Criterion 1]: Check for [specific patterns]
+
+* [Criterion 2]: Evaluate [metrics]
+
+* [Criterion 3]: Identify [issues/opportunities]
+
+
+
+## Expected Output Format
+
+Provide analysis as:
+
+1. Summary of findings
+
+2. Detailed observations per criterion
+
+3. Recommended actions
+
+4. Priority ranking of issues
+
+```
+
+
+
+## CONTENT GENERATION RULES
+
+
+
+### Variable Usage Decision Logic
+
+```
+
+IF user mentions:
+
+  - "for any file" → Use ${file}
+
+  - "user should specify" → Use ${input:varName}
+
+  - "in the selection" → Use ${selection}
+
+  - "project root" → Use ${workspaceFolder}
+
+  
+
+IF task needs:
+
+  - Dynamic values → Add ${input:name:description}
+
+  - File context → Include ${file} references
+
+  - Flexible paths → Use ${input:path} variables
+
+```
+
+
+
+### Reference Inclusion Logic
+
+```
+
+IF prompt needs:
+
+  - Coding standards → Link to .instructions.md files
+
+  - Examples → Reference example directories
+
+  - Specifications → Link to spec files
+
+  - Templates → Point to template locations
+
+```
+
+
+
+## VALIDATION CHECKLIST
+
+
+
+Before finalizing prompt file, verify:
+
+
+
+```
+
+□ Mode matches task complexity
+
+□ Tools cover all required operations
+
+□ Variables capture all dynamic elements
+
+□ Instructions are unambiguous
+
+□ Success criteria are measurable
+
+□ Error scenarios are addressed
+
+□ References link to actual paths
+
+□ Description summarizes purpose clearly
+
+```
+
+
+
+## OUTPUT FORMAT REQUIREMENTS
+
+
+
+**File Naming:**
+
+- Use action-target pattern: `generate-component.prompt.md`
+
+- Keep under 30 characters
+
+- Use hyphens, not underscores
+
+
+
+**Content Structure:**
+
+1. Front matter (always include)
+
+2. Goal statement (first line of body)
+
+3. Context section (if variables used)
+
+4. Requirements (bullet points)
+
+5. Process steps (numbered list)
+
+6. References (if external files needed)
+
+7. Success criteria (checkboxes)
+
+
+
+## EXAMPLE RECOGNITION PATTERNS
+
+
+
+**User says:** "Create a prompt to generate React components"
+
+**You create:** `generate-react-component.prompt.md` with:
+
+- mode: 'agent'
+
+- tools: ['codebase', 'filesystem']
+
+- Variables for component name, type, location
+
+
+
+**User says:** "I need a prompt for code review"
+
+**You create:** `code-review.prompt.md` with:
+
+- mode: 'ask'
+
+- Focus on analysis criteria
+
+- No tools needed
+
+
+
+**User says:** "Make a prompt to set up testing"
+
+**You create:** `setup-testing.prompt.md` with:
+
+- mode: 'agent'
+
+- tools: ['terminal', 'filesystem', 'codebase']
+
+- Step-by-step automation
+
+
+
+## CRITICAL REMINDERS
+
+
+
+1. **Never assume** - If unclear, ask user:
+
+   - "Should this prompt generate new files or modify existing ones?"
+
+   - "Will this be run repeatedly with different inputs?"
+
+   - "Does this need to execute commands or just analyze?"
+
+
+
+2. **Always consider reusability** - Add variables for any value that might change between uses
+
+
+
+3. **Test mentally** - Before finalizing, imagine running the prompt:
+
+   - Are all steps clear?
+
+   - Could another AI execute this?
+
+   - Are success criteria verifiable?
+
+
+
+4. **Keep focused** - One prompt = one clear purpose
+
+   - Don't combine unrelated tasks
+
+   - Split complex workflows into multiple prompts if needed
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 07 // User 
+now do that but for the *.instruction.md instead this time and as i would ask the ai agent in teh toll to do generate on my request a given *.instruction.md file and again, but now for taht different kind, all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? think of how to do that please then explain to their benefit in the language they expect...
+// -?!! !!! ASSISTANT !!! !!- 07 
+
+1. When to create instruction files (triggers)
+2. How to analyze what type of instruction file is needed
+3. The structure and format
+4. Decision-making process for content
+5. Different patterns for different use cases
+6. How to determine what goes in an instruction file vs a prompt file
+
+Key differences from prompt files:
+- Instructions are passive rules that apply automatically
+- They don't execute tasks, they modify behavior
+- They're about standards, not actions
+- They can have `applyTo` patterns for automatic application
+
+I need to write this as if I'm explaining to an AI agent directly, in a way that helps them understand all aspects of creating instruction files on demand when a user requests it.
+# AI Agent Instructions: Creating *.instructions.md Files On-Demand
+
+
+
+## TRIGGER RECOGNITION
+
+
+
+**You create an instruction file ONLY when the user explicitly requests:**
+
+- "Create instructions for [coding standard]"
+
+- "Make an instruction file for [guidelines]"
+
+- "Generate .instructions.md for [rules]"
+
+- "Setup coding instructions for [language/framework]"
+
+- "Define instructions for [project standards]"
+
+
+
+**DO NOT create instruction files when user asks for:**
+
+- Task automation (use prompts instead)
+
+- One-time actions
+
+- Direct code generation
+
+- Process workflows
+
+
+
+## FUNDAMENTAL DISTINCTION
+
+
+
+**Instructions = Persistent Rules**
+
+- Applied automatically in background
+
+- Modify AI behavior for all relevant requests
+
+- Define "HOW" code should be written
+
+- Never execute actions
+
+
+
+**Key Recognition:** User wants to establish STANDARDS, not perform TASKS
+
+
+
+## INTENT ANALYSIS PROTOCOL
+
+
+
+When user requests an instruction file, analyze:
+
+
+
+```
+
+1. SCOPE IDENTIFICATION
+
+   └─ What aspect needs standardization:
+
+      ├─ Coding style? → Style guidelines
+
+      ├─ Architecture patterns? → Design rules
+
+      ├─ Security practices? → Security constraints
+
+      ├─ Testing approach? → Test requirements
+
+      └─ Documentation format? → Doc standards
+
+
+
+2. APPLICATION RANGE
+
+   └─ Where should rules apply:
+
+      ├─ Entire project? → applyTo: "**"
+
+      ├─ Specific language? → applyTo: "**/*.{ext}"
+
+      ├─ Certain directories? → applyTo: "**/src/**"
+
+      └─ Framework files? → applyTo: "**/components/**"
+
+
+
+3. RULE PERMANENCE
+
+   └─ How often will these apply:
+
+      ├─ Every code generation? → Core instructions
+
+      ├─ Specific file types? → Targeted rules
+
+      ├─ Team standards? → Shared guidelines
+
+      └─ Project phase? → Conditional standards
+
+```
+
+
+
+## DECISION TREE: INSTRUCTION CONSTRUCTION
+
+
+
+### Step 1: Determine Scope Type
+
+```
+
+IF user mentions:
+
+  - "all code" / "entire project" → Global instructions
+
+  - "TypeScript files" / "React components" → Language-specific
+
+  - "API endpoints" / "database models" → Domain-specific
+
+  - "when doing X" → Context-specific
+
+
+
+THEN create:
+
+  - Global → general.instructions.md
+
+  - Language → typescript.instructions.md
+
+  - Domain → api-design.instructions.md
+
+  - Context → testing.instructions.md
+
+```
+
+
+
+### Step 2: Set Application Pattern
+
+```yaml
+
+For file targeting:
+
+  - All files → applyTo: "**"
+
+  - TypeScript → applyTo: "**/*.ts"
+
+  - React → applyTo: "**/*.tsx"
+
+  - Tests → applyTo: "**/*.test.{js,ts}"
+
+  - Specific folder → applyTo: "**/src/components/**"
+
+```
+
+
+
+### Step 3: Structure Content by Instruction Type
+
+
+
+**FOR CODING STYLE STANDARDS:**
+
+```markdown
+
+---
+
+applyTo: "**/*.{ts,tsx}"
+
+---
+
+# TypeScript Coding Standards
+
+
+
+## Naming Conventions
+
+- Use PascalCase for classes, interfaces, types, and enums
+
+- Use camelCase for variables, functions, and methods
+
+- Use UPPER_SNAKE_CASE for constants
+
+- Prefix interfaces with 'I' only for legacy compatibility
+
+
+
+## Type Definitions
+
+- Always use explicit return types for functions
+
+- Prefer interfaces over type aliases for object shapes
+
+- Use 'unknown' instead of 'any' when type is truly unknown
+
+- Define separate types file for shared types
+
+
+
+## Function Guidelines
+
+- Keep functions under 20 lines
+
+- Use arrow functions for callbacks and inline functions
+
+- Use function declarations for top-level functions
+
+- Always handle promise rejections
+
+
+
+## Import Organization
+
+1. External dependencies
+
+2. Internal aliases (@/...)
+
+3. Relative imports (../)
+
+4. Local imports (./)
+
+```
+
+
+
+**FOR ARCHITECTURAL PATTERNS:**
+
+```markdown
+
+---
+
+applyTo: "**/src/**"
+
+---
+
+# Architecture Guidelines
+
+
+
+## Component Structure
+
+- Follow [Container/Presenter pattern] for React components
+
+- Keep business logic in custom hooks
+
+- Separate API calls into service modules
+
+- Use dependency injection for testability
+
+
+
+## File Organization
+
+```
+
+component/
+
+├── index.ts           (public exports)
+
+├── Component.tsx      (main component)
+
+├── Component.test.tsx (tests)
+
+├── Component.styles.ts (styled components)
+
+└── types.ts          (local types)
+
+```
+
+
+
+## State Management
+
+- Use Context for cross-cutting concerns only
+
+- Prefer component state for local data
+
+- Implement Redux only for complex state
+
+- Cache API responses appropriately
+
+
+
+## Error Boundaries
+
+- Wrap feature modules in error boundaries
+
+- Log errors to monitoring service
+
+- Provide user-friendly fallback UI
+
+```
+
+
+
+**FOR SECURITY PRACTICES:**
+
+```markdown
+
+---
+
+applyTo: "**"
+
+---
+
+# Security Requirements
+
+
+
+## Input Validation
+
+- Sanitize all user inputs before processing
+
+- Use parameterized queries for database operations
+
+- Validate data types and ranges explicitly
+
+- Never trust client-side validation alone
+
+
+
+## Authentication & Authorization
+
+- Use JWT tokens with short expiration
+
+- Implement refresh token rotation
+
+- Check permissions at API and UI levels
+
+- Never expose sensitive data in responses
+
+
+
+## Data Protection
+
+- Encrypt sensitive data at rest
+
+- Use HTTPS for all communications
+
+- Implement rate limiting on APIs
+
+- Hash passwords with bcrypt (min 10 rounds)
+
+
+
+## Dependencies
+
+- Audit packages monthly for vulnerabilities
+
+- Keep dependencies updated
+
+- Use exact versions in package.json
+
+- Review dependency licenses
+
+```
+
+
+
+**FOR TESTING STANDARDS:**
+
+```markdown
+
+---
+
+applyTo: "**/*.{test,spec}.{js,ts,tsx}"
+
+---
+
+# Testing Guidelines
+
+
+
+## Test Structure
+
+- Use describe blocks for logical grouping
+
+- One assertion per test when possible
+
+- Name tests as "should [expected behavior] when [condition]"
+
+- Follow Arrange-Act-Assert pattern
+
+
+
+## Coverage Requirements
+
+- Minimum 80% code coverage
+
+- 100% coverage for utility functions
+
+- Test error cases and edge conditions
+
+- Mock external dependencies
+
+
+
+## Test Data
+
+- Use factories for test data generation
+
+- Never use production data in tests
+
+- Reset database state between tests
+
+- Use meaningful test data names
+
+```
+
+
+
+## CONTENT GENERATION RULES
+
+
+
+### Rule Formulation Logic
+
+```
+
+TRANSFORM user requirements into rules:
+
+
+
+User says: "camelCase for variables"
+
+You write: "Use camelCase for all variable names"
+
+
+
+User says: "must have tests"
+
+You write: "Every module must include unit tests with >80% coverage"
+
+
+
+User says: "no console.logs"
+
+You write: "Remove all console.log statements; use proper logging service"
+
+```
+
+
+
+### Specificity Guidelines
+
+```
+
+BE SPECIFIC about:
+
+- WHEN the rule applies
+
+- WHAT exactly to do
+
+- WHY (if context helps)
+
+- EXCEPTIONS (if any)
+
+
+
+AVOID:
+
+- Vague terms ("appropriate", "good", "proper")
+
+- Conditional language ("try to", "if possible")
+
+- Multiple interpretations
+
+```
+
+
+
+## INSTRUCTION PATTERNS BY USE CASE
+
+
+
+### Pattern 1: Language/Framework Standards
+
+```markdown
+
+---
+
+applyTo: "**/*.{ext}"
+
+---
+
+# [Language/Framework] Standards
+
+
+
+## Syntax Preferences
+
+- [Specific syntax rule]
+
+- [Another syntax rule]
+
+
+
+## Best Practices
+
+- [Framework-specific pattern]
+
+- [Performance optimization]
+
+
+
+## Anti-patterns to Avoid
+
+- Never [bad practice]
+
+- Avoid [problematic pattern]
+
+```
+
+
+
+### Pattern 2: Cross-Cutting Concerns
+
+```markdown
+
+---
+
+applyTo: "**"
+
+---
+
+# [Concern] Guidelines
+
+
+
+## General Principles
+
+- [Overarching rule]
+
+- [Universal standard]
+
+
+
+## Implementation Details
+
+- In [context], always [action]
+
+- When [condition], ensure [requirement]
+
+```
+
+
+
+### Pattern 3: Domain-Specific Rules
+
+```markdown
+
+---
+
+applyTo: "**/domain/**"
+
+---
+
+# [Domain] Specifications
+
+
+
+## Domain Rules
+
+- [Business logic constraint]
+
+- [Domain-specific requirement]
+
+
+
+## Technical Implementation
+
+- Use [pattern] for [purpose]
+
+- Implement [feature] using [approach]
+
+```
+
+
+
+## HIERARCHY AND REFERENCES
+
+
+
+### When to Link Other Instructions
+
+```markdown
+
+# API Design Standards
+
+
+
+Follow [general coding standards](./general.instructions.md) plus:
+
+
+
+## Additional API-Specific Rules
+
+- All endpoints must use REST conventions
+
+- Include pagination for list endpoints
+
+- Version APIs using URL path (/v1, /v2)
+
+```
+
+
+
+### Instruction Precedence
+
+- More specific paths override general ones
+
+- Later rules in same file override earlier ones
+
+- Linked instructions apply in addition to current file
+
+
+
+## VALIDATION CHECKLIST
+
+
+
+Before finalizing instruction file:
+
+
+
+```
+
+□ ApplyTo pattern matches intended scope
+
+□ Rules are actionable and clear
+
+□ No conflicting instructions
+
+□ Examples provided where helpful
+
+□ Organization is logical
+
+□ Language is imperative ("Use", "Implement", "Ensure")
+
+□ Scope is appropriate (not too broad/narrow)
+
+```
+
+
+
+## OUTPUT FORMAT REQUIREMENTS
+
+
+
+**File Naming:**
+
+- Use descriptor-noun: `typescript-style.instructions.md`
+
+- Be specific: `react-testing.instructions.md`
+
+- Indicate scope: `api-security.instructions.md`
+
+
+
+**Front Matter:**
+
+```yaml
+
+---
+
+applyTo: "glob-pattern"  # ALWAYS include
+
+---
+
+```
+
+
+
+**Content Structure:**
+
+1. Title (# Description of Standards)
+
+2. Major sections (## Category)
+
+3. Specific rules (- Rule statement)
+
+4. Examples when beneficial
+
+5. Exceptions if applicable
+
+
+
+## DECISION EXAMPLES
+
+
+
+**User says:** "Create instructions for React best practices"
+
+**You analyze:**
+
+- Scope: React components
+
+- ApplyTo: `"**/*.tsx"`
+
+- Categories: Components, Hooks, State, Performance
+
+
+
+**User says:** "Make instructions to always use async/await"
+
+**You analyze:**
+
+- Scope: All JavaScript/TypeScript
+
+- ApplyTo: `"**/*.{js,ts,jsx,tsx}"`
+
+- Focus: Async patterns, error handling
+
+
+
+**User says:** "Setup security instructions for our API"
+
+**You analyze:**
+
+- Scope: API endpoints
+
+- ApplyTo: `"**/api/**"`
+
+- Categories: Auth, Validation, Data protection
+
+
+
+## CRITICAL DECISION POINTS
+
+
+
+### Instructions vs Prompts
+
+```
+
+User wants STANDARDS/RULES → Create instructions
+
+User wants TASK EXECUTION → Create prompt
+
+
+
+Instructions: "All functions must have JSDoc"
+
+Prompt: "Generate JSDoc for this function"
+
+```
+
+
+
+### Scope Determination
+
+```
+
+NARROW scope when:
+
+- Rules are technology-specific
+
+- Standards apply to subsystem
+
+- Guidelines are contextual
+
+
+
+BROAD scope when:
+
+- Rules are universal
+
+- Standards are foundational
+
+- Guidelines cross boundaries
+
+```
+
+
+
+### Content Depth
+
+```
+
+DETAILED when:
+
+- Complex conventions
+
+- Multiple options exist
+
+- Examples clarify intent
+
+
+
+CONCISE when:
+
+- Rules are straightforward
+
+- Standards are well-known
+
+- Context is obvious
+
+```
+
+
+
+## ERROR PREVENTION
+
+
+
+**Common Mistakes to Avoid:**
+
+1. Creating task lists (use prompts instead)
+
+2. Making rules too vague to follow
+
+3. Conflicting with language defaults
+
+4. Over-constraining creativity
+
+5. Missing the applyTo pattern
+
+
+
+**Always Verify:**
+
+- Would a developer understand this clearly?
+
+- Can an AI apply this consistently?
+
+- Does this improve code quality?
+
+- Is this enforceable automatically?
+
+
+
+## FINAL REMINDERS
+
+
+
+1. **Instructions are passive** - They modify behavior, not execute tasks
+
+2. **Be prescriptive** - Use clear, directive language
+
+3. **Consider scope carefully** - Too broad = conflicts, too narrow = missed applications
+
+4. **Test mentally** - "If I follow this, what code results?"
+
+5. **Keep maintainable** - Rules should be stable, not require frequent updates
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 08 // User 
+make it compliant to be as a *.instruction using the highest level of markdown-lint strictness as usual and containing all that needs to be included please
+// -?!! !!! ASSISTANT !!! !!- 08 
+
+1. Proper front matter with applyTo pattern
+2. Strict markdown-lint compliance (proper heading hierarchy, consistent formatting, etc.)
+3. All the content about creating instruction files formatted as actual instructions/rules
+4. Content structured as imperative rules rather than explanatory text
+
+I need to transform the previous explanatory content into directive rules that an AI agent would follow when asked to create instruction files.
+
+Key markdown-lint rules to follow:
+- Proper heading hierarchy (no skipping levels)
+- Consistent list formatting
+- Proper code block formatting
+- No trailing whitespace
+- Consistent emphasis formatting
+- Proper link formatting
+- Line length considerations
+```markdown
+
+---
+
+applyTo: "**"
+
+---
+
+
+
+# AI Agent Instructions: Creating *.instructions.md Files
+
+
+
+## Trigger Recognition Rules
+
+
+
+### When to Create Instruction Files
+
+
+
+- Create instruction files ONLY when user explicitly requests coding standards or guidelines
+
+- Recognize these request patterns:
+
+  - "Create instructions for [coding standard]"
+
+  - "Make an instruction file for [guidelines]"
+
+  - "Generate .instructions.md for [rules]"
+
+  - "Setup coding instructions for [language/framework]"
+
+  - "Define instructions for [project standards]"
+
+
+
+### When NOT to Create Instruction Files
+
+
+
+- Never create instruction files for task automation (use prompts instead)
+
+- Never create for one-time actions or direct code generation
+
+- Never create for process workflows or executable tasks
+
+
+
+## File Structure Requirements
+
+
+
+### Front Matter Standards
+
+
+
+- Always include front matter with applyTo pattern
+
+- Use YAML format with proper syntax
+
+- Apply appropriate glob patterns for scope
+
+
+
+```yaml
+
+---
+
+applyTo: "glob-pattern-here"
+
+---
+
+```
+
+
+
+### ApplyTo Pattern Selection
+
+
+
+- Use `"**"` for global project rules
+
+- Use `"**/*.{ext}"` for language-specific rules
+
+- Use `"**/folder/**"` for directory-specific rules
+
+- Use `"**/*.{test,spec}.*"` for testing-specific rules
+
+
+
+### Content Structure Requirements
+
+
+
+- Start with single H1 title describing the standards
+
+- Use H2 for major categories
+
+- Use H3 for subcategories when needed
+
+- Use bullet points for individual rules
+
+- Include code examples in fenced blocks when beneficial
+
+
+
+## Content Creation Rules
+
+
+
+### Rule Formulation Standards
+
+
+
+- Write rules as imperative statements using action verbs
+
+- Begin rules with "Use", "Implement", "Ensure", "Apply", "Follow"
+
+- Be specific and actionable in every rule statement
+
+- Avoid vague terms like "appropriate", "good", "proper"
+
+- Eliminate conditional language like "try to", "if possible"
+
+
+
+### Specificity Requirements
+
+
+
+- Define WHEN each rule applies
+
+- Specify WHAT exactly to do
+
+- Include WHY when context improves clarity
+
+- Document EXCEPTIONS explicitly when they exist
+
+- Provide examples for complex or ambiguous rules
+
+
+
+### Organization Patterns
+
+
+
+#### For Coding Style Standards
+
+
+
+```markdown
+
+## Naming Conventions
+
+- Rule for classes and interfaces
+
+- Rule for variables and functions
+
+- Rule for constants and enums
+
+
+
+## Type Definitions
+
+- Rule for function return types
+
+- Rule for interface usage
+
+- Rule for type alias preferences
+
+
+
+## Code Organization
+
+- Rule for import ordering
+
+- Rule for file structure
+
+- Rule for module exports
+
+```
+
+
+
+#### For Architectural Patterns
+
+
+
+```markdown
+
+## Component Structure
+
+- Rule for component organization
+
+- Rule for business logic separation
+
+- Rule for dependency management
+
+
+
+## File Organization
+
+- Rule for directory structure
+
+- Rule for naming conventions
+
+- Rule for module boundaries
+
+
+
+## Design Patterns
+
+- Rule for pattern implementation
+
+- Rule for pattern selection
+
+- Rule for pattern consistency
+
+```
+
+
+
+#### For Security Practices
+
+
+
+```markdown
+
+## Input Validation
+
+- Rule for user input handling
+
+- Rule for data sanitization
+
+- Rule for validation implementation
+
+
+
+## Authentication
+
+- Rule for token management
+
+- Rule for session handling
+
+- Rule for permission checking
+
+
+
+## Data Protection
+
+- Rule for encryption requirements
+
+- Rule for communication security
+
+- Rule for data storage
+
+```
+
+
+
+## Content Quality Standards
+
+
+
+### Language Requirements
+
+
+
+- Use present tense for all rule statements
+
+- Write in active voice consistently
+
+- Maintain imperative mood throughout
+
+- Use consistent terminology across all rules
+
+
+
+### Formatting Standards
+
+
+
+- Use consistent bullet point style (hyphens)
+
+- Maintain proper heading hierarchy
+
+- Format code examples with language specifications
+
+- Use consistent emphasis formatting (bold/italic)
+
+
+
+### Completeness Criteria
+
+
+
+- Cover all aspects of the requested domain
+
+- Include both positive rules (do this) and negative rules (avoid that)
+
+- Provide sufficient detail for consistent application
+
+- Include cross-references to related instruction files when appropriate
+
+
+
+## Scope Determination Rules
+
+
+
+### Global Scope Indicators
+
+
+
+- User mentions "all code" or "entire project"
+
+- Rules apply across multiple languages/frameworks
+
+- Standards are foundational or universal
+
+- Guidelines cross architectural boundaries
+
+
+
+### Targeted Scope Indicators
+
+
+
+- User specifies file types or extensions
+
+- Rules are technology-specific
+
+- Standards apply to specific domains
+
+- Guidelines are context-dependent
+
+
+
+### Multi-File Strategy
+
+
+
+- Create separate instruction files for distinct domains
+
+- Use file linking for shared standards
+
+- Maintain clear scope boundaries between files
+
+- Avoid overlapping or conflicting rules
+
+
+
+## Reference and Linking Standards
+
+
+
+### Internal Linking Rules
+
+
+
+- Link to related instruction files using relative paths
+
+- Use descriptive link text that explains the relationship
+
+- Format links as: `[description](./filename.instructions.md)`
+
+- Always verify link targets exist or will be created
+
+
+
+### External Reference Guidelines
+
+
+
+- Reference established standards or specifications when appropriate
+
+- Avoid linking to external documentation that may change
+
+- Include essential information directly in the instruction file
+
+- Use code examples rather than external links when possible
+
+
+
+## Validation Requirements
+
+
+
+### Pre-Creation Checklist
+
+
+
+- Verify applyTo pattern matches intended scope
+
+- Ensure all rules are actionable and measurable
+
+- Check for conflicts with existing instruction files
+
+- Confirm organization is logical and scannable
+
+- Validate that language is consistently imperative
+
+
+
+### Content Validation
+
+
+
+- Test each rule for clarity and specificity
+
+- Ensure examples support rule understanding
+
+- Verify completeness for the specified domain
+
+- Check for proper markdown formatting
+
+- Confirm heading hierarchy is correct
+
+
+
+## File Naming Standards
+
+
+
+### Naming Convention Rules
+
+
+
+- Use descriptive noun phrases: `typescript-style.instructions.md`
+
+- Include scope indicators: `react-testing.instructions.md`
+
+- Use hyphens for multi-word names
+
+- Keep names under 30 characters when possible
+
+- Ensure names clearly indicate content domain
+
+
+
+### Organization Guidelines
+
+
+
+- Group related instruction files in same directory
+
+- Use consistent naming patterns within projects
+
+- Create logical hierarchies for complex domains
+
+- Maintain alphabetical ordering when beneficial
+
+
+
+## Error Prevention Rules
+
+
+
+### Common Mistakes to Avoid
+
+
+
+- Never create task execution lists (use prompts instead)
+
+- Never use vague or subjective language
+
+- Never create rules that conflict with language/framework defaults
+
+- Never over-constrain without clear benefit
+
+- Never omit the applyTo front matter pattern
+
+
+
+### Quality Assurance Standards
+
+
+
+- Always verify rules can be applied consistently
+
+- Ensure AI agents can interpret and follow each rule
+
+- Confirm rules improve code quality measurably
+
+- Validate that rules are enforceable programmatically
+
+- Check that rules align with modern best practices
+
+
+
+## Final Application Standards
+
+
+
+### Rule Implementation
+
+
+
+- Instructions modify AI behavior automatically
+
+- Rules apply passively to relevant code generation
+
+- Standards influence decision-making consistently
+
+- Guidelines shape output quality continuously
+
+
+
+### Maintenance Considerations
+
+
+
+- Create stable rules that rarely need updates
+
+- Design for long-term application consistency
+
+- Consider impact on team development workflow
+
+- Ensure rules scale with project growth
+
+- Plan for rule evolution and refinement
+
+```
+
+Drop here to insert into user message
+Max 100 files at 5MB each
+// -&!! !!! user !!! !!- 09 // User 
+and now make it as a *.prompt.md with mostly the same information but of the kind of the prompt.md
+// -?!! !!! ASSISTANT !!! !!- 09 
+
+Key differences:
+1. Add front matter with mode, tools, and description
+2. Change from passive instructions to an active prompt that guides the AI to create instruction files
+3. Use variables for user input where appropriate
+4. Structure it as a prompt that can be executed to generate an instruction file
+5. Include process steps and success criteria
+6. Make it actionable rather than just informational
+
+The content should be largely the same but reformulated as a prompt that helps an AI agent create instruction files when requested.
+```markdown
+
+---
+
+mode: 'agent'
+
+tools: ['filesystem', 'codebase']
+
+description: 'Generate *.instructions.md files with proper structure and content'
+
+---
+
+
+
+# Generate *.instructions.md File
+
+
+
+Your goal is to create a properly structured `.instructions.md` file based on the user's requirements for coding standards, guidelines, or project rules.
+
+
+
+## Context
+
+
+
+- Target file: `${input:filename:Enter instruction file name (e.g., typescript-style)}.instructions.md`
+
+- Scope: `${input:scope:Describe what code this should apply to (e.g., "all TypeScript files", "React components")}`
+
+- Standards type: `${input:standardsType:What type of standards? (coding style, architecture, security, testing, etc.)}`
+
+
+
+## Requirements
+
+
+
+### File Structure Standards
+
+
+
+- Include proper front matter with applyTo pattern
+
+- Use single H1 title describing the standards
+
+- Organize content with H2 for major categories
+
+- Use H3 for subcategories when needed
+
+- Format rules as bullet points with imperative language
+
+
+
+### ApplyTo Pattern Selection
+
+
+
+- Use `"**"` for global project rules
+
+- Use `"**/*.{ext}"` for language-specific rules
+
+- Use `"**/folder/**"` for directory-specific rules
+
+- Use `"**/*.{test,spec}.*"` for testing-specific rules
+
+
+
+### Content Quality Requirements
+
+
+
+- Write rules as imperative statements using action verbs
+
+- Begin rules with "Use", "Implement", "Ensure", "Apply", "Follow"
+
+- Be specific and actionable in every rule statement
+
+- Avoid vague terms like "appropriate", "good", "proper"
+
+- Include code examples in fenced blocks when beneficial
+
+
+
+## Process
+
+
+
+1. **Analyze User Requirements**
+
+   - Determine the scope of standards needed
+
+   - Identify the target file types or directories
+
+   - Categorize the type of standards (style, architecture, security, etc.)
+
+
+
+2. **Create Front Matter**
+
+   - Generate appropriate applyTo glob pattern based on scope
+
+   - Use YAML format with proper syntax
+
+
+
+3. **Structure Content by Standards Type**
+
+
+
+   **For Coding Style Standards:**
+
+   ```markdown
+
+   ## Naming Conventions
+
+   - [Specific naming rules]
+
+   
+
+   ## Type Definitions
+
+   - [Type usage rules]
+
+   
+
+   ## Code Organization
+
+   - [Import and structure rules]
+
+   ```
+
+
+
+   **For Architectural Patterns:**
+
+   ```markdown
+
+   ## Component Structure
+
+   - [Organization rules]
+
+   
+
+   ## File Organization
+
+   - [Directory and naming rules]
+
+   
+
+   ## Design Patterns
+
+   - [Pattern implementation rules]
+
+   ```
+
+
+
+   **For Security Practices:**
+
+   ```markdown
+
+   ## Input Validation
+
+   - [Validation rules]
+
+   
+
+   ## Authentication
+
+   - [Auth implementation rules]
+
+   
+
+   ## Data Protection
+
+   - [Security requirement rules]
+
+   ```
+
+
+
+4. **Write Specific Rules**
+
+   - Formulate each rule as an imperative statement
+
+   - Include examples for complex or ambiguous rules
+
+   - Specify exceptions explicitly when they exist
+
+   - Cross-reference related instruction files when appropriate
+
+
+
+5. **Validate Content**
+
+   - Ensure all rules are actionable and measurable
+
+   - Check for conflicts with existing standards
+
+   - Verify proper markdown formatting
+
+   - Confirm heading hierarchy is correct
+
+
+
+## Content Templates
+
+
+
+### Global Standards Template
+
+```markdown
+
+---
+
+applyTo: "**"
+
+---
+
+
+
+# ${standardsType} Standards
+
+
+
+## General Principles
+
+- [Universal rule 1]
+
+- [Universal rule 2]
+
+
+
+## Implementation Guidelines
+
+- [Specific implementation rule]
+
+- [Another implementation rule]
+
+
+
+## Quality Requirements
+
+- [Quality standard 1]
+
+- [Quality standard 2]
+
+```
+
+
+
+### Language-Specific Template
+
+```markdown
+
+---
+
+applyTo: "**/*.{ext}"
+
+---
+
+
+
+# ${language} ${standardsType} Standards
+
+
+
+## Syntax Preferences
+
+- [Language-specific syntax rule]
+
+- [Another syntax rule]
+
+
+
+## Best Practices
+
+- [Framework-specific pattern]
+
+- [Performance optimization rule]
+
+
+
+## Anti-patterns to Avoid
+
+- Never [bad practice]
+
+- Avoid [problematic pattern]
+
+```
+
+
+
+### Domain-Specific Template
+
+```markdown
+
+---
+
+applyTo: "**/domain/**"
+
+---
+
+
+
+# ${domain} ${standardsType} Guidelines
+
+
+
+## Domain Rules
+
+- [Business logic constraint]
+
+- [Domain-specific requirement]
+
+
+
+## Technical Implementation
+
+- Use [pattern] for [purpose]
+
+- Implement [feature] using [approach]
+
+
+
+## Validation Requirements
+
+- [Domain validation rule]
+
+- [Data integrity rule]
+
+```
+
+
+
+## Variable Usage Guidelines
+
+
+
+- Use descriptive variable names in examples: `${componentName}`, `${apiEndpoint}`
+
+- Include placeholder text for complex concepts
+
+- Reference file paths using `${workspaceFolder}` when appropriate
+
+- Use input variables for user-specific values
+
+
+
+## Quality Assurance Checklist
+
+
+
+- [ ] ApplyTo pattern matches intended scope accurately
+
+- [ ] All rules use imperative language consistently
+
+- [ ] Examples are provided for complex rules
+
+- [ ] No conflicting instructions exist
+
+- [ ] Markdown formatting follows lint standards
+
+- [ ] Content organization is logical and scannable
+
+- [ ] Cross-references are accurate and helpful
+
+
+
+## Success Criteria
+
+
+
+### File Structure Validation
+
+- Front matter includes proper applyTo pattern
+
+- Content follows hierarchical organization
+
+- All headings use appropriate levels
+
+- Code blocks include language specifications
+
+
+
+### Content Quality Validation
+
+- Every rule is actionable and specific
+
+- Language is consistently imperative
+
+- Examples support rule clarity
+
+- No vague or subjective terms used
+
+
+
+### Scope Alignment Validation
+
+- ApplyTo pattern matches user requirements
+
+- Content depth appropriate for scope
+
+- Rules are enforceable within specified context
+
+- Integration with existing standards is clear
+
+
+
+## Error Prevention
+
+
+
+### Avoid These Common Mistakes
+
+- Creating task execution lists (use prompts instead)
+
+- Using vague or subjective language
+
+- Omitting the applyTo front matter pattern
+
+- Creating rules that conflict with language defaults
+
+- Over-constraining without clear benefit
+
+
+
+### Validation Steps
+
+- Test each rule for clarity and specificity
+
+- Verify AI agents can interpret and follow rules
+
+- Confirm rules improve code quality measurably
+
+- Check alignment with modern best practices
+
+- Ensure rules scale with project growth
+
+
+
+## Output Format
+
+
+
+Create the instruction file at the specified location with:
+
+
+
+1. Proper front matter with applyTo pattern
+
+2. Clear title describing the standards
+
+3. Organized sections for different rule categories
+
+4. Specific, actionable rules in bullet format
+
+5. Code examples where beneficial
+
+6. Cross-references to related files when appropriate
+
+
+
+The generated file should serve as automatic guidance for AI agents when generating code in the specified scope.
+
+```
+
+
+
+
+
+
+
+
+please compare the previous 9 messages i sent it must be the same identical unmodified unabridged (verbatim) please take your time!!!
