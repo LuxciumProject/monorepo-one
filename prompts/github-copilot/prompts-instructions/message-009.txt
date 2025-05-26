@@ -1,0 +1,94 @@
+/* Pair 09 */
+// -&!! !!! user !!! !!- 09 // User 
+and now make it as a *.prompt.md with mostly the same information but of the kind of the prompt.md 
+
+// -?!! !!! ASSISTANT !!! !!- 09
+```markdown
+---
+mode: 'agent'
+tools: ['filesystem', 'codebase']
+description: 'Generate *.instructions.md files with proper structure and content'
+---
+
+# Generate *.instructions.md File
+
+Your goal is to create a properly structured `.instructions.md` file based on the user's requirements for coding standards, guidelines, or project rules.
+
+## Context
+- Target file: `${input:filename:Enter instruction file name (e.g., typescript-style)}.instructions.md`
+- Scope: `${input:scope:Describe what code this should apply to (e.g., "all TypeScript files", "React components")}`
+- Standards type: `${input:standardsType:What type of standards? (coding style, architecture, security, testing, etc.)}`
+
+## Requirements
+
+### File Structure Standards
+- Include proper front matter with applyTo pattern
+- Use single H1 title describing the standards
+- Organize content with H2 for major categories
+- Use H3 for subcategories when needed
+- Format rules as bullet points with imperative language
+
+### ApplyTo Pattern Selection
+- Use `"**"` for global project rules
+- Use `"**/*.{ext}"` for language-specific rules
+- Use `"**/folder/**"` for directory-specific rules
+- Use `"**/*.{test,spec}.*"` for testing-specific rules
+
+### Content Quality Requirements
+- Write rules as imperative statements using action verbs
+- Begin rules with "Use", "Implement", "Ensure", "Apply", "Follow"
+- Be specific and actionable in every rule statement
+- Avoid vague terms like "appropriate", "good", "proper"
+- Include code examples in fenced blocks when beneficial
+
+## Process
+1. **Analyze User Requirements**
+   - Determine the scope of standards needed
+   - Identify the target file types or directories
+   - Categorize the type of standards (style, architecture, security, etc.)
+
+2. **Create Front Matter**
+   - Generate appropriate applyTo glob pattern based on scope
+   - Use YAML format with proper syntax
+
+3. **Structure Content by Standards Type**
+   *(templates for Coding Style, Architectural Patterns, Security Practices exactly as shown in original assistant message 09)*
+
+4. **Write Specific Rules**
+   - Formulate each rule as an imperative statement
+   - Include examples for complex or ambiguous rules
+   - Specify exceptions explicitly when they exist
+   - Cross-reference related instruction files when appropriate
+
+5. **Validate Content**
+   - Ensure all rules are actionable and measurable
+   - Check for conflicts with existing standards
+   - Verify proper markdown formatting
+   - Confirm heading hierarchy is correct
+
+## Quality Assurance Checklist
+- [ ] ApplyTo pattern matches intended scope accurately
+- [ ] All rules use imperative language consistently
+- [ ] Examples are provided for complex rules
+- [ ] No conflicting instructions exist
+- [ ] Markdown formatting follows lint standards
+- [ ] Content organization is logical and scannable
+- [ ] Cross-references are accurate and helpful
+
+## Success Criteria
+*(validation requirements exactly as shown in original assistant message 09)*
+
+## Error Prevention
+*(common mistakes and validation steps exactly as shown in original assistant message 09)*
+
+## Output Format
+Create the instruction file at the specified location with:
+1. Proper front matter with applyTo pattern
+2. Clear title describing the standards
+3. Organized sections for different rule categories
+4. Specific, actionable rules in bullet format
+5. Code examples where beneficial
+6. Cross-references to related files when appropriate
+
+The generated file should serve as automatic guidance for AI agents when generating code in the specified scope.
+```
