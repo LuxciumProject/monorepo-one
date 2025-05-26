@@ -1,0 +1,30 @@
+/* Pair 02 */
+// -&!! !!! user !!! !!- 02
+i need assistance to write a configuration or a doccument can you help me ? we must be capable to write instructions using the something.instructions.md and also we may need or not (instead) to do something.prompt.md please insure you understand the differece by striving to get all the details about it all over the web and also inn https://code.visualstudio.com/docs/copilot/copilot-customization (i include the file as pdf so you do have access to taht instead of the web link) 
+
+// -?!! !!! ASSISTANT !!! !!- 02
+
+✔︎
+
+**Key Differences Between Instructions and Prompt Files:**
+
+**Instructions Files (.instructions.md):**
+- **Purpose**: Automatic guidelines that supplement your existing chat requests  
+- **Behavior**: Always applied in background – you don't see them directly  
+- **Scope**: Define coding standards, preferences, and rules  
+- **Trigger**: Automatically included based on context or file patterns  
+
+**Prompt Files (.prompt.md):**
+- **Purpose**: Complete standalone chat prompts you can invoke  
+- **Behavior**: Manually executed – you call them explicitly  
+- **Scope**: Full conversation templates with specific tasks  
+- **Trigger**: You run them via `/promptname` or command palette  
+
+**Configuration Strategy Options:**
+1. **Instructions-Only Approach** – Set persistent coding standards  
+2. **Prompts-Only Approach** – Create reusable task templates  
+3. **Hybrid Approach** – Instructions for standards + Prompts for specific workflows  
+
+What type of development work are you doing, and what specific behaviors do you want to automate or standardize? This will help me recommend the best approach and create the appropriate configuration files for your needs.
+
+Would you like me to start with a specific scenario or create a template structure you can customize?
