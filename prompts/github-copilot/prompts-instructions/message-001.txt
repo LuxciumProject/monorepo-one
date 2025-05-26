@@ -1,0 +1,18 @@
+/* Pair 01 */
+// -&!! !!! user !!! !!- 01
+i need to have help on the topic and ask you some questions 
+
+// -?!! !!! ASSISTANT !!! !!- 01
+
+✔︎
+
+I understand you want help with GitHub Copilot topics including:
+
+- Custom instructions and prompt files for personalizing Copilot responses
+- The extensive settings available for configuring Copilot's behavior across different scenarios
+- How to implement workspace-specific vs user-specific customizations
+
+I'm ready to answer your questions about any aspect of these Copilot features. What specific area would you like to explore first?
+
+Drop here to insert into user message  
+Max 100 files at 5MB each
