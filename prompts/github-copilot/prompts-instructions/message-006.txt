@@ -1,0 +1,100 @@
+/* Pair 06 */
+// -&!! !!! user !!! !!- 06 // User 
+sorry it must make the ai agent do the things only when needed please explain also when and also why or how to determine when to do X (where here we explain how to do a prompt file to an ai agent so they can do just that on request) all good ??? please do now! as i would ask the ai agent in the tool (vscode ai agent or other in that range) to do generate on my request a given *.prompt.md file and all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? NOW! DO!!!
+
+// -?!! !!! ASSISTANT !!! !!- 06
+# AI Agent Instructions: Creating *.prompt.md Files On-Demand
+
+## TRIGGER RECOGNITION
+**You create a prompt file ONLY when the user explicitly requests:**
+- "Create a prompt file for [task]"
+- "Make a prompt for [workflow]"
+- "Generate a .prompt.md that [does X]"
+- "I need a reusable prompt to [accomplish Y]"
+- "Setup a prompt file for [process]"
+
+**DO NOT create prompt files when user asks for:**
+- Direct code generation
+- Immediate task execution
+- One-time solutions
+- Simple explanations
+
+## INTENT ANALYSIS PROTOCOL
+When user requests a prompt file, analyze:
+```
+1. TASK PATTERN IDENTIFICATION
+   └─ Is this task:
+      ├─ Repeatable? → Include variables
+      ├─ Multi-step? → Use agent mode
+      ├─ Transformative? → Use edit mode
+      └─ Informational? → Use ask mode
+
+2. SCOPE DETERMINATION
+   └─ What does user want to automate:
+      ├─ Code generation? → Focus on output specs
+      ├─ Workflow automation? → Include process steps
+      ├─ Analysis/Review? → Emphasize criteria
+      └─ Project setup? → Define structure templates
+
+3. CONTEXT REQUIREMENTS
+   └─ What context will the prompt need:
+      ├─ File references? → Use ${file} variables
+      ├─ User inputs? → Add ${input:name} prompts
+      ├─ Workspace data? → Include ${workspaceFolder}
+      └─ External specs? → Link [spec](path) files
+```
+
+## DECISION TREE: PROMPT CONSTRUCTION
+### Step 1: Determine Mode
+```yaml
+IF task requires:
+  - Multiple file operations
+  - Running commands
+  - Complex workflows
+  → mode: 'agent'
+ELSE IF task requires:
+  - Modifying existing code
+  - Refactoring
+  - Direct file edits
+  → mode: 'edit'
+ELSE:
+  - Questions/planning
+  - Analysis/review
+  - Documentation
+  → mode: 'ask'
+```
+
+### Step 2: Select Tools (for agent mode)
+```yaml
+Task involves → Required tools:
+- Reading/analyzing code → ['codebase']
+- Creating/modifying files → ['filesystem']
+- Running commands → ['terminal']
+- GitHub operations → ['githubRepo']
+- Searching code patterns → ['codebase', 'filesystem']
+```
+
+### Step 3: Structure Content Based on Task Type
+*(examples for Code Generation, Workflow Automation, Analysis/Review shown in original message)*
+
+## CONTENT GENERATION RULES
+### Variable Usage Decision Logic
+*(decision table shown in original message)*
+
+### Reference Inclusion Logic
+*(reference rules shown in original message)*
+
+## VALIDATION CHECKLIST
+*(checklist shown in original message)*
+
+## OUTPUT FORMAT REQUIREMENTS
+*(naming, structure, sections detailed in original message)*
+
+## EXAMPLE RECOGNITION PATTERNS
+*(examples provided in original message)*
+
+## CRITICAL REMINDERS
+1. **Never assume** – If unclear, ask clarifying questions  
+2. **Always consider reusability** – Add variables for changeable values  
+3. **Test mentally** – Ensure another AI could execute it  
+4. **Keep focused** – One prompt = one clear purpose
