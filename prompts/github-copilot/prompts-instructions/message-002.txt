@@ -1,6 +1,13 @@
 /* Pair 02 */
 // -&!! !!! user !!! !!- 02
-i need assistance to write a configuration or a doccument can you help me ? we must be capable to write instructions using the something.instructions.md and also we may need or not (instead) to do something.prompt.md please insure you understand the differece by striving to get all the details about it all over the web and also inn https://code.visualstudio.com/docs/copilot/copilot-customization (i include the file as pdf so you do have access to taht instead of the web link) 
+
+i need assistance to write a configuration or a doccument can you help me ? we
+must be capable to write instructions using the something.instructions.md and
+also we may need or not (instead) to do something.prompt.md please insure you
+understand the differece by striving to get all the details about it all over
+the web and also inn
+https://code.visualstudio.com/docs/copilot/copilot-customization (i include the
+file as pdf so you do have access to taht instead of the web link)
 
 // -?!! !!! ASSISTANT !!! !!- 02
 

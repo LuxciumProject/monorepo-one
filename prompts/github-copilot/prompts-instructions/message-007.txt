@@ -1,6 +1,18 @@
 /* Pair 07 */
-// -&!! !!! user !!! !!- 07 // User 
-now do that but for the *.instruction.md instead this time and as i would ask the ai agent in teh toll to do generate on my request a given *.instruction.md file and again, but now for taht different kind, all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? think of how to do that please then explain to their benefit in the language they expect...
+// -&!! !!! user !!! !!- 07
+
+
+Now do that but for the *.instruction.md instead this time and as i would
+ask the ai agent in teh toll to do generate on my request a given
+*.instruction.md file and again, but now for taht different kind, all that there
+is to know to make any decisions about the content itself and the structure and
+all that jazz... the user would explicitly request to get this and we need to
+have an ai agent capable to understand what this is all about from each angles
+they may have to think about this situation, please take teh time to imagine all
+there is to effectively explain so that it would be valid in production i will
+reuse your output to prompt my agents make it in tune to address an ai agent the
+way they expects ... pelase !!! alright??? think of how to do that please then
+explain to their benefit in the language they expect...
 
 // -?!! !!! ASSISTANT !!! !!- 07
 # AI Agent Instructions: Creating *.instructions.md Files On-Demand

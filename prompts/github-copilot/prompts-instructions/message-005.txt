@@ -1,6 +1,9 @@
 /* Pair 05 */
-// -&!! !!! user !!! !!- 05 // User 
-explain like you would to an ai agent how to create a *.prompt.md file please with all the details required for an ai agent to know how to decide what to write how, when and all of the above... alright??? please do now !!! 
+// -&!! !!! user !!! !!- 05
+
+explain like you would to an ai agent how to create a *.prompt.md file please
+with all the details required for an ai agent to know how to decide what to
+write how, when and all of the above... alright??? please do now !!!
 
 // -?!! !!! ASSISTANT !!! !!- 05
 # Instructions for AI Agent: Creating *.prompt.md Files

@@ -1,6 +1,15 @@
 /* Pair 03 */
 // -&!! !!! user !!! !!- 03
-not only taht but also the fact is that we want to prepare a project using only those 2 kinds and along with the ai agent in flight would have to follow either those 2 and also with the fact taht he would write the files for us as scripts (in the scripts/ folder top level of the project ok this is with the 2   .instructions.md for ongoing coding rules and .prompt.md for on-demand, template-driven AI tasks as it is the best leveraged... and best practices or well known best practices for using them thing as a seed for replicable projects segments from scratch to multipurpose monolithic project of each kind we want to define and other like such 
+
+not only taht but also the fact is that we want to prepare a project using only
+those 2 kinds and along with the ai agent in flight would have to follow either
+those 2 and also with the fact taht he would write the files for us as scripts
+(in the scripts/ folder top level of the project ok this is with the 2
+.instructions.md for ongoing coding rules and .prompt.md for on-demand,
+template-driven AI tasks as it is the best leveraged... and best practices or
+well known best practices for using them thing as a seed for replicable projects
+segments from scratch to multipurpose monolithic project of each kind we want to
+define and other like such
 
 // -?!! !!! ASSISTANT !!! !!- 03
 

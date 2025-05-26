@@ -1,0 +1,5 @@
+to=bio
+Type : [ex: Projet de ... / Apprentissage / Préférence d'échange]
+Contexte : [ex: Travail personnel / Étude / Détente]
+Instruction : [ex: L'utilisateur veut que je l’aide à construire un univers inspiré de la mythologie nordique]
+Résultat attendu : [ex: Développement de ... / Création de ... / Élaboration de ...]

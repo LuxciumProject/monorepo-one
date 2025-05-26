@@ -1,6 +1,18 @@
 /* Pair 06 */
-// -&!! !!! user !!! !!- 06 // User 
-sorry it must make the ai agent do the things only when needed please explain also when and also why or how to determine when to do X (where here we explain how to do a prompt file to an ai agent so they can do just that on request) all good ??? please do now! as i would ask the ai agent in the tool (vscode ai agent or other in that range) to do generate on my request a given *.prompt.md file and all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? NOW! DO!!!
+// -&!! !!! user !!! !!- 06
+
+sorry it must make the ai agent do the things only when needed please explain
+also when and also why or how to determine when to do X (where here we explain
+how to do a prompt file to an ai agent so they can do just that on request) all
+good ??? please do now! as i would ask the ai agent in the tool (vscode ai agent
+or other in that range) to do generate on my request a given *.prompt.md file
+and all that there is to know to make any decisions about the content itself and
+the structure and all that jazz... the user would explicitly request to get this
+and we need to have an ai agent capable to understand what this is all about
+from each angles they may have to think about this situation, please take teh
+time to imagine all there is to effectively explain so that it would be valid in
+production i will reuse your output to prompt my agents make it in tune to
+address an ai agent the way they expects ... pelase !!! alright??? NOW! DO!!!
 
 // -?!! !!! ASSISTANT !!! !!- 06
 # AI Agent Instructions: Creating *.prompt.md Files On-Demand

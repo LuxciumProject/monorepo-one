@@ -1,6 +1,9 @@
 /* Pair 08 */
-// -&!! !!! user !!! !!- 08 // User 
-make it compliant to be as a *.instruction using the highest level of markdown-lint strictness as usual and containing all that needs to be included please 
+// -&!! !!! user !!! !!- 08
+
+make it compliant to be as a *.instruction using the highest level of
+markdown-lint strictness as usual and containing all that needs to be included
+please
 
 // -?!! !!! ASSISTANT !!! !!- 08
 ```markdown

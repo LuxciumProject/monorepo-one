@@ -1,6 +1,8 @@
 /* Pair 09 */
-// -&!! !!! user !!! !!- 09 // User 
-and now make it as a *.prompt.md with mostly the same information but of the kind of the prompt.md 
+// -&!! !!! user !!! !!- 09
+
+And now make it as a *.prompt.md with mostly the same information but of
+the kind of the prompt.md
 
 // -?!! !!! ASSISTANT !!! !!- 09
 ```markdown

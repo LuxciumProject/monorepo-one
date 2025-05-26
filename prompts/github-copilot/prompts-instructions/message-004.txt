@@ -1,6 +1,12 @@
 /* Pair 04 */
-// -&!! !!! user !!! !!- 04 // User 
-ok to start with we will look into something that i have here... we want to have a folder that (at root level of a project alright??) to have a multipurpose initial folder that can have stuff added and configured via prompts and scripts and the ai agent would have to write everything themselves and update them state at each stage autonomously the way i will explain to you please note that you need to ask me if i forget to tell you later remind me 
+// -&!! !!! user !!! !!- 04
+
+ok to start with we will look into something that i have here... we want to have
+a folder that (at root level of a project alright??) to have a multipurpose
+initial folder that can have stuff added and configured via prompts and scripts
+and the ai agent would have to write everything themselves and update them state
+at each stage autonomously the way i will explain to you please note that you
+need to ask me if i forget to tell you later remind me
 
 // -?!! !!! ASSISTANT !!! !!- 04
 
