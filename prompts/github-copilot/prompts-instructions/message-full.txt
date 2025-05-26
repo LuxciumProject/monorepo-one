@@ -33,11 +33,7 @@ file as pdf so you do have access to taht instead of the web link)
 
 // -?!! !!! ASSISTANT !!! !!- 02 
    
-
-
 ✔︎
-
-
 
 **Key Differences Between Instructions and Prompt Files:**
 
@@ -100,11 +96,7 @@ define and other like such
 
 // -?!! !!! ASSISTANT !!! !!- 03 
 
-
-
 ✔︎
-
-
 
 **Proposed Project Structure & Strategy:**
 
@@ -189,11 +181,7 @@ need to ask me if i forget to tell you later remind me
 
 // -?!! !!! ASSISTANT !!! !!- 04 
 
-
-
 ✔︎
-
-
 
 **What I've Captured So Far:**
 
@@ -3079,5 +3067,4 @@ Create the instruction file at the specified location with:
 
 The generated file should serve as automatic guidance for AI agents when generating code in the specified scope.
 
-```
 // #endregion: /* Pair 09 */
