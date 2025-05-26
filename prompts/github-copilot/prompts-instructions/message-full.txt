@@ -1,13 +1,11 @@
 // #region: /* Pair 01 */
 // -&!! !!! user !!! !!- 01
+
 i need to have help on the topic and ask you some questions 
-// -?!! !!! ASSISTANT !!! !!- 01 
 
-
+// -?!! !!! ASSISTANT !!! !!- 01
 
 ✔︎
-
-
 
 I understand you want help with GitHub Copilot topics including:
 
@@ -24,9 +22,17 @@ I'm ready to answer your questions about any aspect of these Copilot features. W
 // #endregion: /* Pair 01 */
 // #region: /* Pair 02 */
 // -&!! !!! user !!! !!- 02
-i need assistance to write a configuration or a doccument can you help me ? we must be capable to write instructions using the something.instructions.md and also we may need or not (instead) to do something.prompt.md please insure you understand the differece by striving to get all the details about it all over the web and also inn https://code.visualstudio.com/docs/copilot/copilot-customization (i include the file as pdf so you do have access to taht instead of the web link) 
-// -?!! !!! ASSISTANT !!! !!- 02 
 
+i need assistance to write a configuration or a doccument can you help me ? we
+must be capable to write instructions using the something.instructions.md and
+also we may need or not (instead) to do something.prompt.md please insure you
+understand the differece by striving to get all the details about it all over
+the web and also inn
+https://code.visualstudio.com/docs/copilot/copilot-customization (i include the
+file as pdf so you do have access to taht instead of the web link)
+
+// -?!! !!! ASSISTANT !!! !!- 02 
+   
 
 
 ✔︎
@@ -82,8 +88,16 @@ Would you like me to start with a specific scenario or create a template structu
 // #endregion: /* Pair 02 */
 // #region: /* Pair 03 */
 // -&!! !!! user !!! !!- 03
+not only taht but also the fact is that we want to prepare a project using
+only those 2 kinds and along with the ai agent in flight would have to follow
+either those 2 and also with the fact taht he would write the files for us as
+scripts (in the scripts/ folder top level of the project ok this is with the 2
+.instructions.md for ongoing coding rules and .prompt.md for on-demand,
+template-driven AI tasks as it is the best leveraged... and best practices or
+well known best practices for using them thing as a seed for replicable projects
+segments from scratch to multipurpose monolithic project of each kind we want to
+define and other like such
 
-not only taht but also the fact is that we want to prepare a project using only those 2 kinds and along with the ai agent in flight would have to follow either those 2 and also with the fact taht he would write the files for us as scripts (in the scripts/ folder top level of the project ok this is with the 2   .instructions.md for ongoing coding rules and .prompt.md for on-demand, template-driven AI tasks as it is the best leveraged... and best practices or well known best practices for using them thing as a seed for replicable projects segments from scratch to multipurpose monolithic project of each kind we want to define and other like such
 // -?!! !!! ASSISTANT !!! !!- 03 
 
 
@@ -165,7 +179,14 @@ What type of project should we use as our initial template - this will help me c
 // #endregion: /* Pair 03 */
 // #region: /* Pair 04 */
 // -&!! !!! user !!! !!- 04 // User 
-ok to start with we will look into something that i have here... we want to have a folder that (at root level of a project alright??) to have a multipurpose initial folder that can have stuff added and configured via prompts and scripts and the ai agent would have to write everything themselves and update them state at each stage autonomously the way i will explain to you please note that you need to ask me if i forget to tell you later remind me
+
+ok to start with we will look into something that i have here... we want to have
+a folder that (at root level of a project alright??) to have a multipurpose
+initial folder that can have stuff added and configured via prompts and scripts
+and the ai agent would have to write everything themselves and update them state
+at each stage autonomously the way i will explain to you please note that you
+need to ask me if i forget to tell you later remind me
+
 // -?!! !!! ASSISTANT !!! !!- 04 
 
 
@@ -217,7 +238,11 @@ What's your vision for how this autonomous AI-managed initialization system shou
 // #endregion: /* Pair 04 */
 // #region: /* Pair 05 */
 // -&!! !!! user !!! !!- 05 // User 
-explain like you would to an ai agent how to create a *.prompt.md file please with all the details required for an ai agent to know how to decide what to write how, when and all of the above... alright??? please do now !!! 
+
+explain like you would to an ai agent how to create a *.prompt.md file please
+with all the details required for an ai agent to know how to decide what to
+write how, when and all of the above... alright??? please do now !!!
+
 // -?!! !!! ASSISTANT !!! !!- 05 
 # Instructions for AI Agent: Creating *.prompt.md Files
 
@@ -588,7 +613,20 @@ Your goal is to create ${input:target} that follows [project standards].
 // #endregion: /* Pair 05 */
 // #region: /* Pair 06 */
 // -&!! !!! user !!! !!- 06 // User 
-sorry it must make the ai agent do the things only when needed please explain also when and also why or how to determine when to do X (where here we explain how to do a prompt file to an ai agent so they can do just that on request) all good ??? please do now! as i would ask the ai agent in the tool (vscode ai agent or other in that range) to do generate on my request a given *.prompt.md file and all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? NOW! DO!!!
+
+sorry it must make the ai agent do the things only when needed please explain
+also when and also why or how to determine when to do X (where here we explain
+how to do a prompt file to an ai agent so they can do just that on request) all
+good ??? please do now! as i would ask the ai agent in the tool (vscode ai agent
+or other in that range) to do generate on my request a given *.prompt.md file
+and all that there is to know to make any decisions about the content itself and
+the structure and all that jazz... the user would explicitly request to get this
+and we need to have an ai agent capable to understand what this is all about
+from each angles they may have to think about this situation, please take teh
+time to imagine all there is to effectively explain so that it would be valid in
+production i will reuse your output to prompt my agents make it in tune to
+address an ai agent the way they expects ... pelase !!! alright??? NOW! DO!!!
+
 // -?!! !!! ASSISTANT !!! !!- 06 
 # AI Agent Instructions: Creating *.prompt.md Files On-Demand
 
@@ -1125,7 +1163,19 @@ Before finalizing prompt file, verify:
 // #endregion: /* Pair 06 */
 // #region: /* Pair 07 */
 // -&!! !!! user !!! !!- 07 // User 
-now do that but for the *.instruction.md instead this time and as i would ask the ai agent in teh toll to do generate on my request a given *.instruction.md file and again, but now for taht different kind, all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? think of how to do that please then explain to their benefit in the language they expect...
+
+now do that but for the *.instruction.md instead this time and as i would ask
+the ai agent in teh toll to do generate on my request a given *.instruction.md
+file and again, but now for taht different kind, all that there is to know to
+make any decisions about the content itself and the structure and all that
+jazz... the user would explicitly request to get this and we need to have an ai
+agent capable to understand what this is all about from each angles they may
+have to think about this situation, please take teh time to imagine all there is
+to effectively explain so that it would be valid in production i will reuse your
+output to prompt my agents make it in tune to address an ai agent the way they
+expects ... pelase !!! alright??? think of how to do that please then explain to
+their benefit in the language they expect...
+
 // -?!! !!! ASSISTANT !!! !!- 07 
 
 1. When to create instruction files (triggers)
@@ -1997,7 +2047,11 @@ CONCISE when:
 // #endregion: /* Pair 07 */
 // #region: /* Pair 08 */
 // -&!! !!! user !!! !!- 08 // User 
-make it compliant to be as a *.instruction using the highest level of markdown-lint strictness as usual and containing all that needs to be included please
+
+make it compliant to be as a *.instruction using the highest level of
+markdown-lint strictness as usual and containing all that needs to be included
+please
+
 // -?!! !!! ASSISTANT !!! !!- 08 
 
 1. Proper front matter with applyTo pattern
@@ -2544,7 +2598,10 @@ applyTo: "glob-pattern-here"
 // #endregion: /* Pair 08 */
 // #region: /* Pair 09 */
 // -&!! !!! user !!! !!- 09 // User 
-and now make it as a *.prompt.md with mostly the same information but of the kind of the prompt.md
+
+and now make it as a *.prompt.md with mostly the same information but of the
+kind of the prompt.md
+
 // -?!! !!! ASSISTANT !!! !!- 09 
 
 Key differences:
