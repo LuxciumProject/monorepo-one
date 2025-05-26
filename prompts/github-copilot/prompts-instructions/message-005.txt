@@ -1,0 +1,155 @@
+/* Pair 05 */
+// -&!! !!! user !!! !!- 05 // User 
+explain like you would to an ai agent how to create a *.prompt.md file please with all the details required for an ai agent to know how to decide what to write how, when and all of the above... alright??? please do now !!! 
+
+// -?!! !!! ASSISTANT !!! !!- 05
+# Instructions for AI Agent: Creating *.prompt.md Files
+
+## File Structure and Syntax Requirements
+
+**File Naming Convention**
+- Use descriptive names: `task-description.prompt.md`
+- Always end with `.prompt.md` suffix
+- Use kebab-case for multi-word names
+- Examples: `generate-component.prompt.md`, `setup-testing.prompt.md`
+
+**File Structure (Two Sections)**
+
+### 1. Front Matter Header (Optional but Recommended)
+```yaml
+---
+mode: 'agent'                    # Options: 'ask', 'edit', 'agent'
+tools: ['codebase', 'terminal']  # Available tools for agent mode
+description: 'Brief task description'
+---
+```
+
+### 2. Prompt Body (Required)
+- Written in Markdown format
+- Contains natural-language instructions
+- Can reference variables using `${variableName}` syntax
+- Can link to other files using `[text](path)` syntax
+
+## Decision Matrix: When to Create Each Type
+
+**Create a Prompt File When**
+- Task is repeatable across projects
+- Requires specific context or templates
+- Involves multiple steps or complex logic
+- Needs to be shared with team members
+- Requires specific tool combinations
+
+**Mode Selection Logic**
+- `agent`: Multi-step tasks, file generation, complex workflows  
+- `edit`: Direct code modifications, refactoring existing files  
+- `ask` : Questions, explanations, planning discussions  
+
+## Content Crafting Guidelines
+
+**Structure Your Prompt Body**
+
+1. **Goal Statement** (First paragraph)
+   ```markdown
+   Your goal is to [specific outcome]. This prompt [context/purpose].
+   ```
+
+2. **Context Section** (If needed)
+   ```markdown
+   ## Context
+   - Current project structure: ${workspaceFolder}
+   - Working with: ${file}
+   - User selection: ${selection}
+   ```
+
+3. **Requirements Section** (Always include)
+   ```markdown
+   ## Requirements
+   * Use [specific technology/pattern]
+   * Follow [coding standards/conventions]
+   * Include [specific elements]
+   * Ensure [quality criteria]
+   ```
+
+4. **Process Steps** (For complex tasks)
+   ```markdown
+   ## Process
+   1. Analyze ${input:requirement}
+   2. Generate initial structure
+   3. Implement core functionality
+   4. Add error handling and validation
+   5. Create documentation
+   ```
+
+5. **References**
+   ```markdown
+   ## References
+   - Design patterns: [patterns.md](../docs/patterns.md)
+   - API specs: [api-spec.yaml](../specs/api-spec.yaml)
+   - Coding standards: [standards.instructions.md](../instructions/standards.instructions.md)
+   ```
+
+## Variable Usage Patterns
+*Built-in Variables*: `${workspaceFolder}`, `${file}`, `${selection}`, `${selectedText}`  
+*Input Variables*: `${input:variableName}`, `${input:componentName:Enter component name}`
+
+## Tool Selection Strategy
+```yaml
+# For code generation and file manipulation
+tools: ['codebase', 'filesystem']
+# For running commands and testing
+tools: ['terminal', 'codebase']
+# For repository analysis
+tools: ['githubRepo', 'codebase']
+# For comprehensive project work
+tools: ['codebase', 'filesystem', 'terminal', 'githubRepo']
+```
+
+## Quality Criteria for Effective Prompts
+- Use specific, actionable language
+- Avoid ambiguous terms
+- Specify exact file locations and naming conventions
+- Include examples when possible
+
+## Example Template Pattern
+```markdown
+---
+mode: 'agent'
+tools: ['codebase', 'filesystem']
+description: 'Generate [specific deliverable] following [standards]'
+---
+
+Your goal is to create ${input:target} that follows [project standards].
+
+## Requirements
+* Use [technology stack]
+* Follow [naming conventions]
+* Include [required elements]
+* Ensure [quality standards]
+
+## Process
+1. Analyze existing [context]
+2. Generate [deliverable] structure
+3. Implement [core functionality]
+4. Add [additional requirements]
+5. Validate [success criteria]
+
+## References
+- Standards: [file.instructions.md](../instructions/file.instructions.md)
+- Examples: [examples/](../examples/)
+
+## Success Criteria
+- [ ] [Specific outcome 1]
+- [ ] [Specific outcome 2]
+- [ ] [Validation criteria]
+```
+
+## Decision Flow for AI Agent
+1. Identify Task Type → Choose appropriate mode  
+2. Assess Complexity → Select required tools  
+3. Define Scope → Write clear goal statement  
+4. Gather Context → Include relevant variables and references  
+5. Specify Requirements → List concrete, measurable criteria  
+6. Plan Process → Break down into actionable steps  
+7. Validate Completeness → Ensure all elements are covered  
+
+**Always remember:** The prompt file should enable another AI agent to execute the task autonomously with consistent, predictable results.
