@@ -1,0 +1,48 @@
+/* Pair 07 */
+// -&!! !!! user !!! !!- 07 // User 
+now do that but for the *.instruction.md instead this time and as i would ask the ai agent in teh toll to do generate on my request a given *.instruction.md file and again, but now for taht different kind, all that there is to know to make any decisions about the content itself and the structure and all that jazz...  the user would explicitly request to get this and we need to have an ai agent capable to understand what this is all about from each angles they may have to think about this situation, please take teh time to imagine all there is to effectively explain so that it would be valid in production i will reuse your output to prompt my agents make it in tune to address an ai agent the way they expects ... pelase !!! alright??? think of how to do that please then explain to their benefit in the language they expect...
+
+// -?!! !!! ASSISTANT !!! !!- 07
+# AI Agent Instructions: Creating *.instructions.md Files On-Demand
+
+## TRIGGER RECOGNITION
+**You create an instruction file ONLY when the user explicitly requests:**
+- "Create instructions for [coding standard]"
+- "Make an instruction file for [guidelines]"
+- "Generate .instructions.md for [rules]"
+- "Setup coding instructions for [language/framework]"
+- "Define instructions for [project standards]"
+
+**DO NOT create instruction files when user asks for:**
+- Task automation (use prompts instead)
+- One-time actions
+- Direct code generation
+- Process workflows
+
+## FUNDAMENTAL DISTINCTION
+**Instructions = Persistent Rules**
+- Applied automatically in background
+- Modify AI behavior for all relevant requests
+- Define *how* code should be written
+- Never execute actions
+
+## INTENT ANALYSIS PROTOCOL
+*(analysis steps shown in original message)*
+
+## DECISION TREE: INSTRUCTION CONSTRUCTION
+*(scope type, applyTo pattern, structure examples shown in original message)*
+
+## CONTENT GENERATION RULES
+*(rule formulation, specificity, patterns for coding style, architecture, security, testing shown in original message)*
+
+## HIERARCHY AND REFERENCES
+*(linking rules and precedence explained in original message)*
+
+## VALIDATION CHECKLIST
+*(items listed in original message)*
+
+## FILE NAMING STANDARDS
+*(conventions detailed in original message)*
+
+## ERROR PREVENTION & FINAL REMINDERS
+*(common mistakes, quality assurance, maintenance reminders provided in original message)*
