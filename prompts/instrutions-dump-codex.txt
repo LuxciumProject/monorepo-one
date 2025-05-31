@@ -1,0 +1,125 @@
+
+## codex
+
+Below is a quick survey of the different ways you can “teach” the Codex-CLI agent (or any of the
+other project agents) to remember a special preference or instruction from one session to the next,
+ followed by my recommendation for the most efficient, maintainable approach in our current
+multi‐agent context.
+
+### 1. In-session Prompt Injection (Ephemeral)
+
+What it is
+• You prepend a reminder or special instruction every time you invoke the agent (e.g. via a –prompt
+ flag or by copy-pasting at the top of your chat).
+• That context lives only for the duration of the session/query.
+
+Pros
+• No changes to the repo.
+• Immediate, flexible overrides.
+
+Cons
+• Tedious to repeat on every session.
+• Easy to forget; doesn’t persist.
+
+### 2. Environment Variables or CLI-Level Config
+
+What it is
+• Export an env var (e.g. export CODEX_CLI_PREFER_FAST_REPLY=true) or use a local
+~/.codexcli/config.toml/.yaml to hold preferences.
+• Codex-CLI reads those at startup.
+
+Pros
+• Persisted across sessions on that machine.
+• Can be easily toggled or scripted.
+
+Cons
+• Machine-local; not shared via repo.
+• Requires coding the agent to read/apply these settings.
+
+### 3. Dedicated “Agent Memory” File
+
+What it is
+• Maintain a small JSON, YAML, or Markdown file (e.g. .agent_memory.yaml) in the repo or in your
+home directory.
+• Agent code loads it on start and preserves new entries when you ask it to “remember” something.
+
+Pros
+• Can be versioned in Git (if checked in).
+• Structured, extensible “memory” for richer state.
+
+Cons
+• Requires implementing read/write logic in the agent.
+• Risk of merge conflicts if many people edit it.
+
+### 4. “Golden Source” Instructions in AGENTS.md (or .clinerules)
+
+What it is
+• Codify your preference in the project’s primary instructions files:
+
+    * **AGENTS.md** for global, cross-agent policies and reminders.
+    * Files under **`.clinerules/`** for agent-specific rules.
+
+Pros
+• Single source of truth versioned in Git.AGENTS.md
+• Automatically applied to every session of every agent (Codex-CLI, Cline AI, Copilot Chat).
+• Transparent to the whole team; no local setup required.
+
+Cons
+• Requires a PR/update against AGENTS.md or .clinerules/ whenever you want to tune the preference.
+
+### 5. Git Commit Hooks or Automation Scripts
+
+What it is
+• Add a Git hook (e.g. pre-commit or prepare-commit-msg) or a wrapper script (scripts/…) that
+ensures certain flags or reminders are always injected.
+
+Pros
+• Enforced at commit or script-entry level without manual step.
+
+Cons
+• Overkill for something as simple as a chat-agent preference.
+• Can be brittle and hard to maintain.
+
+### 6. VS Code Copilot-Specific Instructions
+
+What it is
+• If your preference only applies to VS Code Copilot Chat, drop a file like
+.github/copilot-instructions.md or a front-matter-style .instructions.md under
+.github/instructions/.
+
+Pros
+• Targeted purely at Copilot Chat; invisible elsewhere.
+
+Cons
+• Does nothing for Codex-CLI or Cline AI agents.
+
+
+### 🔑 Recommended Best Practice for Our Current Multi-Agent Setup
+
+Given that we’re running three different agents (Codex-CLI, Cline AI, and VS Code Copilot Chat) and
+ want a single, shareable source of truth that every agent will automatically load:
+
+    1. **Persist your preference in AGENTS.md**
+       – This file already exists as the *primary* entry point for project-wide rules and
+memory.[AGENTS.md](/projects/annexes/codex_cli-k3/AGENTS.md)
+       – Add a clearly marked section (e.g. “Session-Sticky Preferences”) at the bottom.
+    2. **Optionally mirror agent-specific variations in `.clinerules/`**
+       – If you later need Cline AI or Copilot Chat to behave slightly differently, you can drop
+targeted rules in `.clinerules/` or the Copilot instructions folder, but keep the global intent in
+AGENTS.md.
+    3. **Version-control and peer-review**
+       – By committing this change, everyone (and every agent) picks up the instruction on their
+next run—no manual copy-pasting or local env vars required.
+
+#### Example snippet to append to AGENTS.mdx
+
+    ### Session-Sticky Preferences
+
+Whenever the user requests an operational preference (e.g. “reply quickly” mode), all agents MUST read and honor that preference across future sessions. To update or remove such a preference, edit this section using markdown-lint compliant syntax.
+
+Why this is best here
+
+    * **Single source of truth**: AGENTS.md is already our central “how we work” doc.
+    * **Cross-agent**: Applies to Codex-CLI, Cline AI, and Copilot Chat all at once.
+
+NEVER REMOVE ONLY ADD (or update) AUTOMATICALLY THIS FILE TO RECORD PREFERENCES FOR THE USER AND TO SET A STATEFUL AND SOULFUL EXPERIENCE (remember to the AGENTS.md if you are CODE CLI by openai, or read only if you are Cline AI or VS Code Copilot Chat).
