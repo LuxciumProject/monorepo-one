@@ -148,7 +148,7 @@ This monorepo contains various projects, libraries, and services organized in a 
     4) NOT TO SELL COPIES OF;
 ```
 
-   Even for unpermited usage you must provide the name of the copyright holder and this must be included in all copies or substantial portions of the Software:
+   Even for unpermitted usage you must provide the name of the copyright holder and this must be included in all copies or substantial portions of the Software:
 
    The Software is provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders X be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in this Software.
 
