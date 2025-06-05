@@ -66,5 +66,5 @@ export function getDataPath(
   const config = getConfig(configPath);
   const folderPath = getFolderPath(pathAlias, config, rootPath);
   console.log(`folderPath: ${folderPath}`);
-  return getFolderPath(pathAlias, config, rootPath) || '';
+  return folderPath || '';
 }
