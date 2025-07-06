@@ -29,23 +29,10 @@
   https://github.com/andrewrk/node-human-size
 */
 
-export const mags: `${Mags}`[] = [
-  '',
-  'K',
-  'M',
-  'G',
-  'T',
-  'P',
-  'E',
-  'Z',
-  'Y',
-];
+export const mags: `${Mags}`[] = ['', 'K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'];
 type Mags = '' | 'K' | 'M' | 'G' | 'T' | 'P' | 'E' | 'Z' | 'Y';
 
-export function humanSize(
-  bytes: number,
-  spaced?: boolean
-): `${string}${Mags}B`;
+export function humanSize(bytes: number, spaced?: boolean): `${string}${Mags}B`;
 export function humanSize(
   bytes: number,
   precision?: number,
@@ -72,5 +59,4 @@ export function humanSize(
   var suffix: `${Mags}B` = `${mags[magnitude]}${'B'}`;
   return `${result.toFixed(precision)}${spacer}${suffix}`;
 }
-
 export default humanSize;
