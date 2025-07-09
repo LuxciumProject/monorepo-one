@@ -69,7 +69,7 @@
     "noResolve": false,
     "noLib": false,
     "moduleDetection": "force",
-    /* Vebosity */
+    /* Verbosity */
     "diagnostics": true,
     "extendedDiagnostics": true,
     "listEmittedFiles": false,

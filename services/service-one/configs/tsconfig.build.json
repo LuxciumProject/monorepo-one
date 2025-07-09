@@ -12,7 +12,7 @@
     "outDir": "../build",
     "rootDir": "../src",
     "incremental": true,
-    /* Vebosity */
+    /* Verbosity */
     "diagnostics": true,
     "extendedDiagnostics": true,
     "listEmittedFiles": false,

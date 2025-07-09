@@ -72,7 +72,7 @@
     // "stripInternal":"",
     "incremental": true,
     "pretty": true,
-    /* Vebosity */
+    /* Verbosity */
     "diagnostics": true,
     "extendedDiagnostics": true,
     "listEmittedFiles": false,

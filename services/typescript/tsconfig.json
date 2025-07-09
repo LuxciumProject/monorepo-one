@@ -51,7 +51,7 @@
     "skipDefaultLibCheck": false,
     "skipLibCheck": true,
     "noResolve": false,
-    /* Vebosity */
+    /* Verbosity */
     "diagnostics": true,
     "extendedDiagnostics": true,
     "listEmittedFiles": false,

@@ -94,7 +94,7 @@
     /* ALWAYS TRUE STRICT TYPE-CHECKING ADDITIONAL CHECKS MUST ALWAYS BE TRUE */
     /*                */
     /* Extra settings */
-    /* Vebosity */
+    /* Verbosity */
     "diagnostics": true
     // "extendedDiagnostics": true,
     // "listEmittedFiles": true,
@@ -110,7 +110,7 @@
 // "rootDirs": [],
 // "typeRoots": [],
 // "noLib": true,
-/* Vebosity */
+/* Verbosity */
 // "diagnostics": true,
 // "extendedDiagnostics": true,
 // "listEmittedFiles": true,
