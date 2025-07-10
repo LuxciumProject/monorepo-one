@@ -1,0 +1,22 @@
+# VS Code Copilot documentation
+
+week in the links each time it is relevant information change weekly and you need to browse the later official docs
+
+## Raw links to VS Code Copilot documentation
+
+Chat modes  `docs/copilot/chat/chat-modes.md` →
+[https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/chat/chat-modes.md](https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/chat/chat-modes.md) ([code.visualstudio.com][1])
+
+Customize AI responses  `docs/copilot/copilot-customization.md` →
+[https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/copilot-customization.md](https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/copilot-customization.md) ([code.visualstudio.com][2])
+
+Copilot settings reference  `docs/copilot/reference/copilot-settings.md` →
+[https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/reference/copilot-settings.md](https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/reference/copilot-settings.md) ([code.visualstudio.com][3])
+
+Copilot VS Code features cheat sheet  `docs/copilot/reference/copilot-vscode-features.md` →
+[https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/reference/copilot-vscode-features.md](https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/copilot/reference/copilot-vscode-features.md) ([code.visualstudio.com][4])
+
+[1]: https://code.visualstudio.com/docs/copilot/chat/chat-modes?utm_source=chatgpt.com "Chat modes in VS Code"
+[2]: https://code.visualstudio.com/docs/copilot/copilot-customization?utm_source=chatgpt.com "Customize AI responses in VS Code"
+[3]: https://code.visualstudio.com/docs/copilot/reference/copilot-settings?utm_source=chatgpt.com "GitHub Copilot in VS Code settings reference"
+[4]: https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features?utm_source=chatgpt.com "GitHub Copilot in VS Code cheat sheet"
