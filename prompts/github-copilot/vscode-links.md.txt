@@ -1,6 +1,6 @@
 # VS Code Copilot documentation
 
-week in the links each time it is relevant information change weekly and you need to browse the later official docs
+Seek: you must fetch in the official docs in the links each time it is relevant. This information change weekly and you need to browse the lat official docs, yes? look below.
 
 ## Raw links to VS Code Copilot documentation
 
