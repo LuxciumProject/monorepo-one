@@ -2094,6 +2094,11 @@
     },
     "github.copilot.chat.terminalChatLocation": "chatView",
     // "github.copilot.chat.welcomeMessage": "always",
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+      {
+        "file": ".github/instructions/use-conventional-commits.instructions.md"
+      }
+    ],
     "conventionalCommits.scopes": [
       "APIs",
       "backend",
