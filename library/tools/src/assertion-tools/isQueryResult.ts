@@ -1,7 +1,7 @@
 import type { QueryResult } from '../types/main';
 
 export function isQueryResult(contender: unknown): contender is QueryResult {
-  if (Array.isArray(contender)) {
+  if (Array.isArray(contender) && contender.length > 0) {
     return contender.every(item => {
       return (
         Array.isArray(item) &&

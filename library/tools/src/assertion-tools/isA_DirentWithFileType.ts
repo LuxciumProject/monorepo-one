@@ -4,6 +4,8 @@ const S = 'string';
 const B = 'boolean';
 
 export function isA_DirentWithFileType(item: any): item is DirentWithFileType {
+  if (!item) return false; // Handle null or undefined inputs
+
   return (
     typeof item.fileName === S &&
     typeof item.isBlockDevice === B &&
