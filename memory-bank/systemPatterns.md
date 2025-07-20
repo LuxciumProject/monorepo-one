@@ -16,7 +16,8 @@ Core functionality is organized into clearly defined project areas:
 - `services/` - Microservices and specialized services
 - `infrastructure/` - Development and deployment setup
 
-Each area contains multiple projects, with Rush managing TypeScript-based projects while allowing for other technologies as needed.
+Each area contains multiple projects, with Rush managing TypeScript-based
+projects while allowing for other technologies as needed.
 
 #### Support Infrastructure
 
@@ -140,3 +141,50 @@ Components that enable project development and maintenance:
 - Strict TypeScript configuration
 - Comprehensive type inference
 - Function signature consistency
+
+## Testing Patterns
+
+### Type Guard Testing Strategy
+
+Established comprehensive testing patterns for type guard functions:
+
+#### Test Structure Requirements
+
+- 100% code coverage mandatory
+- Edge case validation for all inputs
+- Null/undefined safety verification
+- Type assertion accuracy testing
+
+#### Mock Strategy Patterns
+
+- Node.js module mocking using `jest.mock()` for core modules
+- File system mocking for `fs` and `fs/promises`
+- Property descriptor handling for non-configurable objects
+- Error path testing with controlled failures
+
+#### Type Guard Validation Patterns
+
+- **Array Validation**: Length checks, element type verification,
+  empty array handling
+- **Object Validation**: Property existence, type checking,
+  nested structure validation
+- **Promise Validation**: PromiseLike detection, instanceof verification
+- **Path Validation**: File system interaction, directory existence,
+  error handling
+
+#### Testing Implementation Guidelines
+
+- Create test files with `.test.ts` suffix
+- Use descriptive test names following "should [action] for [condition]" pattern
+- Group tests by function using `describe` blocks
+- Include both positive and negative test cases
+- Test error conditions and edge cases explicitly
+
+#### Coverage Requirements
+
+- All statements must be executed
+- All branches must be covered
+- All functions must be tested
+- All lines must have test coverage
+
+This pattern ensures reliability and type safety across the library ecosystem.
