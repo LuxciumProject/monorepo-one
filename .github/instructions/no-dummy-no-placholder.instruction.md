@@ -1,3 +1,9 @@
+---
+applyTo: '**'
+description: 'Mandates real, executable code generation—no placeholders or dummy segments.'
+---
+
+
 # Instruction: Code Generation – Real Values over Placeholders
 
 It is essential that all code generated in this repository adheres to the principle of using real, concrete values instead of placeholders or dummy segments. This guideline ensures that all code is immediately executable and functional, enhancing the reliability and quality of our codebase.
@@ -45,25 +51,11 @@ Ensure that all generated code is immediately executable and free from non-funct
 
 ## Applicability
 
+---
+> [!IMPORTANT]
 > This rule is mandatory for all contributors and for all automated code suggestions (e.g., Copilot, VSCode AI, CI codegen steps).
-> If a value is not known at generation time but is required, use the idiomatic parametric form for the target language—never a fake placeholder.
 
 ---
 
-## Example
-
-**Bad example** (use of placeholder that breaks code):
-
-```bash
-cp <SOURCE_PATH> <DEST_PATH>  # <-- placeholder, NOT permitted!
-````
-
-**Good example** (real values or valid parametric syntax):
-
-```bash
-# Example concrete with real paths
-cp ~/Documents/report.txt /backup/reports/
-
-# Example parametric (legitimate dynamic values)
-cp "${SOURCE_PATH}" "${DEST_PATH}"
-```
+> [!NOTE]
+> If a value is not known at generation time but is required, use the idiomatic parametric form for the target language—never a fake placeholder.
