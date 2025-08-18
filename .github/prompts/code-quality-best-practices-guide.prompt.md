@@ -1,3 +1,7 @@
+---
+description: A guide to best practices for maintaining code quality when using GitHub Copilot.
+tools: ['codebase', 'editFiles', 'fetch']
+---
 # Code Quality and Best Practices Guide for GitHub Copilot
 
 ## Introduction
