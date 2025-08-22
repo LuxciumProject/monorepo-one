@@ -156,6 +156,6 @@ Except as contained in this notice, the name of the \<copyright holders> shall n
 
 ## COPYRIGHT
 
-Copyright © 2023-2025 · LUXCIUM · (Benjamin Vincent) · luxcium﹫neb401.com
-
 † **Scientia est lux principium✨** ™
+
+Copyright © 2023-2025 · LUXCIUM · (Benjamin Vincent) · luxcium﹫neb401.com
