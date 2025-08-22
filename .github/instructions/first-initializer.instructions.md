@@ -1,15 +1,26 @@
 1. Create one AGENTS.md
 2. Create one .github/copilot-instructions.md
-3. Create one .clinerules.md
+3. Create one .clinerules folder
 4. Create one .vscode/settings.json
 5. Create a README.md at the root level.
-6. Create a memory-bank/chatmode/README.md
-
-tools: ['codebase', 'editFiles', 'fetch']
+6. Create a memory-bank/chatmodes/README.md
 7. Create a memory-bank/instructions/README.md
 8. Create a memory-bank/prompts/README.md
-
-
+9. Add to .vscode/settings.json
+  - "github.copilot.chat.codeGeneration.useInstructionFiles": true
+  - "chat.modeFilesLocations": { "memory-bank/chatmodes": true }
+  - "chat.instructionsFilesLocations": { "memory-bank/instructions": true }
+  - "chat.promptFilesLocations": { "memory-bank/prompts": true }
+  - "github.copilot.chat.agent.thinkingTool": true
+  - "chat.todoListTool.enabled": true
+  - "chat.extensionTools.enabled": true
+10. Create memory bank files
+  - memory-bank/activeContext.md
+  - memory-bank/projectbrief.md
+  - memory-bank/productContext.md
+  - memory-bank/systemPatterns.md
+  - memory-bank/techContext.md
+  - memory-bank/progress.md
 
 # Custom Chat Modes — Agent perspective (inside VS Code)
 
@@ -45,8 +56,13 @@ Body:
 ---
 description: "Plan and propose code changes. Read-only by default. Request explicit permission to make edits or run terminals."
 tools: ['codebase','search','usages']
-model: gpt-5-thinking
 ---
+```
+
+> [!IMPORTANT]
+> do not add or do not remove 'mode' and 'model' and do not change them, if description is missing always add one and update any that does not reflect the content of the chatmode file. Do not add or remove tools, if nothing is present or when generating a new file you must stick to the «tools: ['codebase','search','usages']» unless the user has made changes then do not remove, do not add and do not change any tools or toolsets, then anything else should be removed when maintaining this kind of document on behalf of the user (excuding the description, tools, mode, model nothing else is permitted in a front matter for a *.chatmode.md file).
+
+```markdown
 # Agent mode: Planning and analysis
 You are an internal VS Code agent. Do not modify files unless explicitly allowed.
 Actions allowed:
