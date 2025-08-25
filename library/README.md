@@ -4,16 +4,22 @@ This directory contains shared code libraries and utilities used across the mono
 
 ## Libraries
 
-- [Mapping Tools](mapping-tools/README.md) - Tools for mapping over lists and iterables
-- [Bigint String](bigintString/README.md) - BigInt string manipulation utilities
-- [Boxed List](boxed-list/README.md) - List boxing and manipulation tools
-- [Colors Tools](colors-tools/README.md) - Color manipulation and conversion utilities
-- [Human Size](human-size/README.md) - Human-readable size conversion tools
-- [Object With Expectations](object-with-expectations/README.md) - Object validation tools
-- [Parallel Mapper](parallel-mapper/README.md) - Parallel data mapping utilities
-- [Restraining Zalgo](restraining-zalgo/README.md) - Text normalization tools
-- [Tools](tools/README.md) - General utility functions
-- [TypeScript](typescript/README.md) - TypeScript-specific utilities
+### Active Projects
+
+- [Bigint String](bigintString/README.md) - BigInt and binary string conversion utilities
+- [Boxed List](boxed-list/README.md) - Functional programming containers with Box, BoxedList, and generator utilities
+- [Boxing Tools](boxing-tools/README.md) - Boxing and data manipulation utilities
+- [Colors Tools](colors-tools/README.md) - Color manipulation and conversion utilities (in development)
+- [Human Size](human-size/README.md) - Human-readable file size conversion tools
+- [Object With Expectations](object-with-expectations/README.md) - Object merging with async properties validation
+- [Parallel Mapper](parallel-mapper/README.md) - Parallel data mapping with concurrency limits and Worker Thread support
+- [Restraining Zalgo](restraining-zalgo/README.md) - Utilities for preventing Zalgo behavior in async operations
+- [Tools](tools/README.md) - General utility functions and development tools incubator
+
+### Development Notes
+
+- **mapping-tools/**: Empty directory (not active)
+- **typescript/**: Configuration-only directory (not active)
 
 ## Overview
 
