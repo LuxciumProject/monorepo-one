@@ -1,214 +1,259 @@
-# @luxcium/boxed-list v0.0.0-PRE_ALPHA-v0.0x
+# @luxcium/boxed-list
 
-**Development phase:** _No documentation, no tests, full TypeScript support._
+A comprehensive TypeScript library providing functional programming utilities with Box, BoxedList, and Generator patterns for elegant data manipulation and asynchronous operations.
 
-## MIT Style License
+## Overview
 
-### Copyright &copy; 2022 Benjamin Vincent Kasapoglu (Luxcium)
+This library implements functional programming patterns in TypeScript, offering three main utilities for data manipulation:
 
-#### † Scientia est lux principium✨ ™
+- **Box<T>**: A monad-like container for individual values
+- **BoxedList**: Enhanced array operations with boxing capabilities  
+- **BoxedGenerator**: Generator-based data streaming and transformation
+
+## Features
+
+- **Functional Programming Patterns**: Implements Functor, Applicative, and Monad interfaces
+- **Type Safety**: Full TypeScript support with comprehensive type definitions
+- **Async Support**: Built-in support for asynchronous operations
+- **Generator Utilities**: Stream processing with generators and async generators
+- **Method Chaining**: Elegant fluent API for data transformations
 
 ## Installation
 
-Using pnpm:
+This package is part of the Luxcium monorepo and uses Rush for dependency management.
 
 ```bash
-  $ pnpm add --save-prod @luxcium/parallel-mapping
+# Within the monorepo
+cd library/boxed-list
+rush update
+rush build
 ```
 
-Using yarn:
+## Quick Start
+
+```typescript
+import { Box, BoxedList, BoxedGenerator } from '@luxcium/boxed-list';
+
+// Basic Box usage
+const box = Box.of('chocolates')
+  .map(str => str.length)
+  .map(len => len * 2);
+
+console.log(box.value); // 20
+
+// BoxedList operations
+const list = BoxedList.of([1, 2, 3, 4, 5])
+  .map(x => x * 2)
+  .filter(x => x > 5);
+
+console.log(list.unbox()); // [6, 8, 10]
+```
+
+## API Reference
+
+### Box<T>
+
+**Implements**: `IApply<T>`, `IChain<T>`, `IMap<T>`, `IUnbox<T>`, `IBox<T>`, `IValue<T>`
+
+A monad-like container that wraps a value and provides functional programming operations.
+
+#### Static Methods
+
+```typescript
+// Create a box with a value
+Box.of<T>(value: T): Box<T>
+
+// Create a box from another boxed value
+Box.from<T>(boxedValue: IUnbox<T>): Box<T>
+```
+
+#### Instance Methods
+
+```typescript
+// Transform the contained value
+map<R>(fn: (value: T) => R): Box<R>
+
+// Apply a boxed function to the contained value
+ap<R>(boxedFn: Box<(value: T) => R>): Box<R>
+
+// Chain operations that return boxes
+chain<R>(fn: (value: T) => Box<R>): Box<R>
+
+// Extract the contained value
+unbox(): T
+
+// Property accessor for the contained value
+get value(): T
+```
+
+#### Example Usage
+
+```typescript
+import { Box } from '@luxcium/boxed-list';
+
+// Basic operations
+const result = Box.of('hello')
+  .map(str => str.toUpperCase())
+  .map(str => str + ' WORLD')
+  .chain(str => Box.of(str.split(' ')))
+  .value;
+
+console.log(result); // ['HELLO', 'WORLD']
+
+// Applicative pattern
+const addBoxed = Box.of((a: number) => (b: number) => a + b);
+const result2 = Box.of(5)
+  .ap(Box.of(3).ap(addBoxed))
+  .value;
+
+console.log(result2); // 8
+```
+
+### BoxedList
+
+Enhanced array operations with functional programming patterns.
+
+```typescript
+import { BoxedList } from '@luxcium/boxed-list';
+
+// Create from array
+const list = BoxedList.of([1, 2, 3, 4, 5]);
+
+// Chain operations
+const result = list
+  .map(x => x * 2)
+  .filter(x => x > 5)
+  .unbox();
+
+console.log(result); // [6, 8, 10]
+```
+
+### BoxedGenerator
+
+Generator-based utilities for stream processing and data transformation.
+
+```typescript
+import { BoxedGenerator } from '@luxcium/boxed-list';
+
+// Create from generator function
+function* numbers() {
+  for (let i = 1; i <= 5; i++) {
+    yield i;
+  }
+}
+
+const gen = BoxedGenerator.from(numbers())
+  .map(x => x * 2);
+
+for (const value of gen) {
+  console.log(value); // 2, 4, 6, 8, 10
+}
+```
+
+### BoxedAsyncGenerator
+
+Asynchronous generator utilities for handling async data streams.
+
+```typescript
+import { BoxedAsyncGenerator } from '@luxcium/boxed-list';
+
+async function* asyncNumbers() {
+  for (let i = 1; i <= 3; i++) {
+    await new Promise(resolve => setTimeout(resolve, 100));
+    yield i;
+  }
+}
+
+const asyncGen = BoxedAsyncGenerator.from(asyncNumbers())
+  .map(x => x * 2);
+
+for await (const value of asyncGen) {
+  console.log(value); // 2, 4, 6 (with delays)
+}
+```
+
+## Core Interfaces
+
+The library is built on several key interfaces:
+
+```typescript
+interface IValue<T> {
+  readonly value: T;
+}
+
+interface IUnbox<T> {
+  unbox(): T;
+}
+
+interface IBox<T> extends IValue<T>, IUnbox<T> {}
+
+interface IMap<T> {
+  map<R>(fn: (value: T) => R): IMap<R>;
+}
+
+interface IChain<T> {
+  chain<R>(fn: (value: T) => IChain<R>): IChain<R>;
+}
+
+interface IApply<T> {
+  ap<R>(boxedFn: IApply<(value: T) => R>): IApply<R>;
+}
+```
+
+## Development
 
 ```bash
-  $ yarn add --caret @luxcium/parallel-mapping
+# Build the project
+npm run build
+
+# Run tests
+npm test
+
+# Install dependencies and build
+npm run install
 ```
 
-Using npm:
+## Use Cases
 
-```bash
-  $ npm add --save-prod @luxcium/parallel-mapping
-```
-
-## APIs
-
-### Abstract (summary)
-
-Array.map() is a very useful function because it let you chain many invocations one after the other.
-
-It would be nice to do such a thing on many other types or to chain other kind of mapping utilities like one that would handle asycronious code unfortunately, it only works with synchronous functions.
-
-A simple workaround for using async map functions is to use Promise.all() or its more tolerant brother Promise.allSettled()
-
-What if such thing would be baked in the box.
-
-We propose you 3 kinds of boxes to handle this usecases:
-
-## Box\<T\>
-
-**implements `IApply<T>`, `IChain<T>`, `IMap<T>`, `IUnbox<T>`, `IBox<T>`, `IValue<T>`**
-
-**Box is:**
-
-- **An Applicative** of type `Box<TVal>`
-
-  To put something inside a new box use the static method _of_: `Box.of<string>('chocolates')` where the generic type anotation is optional. it can contain any `TVal` value.
-
-- **A From** of type `Box<TVal>`
-
-  An alternative to the _of_ static method to put something inside a new box is to use the static method _from_: `Box.from<string>(chocolateBox)` where the difference is taht you will need to provide any subBox type that implements the `IUnbox<T>` interface and the _unbox_ instance method. it can contain any `TVal` value.
-
-- **A Functor and a Map** of return type `Box<R>`
-
-  To interact on the internal value use the instance method _map_: `box.map<number>(chocolates => chocolates.length)` where the optional generic type anotation is the `R` return type of the mapping function.
-
-- **An Unbox and a Value** of return type `<T>`
-
-  To extract the contained value of your box you can use the instance method _box_: `box.unbox()` or tap on it's alias, the instance property _value_: `box.value` after chaining many transformation with map it looks pretty elegant and satifying to tap on the internal value using a property so easely.
-
-- **An Apply** of return type `Box<R>`
-  To interact with the value inside a given box use a boxed function as the argument to the instance method _ap_: `box.ap(Box.of(chocolates=>chocolates.toUpperCase()))`
-
-- **A Chain** of return type `Box<R>`
-
-  The chain instance method _chain_: `box.chain(chocolates=>Box.of(chocolates.toUpperCase()))` takes one argument, it must be a function which returns a value. This function must return a value of the `Box<R>` type and the chain itself will return a value of the `Box<R>` type.
-
-## BoxedList
-
-DOCUMENTATION INCOMPLE ― WORK IN PROGRESS
-
-## BoxedGenerator
-
-DOCUMENTATION INCOMPLE ― WORK IN PROGRESS
-
-<!--
-A Array.map() is a very useful function but, unfortunately, it only works with synchronous functions. A simple workaround for using async map functions is to use Promise.all() or its more tolerant brother Promise.allSettled()
-
-There’s a catch though: unlike a “normal” .map(), the map functions will not execute serially. The async map functions will be running at the same time. Although JavaScript is normally a single-threaded language, it means the resources allocated (like memory and ports) for each function will be occupied until the promise is resolved or rejected. For huge arrays, however, we are going to run a huge number of map functions at the same time.
-
-this parallel mapping api give you the possibility to use a limit to set the maximum paralelle execution of your mapping function trough the array.
-
-The limit defaults to the array length, which makes mapAllSettled() behave exactly like Promise.allSettled() because all the map functions will run in parallel. But the whole point of this function is to give the users control to set that to a lower number.
-
-This can potentially:
-
-    Consume a lot of memory as each map function holds all its variables as long as it is running. If you’re running lambda, for example, it may easily crash your runtime (or you have to pay extra to bump to a beefier execution runtime)
-
-    Hit the rate limits: if the map is accessing an API for each call
-
-It works like this: the .map() will convert each array item to a promise, so we’ll end up with an array of promises to resolve. There are two ways of doing this:
-
-    Promise.all() throws if the map function throws (MDN)
-    Promise.allSettled() runs the map function for the whole array even if sometimes it throws (MDN)
-
-Therefore, the output of the .allSettled() is an array of objects that tells whether the execution failed or not.
-
-### IO_Mapper
-
-The **IO Mapper API** is the easiest of the two aproachs it conssit of a single function
-
-### CPU_Mapper
-
-A straight forward approch is used so that you can have similar APIs regardles if you are using the `CPU_Mapper` flavour or the `IO_Mapper` flavour the only diference betwen both `IO_Mapper` and `CPU_Mapper` is that with `CPU_Mapper` it is first required to call it with a _filename_ `string` a parameter, which is descibe below, used internally by the NodeJS _Worker Threads_. It then produce an intermediat callable function of the same signature as `IO_Mapper`, the return types of both APIs is implemented differently and it will be described in details winthin the example section.
-
-The **CPU Mapper API** is a wrapper for _'worker threads'_ using the [NodeJS Worker class (_added in: NodeJS v10.5.0_)](https://nodejs.org/dist/latest/docs/api/worker_threads.html#worker_threads_class_worker) the signature of the function is describes below folowed by a description of the types used. The return type is explained later in this documentation.
-
-#### Signatures
+### Data Transformation Pipelines
 
 ```typescript
-function CPU_Mapper(
-  filename: string
-): <T, R>(
-  list: T[],
-  mapFn: Mapper<T, R>,
-  limit?: number
-) => CPU_MapperRetunType<R>;
+const processData = (data: string) =>
+  Box.of(data)
+    .map(str => str.trim())
+    .map(str => str.toLowerCase())
+    .chain(str => str.length > 0 ? Box.of(str) : Box.of('default'))
+    .value;
 ```
 
-The `CPU_Mapper` function consume first a _filename_ `string` (the `filename` argument is descibe below) and return a function which takes 3 arguments:
-
-- `list: T[]`, A list: an array of element all of the same type `T`.
-- `mapFn: Mapper<T, R>`, A mapping function: a function of type `Mapper<A, B>` used as a mapper which apply a tranformation from the input type `T` to the output of type `R` over each element of the list.
-- `limit?: number` A limit (optional): a number representing the maximum cocurent workers used to splitt the workload of mapping over each element of the list. If the value is not provided the `os.cpus().length` is used instead but will be limited to the length of the list with `Math.min(limit, list.length)`.
+### Async Operations with Generators
 
 ```typescript
-function CPU_Mapper(
-  filename: string
-): <T, R>(cpuMapperArgs: MapperArgs<T, R>) => CPU_MapperRetunType<R>;
+async function* fetchData() {
+  const urls = ['url1', 'url2', 'url3'];
+  for (const url of urls) {
+    yield await fetch(url).then(r => r.json());
+  }
+}
+
+const processedData = BoxedAsyncGenerator.from(fetchData())
+  .map(data => processApiResponse(data));
 ```
 
-> All 3 parameter can be combined into a single argument as an object with values of same name and similar type `{list, mapFn, limit}`. The argument object type is `CPU_MapperArgs<TVal, RVal>`. In such case the 2nd and 3rd argument can be passed as _empty_, `null` or `undefined`.
+## License
 
-The `filename` argument is passed to the Worker constructor as is and therefor must be compatible whit the argument of the same name described in nodeJs documentation:
+MIT License
 
-- filename `<string>` | `<URL>` The path to the Worker's main script or module. Must be either an absolute path or a relative path (i.e. relative to the current working directory) starting with ./ or ../, or a WHATWG URL object using file: or data: protocol. When using a data: URL, the data is interpreted based on MIME type using the ECMAScript module loader.
+### Copyright © 2022-2024 Benjamin Vincent Kasapoglu (Luxcium)
 
-There is a caveat that is, the `filename` parameter canot be a string containing JavaScript code rather than a path. It must point to where the _CPU Mapper_ will be consumed. For more infomarion take a look at the examples below.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### Types
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-```typescript
-type Mapper<A, B> = (value: A, index?: number, array?: readonly A[]) => B;
-```
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-```typescript
-type MapperArgs<TVal, RVal> = {
-  list: T[];
-  mapFn: Mapper<TVal, RVal>;
-  limit?: number;
-};
-```
-
-```typescript
-type CPU_MapperRetunType<U> = {
-  mapper: () => Promise<PromiseSettledResult<U>[]>;
-  thread: () => void;
-};
-```
+#### † Scientia est lux principium✨ ™
 
 ---
 
-## DOCUMENTATION INCOMPLE ― WORK IN PROGRESS
-
-## Examples
-
-### IO_Mapper Style
-
-This is a super trivial (useless) example of the possible implementation for `IO_Mapper`
-
-```typescript
-async function IO_Mapper_miniExample(values: number[]) {
-  const list = values;
-  const mapFn = (x: number) => 2 ** x;
-  const limit = 2;
-
-  const IOMapperParams: MapperArgs<number, number> = { list, mapFn, limit };
-
-  const result = IO_Mapper(IOMapperParams);
-  const awaitedResult = await result;
-
-  console.log(awaitedResult);
-}
-
-// run the example:
-IO_Mapper_miniExample([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-```
- -->
-
-<!--
-based on work by Alex Ewerlöf described in his _Async Map With Limited Parallelism In Node Js_ [blog post](https://medium.com/@alexewerlof/async-map-with-limited-parallelism-in-node-js-2b91bd47af70) on Medium. (Copyright © 2020-2021 Alex Ewerlöf for the source code) (CC0 1.0 Universal (CC0 1.0)
-Public Domain Dedication for the Medium Article)
-
-```
-(alias) function CPU_Mapper(filename: string): <T, R>(list: T[], mapFn: Mapper<T, R>, limit?: number | undefined) => {
-    mapper: () => Promise<PromiseSettledResult<R>[]>;
-    thread: () => void;
-}
-export CPU_Mapper
-The path to the Worker's main script or module.
-
-(alias) function IO_Mapper<T, U>({ list, mapFn, limit, }: IO_MapperArgs<T, U>): Promise<PromiseSettledResult<U>[]>
-export IO_Mapper
-```
-
-This is the code from a [blog post](https://medium.com/@alexewerlof/async-map-with-limited-parallelism-in-node-js-2b91bd47af70)
-
- -->
+*Part of the [Luxcium Monorepo](../../README.md)*
