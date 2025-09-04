@@ -21,7 +21,7 @@
     "url": "https://github.com/Luxcium/human-size/issues"
   },
   "devDependencies": {
-    "typescript": "~5.8.3",
+    "typescript": "~5.9.2",
     "eslint-import-resolver-typescript": "~3.6.3",
     "eslint-plugin-simple-import-sort": "~12.1.1",
     "nodemon": "~3.0.3",
