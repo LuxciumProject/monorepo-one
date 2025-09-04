@@ -1,0 +1,21 @@
+{
+  "name": "f1-midi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "typedoc": "~0.28.12",
+    "typedoc-plugin-coverage": "~4.0.1",
+    "typedoc-plugin-missing-exports": "~4.1.0",
+    "typedoc-plugin-replace-text": "~4.2.0",
+    "typedoc-plugin-zod": "~1.4.2",
+    "ws": "~8.18.3"
+  }
+}

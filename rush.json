@@ -564,6 +564,13 @@
       ]
     },
     {
+      "packageName": "f1-midi",
+      "projectFolder": "examples/f1-midi",
+      "tags": [
+        "examples"
+      ]
+    },
+    {
       "packageName": "phash-scout-examples",
       "projectFolder": "examples/phash-scout",
       "tags": [
