@@ -1,199 +1,604 @@
-// src/f1ctl.ts
-/* F1 controller CLI: MIDI proofs + catalog + HID scaffold.
-   Usage:
-     npx ts-node src/f1ctl.ts ports
-     npx ts-node src/f1ctl.ts listen
-     npx ts-node src/f1ctl.ts light 60 [127] [1]
-     npx ts-node src/f1ctl.ts toggle 60 [1] [ms=400]
-     npx ts-node src/f1ctl.ts sweep 60 [1]
-     npx ts-node src/f1ctl.ts hsb 60 [hueCh=1] [satCh=2] [briCh=3] [h=64 s=127 b=127]
-     npx ts-node src/f1ctl.ts blink 60 [1] [ms=150] [durationMs=2000]
-     npx ts-node src/f1ctl.ts chase 60 [1] [count=16] [stepMs=80] [durationMs=2500]
-     npx ts-node src/f1ctl.ts echo [inCh=1] [outCh=1]    // press a pad: lights a mapped one
-     # HID (advanced / NHL-specific): enumerate and write raw reports (hex)
-     npx ts-node src/f1ctl.ts hid:list
-     npx ts-node src/f1ctl.ts hid:write VID PID 00-01-02-...      # or
-     npx ts-node src/f1ctl.ts hid:write PATH 00-01-02-...
-*/
+/**
+ * @fileoverview F1 controller CLI: MIDI proofs + catalog + HID scaffold
+ * @description Production-ready MIDI controller for Native Instruments F1 using EasyMIDI
+ * @version 1.0.0
+ * @since 2025-01-04
+ */
 
-import * as midi from 'midi';
-import HIDlib = require('node-hid');
+import easymidi from 'easymidi';
+import HID from 'node-hid';
 
-// ---------- util ----------
-const sleep = (ms:number)=>new Promise(r=>setTimeout(r,ms));
-const hexToBytes = (s:string)=>
-  s.split(/[-\s,]/).filter(Boolean).map(x=>parseInt(x,16)&0xFF);
+/**
+ * @description Available commands for the F1 controller CLI
+ */
+type F1Command =
+  | 'ports'
+  | 'listen'
+  | 'light'
+  | 'toggle'
+  | 'sweep'
+  | 'hsb'
+  | 'blink'
+  | 'chase'
+  | 'echo'
+  | 'hid:list'
+  | 'hid:write';
 
-// ---------- MIDI ports helpers ----------
+/**
+ * @description MIDI device interface for F1 controller
+ */
+interface F1Device {
+  readonly idx: number;
+  readonly name: string;
+}
+
+/**
+ * @description MIDI output device for F1 controller
+ */
+interface F1OutputDevice extends F1Device {
+  readonly out: easymidi.Output;
+}
+
+/**
+ * @description MIDI input device for F1 controller
+ */
+interface F1InputDevice extends F1Device {
+  readonly inp: easymidi.Input;
+}
+
+/**
+ * @description HID device information
+ */
+interface HIDDeviceInfo {
+  readonly vendorId: number;
+  readonly productId: number;
+  readonly path: string;
+  readonly product?: string;
+  readonly manufacturer?: string;
+}
+
+/**
+ * @description Sleep utility for async delays
+ * @param ms - Milliseconds to sleep
+ * @returns Promise that resolves after the specified time
+ */
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * @description Convert hex string to byte array
+ * @param hexString - Hex string with optional separators (-, space, comma)
+ * @returns Array of bytes
+ */
+function hexToBytes(hexString: string): number[] {
+  return hexString
+    .split(/[-\s,]/)
+    .filter(Boolean)
+    .map((x) => parseInt(x, 16) & 0xFF);
+}
+
+/**
+ * @description Get list of available MIDI output ports
+ * @returns Array of output port names
+ */
 function listOutPorts(): string[] {
-  const out = new midi.Output();
-  const names = Array.from({length: out.getPortCount()}, (_,i)=>out.getPortName(i));
-  out.closePort(); return names;
+  return easymidi.getOutputs();
 }
+
+/**
+ * @description Get list of available MIDI input ports
+ * @returns Array of input port names
+ */
 function listInPorts(): string[] {
-  const i = new midi.Input();
-  const names = Array.from({length: i.getPortCount()}, (_,i2)=>i.getPortName(i2));
-  i.closePort(); return names;
+  return easymidi.getInputs();
 }
-function findIndexRx(names: string[], rx: RegExp) { return names.findIndex(n=>rx.test(n)); }
-function openF1Out(): {out:midi.Output, idx:number, name:string} {
+
+/**
+ * @description Find port index by regex pattern
+ * @param names - Array of port names
+ * @param pattern - Regex pattern to match
+ * @returns Index of matching port or -1 if not found
+ */
+function findIndexByPattern(names: string[], pattern: RegExp): number {
+  return names.findIndex((name) => pattern.test(name));
+}
+
+/**
+ * @description Open F1 MIDI output device
+ * @returns F1 output device interface
+ * @throws Error if F1 output device not found
+ */
+function openF1Output(): F1OutputDevice {
   const names = listOutPorts();
-  const idx = findIndexRx(names, /F1|Kontrol\s*F1|Traktor/i);
-  if (idx<0) throw new Error('F1 MIDI output not found. Run "ports".');
-  const out = new midi.Output(); out.openPort(idx);
-  return {out, idx, name: names[idx]};
+  const idx = findIndexByPattern(names, /F1|Kontrol\s*F1|Traktor/i);
+
+  if (idx < 0) {
+    throw new Error('F1 MIDI output not found. Run "ports" to list available devices.');
+  }
+
+  const out = new easymidi.Output(names[idx]);
+  return { out, idx, name: names[idx] };
 }
-function openF1In(): {inp:midi.Input, idx:number, name:string} {
+
+/**
+ * @description Open F1 MIDI input device
+ * @returns F1 input device interface
+ * @throws Error if F1 input device not found
+ */
+function openF1Input(): F1InputDevice {
   const names = listInPorts();
-  const idx = findIndexRx(names, /F1|Kontrol\s*F1|Traktor/i);
-  if (idx<0) throw new Error('F1 MIDI input not found. Run "ports".');
-  const inp = new midi.Input(); inp.openPort(idx);
-  return {inp, idx, name: names[idx]};
+  const idx = findIndexByPattern(names, /F1|Kontrol\s*F1|Traktor/i);
+
+  if (idx < 0) {
+    throw new Error('F1 MIDI input not found. Run "ports" to list available devices.');
+  }
+
+  const inp = new easymidi.Input(names[idx]);
+  return { inp, idx, name: names[idx] };
 }
 
-// ---------- MIDI primitives (status = 0x8n/0x9n) ----------
-function noteOn(out:midi.Output, ch:number, note:number, vel:number){
-  out.sendMessage([(0x90+((ch-1)&0x0F))&0xFF, note&0x7F, vel&0x7F]);
+/**
+ * @description Send MIDI Note On message
+ * @param output - EasyMIDI output device
+ * @param channel - MIDI channel (1-16)
+ * @param note - MIDI note number (0-127)
+ * @param velocity - Note velocity (0-127)
+ */
+function sendNoteOn(output: easymidi.Output, channel: number, note: number, velocity: number): void {
+  output.send('noteon', {
+    note: note & 0x7F,
+    velocity: velocity & 0x7F,
+    channel: (channel - 1) & 0x0F
+  });
 }
-function noteOff(out:midi.Output, ch:number, note:number){
-  out.sendMessage([(0x80+((ch-1)&0x0F))&0xFF, note&0x7F, 0]);
-}
-// In HSB templates: hue/sat/bri are Note-On on 3 channels for same note (velocity=component 0..127).
-// :contentReference[oaicite:10]{index=10}
 
-// ---------- commands ----------
-async function cmdPorts(){
-  console.log('MIDI outputs:'); listOutPorts().forEach((n,i)=>console.log(`  [${i}] ${n}`));
-  console.log('MIDI inputs :'); listInPorts().forEach((n,i)=>console.log(`  [${i}] ${n}`));
+/**
+ * @description Send MIDI Note Off message
+ * @param output - EasyMIDI output device
+ * @param channel - MIDI channel (1-16)
+ * @param note - MIDI note number (0-127)
+ */
+function sendNoteOff(output: easymidi.Output, channel: number, note: number): void {
+  output.send('noteoff', {
+    note: note & 0x7F,
+    velocity: 0,
+    channel: (channel - 1) & 0x0F
+  });
 }
 
-async function cmdListen(){
-  const {inp, idx, name} = openF1In();
+/**
+ * @description Display all available MIDI ports
+ */
+async function commandPorts(): Promise<void> {
+  console.log('MIDI Output Ports:');
+  listOutPorts().forEach((name, index) => {
+    console.log(`  [${index}] ${name}`);
+  });
+
+  console.log('\nMIDI Input Ports:');
+  listInPorts().forEach((name, index) => {
+    console.log(`  [${index}] ${name}`);
+  });
+}
+
+/**
+ * @description MIDI Note message interface
+ */
+interface MidiNoteMessage {
+  note: number;
+  velocity: number;
+  channel: number;
+}
+
+/**
+ * @description Listen for MIDI messages from F1 controller
+ */
+async function commandListen(): Promise<void> {
+  const { inp, idx, name } = openF1Input();
+
   console.log(`Listening on input[${idx}] ${name} — press pads to discover notes...`);
-  inp.on('message', (dt:number, msg:number[])=>{
-    console.log(`dt=${dt.toFixed(6)} msg=${JSON.stringify(msg)}`);
+  console.log('Press Ctrl+C to quit.\n');
+
+  inp.on('message', (message: MidiNoteMessage) => {
+    console.log(`MIDI message: ${JSON.stringify(message)}`);
   });
-  console.log('Ctrl+C to quit.');
+
+  // Keep process alive
+  process.on('SIGINT', () => {
+    console.log('\nClosing MIDI input...');
+    inp.close();
+    process.exit(0);
+  });
+}
+    process.exit(0);
+  });
 }
 
-async function cmdLight(note:number, vel=127, ch=1){
-  const {out} = openF1Out();
-  noteOn(out,ch,note,vel);  // Single/Dual: lights "on" color; Non-HSB may map velocity to brightness/index
-  await sleep(1000);
-  noteOff(out,ch,note);
-  out.closePort();
-  // Note On/Off semantics and examples: [144, note, vel], [128, note, 0]. :contentReference[oaicite:11]{index=11}
-}
+/**
+ * @description Light up a pad with specified parameters
+ * @param note - MIDI note number
+ * @param velocity - Note velocity (brightness)
+ * @param channel - MIDI channel
+ */
+async function commandLight(note: number, velocity = 127, channel = 1): Promise<void> {
+  const { out } = openF1Output();
 
-async function cmdToggle(note:number, ch=1, ms=400){
-  const {out} = openF1Out();
-  noteOn(out,ch,note,127);
-  await sleep(ms);
-  noteOff(out,ch,note);
-  out.closePort();
-  // Single/Dual color behavior depends on Controller Editor template. :contentReference[oaicite:12]{index=12}
-}
-
-async function cmdSweep(note:number, ch=1){
-  const {out} = openF1Out();
-  let v=0; const t=Date.now()+4000;
-  while(Date.now()<t){ v=(v+8)&0x7F; noteOn(out,ch,note,v); await sleep(60); }
-  noteOff(out,ch,note); out.closePort();
-  // Velocity may affect brightness or indexed color in non-HSB templates. :contentReference[oaicite:13]{index=13}
-}
-
-async function cmdHSB(note:number, hueCh=1, satCh=2, briCh=3, h=64, s=127, b=127){
-  const {out} = openF1Out();
-  // HSB: send three Note-On messages (channels hue/sat/bri) for same note, velocity=component.
-  noteOn(out,hueCh,note,h);
-  noteOn(out,satCh,note,s);
-  noteOn(out,briCh,note,b);
-  await sleep(800);
-  out.closePort();
-  // Full HSB control via three channels as documented. :contentReference[oaicite:14]{index=14}
-}
-
-async function cmdBlink(note:number, ch=1, ms=150, duration=2000){
-  const {out} = openF1Out();
-  const stopAt = Date.now()+duration; let on=false;
-  while(Date.now()<stopAt){ on?noteOff(out,ch,note):noteOn(out,ch,note,127); on=!on; await sleep(ms); }
-  noteOff(out,ch,note); out.closePort();
-}
-
-async function cmdChase(startNote:number, ch=1, count=16, stepMs=80, duration=2500){
-  const {out} = openF1Out();
-  const stopAt = Date.now()+duration; let i=0;
-  while(Date.now()<stopAt){
-    const prev = startNote + ((i+count-1)%count);
-    const cur  = startNote + (i%count);
-    noteOff(out,ch,prev); noteOn(out,ch,cur,127); i++; await sleep(stepMs);
+  try {
+    sendNoteOn(out, channel, note, velocity);
+    await sleep(1000);
+    sendNoteOff(out, channel, note);
+  } finally {
+    out.close();
   }
-  for(let k=0;k<count;k++) noteOff(out,ch,startNote+k);
-  out.closePort();
 }
 
-async function cmdEcho(inCh=1, outCh=1){
-  const {inp} = openF1In(); const {out} = openF1Out();
-  console.log('Echo: press a pad — it will light itself (map in code if you want different notes).');
-  inp.on('message', (_dt:number, msg:number[])=>{
-    const [st,d1,d2] = msg; const typ = st & 0xF0; const ch = (st & 0x0F)+1;
-    if(typ===0x90 && d2>0 && ch===inCh){ noteOn(out,outCh,d1,127); }
-    if((typ===0x80 || (typ===0x90 && d2===0)) && ch===inCh){ noteOff(out,outCh,d1); }
-  });
-}
+/**
+ * @description Toggle a pad light for specified duration
+ * @param note - MIDI note number
+ * @param channel - MIDI channel
+ * @param durationMs - Duration to keep light on
+ */
+async function commandToggle(note: number, channel = 1, durationMs = 400): Promise<void> {
+  const { out } = openF1Output();
 
-// ---------- HID scaffold (advanced) ----------
-function hidList(){
-  const devs = HIDlib.devices(); // Enumerate HID devices with path, vid/pid, product, etc.
-  // You can filter by vendorId/productId; F1 vendor is typically 0x17cc. :contentReference[oaicite:15]{index=15}
-  devs.forEach(d=>{
-    console.log(JSON.stringify({vendorId:d.vendorId, productId:d.productId, path:d.path, product:d.product, manufacturer:d.manufacturer}, null, 2));
-  });
-}
-async function hidWrite(argv:string[]){
-  // Accept either: VID PID HEX.. or PATH HEX..
-  if(argv.length<2) throw new Error('hid:write expects: VID PID HEX...  |  PATH HEX...');
-  let device: any;
-  if(/^[0-9a-fA-F]{1,4}$/.test(argv[0]) && /^[0-9a-fA-F]{1,4}$/.test(argv[1])){
-    const vid = parseInt(argv[0],16), pid = parseInt(argv[1],16);
-    device = new (HIDlib as any).HID(vid,pid);  // open by VID/PID
-    argv = argv.slice(2);
-  } else {
-    const path = argv[0];
-    device = new (HIDlib as any).HID(path);     // open by path
-    argv = argv.slice(1);
+  try {
+    sendNoteOn(out, channel, note, 127);
+    await sleep(durationMs);
+    sendNoteOff(out, channel, note);
+  } finally {
+    out.close();
   }
-  const bytes = hexToBytes(argv.join(' '));
-  // First byte is Report ID (0x00 if none), per node-hid write semantics. :contentReference[oaicite:16]{index=16}
-  const written = device.write(bytes);
-  console.log(`Wrote ${written} bytes to HID device.`);
-  device.close();
-  // NOTE: Exact NHL report formats (to set pad colors/animations) require device-specific docs;
-  // this scaffold lets you send known reports once you obtain them. :contentReference[oaicite:17]{index=17}
 }
 
-// ---------- main ----------
-(async ()=>{
-  const [cmd, ...args] = process.argv.slice(2);
-  try{
-    switch(cmd){
-      case 'ports': await cmdPorts(); break;
-      case 'listen': await cmdListen(); break;
-      case 'light': await cmdLight(Number(args[0]??60), Number(args[1]??127), Number(args[2]??1)); break;
-      case 'toggle': await cmdToggle(Number(args[0]??60), Number(args[1]??1), Number(args[2]??400)); break;
-      case 'sweep': await cmdSweep(Number(args[0]??60), Number(args[1]??1)); break;
-      case 'hsb': await cmdHSB(Number(args[0]??60), Number(args[1]??1), Number(args[2]??2), Number(args[3]??3),
-                               Number(args[4]??64), Number(args[5]??127), Number(args[6]??127)); break;
-      case 'blink': await cmdBlink(Number(args[0]??60), Number(args[1]??1), Number(args[2]??150), Number(args[3]??2000)); break;
-      case 'chase': await cmdChase(Number(args[0]??60), Number(args[1]??1), Number(args[2]??16), Number(args[3]??80), Number(args[4]??2500)); break;
-      case 'echo': await cmdEcho(Number(args[0]??1), Number(args[1]??1)); break;
-      case 'hid:list': hidList(); break;
-      case 'hid:write': await hidWrite(args); break;
-      default:
-        console.log(`Unknown or missing command. Try:
-  ports | listen | light | toggle | sweep | hsb | blink | chase | echo
-  hid:list | hid:write
-`);
+/**
+ * @description Sweep pad brightness over time
+ * @param note - MIDI note number
+ * @param channel - MIDI channel
+ */
+async function commandSweep(note: number, channel = 1): Promise<void> {
+  const { out } = openF1Output();
+
+  try {
+    let velocity = 0;
+    const endTime = Date.now() + 4000;
+
+    while (Date.now() < endTime) {
+      velocity = (velocity + 8) & 0x7F;
+      sendNoteOn(out, channel, note, velocity);
+      await sleep(60);
     }
-  }catch(e:any){ console.error('Error:', e.message); process.exit(1); }
-})();
+
+    sendNoteOff(out, channel, note);
+  } finally {
+    out.close();
+  }
+}
+
+/**
+ * @description Set HSB color using three MIDI channels
+ * @param note - MIDI note number
+ * @param hueChannel - MIDI channel for hue component
+ * @param saturationChannel - MIDI channel for saturation component
+ * @param brightnessChannel - MIDI channel for brightness component
+ * @param hue - Hue value (0-127)
+ * @param saturation - Saturation value (0-127)
+ * @param brightness - Brightness value (0-127)
+ */
+async function commandHSB(
+  note: number,
+  hueChannel = 1,
+  saturationChannel = 2,
+  brightnessChannel = 3,
+  hue = 64,
+  saturation = 127,
+  brightness = 127
+): Promise<void> {
+  const { out } = openF1Output();
+
+  try {
+    sendNoteOn(out, hueChannel, note, hue);
+    sendNoteOn(out, saturationChannel, note, saturation);
+    sendNoteOn(out, brightnessChannel, note, brightness);
+    await sleep(800);
+  } finally {
+    out.close();
+  }
+}
+
+/**
+ * @description Blink a pad for specified duration
+ * @param note - MIDI note number
+ * @param channel - MIDI channel
+ * @param intervalMs - Blink interval in milliseconds
+ * @param durationMs - Total duration in milliseconds
+ */
+async function commandBlink(note: number, channel = 1, intervalMs = 150, durationMs = 2000): Promise<void> {
+  const { out } = openF1Output();
+
+  try {
+    const endTime = Date.now() + durationMs;
+    let isOn = false;
+
+    while (Date.now() < endTime) {
+      if (isOn) {
+        sendNoteOff(out, channel, note);
+      } else {
+        sendNoteOn(out, channel, note, 127);
+      }
+      isOn = !isOn;
+      await sleep(intervalMs);
+    }
+
+    sendNoteOff(out, channel, note);
+  } finally {
+    out.close();
+  }
+}
+
+/**
+ * @description Create chase effect across multiple pads
+ * @param startNote - Starting MIDI note number
+ * @param channel - MIDI channel
+ * @param count - Number of pads in sequence
+ * @param stepMs - Time per step in milliseconds
+ * @param durationMs - Total duration in milliseconds
+ */
+async function commandChase(
+  startNote: number,
+  channel = 1,
+  count = 16,
+  stepMs = 80,
+  durationMs = 2500
+): Promise<void> {
+  const { out } = openF1Output();
+
+  try {
+    const endTime = Date.now() + durationMs;
+    let step = 0;
+
+    while (Date.now() < endTime) {
+      const previousNote = startNote + ((step + count - 1) % count);
+      const currentNote = startNote + (step % count);
+
+      sendNoteOff(out, channel, previousNote);
+      sendNoteOn(out, channel, currentNote, 127);
+
+      step++;
+      await sleep(stepMs);
+    }
+
+    // Turn off all pads
+    for (let i = 0; i < count; i++) {
+      sendNoteOff(out, channel, startNote + i);
+    }
+  } finally {
+    out.close();
+  }
+}
+
+/**
+ * @description Echo input messages to output
+ * @param inputChannel - Input MIDI channel
+  inp.on('noteon', (message: easymidi.Note) => {
+    if (message.channel === inputChannel - 1) {
+      sendNoteOn(out, outputChannel, message.note, 127);
+    }
+  });
+
+  inp.on('noteoff', (message: easymidi.Note) => {
+    if (message.channel === inputChannel - 1) {
+      sendNoteOff(out, outputChannel, message.note);
+    }
+  });
+
+  inp.on('noteoff', (message: MidiNoteMessage) => {
+    if (message.channel === inputChannel - 1) {
+      sendNoteOff(out, outputChannel, message.note);
+    }
+  });
+      sendNoteOff(out, outputChannel, message.note);
+    }
+  });
+
+  process.on('SIGINT', () => {
+    console.log('\nClosing MIDI devices...');
+    inp.close();
+    out.close();
+    process.exit(0);
+  });
+}
+
+/**
+ * @description List all HID devices
+ */
+function commandHidList(): void {
+  const devices = HID.devices();
+
+  console.log('Available HID Devices:\n');
+  devices.forEach((device) => {
+    const deviceInfo: HIDDeviceInfo = {
+      vendorId: device.vendorId || 0,
+      productId: device.productId || 0,
+      path: device.path || '',
+      product: device.product,
+      manufacturer: device.manufacturer
+    };
+    console.log(JSON.stringify(deviceInfo, null, 2));
+  });
+}
+
+/**
+ * @description Write raw data to HID device
+ * @param args - Command arguments: [VID, PID, hex...] or [PATH, hex...]
+ */
+async function commandHidWrite(args: string[]): Promise<void> {
+  if (args.length < 2) {
+    throw new Error('hid:write expects: VID PID HEX... or PATH HEX...');
+  }
+
+  let device: HID.HID;
+  let hexArgs: string[];
+
+  // Check if first two args are hex numbers (VID/PID)
+  if (/^[0-9a-fA-F]{1,4}$/.test(args[0]) && /^[0-9a-fA-F]{1,4}$/.test(args[1])) {
+    const vendorId = parseInt(args[0], 16);
+    const productId = parseInt(args[1], 16);
+    device = new HID.HID(vendorId, productId);
+    hexArgs = args.slice(2);
+  } else {
+    // First arg is device path
+    const devicePath = args[0];
+    device = new HID.HID(devicePath);
+    hexArgs = args.slice(1);
+  }
+
+  try {
+    const bytes = hexToBytes(hexArgs.join(' '));
+    const bytesWritten = device.write(bytes);
+    console.log(`Successfully wrote ${bytesWritten} bytes to HID device.`);
+  } finally {
+    device.close();
+  }
+}
+
+/**
+ * @description Display usage information
+ */
+function displayUsage(): void {
+  console.log(`F1 Controller CLI - MIDI and HID Interface
+
+Usage:
+  npx ts-node src/f1ctl.ts <command> [options]
+
+MIDI Commands:
+  ports                                    - List available MIDI ports
+  listen                                   - Listen for MIDI messages
+  light <note> [velocity] [channel]        - Light up a pad
+  toggle <note> [channel] [duration]       - Toggle pad for duration
+  sweep <note> [channel]                   - Sweep brightness over time
+  hsb <note> [hueCh] [satCh] [briCh] [h] [s] [b] - Set HSB color
+  blink <note> [channel] [interval] [duration] - Blink pad
+  chase <startNote> [channel] [count] [step] [duration] - Chase effect
+  echo [inputCh] [outputCh]               - Echo input to output
+
+HID Commands:
+  hid:list                                 - List HID devices
+  hid:write <VID> <PID> <hex...>          - Write to HID by VID/PID
+  hid:write <path> <hex...>               - Write to HID by path
+
+Examples:
+  npx ts-node src/f1ctl.ts ports
+  npx ts-node src/f1ctl.ts light 60 127 1
+  npx ts-node src/f1ctl.ts hsb 60 1 2 3 64 127 127
+`);
+}
+
+/**
+ * @description Main CLI entry point
+ */
+async function main(): Promise<void> {
+  const [command, ...args] = process.argv.slice(2);
+
+  if (!command) {
+    displayUsage();
+    return;
+  }
+
+  try {
+    const cmd = command as F1Command;
+
+    switch (cmd) {
+      case 'ports':
+        await commandPorts();
+        break;
+
+      case 'listen':
+        await commandListen();
+        break;
+
+      case 'light':
+        await commandLight(
+          Number(args[0] ?? 60),
+          Number(args[1] ?? 127),
+          Number(args[2] ?? 1)
+        );
+        break;
+
+      case 'toggle':
+        await commandToggle(
+          Number(args[0] ?? 60),
+          Number(args[1] ?? 1),
+          Number(args[2] ?? 400)
+        );
+        break;
+
+      case 'sweep':
+        await commandSweep(
+          Number(args[0] ?? 60),
+          Number(args[1] ?? 1)
+        );
+        break;
+
+      case 'hsb':
+        await commandHSB(
+          Number(args[0] ?? 60),
+          Number(args[1] ?? 1),
+          Number(args[2] ?? 2),
+          Number(args[3] ?? 3),
+          Number(args[4] ?? 64),
+          Number(args[5] ?? 127),
+          Number(args[6] ?? 127)
+        );
+        break;
+
+      case 'blink':
+        await commandBlink(
+          Number(args[0] ?? 60),
+          Number(args[1] ?? 1),
+          Number(args[2] ?? 150),
+          Number(args[3] ?? 2000)
+        );
+        break;
+
+      case 'chase':
+        await commandChase(
+          Number(args[0] ?? 60),
+          Number(args[1] ?? 1),
+          Number(args[2] ?? 16),
+          Number(args[3] ?? 80),
+          Number(args[4] ?? 2500)
+        );
+        break;
+
+      case 'echo':
+        await commandEcho(
+          Number(args[0] ?? 1),
+          Number(args[1] ?? 1)
+        );
+        break;
+
+      case 'hid:list':
+        commandHidList();
+        break;
+
+      case 'hid:write':
+        await commandHidWrite(args);
+        break;
+
+      default:
+        console.error(`Unknown command: ${command}`);
+        displayUsage();
+        process.exit(1);
+    }
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+    console.error('Error:', errorMessage);
+    process.exit(1);
+  }
+}
+
+// Execute main function if this file is run directly
+if (require.main === module) {
+  void main();
+}
