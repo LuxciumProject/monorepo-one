@@ -1,23 +1,26 @@
 {
-  "name": "f1-midi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@examples/f1-midi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bidirectional Traktor Kontrol F1 demos: MIDI catalogue and HID hello in TypeScript",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.15.1",
+  "scripts": {
+    "dev:midi": "tsx src/f1_midi_catalog.ts",
+    "dev:hid": "tsx src/f1_hid_hello.ts",
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
+    "lint": "echo \"no linter configured\""
+  },
   "dependencies": {
-    "typedoc": "~0.28.12",
-    "typedoc-plugin-coverage": "~4.0.1",
-    "typedoc-plugin-missing-exports": "~4.1.0",
-    "typedoc-plugin-replace-text": "~4.2.0",
-    "typedoc-plugin-zod": "~1.4.2",
-    "ws": "~8.18.3",
-    "easymidi": "~3.1.0",
-    "node-hid": "~3.2.0"
+    "easymidi": "^3.1.0",
+    "node-hid": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.4"
   }
 }

@@ -46,7 +46,7 @@
     "webpack": "~5.88.1",
     "@types/react": "~19.1.1",
     "@types/react-dom": "~19.1.2",
-    "@types/node": "~22.14.0",
+    "@types/node": "~24.3.1",
     "jest": "~29.7.0",
     "ts-jest": "~29.2.5",
     "@jest/globals": "~29.7.0",
