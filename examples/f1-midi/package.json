@@ -1,5 +1,5 @@
 {
-  "name": "@examples/f1-midi",
+  "name": "f1-midi",
   "version": "0.1.0",
   "private": true,
   "description": "Bidirectional Traktor Kontrol F1 demos: MIDI catalogue and HID hello in TypeScript",
@@ -8,8 +8,8 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev:midi": "tsx src/f1_midi_catalog.ts",
-    "dev:hid": "tsx src/f1_hid_hello.ts",
+    "dev:midi": "ts-node src/f1_midi_catalog.ts",
+    "dev:hid": "ts-node src/f1_hid_hello.ts",
     "build": "tsc -p .",
     "start": "node dist/index.js",
     "lint": "echo \"no linter configured\""
@@ -19,8 +19,8 @@
     "node-hid": "^2.2.0"
   },
   "devDependencies": {
-    "@types/node": "^22.5.0",
+    "@types/node": "~24.3.1",
     "tsx": "^4.15.7",
-    "typescript": "^5.5.4"
+    "typescript": "~5.9.2"
   }
 }
