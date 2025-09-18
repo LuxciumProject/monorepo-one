@@ -1,0 +1,35 @@
+{
+  "name": "@luxcium/agent-framework",
+  "version": "1.0.0",
+  "description": "A framework for managing different agent patterns including parallel, sequential, router, loop, network, hierarchical, and aggregator patterns",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf lib"
+  },
+  "keywords": [
+    "agent",
+    "framework",
+    "pattern",
+    "parallel",
+    "sequential",
+    "network",
+    "hierarchical",
+    "aggregator"
+  ],
+  "author": "Luxcium",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
