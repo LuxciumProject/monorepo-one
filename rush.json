@@ -618,6 +618,14 @@
       "tags": [
         "examples"
       ]
+    },
+    {
+      "packageName": "@luxcium/agent-framework",
+      "projectFolder": "library/agent-framework",
+      "subspaceName": "library",
+      "tags": [
+        "library"
+      ]
     }
   ]
   // {
