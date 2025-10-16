@@ -1,52 +1,27 @@
-/imagine prompt:photo of a 19-year-old Finnish college student, he is wearing an [colour name] "adidas" hoodie with a big Adidas logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "[Sport Clothing Brand]" hoodie with a big [Same Sport Clothinge Brand] logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "adidas" hoodie with a big Adidas logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "adidas Originals" hoodie with a big Adidas Originals logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "NIKE" hoodie with a big Nike logo on it --raw6
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "NIKE sb" hoodie with a big Nike skateboard logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "JORDAN" hoodie with a big Jordan logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Champion" hoodie with a big Champion logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Vans" hoodie with a big Vans logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Converse" hoodie with a big Converse logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "FILA" hoodie with a big FILA logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Puma" hoodie with a big Puma logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Umbro" hoodie with a big Umbro logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "REEBOK" hoodie with a big Reebok logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Timberland" hoodie with a big Timberland logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "The North Face" hoodie with a big North Face logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "New Era" hoodie with a big New Era logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Carhartt" hoodie with a big Carhartt logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Kappa" hoodie with a big Kappa logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "New Balance" hoodie with a big New Balance logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Under Armour" hoodie with a big Under Armour logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Lacoste" hoodie with a big Lacoste logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "H&M" hoodie with a big H&M logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Calvin Klein" hoodie with a big Calvin Klein logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Tommy Hilfiger" hoodie with a big Tommy Hilfiger logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Gucci" hoodie with a big Gucci logo on it --raw6
-
-/imagine prompt:fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Louis Vuitton" hoodie with a big Louis Vuitton logo on it --raw6
+cinematic photo of a 19-year-old Finnish college student, he is wearing an [colour name] "adidas" hoodie with a big Adidas logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "[Sport Clothing Brand]" hoodie with a big [Same Sport Clothinge Brand] logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "adidas" hoodie with a big Adidas logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "adidas Originals" hoodie with a big Adidas Originals logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "NIKE" hoodie with a big Nike logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "NIKE sb" hoodie with a big Nike skateboard logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "JORDAN" hoodie with a big Jordan logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Champion" hoodie with a big Champion logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Vans" hoodie with a big Vans logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Converse" hoodie with a big Converse logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "FILA" hoodie with a big FILA logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Puma" hoodie with a big Puma logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Umbro" hoodie with a big Umbro logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "REEBOK" hoodie with a big Reebok logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Timberland" hoodie with a big Timberland logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "The North Face" hoodie with a big North Face logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "New Era" hoodie with a big New Era logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Carhartt" hoodie with a big Carhartt logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Kappa" hoodie with a big Kappa logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "New Balance" hoodie with a big New Balance logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Under Armour" hoodie with a big Under Armour logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Lacoste" hoodie with a big Lacoste logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "H&M" hoodie with a big H&M logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Calvin Klein" hoodie with a big Calvin Klein logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Tommy Hilfiger" hoodie with a big Tommy Hilfiger logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Gucci" hoodie with a big Gucci logo on it
+cinematic fashion photo of a 19-year-old Finnish college student, he is wearing an Amaranth "Louis Vuitton" hoodie with a big Louis Vuitton logo on it
