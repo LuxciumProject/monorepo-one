@@ -18,6 +18,7 @@ claude-anthropic
 cline
 codex_cli
 codex-help.txt
+.codex_notes
 coding-best-practices
 comparaison
 Compose
@@ -182,10 +183,12 @@ pro-coder
 system-d
 the-luxcium-one
 typescript-assistant
+.vscode
 zsh
 
 ./API/GPTs/assistants:
 instructions.txt
+.keep
 
 ./API/GPTs/midjourney:
 aditional-informations.txt
@@ -246,6 +249,9 @@ working-notes.txt
 
 ./API/GPTs/typescript-assistant:
 typescript-function-overloads-testing.formal.md.txt
+
+./API/GPTs/.vscode:
+extensions.json
 
 ./API/GPTs/zsh:
 10-jobs-and-signals.txt
@@ -324,6 +330,7 @@ tuner-decode_rev6.html
 tuning-and-more
 type-of-photo.txt
 underground-lab.txt
+.vscode
 
 ./API/midjourney/tuner:
 256-styles.txt
@@ -354,6 +361,9 @@ Untitled-6.txt
 Untitled-8.txt
 Untitled-9.txt
 
+./API/midjourney/.vscode:
+extensions.json
+
 ./API/OpenAI:
 documentation-links.md
 
@@ -366,9 +376,14 @@ troubleshooting-nvme-002.txt
 troubleshooting-nvme-003.txt
 
 ./awesome-copilot-main:
+.all-contributorsrc
 chatmodes
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
+.editorconfig
+.gitattributes
+.github
+.gitignore
 instructions
 LICENSE
 package.json
@@ -379,6 +394,7 @@ scripts
 SECURITY.md
 SUPPORT.md
 update-readme.js
+.vscode
 
 ./awesome-copilot-main/chatmodes:
 4.1-Beast.chatmode.md
@@ -433,6 +449,17 @@ Ultimate-Transparent-Thinking-Beast-Mode.chatmode.md
 voidbeast-gpt41enhanced.chatmode.md
 wg-code-alchemist.chatmode.md
 wg-code-sentinel.chatmode.md
+
+./awesome-copilot-main/.github:
+copilot-instructions.md
+pull_request_template.md
+workflows
+
+./awesome-copilot-main/.github/workflows:
+check-line-endings.yml
+contributors.yml
+validate-readme.yml
+webhook-caller.yml
 
 ./awesome-copilot-main/instructions:
 a11y.instructions.md
@@ -582,6 +609,11 @@ update-specification.prompt.md
 ./awesome-copilot-main/scripts:
 fix-line-endings.sh
 
+./awesome-copilot-main/.vscode:
+extensions.json
+settings.json
+tasks.json
+
 ./chatgpt:
 _$_meta-request.txt
 acting-as
@@ -623,6 +655,7 @@ templates_for_code_creation.md
 testing-access.txt
 tooloing-the-aiagent-guide.txt
 troubleshooting.txt
+.vscode
 with-tasks
 words-lists
 
@@ -709,6 +742,7 @@ _%_prompt-main-v4.txt
 rpc-worker-project
 tokenizer-python-and-nodejs.txt
 _%_typescript-prompt-v1.txt
+.vscode
 
 ./chatgpt/more-prompts/computer-specs:
 $_%computer-specs-prompt-v1.txt
@@ -729,6 +763,9 @@ expanded-summary.v005.txt
 init-gpt-session.txt
 LICENSE
 working-details.txt
+
+./chatgpt/more-prompts/.vscode:
+extensions.json
 
 ./chatgpt/output-rules:
 biograms.txt
@@ -756,6 +793,9 @@ system_info.sh
 ./chatgpt/templates_for_code_creation.md:
 folders-multiroots.json
 README.md
+
+./chatgpt/.vscode:
+extensions.json
 
 ./chatgpt/with-tasks:
 README.md
@@ -794,6 +834,8 @@ cline-tool.md
 
 ./codex_cli:
 SystemInstructions-09-juil-2025.md
+
+./.codex_notes:
 
 ./coding-best-practices:
 quality-grades.md
@@ -1132,10 +1174,12 @@ raw-tuners.txt
 tuner-list.mjs
 
 ./midjourney/API/html:
+.gitfolder
 tuners
 
 ./midjourney/API/html/tuners:
 file0.html
+.gitfolder
 
 ./midjourney/tentative-prompts:
 fashion-photo-of-a 19-year-old.txt
@@ -1418,6 +1462,7 @@ custom-instructions-validators.txt
 deleteme.txt
 emerald.txt
 full.txt
+.gitignore
 LICENSE
 project-instructions.md
 riley-novak-001.png
@@ -1464,6 +1509,8 @@ LuxciumOne.txt
 main.sh
 python
 settings.sh
+.shellcheckrc
+.vscode
 
 ./typing_prompter/archive:
 LICENSE
@@ -1482,6 +1529,9 @@ ChatGPT-apreciation-of-the -code.txt
 LICENSE
 main.js
 main.py
+
+./typing_prompter/.vscode:
+extensions.json
 
 ./vocabulary:
 affixes-details.md
