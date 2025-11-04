@@ -19,8 +19,13 @@
     "node-hid": "^2.2.0"
   },
   "devDependencies": {
-    "@types/node": "~24.3.1",
+    "@types/node": "~24.10.0",
     "tsx": "^4.15.7",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.3",
+    "typedoc": "~0.28.14",
+    "typedoc-plugin-coverage": "~4.0.2",
+    "typedoc-plugin-missing-exports": "~4.1.2",
+    "typedoc-plugin-replace-text": "~4.2.0",
+    "typedoc-plugin-zod": "~1.4.3"
   }
 }

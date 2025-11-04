@@ -17,7 +17,7 @@
     "@eslint-stylistic/metadata": "^1.6.1",
     "@jest/globals": "^29.7.0",
     "@stylistic/eslint-plugin": "^1.6.1",
-    "@types/node": "22",
+    "@types/node": "~24.10.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint-config-next": "^14.1.0",
@@ -40,6 +40,11 @@
     "ts-jest": "^29.1.2",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "~5.9.3",
+    "typedoc": "~0.28.14",
+    "typedoc-plugin-coverage": "~4.0.2",
+    "typedoc-plugin-missing-exports": "~4.1.2",
+    "typedoc-plugin-replace-text": "~4.2.0",
+    "typedoc-plugin-zod": "~1.4.3"
   }
 }

@@ -41,7 +41,7 @@
     "@types/heft-jest": "~1.0.3",
     "@types/jest": "~29.5.12",
     "@types/mime-types": "~2.1.1",
-    "@types/node": "~24.3.1",
+    "@types/node": "~24.10.0",
     "@types/stream-chain": "~2.1.0",
     "@types/stream-json": "~1.7.7",
     "chai": "~4.3.7",
@@ -64,7 +64,7 @@
     "ts-node": "~10.9.2",
     "tsconfig-paths": "~4.2.0",
     "tslib": "~2.6.2",
-    "typescript": "~5.9.2",
+    "typescript": "~5.9.3",
     "webpack": "~5.88.1",
     "prettier-plugin-organize-attributes": "~1.0.0",
     "prettier-plugin-packagejson": "~2.5.2",
@@ -72,7 +72,12 @@
     "eslint": "~9.24.0",
     "@eslint/js": "~9.12.0",
     "@types/eslint__js": "~8.42.3",
-    "typescript-eslint": "~8.12.2"
+    "typescript-eslint": "~8.12.2",
+    "typedoc": "~0.28.14",
+    "typedoc-plugin-coverage": "~4.0.2",
+    "typedoc-plugin-missing-exports": "~4.1.2",
+    "typedoc-plugin-replace-text": "~4.2.0",
+    "typedoc-plugin-zod": "~1.4.3"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
