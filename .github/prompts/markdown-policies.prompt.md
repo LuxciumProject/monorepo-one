@@ -15,7 +15,7 @@ Structure responses using comprehensive markdown for optimal readability and inf
 
 ### Content-Specific Formatting
 
-**Code and Technical Elements:**s
+**Code and Technical Elements:**
 - `inline code` for commands, file names, function names, variables
 - Code blocks with language identifiers:
   ```javascript
@@ -58,7 +58,7 @@ Structure responses using comprehensive markdown for optimal readability and inf
 - Consider both terminal and web rendering
 
 ### Links and References
-Format links properly: [descriptive text](url) when referencing external resources or documentation.
+Format links properly: [descriptive text](../instructions/markdown.instructions.md) when referencing external resources or documentation.
 
 ---
 
