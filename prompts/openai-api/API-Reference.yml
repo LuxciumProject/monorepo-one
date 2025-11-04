@@ -1,0 +1,657 @@
+# API Reference
+
+- Introduction
+- Authentication
+- Debugging requests
+- Backward compatibility
+
+# Responses API
+
+- Responses
+  - Create a model response
+  - Get a model response
+  - Delete a model response
+  - Cancel a response
+  - List input items
+  - Get input token counts
+  - The response object
+  - The input item list
+
+- Conversations
+  - Create a conversation
+  - Retrieve a conversation
+  - Update a conversation
+  - Delete a conversation
+  - List items
+  - Create items
+  - Retrieve an item
+  - Delete an item
+  - The conversation object
+  - The item list
+
+- Streaming events
+  - response
+    - .created
+    - .in_progress
+    - .completed
+    - .failed
+    - .incomplete
+    - .output_item
+      - .added
+      - .done
+    - .content_part
+      - .added
+      - .done
+    - response.output_text.delta
+    - response.output_text.done
+    - .refusal
+      - .delta
+      - .done
+    - .function_call_arguments
+      - .delta
+      - .done
+    - .file_search_call
+      - .in_progress
+      - .searching
+      - .completed
+    - .web_search_call
+      - .in_progress
+      - .searching
+      - .completed
+    - .reasoning_summary_part
+      - .added
+      - .done
+    - .reasoning_summary_text
+      - .delta
+      - .done
+    - .reasoning_text
+      - .delta
+      - .done
+    - .image_generation_call
+      - .completed
+      - .generating
+      - .in_progress
+      - .partial_image
+    - .mcp_call_arguments
+      - .delta
+      - .done
+    - .mcp_call
+      - .completed
+      - .failed
+      - .in_progress
+    - .mcp_list_tools
+      - .completed
+      - .failed
+      - .in_progress
+    - .code_interpreter_call
+      - .in_progress
+      - .interpreting
+      - .completed
+    - .code_interpreter_call_code
+      - .delta
+      - .done
+    - .output_text
+      - .annotation
+        - .added
+    - .queued
+    - .custom_tool_call_input
+      - .delta
+      - .done
+  - error
+
+# Webhooks
+
+- Webhook Events
+  - response
+    - .completed
+    - .cancelled
+    - .failed
+    - .incomplete
+  - batch
+    - .completed
+    - .cancelled
+    - .expired
+    - .failed
+  - fine_tuning
+    - .job
+      - .succeeded
+      - .failed
+      - .cancelled
+  - eval
+    - .run
+      - .succeeded
+      - .failed
+      - .canceled
+  - realtime
+    - .call
+      - .incoming
+
+# Platform APIs
+
+- Audio
+  - Create speech
+  - Create transcription
+  - Create translation
+  - The transcription object (JSON)
+  - The transcription object (Diarized JSON)
+  - The transcription object (Verbose JSON)
+  - Stream Event (speech.audio.delta)
+  - Stream Event (speech.audio.done)
+  - Stream Event (transcript.text.delta)
+  - Stream Event (transcript.text.segment)
+  - Stream Event (transcript.text.done)
+
+- Videos
+  - Create video
+  - Remix video
+  - List videos
+  - Retrieve video
+  - Delete video
+  - Retrieve video content
+  - Video job
+
+- Images
+  - Create image
+  - Create image edit
+  - Create image variation
+  - The image generation response
+
+- Image Streaming
+  - image_generation
+    - .partial_image
+    - .completed
+  - image_edit
+    - .partial_image
+    - .completed
+
+- Embeddings
+  - Create embeddings
+  - The embedding object
+
+- Evals
+  - Create eval
+  - Get an eval
+  - Update an eval
+  - Delete an eval
+  - List evals
+  - Get eval runs
+  - Get an eval run
+  - Create eval run
+  - Cancel eval run
+  - Delete eval run
+  - Get an output item of an eval run
+  - Get eval run output items
+  - The eval object
+  - The eval run object
+  - The eval run output item object
+
+- Fine-tuning
+  - Create fine-tuning job
+  - List fine-tuning jobs
+  - List fine-tuning events
+  - List fine-tuning checkpoints
+  - List checkpoint permissions
+  - Create checkpoint permissions
+  - Delete checkpoint permission
+  - Retrieve fine-tuning job
+  - Cancel fine-tuning
+  - Resume fine-tuning
+  - Pause fine-tuning
+  - Training format for chat models using the supervised method
+  - Training format for chat models using the preference method
+  - Training format for reasoning models using the reinforcement method
+  - The fine-tuning job object
+  - The fine-tuning job event object
+  - The fine-tuning job checkpoint object
+  - The fine-tuned model checkpoint permission object
+
+- Graders
+  - String Check Grader
+  - Text Similarity Grader
+  - Score Model Grader
+  - Label Model Grader
+  - Python Grader
+  - Multi Grader
+  - Run grader
+  - Validate grader
+
+- Batch
+  - Create batch
+  - Retrieve batch
+  - Cancel batch
+  - List batch
+  - The batch object
+  - The request input object
+  - The request output object
+
+- Files
+  - Upload file
+  - List files
+  - Retrieve file
+  - Delete file
+  - Retrieve file content
+  - The file object
+
+- Uploads
+  - Create upload
+  - Add upload part
+  - Complete upload
+  - Cancel upload
+  - The upload object
+  - The upload part object
+
+- Models
+  - List models
+  - Retrieve model
+  - Delete a fine-tuned model
+  - The model object
+
+- Moderations
+  - Create moderation
+  - The moderation object
+
+# Vector stores
+
+- Vector stores
+  - Create vector store
+  - List vector stores
+  - Retrieve vector store
+  - Modify vector store
+  - Delete vector store
+  - Search vector store
+  - The vector store object
+
+- Vector store files
+  - Create vector store file
+  - List vector store files
+  - Retrieve vector store file
+  - Retrieve vector store file content
+  - Update vector store file attributes
+  - Delete vector store file
+  - The vector store file object
+
+- Vector store file batches
+  - Create vector store file batch
+  - Retrieve vector store file batch
+  - Cancel vector store file batch
+  - List vector store files in a batch
+  - The vector store files batch object
+
+# ChatKit (Beta)
+
+- ChatKit
+  - Create ChatKit session
+  - Cancel chat session
+  - List ChatKit threads
+  - Retrieve ChatKit thread
+  - Delete ChatKit thread
+  - List ChatKit thread items
+  - The chat session object
+  - The thread object
+  - Thread Items
+
+# Containers
+
+- Containers
+  - Create container
+  - List containers
+  - Retrieve container
+  - Delete a container
+  - The container object
+
+- Container Files
+  - Create container file
+  - List container files
+  - Retrieve container file
+  - Retrieve container file content
+  - Delete a container file
+  - The container file object
+
+# Realtime
+
+- Realtime
+  - Create call
+
+- Client secrets (Realtime Sessions)
+  - Create client secret
+  - Session response object
+
+- Calls
+  - Accept call
+  - Reject call
+  - Refer call
+  - Hang up call
+
+- Client events
+  - session
+    - .update
+  - input_audio_buffer
+    - .append
+    - .commit
+    - .clear
+  - conversation
+    - .item
+      - .create
+      - .retrieve
+      - .truncate
+      - .delete
+  - response
+    - .create
+    - .cancel
+  - output_audio_buffer
+    - .clear
+
+- Server events
+  - error
+  - session
+    - .created
+    - .updated
+  - conversation
+    - .item
+      - .added
+      - .done
+      - .retrieved
+      - .input_audio_transcription
+        - .completed
+        - .delta
+        - .segment
+        - .failed
+      - .truncated
+      - .deleted
+- input_audio_buffer
+  - .committed
+  - .cleared
+  - .speech_started
+  - .speech_stopped
+  - .timeout_triggered
+- output_audio_buffer
+  - .started
+  - .stopped
+  - .cleared
+- response
+  - .created
+  - .done
+  - .output_item
+    - .added
+    - .done
+  - .content_part
+    - .added
+    - .done
+  - .output_text
+    - .delta
+    - .done
+  - .output_audio_transcript
+    - .delta
+    - .done
+  - .output_audio
+    - .delta
+    - .done
+  - .function_call_arguments
+    - .delta
+    - .done
+  - .mcp_call_arguments
+    - .delta
+    - .done
+  - .mcp_call
+    - .in_progress
+    - .completed
+    - .failed
+- mcp_list_tools
+  - .in_progress
+  - .completed
+  - .failed
+- rate_limits
+  - .updated
+
+# Chat Completions
+
+- Chat Completions
+  - Create chat completion
+  - Get chat completion
+  - Get chat messages
+  - List Chat Completions
+  - Update chat completion
+  - Delete chat completion
+  - The chat completion object
+  - The chat completion list object
+  - The chat completion message list object
+
+- Streaming
+  - The chat completion chunk object
+
+# Assistants (Beta)
+
+- Assistants
+  - Create assistant
+  - List assistants
+  - Retrieve assistant
+  - Modify assistant
+  - Delete assistant
+  - The assistant object
+
+- Threads
+  - Create thread
+  - Retrieve thread
+  - Modify thread
+  - Delete thread
+  - The thread object
+
+- Messages
+  - Create message
+  - List messages
+  - Retrieve message
+  - Modify message
+  - Delete message
+  - The message object
+
+- Runs
+  - Create run
+  - Create thread and run
+  - List runs
+  - Retrieve run
+  - Modify run
+  - Submit tool outputs to run
+  - Cancel a run
+  - The run object
+
+- Run steps
+  - List run steps
+  - Retrieve run step
+  - The run step object
+
+- Streaming (Assistants)
+  - The message delta object
+  - The run step delta object
+  - Assistant stream events
+
+# Administration
+
+- Administration
+
+- Admin API Keys
+  - List all organization and project API keys.
+  - Create admin API key
+  - Retrieve admin API key
+  - Delete admin API key
+  - The admin API key object
+
+- Invites
+  - List invites
+  - Create invite
+  - Retrieve invite
+  - Delete invite
+  - The invite object
+
+- Users
+  - List users
+  - Modify user
+  - Retrieve user
+  - Delete user
+  - The user object
+
+- Projects
+  - List projects
+  - Create project
+  - Retrieve project
+  - Modify project
+  - Archive project
+  - The project object
+
+- Project users
+  - List project users
+  - Create project user
+  - Retrieve project user
+  - Modify project user
+  - Delete project user
+  - The project user object
+
+- Project service accounts
+  - List project service accounts
+  - Create project service account
+  - Retrieve project service account
+  - Delete project service account
+  - The project service account object
+
+- Project API keys
+  - List project API keys
+  - Retrieve project API key
+  - Delete project API key
+  - The project API key object
+
+- Project rate limits
+  - List project rate limits
+  - Modify project rate limit
+  - The project rate limit object
+
+- Audit logs
+  - List audit logs
+  - The audit log object
+
+- Usage
+  - Completions
+  - Completions usage object
+  - Embeddings
+  - Embeddings usage object
+  - Moderations
+  - Moderations usage object
+  - Images
+  - Images usage object
+  - Audio speeches
+  - Audio speeches usage object
+  - Audio transcriptions
+  - Audio transcriptions usage object
+  - Vector stores
+  - Vector stores usage object
+  - Code interpreter sessions
+  - Code interpreter sessions usage object
+  - Costs
+  - Costs object
+
+- Certificates
+  - Upload certificate
+  - Get certificate
+  - Modify certificate
+  - Delete certificate
+  - List organization certificates
+  - List project certificates
+  - Activate certificates for organization
+  - Deactivate certificates for organization
+  - Activate certificates for project
+  - Deactivate certificates for project
+  - The certificate object
+
+# Legacy
+
+- Completions
+  - Create completion
+  - The completion object
+
+- Realtime Beta
+  - Realtime Beta
+
+- Realtime Beta session tokens
+  - Create session
+  - Create transcription session
+  - The session object
+  - The transcription session object
+
+- Realtime Beta client events
+  - session
+    - .update
+  - input_audio_buffer
+    - .append
+    - .commit
+    - .clear
+  - conversation
+    - .item
+      - .create
+      - .retrieve
+      - .truncate
+      - .delete
+  - response
+    - .create
+    - .cancel
+  - transcription_session
+    - .update
+  - output_audio_buffer
+    - .clear
+
+- Realtime Beta server events
+  - error
+  - session
+    - .created
+    - .updated
+  - transcription_session
+    - .created
+    - .updated
+  - conversation
+    - .item
+      - .created
+      - .retrieved
+      - .input_audio_transcription
+        - .completed
+        - .delta
+        - .segment
+        - .failed
+      - .truncated
+      - .deleted
+  - input_audio_buffer
+    - .committed
+    - .cleared
+    - .speech_started
+    - .speech_stopped
+    - .timeout_triggered
+  - response
+    - .created
+    - .done
+    - .output_item
+      - .added
+      - .done
+    - .content_part
+      - .added
+      - .done
+    - .output_text
+      - .delta
+      - .done
+    - .output_audio_transcript
+      - .delta
+      - .done
+    - .output_audio
+      - .delta
+      - .done
+    - .function_call_arguments
+      - .delta
+      - .done
+    - .mcp_call_arguments
+      - .delta
+      - .done
+    - .mcp_call
+      - .in_progress
+      - .completed
+      - .failed
+  - mcp_list_tools
+    - .in_progress
+    - .completed
+    - .failed
+  - rate_limits
+    - .updated
