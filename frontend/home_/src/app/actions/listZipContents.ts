@@ -7,9 +7,24 @@ import AdmZip from 'adm-zip';
 import fs from 'fs';
 import path from 'path';
 
+const ZIP_ROOT_DIR = path.resolve('/var/app/data/zips'); // TODO: Adjust to your zip storage directory
+
 export async function listZipContents(zipFilePath: string): Promise<string[]> {
   try {
-    const resolvedPath = path.resolve(zipFilePath);
+    // Only allow zip files within ZIP_ROOT_DIR
+    // Normalize and resolve the path
+    const candidatePath = path.resolve(ZIP_ROOT_DIR, zipFilePath);
+    let resolvedPath: string;
+    try {
+      resolvedPath = fs.realpathSync(candidatePath);
+    } catch (err) {
+      throw new Error('Zip file not found');
+    }
+
+    // Ensure the zip path is within the ZIP_ROOT_DIR
+    if (!resolvedPath.startsWith(ZIP_ROOT_DIR + path.sep)) {
+      throw new Error('Unauthorized zip file path');
+    }
 
     if (!fs.existsSync(resolvedPath)) {
       throw new Error('Zip file not found');
