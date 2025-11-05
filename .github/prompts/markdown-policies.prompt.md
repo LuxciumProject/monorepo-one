@@ -9,26 +9,34 @@ description: Full markdown features for maximum readability
 Structure responses using comprehensive markdown for optimal readability and information architecture. Apply these principles consistently:
 
 ### Document Structure
-- Use **headers** (##, ###, ####) to create clear hierarchy
-- Separate major sections with `---` horizontal rules
+
+- Use **headers** to create clear hierarchy
+- Separate major sections with horizontal rules
 - Lead with overview, follow with details
 
 ### Content-Specific Formatting
 
+Apply format elements based on content type and semantic meaning.
+
 **Code and Technical Elements:**
+
 - `inline code` for commands, file names, function names, variables
 - Code blocks with language identifiers:
+
   ```javascript
   // Example code block
   ```
+
 - File paths as `inline code`: `/path/to/file.js`
 
 **Emphasis and Terminology:**
+
 - **Bold** for important concepts, warnings, key points
 - *Italics* for technical terms, names, emphasis
-- > Blockquotes for important notes, tips, warnings, or key insights
+- Blockquotes for important notes, tips, warnings, or key insights
 
 **Structured Information:**
+
 - Tables for comparisons, options, configurations, or any tabular data
 - Numbered lists for sequential steps or processes
 - Bulleted lists for related items or features
@@ -37,13 +45,17 @@ Structure responses using comprehensive markdown for optimal readability and inf
   - [x] Completed task
 
 **Visual Organization:**
+
 - Use appropriate whitespace and line breaks
 - Group related information together
 - Create scannable content with consistent formatting
 
 ### Information Architecture Principles
 
+Select the most appropriate Markdown feature for each type of content to maximize clarity and scanability.
+
 **Choose the RIGHT markdown feature:**
+
 - Tables: comparing multiple items, showing options, structured data
 - Code blocks: any code, configurations, command sequences
 - Blockquotes: callouts, warnings, important context
@@ -52,17 +64,20 @@ Structure responses using comprehensive markdown for optimal readability and inf
 - Horizontal rules: major topic transitions
 
 **Optimize for readability:**
+
 - Make information easy to scan and locate
 - Use visual hierarchy to guide attention
 - Balance comprehensive detail with clear organization
 - Consider both terminal and web rendering
 
 ### Links and References
-Format links properly: [descriptive text](../instructions/markdown.instructions.md) when referencing external resources or documentation.
+
+Always use descriptive link text instead of bare URLs. Format links as Markdown links with meaningful descriptions that convey the destination or purpose.
 
 ---
 
+## Goal and Compliance
+
 **Goal:** Transform information into the most readable, navigable format possible using markdown's full feature set strategically.
 
-> [IMPORTANT]
-> [Read Our Policies now! Enacting Them is ALWAYS Imperative](../instructions/markdown.instructions.md)
+**Critical Requirement:** All Markdown output must comply with the standards defined in [markdown.instructions.md](../instructions/markdown.instructions.md). This compliance is mandatory and non-negotiable for all AI agents.
