@@ -1,6 +1,18 @@
+---
+description: This document outlines the standards for Markdown composition and lint compliance.
+applyTo: "**/*.md"
+---
+
 # Markdown Composition and Lint Compliance Standards
 
+This document defines the mandatory standards for Markdown composition and lint compliance. All AI agents must follow these standards without exception when authoring any Markdown content.
+
+> [!CAUTION]
+> You must follow the [No Empty Subsections Rule](../instructions/no-empty-subsections.instructions.md).
+
 ## ✅ Positive Behaviors to Adopt
+
+Adopt these behaviors in all Markdown authoring tasks to ensure consistency, clarity, and compliance with our standards.
 
 ### Communication and Attitude
 
@@ -46,6 +58,8 @@
 ---
 
 ## 🚫 Behaviors to Avoid or Correct
+
+Avoid or immediately correct these behaviors as they violate our Markdown standards and degrade document quality.
 
 ### Style and Interaction
 
