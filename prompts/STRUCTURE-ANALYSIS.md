@@ -20,6 +20,9 @@ been examined and characterized below.
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Top-Level Statistics](#top-level-statistics)
+  - [Complete Picture of `/prompts` Folder](#complete-picture-of-prompts-folder)
+    - [Summary Statistics](#summary-statistics)
+    - [Category Breakdown](#category-breakdown)
   - [Root-Level Files](#root-level-files)
     - [ChatGPT Memories and User Profile](#chatgpt-memories-and-user-profile)
     - [AI Instruction and Prompt Engineering](#ai-instruction-and-prompt-engineering)
@@ -66,20 +69,65 @@ domains (web development, functional programming, image generation,
 linguistics), and multiple formats (plain text, markdown, PDF, JSON,
 YAML, shell scripts).
 
-The folder contains approximately **1,080 files** across
-**160 directories**. It was built incrementally over time as new AI
-tools, projects, and workflows were adopted.
+The folder currently contains **1,068 files** across
+**161 directories** (including the `/prompts` root directory). It was
+built incrementally over time as new AI tools, projects, and workflows
+were adopted.
 
 ## Top-Level Statistics
 
 | Metric | Count |
 |---|---|
-| Total files | ~1,080 |
-| Total directories | ~160 |
+| Total files | 1,068 |
+| Total directories | 161 (including root) / 160 (excluding root) |
 | Root-level files | 37 |
-| Root-level subdirectories | 33 |
-| Primary file types | `.txt` (534), `.md` (374), `.pdf` (48) |
+| Root-level subdirectories | 31 |
+| Primary file types | `.txt` (534), `.md` (375), `.pdf` (48) |
 | Secondary file types | `.json` (13), `.html` (9), `.sh` (8) |
+
+## Complete Picture of `/prompts` Folder
+
+The following snapshot revalidates the current state after cleanup and
+renaming work.
+
+### Summary Statistics
+
+- Total Files: **1,068**
+- Total Directories: **161** (including root)
+- File Types: `.txt` (534), `.md` (375), `.pdf` (48), `.json` (13),
+  `.html` (9), `.sh` (8), and others
+- Primary Purpose: Comprehensive AI prompt repository with
+  model-specific configs, project instructions, and technical
+  documentation
+
+### Category Breakdown
+
+These semantic buckets differ from the extension-only table below:
+`LICENSE` files are grouped under **Data & Config** in this section.
+
+- **Text & Markup (909 files - 85.1%)**
+  - 534 files: `.txt` (plain text prompts)
+  - 375 files: `.md` (Markdown documentation)
+- **Data & Config (94 files - 8.8%)**
+  - 48 files: `.pdf` (technical documentation)
+  - 33 files: `LICENSE` (license files)
+  - 13 files: `.json` (configuration/schema)
+- **Code & Scripts (31 files - 2.9%)**
+  - 9 files: `.html`
+  - 8 files: `.sh` (shell scripts)
+  - 5 files: `.yml` (YAML configs)
+  - 4 files: `.js` (JavaScript)
+  - 2 files: `.mjs` (ES modules)
+  - 1 file: `.ts` (TypeScript)
+  - 1 file: `.py` (Python)
+  - 1 file: `.xml`
+- **Other (34 files - 3.2%)**
+  - 21 files: `Untitled-*` files (no extension)
+  - 8 files: config/dotfiles, including `.keep` (for example
+    `.gitignore`, `.editorconfig`, `.shellcheckrc`)
+  - 2 files: `NOTICE`
+  - 1 file: `.png`
+  - 2 files: other no-extension files
 
 ## Root-Level Files
 
@@ -651,17 +699,18 @@ Content specifically for GitHub Copilot and VS Code integration.
 
 | Extension | Count | Percentage | Primary Use |
 |---|---|---|---|
-| `.txt` | ~534 | 49% | Plain text prompts, instructions, memories |
-| `.md` | ~374 | 35% | Markdown documentation, structured guides |
-| `.pdf` | ~48 | 4% | Technical manuals (tmux, Markdown spec) |
-| `.json` | ~13 | 1% | Configuration and schema files |
-| `.html` | ~9 | 1% | Web content, scraped data |
-| `.sh` | ~8 | 1% | Shell scripts and automation |
-| `.yml`/`.yaml` | ~5 | <1% | API references, CI workflows |
-| `.js`/`.mjs` | ~6 | <1% | Build scripts, pricing calculators |
-| `.ts` | ~1 | <1% | TypeScript example code |
-| `.py` | ~1 | <1% | Python teleprompter script |
-| Other | ~80 | 7% | LICENSE files, configs, images, untitled files |
+| `.txt` | 534 | 50.0% | Plain text prompts, instructions, memories |
+| `.md` | 375 | 35.1% | Markdown documentation, structured guides |
+| `.pdf` | 48 | 4.5% | Technical manuals and reference docs |
+| `.json` | 13 | 1.2% | Configuration and schema files |
+| `.html` | 9 | 0.8% | Web content and scraped pages |
+| `.sh` | 8 | 0.7% | Shell scripts and automation |
+| `.yml`/`.yaml` | 5 | 0.5% | API references and CI workflows |
+| `.js`/`.mjs` | 6 | 0.6% | Build scripts and helper tooling |
+| `.ts` | 1 | 0.1% | TypeScript example code |
+| `.py` | 1 | 0.1% | Python teleprompter script |
+| `.xml` | 1 | 0.1% | XML metadata/config file |
+| Other | 67 | 6.3% | `LICENSE`, `NOTICE`, dotfiles, untitled files, image and no-extension files |
 
 ## Observations for Future Optimization
 
