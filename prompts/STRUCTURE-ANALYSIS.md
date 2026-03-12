@@ -8,7 +8,7 @@ been examined and characterized below.
 
 > **Note on methodology**: File and directory counts in this document
 > are approximate, gathered through automated directory traversal and
-> manual inspection performed in March 2025. Counts marked with `~`
+> manual inspection performed in March 2026. Counts marked with `~`
 > indicate totals that may vary slightly due to hidden files, symlinks,
 > or transient content. Filenames are documented exactly as they appear
 > on disk, including any existing typos or inconsistencies in the
@@ -54,6 +54,7 @@ been examined and characterized below.
     - [Group J — Copilot and IDE Integration](#group-j--copilot-and-ide-integration)
   - [File Type Distribution](#file-type-distribution)
   - [Observations for Future Optimization](#observations-for-future-optimization)
+  - [Rename and Cleanup Execution Log](#rename-and-cleanup-execution-log)
 
 ## Overview
 
@@ -99,7 +100,7 @@ his interaction preferences.
 | `4o-65-more-memories.txt` | Comprehensive memories: technical preferences, monorepo details, learning paths, lifestyle |
 | `4o-additional-system.txt` | Bilingual system instructions: formatting preferences, language consistency rules |
 | `4o-approach-00b.txt` | GPU/NVIDIA driver troubleshooting notes, xorg.conf configuration, stack-based task tracking |
-| `curent-memories.txt` | Current AI preprocessing context, automated chaining guidelines, "Biogram" concept definitions |
+| `current-memories.txt` | Current AI preprocessing context, automated chaining guidelines, "Biogram" concept definitions |
 
 ### AI Instruction and Prompt Engineering
 
@@ -113,7 +114,7 @@ structures, meta-prompting techniques, and reasoning frameworks.
 | `4o-special-instructions.txt` | Initial context-setting instructions in English and French for proactive tool usage |
 | `dummy-rules-dump.md` | French-language analysis of AI instruction approaches: hierarchical asymmetry, imperatives, service contracts |
 | `instructions-for-assistant.md` | Chain-of-thought reasoning deconstruction: 7 steps from comprehension to summarization |
-| `tought-precesse.md` | Chain-of-thought analysis of how AI agents reason through system updates (7 key steps) |
+| `thought-process.md` | Chain-of-thought analysis of how AI agents reason through system updates (7 key steps) |
 | `act-as-a-reducer.txt` | 8-step text reduction methodology preserving meaning and intention |
 | `image-prompt.txt` | 14 best practices for AI image generation prompts |
 
@@ -149,7 +150,7 @@ Files documenting tools, system packages, and driver configurations.
 |---|---|
 | `GIT-LFS-OVERVIEW.md` | Comprehensive guide on Git LFS: health checks, file tracking, best practices |
 | `codex-help.txt` | Codex CLI documentation: flags, approval modes, usage examples |
-| `instrutions-dump-codex.txt` | Guide for teaching Codex-CLI agent preferences across sessions |
+| `instructions-dump-codex.txt` | Guide for teaching Codex-CLI agent preferences across sessions |
 | `dnf-list-installed.txt` | Fedora Linux installed packages listing |
 | `nvidia-assist-drivers-20241109.txt` | Conversation about model specs, context windows, Ollama installation with NVIDIA GPU |
 | `SUBSCRIPT.txt` | XCompose keyboard mapping for subscript numbers and mathematical symbols |
@@ -440,7 +441,7 @@ domains (development, finance, theology, DevOps) and technologies
 | `repo-tools/` | ZIP file processing, enumeration, and unzipping automation |
 | `markdown-specialist/` | Markdown linting rules and strictness enforcement (includes 8 spec PDFs) |
 | `word-tools/` | Word processing and concept expansion |
-| `The Rush Stack./` | Monorepo build system documentation |
+| `the-rush-stack/` | Monorepo build system documentation |
 
 **Root-level files**: `project-basic-instructions.md` (foundation for
 all projects), several behavioral and guidance documents, Cline agent
@@ -461,7 +462,7 @@ collection.
 | `gpt-5/` | 5 | GPT-5 canonical prompt templates, rhetorical escalation patterns, header variations |
 | `gpt-5-codex/` | 3 | GPT-5-Codex workflow definitions and sandboxing policies |
 | `riley-novak/` | 12 | Riley Novak personal AI agent configuration with custom instructions, validators, and persona files |
-| `agnostic-cutom-instructions/` | 1 | Foundational agnostic assistant instructions (relationship dynamics, interaction values) |
+| `agnostic-custom-instructions/` | 1 | Foundational agnostic assistant instructions (relationship dynamics, interaction values) |
 | `custom-instructions/` | 10 | LLM-optimized instruction sets (Claude, Llama), techniques for overcoming limitations |
 
 ### Memories and Knowledge Persistence
@@ -469,7 +470,7 @@ collection.
 | Directory | Files | Description |
 |---|---|---|
 | `memories/` | 15 | Timestamped memory banks (2024–2025) storing user profile, interests, learning goals, interaction preferences |
-| `notebok-lm/` | 8 | NotebookLM source materials with character bios, tech stack docs, and resource links for audio/podcast generation |
+| `notebook-lm/` | 8 | NotebookLM source materials with character bios, tech stack docs, and resource links for audio/podcast generation |
 
 ### Prompt Engineering Techniques
 
@@ -497,16 +498,15 @@ collection.
 | `scripts/` | 2 | System capabilities shell script and documentation |
 | `typing_prompter/` | 5 | Bash shell project for character-by-character text display with random delays |
 | `vocabulary/` | 3 | Modifier affixes organized by grade (substandard to transcendent) |
-| `mono-repo-descritors/` | 2 | Naming conventions for monorepo components |
+| `mono-repo-descriptors/` | 2 | Naming conventions for monorepo components |
 
 ### Temporary and Placeholder
 
 | Directory | Files | Description |
 |---|---|---|
-| `temp-stuff/` | 17 | Untitled scratch files with no clear organization (staging area) |
 | `midjourney/` | 5 | Small collection of Midjourney job IDs and prompt lists (separate from `API/midjourney/`) |
-| `data/` | 0 | Empty placeholder directory |
-| `markdown/` | 0 | Empty placeholder directory |
+| `data/` | 38 | Model Context Protocol documentation, specs, and schema assets |
+| `markdown/` | 1 | Markdown rule reference in `markdown/rules/markdownrules.txt` |
 
 ## Thematic Groupings Across the Folder
 
@@ -567,7 +567,7 @@ Content that preserves context across AI sessions.
 - `memories/` — 15 timestamped memory banks
 - `chatgpt/memories/` — Session snapshots
 - Root files: `4o-130-memories.txt`, `4o-51-memories.txt`,
-  `4o-65-more-memories.txt`, `curent-memories.txt`
+  `4o-65-more-memories.txt`, `current-memories.txt`
 - `cline/` — Memory Bank template
 - `projects/cline-vscode-assist/` — Memory bank instructions
 
@@ -605,7 +605,7 @@ Content that shapes how AI agents structure their responses.
 - `meta/` — Summarization toolkit, literary elements, session
   checkpoints
 - Root files: `instructions-for-assistant.md`,
-  `tought-precesse.md`, `act-as-a-reducer.txt`
+  `thought-process.md`, `act-as-a-reducer.txt`
 
 ### Group H — Technology-Specific References
 
@@ -645,7 +645,7 @@ Content specifically for GitHub Copilot and VS Code integration.
 - `projects/github-copilot/` — Copilot setup documentation
 - `projects/cline-vscode-assist/` — Cline AI integration
 - `projects/codex-copilot-cline/` — Unified Copilot + Cline
-- `notebok-lm/` — NotebookLM resource links
+- `notebook-lm/` — NotebookLM resource links
 
 ## File Type Distribution
 
@@ -676,7 +676,7 @@ analytical.
 
 2. **Memory files are spread** across `memories/`,
    `chatgpt/memories/`, and 6+ root-level files
-   (`4o-*-memories.txt`, `curent-memories.txt`). A unified memory
+   (`4o-*-memories.txt`, `current-memories.txt`). A unified memory
    location would simplify session management.
 
 3. **Model-specific prompts span multiple directories**: GPT-5 content
@@ -690,14 +690,15 @@ analytical.
    operates as an embedded subproject. Its MIT license differs from
    the Luxcium License applied to the rest of the `/prompts` folder.
 
-5. **Naming inconsistencies** include typos (`tought-precesse.md`,
-   `agnostic-cutom-instructions`, `mono-repo-descritors`,
-   `notebok-lm`) and mixed conventions (some folders use
-   `kebab-case`, others use `PascalCase` or have periods in names
-   like `The Rush Stack./`).
+5. **Naming conventions remain mixed** (some folders use `kebab-case`,
+   others use `PascalCase`, and some include legacy punctuation). The
+   most obvious typo paths that existed at analysis time have been
+   renamed.
 
-6. **Empty directories** (`data/`, `markdown/`) and scratch files
-   (`temp-stuff/` with 17 untitled files) could be cleaned up.
+6. **Temporary scratch content cleanup**: the `temp-stuff/` directory
+   (17 untitled files) has been removed after review. Directories
+   previously marked as empty (`data/`, `markdown/`) were verified as
+   non-empty and retained.
 
 7. **Behavioral and persona frameworks** are distributed across
    `projects/` subfolders (eliot, supreme, chameleon,
@@ -717,3 +718,43 @@ analytical.
 10. **Bilingual content** (French and English) appears throughout
     without a consistent organizational pattern. Some files are
     fully French, some fully English, some bilingual.
+
+## Rename and Cleanup Execution Log
+
+This log captures the applied renames, reference updates, and items
+that were intentionally retained.
+
+### Applied Renames
+
+| Old path | New path | Status |
+|---|---|---|
+| `prompts/tought-precesse.md` | `prompts/thought-process.md` | renamed |
+| `prompts/agnostic-cutom-instructions/` | `prompts/agnostic-custom-instructions/` | renamed |
+| `prompts/mono-repo-descritors/` | `prompts/mono-repo-descriptors/` | renamed |
+| `prompts/notebok-lm/` | `prompts/notebook-lm/` | renamed |
+| `prompts/projects/The Rush Stack./` | `prompts/projects/the-rush-stack/` | renamed |
+| `prompts/curent-memories.txt` | `prompts/current-memories.txt` | renamed |
+| `prompts/instrutions-dump-codex.txt` | `prompts/instructions-dump-codex.txt` | renamed |
+
+### Removed Items
+
+| Path | Reason | Status |
+|---|---|---|
+| `prompts/temp-stuff/` | Scratch-only untitled files, no integration references found | removed |
+
+### References Updated
+
+- Updated filename/path mentions in:
+  - `prompts/STRUCTURE-ANALYSIS.md`
+  - `prompts/list-all-now.txt`
+  - `prompts/prompt-tree-list.txt`
+- Regenerated structure snapshots to reflect current paths:
+  - `prompts/list-all-now.txt`
+  - `prompts/prompt-tree-list.txt`
+
+### Found but Intentionally Not Removed
+
+| Path | Why not removed |
+|---|---|
+| `prompts/data/` | Contains documentation and specs (`documentation/`, `specs/`) |
+| `prompts/markdown/` | Contains `rules/markdownrules.txt` |
