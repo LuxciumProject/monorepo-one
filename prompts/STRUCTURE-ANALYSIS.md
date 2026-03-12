@@ -1,4 +1,4 @@
-# Prompts Folder — Structure Analysis
+# Prompts Folder: Structure Analysis
 
 This document provides a comprehensive analysis of the current
 `/prompts` directory in the monorepo. It serves as the foundational
@@ -6,9 +6,17 @@ reference for understanding the existing organization before any future
 optimization or restructuring. Every folder, subfolder, and file has
 been examined and characterized below.
 
+> **Note on methodology**: File and directory counts in this document
+> are approximate, gathered through automated directory traversal and
+> manual inspection performed in March 2025. Counts marked with `~`
+> indicate totals that may vary slightly due to hidden files, symlinks,
+> or transient content. Filenames are documented exactly as they appear
+> on disk, including any existing typos or inconsistencies in the
+> original names.
+
 ## Table of Contents
 
-- [Prompts Folder — Structure Analysis](#prompts-folder--structure-analysis)
+- [Prompts Folder: Structure Analysis](#prompts-folder-structure-analysis)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Top-Level Statistics](#top-level-statistics)
@@ -679,7 +687,8 @@ analytical.
 4. **The `awesome-copilot-main/` directory is a self-contained
    third-party collection** with its own LICENSE (MIT),
    `package.json`, CI workflows, and contributor management. It
-   operates as an embedded subproject.
+   operates as an embedded subproject. Its MIT license differs from
+   the Luxcium License applied to the rest of the `/prompts` folder.
 
 5. **Naming inconsistencies** include typos (`tought-precesse.md`,
    `agnostic-cutom-instructions`, `mono-repo-descritors`,
