@@ -56,6 +56,7 @@ been examined and characterized below.
     - [Group I — System and Hardware Documentation](#group-i--system-and-hardware-documentation)
     - [Group J — Copilot and IDE Integration](#group-j--copilot-and-ide-integration)
   - [File Type Distribution](#file-type-distribution)
+  - [Per-Folder Deep Analysis Reports](#per-folder-deep-analysis-reports)
   - [Observations for Future Optimization](#observations-for-future-optimization)
   - [Rename and Cleanup Execution Log](#rename-and-cleanup-execution-log)
 
@@ -711,6 +712,68 @@ Content specifically for GitHub Copilot and VS Code integration.
 | `.py` | 1 | 0.1% | Python teleprompter script |
 | `.xml` | 1 | 0.1% | XML metadata/config file |
 | Other | 67 | 6.3% | `LICENSE`, `NOTICE`, dotfiles, untitled files, image and no-extension files |
+
+## Per-Folder Deep Analysis Reports
+
+Detailed per-folder analysis reports are available in the
+[`analysis/`](analysis/) directory. Each report covers every file in
+the folder with content descriptions, thematic groupings,
+misplaced-content identification, and reorganization strategies.
+
+See [`analysis/README.md`](analysis/README.md) for the full index.
+
+### Major Directories
+
+- [`analysis/API.md`](analysis/API.md) — 221 files, model configs and
+  API references
+- [`analysis/awesome-copilot-main.md`](analysis/awesome-copilot-main.md)
+  — 216 files, Copilot chatmodes/instructions/prompts
+- [`analysis/projects.md`](analysis/projects.md) — 134 files, 37
+  project agent configurations
+- [`analysis/chatgpt.md`](analysis/chatgpt.md) — 117 files, ChatGPT
+  interaction framework
+- [`analysis/LuxciumOne.md`](analysis/LuxciumOne.md) — 108 files,
+  MIPAD methodology and personal configs
+
+### Medium Directories
+
+- [`analysis/midjourney.md`](analysis/midjourney.md) — 40 files
+- [`analysis/data.md`](analysis/data.md) — 39 files
+- [`analysis/typing_prompter.md`](analysis/typing_prompter.md) — 19
+  files
+- [`analysis/github-copilot.md`](analysis/github-copilot.md) — 15
+  files
+- [`analysis/memories.md`](analysis/memories.md) — 15 files
+- [`analysis/headers.md`](analysis/headers.md) — 14 files
+- [`analysis/riley-novak.md`](analysis/riley-novak.md) — 13 files
+- [`analysis/claude-anthropic.md`](analysis/claude-anthropic.md) — 12
+  files
+- [`analysis/custom-instructions.md`](analysis/custom-instructions.md)
+  — 10 files
+- [`analysis/meta.md`](analysis/meta.md) — 10 files
+
+### Small Directories
+
+- [`analysis/notebook-lm.md`](analysis/notebook-lm.md) — 8 files
+- [`analysis/cline.md`](analysis/cline.md) — 7 files
+- [`analysis/techniques.md`](analysis/techniques.md) — 6 files
+- [`analysis/gpt-5.md`](analysis/gpt-5.md) — 5 files
+- [`analysis/development-instructions.md`](analysis/development-instructions.md)
+  — 3 files
+- [`analysis/gpt-5-codex.md`](analysis/gpt-5-codex.md) — 3 files
+- [`analysis/scripts.md`](analysis/scripts.md) — 3 files
+- [`analysis/vocabulary.md`](analysis/vocabulary.md) — 3 files
+- [`analysis/mono-repo-descriptors.md`](analysis/mono-repo-descriptors.md)
+  — 2 files
+- [`analysis/references.md`](analysis/references.md) — 2 files
+- [`analysis/agnostic-custom-instructions.md`](analysis/agnostic-custom-instructions.md)
+  — 1 file
+- [`analysis/codex_cli.md`](analysis/codex_cli.md) — 1 file
+- [`analysis/coding-best-practices.md`](analysis/coding-best-practices.md)
+  — 1 file
+- [`analysis/comparaison.md`](analysis/comparaison.md) — 1 file
+- [`analysis/markdown.md`](analysis/markdown.md) — 1 file
+- [`analysis/openai-api.md`](analysis/openai-api.md) — 1 file
 
 ## Observations for Future Optimization
 
