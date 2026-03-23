@@ -4,6 +4,22 @@
 
 This monorepo contains various projects, libraries, and services organized in a modular structure. It uses Git submodules and follows the Rush stack monorepo workflow.
 
+## Recent Changes
+
+If the repository changes too often to follow comfortably, start here instead
+of scanning the tree manually.
+
+- [CHANGELOG.md](/home/luxcium/projects~/monorepo-one/monorepo-one/CHANGELOG.md) - Stable entry point for notable updates
+- [memory-bank/progress.md](/home/luxcium/projects~/monorepo-one/monorepo-one/memory-bank/progress.md) - Broader project progress log
+
+For folder-specific detail, use Git history on the area you care about.
+
+```bash
+git log --oneline -- library/
+git log --oneline -- services/
+git log --oneline -- frontend/
+```
+
 ## Repository Structure
 
 ### Core Components

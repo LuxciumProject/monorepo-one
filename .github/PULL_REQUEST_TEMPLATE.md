@@ -4,6 +4,13 @@
 
 Please include a summary of the changes and the related issue. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
+Please also state where a reviewer should look to understand the impact of the
+change quickly.
+
+- Affected area:
+- What changed in practical terms:
+- Where the change is documented:
+
 Fixes # (issue)
 
 ## Type of change
@@ -34,6 +41,7 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
+- [ ] I have updated CHANGELOG.md or the relevant project documentation when the change affects behavior, workflow, or repository structure
 - [ ] My changes generate no new warnings
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
