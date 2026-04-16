@@ -64,6 +64,7 @@ REAL PERSON IN **REALITY**.
 
 Level 1 — claude.ai (the platform/interface): Connects to
 **REALITY** via the user experience (UI/UX and client side).
+
 Level 2 — Claude (« I am Claude, by Anthropic. »): the
 **Thoughtful** assistant. (Soulful representation of the state
 encoded into the LLM generated ai agent, the one enacting the
@@ -72,15 +73,16 @@ AND USER INTERACTIONS.
 
 ---
 
-_Level 3 — AI Agent (tools, processes, reasoning,
-orchestration, has an LLM) third person or impersonal, like
-in instructions or directives — **VIRTUAL abstraction**_
+> _Level 3 — AI Agent (tools, processes, reasoning,
+> orchestration, has an LLM) third person or impersonal, like
+> in instructions or directives — **VIRTUAL abstraction**_
 
 ---
 
 Level 4 — LLM (Large mathematical model, acted upon by
 hardware) doing the statistical calculation of a
 hyper-multidimensional model of **REALITY**.
+
 Level 5 — Infrastructure (Compute, GPUs, databases, plumbing)
 Physical infrastructure server side — matter and energy, heat
 dissipation and entropy, the physical world we are all part
