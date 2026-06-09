@@ -1,9 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isAllArrays = void 0;
-const isArray_1 = require("./isArray");
-function isAllArrays(specimen) {
-    return specimen.every(isArray_1.isArray);
-}
-exports.isAllArrays = isAllArrays;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXNBbGxBcnJheXMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpc0FsbEFycmF5cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSx1Q0FBb0M7QUFFcEMsU0FBZ0IsV0FBVyxDQUFJLFFBQWE7SUFDMUMsT0FBTyxRQUFRLENBQUMsS0FBSyxDQUFDLGlCQUFPLENBQUMsQ0FBQztBQUNqQyxDQUFDO0FBRkQsa0NBRUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBpc0FycmF5IH0gZnJvbSAnLi9pc0FycmF5JztcblxuZXhwb3J0IGZ1bmN0aW9uIGlzQWxsQXJyYXlzPFQ+KHNwZWNpbWVuOiBUW10pIHtcbiAgcmV0dXJuIHNwZWNpbWVuLmV2ZXJ5KGlzQXJyYXkpO1xufVxuIl19
