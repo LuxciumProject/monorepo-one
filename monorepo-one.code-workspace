@@ -1263,12 +1263,14 @@
         "backgroundColor": "transparent"
       },
       {
+        // HINT
         "tag": "HINT",
         "color": "#39C",
         "strikethrough": false,
         "backgroundColor": "transparent"
       },
       {
+        // INFO
         "tag": "INFO",
         "color": "#FB0",
         "strikethrough": false,
@@ -1287,12 +1289,14 @@
       //   "backgroundColor": "transparent"
       // },
       {
+        // WARNING
         "tag": "WARNING",
         "color": "#BF2",
         "strikethrough": false,
         "backgroundColor": "transparent"
       },
       {
+        // XXX
         "tag": "XXX",
         "color": "#E22",
         "strikethrough": false,
