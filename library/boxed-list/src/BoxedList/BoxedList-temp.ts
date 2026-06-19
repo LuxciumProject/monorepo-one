@@ -142,7 +142,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return this.#value.findLast(predicate, thisArg);
   }
 
-  // public ==================================-| findLastIndex() |-====
+  // public =================================-| findLastIndex() |-====
   public findLastIndex(
     predicate: (val: T, index: number, array: T[]) => unknown,
     thisArg?: unknown
@@ -173,7 +173,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     this.#value.forEach(callbackFn, thisArg);
   }
 
-  // public =======================================-| includes() |-====
+  // public ======================================-| includes() |-====
   public includes(searchElement: T, fromIndex?: number): boolean {
     return this.#value.includes(searchElement, fromIndex);
   }
@@ -188,7 +188,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return this.#value.join(separator);
   }
 
-  // public =====================================-| lastIndexOf() |-====
+  // public ===================================-| lastIndexOf() |-====
   public lastIndexOf(searchElement: T, fromIndex?: number): number {
     return fromIndex !== undefined
       ? this.#value.lastIndexOf(searchElement, fromIndex)
@@ -264,19 +264,19 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return this.#value.some(predicate, thisArg);
   }
 
-  // public ===================================-| toLocaleString() |-====
+  // public ================================-| toLocaleString() |-====
   public toLocaleString(locales?: string | string[], options?: object): string {
     return locales !== undefined
       ? (this.#value as unknown[]).toLocaleString(locales, options)
       : this.#value.toLocaleString();
   }
 
-  // public =====================================-| toReversed() |-====
+  // public ====================================-| toReversed() |-====
   public toReversed(): BoxedList<T> {
     return BoxedList.of<T>(...this.#value.toReversed());
   }
 
-  // public =======================================-| toSorted() |-====
+  // public ======================================-| toSorted() |-====
   public toSorted(compareFn?: (a: T, b: T) => number): BoxedList<T> {
     return BoxedList.of<T>(...this.#value.toSorted(compareFn));
   }
@@ -300,17 +300,17 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return BoxedList.of<T>(...result);
   }
 
-  // public =======================================-| toString() |-====
+  // public ======================================-| toString() |-====
   public toString(): string {
     return this.#value.toString();
   }
 
-  // public ===========================================-| with() |-====
+  // public ==========================================-| with() |-====
   public with(index: number, value: T): BoxedList<T> {
     return BoxedList.of<T>(...this.#value.with(index, value));
   }
 
-  // public ===========================================-| ap() |-====
+  // public ============================================-| ap() |-====
   //   Applicative: applies each fn in fns to each item in this,
   //   fns-outer order — [f(1), f(2), g(1), g(2)] for fns=[f,g], this=[1,2].
   public ap<R>(fns: BoxedList<(t: T) => R>): BoxedList<R> {
@@ -336,7 +336,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return Box.of([...this.unbox<T>()]);
   }
 
-  // get ==========================================-| isArrayList |-====
+  // get ========================================-| isArrayList |-====
   public get isArrayList(): boolean {
     return this.#value.every(item => Array.isArray(item));
   }

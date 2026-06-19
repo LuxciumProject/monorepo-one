@@ -22,7 +22,6 @@
     "noEmitHelpers": true, // !!!
     "removeComments": true, // !!!
     "importsNotUsedAsValues": "remove",
-    "downlevelIteration": true,
     "emitBOM": false,
     "pretty": true,
     "stripInternal": false,
@@ -31,7 +30,6 @@
     "emitDecoratorMetadata": true,
     /* Module Resolution Interop Constraints */
     "module": "CommonJS",
-    "moduleResolution": "node",
     "isolatedModules": true,
     "esModuleInterop": true,
     "preserveSymlinks": false,
