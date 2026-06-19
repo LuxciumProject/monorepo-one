@@ -1,0 +1,4514 @@
+
+...
+\(B\)
+\(C\)
+\(D\)
+\(F_{in} = O + R + W + T\)
+\(G = (N, S, I, T, u, B, D)\)
+\(G\)
+\(I\)
+\(O\)
+\(R\)
+\(S\)
+\(T\)
+\(u_i = v_i(a) + t_i\)
+\(u\)
+\(W\)
+\(X_{t+1} = X_t + G_t - C_t\)
+\(X\)
+A badly designed reward system
+A bounded
+A bounded system
+A canonical pattern is
+A case study
+a chance at value
+a clean separation
+a closed theory
+A compact set
+a complete plan
+A complete state
+A conceptual design
+A configuration space
+a conservation-like relation
+a consumer’s preference
+a continuing ontology discipline
+A creator economy system
+a creator platform
+A credit might represent progression
+a d...
+a different design dimension
+A dominant potential-like field
+a fundamental concept
+A game can be specified
+A game is said
+A game theoretic frame...
+A game theoretic framework
+A game-like progression service
+a genuine digital prestation
+a global potential function
+a global scalar potential
+A guide to models
+A helpful abstraction is
+A holistic ...
+a hybrid entertainment service
+A hybrid system
+A hyperdimensional
+a hyperdimensional state
+A hyperdimensional state space
+A key design principle
+a large
+A lawful
+a layered strategic picture
+a legitimate core prestation
+a living scaffold
+a long-run budget constraint
+A major legal boundary
+a marketplace
+a meaningful
+A media membership layer
+a media system
+a membership product
+A message-by-message concept map
+A meta-level pattern emerges
+A minimal formal grammar
+a n...
+a naïve one-to-one mapping
+A network effect exists
+A neutral reusable formulation is
+a one-way dependency
+a particular legal environment
+a payment experience
+A personalized advisory-adjacent service
+A perspective
+A physics-like description
+A platform
+a portfolio of methods
+A portion of this revenue
+A potential could combine
+a potential game
+A practical invariant set
+A profile of strategies
+a recurring boundary pattern
+a reference scaffold
+A related interpretive template is
+A remarkable
+a remarkable one-page
+A review
+A review of literature
+A reward field
+a richer picture
+A right
+a rule system
+A safer design principle is
+a second outer shell
+a separate
+A simple internal state law
+a small set of invariants
+a socio-economic system
+a specific MARL algorithm
+a stable conceptual backbone
+a stable level of energy
+A stable set
+A strategy is
+A strategy is not merely a move
+A strongly-budget-balanced
+a sustainable
+A systems approach studies
+a three-layer architecture
+a thriving
+a two-stage pattern
+a useful geometric language
+A useful systems view is
+A user
+A user balance
+a user is not merely a passive consumer
+A user’s internal credits
+A utility function measures
+A valid purchase
+A virtual economy
+a virtual game economy
+A well-designed reward system
+a...
+aaltodoc.aalto.fi
+about interacting agents
+about real value
+About the nature
+About the world
+about universal access
+About what another participant
+abstract budget envelopes
+abstraction
+Abstraction from accounting
+abuse
+abuse cases
+Abuse resistance and anti-gaming rules
+acceleration
+Access
+Access rights
+According to explicit system rules
+According to simple
+accounting identities
+across domains
+across jurisdictions
+Across many platform types
+across possible contingencies
+Across state space
+Across the preceding sections
+Across various disciplines
+act as different coordinate systems
+Actually increase it
+ad hoc constructs
+Adapt policies
+adapt strategies
+adaptation
+Adapting to
+adaptive incentives
+Adaptive mechanisms
+adaptive media memberships
+Adapts experience
+Additional dimensions
+Adjusted for
+admits a potential
+Adult content
+Adult-content-related services
+advanced topics
+Affect student understanding
+affinity
+after the structure is observed in practice
+age-appropriate handling
+agent-based
+Agent-based models
+Agent-based simulations
+Agent-based sociology
+Agents and designers
+Agents prefer participating
+Agents see only local state
+Agents with preferences
+agnosticism
+AI
+AI agent design
+AI agents
+AI agents can document
+AI-driven design
+AI-driven mechanism design
+AI-driven mechanisms
+aims to shape
+Akin to gradient ascent
+Akin to potential energy
+Algorithmic game theory
+algorithmic lens
+Algorithms
+Algorithms developed
+Algorithms must cope with
+Align with
+Alignment is understood as
+All affect stability
+All available
+All become
+all concepts raised
+All creative work
+All of which are salient
+All of which provide
+all possible positions
+all the possible states
+Allocates budgets
+allocation
+Allows designers
+Allows exploration
+Alongside
+Alongside a flux
+already being used
+already defined here
+already has platform-like traits
+American Experience
+Among many actors
+Among moderators
+Among operating cost
+Among rational
+among stakeholders
+among users
+an abstract world
+An action should be understood
+An analysis
+an essential adjacent discipline
+an exhaust byproduct
+an exhaustive enumeration
+an illegal lottery
+an important implication
+An in-app
+an ontology
+An outcome
+an overview
+Analogous
+Analogous to real economies
+Analogously
+Analysis of the principle
+Analytics
+Analyzes how supply
+Anchors abstract incentives
+And \(t_i\)
+and a clean interface
+and a compliant payment rail
+and a flexible internal space
+and a separation
+And a systems-control discipline
+and access rules
+And action selection
+and adaptive digital systems
+and adaptive dynamics
+and adaptive flows
+and adaptive mechanisms
+and adaptive reconfiguration
+and adaptive system design
+and adaptive systems
+And additional fields
+And additional scalar fields
+And adjust parameters
+And adversarial dynamics
+and agent-based
+and agent-based modeling
+and agent-based models
+And agent-based simulation
+and agent-based simulations
+And agent-based sociology
+and AI
+and AI agents
+And AI-driven dynamics
+And algorithmic variants
+and algorithms
+And aligned
+and alignment
+And allocation
+and allocation mechanisms
+And allow designers
+And an expansion step
+and analytics
+and app stores
+And applicable law
+and application
+and applications
+And applies
+And are candidates
+and assets
+and assignment systems
+and audit tools
+and automated components
+and balancing mechanisms
+And barriers
+And Bayesian equilibria
+And become more useful
+and behavior
+and behavioral assumptions hold
+and behavioral data
+And behavioral science
+and behavioral sciences
+and behavioral signals
+and behaviors
+and benefits
+and betting
+And bottlenecks
+and bounded budgets
+and bounded emissions
+and bounded rationality
+and bounded-system design
+And breadth
+And budget balance conditions
+and budgets
+and business-model possibilities
+And can be instantiated
+and capture
+and capture value
+And careful treatment
+and cautionary tales
+And certain adult-content-related activity
+And chaos
+and characterized
+and chargeback exposure
+And chargebacks
+And clear interfaces
+And clear separation
+And clear user disclosures
+And clusters
+And coalitions
+and coherent
+and commitment
+and competitiveness
+And complex systems
+and complex-systems
+and complex-systems tools
+and compliance
+and compliance analysis
+and compliance constraints
+And compliance requirements
+and compositional
+And computational constraints
+and concepts
+and conceptual modeling
+and configuration view
+And congestion pricing
+and connected accounts
+and consideration
+and constraints
+and consumer-protection regimes
+And content
+And content moderation
+and content selection
+and context
+and contingent reactions
+And contract design
+and conversion rules
+and conversions
+And coordination
+and coordination failures
+and correlated equilibria
+and cosmetic value
+and cost
+and costs
+and costs closure
+and costs expansion
+and counterparties
+And credit assignment
+And cross-border participation
+and cross-domain bridges
+And currency
+And curvature-like notions
+and cycles
+and data strategy
+And decay mechanisms
+And decentralized learning
+and decomposition
+And deep policy gradients
+and delegation schemes
+and demand are formed
+And design patterns
+And design worlds
+and designers
+And destroyed
+and destruction
+And detailed
+And deter abuse
+And diffusion of behaviors
+And digital advertising systems
+and digital platform capability
+and digital platforms
+and dispute mechanics
+And disputes resolved
+and does
+and domains
+and dynamic game
+And dynamic policies
+And dynamical systems
+and dynamics
+And each other
+and economic relations
+And economic stability
+and economically intelligible by construction
+and economies
+and economies in MMORPGs
+and edge cases
+And embedded
+And emergent
+And emergent behavior
+And emergent norms
+And emergent upper classes
+and emission control
+And engagement
+And ensures compliance
+And ensuring that players
+And ensuring that users
+and environment
+and equilibrium
+and equilibrium calibration
+And ethical frameworks
+And ethical guidelines
+And ethics
+And eventually
+and evolutionary dynamics
+and evolutionary views matter
+And examples
+And expanded
+and expansion
+and expansions
+and experience
+and experience design
+and experience flow
+And experience layer
+and experience logic
+and experiences
+And experiential alignment
+And experiential benefits
+and experimental economics
+And explicit governance experiments
+and explicit surveys
+and extends
+and extensive form
+And external
+and external exchange
+and external markets
+And externalization
+And externally contextualized
+And externally grounded
+And facts
+and fairness
+and feedback loops
+and feedback structures
+and fields
+and financial-crime controls
+and flow
+And flow states
+and flow theory
+and friend
+And future
+And gambling classifications
+And game-based learning
+And game-theoretic
+and game-theoretic algorithms
+and game-theoretic context
+and game-theoretic design
+and game-theoretic models
+And game-theoretic reasoning
+And game-theoretic structure
+and global objective functions
+and governance
+and governance choices
+and governance models
+And governance processes
+And governance research
+and governance rules
+And governance theory
+and growth
+And growth experiences
+and habit formation
+And hard currency
+And health
+And heterogeneous preferences
+And heuristics
+and hidden platform objectives
+and high-level constraints
+And how community-level phenomena
+And how player markets
+And how they interact
+and how to allow
+and in-app currencies
+and in-app virtual currency
+and incentive compatibility
+And incentive fields
+And incentive schemes
+and incentive shaping
+and incentive structures
+and incentives
+And incomplete information
+And incomplete-information games
+and incomplete-information settings
+And inequality
+and influence
+And influences
+and inform regulations
+and information asymmetries
+and information feedback
+And information is imperfect
+And infrastructure planning
+And inherit
+And innovations
+and institutional design
+and institutions
+and interactions
+and internal credits
+And internal drives
+and interpreting
+And intrinsic components
+and intrinsic factors
+And intrinsic motivational forces
+And introduce
+And invalid states
+And is agnostic
+and items
+and iteration
+and its environment
+And its impact
+And latent
+And latent embedding spaces
+And later intersect them
+and later refinement
+and lawful behavior
+and learning
+And learning dynamics
+And learning outcomes
+And legal advice
+And legal analyses
+and legal boundaries
+and legal constraints
+and legal safe zone
+and legally acceptable bounds
+And lets designers
+and liabilities
+and liability boundaries
+and limited slots
+and limits
+and lottery law
+And low congestion
+and macro outcomes
+and macro-level effects
+and makes the system easier to adapt
+and manages liability
+And marginal cost estimation
+and market demand
+And market interfaces
+And markets
+and matching
+And may win back value
+and mechanism design
+And mechanism-design tools
+And medical resource assignment
+and methodological context
+and methods
+and model exploration
+and model governance
+And moderation flags
+And moderation policies
+And moderation risk
+and money-transmission classifications
+And money-transmitter regimes
+And more
+And more abstract spaces
+And more controllable
+and more modular product design
+and motivation
+And motivational psychology
+and multi-agent
+and multi-agent algorithms
+and multi-sided platforms
+And must infer
+And narrative alignment
+and narrative fit
+and navigation
+and negative-balance concerns
+And network effects
+And network structures
+and network-effect activation thresholds
+and networked states
+And no wagering
+And non-cash-equivalent uses
+And non-conservative flows
+and non-equilibrium behavior
+and non-potential flows
+And non-redeemable experiences
+and norms
+and not assumed to have a fixed conversion to money
+and observed signals
+And occasionally
+and offers
+and onboarding policies
+and online platforms
+and online worlds
+and ontology
+and open elements
+and open to later calibration
+and operational risk
+and operationally manageable
+and optimization
+and optimization later
+and optimizing
+And other
+and other domains
+And other permitted domains
+and outcomes
+and pacing
+and participation constraints
+and participation quality
+and pathways
+and patterns
+and payment architecture
+And payment-license issues
+and payoffs
+and perceived value
+and persona-based narrative design
+and personalization
+and personalization control loops
+and personalization primitives
+and perspectives
+And phase transitions
+and platform constraints
+and platform rules
+and platform-policy constraints
+and platforms
+And player-to-player markets
+and policy context
+And policy experiments
+and policy rules
+and population-level flow
+And possibly content creators
+And possibly external actors
+And possibly leaving
+and potential landscapes
+and practical system architecture
+and practices
+and pre-implementation
+And preference elicitation
+And presents content
+and preserves credibility
+and preserves invariants
+And prevent
+and prices
+and private information
+and processor compatibility
+and processor constraints
+and product form
+and product psychology
+And progression
+and progression paths
+And provide
+And provides the vocabulary
+And purposeful sinks
+and random upside
+and re-evaluate concepts
+and re-optimization of the experience
+and real currencies
+and real-money ingress
+and real-world coupling
+and recommendations
+and reconfiguration
+And reducing churn
+And refinement
+And regret minimization
+And regulated advice
+and regulated financial behavior
+and regulations
+and regulatory constraints
+and regulatory context
+And regulatory environments
+And regulatory interactions
+and regulatory regimes
+and related transfer structures
+And relatedness
+and relations
+and relationships
+And relevant environment variables
+and reliable as possible
+And replicator dynamics
+and reputation systems
+and researchers
+And reserves
+and resilient systems
+And resource allocation
+And respond
+and retained treasury
+and retention
+And reusability
+And reuse existing results
+and revenue
+and revenue recycling
+And revenue sustainability
+and reward primitives
+and reward sustainability
+and rewards
+And richer geometric
+and risk rules permit
+And robustness
+and rule-change primitives
+and rule-setting
+and rules engine
+and rules layers
+and safe value-return structures
+And satisfaction
+and scenario-bounded reasoning
+and security risks
+And segment audiences
+and segmentation
+and self-determination
+and separation of concerns
+and service differentiation
+and service providers
+and services
+And shared activity
+and signaling perspectives matter
+and signals
+And sinks
+and skills
+And so on
+And social belonging
+And social connection
+And social contexts
+and social dynamics
+And social influence
+And social rewards
+and social simulation
+and social structures
+And social well-being
+and soft resources
+And solution concepts
+and solvency
+And some key tips
+and specialization
+and specialize
+and stabilizes
+and state space
+and state variables
+and strategic behavior
+and strategic responses
+and strategies
+and structure
+and structures
+and survey completion
+And surveys
+and sustainable growth
+and system components
+and system optimization
+and technologies
+and technology-agnostic
+And test whether
+And test which one
+And that a small subset
+and the behavioral pattern it induces
+And the concrete content
+and the discovery of latent structure
+And the geometry
+and the gradual extraction
+And the internal incentive geometry
+And the rules of motion
+And the solutions ...
+and the surrounding domain space
+and the user’s expectations
+And then creates
+and theoretical work
+And this theorem
+And those
+And threats
+and timing
+and timing structures
+and topological features
+and trade flows
+And trajectories
+And transferability
+and transfers
+and transformation
+And transparency
+and transparent
+and treasury
+and treasury layer
+and treasury layers
+and treasury logic
+and treasury safety
+And treats
+and trust
+and tune
+and tuned
+and tuning
+And usage guidelines
+And use cases
+And used
+and user experience
+and user incentives
+and user-facing experience flow
+and uses
+And UX details
+and value fields
+and value-return systems
+and virtual currency tracker
+and virtual worlds
+and vocabulary
+And what is deliberately
+And what mathematical
+And what remains
+And what that looks like
+And whether a reward architecture
+And which are aggregated
+and worlds
+Another neutral formulation is
+Anti-abuse
+Anti-exploit design
+Any chance-based promotional upside
+Any cross-layer interactions
+Any future design
+Any future project
+Any reward emission design
+anything is conceptually admissible
+Anything that violates the invariants
+application-specific detail
+Applications
+Applications of game theory
+Applying similar approaches
+Applying similar methods
+Applying this principle
+Approximate gradient flows
+Arbitrarily
+Architecting
+Architecting virtual storefronts
+are a class of games
+are acceptable
+are added
+are already identified
+are already implicit
+Are already used
+are also treated
+Are assumed out of scope
+Are called
+are control surfaces
+are debited
+are defined
+are defined clearly
+are designed
+are explicit
+are fixed
+are foundational abstractions
+Are framed as access
+are impossible
+Are increasingly used
+Are influenced
+are modeled
+are natural next steps
+Are neighboring disciplines
+are not implementation trivia
+are not presumed
+are often cross-side
+are often used
+are outer constraints
+Are postponed
+are preserved
+are programmable state
+Are reserved
+are respected
+are restricted business categories
+are separate concerns
+are separated into distinct layers
+Are shaped around
+are shown below
+Are simply additional coordinates
+are stepping in
+are subclass
+are taking back control
+are trajectories
+Are treated
+Are treated as constraints
+are used
+Are used to personalize
+are valid inputs
+Around conserved quantities
+around data pipelines
+Around entities such as
+Around it radiate
+Around privacy
+Around reserve policy
+around the framework
+around the topic
+Around those
+Around value-return mechanics
+Around virtual currencies
+arXiv
+as a bounded conceptual world
+As a central design target
+As a core objective
+As a design constraint
+As a durable reference model
+as a family of possible concretions
+as a first-class objective
+as a fleeting brainstorm
+as a game
+as a general digital service ecosystem
+as a high-dimensional conceptual space
+As a layered map
+as a lower-level applied design space
+As a mathematical study
+as a mechanism
+As a multi-layer game
+as a multidimensional conceptual space
+as a multidimensional interaction space
+As a novel setting
+As a particular instantiation
+As a potentially
+as a primary architectural constraint
+as a primary design goal
+As a product
+As a reference point
+As a stable scaffold
+As a structured
+as abstract utility medium
+As additional components
+As additional sections
+as an economy
+As an explicit buffer system
+as an external
+as an interaction field
+as an internal accounting mechanism
+As approximately
+as bitcoin
+as black boxes
+As candidates
+As central tools
+as defined in the base model
+as digital service value
+As explicit RL agents
+As fair
+as financial products
+as freely as possible
+as gameplay
+As games
+as guides
+as having a flux of users
+As informed by
+as initial frame
+As inputs
+As interactions scale
+as learners
+As learning
+as learning agents
+As long as
+as long as its logic remains coherent
+As long as legality
+As long as they avoid
+as micro markets
+as modules
+as money being held
+As money transmitters
+As more participants
+as more structure becomes visible
+As more users join
+As multi-component structures
+As multiplex graphs
+as non-redeemable
+as o...
+as observation channels
+as offering regulated advice
+As one-way
+As out of scope
+as part of the reference baseline
+As part of the virtuous cycle
+as partitioned
+as perturbations
+As players
+As populations grow
+As potentially rich systems
+as programmable internal state
+As programmable state units
+as real-world settlement
+As reference points
+as restricted
+as reverse game theory
+As rich
+As scalar fields
+As separate players
+as signals
+as system-specific value
+As the basis
+As the configuration space
+As the foundational language
+As the ingress
+As the methodological backbone
+As the organizing language
+As the outer mathematical shell
+as the outer shell
+As the primary
+as the same layer
+as the study
+as the upper-level discipline
+As the working methodology
+As they interact
+As training targets
+As truthful
+as well
+As well as topological concepts
+asset balancing solutions
+Assigning scalar
+Assignment systems
+Assuming that
+At a fixed share
+at least one
+At macro scale
+At meso scale
+At micro scale
+At the center
+At the current stage
+at the edge
+At the highest level
+At the outer boundary
+At the top
+at the top of the map
+at the treasury level
+At this level
+at two levels
+Atlar
+Attack surface
+attention
+Auctions
+auditable rules
+automated agents
+Autonomy
+available actions
+Available for analysis
+Avoidance of cash-like payouts
+Avoidance of legally sensitive domains
+Avoidance of pay-to-enter lotteries
+Avoiding direct cash-out
+Avoiding manipulation
+Badges
+balances
+Balances sources
+bank accounts
+bargaining
+based on clean organizational
+Based on history
+Based on preferences
+basic psychological needs
+Bayesian
+Bayesian games
+Bayesian structures add hidden state
+Because it provides
+Because learning dynamics
+Because rewards
+Because the designer starts
+Because the system can support
+Because the unnamed system
+because they all deal
+Because they are natural
+Because this system
+becomes easier to extend
+becomes the organizing principle
+before deployment
+Before features proliferate
+behave
+behavior
+Behavioral
+Behavioral analytics
+behavioral assumptions
+Behavioral design
+Behavioral design sits
+Behavioral economics
+behavioral information
+Behavioral models
+Behavioral science
+Behavioral sciences
+Behavioral signals
+Behaviors
+Behind this boundary
+belief structures
+beliefs
+Benchmarks
+best expresses
+Best fits demand
+best responses
+Better data improves matching
+Between abstract game theory
+Between efficiency
+Between effort
+between fun mechanics
+between incentive
+Between interdependent sides
+Between legal
+Between mechanism design
+between multiple parties
+Between platform growth
+between regions
+between simple vector models
+Between the system’s internal logic
+between these layers
+Between those
+between user and system
+Between virtual
+between visible incentives
+Beyond credits
+beyond law itself
+Beyond modeling users
+Beyond narrow
+Beyond the internal world
+Binds generosity
+Biology
+Bonuses
+Boredom
+Borrowing from physics
+both a product discipline
+both components
+Both extrinsic components
+both humans
+Boundaries
+Boundary
+Bounded conceptual economy
+bounded rationality
+Boundedly rational agents
+Boundedly rational users
+Broug...
+Budget
+Budget allocations
+Budget-balanced mechanism
+Budgets allocated
+Building
+Building upon
+Builds value
+built from the same underlying structure
+Business model innovation
+But allows
+But also intrinsic reward signals
+But also motivational structure
+But also softer factors
+But also to assignment systems
+but an agent
+But are not positioned
+but broad enough to permit novelty
+But cannot directly move
+But exposes only
+But hard-bounded
+but internal systems
+But it establishes
+But needs satisfaction
+but not infinite
+but not precisely known budget
+But not the chance
+But not the invariants themselves
+But the reference model
+But they keep discussion aligned
+But they remain analyzable
+But they should still be bounded
+But to discover
+But without committing
+by a deeper treasury grammar
+By a fraction
+by a list of features
+by a stable bounded context
+By adjusting
+by agents
+By altering
+By analogy
+by construction
+By default
+By defining the entities
+By design
+by emissions
+By explicitly distinguishing
+By facilitating interactions
+by improved relevance
+by invariants
+by law
+By making participation
+By not prematurely assuming
+by players
+By restricting
+By simulating
+By stochastic
+by structural movement
+by system rules
+By the par...
+by the value it creates
+by these fields
+By unilaterally deviating
+Calculation
+calibrate later
+calibration
+can alter configuration
+Can attach itself
+can be achieved
+can be decomposed
+can be developed independently
+Can be embedded
+can be emitted
+can be explored
+can be modeled
+can be programmed creatively
+can be represented
+can be repurposed
+can be revised
+Can be seen
+Can be seen as shaping
+can be structured
+can be summarized as
+can be treated
+Can be used
+can be written as
+Can create exchange rates
+Can dominate wealth
+Can either accelerate
+can encode
+Can enforce
+Can establish
+can gain
+can grow vanity participation
+Can help anticipate
+can help the system
+can implement
+Can improve conceptual understanding
+Can inform regulation
+can instantiate
+can learn
+Can make emergent behavior
+can move
+Can navigate
+Can power the platform itself
+Can produce
+Can provide
+Can reference explicitly
+Can represent
+can represent state transitions
+can reveal motivation
+can reverse network effects
+Can significantly improve
+can still function
+Can themselves be modeled
+Can themselves be treated
+can then be used
+Can treat these sections
+Can understand
+Capability
+Caps
+capture situations
+Capturing a weighted combination
+Capturing directional tendencies
+Capturing non-equilibrium phenomena
+Capturing trade
+Card network rules
+Carefully balancing
+case-by-case validation
+cash-equivalent outcomes
+Cash-out
+certain business categories
+Certain Connect models
+Certain elements are
+chance
+change the rules
+Changing policies of others
+Chooses the concrete realization
+chosen per application
+Churn analysis
+Circulated
+Clarifies responsibilities
+clarifies the internal structure
+Classical game theory
+clear user expectations
+clearer compliance boundaries
+Closing synthesis
+Closure
+Closure on alignment
+Closure on architecture
+Closure on behavior
+Closure on fields
+Closure on flux
+Closure on game-theoretic framing
+Closure on global objectives
+Closure on human experience
+Closure on incentive fields
+Closure on internal credits
+Closure on legal framing
+Closure on MARL
+Closure on policy
+Closure on separation of concerns
+Closure on state space
+Closure on the game-theoretic shell
+Closure on the meta-structure
+Closure on virtual economies
+coalition behavior
+Coalitions of users
+Cognitive science
+coherent by definition
+Collective decision-making
+Collects
+com...
+combine
+Combined with AI agents
+Combined with survey data
+comes from composition
+Common incentive primitives include
+commonly analyze
+Communication
+Communities
+Competence
+Competition
+Complete-information
+Complex systems
+Complexity-science-based
+Compliance and governance layer
+Compliance boundary
+Compliance boundary closure
+Compliance boundary expansion
+compositional reasoning
+Comprehensive reference guide
+Computer science
+Concepts are not only labels
+Concepts live in a structured space
+conceptual families
+conceptual framework
+conceptual freedom
+conceptual language
+Conceptual modeling
+conceptual space
+Conceptual space layer
+Conceptual space layer closure
+Conceptual space layer expansion
+conceptual system
+Conceptual understanding
+Concerned with
+Concerning consumer protection
+Concrete candidate product architectures
+Concrete financial feasibility
+Concrete world designs
+configuration space
+Configuration space collects
+Configuration-space treatments
+Connecting
+connectivity of user states
+Connects internal state
+Connects to established literatures
+consent
+considerations
+constitutionally
+constrains credits
+Constraint
+Constraints
+consumed
+consumer protection
+consumes credits
+Content
+Content categories visited
+content flavor
+content policy
+content rules
+Content visibility
+context-specific work
+Continuous engagement metrics
+contribution
+Control inflation
+control theory
+Controlled issuance
+convenience
+converge
+Conversation-sourced concept map
+conversion
+convert
+Converts budget envelopes
+Converts signals
+Cooldowns
+Cooperation
+Cooperative
+Cooperative concepts
+Cooperative games
+cooperative norms
+cooperative outcomes
+coordination
+coordination capability
+Core conceptual families
+Core intention
+Core invariants keep the model coherent
+Core notions include
+Correlated equilibria
+Correlated equilibrium
+Corres...
+Correspond exactly
+corresponds to
+Cosmetic upgrades
+cosmetic value
+costs
+could include
+Could regulatory law
+Counterfactual regret minimization
+Coupled
+Coupling to real markets
+create
+Creates financial inflow
+Creative domains
+Creativity
+Creator compensation
+creator ecosystems
+Creators
+Creators and audiences
+credible enough
+Credit
+Credit payoffs
+Credit-based payoffs
+Credit-denominated payoffs
+Credits
+Credits are internal
+Credits are internal units of value
+Credits are non-redeemable
+credits can function
+Credits can therefore be gained
+Credits should be modeled first
+Critical for sustained participation
+Criticality
+Currencies
+Cycles
+Daily quests
+Data
+Data and learning layer
+data feedback loops
+data is not just
+Data protection
+Data strategy
+de facto exchange rates
+debt
+decay
+Decisions about whether
+Decisions already made
+Deep reinforcement learning
+Deepening the internal definition
+Deeper use of MARL
+Define the boundary
+Defined by players
+defining global properties
+Definition
+deliberately avoids
+Depending on the Connect charge type
+depending on the context
+Depending on the subsystem
+depends on
+depends on expectations
+Derived
+Derived from inflow
+described here
+deserve their own dedicated reports
+design commitments
+design inputs
+Design patterns include
+Design primitives
+design vocabulary
+Designed to reduce
+Designed with
+Designers can test
+Designing a healthy
+Designing for
+Designing tasks
+Designing the internal world
+Designs rules
+desirable
+desired outcomes
+Destination charges
+detailed accounting
+Detailed governance models
+Detailed LTV modeling
+developed so far
+Deviations from exact
+Different subsystems vary
+differently
+Digital game-based
+digital games
+Digital payments
+Digital platforms face
+Direct charges
+Disciplinary
+discounts
+discovery
+Discrete content states
+dispute handling
+Dispute recovery paths
+disputes
+Distinguish between
+Do not overfit the first version of the model
+do not solve
+domain-agnostic reference
+down potential gradients
+Dynamic
+dynamic incentives
+dynamic interfaces
+Dynamical systems perspectives
+dynamics
+Each chosen
+Each concept family
+Each dimension corresponds
+Each layer should have a distinct role
+Each major section ends
+Each new project
+Each of these
+Each of which changes
+Each offers
+Each point in this space
+Each potential game
+Each section ends
+Each section includes
+Each state
+Each user is a player
+each user trajectory
+Each with distinct roles
+Earmarked
+Earn and spend credits
+Economic
+Economic elites
+economic sustainability
+Economics
+Economics and finance
+Economists employ
+Education
+educational platform
+Educational platforms
+Educational systems
+Effectively turning
+Effectively turning local
+Effort
+Effort required to act
+Embedded in fields
+embedded in the structure itself
+Embedded within real
+Embedding such models
+emerge
+emergence
+Emphasize topology
+Emphasizes
+Empirical analyses
+Empirical results
+Empirical studies
+Empirical studies show
+Empirical work
+Enables gains
+Enables learning loops
+Enabling
+Encompassing both extrinsic
+engagement
+Engagement levels
+Engagement quality
+engineering concepts
+Ensure that responses are
+Ensuring that there are always
+enter the network
+Entering
+Entering through the boundary
+entertainment
+entertainment category
+Entitlement
+entitlements
+Entity
+environment variables
+episodes of choice
+equilibria
+Equilibrium concepts
+Equipped with
+Equivalent
+Especially as scale
+ethical evaluation
+Even as the system grows
+Even before it becomes
+Even if it is not strictly
+Even when
+Event modeling
+event taxonomies
+ever mediates exchanges
+Every action has an incentive profile
+every external contingency
+every jurisdictional detail
+Every major concept
+Evolutionary
+Evolutionary dynamics
+Evolutionary dynamics add adaptation
+Evolutionary game theory
+Evolutionary stability
+Evolving in structured spaces
+Exact analytical solution concepts
+Examples
+Examples include
+Except within controlled rules
+Executive overview
+Expansion
+Expansion into outer domains
+expansion meta-structure
+expansion pattern
+Expansion stage
+Expansions map those objects
+Experience
+Experience data flows back
+Experience layer
+experimentation
+Explains game theory
+Explains growth
+explicit legal
+explicitly
+explicitly analyzed
+explicitly assumes
+Explicitly avoiding
+explicitly excluded
+exploration remains free
+Explore first
+Explore how
+Explore several
+Exposed by
+Exposure modeling
+Extended reference map
+Extension
+Extension of the inner model
+Extension stage
+Extensions clarify
+Extensive-form analysis represents
+Extensive-form games
+External connections
+external funds
+External money can enter
+External policy
+External regulatory
+Externally
+Extra content
+extrinsic rewards
+fair and sustainable
+Fairness
+Fairness metrics
+Faucets
+Features
+feedback
+feedback analysis
+Feedback from use and surveys
+feedback loops
+Feeling of mastery
+Fictitious self-play
+Fields
+Fields are defined as
+Filters inadmissible states
+Finally
+Finance
+Financial
+Financial advice
+financial flow
+financial regulation
+Financial services
+First
+First refine
+Fits the incentive world structure
+flexible experimentation
+Flow
+flow of energy
+Focusing on
+Focusing on its role
+Follow these patterns
+for a bounded incentive-driven digital service system
+for a legitimate digital prestation
+for AI agents
+For alignment
+for an AI agent or human collaborator
+for an unnamed digital service
+For analogies
+For analyzing incentives
+For analyzing inflation
+For analyzing strategic interaction
+For any application
+for any architecture
+For any incentive world
+For any later move
+for behavioral drift
+For both
+for cash
+for cash-equivalent prizes
+For complex strategic environments
+For Connect platforms
+For credits
+for deeper exploration later
+For describing
+For describing interacting choices
+For designing
+For different user groups
+For each concept
+For each major theme
+For engagement
+for entertainment
+For examp...
+For example
+For field configurations
+For future conceptual development
+for future deep dives
+For future design work
+For future empirical
+for future work
+For games
+for governance
+for hyperdimensional incentive worlds
+for imaginative expansion
+For in-world items
+For incentive-based models
+For incentives
+For instance
+For internal credits
+for internal economies
+for internet businesses
+for interpretability
+For intrinsic motivation
+for large populations
+For later specialization
+for later-stage
+for learning
+For market design
+for meaningful exploration
+For mechanism evaluation
+for mechanism tuning
+for moderators
+for more detailed models
+for multi-agent systems
+for Nash equilibrium
+For now
+for platform-level rules
+for platforms
+For policy modeling
+For practical use
+For promotions
+for real money
+For reasoning
+For reasoning about
+For reasoning about incentives
+For reference purposes
+For rewards
+For risk
+For simulating
+for strategic clarity
+For strategic reasoning
+For system inflow
+For systems in which
+for that topic
+for that user
+For the current framework
+For the entire
+for the entire project
+for the framework
+for the hyperdimensional
+for the internal economy
+for the present framework include
+For the purposes
+for the reactions of others
+For the rest of the guide
+for the same thing
+For the world
+For this framework
+For this reason
+For this reference
+for trust preservation
+For two or more players
+For user stock dynamics
+for user-facing value
+For users
+for utility
+For virtual worlds
+For what
+For what kinds of adaptation
+Form the outer shell
+form the primary formal toolkit
+Formal invariant constitution
+Formal state transitions
+Foundational stance
+Foundations
+fraud control
+freedom
+Friction
+friction design
+from a bounded pool
+from a few stable equations
+from a messy starting point
+From a mix of
+from a scalar potential
+from abstract exploration
+from abstract incentive fields
+From an unstructured
+From behavior
+from being mistaken
+From checkout
+From conceptual ontology
+from core game theory
+from different balances
+From evolutionary dynamics
+from existing games and apps
+From game ...
+From incorporating
+From individual trajectories
+from its own operation
+From local mechanism
+From micro-level
+from monetary value
+From Nash equilibria
+From Nash-based routing
+From one-way credits
+from physics
+From real money
+From regulators
+From representation learning
+from required payment
+From scalar fields
+From self-interested behavior
+From smaller building blocks
+From state vectors
+from survey data
+from surveys
+from the base reference
+From the internal perspective
+from the internal reward layer
+from the ontology
+From the outset
+From the outside
+from the same ontology
+from the topic
+from this ideal
+From this perspective
+from this subject matter
+Fully rational
+Function
+Functions over state space
+Future exploration topics
+future incentives
+Future products
+Future work can now explore
+Future work can refine
+Future work can specialize
+Future work can specify
+Future work should follow
+gambling
+gambling classifications
+gambling-like contexts
+game structures
+Game theory
+Game theory across domains
+Game theory and state-space interpretation
+Game theory applications
+Game theory connects the model
+Game theory core
+Game theory explained
+Game theory gives the language
+Game theory is adopted
+Game theory is defined
+Game theory is fixed
+game theory is not just useful
+Game theory provides
+Game theory provides models
+Game theory remains
+Game theory should sit
+Game theory was used mainly
+game-based learning
+Game-based learning research
+Game-based learning studies
+game-like progression systems
+Game-theoretic
+Game-theoretic branches
+Game-theoretic concepts
+game-theoretic conceptual economy
+Game-theoretic frame
+Game-theoretic incentive fields
+game-theoretic models
+Game-theoretic models analyze
+Game-theoretic notions such as
+Game-theoretic policy modeling
+game-theoretic regimes
+game-theoretic sections
+game-theoretic solution concepts
+Game-theoretic upper layer
+Game-theoretic upper layer closure
+Game-theoretic upper layer expansion
+Game-theoretic view
+Games
+Gaming monetization
+gaming monetization works
+Gaming payment processing
+GBL
+GeeksforGeeks
+General frame
+Generali...
+Generates actions
+Generating data
+Geodesics
+Geometric analysis
+Gilbert’s LLP
+Give normative targets
+Given incentives
+Given the others’ strategies
+gives the framework
+Gives the upper-level
+Gives you
+global budget bounds
+Global closure
+global crypto payouts
+global financial stability
+global patterns
+Goals
+Good treasury practice
+goods
+Governance
+Governance and trust
+Governance choices
+Governance is fixed
+Governance mechanisms
+Governance primitives include
+governance problems
+Governed by rule design
+Governs internal credits
+Governs rewards
+gradient-based
+gradient-like dynamics
+gradients
+Grants
+Graph-structured
+Greatly influence both
+Grinding for hours
+growth strategy
+Guided by game-theoretic
+Guiding design choices
+Guiding long-run optimization
+Habit loops
+hand-designed
+Happens inside
+Hard-to-reach states
+Has achieved
+Has demonstrated effectiveness
+Has evolved into...
+Has sp...
+Have avoided falling
+Have been linked
+have been made
+have been used
+have private information
+Healthcare
+Help evaluate
+Here
+hidden information
+hidden wagers
+high-dimensional state space
+high-dimensional vector space
+high-level design conversations
+Highlight methods such as
+Highlights trade-offs
+how a player acts
+How budgets are allocated
+How different governance primitives
+How disputes are resolved
+How easy it is to move
+How in-game shops
+how institutions allocate
+How internal credits
+how large streams of users behave
+How marginal payoffs change
+how mechanics
+how money moves
+How much
+how multi-sided systems
+How platform generosity
+How populations of agents
+How price stability
+how rational action
+How rules are set
+How rules change
+how the value of the system
+How their data shapes
+How they relate
+how to construct rules
+How to design
+How to shape behavior under constraints
+how to specify rules
+how users
+how users perceive
+Human experience
+Human experience is fixed
+human experience sections
+hyper-conceptual system
+Hyperdimensional
+hyperdimensional incentive worlds
+Hyperdimensional state
+Hyperdimensional state space
+ideal mechanisms
+Identify exploitative equilibria
+Identify the invariants
+Identity boundaries
+If it preserves the invariants
+If the future system
+If the incentive
+If the underlying entities and flows
+If two concepts are understood
+Illegal lottery
+Imagine logging into
+Impact incentives
+implementation technologies
+implementations
+Implications
+impossibility
+improves accounting clarity
+In 1950
+In a given application
+In a global potential function
+In a large
+in a large dynamic game
+in a larger disciplinary
+in a noncooperative game
+In a pure
+In a shared environment
+in a virtual world
+In abstract utility units
+in advance
+In aggregated behavior
+in any direction
+in any player’s utility
+in behavioral
+In both depth
+in broader
+In classical mechanics
+In complex
+in configuration space
+In domains like
+In domains such as
+In dynamic
+In economics
+In every situation
+in exploration
+In finance
+In finance and DeFi
+in financial systems
+in four layers
+in game theory
+In game-theoretic terms
+in games
+in gaming
+in incentive design
+In intelligent
+In intelligent transportation systems
+In large
+In large user populations
+in many jurisdictions
+in mechanism design
+In MMORPGs
+in model...
+In multi-agent
+in multi-agent systems
+In nLab
+In non-gambling forms
+in online games
+In order to deliver
+In particular
+In payoff landscapes
+in physics
+in pract...
+In practice
+In promotional design
+In public decision-making
+In quasilinear models
+in random
+In real fund flows
+in recent research
+In recent years
+In regulated
+In response
+in sensitive domains
+In shared environments
+In social systems
+in sociology
+In state space
+In STEM
+in Stripe guidance
+in substance
+In sustained engagement
+In that sense
+in the abstract
+in the applied layer
+In the configuration space
+in the conversation
+in the entertainment sense
+In the experience
+in the framework
+in the incentive world
+In the initial reference
+in the narrow sense
+In the original reference
+In the potential landscape
+In the present framework
+In the present model
+In the realm
+In the reward fields
+in the same direction
+In the same way
+in the state space
+in the system
+in the United States
+in the world
+in the world layer
+In these fields
+in this domain
+In this frame
+In this space
+In traditional games
+in trust
+In two-sided
+in user behavior
+in video games
+in virtual credits
+In virtual economies
+In virtual worlds
+In ways that approximate
+In well-developed frameworks
+In whi...
+in which agents respond to a rule set
+In which each implementation
+In which each point
+In which every concrete implementation
+in which external payments
+in which incentives
+in which it operates
+In which one participant’s best move
+In which the total payment made
+In which users
+in wireless networks
+In young innovative companies
+in-world currencies
+in-world wealth
+Incentive
+Incentive compatibility
+Incentive fields
+Incentive fields are fixed
+Incentive fields must encode
+Incentive fields should include
+Incentive mechanisms influence
+incentive schemes
+incentive systems
+incentive world
+Incentive-based models
+incentive-driven digital service space
+Incentives
+includes momenta
+Including conditional behavior
+Including destination charges
+Including gambling-related activity
+Including inequality
+Including static
+Including the different
+Incomplete global state
+inconsistent choices
+increases
+Increasing satisfaction
+increasingly emphasizes
+Indian Statistical Institute
+Individual encounters
+induces
+Inequality
+Inertia
+Influence motivation
+Influenced by incentives
+Inform how to design
+information
+Information architecture
+Information conditions
+information sets
+information structure
+Informing how
+Inheriting its vocabulary
+Innermost
+Innovation diffusion
+Inside
+inside it
+inside legal and policy boundaries
+inside that region
+Inside the bounded world
+Inside the framework
+inside the hyperdimensional
+inside the model
+inside the space
+inside the system
+Inside the world
+insight
+Insights
+Inspire models
+Instead
+Instead of a mere
+Instead of allowing users
+Instead of an ever-growing list
+Instead of enumerating
+Instead of isolated
+Instead of procedurally
+instead of reversing
+instrumentation
+Integrate with learning algorithms
+Integrates
+Integrates these theories
+Integrating
+Integrating self-determination theory
+intensify
+intent
+intentionally fixed
+intentionally open
+Interacting
+interaction rules
+interactions
+interactive communities
+interactive platforms
+interacts
+Interdisciplinary by nature
+intermediate or neighboring concepts may be discovered
+internal closure
+Internal credit
+internal credits
+Internal credits and state
+Internal credits are defined
+Internal currency
+Internal definition
+internal definitions
+Internal economy
+Internal economy closure
+Internal economy expansion
+Internal emissions
+Internal entitlements
+Internal gains are experiential
+Internal governance
+internal governance choices
+Internal governance games
+internal institutional design
+Internal ledger
+internal ledger flow
+Internal ledger layer
+internal payoff splits
+Internal payoffs are modeled
+Internal rewards
+Internal rules
+internal state
+internal tokens
+internal transfers
+internal value
+internal value flow
+Internal virtual credits
+interpolation
+Interrelations
+into a game
+Into a larger conceptual map
+Into a meta-level map
+Into a reusable
+Into a reusable reference
+Into a sequence
+into a single premature implementation
+Into a single scalar field
+into a stack
+into a viable first product
+into action combinations
+into adaptation
+Into broader literatures
+Into concrete games
+Into different products
+into differentiated experiences
+Into full virtual economies
+Into global
+into how complex incentives
+Into internal credits
+Into internal emission policies
+Into internal rewards
+into layers
+into MARL algorithms
+Into multiple components
+Into non-redeemable
+Into potential-like
+Into real-world assets
+into recommendation systems
+into related domains
+into relevant journeys
+into resilience thinking
+into several domains
+Into state space coordinates
+Into structured exchange environments
+into the game des...
+Into the incentive fields
+Into the inner world
+into the state space
+into the system
+into these internal units
+Into user-facing value
+Into virtual economies
+Into virtual goods
+intrinsic incentive fields
+Intrinsic motivation
+Introduces readers
+Invalid states are excluded by construction
+inverts the usual perspective
+Investment
+investments
+Involving both
+Involving interactions
+is a comprehensive
+Is a constellation
+is a domain
+Is a general
+is a key management control
+is a local game
+is a mechanism
+is a point
+is a sensing system
+is acceptable
+is already rich enough
+is an internal transfer
+Is assumed
+is being analyzed
+is best understood
+is both extended
+Is both internally coherent
+is both internally solidified
+Is central
+Is consistently rewarded
+is consumed value
+Is delegated
+is earning huge revenues
+is easier to reason about
+is enough
+is fixed
+is gained value
+is game theory
+is holding equivalent funds
+is intended
+is intentionally agnostic
+is intentionally left open
+is intentionally small
+is layered on afterwards
+is left
+Is left open
+is modeled as
+is Nash equilibrium
+is not a bad idea
+is not assumed
+is not automatically the same thing
+is not fixed
+is not legally gambling
+is not the same thing
+is not to brainstorm features
+is not what a credit is worth
+is now anchored
+is one expression of it
+is optimal
+is players
+is profitable
+is recycled
+is responsible for
+Is strategically incomplete
+is sustainable
+is that
+is the combination
+is the connective tissue
+is the discipline
+is the domain
+is the durable object
+is the intrinsic value
+is the last
+is the meta-discipline
+is the most direct bridge
+is the relationship
+is the sensing discipline
+Is the space
+is the surrounding business domain
+is the user’s internal stock
+is the world layer
+is therefore generative
+is to build a system
+is to define a bounded conceptual space
+Is treated
+isolated conversions only
+Issuance and sink design for credits
+issuance mechanisms
+issuance rules
+It also allows the system
+It also invites analysis
+It also prevents the internal economy
+It also reinforces
+It also supports
+It becomes especially powerful
+It can be in
+It can be treated
+It contemplates flows of users
+It describes a bounded conceptual system
+It describes layers
+It ensures
+It focuses on structures
+It includes moderation policy
+It is a full conditional program of play
+It is also a field
+It is an adaptive product function
+It is defined
+It is designed so that
+It is intentionally agnostic
+It is meant
+It is often described
+It is one of the core outputs
+It is simply outside the model
+It is therefore
+It is therefore more realistic
+It is to derive candidate architectures
+It is typically justified
+It is useful
+It is what behavior
+It may later resolve
+It needs a small set
+It provides
+It radiates
+It seeks rules
+It sees only
+it should be treated
+it should define a stable boundary
+It should instead preserve the right
+It should not rely on deception
+It situates the internal model
+It treats the future product
+Items
+Iterative extension
+its assumptions
+its core logic
+its deepest stability
+Its methods apply
+its narrative
+its own constraints
+John Nash contributed
+John Nash’s colleague
+John Nash’s seminal work
+journey orchestration
+Just as particles drift
+Keeps the system extensible
+Key challenges include
+Key MARL challenges
+Key notions include
+KU News
+Later exploration
+Law
+Law and policy as outer shell
+lawful
+lawful imagination
+Layered architecture
+Leading the population
+Learn how
+Learned from data
+learning
+Learning agents
+learning dynamics
+Learning outcomes
+learning populations
+learning portal
+learning processes
+learning research
+Ledger semantics
+left open
+Legal
+Legal analyses highlight risks
+Legal and policy perimeter
+Legal and regulatory practice
+legal compatibility
+Legal guidance therefore
+Legal risks
+legal tender
+Legality
+less attractive
+Like autonomy
+Like basins of attraction
+Like physics
+Like segregation
+Like social cohesion
+Limited attention
+Links to complex systems
+live
+local-exchange trading systems
+Locally more attractive
+locked
+Long-horizon interactions
+long-run consequences
+long-run interactions
+long-term well-being
+Loss aversion
+loyalty
+Macroeconomics
+Maintaining the modularity
+Making behavioral design
+Making it crucial
+Making learning dynamics
+Making many
+Making reputation
+Manages real funds
+manifold-like
+Many games
+Map directly
+Mapping conceptual space
+Market conditions
+Market design
+Market design extends
+Market design studies
+market-design questions
+Markets and auctions
+MARL
+MARL can model
+MARL corresponds to ...
+Massively multiplayer
+Matching
+Matching markets
+Matching rules
+matching systems
+material rewards
+maximum imaginative freedom
+May be regulated
+may change
+may coexist
+may evolve over time
+may require separate Stripe accounts
+Meaning
+meaningful incentives available
+Measured
+measured adaptation
+Mechanism
+Mechanism design
+Mechanism design concepts
+mechanism design governs
+Mechanism design informs
+mechanism design practice
+Mechanism design studies
+Mechanisms
+Mechanisms must be robust
+Media
+Medical advice
+messaging
+Meta-reference
+Meta-structure
+metric design
+Metric structure
+might make certain regions
+Misaligned or non-optimal rules
+Mission structures
+modeling frameworks
+Modeling users
+Models interacting incentives
+moderation rules
+Modern games
+Modulated by
+monetary input
+monetization
+monetization models
+Money flow
+money transmission
+money-movement capabilities
+Monitoring price levels
+monopolization
+more appealing
+more concrete phase
+More creators attract more users
+more explicitly
+More predictable
+more realistic
+more relevant experiences
+More users attract more creators
+Moreover
+Motivational psychology
+Moving targets
+Much as in
+Much as in real-world institutions
+Much as particles move
+Much like gradient ascent
+Multi-agent incentive world
+Multi-agent learning
+Multi-agent policy gradients
+Multi-agent reinforcement learning
+multi-agent systems
+Multi-component
+Multi-component fields
+multi-party interactions
+Multi-stage incentive design
+multiple agents interact
+multiple concrete realizations
+Multiple currencies
+must account
+must be treated
+Must explicitly revisit
+Must remain
+myopic
+Narrative alignment
+Narrative pull
+Narrative satisfaction
+narratives
+Nash equilibria
+Nash equilibrium
+neighborhoods
+net inflows
+Network effects
+Network effects describe
+Network games
+Network science
+Network World
+Network-enriched
+neutral
+Neutrality
+new knowledge
+new opportunities
+Next
+next expansions
+no explicit marketplace exists
+No-deficit
+No-purchase-necessary structures
+non-conservative forces
+Non-cooperative game theory
+Non-potential components
+Non-redeemability
+Non-redeemable
+non-redeemable internal credits
+Non-redeemable units
+Non-stationarity
+Non-transferable
+Norms
+Not afterthoughts
+Not an afterthought
+not as a fixed category
+not as a priori cash equivalents
+Not as immediate
+Not as literal predictions
+not assumed to be settled externally
+Not automatically equivalent to cash
+Not financial
+Not financial returns
+Not from a long initial taxonomy
+Not from vague promises
+Not just agent policies
+Not just one
+Not just short-term clicks
+Not merely accounting categories
+Not merely restrictive
+not only content
+not only explicit
+Not only extrinsic
+not only to auctions
+Not optional refinements
+Not persuasion
+Not rigid endpoints
+Not strict behavioral assumptions
+Not to immediate
+Notes
+Novelty
+o...
+Objectives
+objects
+Observable
+observed behavior can be used
+Occur
+Of a complex adaptive system
+of a digital prestation
+Of a dynamical system
+Of a physical system
+of a product or service
+of a structured state space
+of a system
+of a user
+Of abstracting away
+of abstraction
+of accessible regions
+of admissible design states
+of agents
+of all impossible cases
+Of all players
+Of all possible configurations
+Of all possible states
+of an MMORPG
+of applications available
+of assumptions
+of chance-based rewards
+of complexity science
+of concrete bets
+of configuration space
+of content
+of credits
+of currencies
+of currency
+of data management
+Of decision-making scenarios
+of designed incentives
+of designs
+Of different actions
+Of digital game-based learning
+of digital goods
+of digital platforms
+of engagement
+of exceptions
+of fields
+of future exclusion
+of gambling regu...
+of game theory
+of game theory include
+of goals
+Of highly active users
+Of how incentive changes
+of how interacting choices
+of in-game
+of in-game real
+Of incentive
+Of incentive designs
+Of incentive-compatible mechanisms
+of indefinite return
+of interacting choice
+of internal credits
+of internal reward systems
+of intrinsic motivation
+Of key concepts
+of large virtual worlds
+of low-quality reward farming
+Of many agents
+Of mathematical tools
+of mechanism design
+Of methodologies
+of MMORPGs
+Of more equitable
+of multi-agent
+of mutually reinforcing skills
+of narrow passages
+of Nash equilibrium
+of net inflows
+of net revenue
+of network value
+of obtaining cash-like value
+of outcome \(a\)
+Of payment APIs
+of payments
+of players
+of possible interactions
+Of prize
+of real-money revenue
+of regulatory overreach
+of resources
+of revenue
+of reward emissions
+of scarce medical resources
+of several manifolds
+Of shifting
+of skill
+of specialized branches
+of stable invariants
+of stable primitives
+Of state space
+of strategic interaction
+Of strategic normal form games
+of strategy diffusion
+of structured components
+of surrounding disciplines
+Of surveys
+Of th...
+of the configuration-space
+of the current framework
+of the current map
+of the framework
+of the game’s structure
+Of the general model
+of the larger framework
+of the lower layer
+Of the neighboring domains
+Of the reference
+Of the status
+of the status of currencies
+Of the syst...
+of the system
+of the world
+of them
+of these forms
+of third-party markets
+of this reference
+Of three parts
+of unintended equilibria
+of users
+of video games
+of video games...
+of virtual currencies
+Of virtual currency
+of virtual items
+of virtual wealth
+of working abstractions is
+Offering insights
+Offers
+often assumes
+Often limit
+often recommends
+Often using
+Often with other
+on a landscape
+on admissible transformations
+On both micro-level
+On community structure
+On content
+On how people p...
+On incentive fields
+on network effects
+on situati...
+on state space
+On STEM undergraduates'
+on subsystem rules
+on the joint choices
+on the other hand
+on the platform
+On this potential
+On top of the state space
+on....
+onboarding
+onboarding paths
+Once personalization
+once real structure and behavior are observed
+Once the frame is fixed
+once the system includes
+one another’s type
+One can study
+one of the central disciplines
+one of the key applied arts
+one or more types
+one-for-one
+one-off transactions
+one-page
+one-shot participants
+One-time rewards
+one-way
+one-way conversion
+one-way virtual units
+Online payment processing
+online role-playing games
+Only to the extent
+onto implementation constraints
+onto this context
+Ontology
+ontology determines
+Ontology work
+Open design space
+Open to enrichment
+Open-ended future concretions
+operational costs
+Operations
+Operators
+Opportunities
+or a product architecture
+Or a research environment
+Or a specific equilibrium notion
+or absorb it
+or abstract modeling
+or actor
+or adapted
+Or agents follow gradients
+or aligned behavior
+or another structured experience
+Or as data-driven
+Or as separate fields
+Or at least
+or attractive
+Or automated component
+or ban
+or benefit logic
+or boundedly rational agents
+or boundedly rational policies
+or can consume in-system
+or card networks
+Or chance-based
+or co-creation clusters
+Or collapses
+or communities
+or competition
+Or composed functionally
+or configuration space
+or content
+Or content ecosystems
+or content platforms
+Or content-selection processes
+or contribution
+or converted
+or counterparties
+Or creative ecosystems
+or creators
+or curators
+Or cyclic dynamics
+or damage
+or desires
+or disputes
+or distinct businesses
+Or embedding
+or entitlement state
+Or evaluation benchmarks
+Or evaluation criteria
+or experiences
+Or experimental simulations
+or family of games
+or force fields
+Or gambling operators
+or gambling stakes
+or game-like system
+or high-risk domains
+or hybrid experiences
+or idea
+or in-game
+or in-game virtual currency
+or in-system value
+Or include cycles
+Or innovation patterns
+Or integrating
+Or internal benefits
+or invariant rule
+or latent property
+Or legal guidance
+or luck
+Or matches
+Or merely performative
+Or mixed content platforms
+or mixed in meaning
+or money
+or monitoring
+Or multi-agent systems
+or multi-party systems
+Or no-subsidy conditions
+Or other benefits
+or other permitted signals
+Or otherwise carefully structured
+Or participants
+or participate
+Or personal development
+or personalization
+or phase space
+or prepaid obligation
+or product space
+Or progress
+or progression
+or prohibiting
+or redeemable money
+Or regulatory jurisdictions
+or reserves
+or retention change
+or reward fields
+or rights
+Or risk flags
+or rotational components
+or service...
+or services
+Or short-term
+or similar payment processors
+Or social influence
+or some future hybrid entitlement
+or spending
+Or stakes
+Or status
+Or stochastic approximations
+or stored money
+Or strategic goals
+or structures
+or sub-sections
+or survey information
+Or systemic risk
+or systems
+or technologies
+or the other
+or the platform itself
+Or to obtain
+or topological structures
+or trajectory
+or trustworthiness
+or unlocks
+or unsupported
+or use something
+Or used in
+Or user plus environment
+or vector values
+or well-being
+organizational agility
+Originating from
+Other elements remain open
+Others keep changing
+our previous work
+out of scope
+outstanding results
+Over a high-dimensional state space
+Over shorter timescales
+over state space
+over that space
+Over this space
+over time
+Overview
+Overview and purpose
+pacing
+Part one
+Partial observability
+Participant
+Participants have incentives
+Participation
+Participation constraints
+participation costs
+Participation occurs
+partitioned into operations
+pass critical mass
+Paths that users follow
+Payment
+Payment buys
+Payment entry layer
+Payment event
+payment flows
+Payment rail
+Payment rail separation
+Payment rail separation closure
+Payment rail separation expansion
+Payment rails
+payments
+Payments and concern separation
+Payments and treasury
+Payments are handled separately
+Payments enter externally
+payoff mapping
+Payoff-maximizing agents
+Payoffs
+Payoffs are expressed in
+payout
+Payout logic
+PBS
+PDF
+Peer-to-peer transfer
+perceive the exchange
+Perceived risk
+Perceived value
+Perfect rationality
+perform
+performance
+Performance-based rewards
+peripheral engineering questions
+Persistence
+Personalization
+personalization could shape
+Personalization is confined
+Personalization must respect
+Personalization tailors
+Phase space
+Phys. Rev. B
+Physical treatments
+physics
+Physics in a minute
+piecewise smooth
+place more refund
+places this inner model
+Platform
+Platform business model research
+Platform business models
+Platform businesses create value
+platform design
+Platform governance
+Platform policies
+platform policy
+Platform strategy
+Platform theory
+platform-compliant
+Platform-growth strategy
+Platforms
+Platforms that want
+Play critical roles
+Players
+Plus any intrinsic value
+Plus divergence-free
+Plus external constraints
+Plus Maths
+Plus relevant
+PNAS
+PNAS article
+points
+Policy
+policy compatibility
+policy filtering
+Policy modeling
+policy models
+policy-aware
+Political science and policy
+populations of agents
+Positions
+Possible cost channels include access
+Possible gain channels include participation
+Possibly alongside
+Possibly manifold-like
+Possibly stochastic
+Potential directions include
+Potential future threads
+Potential game
+Potential games
+Potential games formalize cases
+Potential games formalize settings
+potential structure
+potential-like function
+potential-like objectives
+practical manifestations
+Practical ontology
+pre-product
+Precisely because
+preference clusters
+preference shifts
+Preferences
+Presents content
+Prestige systems
+Prevents abuse
+Pricing
+pricing choices
+Privacy
+privilege
+Processor compatibility
+processor policy
+processor rules
+Produce macro-level outcomes
+produce outcomes
+Producing emergent
+Product design
+product research
+Product strategy
+Prof. Avinash Dixit
+Programmable internal state
+Programmable state unit
+Progress
+progression
+Progression markers
+progression pacing
+Promotes deep engagement
+Promotion models
+Promotion structures
+promotions
+propagate through networks
+Proposal mechanisms
+Prosocial incentives
+Protocol rules for stable behavior
+Provide a reusable
+Provide analogues
+Provide information
+provides a closure
+Providing guidance
+Psychological needs satisfaction
+Public goods
+purchases
+Purpose
+quality
+queue priority
+queues
+Radiating into surrounding domains
+Randomness in rewards
+ranking
+Ranking systems
+rarity
+rate of change
+Rather than
+rather than a flat list
+Rather than a later compliance detail
+Rather than a single idea
+Rather than as money
+Rather than assume it
+Rather than assumed
+Rather than assuming
+rather than by blunt enumeration
+rather than discovered later
+Rather than exact
+Rather than implicit assumptions
+Rather than informal promises
+Rather than inventing
+Rather than isolated parts
+Rather than mere possibility
+Rather than on
+Rather than only
+Rather than prescriptions
+Rather than repeatedly debating
+Rather than through premature claims
+ratings
+Re-optimization and calibration
+Re-optimization and calibration closure
+Re-optimization and calibration expansion
+Real money flows in
+real network value
+Real-life applications
+Real-money ingress
+real-money operations
+real-money plumbing
+Real-money purchases
+Real-money trading
+real-world assets
+real-world institutions
+realistic learning dynamics
+recombine
+Recommendation rules
+Recommendation systems
+recommendations
+Recurring rewards
+Redeemability
+Redeemable
+Reduce financial
+Reference framework
+Reference guide
+References
+refined concepts
+refund stress
+refunds
+Refunds and disputes
+Regions
+Regions difficult to cross
+Regret minimization
+Regularizers
+regulated advice domains
+Regulators may treat platforms
+Regulatory
+Regulatory analysis
+Regulatory compliance
+Regulatory exposure
+regulatory reactions
+regulatory relationships
+regulatory responses
+Regulatory risks
+reinforcement learning
+Related domains
+Relatedness
+relevant
+Relevant for guilds
+Relevant to the model
+rely on collecting
+remains coherent
+remains composable
+remains grounded
+remains inside the product
+remains intentionally open
+Remains open
+Remains respected
+remains stable
+remains useful
+Repeated
+Repeated and stochastic games
+Repeated game models
+Repeated games
+repeated interaction
+Repeated interactions add time
+Representation
+Representation learning
+representation spaces
+Representing aggregate objectives
+Representing global objectives
+Representing healthy
+Representing risk
+represents
+represents a complete state
+Reputation
+Reputation systems
+Requires balancing
+Requires both
+Requires tuning
+Research on virtual currencies
+research.chalmers.se
+reserve
+reserve behavior
+reserve needs
+reserve or risk buffer
+reserve policy
+reserved
+resources
+respond over time
+Responding to incentive fields
+retention loops
+Retention mechanics
+Reusable neutral phrasing
+Reveal complex
+Revenue
+review systems
+reward
+Reward and cost layer
+reward calibration
+reward capacity
+Reward curves and progression systems
+Reward emissions
+Reward emissions are bounded
+Reward intensity
+Reward intensity can vary
+reward logic
+Reward outflows are bounded
+reward schedules
+reward structure
+Rewards
+rewards and costs
+rewards operate internally
+Rewards should be emitted
+Richer socio-economic simulations
+Risk
+Risk management
+Risk scoring
+RL
+Rock-paper-scissors-like
+Role
+Role-based permissions
+Roles
+Routes funds
+routinely use
+runaway hoarding
+Safety
+Satisfying autonomy
+SBB
+Scalability
+Scalar potentials
+scarcity
+scarcity design
+Schema design
+Scholarpedia
+ScienceDirect Topics
+Scope and invariants
+Second
+secondary to the architecture
+Segmentation
+segmentation model
+Segregation
+Segregation of duties
+self-consistent strategy profiles
+self-determination theory
+Separate charges and transfers
+separate conceptual layers
+Separates concerns
+Separation of treasury
+sequential decisions
+serve as benchmarks
+Services
+Several adjacent topics
+Several important decisions
+several money-routing patterns
+several overlapping
+several risk factors
+Shaped by incentives
+shaping best responses
+Shared characteristics
+sharing surplus
+short-term deviations
+should be bounded
+should be separated
+should be treated
+Should capture
+should eventually be translated
+should generally flow
+should never be treated
+should therefore be modeled
+Show that carefully designed
+Show that intrinsic factors
+Showcase how equilibrium
+shows
+Shows how agent-based
+Shows systematic deviations
+Signal
+Signaling
+Signaling games
+Signaling in markets
+signals
+Similar ideas
+similar to a state space in physics
+similarity mapping
+simple
+simpler dispute handling
+Simulation becomes a tool
+Simulations
+single-agent decision theory
+Sinks
+Sinks remove
+sit platform strategy
+sits a treasury layer
+sits game theory
+sits the unnamed bounded framework itself
+Skill
+Skill domain
+skills
+Skills radiating
+Smooth
+So future work
+So that participants are led
+So that typical flows
+Social
+Social graph features
+Social links
+social neighborhoods
+Social preferences
+Social pressure
+Social status
+social stratification
+socio-economic patterns
+socio-economic phenomena
+socio-economic structures
+socio-economic systems
+Sociology
+Soft currency
+Solidifying the inner model
+solution concepts
+sources
+Sources and sinks
+Sources inject value
+span economics
+Specialization
+Specialized tools
+Specific MARL algorithms
+Specifying
+Spending history
+Spending opportunities
+stable
+stable budgets inward
+stands as
+stands as a fundamental concept
+Starting from
+State
+state changes
+State of the art
+State space
+State space is fixed
+State space is the set
+State-of-the-art
+static rational behavior
+statistical geometry
+Status
+stories
+Story arcs
+Strategic form
+strategic interaction
+Strategic trading
+Strategic-form analysis compresses a system
+Strategic-form games
+Strategically
+Strategies
+strategies to know
+strategy cycles
+Strategy rock-paper-scissors
+Strategy sets
+strategy spaces
+Stripe
+Stripe adds
+Stripe adds a second perimeter
+Stripe also documents
+Stripe Connect distinguishes
+Stripe Connect provides
+Stripe introduces
+Stripe is a suite
+stronger coupling
+Strongly correlate
+Strongly influence
+Structural decomposition
+structured game
+Structured manifolds
+Structures exchange
+Studied with tools
+studies how multiple
+Study how micro-level
+Subject only
+Subject to ethical
+Subject to external constraints
+Subject to platform policies
+Subjective satisfaction
+Subscriptions
+Such as
+Such as a fixed fraction
+Such as access
+Such as additional content
+Such as best-response updates
+Such as curiosity
+Such as engagement
+Such as gambling
+Such as medical
+Such as metric structures
+Such as Nash
+Such as Nash equilibrium
+Such as norms
+Such as recommendation policies
+Such as self-play
+such as Stripe
+such coupling
+such extensions
+such markets
+Such that no player
+Suitable for both
+Summary of fixed
+Supports adaptation
+Survey
+Survey follow-up
+Survey ontology
+survey-driven personalization layers
+Survey-fed adaptation
+Surveys
+Surveys on algorithms
+sustainable engagement patterns
+Sustained engagement
+Sweepstakes
+symbolic
+Synthesis
+Systems architecture
+Systems that restrict
+Systems theory
+tax
+Tax handling
+Taxonomy
+teams
+technical explorations
+technical feasibility
+Technological
+Technologies
+Templates
+tend to converge
+Tend to face fewer
+Tend to increase
+than others
+that active participation
+That adjust prices
+That AI agents
+That allows the system
+That are not themselves
+That are resilient
+That are robust
+That assign values
+That avoids regulated advice
+That balance thickness
+that boundaries are not a limitation
+That can be brought to bear
+That can be mapped
+That can be reused
+That can be temporarily relaxed
+That can influence
+That can inform
+That can later be specialized
+That caps the integral
+That combine extrinsic
+That converts raw user signals
+That correspond
+That decides
+that define
+that define the configuration
+That defined
+That definition is broad enough
+That describe state
+That determine
+That do not derive
+that drift into gambling-like logic
+That each illuminate
+That empowers...
+That ensure
+That ensure legality
+That every dimension
+That every new idea
+That explains
+That express utility
+that fields over state space
+That fits how games work today
+That flows back
+that help the system learn
+That helps the platform adapt
+that ignores refund
+That include
+that independent projects
+That influence
+That influence behavior
+That information
+That internal credits
+That introduces
+That involves
+that its treasury
+That jointly optimize
+That justifies
+That keeps a multi-actor system
+That later helps recalibrate
+That lead rational participants
+That limit transfers
+That links engagement
+That make those outcomes arise
+That makes it possible
+That makes that outcome
+that many...
+That maps reports
+that may be wrong
+that means
+That might reintroduce
+That mirror real societies
+That mix several
+That mixes entertainment
+That model allows the system
+That modulate
+That naturally radiate
+That negotiate
+That organizes strategic reasoning
+that payment should purchase
+That places it close
+That powers
+That preserve trust
+That radiate
+That receives
+That remove currency
+That shape
+That social interactions
+That summarizes
+That support
+that supports free conceptual exploration
+that surround the subject
+That surveys
+That the conceptual system
+That the mechanism
+that the platform
+that their aggregate emission
+That there exists
+That uses information gathering
+That well-designed
+The abstract patterns
+The agents
+The aim
+The aim is
+The aim is not
+The analytical form
+the application
+The architecture
+the architecture can be decomposed
+the architecture of gains and costs
+The architecture remains open
+the base grammar
+The base model described
+The base model treated
+The basic elements
+The best single summary is
+The boundary
+The business
+The central design question
+The central equilibrium concept
+The central intention
+The choice
+the combination
+The combination yields
+the common upper frame
+The concept
+the concepts
+the concepts discussed so far
+the conceptual sandbox
+the conceptual work
+The configuration
+The configuration space
+The conversation fixes this
+The conversation introduces
+the core language
+the core ontology
+the cost it imposes
+The credit
+The credit rules engine layer
+The credits are simply
+The current baseline assumptions are
+The current ontology
+the deepest constraints
+the design
+the design problem
+The design problem becomes
+The design task is
+The designer can identify
+The discussion then shifts
+The document is organized
+The document is therefore
+the entire system
+The eventual application
+The exact economy can be designed later
+The exact potential-like objective
+The existence
+the existing framework
+The expansion stage
+The experience layer
+The extension
+The extension stage
+The fields
+The final product category
+The final section
+The following article
+The following topics
+The frame can be described
+the frame should not assume all limits in advance
+The framework
+The framework benefits
+the framework can be thought of
+The framework can be understood
+the framework does not need
+The framework does not point
+The framework is ready
+The framework should remain free
+The framework specifies
+The framework treats the future product
+The framework’s internal credits
+The gaming industry
+The goal is
+The goal is not
+The goal is twofold
+The guide defines
+The guide is intentionally neutral
+The hidden architecture
+The hyperdimensional
+the idea
+the immediate language
+The impact
+The importance
+the initial incentive world reference
+The inner model
+The inner model provides
+the intellectual move
+The intent is
+the internal model
+the internal ontology
+The internal world
+The internal world’s mechanisms
+the invariant structure
+The issuer allows users
+the lawful region of motion
+the long-run budget constraint
+The long-run implications
+The main analytical axis
+The main skill clusters
+The mapping
+The mathematics
+The mechanism designer
+the mechanism’s way
+The model adopts the idea
+The model assumes
+The model described here
+The model introduces
+The model is then reframed
+The model keeps
+The model should avoid over-enumerating possible states
+The model should support reward curves
+the most general language
+The most important effects
+The most important next topics are
+The most relevant branches
+The Nash equilibrium
+The next level out
+The next productive step
+the notion of benefits
+The only requirement is
+The open conceptual space
+The outer shell provides
+The parameters
+The payment
+The payment layer should be separate
+the payoff landscape
+the perceived attractiveness
+the platform
+The platform can align users
+the potential function
+The power of the model
+The practical architectural split is
+The precise coordinate system
+The prevention
+The proposed bounded digital service system
+The purpose of the framework
+The range of application
+The reference architecture fixes
+The reference assumes
+The reference is intentionally
+The relation
+the reward landscape
+The reward structure should be framed
+the risk of fraud
+the rules are explicit enough to be stable
+the same deeper architecture
+The space
+The specific coordinate system
+The standard deviation
+The Stanford Encyclopedia defines game theory
+The starting point
+The state space
+The structure follows
+The subject
+The subject is treated
+The subject matter
+The survey layer
+the system
+The system can also be modeled
+the system can be read through game theory
+The system can tailor
+The system is a strategic environment
+The system is exploratory in concept
+The system is not defined
+The system is not only an economy
+The system must remain lawful
+The system must stay
+The system should allow abstract reasoning first
+The system should be defined
+The system should be initially permissive
+The system should later be tightened
+the system should take next
+The system's own credits
+The treasury
+the treasury layer
+the treasury must be modeled
+The treasury tracks
+The two-stage pattern
+the universal language
+The universal scaling law
+The unnamed system
+The unnamed thing
+the upper-level mathematical language
+The visible form
+the whole bounded-space approach
+The world
+The world interfaces
+The world is imagined
+The world is represented
+The world is subject
+The world is treated as
+the world layer
+The world’s state space
+Their exact analytical form
+Their exact parametrization
+their experience
+Their growth often depends
+Their only constraint is
+Their trajectories tend
+then climb this potential
+Then connect
+Then explore possible transformations
+then later refinement
+Then pricing
+Theory
+Theory and application
+Theory of mechanism design
+There is an extension step
+Thereby shaping
+Therefore
+These anchors make it possible
+These apply directly
+These approaches offer
+These are all
+These are not
+these assumptions
+These can be combined
+These can be treated
+These can be used
+These connections open
+These constraints define
+These credits are not assumed to be cash
+These define participation
+these designs
+These differences
+These domains are adjacent
+these effects
+These equations
+These fields determine
+These findings inform
+these flows
+These inputs should be treated
+These insights extend
+These insights refine
+These lessons can be imported
+These models are used
+these objectives
+these primitives
+These regimes give
+These topics are noted
+They are a condition
+They are intentionally agnostic
+they are positions
+They can be
+They can represent access
+They ground in
+They help determine
+they might encounter
+They need not map
+They shape liability
+They should be treated
+This abstraction allows
+This agnosticism allows it
+This allows
+This allows imagination first
+This allows multiple semantic layers
+This appears as
+This can be extended
+This can be modeled as
+This concept can be refined
+This distinction is essential
+This document collects
+This document consolidates the conceptual framework
+This document consolidates the conversation
+This document extends
+This does not solve
+This domain also touches
+This domain connects
+This enables cleaner architecture
+This enables iterative design
+This enables reward systems
+This enables systematic exploration
+This ensures
+This expansion situates
+This extends naturally
+This extension allows reuse
+This frame generalizes
+this function
+This grammar
+This guide is
+This guide unifies
+This implies future work
+This information can be used
+This is a key principle
+This is a mechanism-design problem
+This is analogous
+This is closely aligned
+This is commonly used
+This is especially helpful
+This is especially important
+This is exactly
+This is highly relevant
+This is not the same thing
+This is useful
+This is why
+This layer does not see
+This link unveils
+This makes governance
+This makes it possible
+This makes it useful
+This makes the product category
+This matters
+This means
+This meta-reference
+This mirrors
+This motivates explicit terms
+This openness preserves
+This opens the door
+This paper considers
+This paper explores
+This paper presents
+This paper presents a review
+This paper reviews
+This pattern generalizes
+This payment layer
+This permits analogical transfer
+This preserves coherence
+This provides
+This provides a bridge
+This radiates
+This radiates outward
+This reduces the risk
+This report expands
+This separation reduces
+This separation reduces conceptual confusion
+This separation reduces confusion
+This stage also identifies
+This stage corresponds
+This structure
+This structure is useful
+This suggests
+This suggests a domain of study
+This supports a broader interpretation
+This supports a design approach
+This supports interpolation
+This supports personalization
+This topic radiates outward
+This two-stage method
+This view can be extended
+This yields a productive mental model
+Though this can be revisited
+three distinct concerns
+through a compliant payment rail
+through a reward system
+Through behavior
+through calibration
+Through endless
+Through faucets and sinks
+Through incentives
+Through invariants
+through multi-sided interaction
+Through payment processors
+through sources and sinks
+through the space
+Through which account
+Thus
+Tied to digital experiences
+Tighter coupling
+Time
+timing
+To ...
+To a broad set of domains
+to a later
+To a more structured manifold
+To a multi-field picture
+to a property
+to abstraction
+to access
+To additional literatures
+to an incentive-driven digital service
+To analyze
+To any real-world currency
+to assumptions
+To auction design
+To avoid
+To avoid analogous failures
+To avoid creating
+To avoid gambling
+to bank accounts
+to be a potential game
+To be applied
+to be equivalent to money
+to be frictionless
+To be non-redeemable
+To be reused
+to be used
+to build
+to build a reference atlas
+to cash
+to change theiri...
+to changes
+To clarify
+to coexist
+to collect enough structured information
+To compound
+To concrete implementation
+To concrete UX patterns
+To define the model
+to defining
+To design
+to desirable regions
+To determine budgets
+To different user types
+To discover
+to discover fit
+to each point
+To encourage consumption
+To entertainment
+to eventual
+To every point
+to everyone
+to evolutionary dynamics
+to examine
+To executable product policy
+To expand outward
+to experiences
+to explore
+To explore emergent phenomena
+To explore the full space
+To extend each core concept
+to external cash
+to external incentives
+to financial reality
+to follow gradients
+to force a single interpretation
+To frame users
+to freeze one product idea
+To full rationality
+To future empirical
+to future empirical calibration
+to future policy shifts
+To gain access
+To game theory
+to global strategic context
+to gradient ascent
+To guide onboarding
+to identify illegal lottery structures
+To imagining Stripe
+to improve fit
+To incentive fields
+to incentives
+To include structured learning
+To individual users
+To laws
+To macro-level outcomes
+To make certain paths
+To manage inflation
+To manage rule changes
+to manipulate
+to map one-to-one
+to maximize expected return
+to mechanism design
+To mitigate
+To model social
+To move
+To multi-agent settings
+to non-redeemable
+To novel virtual economies
+to observed behavior
+to one concrete business model
+to one profession
+to opting out
+To outcomes
+To performance
+to personalization
+to personalize
+To personalize experiences
+to policy changes
+To population-level phenomena
+to potential
+to predict outcomes
+To prevent inflation
+to produce desired outcomes
+To purchase
+to pursue first
+to re-optimize the incentive structure
+to real markets
+to real money flows
+to reason
+to reason about accumulation
+To reason about trajectories
+To reason systematically
+to receive
+to refine the model later
+to refunds
+to remain
+to remain generous in appearance
+to rich virtual economies
+To sculpt fields
+to separate symbolic value
+To shape trajectories
+To specialize the framework
+To specific
+to specific applications
+To specific genres
+to specific payment providers
+to specific products
+to stabilize the system
+To stay within
+to structured manifolds
+To study fixed points
+To study norms
+to study segregation
+To subgame-perfect equilibria
+To support
+To support many later paths
+to support multiple semantic roles
+To support self-determination
+to surrounding disciplines
+To tailor offers
+To take ownership
+To the appropriate section
+to the credit engine
+to the customer
+To the design
+To the inner world
+To the purchase
+to the theory
+To the various forms
+to these imperfections
+to those agents’ preferences
+to treat
+to treat gross inflow
+to treat meaning as geometric
+To treat users as following
+To tune incentives
+To tune mechanisms themselves
+To understand
+To understand how tasks
+to unify economics
+to user archetypes
+to user experiences
+to user-visible value
+to users
+to using
+to vector and multi-field systems
+to virtual currency
+to virtual economy health
+to which actions
+To work
+Together
+tolerance
+too early
+Topics to explore later
+Toward desirable regions
+toward desired outcomes
+toward regions
+transactions
+Transferable
+transformed
+transition probabilities
+Translates budget envelopes
+Translates the abstract framework
+Translating this
+transparency around rewards
+transparent rules
+Transport
+Transportation
+transportation systems
+Treasury
+Treasury and bounded emissions
+Treasury and payment architecture
+Treasury and reserve logic
+Treasury essentials
+Treasury event
+Treasury feeds budgets
+Treasury logic
+treasury separation
+Treat behavior as emerging
+Treat large populations
+Treat the domain
+Treated as first-class
+Treats each agent
+Tremendous advances
+Triggering licensing
+Trust
+Trust and governance
+Trust failures
+Trust metrics
+Truthful reporting
+Two-stage extension
+Typically buyers and sellers
+Typically exist
+Uncertainty
+under ad hoc exceptions
+Under adaptive rules
+Under asymmetric information
+under consideration
+Under explicit rules
+Under interpretati...
+Under law
+Under local rules
+under payment rules
+under physical fields
+Under plausible dynamics
+Under realistic
+Under specific cues
+Under strategic behavior
+Under the influence
+Under the relevant
+Under various information
+undermines them
+Understanding
+Understanding currencies
+Understanding utility functions
+unintended equilibria
+Unless explicitly reintroduced later
+unlock
+unlocked
+Unveiling
+Upgrade
+Upper frame
+usage
+Usage guidelines
+Use agent-based models
+Use in chance-based games
+Use internal credits and rewards
+Used to buy experiences
+Useful if the system mediates
+User experience
+User experience layer
+user experiences
+User flux
+User input and data collection
+User input and data collection closure
+User input and data collection expansion
+User input can come
+User inputs are structured signals
+User model
+user preferences
+User research
+User research and surveys
+User satisfaction
+User segmentation and personalization
+User surveys
+User trajectories
+User utility
+user-facing value
+Users
+Users accumulate internal state
+Users actually value
+Users and system policies
+Users enter
+users experience
+Users interact
+Users pay
+Users then feed information back
+Using physics intuition
+Utility functions
+UX research
+value
+Value is expressed through
+Value is represented by
+Values
+Vector fields
+velocity-like derivatives
+versus long-term
+Versus mechanism design
+vested
+via compliant payment processors
+Via compliant processors
+Via the incentive fields
+Viewed this way
+Viewing the entire world
+Virtual credits
+Virtual credits are constrained
+Virtual currencies
+virtual currency
+Virtual economies
+Virtual economies are fixed
+Virtual economies often exhibit
+virtual economy
+Virtual economy design
+Virtual economy design provides
+virtual economy research
+virtual economy sections
+virtual storefronts
+Virtual world studies
+visibility
+Voting
+Voting rules
+We are designing a bounded conceptual system
+We observe
+well-being
+well-specified subsystem
+Well-structured growth
+were introduced
+what incentives produce stable
+what is considered fixed
+What is exposed
+What is fixed
+what is fixed for now
+What is retained
+What it contributes
+what lies outside it
+What objects exist
+what others do
+What properties they have
+What remains open
+What the user actually sees
+What the user earned
+what users actually do
+what users value
+When a task concerns
+When it affects
+When it concerns
+When its primitive objects
+When its units are understood
+When moving
+When outcomes depend
+When specialization is required
+when that is not intended
+When the system coordinates
+When the value
+When there is a stream of users
+When these conditions hold
+When they support
+when thinking about
+When used not
+When users
+When users follow
+When virtual currencies become
+whenever the system
+Where \(N\)
+Where \(v_i(a)\)
+Where all the interesting
+Where budget balance
+Where changes
+Where credits coexist
+Where cycles
+Where each agent’s best move
+Where in steady state
+Where incentive gradients
+Where individual utility changes
+where new forms can be tested
+Where no unilateral deviation
+where permitted
+where relevant
+where trajectories
+Where users interact
+Where users repeatedly face
+Whereas previous games
+Whether a game
+whether credits are monetary
+Whether dynamics are purely
+Whether in STEM
+Whether later architecture
+whether the system
+Whether users themselves
+Which account absorbs
+Which are latent embeddings
+Which can inform
+Which can then be spent
+Which captures
+which concrete form
+which concrete manifestation
+which concrete realization
+Which deepens the concept
+Which dimensions
+Which drives
+Which has led
+Which is assumed
+Which is exactly why
+Which is then converted
+which of these expressions
+Which places it
+Which provides
+Which rewards correspond
+Which subset dominates
+Which together determine
+While adding
+While avoiding
+While being richly connected
+While continuously integrating
+While ensuring
+While exposing
+While inviting further
+While keeping
+While need frustration
+While preserving
+While preserving compatibility
+while remaining coherent
+While remaining compatible
+While remaining neutral
+While retaining
+While state space
+while staying within a budget
+While still fitting
+While still guiding trajectories
+While still leveraging
+who define operational rules
+who move money
+Who paid
+Wholes
+Whose balance is affected
+whose behavior responds to rules
+Whose descriptor appears
+Whose effective behavior
+Whose meaning depends
+Why gambling
+Why it matters here
+Why treasury teams
+Why virtual economies matter
+Wikipedia
+will do
+willingness
+with a game-theoretic incentive layer
+with a narrative
+with a short closure
+with a short closure paragraph
+With a wide pool
+With accounting
+With additional structure
+with an intended outcome
+With at least one
+With cash-like prizes
+With common knowledge
+with content
+With coordinates such as
+With credits as payoffs
+With different goods
+With digital game mechanics
+with economic activity
+With ethical
+with existing industry practice
+with explicit invariants
+With feasible budget constraints
+with financial fragility
+With game-theoretic
+With incentive compatibility
+With individual objectives
+with items
+with legal
+With local detail
+With material prizes
+With Nash-type concepts
+With network
+With no guaranteed cash-out
+With noise
+With non-cooperative
+with real money
+With real-money ingress
+with reputational effects
+With respect
+With reward mechanics
+With sensitive domains
+With separated concerns
+With separated financial responsibilities
+with societal values
+With specific representations
+with state
+with strategic complements
+with structured choice
+with subscription fees
+with the following primitives
+with the framework’s proposed use
+with the others
+With the overall ontology
+With tools
+With tools from
+With user behavior
+with virtual credits
+with virtual currencies
+With virtual economies
+within a bounded
+Within a constellation
+Within a structured
+within applicable law
+within economies
+Within ethically
+within explicit eligibility
+Within that bound
+Within the ambit
+within the broader ecosystem
+within the budget envelopes
+Within the present framework
+Within the same formal economy
+within the same formal worldview
+within the world
+Without altering
+Without becoming undefined
+Without changing
+Without collapsing the model
+Without direct access
+Without forcing them
+Without handling
+Without implying
+Without improving
+Without losing alignment
+Without losing coherence
+Without losing conceptual integrity
+Without overcommitting
+without prematurely collapsing into a single domain
+Without prematurely deciding
+Without re-doing
+Without specific incentives
+Without touching
+Without uncontrolled inflation
+work can focus
+work primarily
+Working formulas
+working with users
+World
+would include these principles
+Would require
+Yet its applica...
+Yielding utility functions
+Your all-in-one
+your favorite virtual game
