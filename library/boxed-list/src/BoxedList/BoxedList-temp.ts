@@ -55,7 +55,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return this.#value.values();
   }
 
-  // public ===========================================-| at() |-====
+  // public ============================================-| at() |-====
   public at(index: number): T | undefined {
     return this.#value.at(index);
   }
