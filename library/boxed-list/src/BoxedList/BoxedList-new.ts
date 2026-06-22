@@ -11,20 +11,45 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   readonly #value: T[];
   // static ============================================-| of() |-====
   public static of<TVal>(...values: TVal[] | [TVal[]]) {
+    const normItem = BoxedList.normalizeItem(values);
     if (values.length === 1) {
       const value = values[0];
       if (Array.isArray(value)) return new BoxedList<TVal>([...value]);
     }
-    return new BoxedList<TVal>([...(values as TVal[])]);
+    // BoxedList.normalizeItem(values);
+    return new BoxedList<TVal>([...normItem]);
   }
 
+  // static =====================================-| normalize() |-====
+  public static normalizeItem<TVal>(item: TVal | TVal[] | [TVal[]]) {
+    item;
+    if (!Array.isArray(item)) {
+      item; // item is TVal;
+      return [item];
+    }
+    item; // item isTVal[] | [TVal[]];
+    if (item.length === 1) {
+      item;
+      if (!Array.isArray(item[0])) {
+        return [item[0]];
+      }
+    }
+
+    Array.isArray(item[0]) && item.length === 1;
+    const items = Array.isArray(item) ? item : [item];
+    if (Array.isArray(item) && item.length === 1 && Array.isArray(item[0])) {
+      return item[0];
+    }
+    return items;
+  }
   // static ==========================================-| from() |-====
   public static from<TVal>(
-    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>
+    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>,
+    mapFn?: <RVal>(value: TVal) => RVal,
+    thisArg?: any
   ): BoxedList<TVal> {
-    const unbox = box.unbox();
-    if (Array.isArray(unbox)) return BoxedList.of<TVal>(...(unbox as TVal[]));
-    return BoxedList.of<TVal>(unbox as TVal);
+    const oneBox = BoxedList.normalizeItem(box.unbox());
+    return BoxedList.of<TVal>(...oneBox.map(mapFn || (x => x), thisArg));
   }
 
   // protected ================================-| constructor() |-====

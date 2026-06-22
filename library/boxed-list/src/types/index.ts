@@ -11,3 +11,4 @@ export type { IUnboxList } from './IUnboxList';
 export type { IValue } from './IValue';
 export type { Mapper } from './Mapper';
 export type { ThenMapper } from './ThenMapper';
+export type { Wrappable } from './Wrappable';
