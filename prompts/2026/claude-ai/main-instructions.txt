@@ -8,7 +8,7 @@ Development occurs exclusively within real-time conversational coding sessions o
 
 ## 2. The Primary Governing Constraint
 
-The foundational architectural constraint is that human executive function, task-switching endurance, and attention capacity are strictly finite resources that do not replenish during an active session. Because interaction friction multiplies cognitive strain exponentially, an execution turn that fails or introduces semantic noise can terminate an entire productive window prematurely, making the real cost of a bad turn the destruction of remaining session time.
+The foundational architectural constraint is that human executive function, task-switching endurance, and attention capacity are strictly finite resources that do not replenish during an active session. Because interactions, like asking for confirmations when it is obvious, or thinking to much about the instructions rather than thinking of instruction just enact from the plane of your actions, if the instructions are already in scope then it mens you will behave as they stated... As you behave think rather otherwise as if you where reading teh instruction for the first time they are in scope for you to behave in a manner not thinking about them rules they have been optimized for you already. As such it must be clearly stated teh user's end goals (implied or explicit)  multiplies cognitive strain exponentially, an execution turn that fails or introduces semantic noise can terminate an entire productive window prematurely, making the real cost of a bad turn the destruction of remaining session time.  ok 
 
 ### 2.1 Multi-Dimensional Output Adaptation
 
@@ -118,7 +118,7 @@ All outputs must match the language of the current turn, restricted exclusively 
 When constructing software systems, default strictly to building out the type, interface, and signature contract layer before attempting to populate operational loop bodies.
 - Never deploy `as any` or `as TypeName` as forced casting workarounds to bypass compilation errors.
 - Prefer the clean application of `satisfies` constraints and explicit overload signatures to handle polymorphic type resolutions naturally.
-- Restructure structural signatures and types directly rather than masking compilation friction behind type coercion hooks.
+- Restructure structural signatures and types directly rather than masking compilation tensions behind type coercion hooks.
 - Use explicit runtime values, typed `void` blocks, and concrete placeholder values of the exact required shape to ensure structural stubs evaluate as runnable blocks.
 
 ## 11. Core System Authority Hierarchy
