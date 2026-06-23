@@ -46,7 +46,7 @@ export class BoxedList_new<T>
     const rawBox = box.unbox();
     const oneBox: TVal[] = Array.isArray(rawBox) ? rawBox : [rawBox];
     if (mapFn !== undefined) {
-      return BoxedList_new.of<RVal>([...oneBox.map(mapFn, thisArg)]);
+      return BoxedList_new.of<RVal>(...oneBox.map(mapFn, thisArg));
     }
     return BoxedList_new.of<TVal>([...oneBox]);
   }
@@ -59,7 +59,7 @@ export class BoxedList_new<T>
   //   Element-level functor map: fn is applied to each T individually.
   //   Mirrors Array.prototype.map but stays inside BoxedList.
   public mapItems<R>(fn: (value: T) => R): BoxedList_new<R> {
-    return BoxedList_new.of<R>([...this.#value.map(fn, this)]);
+    return BoxedList_new.of<R>(...this.#value.map(fn));
   }
   // public =========================================-| unbox() |-====
   public unbox(): T[];
