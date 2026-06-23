@@ -30,6 +30,7 @@ export class BoxedList_new<T>
     return new BoxedList_new<TVal>([...normItem]);
   }
   // static ==========================================-| from() |-====
+  // ──▶ BOUNDARY ENTRY: Callers arrive from outside. Context is Exposed.
   public static from<TVal>(
     box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>
   ): BoxedList_new<TVal>;
@@ -43,12 +44,11 @@ export class BoxedList_new<T>
     mapFn?: (value: TVal) => RVal,
     thisArg?: any
   ): BoxedList_new<TVal> | BoxedList_new<RVal> {
-    const rawBox = box.unbox();
-    const oneBox: TVal[] = Array.isArray(rawBox) ? rawBox : [rawBox];
+    const normBox = BoxedList_new.normalize(box.unbox());
     if (mapFn !== undefined) {
-      return BoxedList_new.of<RVal>(...oneBox.map(mapFn, thisArg));
+      return BoxedList_new.of<RVal>(...normBox.map(mapFn, thisArg));
     }
-    return BoxedList_new.of<TVal>([...oneBox]);
+    return BoxedList_new.of<TVal>([...normBox]);
   }
   // protected ================================-| constructor() |-====
   protected constructor(value: T[]) {
@@ -56,24 +56,24 @@ export class BoxedList_new<T>
     return this;
   }
   // public ======================================-| mapItems() |-====
+  // ──▶ INTERNAL PIPELINE: Logic lives inside the box. Context is Absent.
   //   Element-level functor map: fn is applied to each T individually.
   //   Mirrors Array.prototype.map but stays inside BoxedList.
   public mapItems<R>(fn: (value: T) => R): BoxedList_new<R> {
-    return BoxedList_new.of<R>(...this.#value.map(fn));
+    return BoxedList_new.of<R>(...this.unbox(fn));
   }
   // public =========================================-| unbox() |-====
+  // ──▶ BOUNDARY EXIT: Handing data back out to the world. Context is Exposed.
   public unbox(): T[];
-  public unbox<RVal = T>(mapFn: (value: T) => RVal, thisArg?: any): RVal[];
-  public unbox<R_unsafe = T>(
-    mapFn?: (value: T) => R_unsafe,
-    thisArg?: any
-  ): R_unsafe[] {
-    if (mapFn !== undefined) {
-      return this.#value.map(mapFn, thisArg);
-    }
-    return this.#value as unknown as R_unsafe[];
+  public unbox<R>(mapFn: (value: T) => R, thisArg?: any): R[];
+  public unbox<R = T>(mapFn?: (value: T) => R, thisArg?: any): T[] | R[] {
+    return mapFn !== undefined
+      ? this.#value.map(mapFn, thisArg)
+      : this.#unboxRaw();
   }
-
+  #unboxRaw(): T[] {
+    return [...this.#value];
+  }
   // get ================================================-| box |-====
   public get box() {
     return Box.of([...this.unbox()]);
