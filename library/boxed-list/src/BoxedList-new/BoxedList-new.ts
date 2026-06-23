@@ -76,6 +76,6 @@ export class BoxedList_new<T>
   }
   // get ================================================-| box |-====
   public get box() {
-    return Box.of([...this.unbox()]);
+    return Box.of(this.unbox());
   }
 }
