@@ -21,7 +21,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
     return item;
   }
   // static ============================================-| of() |-====
-  public static of<TVal>(...values: TVal[] | [TVal[]]) {
+  public static of<TVal>(...values: TVal[] | [TVal[]]): BoxedList<TVal> {
     const normItem = BoxedList.normalize(values);
     return new BoxedList<TVal>([...normItem]);
   }
@@ -56,7 +56,7 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   //   Element-level functor map: fn is applied to each T individually.
   //   Mirrors Array.prototype.map but stays inside BoxedList.
   public mapItems<R>(fn: (value: T) => R): BoxedList<R> {
-    return BoxedList.of<R>(...this.#value.map(fn));
+    return BoxedList.of<R>([...this.#value.map(fn, this)]);
   }
 
   // public =========================================-| unbox() |-====
