@@ -3,7 +3,7 @@ import type { IMapItems, IUnbox, IUnboxList } from '@/types';
 export class BoxedList_new<T>
   implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T>
 {
-  readonly #value: T[];
+  readonly _value: T[];
   // private static =========================-| isNestedTuple() |-====
   private static isNestedTuple<TVal>(
     item: TVal[] | [TVal[]]
@@ -11,7 +11,7 @@ export class BoxedList_new<T>
     return item.length === 1 && Array.isArray(item[0]);
   }
   // private static =============================-| normalize() |-====
-  private static normalize<Item>(item: Item | Item[] | [Item[]]): Item[] {
+  static normalize<Item>(item: Item | Item[] | [Item[]]): Item[] {
     if (!Array.isArray(item)) {
       return [item];
     }
@@ -46,18 +46,18 @@ export class BoxedList_new<T>
   }
   // protected ================================-| constructor() |-==============
   protected constructor(value: T[]) {
-    this.#value = value;
+    this._value = value;
   }
   // public ======================================-| mapItems() |-====
   public mapItems<R>(fn: (value: T) => R): BoxedList_new<R> {
-    return new BoxedList_new<R>(this.#value.map(fn));
+    return new BoxedList_new<R>(this._value.map(fn));
   }
   // public =========================================-| unbox() |-====
   public unbox(): T[];
   public unbox<R>(mapFn: (value: T) => R, thisArg?: any): R[];
   public unbox<R = T>(mapFn?: (value: T) => R, thisArg?: any): T[] | R[] {
     return mapFn !== undefined
-      ? this.#value.map(mapFn, thisArg)
-      : this.#value.slice();
+      ? this._value.map(mapFn, thisArg)
+      : this._value.slice();
   }
 }
