@@ -17,30 +17,27 @@ export class BoxedList_new<T>
       return [item];
     }
     if (BoxedList_new.isNestedTuple<Item>(item)) {
-      const intern = item[0];
-      return intern;
+      return item[0];
     }
-    return item;
+    return [...item];
   }
   // static ============================================-| of() |-====
   public static of<TVal>(...values: [TVal[]]): BoxedList_new<TVal>;
   public static of<TVal>(...values: TVal[]): BoxedList_new<TVal>;
   public static of<TVal>(...values: TVal[] | [TVal[]]): BoxedList_new<TVal> {
     const normItem = BoxedList_new.normalize(values);
-    return new BoxedList_new<TVal>([...normItem]);
+    return new BoxedList_new<TVal>(normItem);
   }
   // static ==========================================-| from() |-====
   // ──▶ BOUNDARY ENTRY: Callers arrive from outside. Context is Exposed.
-  public static from<TVal>(
-    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>
-  ): BoxedList_new<TVal>;
+  public static from<TVal>(box: IUnbox<TVal | TVal[]>): BoxedList_new<TVal>;
   public static from<TVal, RVal>(
-    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>,
+    box: IUnbox<TVal | TVal[]>,
     mapFn: (value: TVal) => RVal,
     thisArg?: any
   ): BoxedList_new<RVal>;
   public static from<TVal, RVal>(
-    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>,
+    box: IUnbox<TVal | TVal[]>,
     mapFn?: (value: TVal) => RVal,
     thisArg?: any
   ): BoxedList_new<TVal> | BoxedList_new<RVal> {
@@ -50,7 +47,7 @@ export class BoxedList_new<T>
     }
     return BoxedList_new.of<TVal>(normBox);
   }
-  // protected ================================-| constructor() |-====
+  // protected ================================-| constructor() |-==============
   protected constructor(value: T[]) {
     this.#value = value;
     return this;
@@ -60,7 +57,7 @@ export class BoxedList_new<T>
   //   Element-level functor map: fn is applied to each T individually.
   //   Mirrors Array.prototype.map but stays inside BoxedList.
   public mapItems<R>(fn: (value: T) => R): BoxedList_new<R> {
-    return BoxedList_new.of<R>(...this.unbox(fn));
+    return BoxedList_new.of<R>(this.unbox(fn));
   }
   // public =========================================-| unbox() |-====
   // ──▶ BOUNDARY EXIT: Handing data back out to the world. Context is Exposed.
