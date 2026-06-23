@@ -10,7 +10,7 @@
     /* Module Resolution Interop Constraints */
     "target": "ESNext",
     "module": "CommonJS",
-    "moduleResolution": "node",
+    // "moduleResolution": "node",
     "isolatedModules": true,
     "esModuleInterop": true,
     "preserveSymlinks": false,
@@ -23,7 +23,7 @@
     "maxNodeModuleJsDepth": 1,
     "disableSizeLimit": false,
     /* Emit Options */
-    "downlevelIteration": true,
+    // "downlevelIteration": true,
     "emitBOM": false,
     "incremental": true,
     "newLine": "lf",
@@ -50,7 +50,7 @@
     /* Package names to be included without being referenced in a source file. */
     "types": [
       "node",
-      "heft-jest"
+      // "heft-jest"
     ],
     /* Projects */
     "composite": true,

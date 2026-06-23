@@ -1,10 +1,32 @@
 {
-  "extends": "../typescript/tsconfig.json",
+  // ./typescript/tsconfig.json
   "compilerOptions": {
+    /* Projects */
+    "composite": true,
+    "disableSourceOfProjectReferenceRedirect": false,
+    "disableSolutionSearching": false,
+    "disableReferencedProjectLoad": false,
+    /* Compilation Options */
+    "noErrorTruncation": true,
+    "useDefineForClassFields": true,
+    "assumeChangesOnlyAffectDirectDependencies": false,
+    /* Completeness */
+    "importHelpers": true,
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": true,
+    "noResolve": false,
+    "noLib": false,
+    "moduleDetection": "force",
+    /* Verbosity */
+    "diagnostics": true,
+    "extendedDiagnostics": true,
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "traceResolution": false,
     /* Emit Options */
     "target": "ESNext",
     "module": "CommonJS",
-    "moduleResolution": "node",
+    // "moduleResolution": "node",
     "rootDir": "./src",
     "declarationDir": "./lib/typings",
     "outDir": "./lib/src",
@@ -23,5 +45,9 @@
     }
   },
   "include": ["./src"],
-  "exclude": ["lib", "**/jest.*.js"]
+  "exclude": ["lib", "**/jest.*.js"],
+  /* Add this block to restore seamless runtime path mapping */
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
