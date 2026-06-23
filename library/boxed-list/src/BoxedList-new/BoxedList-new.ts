@@ -27,7 +27,6 @@ export class BoxedList_new<T>
     return new BoxedList_new<TVal>(BoxedList_new.normalize<TVal>(values));
   }
   // static ==========================================-| from() |-====
-  // ──▶ BOUNDARY ENTRY: Callers arrive from outside. Context is Exposed.
   public static from<TVal>(box: IUnbox<TVal | TVal[]>): BoxedList_new<TVal>;
   public static from<TVal, RVal>(
     box: IUnbox<TVal | TVal[]>,
@@ -50,14 +49,10 @@ export class BoxedList_new<T>
     this.#value = value;
   }
   // public ======================================-| mapItems() |-====
-  // ──▶ INTERNAL PIPELINE: Logic lives inside the box. Context is Absent.
-  // Element-level functor map: fn applied to each T individually.
-  // Mirrors Array.prototype.map but stays inside BoxedList.
   public mapItems<R>(fn: (value: T) => R): BoxedList_new<R> {
     return new BoxedList_new<R>(this.#value.map(fn));
   }
   // public =========================================-| unbox() |-====
-  // ──▶ BOUNDARY EXIT: Handing data back out to the world. Context is Exposed.
   public unbox(): T[];
   public unbox<R>(mapFn: (value: T) => R, thisArg?: any): R[];
   public unbox<R = T>(mapFn?: (value: T) => R, thisArg?: any): T[] | R[] {
