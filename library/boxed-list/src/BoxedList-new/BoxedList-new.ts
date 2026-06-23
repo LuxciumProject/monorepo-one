@@ -1,5 +1,4 @@
 // @/BoxedList/BoxedList-new.ts
-import Box from '@/Box/Box';
 import type { IMapItems, IUnbox, IUnboxList } from '@/types';
 export class BoxedList_new<T>
   implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T>
@@ -19,7 +18,7 @@ export class BoxedList_new<T>
     if (BoxedList_new.isNestedTuple<Item>(item)) {
       return item[0];
     }
-    return [...item];
+    return item;
   }
   // static ============================================-| of() |-====
   public static of<TVal>(...values: [TVal[]]): BoxedList_new<TVal>;
@@ -66,13 +65,6 @@ export class BoxedList_new<T>
   public unbox<R = T>(mapFn?: (value: T) => R, thisArg?: any): T[] | R[] {
     return mapFn !== undefined
       ? this.#value.map(mapFn, thisArg)
-      : this.#unboxRaw();
-  }
-  #unboxRaw(): T[] {
-    return [...this.#value];
-  }
-  // get ================================================-| box |-====
-  public get box() {
-    return Box.of(this.unbox());
+      : [...this.#value];
   }
 }
