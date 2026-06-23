@@ -24,8 +24,7 @@ export class BoxedList_new<T>
   public static of<TVal>(...values: [TVal[]]): BoxedList_new<TVal>;
   public static of<TVal>(...values: TVal[]): BoxedList_new<TVal>;
   public static of<TVal>(...values: TVal[] | [TVal[]]): BoxedList_new<TVal> {
-    const normItem = BoxedList_new.normalize(values);
-    return new BoxedList_new<TVal>(normItem);
+    return new BoxedList_new<TVal>(BoxedList_new.normalize<TVal>(values));
   }
   // static ==========================================-| from() |-====
   // ──▶ BOUNDARY ENTRY: Callers arrive from outside. Context is Exposed.
@@ -40,23 +39,22 @@ export class BoxedList_new<T>
     mapFn?: (value: TVal) => RVal,
     thisArg?: any
   ): BoxedList_new<TVal> | BoxedList_new<RVal> {
-    const normBox = BoxedList_new.normalize(box.unbox());
+    const normBox = BoxedList_new.normalize<TVal>(box.unbox());
     if (mapFn !== undefined) {
-      return BoxedList_new.of<RVal>(normBox.map(mapFn, thisArg));
+      return new BoxedList_new<RVal>(normBox.map(mapFn, thisArg));
     }
-    return BoxedList_new.of<TVal>(normBox);
+    return new BoxedList_new<TVal>(normBox);
   }
   // protected ================================-| constructor() |-==============
   protected constructor(value: T[]) {
     this.#value = value;
-    return this;
   }
   // public ======================================-| mapItems() |-====
   // ──▶ INTERNAL PIPELINE: Logic lives inside the box. Context is Absent.
-  //   Element-level functor map: fn is applied to each T individually.
-  //   Mirrors Array.prototype.map but stays inside BoxedList.
+  // Element-level functor map: fn applied to each T individually.
+  // Mirrors Array.prototype.map but stays inside BoxedList.
   public mapItems<R>(fn: (value: T) => R): BoxedList_new<R> {
-    return BoxedList_new.of<R>(this.unbox(fn));
+    return new BoxedList_new<R>(this.#value.map(fn));
   }
   // public =========================================-| unbox() |-====
   // ──▶ BOUNDARY EXIT: Handing data back out to the world. Context is Exposed.
@@ -65,6 +63,6 @@ export class BoxedList_new<T>
   public unbox<R = T>(mapFn?: (value: T) => R, thisArg?: any): T[] | R[] {
     return mapFn !== undefined
       ? this.#value.map(mapFn, thisArg)
-      : [...this.#value];
+      : this.#value.slice();
   }
 }
