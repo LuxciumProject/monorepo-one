@@ -9,47 +9,48 @@ import type {
 } from '@/types';
 export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   readonly #value: T[];
-  // static ============================================-| of() |-====
-  public static of<TVal>(...values: TVal[] | [TVal[]]) {
-    const normItem = BoxedList.normalizeItem(values);
-    if (values.length === 1) {
-      const value = values[0];
-      if (Array.isArray(value)) return new BoxedList<TVal>([...value]);
-    }
-    // BoxedList.normalizeItem(values);
-    return new BoxedList<TVal>([...normItem]);
+  // private static =========================-| isNestedTuple() |-====
+  private static isNestedTuple<TVal>(
+    item: TVal[] | [TVal[]]
+  ): item is [TVal[]] {
+    return item.length === 1 && Array.isArray(item[0]);
   }
-
-  // static =====================================-| normalize() |-====
-  public static normalizeItem<TVal>(item: TVal | TVal[] | [TVal[]]) {
-    item;
+  // private static =============================-| normalize() |-====
+  private static normalize<Item>(item: Item | Item[] | [Item[]]): Item[] {
     if (!Array.isArray(item)) {
-      item; // item is TVal;
       return [item];
     }
-    item; // item isTVal[] | [TVal[]];
-    if (item.length === 1) {
-      item;
-      if (!Array.isArray(item[0])) {
-        return [item[0]];
-      }
+    if (BoxedList.isNestedTuple<Item>(item)) {
+      const intern = item[0];
+      return intern;
     }
-
-    Array.isArray(item[0]) && item.length === 1;
-    const items = Array.isArray(item) ? item : [item];
-    if (Array.isArray(item) && item.length === 1 && Array.isArray(item[0])) {
-      return item[0];
-    }
-    return items;
+    return item;
+  }
+  // static ============================================-| of() |-====
+  public static of<TVal>(...values: TVal[] | [TVal[]]) {
+    const normItem = BoxedList.normalize(values);
+    return new BoxedList<TVal>([...normItem]);
   }
   // static ==========================================-| from() |-====
   public static from<TVal>(
+    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>
+  ): BoxedList<TVal>;
+  public static from<TVal, RVal>(
     box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>,
-    mapFn?: <RVal>(value: TVal) => RVal,
+    mapFn: (value: TVal) => RVal,
     thisArg?: any
-  ): BoxedList<TVal> {
-    const oneBox = BoxedList.normalizeItem(box.unbox());
-    return BoxedList.of<TVal>(...oneBox.map(mapFn || (x => x), thisArg));
+  ): BoxedList<RVal>;
+  public static from<TVal, RVal>(
+    box: IUnbox<TVal> | IUnbox<TVal[]> | IUnboxList<TVal>,
+    mapFn?: (value: TVal) => RVal,
+    thisArg?: any
+  ): BoxedList<TVal> | BoxedList<RVal> {
+    const rawBox = box.unbox();
+    const oneBox: TVal[] = Array.isArray(rawBox) ? rawBox : [rawBox];
+    if (mapFn !== undefined) {
+      return BoxedList.of<RVal>([...oneBox.map(mapFn, thisArg)]);
+    }
+    return BoxedList.of<TVal>([...oneBox]);
   }
 
   // protected ================================-| constructor() |-====
@@ -65,12 +66,20 @@ export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   }
 
   // public =========================================-| unbox() |-====
-  public unbox<R_unsafe = T>(): R_unsafe[] {
+  public unbox(): T[];
+  public unbox<RVal = T>(mapFn: (value: T) => RVal, thisArg?: any): RVal[];
+  public unbox<R_unsafe = T>(
+    mapFn?: (value: T) => R_unsafe,
+    thisArg?: any
+  ): R_unsafe[] {
+    if (mapFn !== undefined) {
+      return this.#value.map(mapFn, thisArg);
+    }
     return this.#value as unknown as R_unsafe[];
   }
 
   // get ================================================-| box |-====
   public get box() {
-    return Box.of([...this.unbox<T>()]);
+    return Box.of([...this.unbox()]);
   }
 }
