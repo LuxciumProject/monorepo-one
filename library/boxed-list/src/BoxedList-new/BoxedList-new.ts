@@ -46,9 +46,9 @@ export class BoxedList_new<T>
   ): BoxedList_new<TVal> | BoxedList_new<RVal> {
     const normBox = BoxedList_new.normalize(box.unbox());
     if (mapFn !== undefined) {
-      return BoxedList_new.of<RVal>(...normBox.map(mapFn, thisArg));
+      return BoxedList_new.of<RVal>(normBox.map(mapFn, thisArg));
     }
-    return BoxedList_new.of<TVal>([...normBox]);
+    return BoxedList_new.of<TVal>(normBox);
   }
   // protected ================================-| constructor() |-====
   protected constructor(value: T[]) {
