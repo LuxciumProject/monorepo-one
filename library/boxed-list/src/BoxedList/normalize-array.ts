@@ -122,7 +122,7 @@ export function assertToArray<TVal>(
   label = 'assertToArray'
 ): TVal[] {
   const result = toArrayWith(input, isVal);
-  if (!result.ok) throw new TypeError(`[${label}] ${result.reason}`);
+  if (!result.ok) throw new TypeError(`[${label}] ${'result.reason'}`);
   return result.value;
 }
 

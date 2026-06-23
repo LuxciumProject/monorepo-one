@@ -1,10 +1,23 @@
-import Box from '@/Box/Box';
+// @/BoxedList-new/main-BoxedList-new.ts
 import { BoxedList_new } from './BoxedList-new';
-const var1 = BoxedList_new.of(1, 2, 3).unbox(); // [1, 2, 3]
-const var2 = BoxedList_new.of([1, 2, 3]).unbox(x => x); // [1, 2, 3]
-console.log(var1, var2);
-const myBox1 = Box.of(1); // [1]
-const myBox2 = Box.of(2); // [2]
-let v3 = BoxedList_new.from(myBox1).unbox(x => x * 2); // [4]
-v3 = BoxedList_new.from(myBox2).unbox(x => x * 2); // [4]
-void v3;
+
+// 1. Instantiation using .of()
+const list1 = BoxedList_new.of(1, 2, 3); // Internal: [1, 2, 3]
+const list2 = BoxedList_new.of([4, 5, 6]); // Internal: [4, 5, 6] (Nested tuple caught)
+
+// 2. Mapping
+const doubledList = list1.mapItems(x => x * 2); // Returns new BoxedList_new
+
+// 3. Unboxing (with or without transformation)
+const rawArray1 = doubledList.unbox(); // [2, 4, 6]
+const stringArray = doubledList.unbox(String); // ["2", "4", "6"]
+
+// 4. Instantiation using .from()
+const fun = (x: number) => x + 10;
+const listFromOther = BoxedList_new.from(list1, x => x + 10); // Internal: [11, 12, 13]
+
+fun;
+list2;
+rawArray1;
+stringArray;
+listFromOther;
