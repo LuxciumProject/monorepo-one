@@ -1,12 +1,6 @@
 // @/BoxedList/BoxedList-new.ts
 import Box from '@/Box/Box';
-import type {
-  //   CallbackfnT,
-  //   CallbackfnU,
-  IMapItems,
-  IUnbox,
-  IUnboxList,
-} from '@/types';
+import type { IMapItems, IUnbox, IUnboxList } from '@/types';
 export class BoxedList<T> implements IUnboxList<T>, IUnbox<T[]>, IMapItems<T> {
   readonly #value: T[];
   // private static =========================-| isNestedTuple() |-====
