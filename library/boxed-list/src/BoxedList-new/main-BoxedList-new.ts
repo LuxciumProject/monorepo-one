@@ -13,8 +13,8 @@ const rawArray1 = doubledList.unbox(); // [2, 4, 6]
 const stringArray = doubledList.unbox(String); // ["2", "4", "6"]
 
 // 4. Instantiation using .from()
-const fun = (x: number) => x + 10;
-const listFromOther = BoxedList_new.from(list1, x => x + 10); // Internal: [11, 12, 13]
+const fun = (x: any) => x + 10;
+const listFromOther = BoxedList_new.from(list2, fun); // Internal: [11, 12, 13]
 
 fun;
 list2;

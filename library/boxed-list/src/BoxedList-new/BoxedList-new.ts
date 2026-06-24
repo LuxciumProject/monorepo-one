@@ -27,34 +27,18 @@ export class BoxedList_new<T>
     return new BoxedList_new<TVal>(BoxedList_new.normalize<TVal>(values));
   }
   // static ==========================================-| from() |-====
-  // Overload A: Box contains an array
-  public static from<TVal>(box: IUnbox<TVal[]>): BoxedList_new<TVal>;
-
-  // Overload B: Box contains a single scalar item
-  public static from<TVal>(box: IUnbox<TVal>): BoxedList_new<TVal>;
-
-  // Overload C: Box contains an array + map function
+  public static from<TVal>(box: IUnbox<TVal | TVal[]>): BoxedList_new<TVal>;
   public static from<TVal, RVal>(
-    box: IUnbox<TVal[]>,
+    box: IUnbox<TVal | TVal[]>,
     mapFn: (value: TVal) => RVal,
-    thisArg?: unknown
+    thisArg?: any
   ): BoxedList_new<RVal>;
-
-  // Overload D: Box contains a single item + map function
   public static from<TVal, RVal>(
-    box: IUnbox<TVal>,
-    mapFn: (value: TVal) => RVal,
-    thisArg?: unknown
-  ): BoxedList_new<RVal>;
-  // Implementation signature
-  public static from<TVal, RVal>(
-    box: IUnbox<any>,
+    box: IUnbox<TVal | TVal[]>,
     mapFn?: (value: TVal) => RVal,
-    thisArg?: unknown
+    thisArg?: any
   ): BoxedList_new<TVal> | BoxedList_new<RVal> {
-    const rawContent = box.unbox();
-    const normBox = BoxedList_new.normalize<TVal>(rawContent);
-
+    const normBox = BoxedList_new.normalize<TVal>(box.unbox());
     if (mapFn !== undefined) {
       return new BoxedList_new<RVal>(normBox.map(mapFn, thisArg));
     }
@@ -70,8 +54,8 @@ export class BoxedList_new<T>
   }
   // public =========================================-| unbox() |-====
   public unbox(): T[];
-  public unbox<R>(mapFn: (value: T) => R, thisArg?: unknown): R[];
-  public unbox<R = T>(mapFn?: (value: T) => R, thisArg?: unknown): T[] | R[] {
+  public unbox<R>(mapFn: (value: T) => R, thisArg?: any): R[];
+  public unbox<R = T>(mapFn?: (value: T) => R, thisArg?: any): T[] | R[] {
     return mapFn !== undefined
       ? this._value.map(mapFn, thisArg)
       : this._value.slice();
