@@ -17,7 +17,7 @@
 // Source of truth: TypeScript 6.0.3 lib.es5.d.ts + lib.es2023.array.d.ts.
 // ============================================================================
 
-import type { ConcatArray } from "./array-3-residual-and-statics";
+import type { ConcatArray } from './array-3-residual-and-statics';
 
 export interface ArrayProducersNewInstance<T> {
   // -- concat ------------------------------------------------------------- //

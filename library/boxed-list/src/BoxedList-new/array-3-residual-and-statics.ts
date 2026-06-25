@@ -65,8 +65,14 @@ export interface ArrayResidual<T> {
    * narrows to `S[]`; predicate overload yields `T[]`. Element-derived, so it
    * sits with the projection family rather than split 2.
    */
-  filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];
-  filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T[];
+  filter<S extends T>(
+    predicate: (value: T, index: number, array: T[]) => value is S,
+    thisArg?: any
+  ): S[];
+  filter(
+    predicate: (value: T, index: number, array: T[]) => unknown,
+    thisArg?: any
+  ): T[];
 
   /**
    * Flattens nested arrays up to `depth` into a NEW array. Return element type
@@ -78,14 +84,22 @@ export interface ArrayResidual<T> {
    * Maps then flattens one level into a NEW `U[]` (map + flat depth 1).
    */
   flatMap<U, This = undefined>(
-    callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,
-    thisArg?: This,
+    callback: (
+      this: This,
+      value: T,
+      index: number,
+      array: T[]
+    ) => U | ReadonlyArray<U>,
+    thisArg?: This
   ): U[];
 
   /**
    * Projects each element through `callbackfn` into a NEW `U[]`.
    */
-  map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+  map<U>(
+    callbackfn: (value: T, index: number, array: T[]) => U,
+    thisArg?: any
+  ): U[];
 
   // ---- group: single element access → T | undefined / S | undefined ----- //
 
@@ -93,12 +107,24 @@ export interface ArrayResidual<T> {
   at(index: number): T | undefined;
 
   /** First element satisfying `predicate`, or `undefined`. Guard-narrowing. */
-  find<S extends T>(predicate: (value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;
-  find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined;
+  find<S extends T>(
+    predicate: (value: T, index: number, obj: T[]) => value is S,
+    thisArg?: any
+  ): S | undefined;
+  find(
+    predicate: (value: T, index: number, obj: T[]) => unknown,
+    thisArg?: any
+  ): T | undefined;
 
   /** Last element satisfying `predicate`, or `undefined`. Guard-narrowing. */
-  findLast<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S | undefined;
-  findLast(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T | undefined;
+  findLast<S extends T>(
+    predicate: (value: T, index: number, array: T[]) => value is S,
+    thisArg?: any
+  ): S | undefined;
+  findLast(
+    predicate: (value: T, index: number, array: T[]) => unknown,
+    thisArg?: any
+  ): T | undefined;
 
   /** Removes and returns the last element, or `undefined`. Mutates length. */
   pop(): T | undefined;
@@ -109,10 +135,16 @@ export interface ArrayResidual<T> {
   // ---- group: numeric → number ------------------------------------------ //
 
   /** Index of the first element satisfying `predicate`, or `-1`. */
-  findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): number;
+  findIndex(
+    predicate: (value: T, index: number, obj: T[]) => unknown,
+    thisArg?: any
+  ): number;
 
   /** Index of the last element satisfying `predicate`, or `-1`. */
-  findLastIndex(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): number;
+  findLastIndex(
+    predicate: (value: T, index: number, array: T[]) => unknown,
+    thisArg?: any
+  ): number;
 
   /** Index of the first occurrence of `searchElement`, or `-1`. */
   indexOf(searchElement: T, fromIndex?: number): number;
@@ -129,26 +161,81 @@ export interface ArrayResidual<T> {
   // ---- group: boolean / type-predicate → boolean / this is S[] ---------- //
 
   /** True if all elements satisfy `predicate`. Guard overload narrows `this`. */
-  every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): this is S[];
-  every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+  every<S extends T>(
+    predicate: (value: T, index: number, array: T[]) => value is S,
+    thisArg?: any
+  ): this is S[];
+  every(
+    predicate: (value: T, index: number, array: T[]) => unknown,
+    thisArg?: any
+  ): boolean;
 
   /** True if `searchElement` is present (SameValueZero). */
   includes(searchElement: T, fromIndex?: number): boolean;
 
   /** True if any element satisfies `predicate`. */
-  some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+  some(
+    predicate: (value: T, index: number, array: T[]) => unknown,
+    thisArg?: any
+  ): boolean;
 
   // ---- group: accumulator → T | U --------------------------------------- //
 
   /** Left fold. Overloaded for same-type `T` and seeded `U` accumulators. */
-  reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T;
-  reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T;
-  reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U;
+  reduce(
+    callbackfn: (
+      previousValue: T,
+      currentValue: T,
+      currentIndex: number,
+      array: T[]
+    ) => T
+  ): T;
+  reduce(
+    callbackfn: (
+      previousValue: T,
+      currentValue: T,
+      currentIndex: number,
+      array: T[]
+    ) => T,
+    initialValue: T
+  ): T;
+  reduce<U>(
+    callbackfn: (
+      previousValue: U,
+      currentValue: T,
+      currentIndex: number,
+      array: T[]
+    ) => U,
+    initialValue: U
+  ): U;
 
   /** Right fold. Overloaded for same-type `T` and seeded `U` accumulators. */
-  reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T;
-  reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T;
-  reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U;
+  reduceRight(
+    callbackfn: (
+      previousValue: T,
+      currentValue: T,
+      currentIndex: number,
+      array: T[]
+    ) => T
+  ): T;
+  reduceRight(
+    callbackfn: (
+      previousValue: T,
+      currentValue: T,
+      currentIndex: number,
+      array: T[]
+    ) => T,
+    initialValue: T
+  ): T;
+  reduceRight<U>(
+    callbackfn: (
+      previousValue: U,
+      currentValue: T,
+      currentIndex: number,
+      array: T[]
+    ) => U,
+    initialValue: U
+  ): U;
 
   // ---- group: string → string ------------------------------------------- //
 
@@ -157,7 +244,10 @@ export interface ArrayResidual<T> {
 
   /** Locale-aware string form. Overloaded with explicit locale/options. */
   toLocaleString(): string;
-  toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions & Intl.DateTimeFormatOptions): string;
+  toLocaleString(
+    locales: string | string[],
+    options?: Intl.NumberFormatOptions & Intl.DateTimeFormatOptions
+  ): string;
 
   /** Default string form (comma-joined). */
   toString(): string;
@@ -179,7 +269,10 @@ export interface ArrayResidual<T> {
   // ---- group: void ------------------------------------------------------ //
 
   /** Runs `callbackfn` for each element; returns nothing. */
-  forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+  forEach(
+    callbackfn: (value: T, index: number, array: T[]) => void,
+    thisArg?: any
+  ): void;
 }
 
 // ----------------------------------------------------------------------------
@@ -200,14 +293,31 @@ export interface ArrayConstructorSurface {
   // -- from --------------------------------------------------------------- //
   /** Builds a new array from an array-like or iterable, with optional map. */
   from<T>(arrayLike: ArrayLike<T>): T[];
-  from<T, U>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[];
+  from<T, U>(
+    arrayLike: ArrayLike<T>,
+    mapfn: (v: T, k: number) => U,
+    thisArg?: any
+  ): U[];
   from<T>(iterable: Iterable<T> | ArrayLike<T>): T[];
-  from<T, U>(iterable: Iterable<T> | ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[];
+  from<T, U>(
+    iterable: Iterable<T> | ArrayLike<T>,
+    mapfn: (v: T, k: number) => U,
+    thisArg?: any
+  ): U[];
 
   // -- fromAsync ---------------------------------------------------------- //
   /** Builds a promise of an array from async/sync iterables, awaiting items. */
-  fromAsync<T>(iterableOrArrayLike: AsyncIterable<T> | Iterable<T | PromiseLike<T>> | ArrayLike<T | PromiseLike<T>>): Promise<T[]>;
-  fromAsync<T, U>(iterableOrArrayLike: AsyncIterable<T> | Iterable<T> | ArrayLike<T>, mapFn: (value: Awaited<T>, index: number) => U, thisArg?: any): Promise<Awaited<U>[]>;
+  fromAsync<T>(
+    iterableOrArrayLike:
+      | AsyncIterable<T>
+      | Iterable<T | PromiseLike<T>>
+      | ArrayLike<T | PromiseLike<T>>
+  ): Promise<T[]>;
+  fromAsync<T, U>(
+    iterableOrArrayLike: AsyncIterable<T> | Iterable<T> | ArrayLike<T>,
+    mapFn: (value: Awaited<T>, index: number) => U,
+    thisArg?: any
+  ): Promise<Awaited<U>[]>;
 
   // -- isArray ------------------------------------------------------------ //
   /** Type-guard: narrows `arg` to `any[]`. */
