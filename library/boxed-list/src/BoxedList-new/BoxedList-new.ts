@@ -62,8 +62,175 @@ export class BoxedList_new<T>
       ? this._value.map(mapFn, thisArg)
       : this._value.slice();
   }
+  get length(): number {
+    return this._value.length;
+  }
+
+  /**
+   * Combines two or more arrays.
+   * This method returns a new array without modifying any existing arrays.
+   * @param items Additional arrays and/or items to add to the end of the array.
+   */
+  concat(...items: ConcatArray<T>[]): BoxedList_new<T>;
+  concat(...items: (T | ConcatArray<T>)[]): BoxedList_new<T> {
+    return BoxedList_new.of(this._value.concat(...items));
+  }
+  /**
+   * Returns a new array of elements where predicate is true (type guard variant)
+   */
+  filter<S extends T>(
+    predicate: (value: T, index: number, array: T[]) => value is S,
+    thisArg?: any
+  ): BoxedList_new<S>;
+
+  /**
+   * Returns a new array of elements where predicate is true
+   */
+  filter(
+    predicate: (value: T, index: number, array: T[]) => unknown
+  ): BoxedList_new<T> {
+    return BoxedList_new.of(this._value.filter(predicate));
+  }
+  /**
+   * ES2023: Returns a new reversed copy (does not mutate)
+   */
+  toReversed(): BoxedList_new<T> {
+    return BoxedList_new.of(this._value.toReversed());
+  }
+
+  /**
+   * Returns a shallow copy of a section of the array
+   */
+  slice(start?: number, end?: number): BoxedList_new<T> {
+    return BoxedList_new.of(this._value.slice(start, end));
+  }
+
+  /**
+   * ES2023: Returns a new sorted copy (does not mutate)
+   */
+  toSorted(compareFn?: (a: T, b: T) => number): BoxedList_new<T> {
+    return BoxedList_new.of(this._value.toSorted(compareFn));
+  }
+
+  /**
+   * ES2023: Returns a new copy with edits spliced in
+   */
+
+  toSpliced(start: number, deleteCount?: number): BoxedList_new<T>;
+  toSpliced(
+    start: number,
+    deleteCount: number,
+    ...items: T[]
+  ): BoxedList_new<T>;
+  toSpliced(
+    start: number,
+    deleteCount: number = Infinity,
+    ...items: T[]
+  ): BoxedList_new<T> {
+    return BoxedList_new.of(
+      this._value.toSpliced(start, deleteCount, ...items)
+    );
+  }
+  /**
+   * ES2023: Returns a new copy with one element replaced
+   */
+  with(index: number, value: T): BoxedList_new<T> {
+    return BoxedList_new.of(this._value.with(index, value));
+  }
+  /**
+   * Default iterator (same as values())
+   */
+  *[Symbol.iterator](): IterableIterator<T> {
+    yield* this._value;
+  }
+  /**
+   * Creates an array from an async iterator or iterable object.
+   * @param iterableOrArrayLike An async iterator or array-like object to convert to an array.
+   */
+  static async fromAsync<T>(
+    iterableOrArrayLike: Iterable<T> | AsyncIterable<T>
+    // | Iterable<PromiseLike<T>>
+  ): Promise<BoxedList_new<T>> {
+    if (BoxedList_new.isIterable(iterableOrArrayLike)) {
+      return BoxedList_new.of(...iterableOrArrayLike);
+    }
+    if (BoxedList_new.isAsyncIterable(iterableOrArrayLike)) {
+      return BoxedList_new.of(...(await Array.fromAsync(iterableOrArrayLike)));
+    }
+    throw 'NEVER';
+  }
+
+  // will prune later usefull for now dond mind thsoe for the time being:::
+  private static isPromiseLike(value: any): value is PromiseLike<any> {
+    return value != null && typeof value.then === 'function';
+  }
+
+  private static isAsyncIterable<T>(value: any): value is AsyncIterable<T> {
+    return value != null && typeof value[Symbol.asyncIterator] === 'function';
+  }
+
+  private static isIterable<T>(value: any): value is Iterable<T> {
+    return value != null && typeof value[Symbol.iterator] === 'function';
+  }
+
+  private static isArrayLike<T>(value: any): value is ArrayLike<T> {
+    // Exclude strings since they have a .length but are usually treated as primitives
+    return (
+      value != null &&
+      typeof value.length === 'number' &&
+      typeof value !== 'string'
+    );
+  }
+  protected static determineCollectionType(value: any): CollectionType {
+    // 1. Check for AsyncIterable first
+    if (this.isAsyncIterable(value)) {
+      return 'AsyncIterable';
+    }
+
+    // 2. Check for Iterable (and peek inside for Promises)
+    if (this.isIterable(value)) {
+      // To separate Iterable<T> from Iterable<PromiseLike<T>>, we inspect the first item.
+      // NOTE: If this is a one-time Generator, peeking will advance the iterator!
+      try {
+        const iterator = value[Symbol.iterator]();
+        const firstResult = iterator.next();
+
+        if (!firstResult.done && this.isPromiseLike(firstResult.value)) {
+          return 'IterableOfPromises';
+        }
+      } catch {
+        // If iterating throws an error, fallback to standard Iterable
+      }
+      return 'Iterable';
+    }
+
+    // 3. Check for ArrayLike (e.g., arguments object, DOM NodeLists)
+    if (this.isArrayLike(value)) {
+      return 'ArrayLike';
+    }
+
+    return 'Unknown';
+  }
 }
 
+// class end
+
+// Define a clear return type for our discriminator
+export type CollectionType =
+  | 'AsyncIterable'
+  | 'IterableOfPromises'
+  | 'Iterable'
+  | 'ArrayLike'
+  | 'Unknown';
+
+export type IterableOrArrayPromiseLike<T> =
+  | AsyncIterable<T>
+  | Iterable<T | PromiseLike<T>>
+  | ArrayLike<T | PromiseLike<T>>;
+export type IterableOrArrayLike<T> =
+  | AsyncIterable<T>
+  | Iterable<T>
+  | ArrayLike<T>;
 Array;
 export interface Array<T> {
   /**
