@@ -6,7 +6,7 @@
 
 ## Purpose & Context
 
-Benjamin is building a structured multilingual lexical reference system called **Word Tools** — a schema-driven micro-dictionary that generates comprehensive, deterministic entries for submitted words (lemmas). The system serves as a conceptual and linguistic database, likely feeding into a broader AI agent architecture or knowledge-base project. Entries are designed to be machine-readable, agent-portable, and semantically precise.
+building a structured multilingual lexical reference system called **Word Tools** — a schema-driven micro-dictionary that generates comprehensive, deterministic entries for submitted words (lemmas). The system serves as a conceptual and linguistic database, likely feeding into a broader AI agent architecture or knowledge-base project. Entries are designed to be machine-readable, agent-portable, and semantically precise.
 
 The project operates in **Canadian English (en-CA)** by default, with **Québécois French (fr-CA)** as the secondary language. French-language prompts (e.g., "pour le mot [lemma]") trigger full output in fr-CA. Multilingual translation fields (es, de, pt-BR, and others) are standard across entries.
 
@@ -16,7 +16,7 @@ A parallel thread involves **AI multi-agent systems design**, where lexical entr
 
 ## Current State
 
-Benjamin is actively executing Word Tools entries across several domains:
+actively executing Word Tools entries across several domains:
 
 - **Professional/agent roles:** Detailed profiles for Analyst, Auditor, Examiner, Steward, and similar roles — each framed as nodes in a multi-agent pipeline with conformance, inference, and fiduciary properties.
 - **Logic and epistemology:** Entries for axiom, theorem, lemma, inductive reasoning, and seven inference modes (deductive, abductive, analogical, intuitive, insight, statistical, enumerative induction), culminating in a synthesis of emergence as a structural property of inferential space.
@@ -37,16 +37,16 @@ The protocol in active use is **Word Tools v3**, documented as `WORD_TOOLS_v3_PR
 - **Silent correction:** Errors are fixed immediately without re-explanation or apology.
 - **No narration of process:** Claude should not describe what it is about to do or announce memory changes — changes must be narrated *before* being made if narration is necessary at all.
 - **Load-bearing language only:** Words exist to do work. Empty intensifiers (very, quite, really, well as opener) and filler conjunctions are prohibited. Severity signals, epistemic hedges, logical connectives, and contrastive markers are mandatory when applicable.
-- **No performative stance:** No evaluative commentary on Benjamin's ideas (e.g., "genius move"), no sycophantic framing, no closing pleasantries or offers to refine unless Benjamin invites them.
+- **No performative stance:** No evaluative commentary on user's ideas (e.g., "genius move"), no sycophantic framing, no closing pleasantries or offers to refine unless user invites them.
 
 ---
 
 ## Approach & Patterns
 
-- **Terse, compressed prompts:** Benjamin communicates minimally and expects Claude to infer the full schema from context. A bare word or short phrase is sufficient to trigger complete execution.
+- **Terse, compressed prompts:** user communicates minimally and expects Claude to infer the full schema from context. A bare word or short phrase is sufficient to trigger complete execution.
 - **Flag/command syntax:** Extended modes use `:command:` syntax (e.g., `:deep:`, `:JSON:`, `:compare:`, `:expansion:`). These compose with the base schema.
-- **Iterative refinement with direct correction:** Benjamin identifies errors precisely and expects immediate behavioural updating — not acknowledgment followed by continued non-compliance.
-- **Conceptual geometry as a thinking tool:** Benjamin frames semantic relationships spatially and dimensionally (axes, orthogonality, curvature, latent space). Analyses that reveal non-obvious structural relationships are valued over taxonomic coverage alone.
+- **Iterative refinement with direct correction:** user identifies errors precisely and expects immediate behavioural updating — not acknowledgment followed by continued non-compliance.
+- **Conceptual geometry as a thinking tool:** user frames semantic relationships spatially and dimensionally (axes, orthogonality, curvature, latent space). Analyses that reveal non-obvious structural relationships are valued over taxonomic coverage alone.
 - **Non-convergent analysis preferred for neologisms:** When analyzing constructed or neologistic terms, the goal is to open conceptual space rather than collapse it into a single canonical definition.
 - **File delivery conventions:** Output files go to `/mnt/user-data/outputs/` with naming convention `[lemma]_[languageCode].[format]`. Output must be rendered directly in-conversation (via `view` after `present_files`) — file reference alone is insufficient.
 
@@ -58,7 +58,7 @@ The protocol in active use is **Word Tools v3**, documented as `WORD_TOOLS_v3_PR
 - **Output directory:** `/mnt/user-data/outputs/`
 - **Supported output formats:** Markdown (primary), JSON, YAML
 - **Languages in scope:** en-CA (default), fr-CA (French input trigger), es, de, pt-BR (translation fields)
-- **Benjamin's structural lexicon:** A personal vocabulary of operational primitives — terms like LAYER, BOUNDARY, ABSTRACTION LEVEL, REAL, MAP — carry precise definitions that differ from general usage and should be respected when they appear in context.
+- **user's structural lexicon:** A personal vocabulary of operational primitives — terms like LAYER, BOUNDARY, ABSTRACTION LEVEL, REAL, MAP — carry precise definitions that differ from general usage and should be respected when they appear in context.
 
 ---
 
