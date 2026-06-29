@@ -212,8 +212,9 @@ export class BoxedList_new<T>
     return 'Unknown';
   }
 }
-
-// class end
+// ~@=================================================================
+// ~& class end                                                      !
+// ~@=================================================================
 
 // Define a clear return type for our discriminator
 export type CollectionType =
