@@ -1,0 +1,212 @@
+{
+  "lemma": "English",
+  "language": "Canadian English",
+  "languageCode": "en-CA",
+  "shortDefinition": "The Germanic language spoken in England, the United Kingdom, Canada, and many other countries; also, the people or culture of England.",
+  "partOfSpeech": "noun, adjective",
+  "extended": {
+    "phonetics": "/ˈɪŋɡlɪʃ/ (RP/Canadian standard)",
+    "etymology": "Old English Ænglisc, from Angle (a Germanic tribe that invaded Britain in the 5th–6th centuries). Related to Angeln (region in what is now Schleswig-Holstein, Germany). Root: PIE *h₂enǵʰ- (narrow, tight).",
+    "morphology": {
+      "singular": "English",
+      "plural": "Englishes (when referring to multiple varieties or contexts)",
+      "relatedForms": [
+        "Englishman (noun)",
+        "Englishwoman (noun)",
+        "English-speaker (noun)",
+        "Englishness (noun)",
+        "Anglophone (related)",
+        "Anglo- (prefix)"
+      ]
+    },
+    "syntax": {
+      "partOfSpeech": "noun (language, people); adjective (of or relating to England/English language)",
+      "valency": "Modifier context: 'English language', 'English literature', 'English breakfast'; Noun context: 'speak English', 'learn English', 'fluent in English'",
+      "patterns": [
+        "the English (collective noun for people)",
+        "English + noun (language, literature, culture)",
+        "adjective + English (Canadian English, Middle English)",
+        "in English (language medium)"
+      ]
+    },
+    "lexicalNotes": {
+      "register": "Standard, formal, widely used across all registers",
+      "domain": "Linguistics, culture, geography, education",
+      "register_variants": {
+        "formal": "English language, the English people",
+        "colloquial": "English, the language",
+        "technical": "Middle English, Old English, Early Modern English (historical periods)"
+      },
+      "capitalisation": "Always capitalised (proper noun/adjective)"
+    }
+  },
+  "synonyms": {
+    "general": [
+      "the English language",
+      "Anglo-Saxon (historical)",
+      "English tongue"
+    ],
+    "positive": [
+      "the language of Shakespeare (literary prestige)",
+      "the global language (practical reach)",
+      "the lingua franca (international communication)"
+    ],
+    "neutral": [
+      "the English language",
+      "Germanic language",
+      "West Germanic tongue"
+    ],
+    "negative": [
+      "colonial language (historical connotation)",
+      "imposed language (in post-colonial contexts)"
+    ]
+  },
+  "antonyms": {
+    "general": [
+      "French",
+      "Spanish",
+      "Mandarin",
+      "Arabic",
+      "non-English languages"
+    ],
+    "positive": [
+      "French (cultural/diplomatic prestige)",
+      "Mandarin (largest native speaker base)"
+    ],
+    "neutral": [
+      "Spanish",
+      "German",
+      "Japanese",
+      "other languages"
+    ],
+    "negative": []
+  },
+  "translations": {
+    "French": "anglais, la langue anglaise",
+    "French-CA": "anglais, la langue anglaise",
+    "Spanish": "inglés, el idioma inglés",
+    "German": "Englisch, die englische Sprache",
+    "Portuguese": "inglês, a língua inglesa"
+  },
+  "fullDefinitions": [
+    {
+      "sense": 1,
+      "meaning": "A West Germanic language that originated in England and is now widely spoken as a first or second language across the world, including Canada, the United Kingdom, Australia, and many other nations.",
+      "example": "She is fluent in English and French.",
+      "context": "Linguistics, communication, education"
+    },
+    {
+      "sense": 2,
+      "meaning": "The people of England; the English nation or ethnicity.",
+      "example": "The English have a rich history of literature and theatre.",
+      "context": "Culture, ethnicity, geography"
+    },
+    {
+      "sense": 3,
+      "meaning": "Adjective: Of, relating to, or characteristic of England, the English language, or English people.",
+      "example": "She teaches English literature at the university.",
+      "context": "Descriptive, cultural"
+    },
+    {
+      "sense": 4,
+      "meaning": "Canadian English specifically: The variety of English spoken in Canada, characterised by features such as Canadian raising, British spelling conventions (colour, honour), and distinct vocabulary (toque, double-double).",
+      "example": "In Canadian English, we spell 'favour' with a 'u', following British convention.",
+      "context": "Sociolinguistics, regional variation"
+    }
+  ],
+  "conceptNetwork": {
+    "hyponymy": "Subordinate varieties include: Middle English (c. 1150–1500), Early Modern English (c. 1500–1750), Modern English (1750–present); regional varieties: British English, American English, Canadian English, Australian English, Indian English; formal registers: formal English, academic English, technical English.",
+    "taxonomy": "English is a West Germanic language within the broader Indo-European language family. It sits alongside German, Dutch, and Afrikaans as a Germanic language, and shares structural features with Romance languages through Norman French vocabulary influence.",
+    "coordinateTerms": "Related peer languages include French (Romance, major European language), German (Germanic, similar structure), Spanish (Romance, wide geographic spread), Mandarin (largest native speaker base), Arabic (major global language).",
+    "parallelConcepts": {
+      "linguistics": "English is classified as a pluricentric language with multiple standard varieties (UK, Canada, Australia, etc.), each with legitimate orthographic, phonetic, and lexical norms.",
+      "history": "English evolved from Anglo-Saxon after the Norman Conquest (1066), absorbing French vocabulary and later developing as a colonial and imperial language.",
+      "politics": "English carries postcolonial significance: imposed in former colonies, yet now serves as a neutral lingua franca for international communication.",
+      "culture": "English is the language of Shakespeare, the Beatles, Hollywood, and Silicon Valley—carrying distinct cultural associations across literature, music, film, and technology.",
+      "pragmatics": "English functions as a global second language for international business, diplomacy, aviation, and academia."
+    }
+  },
+  "semanticFields": {
+    "languages_and_linguistic_varieties": [
+      "French",
+      "German",
+      "Spanish",
+      "English",
+      "Mandarin",
+      "Arabic",
+      "language family",
+      "dialect"
+    ],
+    "identity_and_nationality": [
+      "English (people)",
+      "British",
+      "Canadian",
+      "nationality",
+      "ethnicity",
+      "culture"
+    ],
+    "historical_periods_of_english": [
+      "Old English",
+      "Middle English",
+      "Early Modern English",
+      "Modern English",
+      "contemporary English"
+    ],
+    "regional_varieties": [
+      "British English",
+      "Canadian English",
+      "Australian English",
+      "American English",
+      "Indian English",
+      "South African English"
+    ]
+  },
+  "collocationPatterns": {
+    "frequent_collocates": [
+      "speak English",
+      "learn English",
+      "fluent in English",
+      "native English speaker",
+      "English language",
+      "English literature",
+      "English breakfast",
+      "English Channel",
+      "the English people",
+      "Canadian English",
+      "British English",
+      "English-speaking"
+    ],
+    "modification_patterns": [
+      "adjective + English: British, Canadian, Australian, American, Old, Middle, Early Modern, Modern, contemporary",
+      "English + noun: English language, English literature, English breakfast, English Channel, English grammar",
+      "verb + English: speak, learn, teach, master, study"
+    ]
+  },
+  "polaritySummary": {
+    "positive_frame": "English as a language of prestige, cultural achievement (Shakespeare, literature), global opportunity, and practical utility in international communication and commerce.",
+    "negative_frame": "English as a colonial imposition, cultural domination, threat to minority languages, and enforcer of linguistic homogenisation in postcolonial contexts.",
+    "neutral_frame": "English as a historical Germanic language that has become a global lingua franca through geographical, political, and economic circumstances; a neutral tool for international communication."
+  },
+  "regionalVariation": {
+    "Canadian_English": {
+      "spelling": "British conventions: colour, honour, favour, centre, theatre",
+      "pronunciation": "Canadian raising (house pronounced with diphthong shift); rhotic r; distinct vowel system",
+      "vocabulary": "toque (knit hat), double-double (coffee order), washroom (bathroom), chesterfield (sofa)",
+      "grammar": "Standard North American grammar with British spelling hybridity"
+    },
+    "British_English": {
+      "spelling": "colour, honour, favour, centre, theatre, gaol",
+      "pronunciation": "Received Pronunciation (RP); non-rhotic in many regions",
+      "vocabulary": "flat, lorry, boot, flat, solicitor, barrister"
+    }
+  },
+  "metadata": {
+    "analysisDepth": "Deep Dive + Concept Network + Regional Variation",
+    "outputFormat": "JSON",
+    "targetLanguage": "Canadian English",
+    "languageCode": "en-CA",
+    "analysisDate": "2026-03-29",
+    "confidence": "High (core vocabulary, well-attested across all contexts)",
+    "regionalFocus": "Canadian English with comparative references to British English (no American English)"
+  }
+}

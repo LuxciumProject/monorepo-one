@@ -1,0 +1,215 @@
+{
+  "lemma": "Français",
+  "language": "Français canadien",
+  "languageCode": "fr-CA",
+  "shortDefinition": "La langue romane parlée en France, au Canada, et dans de nombreux autres pays ; également, le peuple ou la culture de France.",
+  "partOfSpeech": "nom, adjectif",
+  "extended": {
+    "phonetics": "/fʁɑ̃sɛ/ (standard québécois)",
+    "etymology": "Du latin francensis (de la France), dérivé de Francie (le royaume des Francs). Apparenté à Frank (membre de la tribu germanique des Francs). Racine : PIE *per- (traverser, aller de l'avant).",
+    "morphology": {
+      "singular": "Français",
+      "plural": "Français (invariable pour le peuple)",
+      "relatedForms": [
+        "Française (nom, féminin)",
+        "francophone (adjectif/nom)",
+        "francophonie (nom)",
+        "franco- (préfixe)",
+        "franciser (verbe)",
+        "français (adjectif minuscule)"
+      ]
+    },
+    "syntax": {
+      "partOfSpeech": "nom (langue, peuple) ; adjectif (relatif à la France/langue française)",
+      "valency": "Contexte modificateur : 'la langue française', 'la littérature française', 'le petit-déjeuner français' ; Contexte nominal : 'parler français', 'apprendre le français', 'courant en français'",
+      "patterns": [
+        "les Français (nom collectif pour les gens)",
+        "français + nom (langue, littérature, culture)",
+        "adjectif + français (français québécois, français médiéval)",
+        "en français (medium linguistique)"
+      ]
+    },
+    "lexicalNotes": {
+      "register": "Standard, formel, utilisé dans tous les registres",
+      "domain": "Linguistique, culture, géographie, éducation",
+      "register_variants": {
+        "formel": "la langue française, le peuple français",
+        "colloquial": "le français, la langue",
+        "technique": "français médiéval, ancien français, moyen français (périodes historiques)"
+      },
+      "capitalisation": "Majuscule obligatoire (nom propre/adjectif)"
+    }
+  },
+  "synonyms": {
+    "general": [
+      "la langue française",
+      "le gallo-roman (historique)",
+      "la langue d'oïl"
+    ],
+    "positive": [
+      "la langue de Molière (prestige littéraire)",
+      "la langue de la diplomatie (élégance et portée)",
+      "la langue de la philosophie (tradition de pensée)"
+    ],
+    "neutral": [
+      "la langue française",
+      "la langue romane",
+      "la langue galloromane"
+    ],
+    "negative": [
+      "la langue du colonisateur (connotation historique)",
+      "la langue imposée (dans les contextes postcoloniaux)"
+    ]
+  },
+  "antonyms": {
+    "general": [
+      "l'anglais",
+      "l'espagnol",
+      "l'allemand",
+      "le mandarin",
+      "les langues non françaises"
+    ],
+    "positive": [
+      "l'anglais (prestige international)",
+      "l'allemand (prestige académique)"
+    ],
+    "neutral": [
+      "l'espagnol",
+      "l'italien",
+      "le portugais",
+      "d'autres langues"
+    ],
+    "negative": []
+  },
+  "translations": {
+    "English-GB": "French, the French language",
+    "English-CA": "French, the French language",
+    "Français-FR": "Français, la langue française",
+    "Español": "francés, el idioma francés",
+    "Deutsch": "Französisch, die französische Sprache",
+    "Português": "francês, a língua francesa"
+  },
+  "fullDefinitions": [
+    {
+      "sense": 1,
+      "meaning": "Une langue romane qui a son origine en France et qui est actuellement parlée comme première ou deuxième langue dans le monde entier, notamment au Canada, en Suisse, en Belgique, en Afrique de l'Ouest et dans de nombreux autres pays.",
+      "example": "Elle est courante en français et en anglais.",
+      "context": "Linguistique, communication, éducation"
+    },
+    {
+      "sense": 2,
+      "meaning": "Le peuple de France ; la nation ou l'ethnicité française.",
+      "example": "Les Français ont une riche histoire de littérature et de philosophie.",
+      "context": "Culture, ethnicité, géographie"
+    },
+    {
+      "sense": 3,
+      "meaning": "Adjectif : Qui se rapporte à la France, à la langue française, ou aux Français.",
+      "example": "Elle enseigne la littérature française à l'université.",
+      "context": "Descriptif, culturel"
+    },
+    {
+      "sense": 4,
+      "meaning": "Français québécois ou français canadien spécifiquement : La variété du français parlée au Canada (particulièrement au Québec), caractérisée par des archaïsmes, un accent distinct, et un vocabulaire particulier (allô, char, breuvage).",
+      "example": "En français québécois, on dit 'char' pour 'automobile' et 'breuvage' pour 'boisson'.",
+      "context": "Sociolinguistique, variation régionale"
+    }
+  ],
+  "conceptNetwork": {
+    "hyponymy": "Les variétés subordonnées incluent : ancien français (IXe–XIIe siècles), moyen français (XIIe–XVIe siècles), français moderne (XVIe–présent) ; variétés régionales : français de France, français de Belgique, français de Suisse, français québécois, français de l'Afrique de l'Ouest ; registres formels : français formel, français académique, français technique.",
+    "taxonomy": "Le français est une langue romane au sein de la plus large famille de langues indo-européennes. Il se situe aux côtés de l'espagnol, de l'italien et du portugais comme langue romane, et partage des traits structurels avec l'anglais en raison de l'influence normande.",
+    "coordinateTerms": "Les langues homologues incluent l'anglais (germanique, grande portée mondiale), l'espagnol (romane, large diffusion géographique), l'italien (romane, prestige culturel), l'allemand (germanique, prestige académique).",
+    "parallelConcepts": {
+      "linguistique": "Le français est classé comme une langue pluricentrique avec plusieurs variétés standard (France, Canada, Belgique, Suisse), chacune ayant des normes orthographiques, phonétiques et lexicales légitimes.",
+      "histoire": "Le français a évolué du latin vulgaire parlé en Gaule, s'est développé pendant le Moyen Âge, et s'est imposé comme langue de la diplomatie et de la culture à partir du XVIIe siècle.",
+      "politique": "Le français porte une charge postcoloniale : imposé dans d'anciennes colonies, mais aussi un symbole de liberté et d'identité culturelle dans les sociétés francophones.",
+      "culture": "Le français est la langue de Molière, Balzac, Rimbaud, de la haute cuisine, de la mode, et des arts—porteur d'associations culturelles distinctes en littérature, philosophie et design.",
+      "pragmatique": "Le français fonctionne comme une langue de diplomatie internationale, d'organisations multilatérales (Nations Unies, UNESCO), et de prestige culturel et intellectuel."
+    }
+  },
+  "semanticFields": {
+    "langues_et_varietes_linguistiques": [
+      "l'anglais",
+      "l'allemand",
+      "l'espagnol",
+      "le français",
+      "le mandarin",
+      "l'arabe",
+      "la famille linguistique",
+      "le dialecte"
+    ],
+    "identite_et_nationalite": [
+      "Français (peuple)",
+      "Britannique",
+      "Canadien",
+      "nationalité",
+      "ethnicité",
+      "culture"
+    ],
+    "periodes_historiques_du_francais": [
+      "ancien français",
+      "moyen français",
+      "français de la Renaissance",
+      "français classique",
+      "français moderne",
+      "français contemporain"
+    ],
+    "varietes_regionales": [
+      "français de France",
+      "français québécois",
+      "français belge",
+      "français suisse",
+      "français de l'Afrique de l'Ouest",
+      "français d'Afrique du Nord"
+    ]
+  },
+  "collocationPatterns": {
+    "frequent_collocates": [
+      "parler français",
+      "apprendre le français",
+      "courant en français",
+      "locuteur natif français",
+      "la langue française",
+      "la littérature française",
+      "le petit-déjeuner français",
+      "la Manche (English Channel français)",
+      "le peuple français",
+      "français québécois",
+      "français de France",
+      "francophone"
+    ],
+    "modification_patterns": [
+      "adjectif + français : québécois, parisien, médiéval, classique, moderne, contemporain, académique",
+      "français + nom : langue française, littérature française, cuisine française, culture française",
+      "verbe + français : parler, apprendre, enseigner, maîtriser, étudier"
+    ]
+  },
+  "polaritySummary": {
+    "positive_frame": "Le français comme langue de prestige, réussite culturelle (Molière, littérature), opportunité internationale, et utilité pratique dans la diplomatie et l'échange intellectuel.",
+    "negative_frame": "Le français comme imposition coloniale, domination culturelle, menace aux langues minoritaires, et instrument d'homogénéisation linguistique dans les contextes postcoloniaux.",
+    "neutral_frame": "Le français comme une langue romane historique qui s'est imposée en tant que langue internationale par des circonstances géographiques, politiques et culturelles ; un outil neutre pour la communication diplomatique et intellectuelle."
+  },
+  "regionalVariation": {
+    "francais_quebecois": {
+      "prononciation": "Accent québécois distinct ; diphtongaison ; intonation caractéristique",
+      "vocabulaire": "char (automobile), breuvage (boisson), allô (allo), pogrom (fête), dépanneur (petit commerce)",
+      "grammaire": "Utilisation de 'tu' généralisée ; construction verbale légèrement différente",
+      "orthographe": "Conventions françaises standard (accent grave, tréma, cédille)"
+    },
+    "francais_de_france": {
+      "prononciation": "Prononciation parisienne standard ; 'r' uvulaire",
+      "vocabulaire": "voiture (automobile), boisson, allô, fête, petit magasin",
+      "grammaire": "Registre formel ; utilisation de 'vous' pour la distance",
+      "orthographe": "Normes académiques de l'Académie française"
+    }
+  },
+  "metadata": {
+    "analysisDepth": "Deep Dive + Concept Network + Variation Régionale",
+    "outputFormat": "JSON",
+    "targetLanguage": "Français canadien",
+    "languageCode": "fr-CA",
+    "analysisDate": "2026-03-29",
+    "confidence": "High (vocabulaire fondamental, bien attesté dans tous les contextes)",
+    "regionalFocus": "Français québécois avec références comparatives au français de France (aucune référence au français nord-américain généralisé)"
+  }
+}
