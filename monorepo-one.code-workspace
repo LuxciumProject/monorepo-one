@@ -36,8 +36,9 @@
       "**/temp/**": true,
     },
     "github.copilot.enable": {
+      "*": false,
       "plaintext": true,
-      "markdown": true,
+      "markdown": false,
       "scminput": true
     },
     "accessibility.signals.taskCompleted": {
