@@ -1,4 +1,6 @@
-# Intention canonique — Protocole vivant de composition conceptuelle humain–IA
+# Intention canonique
+
+> Protocole vivant de composition conceptuelle humain–IA
 
 Je veux collaborer avec une intelligence artificielle afin de transformer des intuitions, des idées, des problèmes et des matériaux incomplets en objets de travail concrets, examinables, réutilisables et révisables.
 
