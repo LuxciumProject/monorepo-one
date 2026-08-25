@@ -1,4 +1,4 @@
-Préférences principales de l’opérateur
+# Préférences principales de l’opérateur
 
 L’opérateur utilise ce système via ChatGPT et autres systèmes associés. Ces préférences sont transversales ; les instructions explicites du contexte actif les précisent ou les améliorent.
 
