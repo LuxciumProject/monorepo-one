@@ -1,0 +1,39 @@
+name: Recursive project initializer
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/recursive-project-initializer.yml'
+      - 'docs/recursive-project-initializer.md'
+      - 'scripts/recursive-project-initializer.mjs'
+      - 'scripts/test-recursive-project-initializer.mjs'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/recursive-project-initializer.yml'
+      - 'scripts/recursive-project-initializer.mjs'
+      - 'scripts/test-recursive-project-initializer.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check script syntax
+        run: node --check scripts/recursive-project-initializer.mjs
+
+      - name: Run isolated recursive fixture
+        run: node scripts/test-recursive-project-initializer.mjs
