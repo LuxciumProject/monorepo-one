@@ -1,0 +1,33 @@
+{
+  "name": "__PACKAGE_NAME__",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "init": "node scripts/init.mjs",
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/build.mjs",
+    "build-all": "node scripts/build.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "test": "node scripts/test.mjs",
+    "test-all": "node scripts/test.mjs",
+    "preinstall": "node scripts/preinstall.mjs",
+    "install": "node scripts/install.mjs",
+    "postinstall": "node scripts/postinstall.mjs",
+    "prepare": "node scripts/prepare.mjs",
+    "prebuild": "node scripts/prebuild.mjs",
+    "postbuild": "node scripts/postbuild.mjs",
+    "pretest": "node scripts/pretest.mjs",
+    "posttest": "node scripts/posttest.mjs",
+    "lint": "node scripts/lint.mjs",
+    "format": "node scripts/format.mjs",
+    "docs": "node scripts/docs.mjs",
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/start.mjs",
+    "pack": "node scripts/pack.mjs",
+    "release": "node scripts/release.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -125,6 +125,13 @@ git log --oneline -- frontend/
 - [Infrastructure](/infrastructure/README.md) - Infrastructure setup
 - [Helpers](/helpers/README.md) - Helper utilities
 
+## Création de sous-projets avec les agents
+
+- [Protocole canonique](memory-bank/project-init-protocol.md)
+- [Générateur et migration Yarn](scripts/project-init/README.md)
+- [Modèles prêts à copier](common/templates/)
+- [Instructions communes des agents](AGENTS.md)
+
 ## Getting Started
 
 1. Clone the repository with submodules:
