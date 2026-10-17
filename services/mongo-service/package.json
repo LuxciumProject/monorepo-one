@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "bash scripts/build.sh",
-    "install": "pwd; #yarn build || exit 13; pwd",
     "test": "jest --config='config/jest.config.json'"
   },
   "keywords": [],

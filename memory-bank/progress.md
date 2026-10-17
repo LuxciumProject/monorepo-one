@@ -148,3 +148,13 @@
 - Last Major Update: 2025-02-24 (Directory Structure)
 - Previous Update: 2025-02-14 (Initial Setup)
 - Next Review: 2025-03-01 (Container Details)
+
+## 2026-09-30 — Sous-projets et agents
+
+- Modèles sous common/templates; générateur et migration sous scripts/project-init.
+- Décisions canoniques : [project-init-protocol.md](project-init-protocol.md).
+- Instructions reliées par AGENTS.md, CLAUDE.md et Copilot.
+- Socle complet; phases non définies exécutables comme no-op explicites.
+- Migration ciblée de 14 manifests gérés par Rush.
+- Tests du générateur et de la migration validés; installation et compilation
+  complètes du dépôt non exécutées dans cet environnement.

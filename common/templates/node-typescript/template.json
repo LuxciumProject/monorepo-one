@@ -1,0 +1,16 @@
+{
+  "id": "node-typescript",
+  "dependencySource": "examples/template/package.json",
+  "baseDevDependencies": ["typescript", "@types/node"],
+  "parents": {
+    "library": { "tag": "library" },
+    "services": { "tag": "services" },
+    "examples": { "tag": "examples" },
+    "APIs": { "tag": "apis" },
+    "backend": { "tag": "backend" },
+    "backend/api": { "tag": "backend" },
+    "frontend": { "tag": "frontend" },
+    "frontend/projects": { "tag": "frontend" },
+    "infrastructure": { "tag": "tools" }
+  }
+}

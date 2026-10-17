@@ -21,6 +21,18 @@ git log --oneline -- frontend/
 
 ## Highlighted Updates
 
+### 2026-09-30 Project Creation Scaffold and Rush Lifecycle Migration
+
+Added parent-first project generation with a complete Node/TypeScript scaffold,
+explicit no-op lifecycle slots, dependency-range checks and Rush activation.
+Removed legacy Yarn selectors and installation-time build hooks from 14
+Rush-managed manifests. Added canonical decisions in the memory bank, referenced
+by AGENTS.md, CLAUDE.md and Copilot instructions.
+
+The generator and migration tests pass. A full repository installation/build
+has not been executed in the implementation environment.
+
+
 These entries summarize major changes already documented elsewhere in the
 repository.
 

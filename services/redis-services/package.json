@@ -6,7 +6,6 @@
   "types": "out/typings/index.d.ts",
   "scripts": {
     "build": "bash scripts/build.sh",
-    "install": "pwd; yarn build || exit 13; pwd",
     "prebuild:": "jest",
     "install:": "#heft build --clean #tsc --noEmit false --generateCpuProfile \"./out/redis-services.cpuprofile\" || exit 1;",
     "test": "jest --config='config/jest.config.json'"
@@ -69,6 +68,5 @@
     "typedoc-plugin-missing-exports": "~4.1.2",
     "typedoc-plugin-replace-text": "~4.2.0",
     "typedoc-plugin-zod": "~1.4.3"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  }
 }

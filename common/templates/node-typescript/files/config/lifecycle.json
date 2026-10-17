@@ -1,0 +1,26 @@
+{
+  "implemented": [
+    "init",
+    "clean",
+    "build",
+    "typecheck",
+    "test"
+  ],
+  "pending": [
+    "preinstall",
+    "install",
+    "postinstall",
+    "prepare",
+    "prebuild",
+    "postbuild",
+    "pretest",
+    "posttest",
+    "lint",
+    "format",
+    "docs",
+    "dev",
+    "start",
+    "pack",
+    "release"
+  ]
+}

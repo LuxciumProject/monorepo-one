@@ -634,3 +634,13 @@ cd /projects/monorepo-one/services/rpc-worker-pool && \
 - **Instruction Updates**: Never remove existing instructions without explicit confirmation.
 - **Placement**: Add new instructions in the most relevant section.
 - **Formatting**: Use consistent markdown formatting with clear headings and code blocks.
+
+## Canonical project creation protocol
+
+When creating a subproject, read ../memory-bank/project-init-protocol.md and
+../scripts/project-init/README.md. Use the existing scaffold generator and
+common/templates. The repository owner explicitly requires a complete lifecycle
+with executable, clearly labeled no-op entries for undefined phases; implement
+and update their state together when requirements become concrete. Execute
+requested work and report actual progress instead of handing the procedure back.
+
